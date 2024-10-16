@@ -30,7 +30,24 @@
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeTransformed]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTransformed</defName>
-		<label>lycanthrope</label>
+		<label>lycanthrope transformation</label>
+		<description>TODO</description>
+		<comps>
+			
+		</comps>
+		<renderNodeProperties>
+			
+		</renderNodeProperties>
+		<stages>
+			<li>
+				
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeExhaustion]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeExhaustion</defName>
+		<label>lycanthrope exhaustion</label>
 		<description>TODO</description>
 		<comps>
 			

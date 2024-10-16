@@ -11,5 +11,7 @@ namespace Mashed_Bloodmoon
             DefOfHelper.EnsureInitializedInCtor(typeof(HediffDefOf));
         }
         public static HediffDef Mashed_Bloodmoon_Lycanthrope;
+        public static HediffDef Mashed_Bloodmoon_LycanthropeTransformed;
+        public static HediffDef Mashed_Bloodmoon_LycanthropeExhaustion;
     }
 }

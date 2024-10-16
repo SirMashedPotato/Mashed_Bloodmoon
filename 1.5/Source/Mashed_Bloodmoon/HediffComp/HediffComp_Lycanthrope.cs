@@ -11,7 +11,7 @@ namespace Mashed_Bloodmoon
         private List<FloatMenuOption> lycanthropeTypeOptions;
 
         /// <summary>
-        /// Creates a list of conditions for the Force new condition dev gizmo
+        /// 
         /// </summary>
         private List<FloatMenuOption> LycanthropeTypeOptions
         {
@@ -57,9 +57,34 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
+            if (parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed))
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Mashed_Bloodmoon_Transform_Human".Translate(),
+                    action = delegate ()
+                    {
+                        parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed));
+                        parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion);
+                    },
+                    Disabled = false,
+                };
+            }
+            else
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Mashed_Bloodmoon_Transform_Werewolf".Translate(),
+                    action = delegate ()
+                    {
+                        parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
+                    },
+                    Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion),
+                };
+            }
+
             if (DebugSettings.ShowDevGizmos)
             {
                 yield return new Command_Action
