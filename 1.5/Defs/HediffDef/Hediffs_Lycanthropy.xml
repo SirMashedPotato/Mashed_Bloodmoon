@@ -11,11 +11,8 @@
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="HediffCompProperties_CauseMentalState">
-				<animalMentalState>Mashed_Ashlands_BlightedPermanent</animalMentalState>
-				<humanMentalState>Berserk</humanMentalState>
-				<letterDef>ThreatSmall</letterDef>
-				<mtbDaysToCauseMentalState>1</mtbDaysToCauseMentalState>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_Lycanthrope">
+				
 			</li>
 		</comps>
 		<stages>

@@ -20,32 +20,21 @@
 		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef MayRequire="escp.dunmer">
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
 		<defName>Mashed_Bloodmoon_Daedroth</defName>
 		<label>daedroth</label>
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Daedroth/Mashed_Bloodmoon_Daedroth</texPath>
 		</graphicData>
-		<!-- just for testing -->
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Race">
-			<raceDefs>
-				<li>ESCP_DunmerRace</li>
-				<li>ESCP_DunmerAshlanderRace</li>
-			</raceDefs>
-		</requirementWorker>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef MayRequire="escp.morrowrim.birthsignspassive">
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
 		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
 		<label>udyrfrykte</label>
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Udyrfrykte/Mashed_Bloodmoon_Udyrfrykte</texPath>
 		</graphicData>
-		<!-- just for testing -->
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Hediff">
-			<hediffDef>MorrowRim_PassiveBirthsigns_TheLord_RimWorld</hediffDef>
-		</requirementWorker>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 </Defs>
