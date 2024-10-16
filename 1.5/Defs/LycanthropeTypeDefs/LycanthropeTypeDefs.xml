@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Werewolf]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_Werewolf</defName>
+		<label>werewolf</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
+		</graphicData>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef MayRequire="ludeon.rimworld.royalty">
+		<defName>Mashed_Bloodmoon_WerewolfAnima</defName>
+		<label>werewolf (anima)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfAnima/Mashed_Bloodmoon_WerewolfAnima</texPath>
+		</graphicData>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_Daedroth</defName>
+		<label>daedroth</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Daedroth/Mashed_Bloodmoon_Daedroth</texPath>
+		</graphicData>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
+		<label>udyrfrykte</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Udyrfrykte/Mashed_Bloodmoon_Udyrfrykte</texPath>
+		</graphicData>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+</Defs>

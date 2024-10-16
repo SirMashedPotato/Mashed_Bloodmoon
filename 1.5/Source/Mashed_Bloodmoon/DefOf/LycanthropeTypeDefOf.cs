@@ -10,6 +10,6 @@ namespace Mashed_Bloodmoon
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(LycanthropeTypeDefOf));
         }
-        public static LycanthropeTypeDef Mashed_Bloodmoon_Default;
+        public static LycanthropeTypeDef Mashed_Bloodmoon_Werewolf;
     }
 }
