@@ -21,7 +21,7 @@
 		<label>lycanthropic stress limit</label>
 		<description>The maximum amount of lycanthropic stress an individual can tolerate while transformed before entering a lycanthropic rage.</description>
 		<category>BasicsPawn</category>
-		<defaultBaseValue>30</defaultBaseValue>
+		<defaultBaseValue>0</defaultBaseValue>
 		<minValue>0</minValue>
 		<hideAtValue>0</hideAtValue>
 		<toStringStyle>FloatOne</toStringStyle>

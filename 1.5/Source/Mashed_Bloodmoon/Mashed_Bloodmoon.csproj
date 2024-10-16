@@ -66,8 +66,13 @@
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_Lycanthrope.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Gene.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Hediff.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Meme.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Precept.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Psylink.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Skill.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Trait.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

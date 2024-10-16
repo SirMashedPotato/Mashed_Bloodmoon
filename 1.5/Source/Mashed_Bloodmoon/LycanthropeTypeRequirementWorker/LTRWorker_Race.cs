@@ -8,16 +8,16 @@ namespace Mashed_Bloodmoon
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
-            if (raceDef != null && pawn.def != raceDef)
+            if (raceDef != null && pawn.def == raceDef)
             {
-                return "Mashed_Bloodmoon_LTR_InvalidRace".Translate();
+                return true;
             }
 
-            if (!raceDefs.NullOrEmpty() && !raceDefs.Contains(pawn.def))
+            if (!raceDefs.NullOrEmpty() && raceDefs.Contains(pawn.def))
             {
-                return "Mashed_Bloodmoon_LTR_InvalidRace".Translate();
+                return true;
             }
-            return true;
+            return "Mashed_Bloodmoon_LTR_InvalidRace".Translate();
         }
 
         public override IEnumerable<string> ConfigErrors()

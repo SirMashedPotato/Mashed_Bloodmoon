@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -6,11 +7,13 @@ namespace Mashed_Bloodmoon
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
-            if (ModsConfig.RoyaltyActive && !pawn.HasPsylink)
+            if (ModsConfig.RoyaltyActive && pawn.HasPsylink && pawn.GetPsylinkLevel() >= level)
             {
-                return "Mashed_Bloodmoon_LTR_MissingPsylink".Translate();
+                return true;
             }
-            return true;
+            return "Mashed_Bloodmoon_LTR_MissingPsylink".Translate();
         }
+
+        public int level = 0;
     }
 }
