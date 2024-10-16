@@ -11,12 +11,6 @@ namespace Mashed_Bloodmoon
         public GraphicData graphicData;
         public LycanthropeTypeRequirementWorker requirementWorker;
 
-        public class LycanthropeTypeRequirements
-        {
-            public List<ThingDef> raceDefs;
-            public bool psylink = false;
-        }
-
         public AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
             if (requirementWorker != null)

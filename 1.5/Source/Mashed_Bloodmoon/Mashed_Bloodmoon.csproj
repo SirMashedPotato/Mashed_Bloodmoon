@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
+    <Compile Include="Def\HediffDefOf.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Hediff.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Psylink.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />

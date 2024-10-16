@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Lycanthrope]==========-->
+	<HediffDef>
+		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
+		<label>lycanthrope</label>
+		<description>TODO</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<maxSeverity>1</maxSeverity>
+		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_CauseMentalState">
+				<animalMentalState>Mashed_Ashlands_BlightedPermanent</animalMentalState>
+				<humanMentalState>Berserk</humanMentalState>
+				<letterDef>ThreatSmall</letterDef>
+				<mtbDaysToCauseMentalState>1</mtbDaysToCauseMentalState>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
