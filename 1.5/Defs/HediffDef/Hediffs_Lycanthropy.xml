@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- ==========[Mashed_Bloodmoon_Lycanthrope]==========-->
-	<HediffDef>
-		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
-		<label>lycanthrope</label>
-		<description>TODO</description>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeBase]==========-->
+	<HediffDef Name="Mashed_Bloodmoon_LycanthropeBase" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
 		<maxSeverity>1</maxSeverity>
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
-		<scenarioCanAdd>true</scenarioCanAdd>
 		<isBad>false</isBad>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_Lycanthrope]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
+		<label>lycanthrope</label>
+		<description>TODO</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_Lycanthrope">
 				
@@ -17,8 +20,76 @@
 		</comps>
 		<stages>
 			<li>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+					<Mashed_Bloodmoon_LycanthropicStressMax>30</Mashed_Bloodmoon_LycanthropicStressMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeTransformed]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeTransformed</defName>
+		<label>lycanthrope</label>
+		<description>TODO</description>
+		<comps>
+			
+		</comps>
+		<renderNodeProperties>
+			
+		</renderNodeProperties>
+		<stages>
+			<li>
 				
 			</li>
 		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeClaws]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeClaws</defName>
+		<label>lycanthrope claws</label>
+		<description>TODO</description>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>lycanthrope claws</label>
+						<capacities>
+							<li>Scratch</li>
+						</capacities>
+						<power>12</power>
+						<armorPenetration>0.25</armorPenetration>
+						<cooldownTime>1</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeTeeth]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeTeeth</defName>
+		<label>lycanthrope teeth</label>
+		<description>TODO</description>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>lycanthrope teeth</label>
+						<capacities>
+							<li>Bite</li>
+						</capacities>
+						<power>16</power>
+						<armorPenetration>0.25</armorPenetration>
+						<cooldownTime>2</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
 	</HediffDef>
 </Defs>
