@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -7,6 +8,11 @@ namespace Mashed_Bloodmoon
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
+            if (raceDef != null && pawn.def != raceDef)
+            {
+                return "Mashed_Bloodmoon_LTR_InvalidRace".Translate();
+            }
+
             if (!raceDefs.NullOrEmpty() && !raceDefs.Contains(pawn.def))
             {
                 return "Mashed_Bloodmoon_LTR_InvalidRace".Translate();
@@ -16,12 +22,17 @@ namespace Mashed_Bloodmoon
 
         public override IEnumerable<string> ConfigErrors()
         {
-            if (raceDefs.NullOrEmpty())
+            if (raceDef == null && raceDefs.NullOrEmpty())
             {
-                yield return "null raceDefs";
+                yield return "both raceDef and raceDefs are null";
+            }
+            if (raceDef != null && !raceDefs.NullOrEmpty())
+            {
+                yield return "use either raceDef or raceDefs";
             }
         }
 
+        public ThingDef raceDef;
         public List<ThingDef> raceDefs;
     }
 }

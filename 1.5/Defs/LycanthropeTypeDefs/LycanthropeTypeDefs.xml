@@ -45,9 +45,7 @@
 		</graphicData>
 		<!-- just for testing -->
 		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Hediff">
-			<hediffDefs>
-				<li>MorrowRim_PassiveBirthsigns_TheLord_RimWorld</li>
-			</hediffDefs>
+			<hediffDef>MorrowRim_PassiveBirthsigns_TheLord_RimWorld</hediffDef>
 		</requirementWorker>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 </Defs>

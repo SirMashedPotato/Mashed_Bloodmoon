@@ -7,6 +7,11 @@ namespace Mashed_Bloodmoon
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
+            if (hediffDef != null && !pawn.health.hediffSet.HasHediff(hediffDef))
+            {
+                return "Mashed_Bloodmoon_LTR_InvalidHediff".Translate();
+            }
+
             if (!hediffDefs.NullOrEmpty())
             {
                 foreach (HediffDef hediffDef in hediffDefs)
@@ -23,12 +28,17 @@ namespace Mashed_Bloodmoon
 
         public override IEnumerable<string> ConfigErrors()
         {
-            if (hediffDefs.NullOrEmpty())
+            if (hediffDef == null && hediffDefs.NullOrEmpty())
             {
-                yield return "null hediffDefs";
+                yield return "both hediffDef and hediffDefs are null";
+            }
+            if (hediffDef != null && !hediffDefs.NullOrEmpty())
+            {
+                yield return "use either hediffDef or hediffDefs";
             }
         }
 
+        public HediffDef hediffDef;
         public List<HediffDef> hediffDefs;
     }
 }
