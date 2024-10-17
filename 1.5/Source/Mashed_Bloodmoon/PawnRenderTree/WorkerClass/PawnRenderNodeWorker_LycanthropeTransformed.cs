@@ -17,7 +17,13 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void AppendDrawRequests(PawnRenderNode node, PawnDrawParms parms, List<PawnGraphicDrawRequest> requests)
         {
-            requests.Clear();
+            for(int i = requests.Count - 1; i >= 0; i--)
+            {
+                if (!(requests[i].node is PawnRenderNode_Lycanthrope || requests[i].node.Worker is PawnRenderNodeWorker_Overlay))
+                {
+                    requests.RemoveAt(i);
+                }
+            }
             base.AppendDrawRequests(node, parms, requests);
         }
 

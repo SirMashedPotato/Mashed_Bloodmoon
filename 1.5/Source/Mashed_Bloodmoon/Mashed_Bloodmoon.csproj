@@ -75,6 +75,8 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Trait.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_Lycanthrope.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformedGlow.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformed.cs" />
     <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeTransformed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
