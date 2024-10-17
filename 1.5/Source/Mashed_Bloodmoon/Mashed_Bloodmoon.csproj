@@ -78,6 +78,7 @@
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformed.cs" />
     <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeTransformed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\LycanthropeUtility.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,7 @@ namespace Mashed_Bloodmoon
 
         /// <summary>
         /// Hides the pawns head, body, clothes etc
+        /// Not ideal, wounds at least should be allowed
         /// </summary>
         public override void AppendDrawRequests(PawnRenderNode node, PawnDrawParms parms, List<PawnGraphicDrawRequest> requests)
         {
@@ -37,7 +38,7 @@ namespace Mashed_Bloodmoon
         {
             if (compLycanthrope == null)
             {
-                compLycanthrope = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
+                compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
             }
             return compLycanthrope;
         }

@@ -19,7 +19,7 @@ namespace Mashed_Bloodmoon
         {
             if (compLycanthrope == null)
             {
-                compLycanthrope = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
+                compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
             }
             return compLycanthrope;
         }
