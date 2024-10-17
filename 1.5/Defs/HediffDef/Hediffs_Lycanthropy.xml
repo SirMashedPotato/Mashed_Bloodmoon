@@ -39,6 +39,7 @@
 			<li>
 				<debugLabel>lycanthrope transformation</debugLabel>
 				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformed</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeTransformed</workerClass>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>1</baseLayer> <!-- 1 above body -->
 			</li>
