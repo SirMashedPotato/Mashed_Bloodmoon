@@ -36,7 +36,13 @@
 			
 		</comps>
 		<renderNodeProperties>
-			
+			<li>
+				<debugLabel>lycanthrope transformation</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformed</nodeClass>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>1</baseLayer> <!-- 1 above body -->
+				<pawnType>HumanlikeOnly</pawnType>
+			</li>
 		</renderNodeProperties>
 		<stages>
 			<li>

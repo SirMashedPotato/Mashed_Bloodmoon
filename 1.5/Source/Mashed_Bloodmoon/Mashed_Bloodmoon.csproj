@@ -75,8 +75,11 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Trait.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PawnRenderTree\WorkerClass\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -66,8 +66,9 @@ namespace Mashed_Bloodmoon
                     defaultLabel = "Mashed_Bloodmoon_Transform_Human".Translate(),
                     action = delegate ()
                     {
+                        //will call a method in the transformed comp in the transformed hediff
                         parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed));
-                        parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion);
+                        //parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion);
                     },
                     Disabled = false,
                 };
@@ -79,6 +80,7 @@ namespace Mashed_Bloodmoon
                     defaultLabel = "Mashed_Bloodmoon_Transform_Werewolf".Translate(),
                     action = delegate ()
                     {
+                        //call method in utility class
                         parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
                     },
                     Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion),
