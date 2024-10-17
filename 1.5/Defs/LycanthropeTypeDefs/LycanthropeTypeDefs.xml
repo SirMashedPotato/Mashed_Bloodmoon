@@ -7,6 +7,8 @@
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
+			<color>(53,54,50)</color>
+			<colorTwo>(123,112,93)</colorTwo>
 			<drawSize>1.4</drawSize>
 		</graphicData>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
