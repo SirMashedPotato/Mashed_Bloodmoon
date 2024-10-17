@@ -11,8 +11,12 @@ namespace Mashed_Bloodmoon
             return true;
         }
 
+        /// <summary>
+        /// Hides the pawns head, body, clothes etc
+        /// </summary>
         public override void AppendDrawRequests(PawnRenderNode node, PawnDrawParms parms, List<PawnGraphicDrawRequest> requests)
         {
+            requests.Clear();
             base.AppendDrawRequests(node, parms, requests);
         }
 
@@ -24,9 +28,8 @@ namespace Mashed_Bloodmoon
             if (scaleFor == Vector3.zero)
             {
                 Vector2 drawSize = CompLycanthrope(parms.pawn).lycanthropeTypeDef.graphicData.drawSize;
-                scaleFor = new Vector3(drawSize.x, 0, drawSize.y);
+                scaleFor = new Vector3(drawSize.x * parms.pawn.DrawSize.x, 0, drawSize.y * parms.pawn.DrawSize.y);
             }
-            
             return scaleFor;
         }
 
