@@ -7,6 +7,7 @@
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
+			<drawSize>1.4</drawSize>
 		</graphicData>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
@@ -16,6 +17,7 @@
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfAnima/Mashed_Bloodmoon_WerewolfAnima</texPath>
+			<drawSize>1.4</drawSize>
 		</graphicData>
 		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
@@ -26,6 +28,7 @@
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Daedroth/Mashed_Bloodmoon_Daedroth</texPath>
+			<drawSize>1.4</drawSize>
 		</graphicData>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
@@ -35,6 +38,7 @@
 		<artist>SirMashedPotato</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Udyrfrykte/Mashed_Bloodmoon_Udyrfrykte</texPath>
+			<drawSize>1.4</drawSize>
 		</graphicData>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 </Defs>
