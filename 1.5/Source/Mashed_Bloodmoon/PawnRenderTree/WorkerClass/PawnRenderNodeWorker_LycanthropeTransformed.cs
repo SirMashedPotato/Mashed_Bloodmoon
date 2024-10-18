@@ -13,7 +13,6 @@ namespace Mashed_Bloodmoon
 
         /// <summary>
         /// Hides the pawns head, body, clothes etc
-        /// Not ideal, wounds at least should be allowed
         /// </summary>
         public override void AppendDrawRequests(PawnRenderNode node, PawnDrawParms parms, List<PawnGraphicDrawRequest> requests)
         {
