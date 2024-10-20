@@ -26,13 +26,14 @@ namespace Mashed_Bloodmoon
 
         public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks);
 
+        public float CurrentTransformedDuration() => currentStress * LycanthropeUtility.lycanthropeStressRate;
+
         /// <summary>
         /// Ticking stress
         /// </summary>
         public override void CompPostTick(ref float severityAdjustment)
         {
             base.CompPostTick(ref severityAdjustment);
-
             if (parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate))
             {
                 if (currentStress >= StressMax)
@@ -54,6 +55,7 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostMake();
             currentStress = 0;
+            parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_TransformationCount);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
         }

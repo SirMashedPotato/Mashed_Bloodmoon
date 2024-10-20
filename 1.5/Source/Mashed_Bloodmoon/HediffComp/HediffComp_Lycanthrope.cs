@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
         private List<FloatMenuOption> lycanthropeTypeOptions;
 
         /// <summary>
-        /// 
+        /// Debug tool, replace with proper gizmo
         /// </summary>
         private List<FloatMenuOption> LycanthropeTypeOptions
         {

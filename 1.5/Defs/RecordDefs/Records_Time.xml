@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TransformationTime]==========-->
+	<RecordDef>
+		<defName>Mashed_Bloodmoon_TransformationTime</defName>
+		<label>time in lycanthrope form</label>
+		<description>Total time spent transformed into a lycanthrope.</description>
+		<type>Time</type>
+		<workerClass>Mashed_Bloodmoon.RecordWorker_TimeInLycanthropeForm</workerClass>
+	</RecordDef>
+</Defs>
