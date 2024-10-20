@@ -32,6 +32,9 @@
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Daedroth/Mashed_Bloodmoon_Daedroth</texPath>
 			<drawSize>1.4</drawSize>
 		</graphicData>
+		<transformationWorker Class="Mashed_Bloodmoon.LTTWorker_AddAbility">
+			<abilityDef>Mashed_Ashlands_DaedrothFirebloom</abilityDef>
+		</transformationWorker>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
 	<Mashed_Bloodmoon.LycanthropeTypeDef>

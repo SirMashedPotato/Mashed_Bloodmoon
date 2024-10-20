@@ -77,6 +77,8 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
+    <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddAbility.cs" />
+    <Compile Include="LycanthropeTypeTransformationWorker\LycanthropeTypeTransformationWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Gene.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Hediff.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Meme.cs" />

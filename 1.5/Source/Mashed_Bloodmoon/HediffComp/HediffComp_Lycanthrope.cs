@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
     {
         public HediffCompProperties_Lycanthrope Props => (HediffCompProperties_Lycanthrope)props;
 
-        public LycanthropeTypeDef lycanthropeTypeDef;
+        private LycanthropeTypeDef lycanthropeTypeDef;
         private List<FloatMenuOption> lycanthropeTypeOptions;
 
         /// <summary>
@@ -43,6 +43,14 @@ namespace Mashed_Bloodmoon
                 }
                 return lycanthropeTypeOptions;
 
+            }
+        }
+
+        public LycanthropeTypeDef LycanthropeTypeDef
+        {
+            get
+            {
+                return lycanthropeTypeDef;
             }
         }
 

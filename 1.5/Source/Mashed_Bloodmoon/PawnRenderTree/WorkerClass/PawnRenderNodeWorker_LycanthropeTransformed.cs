@@ -33,7 +33,7 @@ namespace Mashed_Bloodmoon
         {
             if (scaleFor == Vector3.zero)
             {
-                Vector2 drawSize = CompLycanthrope(parms.pawn).lycanthropeTypeDef.graphicData.drawSize;
+                Vector2 drawSize = CompLycanthrope(parms.pawn).LycanthropeTypeDef.graphicData.drawSize;
                 scaleFor = new Vector3(drawSize.x * parms.pawn.DrawSize.x, 0, drawSize.y * parms.pawn.DrawSize.y);
             }
             return scaleFor;

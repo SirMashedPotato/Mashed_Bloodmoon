@@ -10,6 +10,7 @@ namespace Mashed_Bloodmoon
         public string artist = "???";
         public GraphicData graphicData;
         public LycanthropeTypeRequirementWorker requirementWorker;
+        public LycanthropeTypeTransformationWorker transformationWorker;
 
         public AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -35,6 +36,14 @@ namespace Mashed_Bloodmoon
             if (requirementWorker != null)
             {
                 foreach (string item in requirementWorker.ConfigErrors())
+                {
+                    yield return item;
+                }
+            }
+
+            if (transformationWorker != null)
+            {
+                foreach (string item in transformationWorker.ConfigErrors())
                 {
                     yield return item;
                 }

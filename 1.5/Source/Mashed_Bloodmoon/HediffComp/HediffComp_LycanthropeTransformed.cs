@@ -9,8 +9,21 @@ namespace Mashed_Bloodmoon
         public int currentStress;
         private int stressMax = -1;
         private Gizmo_LycanthropeStress lycanthropeStressGizmo;
+        private HediffComp_Lycanthrope compLycanthrope;
 
         public HediffCompProperties_LycanthropeTransformed Props => (HediffCompProperties_LycanthropeTransformed)props;
+
+        public HediffComp_Lycanthrope CompLycanthrope
+        {
+            get
+            {
+                if (compLycanthrope == null)
+                {
+                    compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parent.pawn);
+                }
+                return compLycanthrope;
+            }
+        }
 
         public int StressMax
         {
@@ -58,6 +71,7 @@ namespace Mashed_Bloodmoon
             parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_TransformationCount);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
+            CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
         }
 
         /// <summary>
@@ -70,6 +84,7 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
             LycanthropeUtility.AddFatigueHediff(parent.pawn, CurrentFatigueDuration());
+            CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
         }
 
         /// <summary>
