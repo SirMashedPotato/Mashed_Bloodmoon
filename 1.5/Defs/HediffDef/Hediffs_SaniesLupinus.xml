@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SaniesLupinus]==========-->
+	<HediffDef ParentName="InfectionBase">
+		<defName>Mashed_Bloodmoon_SaniesLupinus</defName>
+		<label>sanies lupinus</label>
+		<description>An infectious disease solely contracted from a lycanthrope. The disease causes nearly imperceptible changes in behaviour as it takes hold. If left untreated it will eventually transition into dormant lycanthropy... at least until the next Huntsman's Moon rises.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeDormant</HediffDef>
+		</descriptionHyperlinks>
+		<makesSickThought>true</makesSickThought>
+		<taleOnVisible>Mashed_Bloodmoon_SaniesLupinusRevealed</taleOnVisible>
+		<minSeverity>0.01</minSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>0.01</initialSeverity>
+		<tendable>true</tendable>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_SaniesLupus"/>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>12</baseTendDurationHours>
+				<severityPerDayTended>-0.1573</severityPerDayTended>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.2888</severityPerDayNotImmune>
+				<immunityPerDaySick>0.22</immunityPerDaySick>
+				<severityPerDayImmune>-0.4947</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.10</minSeverity>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<restFallFactor>1.1</restFallFactor>
+				<socialFightChanceFactor>1.1</socialFightChanceFactor>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.30</minSeverity>
+				<hungerRateFactor>1.2</hungerRateFactor>
+				<restFallFactor>1.2</restFallFactor>
+				<socialFightChanceFactor>1.2</socialFightChanceFactor>
+			</li>
+			<li>
+				<label>greater</label>
+				<minSeverity>0.70</minSeverity>
+				<hungerRateFactor>1.3</hungerRateFactor>
+				<restFallFactor>1.3</restFallFactor>
+				<socialFightChanceFactor>1.3</socialFightChanceFactor>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

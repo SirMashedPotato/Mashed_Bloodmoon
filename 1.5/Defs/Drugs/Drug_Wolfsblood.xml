@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_PotionWolfsblood]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_PotionBase">
+		<defName>Mashed_Bloodmoon_PotionWolfsblood</defName>
+		<label>wolfsblood elixir</label>
+		<description>An elixir made from pure werewolf blood, the effect it has on the ingestors body depends on the advancement, or lack, of lycanthropy.\n\nWhen ingested by those without any traces of lycanthropy, it will infect them with Sanies Lupinus.\n\nWhen ingested by those that are currently infected by Sanies Lupinus, it strengthen infection, increasing the severity of it\n\nWhen ingested by those with dormant lycanthropy, it will force a transformation, progressing the disease into full lycanthropy in the process.\n\nWhen ingested by a lycanthrope, it will temporarily increase the amount of lycanthropic stress they can withstand while transformed.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_WolfsbloodAdrenaline</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Mashed_Bloodmoon_PotionWolfsblood</texPath>
+		</graphicData>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="Mashed_Bloodmoon.IngestionOutcomeDoer_PotionWolfsblood"/>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Ashlands_AshSurvival_Advanced</li> <!-- TODO -->
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Ashlands_ShalkChitin>6</Mashed_Ashlands_ShalkChitin> <!-- TODO -->
+		</costList>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbloodAdrenaline]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_PotionHighBase">
+		<defName>Mashed_Bloodmoon_WolfsbloodAdrenaline</defName>
+		<label>wolfsblood adrenaline</label>
+		<description>A wolfsblood elixir active in ones bloodstream. Temporarily increase the amount of lycanthropic stress they can withstand while transformed.</description>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropicStressMax>10</Mashed_Bloodmoon_LycanthropicStressMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

@@ -7,6 +7,33 @@
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
 		<isBad>false</isBad>
 	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeDormant]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeDormant</defName>
+		<label>dormant lycanthropy</label>
+		<description>TODO</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_Lycanthrope</HediffDef>
+		</descriptionHyperlinks>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<stages>
+			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_Lycanthrope]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
