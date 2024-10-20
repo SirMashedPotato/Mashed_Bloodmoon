@@ -4,7 +4,7 @@ namespace Mashed_Bloodmoon
 {
     public abstract class PawnRenderNode_Lycanthrope : PawnRenderNode
     {
-        protected PawnRenderNode_Lycanthrope(Pawn pawn, PawnRenderNodeProperties props, Verse.PawnRenderTree tree) : base(pawn, props, tree)
+        protected PawnRenderNode_Lycanthrope(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
         {
         }
 
