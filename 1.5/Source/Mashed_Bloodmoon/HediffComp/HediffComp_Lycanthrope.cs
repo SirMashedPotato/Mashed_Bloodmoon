@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -59,31 +60,18 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            if (parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed))
+            if (!parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed))
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = "Mashed_Bloodmoon_Transform_Human".Translate(),
+                    defaultLabel = "Mashed_Bloodmoon_TransformLycanthrope_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_TransformLycanthrope_Desc".Translate(parent.pawn, 
+                    ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
                     action = delegate ()
                     {
-                        //will call a method in the transformed comp in the transformed hediff
-                        parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed));
-                        //parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion);
-                    },
-                    Disabled = false,
-                };
-            }
-            else
-            {
-                yield return new Command_Action
-                {
-                    defaultLabel = "Mashed_Bloodmoon_Transform_Werewolf".Translate(),
-                    action = delegate ()
-                    {
-                        //call method in utility class
                         parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
                     },
-                    Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeExhaustion),
+                    Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue),
                 };
             }
 

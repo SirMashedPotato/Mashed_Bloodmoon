@@ -12,6 +12,8 @@ namespace Mashed_Bloodmoon
         }
         public static HediffDef Mashed_Bloodmoon_Lycanthrope;
         public static HediffDef Mashed_Bloodmoon_LycanthropeTransformed;
-        public static HediffDef Mashed_Bloodmoon_LycanthropeExhaustion;
+        public static HediffDef Mashed_Bloodmoon_LycanthropeFatigue;
+        public static HediffDef Mashed_Bloodmoon_LycanthropeClaws;
+        public static HediffDef Mashed_Bloodmoon_LycanthropeTeeth;
     }
 }

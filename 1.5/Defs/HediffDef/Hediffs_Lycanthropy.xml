@@ -14,9 +14,7 @@
 		<description>TODO</description>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
-			<li Class="Mashed_Bloodmoon.HediffCompProperties_Lycanthrope">
-				
-			</li>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_Lycanthrope"/>
 		</comps>
 		<stages>
 			<li>
@@ -33,7 +31,8 @@
 		<label>lycanthrope transformation</label>
 		<description>TODO</description>
 		<comps>
-			
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_LycanthropeTransformed"/>
 		</comps>
 		<renderNodeProperties>
 			<li>
@@ -57,13 +56,15 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- ==========[Mashed_Bloodmoon_LycanthropeExhaustion]==========-->
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeFatigue]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
-		<defName>Mashed_Bloodmoon_LycanthropeExhaustion</defName>
-		<label>lycanthrope exhaustion</label>
+		<defName>Mashed_Bloodmoon_LycanthropeFatigue</defName>
+		<label>lycanthrope fatigue</label>
 		<description>TODO</description>
 		<comps>
-			
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
 		</comps>
 		<renderNodeProperties>
 			
