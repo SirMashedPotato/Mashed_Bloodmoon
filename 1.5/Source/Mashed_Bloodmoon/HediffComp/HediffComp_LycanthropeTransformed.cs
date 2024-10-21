@@ -55,7 +55,6 @@ namespace Mashed_Bloodmoon
                     if (inFury)
                     {
                         parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
-                        inFury = false;
                         parent.pawn.health.RemoveHediff(parent);
                         return;
                     }
@@ -104,7 +103,12 @@ namespace Mashed_Bloodmoon
             base.CompPostPostRemoved();
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
-            LycanthropeUtility.AddFatigueHediff(parent.pawn, CurrentFatigueDuration());
+            int fatigueDuration = CurrentFatigueDuration();
+            if (inFury)
+            {
+                fatigueDuration *= 2;
+            }
+            LycanthropeUtility.AddFatigueHediff(parent.pawn, fatigueDuration);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
         }
 
