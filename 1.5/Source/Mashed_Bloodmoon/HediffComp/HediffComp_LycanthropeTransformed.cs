@@ -6,6 +6,7 @@ namespace Mashed_Bloodmoon
 {
     public class HediffComp_LycanthropeTransformed : HediffComp
     {
+        public bool inFury = false;
         public int currentStress;
         private int stressMax = -1;
         private Gizmo_LycanthropeStress lycanthropeStressGizmo;
@@ -51,14 +52,34 @@ namespace Mashed_Bloodmoon
             {
                 if (currentStress >= StressMax)
                 {
-                    ///TODO force mental break
-                    parent.pawn.health.RemoveHediff(parent);
+                    if (inFury)
+                    {
+                        parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
+                        inFury = false;
+                        parent.pawn.health.RemoveHediff(parent);
+                        return;
+                    }
+                    StartFury("Mashed_Bloodmoon_FuryReasonStress".Translate());
                 }
                 else
                 {
-                    currentStress++;
+                    if (inFury)
+                    {
+                        currentStress += 2;
+                    }
+                    else
+                    {
+                        currentStress++;
+                    }
                 }
             }
+        }
+
+        public void StartFury(string reason = "???")
+        {
+            parent.pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Mashed_Bloodmoon_LycanthropeFury, reason, true, true);
+            currentStress = 0;
+            inFury = true;
         }
 
         /// <summary>

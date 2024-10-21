@@ -9,4 +9,7 @@
 	<!-- ==========[lycanthrope stress gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: 10 per hour</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
+	<!-- ==========[lycanthrope fury]==========-->
+	 <Mashed_Bloodmoon_FuryReasonStress>lycanthrope stress accumulation</Mashed_Bloodmoon_FuryReasonStress>
+	 <Mashed_Bloodmoon_FuryReasonForced>forced transformation</Mashed_Bloodmoon_FuryReasonForced>
 </LanguageData>

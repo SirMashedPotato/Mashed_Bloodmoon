@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeFury]==========-->
+	<MentalStateDef>
+		<defName>Mashed_Bloodmoon_LycanthropeFury</defName>
+		<label>lycanthrope fury</label>
+		<category>Aggro</category>
+		<stateClass>MentalState_Manhunter</stateClass> <!-- todo -->
+		<minTicksBeforeRecovery>99999999</minTicksBeforeRecovery>
+		<blockRandomInteraction>true</blockRandomInteraction>
+		<recoverFromSleep>false</recoverFromSleep>
+		<recoverFromDowned>false</recoverFromDowned>
+		<recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
+		<blockNormalThoughts>true</blockNormalThoughts>
+		<nameColor>(0.9,0.2,0.5)</nameColor>
+		<beginLetter>{0} has entered a lycanthrope fury!\n\n[PAWN_pronoun] will attack anything [PAWN_pronoun] sees, hears, or smells. This state will end once [PAWN_objective] lycanthropic stress has reached its limit again. It will increase at twice the rate as normal.\n\nCaused by: {1}</beginLetter>
+		<beginLetterDef>ThreatBig</beginLetterDef>
+		<recoveryMessage>{0}'s lycanthrope fury has come to an end.</recoveryMessage>
+		<baseInspectLine>Maddened: lycanthrope fury</baseInspectLine>
+		<stateEffecter>Berserk</stateEffecter>
+		<tale>MentalStateBerserk</tale> <!-- todo -->
+	</MentalStateDef>
+</Defs>
