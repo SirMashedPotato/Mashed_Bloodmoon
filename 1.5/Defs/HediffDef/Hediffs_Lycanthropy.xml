@@ -79,7 +79,13 @@
 		</renderNodeProperties>
 		<stages>
 			<li>
-				
+				<capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+				<disabledWorkTags>AllWork</disabledWorkTags>
 			</li>
 		</stages>
 	</HediffDef>
