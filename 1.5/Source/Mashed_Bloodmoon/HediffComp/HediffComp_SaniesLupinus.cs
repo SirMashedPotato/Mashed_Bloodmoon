@@ -2,9 +2,9 @@
 
 namespace Mashed_Bloodmoon
 {
-    public class HediffComp_SaniesLupus : HediffComp
+    public class HediffComp_SaniesLupinus : HediffComp
     {
-        public HediffCompProperties_SaniesLupus Props => (HediffCompProperties_SaniesLupus)props;
+        public HediffCompProperties_SaniesLupinus Props => (HediffCompProperties_SaniesLupinus)props;
 
         public override void CompPostTick(ref float severityAdjustment)
         {

@@ -16,7 +16,7 @@
 		<tendable>true</tendable>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
-			<li Class="Mashed_Bloodmoon.HediffCompProperties_SaniesLupus"/>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_SaniesLupinus"/>
 			<li Class="HediffCompProperties_TendDuration">
 				<baseTendDurationHours>12</baseTendDurationHours>
 				<severityPerDayTended>-0.1573</severityPerDayTended>
