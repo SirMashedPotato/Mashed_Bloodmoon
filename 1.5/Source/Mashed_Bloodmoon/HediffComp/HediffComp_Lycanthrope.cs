@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -9,6 +10,8 @@ namespace Mashed_Bloodmoon
         public HediffCompProperties_Lycanthrope Props => (HediffCompProperties_Lycanthrope)props;
 
         private LycanthropeTypeDef lycanthropeTypeDef;
+        public Color primaryColour = Color.white;
+        public Color secondaryColour = Color.white;
         private List<FloatMenuOption> lycanthropeTypeOptions;
 
         /// <summary>
@@ -61,6 +64,8 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostMake();
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
+            primaryColour = lycanthropeTypeDef.graphicData.color;
+            secondaryColour = lycanthropeTypeDef.graphicData.colorTwo;
         }
 
         /// <summary>
@@ -108,6 +113,8 @@ namespace Mashed_Bloodmoon
         public override void CompExposeData()
         {
             Scribe_Defs.Look(ref lycanthropeTypeDef, "lycanthropeTypeDef");
+            Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
+            Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);
         }
     }
 }

@@ -10,9 +10,10 @@ namespace Mashed_Bloodmoon
 
         public override Graphic GraphicFor(Pawn pawn)
         {
-            LycanthropeTypeDef typeDef = CompLycanthrope(pawn).LycanthropeTypeDef;
-            return GraphicDatabase.Get<Graphic_Multi>(typeDef.graphicData.texPath, ShaderDatabase.CutoutComplex, typeDef.graphicData.drawSize, 
-                typeDef.graphicData.color, typeDef.graphicData.colorTwo);
+            HediffComp_Lycanthrope comp = CompLycanthrope(pawn);
+            LycanthropeTypeDef typeDef = comp.LycanthropeTypeDef;
+            return GraphicDatabase.Get<Graphic_Multi>(typeDef.graphicData.texPath, ShaderDatabase.CutoutComplex, typeDef.graphicData.drawSize,
+                comp.primaryColour, comp.secondaryColour);
         }
     }
 }
