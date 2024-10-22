@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
@@ -48,30 +49,37 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompPostTick(ref float severityAdjustment)
         {
-            base.CompPostTick(ref severityAdjustment);
-            if (parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate))
+            try
             {
-                if (currentStress >= StressMax)
+                base.CompPostTick(ref severityAdjustment);
+                if (parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate))
                 {
-                    if (inFury)
+                    if (currentStress >= StressMax)
                     {
-                        parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
-                        parent.pawn.health.RemoveHediff(parent);
-                        return;
-                    }
-                    StartFury();
-                }
-                else
-                {
-                    if (inFury)
-                    {
-                        currentStress += 2;
+                        if (inFury)
+                        {
+                            parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
+                            parent.pawn.health.RemoveHediff(parent);
+                            return;
+                        }
+                        StartFury();
                     }
                     else
                     {
-                        currentStress++;
+                        if (inFury)
+                        {
+                            currentStress += 2;
+                        }
+                        else
+                        {
+                            currentStress++;
+                        }
                     }
                 }
+            }
+            catch (Exception)
+            {
+                ///There's a chance for a ticking error after the hediff is removed, this should hopefully prevent that
             }
         }
 
