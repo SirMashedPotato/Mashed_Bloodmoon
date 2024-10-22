@@ -30,6 +30,14 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(hediff);
         }
 
+        internal static void ForceTransformation(Pawn pawn, Hediff dormantHediff)
+        {
+            pawn.health.RemoveHediff(dormantHediff);
+            pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope);
+            HediffComp_LycanthropeTransformed compTransformed = pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed).TryGetComp<HediffComp_LycanthropeTransformed>();
+            compTransformed.StartFury();
+        }
+
         internal static void AddLinkedHediff(Pawn pawn, HediffDef hediffDef, BodyPartDef partDef)
         {
             foreach (BodyPartRecord bodyPartRecord in pawn.health.hediffSet.GetNotMissingParts())

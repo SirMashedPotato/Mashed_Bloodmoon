@@ -1,5 +1,4 @@
-﻿using System;
-using Verse;
+﻿using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -7,8 +6,7 @@ namespace Mashed_Bloodmoon
     {
         public override void IngestionOutcome_Dormant(Pawn pawn, Hediff hediff)
         {
-            ///TODO force transformation with rage
-            throw new NotImplementedException();
+            LycanthropeUtility.ForceTransformation(pawn, hediff);
         }
 
         public override void IngestionOutcome_Human(Pawn pawn)

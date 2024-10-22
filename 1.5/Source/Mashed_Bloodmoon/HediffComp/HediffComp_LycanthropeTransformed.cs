@@ -59,7 +59,7 @@ namespace Mashed_Bloodmoon
                         parent.pawn.health.RemoveHediff(parent);
                         return;
                     }
-                    StartFury("Mashed_Bloodmoon_FuryReasonStress".Translate());
+                    StartFury();
                 }
                 else
                 {
@@ -75,9 +75,9 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void StartFury(string reason = "???")
+        public void StartFury()
         {
-            parent.pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Mashed_Bloodmoon_LycanthropeFury, reason, true, true);
+            parent.pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Mashed_Bloodmoon_LycanthropeFury, null, true, true);
             currentStress = 0;
             inFury = true;
         }
