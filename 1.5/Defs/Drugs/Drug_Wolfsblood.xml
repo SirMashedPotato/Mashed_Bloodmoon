@@ -18,11 +18,11 @@
 		</ingestible>
 		<recipeMaker>
 			<researchPrerequisites>
-				<li>Mashed_Ashlands_AshSurvival_Advanced</li> <!-- TODO -->
+				<li>Mashed_Bloodmoon_Wolfsblood</li>
 			</researchPrerequisites>
 		</recipeMaker>
 		<costList>
-			<Mashed_Ashlands_ShalkChitin>6</Mashed_Ashlands_ShalkChitin> <!-- TODO -->
+			<Mashed_Bloodmoon_WolfsbaneFlower>6</Mashed_Bloodmoon_WolfsbaneFlower>
 		</costList>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_WolfsbloodAdrenaline]==========-->

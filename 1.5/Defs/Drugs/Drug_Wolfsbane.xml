@@ -20,11 +20,11 @@
 		</ingestible>
 		<recipeMaker>
 			<researchPrerequisites>
-				<li>Mashed_Ashlands_AshSurvival_Advanced</li> <!-- TODO -->
+				<li>Mashed_Bloodmoon_Wolfsbane</li>
 			</researchPrerequisites>
 		</recipeMaker>
 		<costList>
-			<Mashed_Ashlands_ShalkChitin>6</Mashed_Ashlands_ShalkChitin> <!-- TODO -->
+			<Mashed_Ashlands_ShalkChitin>3</Mashed_Ashlands_ShalkChitin> <!-- TODO -->
 		</costList>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_WolfsbaneResistance]==========-->

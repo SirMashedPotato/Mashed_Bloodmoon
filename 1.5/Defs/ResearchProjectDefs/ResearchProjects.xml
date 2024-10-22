@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Ashlands_ResearchBase]==========-->
+	<ResearchProjectDef Name="Mashed_Bloodmoon_ResearchBase" Abstract="True">
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tab>Mashed_ResearchTab_ElderScrolls</tab>
+	</ResearchProjectDef>
+	<!-- ==========[Mashed_Bloodmoon_Wolfsbane]==========-->
+	<ResearchProjectDef ParentName="Mashed_Bloodmoon_ResearchBase">
+		<defName>Mashed_Bloodmoon_Wolfsbane</defName>
+		<label>wolfsbane</label>
+		<description>Learn how to sow wolfsbane flowers, and how to use their petals to fight back against The Huntsman's hounds.</description>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->wolfsbane</li>
+				<li>subject_story->how to properly grow wolfsbane flowers</li>
+				<li>subject_story->what happens when a lycanthrope comes into contact with wolfsbane</li>
+				<li>subject_story->what happens when a lycanthrope drinks a wolfsbane elixir</li>
+				<li>subject_story->how to use wolfsbane to defend yourself against a lycanthrope</li>
+				<li>subject_story->how to tell if someone is a lycanthrope with one simple trick</li>
+				<li>subject_gerund->sowing wolfsbane flowers</li>
+				<li>subject_gerund->processing wolfsbane petals</li>
+				<li>subject_gerund->brewing wolfsbane elixir</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+	<!-- ==========[Mashed_Bloodmoon_Wolfsblood]==========-->
+	<ResearchProjectDef ParentName="Mashed_Bloodmoon_ResearchBase">
+		<defName>Mashed_Bloodmoon_Wolfsblood</defName>
+		<label>wolfsblood</label>
+		<description>Learn how to use werewolf blood to brew wolfblood elixirs.</description>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->wolfsblood</li>
+				<li>subject_story->how to properly harvest werewolf blood</li>
+				<li>subject_story->the dangers of drinking wolfsblood</li>
+				<li>subject_story->how to empower your lycanthrope form with wolfsblood elixirs</li>
+				<li>subject_story->how to turn yourself into a lycanthrope with one simple trick</li>
+				<li>subject_gerund->processing werewolf blood</li>
+				<li>subject_gerund->brewing wolfsblood elixir</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+</Defs>
