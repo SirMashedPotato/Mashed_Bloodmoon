@@ -80,6 +80,7 @@ namespace Mashed_Bloodmoon
                     defaultLabel = "Mashed_Bloodmoon_TransformLycanthrope_Label".Translate(),
                     defaultDesc = "Mashed_Bloodmoon_TransformLycanthrope_Desc".Translate(parent.pawn, 
                     ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformLycanthrope", true),
                     action = delegate ()
                     {
                         parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
