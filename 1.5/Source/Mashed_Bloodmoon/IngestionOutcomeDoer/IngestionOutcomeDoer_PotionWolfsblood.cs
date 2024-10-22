@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -11,7 +12,10 @@ namespace Mashed_Bloodmoon
 
         public override void IngestionOutcome_Human(Pawn pawn)
         {
-            pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_SaniesLupinus).Severity = 0.1f;
+            if (pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropyResistance) < 1)
+            {
+                pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_SaniesLupinus).Severity = 0.1f;
+            }
         }
 
         public override void IngestionOutcome_Lycanthrope(Pawn pawn, Hediff hediff)
