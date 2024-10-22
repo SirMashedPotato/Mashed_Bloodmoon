@@ -80,6 +80,7 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
     <Compile Include="JobGiver\JobGiver_LycanthropeFury.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
     <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddAbility.cs" />
     <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddHediff.cs" />
     <Compile Include="LycanthropeTypeTransformationWorker\LycanthropeTypeTransformationWorker.cs" />
