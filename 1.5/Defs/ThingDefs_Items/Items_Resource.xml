@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbaneFlower]==========-->
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>Mashed_Bloodmoon_WolfsbaneFlower</defName>
+		<label>wolfsbane flower</label>
+		<description>Flowers harvested from a wolfsbane plant. Can be used to create wolfsbane elixirs.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Mashed_Bloodmoon_RawWolfsbane</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.2</MarketValue>
+			<Flammability>1.3</Flammability>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+		</ingestible>
+		<tradeTags Inherit="False">
+			<li>Mashed_Bloodmoon_Resource</li>
+		</tradeTags>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfBlood]==========-->
+	<ThingDef ParentName="ResourceBase">
+		<defName>Mashed_Bloodmoon_WerewolfBlood</defName>
+		<label>werewolf blood</label>
+		<description>Peculiar blood extracted from one of The Huntsman's hounds. Close examination would identify numerous foreign bodies within the blood. Can be used to make wolfsblood elixirs.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Mashed_Bloodmoon_WerewolfBlood</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>10</MarketValue>
+			<Mass>0.02</Mass>
+			<Flammability>0.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<tradeTags Inherit="False">
+			<li>Mashed_Bloodmoon_Resource</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

@@ -6,6 +6,7 @@
 		<label>wolfsblood elixir</label>
 		<description>An elixir made from pure werewolf blood, the effect it has on the ingestors body depends on the advancement, or lack, of lycanthropy.\n\nWhen ingested by those without any traces of lycanthropy, it will infect them with Sanies Lupinus.\n\nWhen ingested by those that are currently infected by Sanies Lupinus, it strengthen infection, increasing the severity of it\n\nWhen ingested by those with dormant lycanthropy, it will force a transformation, progressing the disease into full lycanthropy in the process.\n\nWhen ingested by a lycanthrope, it will temporarily increase the amount of lycanthropic stress they can withstand while transformed.</description>
 		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
 			<HediffDef>Mashed_Bloodmoon_WolfsbloodAdrenaline</HediffDef>
 		</descriptionHyperlinks>
 		<graphicData>
@@ -22,7 +23,7 @@
 			</researchPrerequisites>
 		</recipeMaker>
 		<costList>
-			<Mashed_Bloodmoon_WolfsbaneFlower>6</Mashed_Bloodmoon_WolfsbaneFlower>
+			<Mashed_Bloodmoon_WerewolfBlood>3</Mashed_Bloodmoon_WerewolfBlood>
 		</costList>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_WolfsbloodAdrenaline]==========-->

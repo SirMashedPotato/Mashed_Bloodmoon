@@ -24,7 +24,7 @@
 			</researchPrerequisites>
 		</recipeMaker>
 		<costList>
-			<Mashed_Ashlands_ShalkChitin>3</Mashed_Ashlands_ShalkChitin> <!-- TODO -->
+			<Mashed_Bloodmoon_WolfsbaneFlower>6</Mashed_Bloodmoon_WolfsbaneFlower>
 		</costList>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_WolfsbaneResistance]==========-->
