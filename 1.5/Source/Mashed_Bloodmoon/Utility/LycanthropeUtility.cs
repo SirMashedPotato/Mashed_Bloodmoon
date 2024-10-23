@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -33,6 +34,18 @@ namespace Mashed_Bloodmoon
                 hediffComp_Disappears.ticksToDisappear = duration;
             }
             pawn.health.AddHediff(hediff);
+        }
+
+        internal static void ApplyLycanthropeDamage(Pawn pawn, float factor = 1f)
+        {
+            if (pawn.RaceProps.Humanlike)
+            {
+                float resistance = pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropyResistance);
+                if (Rand.Chance(Mathf.Max(1f - resistance, 0f) * factor))
+                {
+                    pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_SaniesLupinus).Severity += 0.01f;
+                }
+            }
         }
 
         internal static void ForceTransformation(Pawn pawn, Hediff dormantHediff)

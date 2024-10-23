@@ -119,7 +119,7 @@
 					<li>
 						<label>lycanthrope claws</label>
 						<capacities>
-							<li>Scratch</li>
+							<li>Mashed_Bloodmoon_LycanthropeScratch</li>
 						</capacities>
 						<power>12</power>
 						<armorPenetration>0.25</armorPenetration>
@@ -143,7 +143,7 @@
 					<li>
 						<label>lycanthrope teeth</label>
 						<capacities>
-							<li>Bite</li>
+							<li>Mashed_Bloodmoon_LycanthropeBite</li>
 						</capacities>
 						<power>16</power>
 						<armorPenetration>0.25</armorPenetration>

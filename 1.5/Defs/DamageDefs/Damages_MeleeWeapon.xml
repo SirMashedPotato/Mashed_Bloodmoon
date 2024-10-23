@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeBite]==========-->
+	<DamageDef ParentName="Bite">
+		<defName>Mashed_Bloodmoon_LycanthropeBite</defName>
+		<label>lycanthrope bite</label>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_LycanthropeBite</workerClass>
+	</DamageDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeScratch]==========-->
+	<DamageDef ParentName="Scratch">
+		<defName>Mashed_Bloodmoon_LycanthropeScratch</defName>
+		<label>lycanthrope scratch</label>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_LycanthropeScratch</workerClass>
+	</DamageDef>
+</Defs>
