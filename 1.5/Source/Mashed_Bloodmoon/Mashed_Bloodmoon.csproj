@@ -98,7 +98,8 @@
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_Lycanthrope.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformedGlow.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformed.cs" />
-    <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeTransformed.cs" />
+    <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeScaled.cs" />
+    <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeTransformedBody.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />

@@ -65,14 +65,14 @@
 			<li>
 				<debugLabel>lycanthrope transformation</debugLabel>
 				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformed</nodeClass>
-				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeTransformed</workerClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeTransformedBody</workerClass>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>1</baseLayer>
 			</li>
 			<li>
 				<debugLabel>lycanthrope glow</debugLabel>
 				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformedGlow</nodeClass>
-				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeTransformed</workerClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>2</baseLayer>
 			</li>
