@@ -8,6 +8,11 @@ namespace Mashed_Bloodmoon
         internal static readonly float lycanthropeStressToTicks = GenDate.TicksPerHour * 0.3f;
         internal static readonly int lycanthropeStressRate = GenDate.TicksPerHour / 10;
 
+        internal static bool PawnIsTransformedLycanthrope(Pawn pawn)
+        {
+            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null;
+        }
+
         /// <summary>
         /// Returns the pawns HediffComp_Lycanthrope
         /// </summary>
@@ -52,13 +57,9 @@ namespace Mashed_Bloodmoon
 
         internal static void RemoveLinkedHediff(Pawn pawn, HediffDef hediffDef)
         {
-            while (true) 
+            Hediff hediff;
+            while ((hediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef)) != null)
             {
-                Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
-                if(hediff == null)
-                {
-                    return;
-                }
                 pawn.health.RemoveHediff(hediff);
             }
         }

@@ -21,6 +21,13 @@ namespace Mashed_Bloodmoon
                 return;
             }
 
+            hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
+            if (hediff != null)
+            {
+                IngestionOutcome_Transformed(pawn, hediff);
+                return;
+            }
+
             hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope);
             if (hediff != null)
             {
@@ -50,5 +57,10 @@ namespace Mashed_Bloodmoon
         /// When a pawn with sanies lupinus ingests it
         /// </summary>
         public abstract void IngestionOutcome_SaniesLupinus(Pawn pawn, Hediff hediff);
+
+        /// <summary>
+        /// When a transformed pawn ingests it
+        /// </summary>
+        public abstract void IngestionOutcome_Transformed(Pawn pawn, Hediff hediff);
     }
 }

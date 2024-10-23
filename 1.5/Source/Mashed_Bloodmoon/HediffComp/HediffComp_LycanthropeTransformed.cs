@@ -112,6 +112,7 @@ namespace Mashed_Bloodmoon
             base.CompPostPostRemoved();
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
+            LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
             int fatigueDuration = CurrentFatigueDuration();
             if (inFury)
             {

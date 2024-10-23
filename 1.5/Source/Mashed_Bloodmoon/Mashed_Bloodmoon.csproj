@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.3.3\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -70,6 +74,7 @@
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="Gene\Gene_Lycanthrope.cs" />
     <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
+    <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
@@ -103,6 +108,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

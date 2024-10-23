@@ -25,5 +25,6 @@ namespace Mashed_Bloodmoon
         public static HediffDef Mashed_Bloodmoon_WolfsbaneNausea;
         ///Wolfsblood
         public static HediffDef Mashed_Bloodmoon_WolfsbloodAdrenaline;
+        public static HediffDef Mashed_Bloodmoon_WolfsbloodRegeneration;
     }
 }
