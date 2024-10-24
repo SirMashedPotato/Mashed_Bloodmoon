@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
+		<value>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemSpeed</totemTypeDef>
+			</li>
+		</value>
+	</Operation>
+</Patch>

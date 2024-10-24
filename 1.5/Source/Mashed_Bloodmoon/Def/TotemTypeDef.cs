@@ -6,12 +6,15 @@ namespace Mashed_Bloodmoon
 {
     public class TotemTypeDef : Def
     {
+        public string labelShort = "???";
         public ThingDef totemThingDef;
         public StatDef statDef;
         public int useLimit = 30;
         public float increasePerLevel = 1f;
         public bool onlyTransformed = true;
         public LycanthropeTypeTransformationWorker transformationWorker;
+
+        public string LabelShortCap => labelShort.CapitalizeFirst();
 
         public override IEnumerable<string> ConfigErrors()
         {

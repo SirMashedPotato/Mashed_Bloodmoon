@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(hediff);
         }
 
-        public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus)
+        public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus, bool ignoreTransformed = false)
         {
             bonus = 0;
             if (totemTypeDef == null)
@@ -48,7 +48,7 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
-            if (totemTypeDef.onlyTransformed && !PawnIsTransformedLycanthrope(pawn))
+            if (totemTypeDef.onlyTransformed && !PawnIsTransformedLycanthrope(pawn) && !ignoreTransformed)
             {
                 return false;
             }

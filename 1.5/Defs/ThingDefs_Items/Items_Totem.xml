@@ -40,6 +40,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
 		<label>Huntsman's totem (Endurance)</label>
+		<description>A totem of the hunt, made in the semblance of a wolf. Totems such as these may seem worthless to most, for their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to lycanthropic stress limit. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
 		</descriptionHyperlinks>
@@ -49,6 +50,40 @@
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectTotem">
 				<totemTypeDef>Mashed_Bloodmoon_TotemEndurance</totemTypeDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
+		<defName>Mashed_Bloodmoon_TotemSpeed</defName>
+		<label>Huntsman's totem (Speed)</label>
+		<description>A totem of the hunt, made in the semblance of a deer. Totems such as these may seem worthless to most, for their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to movement speed while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<descriptionHyperlinks>
+			<StatDef>MoveSpeed</StatDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemSpeed</texPath>
+		</graphicData>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectTotem">
+				<totemTypeDef>Mashed_Bloodmoon_TotemSpeed</totemTypeDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemStrength]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
+		<defName>Mashed_Bloodmoon_TotemStrength</defName>
+		<label>Huntsman's totem (Strength)</label>
+		<description>A totem of the hunt, made in the semblance of a bear. Totems such as these may seem worthless to most, for their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee damage while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<descriptionHyperlinks>
+			<StatDef>MeleeDamageFactor</StatDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemStrength</texPath>
+		</graphicData>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectTotem">
+				<totemTypeDef>Mashed_Bloodmoon_TotemStrength</totemTypeDef>
 			</li>
 		</comps>
 	</ThingDef>
