@@ -125,7 +125,7 @@ namespace Mashed_Bloodmoon
                     if (usedTotem.Key.statDef != null)
                     {
                         LycanthropeUtility.TotemStatBonus(parent.pawn, usedTotem.Key, out float bonus);
-                        description += "\n    - " + usedTotem.Key.statDef.label.CapitalizeFirst() + ": +" + bonus;
+                        description += "\n    - " + usedTotem.Key.statDef.LabelCap + ": +" + bonus;
                     }
                 }
 

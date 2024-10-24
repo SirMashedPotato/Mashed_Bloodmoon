@@ -7,9 +7,9 @@ namespace Mashed_Bloodmoon
     {
         public override string ExplanationPart(StatRequest req)
         {
-            if (req.Thing != null && req.Thing is Pawn && (!totemTypeDef.onlyTransformed || LycanthropeUtility.PawnIsTransformedLycanthrope(req.Pawn)))
+            if (req.Thing != null && req.Thing is Pawn pawn && LycanthropeUtility.TotemStatBonus(pawn, totemTypeDef, out float bonus))
             {
-                return "Mashed_Bloodmoon_TotemStatOffset".Translate();
+                return "Mashed_Bloodmoon_TotemStatOffset".Translate(totemTypeDef.LabelCap) + bonus;
             }
             return null;
         }

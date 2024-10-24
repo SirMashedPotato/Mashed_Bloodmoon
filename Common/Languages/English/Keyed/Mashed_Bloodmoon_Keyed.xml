@@ -12,7 +12,7 @@
 	<!-- ==========[lycanthrope hediff description]==========-->
 	<Mashed_Bloodmoon_UsedTotems>\n\nUsed totems:</Mashed_Bloodmoon_UsedTotems>
 	<!-- ==========[totems]==========-->
-	<Mashed_Bloodmoon_TotemStatOffset>TODO</Mashed_Bloodmoon_TotemStatOffset>
+	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
 	<Mashed_Bloodmoon_NotLycanthrope>{0_label} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
 	<Mashed_Bloodmoon_TotemLimitReached>{0_label} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
 	<!-- ==========[misc]==========-->
