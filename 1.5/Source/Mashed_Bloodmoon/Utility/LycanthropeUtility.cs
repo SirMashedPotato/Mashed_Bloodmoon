@@ -43,12 +43,12 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
-            HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
+            HediffComp_Lycanthrope compLycanthrope = GetCompLycanthrope(pawn);
             if (compLycanthrope == null)
             {
                 return false;
             }
-            if (totemTypeDef.onlyTransformed && !LycanthropeUtility.PawnIsTransformedLycanthrope(pawn))
+            if (totemTypeDef.onlyTransformed && !PawnIsTransformedLycanthrope(pawn))
             {
                 return false;
             }
