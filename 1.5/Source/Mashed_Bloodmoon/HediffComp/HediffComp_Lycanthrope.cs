@@ -121,7 +121,12 @@ namespace Mashed_Bloodmoon
                 description += "Mashed_Bloodmoon_UsedTotems".Translate();
                 foreach (KeyValuePair<TotemTypeDef, int> usedTotem in usedTotemTracker)
                 {
-                    description += "\n - " + usedTotem.Key.LabelCap + ": " + usedTotem.Value;
+                    description += "\n  - " + usedTotem.Key.LabelCap + ": " + usedTotem.Value;
+                    if (usedTotem.Key.statDef != null)
+                    {
+                        LycanthropeUtility.TotemStatBonus(parent.pawn, usedTotem.Key, out float bonus);
+                        description += "\n    - " + usedTotem.Key.statDef.label.CapitalizeFirst() + ": +" + bonus;
+                    }
                 }
 
                 return description ?? string.Empty;

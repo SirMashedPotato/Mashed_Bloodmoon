@@ -36,6 +36,30 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(hediff);
         }
 
+        public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus)
+        {
+            bonus = 0;
+            if (totemTypeDef == null)
+            {
+                return false;
+            }
+            HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
+            if (compLycanthrope == null)
+            {
+                return false;
+            }
+            if (totemTypeDef.onlyTransformed && !LycanthropeUtility.PawnIsTransformedLycanthrope(pawn))
+            {
+                return false;
+            }
+            if (compLycanthrope.usedTotemTracker.TryGetValue(totemTypeDef, out int usedCount))
+            {
+                bonus = usedCount * totemTypeDef.increasePerLevel;
+                return true;
+            }
+            return false;
+        }
+
         internal static void ApplyLycanthropeDamage(Pawn pawn, float factor = 1f)
         {
             if (pawn.RaceProps.Humanlike)
