@@ -6,7 +6,7 @@ namespace Mashed_Bloodmoon
 {
     public class LTTWorker_AddAbility : LycanthropeTypeTransformationWorker
     {
-        public override void PostTransformationBegin(Pawn pawn)
+        public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {
             if (abilityDef != null)
             {
@@ -14,7 +14,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public override void PostTransformationEnd(Pawn pawn)
+        public override void PostTransformationEnd(Pawn pawn, int value = 0)
         {
             if (abilityDef != null)
             {

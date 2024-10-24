@@ -13,6 +13,7 @@ namespace Mashed_Bloodmoon
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
         private List<FloatMenuOption> lycanthropeTypeOptions;
+        public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
 
         /// <summary>
         /// Debug tool, replace with proper gizmo
@@ -66,6 +67,10 @@ namespace Mashed_Bloodmoon
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
             primaryColour = lycanthropeTypeDef.graphicData.color;
             secondaryColour = lycanthropeTypeDef.graphicData.colorTwo;
+            foreach (TotemTypeDef def in DefDatabase<TotemTypeDef>.AllDefs)
+            {
+                usedTotemTracker.Add(def, 0);
+            }
         }
 
         /// <summary>
@@ -106,7 +111,22 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
-        public override string CompDescriptionExtra => base.CompDescriptionExtra;
+        public override string CompDescriptionExtra
+        {
+            get
+            {
+                string description = "";
+
+                ///Totems
+                description += "Mashed_Bloodmoon_UsedTotems".Translate();
+                foreach (KeyValuePair<TotemTypeDef, int> usedTotem in usedTotemTracker)
+                {
+                    description += "\n - " + usedTotem.Key.LabelCap + ": " + usedTotem.Value;
+                }
+
+                return description ?? string.Empty;
+            }
+        }
 
         /// <summary>
         /// 
@@ -116,6 +136,7 @@ namespace Mashed_Bloodmoon
             Scribe_Defs.Look(ref lycanthropeTypeDef, "lycanthropeTypeDef");
             Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);
+            Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Mashed_Bloodmoon
 {
     public class LTTWorker_AddHediff : LycanthropeTypeTransformationWorker
     {
-        public override void PostTransformationBegin(Pawn pawn)
+        public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {
             if (hediffDef != null)
             {
@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public override void PostTransformationEnd(Pawn pawn)
+        public override void PostTransformationEnd(Pawn pawn, int value = 0)
         {
             if (hediffDef != null)
             {

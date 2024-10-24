@@ -6,9 +6,9 @@ namespace Mashed_Bloodmoon
 {
     public abstract class LycanthropeTypeTransformationWorker
     {
-        public abstract void PostTransformationBegin(Pawn pawn);
+        public abstract void PostTransformationBegin(Pawn pawn, int value = 0);
 
-        public abstract void PostTransformationEnd(Pawn pawn);
+        public abstract void PostTransformationEnd(Pawn pawn, int value = 0);
 
         public virtual IEnumerable<string> ConfigErrors()
         {

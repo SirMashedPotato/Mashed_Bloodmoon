@@ -32,5 +32,10 @@
 			<li>Mashed_Bloodmoon_Lycanthrope</li>
 		</showIfHediffsPresent>
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
+		<parts>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemEndurance</totemTypeDef>
+			</li>
+		</parts>
 	</StatDef>
 </Defs>

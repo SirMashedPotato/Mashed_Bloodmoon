@@ -9,6 +9,12 @@
 	<!-- ==========[lycanthrope stress gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: 10 per hour</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
+	<!-- ==========[lycanthrope hediff description]==========-->
+	<Mashed_Bloodmoon_UsedTotems>\n\nUsed totems:</Mashed_Bloodmoon_UsedTotems>
+	<!-- ==========[totems]==========-->
+	<Mashed_Bloodmoon_TotemStatOffset>TODO</Mashed_Bloodmoon_TotemStatOffset>
+	<Mashed_Bloodmoon_NotLycanthrope>{0_label} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
+	<Mashed_Bloodmoon_TotemLimitReached>{0_label} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
 	<!-- ==========[misc]==========-->
 	 <Mashed_Bloodmoon_LycanthropeCantEquip>{0_label} is in their lycanthrope form</Mashed_Bloodmoon_LycanthropeCantEquip>
 </LanguageData>

@@ -101,6 +101,10 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
+            foreach (KeyValuePair<TotemTypeDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
+            {
+                usedTotem.Key.transformationWorker?.PostTransformationBegin(parent.pawn, usedTotem.Value);
+            }
         }
 
         /// <summary>
@@ -113,13 +117,17 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
+            CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
+            foreach (KeyValuePair<TotemTypeDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
+            {
+                usedTotem.Key.transformationWorker?.PostTransformationEnd(parent.pawn, usedTotem.Value);
+            }
             int fatigueDuration = CurrentFatigueDuration();
             if (inFury)
             {
                 fatigueDuration *= 2;
             }
             LycanthropeUtility.AddFatigueHediff(parent.pawn, fatigueDuration);
-            CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
         }
 
         /// <summary>

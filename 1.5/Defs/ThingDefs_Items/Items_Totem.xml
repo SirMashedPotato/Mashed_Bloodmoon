@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
+	<ThingDef ParentName="ResourceBase" Name="Mashed_Bloodmoon_TotemBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Neolithic</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Eurekacorn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Mashed_Bloodmoon_LycanthropeTotems</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Mashed_Bloodmoon_LycanthropeTotems</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.5</Mass>
+		</statBases>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>All</tradeability>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use {0}</useLabel>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemEndurance]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
+		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
+		<label>Huntsman's totem (Endurance)</label>
+		<descriptionHyperlinks>
+			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemEndurance</texPath>
+		</graphicData>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectTotem">
+				<totemTypeDef>Mashed_Bloodmoon_TotemEndurance</totemTypeDef>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
