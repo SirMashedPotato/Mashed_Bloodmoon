@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="MeleeHitChanceIndoorsDarkOffset"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="MeleeHitChanceIndoorsDarkOffset"]</xpath>
+			<value>
+				<parts/>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="MeleeHitChanceOutdoorsDarkOffset"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="MeleeHitChanceOutdoorsDarkOffset"]</xpath>
+			<value>
+				<parts/>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/StatDef[defName="MeleeHitChanceIndoorsDarkOffset" or defName="MeleeHitChanceOutdoorsDarkOffset"]/parts</xpath>
+		<value>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemSight</totemTypeDef>
+			</li>
+		</value>
+	</Operation>
+</Patch>

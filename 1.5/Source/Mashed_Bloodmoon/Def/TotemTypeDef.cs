@@ -8,10 +8,11 @@ namespace Mashed_Bloodmoon
     {
         public string labelShort = "???";
         public ThingDef totemThingDef;
-        public StatDef statDef;
+        public List<StatDef> statDefs;
         public int useLimit = 30;
         public float increasePerLevel = 1f;
         public bool onlyTransformed = true;
+        public bool displayAsTotem = true;
         public LycanthropeTypeTransformationWorker transformationWorker;
 
         public string LabelShortCap => labelShort.CapitalizeFirst();
@@ -21,11 +22,6 @@ namespace Mashed_Bloodmoon
             foreach (string item in base.ConfigErrors())
             {
                 yield return item;
-            }
-
-            if (totemThingDef == null)
-            {
-                yield return "null totemThingDef";
             }
 
             if (transformationWorker != null)

@@ -76,6 +76,7 @@
     <Compile Include="DefOf\MentalStateDefOf.cs" />
     <Compile Include="DefOf\RecordDefOf.cs" />
     <Compile Include="DefOf\StatDefOf.cs" />
+    <Compile Include="DefOf\TotemTypeDefOf.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="Def\TotemTypeDef.cs" />
     <Compile Include="Gene\Gene_Lycanthrope.cs" />

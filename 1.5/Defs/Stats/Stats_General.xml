@@ -34,7 +34,7 @@
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
-				<totemTypeDef>Mashed_Bloodmoon_TotemEndurance</totemTypeDef>
+				<totemTypeDef>Mashed_Bloodmoon_ConsumedHearts</totemTypeDef>
 			</li>
 		</parts>
 	</StatDef>

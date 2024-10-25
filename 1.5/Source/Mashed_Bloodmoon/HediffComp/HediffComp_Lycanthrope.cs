@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 
@@ -125,20 +124,40 @@ namespace Mashed_Bloodmoon
         {
             get
             {
-                string description = "";
+                string description = "\n";
+
+                ///Consumed hearts
+                description += "\n" + TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.LabelCap + ": (" 
+                    + usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts] + ")";
+                foreach(StatDef statDef in TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.statDefs)
+                {
+                    LycanthropeUtility.TotemStatBonus(parent.pawn, TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts, out float bonus, true);
+                    description += "\n  - " + statDef.LabelCap + ": " + bonus;
+                }
 
                 ///Totems
                 description += "Mashed_Bloodmoon_UsedTotems".Translate();
                 foreach (KeyValuePair<TotemTypeDef, int> usedTotem in usedTotemTracker)
                 {
-                    description += "\n  - " + usedTotem.Key.LabelShortCap + ": " + usedTotem.Value;
-                    if (usedTotem.Key.statDef != null)
+                    if (usedTotem.Key.displayAsTotem)
                     {
-                        LycanthropeUtility.TotemStatBonus(parent.pawn, usedTotem.Key, out float bonus, true);
-                        description += "\n    - " + usedTotem.Key.statDef.LabelCap + ": +" + bonus;
-                        if (usedTotem.Key.onlyTransformed)
+                        description += "\n  - " + usedTotem.Key.LabelShortCap + ": " + usedTotem.Value;
+                        if (!usedTotem.Key.statDefs.NullOrEmpty())
                         {
-                            description += " (T)";
+                            foreach (StatDef statDef in usedTotem.Key.statDefs)
+                            {
+                                LycanthropeUtility.TotemStatBonus(parent.pawn, usedTotem.Key, out float bonus, true);
+                                description += "\n    - " + statDef.LabelCap + ": ";
+                                if (bonus > 0)
+                                {
+                                    description += "+";
+                                }
+                                description += bonus;
+                                if (!usedTotem.Key.onlyTransformed)
+                                {
+                                    description += " (H)";
+                                }
+                            }
                         }
                     }
                 }

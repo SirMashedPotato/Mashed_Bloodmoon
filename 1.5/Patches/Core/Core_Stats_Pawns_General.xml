@@ -8,4 +8,22 @@
 			</li>
 		</value>
 	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="RestFallRateFactor"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="RestFallRateFactor"]</xpath>
+			<value>
+				<parts/>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/StatDef[defName="RestFallRateFactor"]/parts</xpath>
+		<value>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemEndurance</totemTypeDef>
+			</li>
+		</value>
+	</Operation>
 </Patch>

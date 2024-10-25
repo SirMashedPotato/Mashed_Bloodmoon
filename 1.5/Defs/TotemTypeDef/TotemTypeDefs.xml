@@ -1,15 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_ConsumedHearts]========== -->
+	<Mashed_Bloodmoon.TotemTypeDef>
+		<defName>Mashed_Bloodmoon_ConsumedHearts</defName>
+		<label>Consumed hearts</label>
+		<labelShort>Consumed hearts</labelShort>
+		<statDefs>
+			<li>Mashed_Bloodmoon_LycanthropicStressMax</li>
+		</statDefs>
+		<useLimit>100</useLimit>
+		<increasePerLevel>1</increasePerLevel>
+		<onlyTransformed>false</onlyTransformed>
+		<displayAsTotem>false</displayAsTotem>
+	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemEndurance]========== -->
 	<Mashed_Bloodmoon.TotemTypeDef>
 		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
 		<label>Huntsman's totem (Endurance)</label>
 		<labelShort>totem (Endurance)</labelShort>
 		<totemThingDef>Mashed_Bloodmoon_TotemEndurance</totemThingDef>
-		<statDef>Mashed_Bloodmoon_LycanthropicStressMax</statDef>
+		<statDefs>
+			<li>RestFallRateFactor</li>
+		</statDefs>
 		<useLimit>100</useLimit>
-		<increasePerLevel>1</increasePerLevel>
-		<onlyTransformed>false</onlyTransformed>
+		<increasePerLevel>-0.01</increasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.TotemTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
+	<Mashed_Bloodmoon.TotemTypeDef MayRequire="ludeon.rimworld.ideology">
+		<defName>Mashed_Bloodmoon_TotemSight</defName>
+		<label>Huntsman's totem (Sight)</label>
+		<labelShort>totem (Sight)</labelShort>
+		<totemThingDef>Mashed_Bloodmoon_TotemSight</totemThingDef>
+		<statDefs>
+			<li>MeleeHitChanceIndoorsDarkOffset</li>
+			<li>MeleeHitChanceOutdoorsDarkOffset</li>
+		</statDefs>
+		<useLimit>100</useLimit>
+		<increasePerLevel>0.01</increasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->
 	<Mashed_Bloodmoon.TotemTypeDef>
@@ -17,9 +46,11 @@
 		<label>Huntsman's totem (Speed)</label>
 		<labelShort>totem (Speed)</labelShort>
 		<totemThingDef>Mashed_Bloodmoon_TotemSpeed</totemThingDef>
-		<statDef>MoveSpeed</statDef>
+		<statDefs>
+			<li>MoveSpeed</li>
+		</statDefs>
 		<useLimit>100</useLimit>
-		<increasePerLevel>0.01</increasePerLevel>
+		<increasePerLevel>0.02</increasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemStrength]========== -->
@@ -28,9 +59,24 @@
 		<label>Huntsman's totem (Strength)</label>
 		<labelShort>totem (Strength)</labelShort>
 		<totemThingDef>Mashed_Bloodmoon_TotemStrength</totemThingDef>
-		<statDef>MeleeDamageFactor</statDef>
+		<statDefs>
+			<li>MeleeDamageFactor</li>
+		</statDefs>
 		<useLimit>100</useLimit>
 		<increasePerLevel>0.01</increasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.TotemTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemTenacity]========== -->
+	<Mashed_Bloodmoon.TotemTypeDef>
+		<defName>Mashed_Bloodmoon_TotemTenacity</defName>
+		<label>Huntsman's totem (Tenacity)</label>
+		<labelShort>totem (Tenacity)</labelShort>
+		<totemThingDef>Mashed_Bloodmoon_TotemTenacity</totemThingDef>
+		<statDefs>
+			<li>IncomingDamageFactor</li>
+		</statDefs>
+		<useLimit>100</useLimit>
+		<increasePerLevel>-0.005</increasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.TotemTypeDef>
 </Defs>
