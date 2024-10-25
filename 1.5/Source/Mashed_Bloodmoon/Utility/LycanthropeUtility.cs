@@ -14,6 +14,16 @@ namespace Mashed_Bloodmoon
             return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null;
         }
 
+        internal static bool PawnIsLycanthrope(Pawn pawn)
+        {
+            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope) != null;
+        }
+
+        internal static bool PawnIsDormantLycanthrope(Pawn pawn)
+        {
+            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant) != null;
+        }
+
         /// <summary>
         /// Returns the pawns HediffComp_Lycanthrope
         /// </summary>

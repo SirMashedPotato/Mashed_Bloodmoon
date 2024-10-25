@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 
@@ -71,6 +72,15 @@ namespace Mashed_Bloodmoon
             {
                 usedTotemTracker.Add(def, 0);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
+        {
+            base.Notify_PawnDied(dinfo, culprit);
+            Find.HistoryEventsManager.RecordEvent(new HistoryEvent(HistoryEventDefOf.Mashed_Bloodmoon_LycanthropeDied));
         }
 
         /// <summary>

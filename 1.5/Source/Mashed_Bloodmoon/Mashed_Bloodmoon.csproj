@@ -70,6 +70,7 @@
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
+    <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
     <Compile Include="DefOf\HediffDefOf.cs" />
     <Compile Include="DefOf\MentalStateDefOf.cs" />
@@ -114,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
     <Compile Include="StatPart\StatPart_LycanthropeTotems.cs" />
+    <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptIsLycanthrope.cs" />
+    <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />
+    <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
   </ItemGroup>
   <ItemGroup>
