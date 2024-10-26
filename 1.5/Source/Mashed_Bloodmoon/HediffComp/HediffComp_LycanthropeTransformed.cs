@@ -100,6 +100,7 @@ namespace Mashed_Bloodmoon
             parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_TransformationCount);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
+            parent.pawn.abilities.GainAbility(AbilityDefOf.Mashed_Bloodmoon_ConsumeHeart);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
             foreach (KeyValuePair<TotemTypeDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
@@ -117,6 +118,7 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
+            parent.pawn.abilities.RemoveAbility(AbilityDefOf.Mashed_Bloodmoon_ConsumeHeart);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
             foreach (KeyValuePair<TotemTypeDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {

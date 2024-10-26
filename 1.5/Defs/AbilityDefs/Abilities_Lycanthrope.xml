@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_ConsumeHeart]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
+		<label>consume heart</label>
+		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one, however this change will only come into effect with the next transformation.</description>
+		<cooldownTicksRange>300</cooldownTicksRange>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_ConsumeHeart</iconPath>
+		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<showPsycastEffects>false</showPsycastEffects>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<warmupEffecter>EatMeat</warmupEffecter>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_ConsumeHeart">
+				<goodwillImpact>-70</goodwillImpact>
+			</li>
+		</comps>
+		<verbProperties>
+			<drawAimPie>False</drawAimPie>
+			<range>-1</range>
+			<warmupTime>3</warmupTime>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<targetParams>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetCorpses>true</canTargetCorpses>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+</Defs>

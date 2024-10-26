@@ -65,10 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_ConsumeHeart.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_ConsumeHeart.cs" />
     <Compile Include="CompUse\CompUseEffect_Totem.cs" />
     <Compile Include="CompUse\Properties\CompProperties_UseEffectTotem.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
+    <Compile Include="DefOf\AbilityDefOf.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />

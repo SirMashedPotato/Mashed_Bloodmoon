@@ -20,6 +20,11 @@
 				<li>Cannibalism_Preferred</li>
 				<li>Cannibalism_Acceptable</li>
 			</li>
+			<li>
+				<li>Execution_DontCare</li>
+				<li>Execution_RespectedIfGuilty</li>
+				<li>Execution_Required</li>
+			</li>
 		</requireOne>
 		<generalRules>
 			<rulesStrings>
