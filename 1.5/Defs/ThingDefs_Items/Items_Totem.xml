@@ -32,6 +32,7 @@
 			<li Class="CompProperties_Usable">
 				<useJob>UseItem</useJob>
 				<useLabel>Use {0}</useLabel>
+				<showUseGizmo>true</showUseGizmo>
 			</li>
 			<li Class="CompProperties_UseEffectDestroySelf"/>
 		</comps>

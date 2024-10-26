@@ -34,7 +34,7 @@ namespace Mashed_Bloodmoon
         public override void IngestionOutcome_Transformed(Pawn pawn, Hediff hediff)
         {
             pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea).Severity = 1f;
-            pawn.health.GetOrAddHediff(RimWorld.HediffDefOf.ToxicBuildup);
+            LycanthropeUtility.LycanthropeIngestedWolfsbane(pawn);
         }
     }
 }

@@ -22,6 +22,11 @@ namespace Mashed_Bloodmoon
             DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, partRecord.def.GetMaxHealth(targetPawn), 1, -1, parent.pawn, partRecord);
             targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
 
+            if (LycanthropeUtility.PawnHasWolfsbaneHediff(targetPawn))
+            {
+                LycanthropeUtility.LycanthropeIngestedWolfsbane(parent.pawn);
+            }
+
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parent.pawn);
             compLycanthrope.usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
             parent.pawn.needs.food.CurLevel += 0.1f;

@@ -24,6 +24,20 @@ namespace Mashed_Bloodmoon
             return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant) != null;
         }
 
+        internal static bool PawnHasWolfsbaneHediff(Pawn pawn)
+        {
+            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea) != null
+                || pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention) != null
+                || pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_WolfsbaneResistance) != null;
+        }
+
+        internal static void LycanthropeIngestedWolfsbane(Pawn pawn, float severity = 0.3f)
+        {
+            Hediff toxicBuildup = HediffMaker.MakeHediff(RimWorld.HediffDefOf.ToxicBuildup, pawn);
+            toxicBuildup.Severity = severity;
+            pawn.health.AddHediff(toxicBuildup);
+        }
+
         /// <summary>
         /// Returns the pawns HediffComp_Lycanthrope
         /// </summary>
