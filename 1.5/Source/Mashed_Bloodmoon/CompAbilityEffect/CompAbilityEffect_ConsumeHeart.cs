@@ -37,6 +37,12 @@ namespace Mashed_Bloodmoon
                 return true;
             }
 
+            if (!parent.pawn.health.capacities.CapableOf(PawnCapacityDefOf.Eating))
+            {
+                reason = "AbilityDisabledNoCapacity".Translate(parent.pawn, PawnCapacityDefOf.Eating.label);
+                return true;
+            }
+
             return base.GizmoDisabled(out reason);
         }
 

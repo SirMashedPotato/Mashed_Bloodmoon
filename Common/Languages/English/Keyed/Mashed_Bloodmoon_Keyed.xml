@@ -2,10 +2,10 @@
 <LanguageData>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	 <Mashed_Bloodmoon_TransformHuman_Label>end transformation</Mashed_Bloodmoon_TransformHuman_Label>
-	 <Mashed_Bloodmoon_TransformHuman_Desc>End {0_label}'s transformation, reverting them back to their human form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
+	 <Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their human form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
 	<!-- ==========[transform gizmo (Lycanthrope)]==========-->
 	 <Mashed_Bloodmoon_TransformLycanthrope_Label>Lycanthrope transformation</Mashed_Bloodmoon_TransformLycanthrope_Label>
-	 <Mashed_Bloodmoon_TransformLycanthrope_Desc>Transform {0_label} into their lycanthrope form. Lycanthrope stress will accumulate during this transformation, which will be converted into lycanthrope fatigue once the transformation ends. If lycanthrope stress reaches 100%, {0_label} will enter a rage state.\n\nMaximum transformation duration: {1}</Mashed_Bloodmoon_TransformLycanthrope_Desc>
+	 <Mashed_Bloodmoon_TransformLycanthrope_Desc>Transform {0_labelShort} into their lycanthrope form. Lycanthrope stress will accumulate during this transformation, which will be converted into lycanthrope fatigue once the transformation ends. If lycanthrope stress reaches 100%, {0_labelShort} will enter a rage state.\n\nMaximum transformation duration: {1}</Mashed_Bloodmoon_TransformLycanthrope_Desc>
 	<!-- ==========[lycanthrope stress gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: 10 per hour</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
@@ -14,8 +14,8 @@
 	<Mashed_Bloodmoon_LycanthropeFormOnly>\n\nBonuses marked with (H) are also active in human form.</Mashed_Bloodmoon_LycanthropeFormOnly>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
-	<Mashed_Bloodmoon_NotLycanthrope>{0_label} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
-	<Mashed_Bloodmoon_TotemLimitReached>{0_label} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
+	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
+	<Mashed_Bloodmoon_TotemLimitReached>{0_labelShort} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
 	<!-- ==========[misc]==========-->
-	 <Mashed_Bloodmoon_LycanthropeCantEquip>{0_label} is in their lycanthrope form</Mashed_Bloodmoon_LycanthropeCantEquip>
+	 <Mashed_Bloodmoon_LycanthropeCantEquip>{0_labelShort} is in their lycanthrope form</Mashed_Bloodmoon_LycanthropeCantEquip>
 </LanguageData>

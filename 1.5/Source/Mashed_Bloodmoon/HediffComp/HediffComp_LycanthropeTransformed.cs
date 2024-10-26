@@ -161,7 +161,8 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompExposeData()
         {
-            Scribe_Values.Look(ref currentStress, "Mashed_Bloodmoon_LycanthropicStress", 0);
+            Scribe_Values.Look(ref currentStress, "currentStress", 0);
+            Scribe_Values.Look(ref stressMax, "stressMax", 0);
         }
     }
 }
