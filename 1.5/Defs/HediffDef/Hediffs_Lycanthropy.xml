@@ -11,9 +11,11 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeDormant</defName>
 		<label>dormant lycanthropy</label>
-		<description>TODO</description>
+		<description>The result of leaving Sanies Lupinus left untreated. The pawn will violently transform when the next Huntsman's Moon rises, completely succumbing to their beastial side in the process. Once they are fatigued enough, the transformation will come to an end, and they will gain full control of their lycanthropy.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_Lycanthrope</HediffDef>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
+			<MentalStateDef>Mashed_Bloodmoon_LycanthropeFury</MentalStateDef>
 		</descriptionHyperlinks>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<stages>
@@ -38,7 +40,10 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
 		<label>lycanthrope</label>
-		<description>TODO</description>
+		<description>TODO\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beastial form.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
+		</descriptionHyperlinks>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_Lycanthrope"/>
@@ -56,7 +61,15 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTransformed</defName>
 		<label>lycanthrope transformation</label>
-		<description>TODO</description>
+		<description>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.\n\n&lt;color=#E5E54C&gt;Consume Heart&lt;/color&gt;\nTransformed Lycanthropes are able to consume the hearts of fresh corpses, and downed pawns, permanentely increasing their lycanthropic stress limit in the process.\n\n&lt;color=#E5E54C&gt;Lycanthropic Stress&lt;/color&gt;\nLycanthropic stress will gradually build up while in their beastial form. If this ever reaches its limit, the lycanthrope will enter an uncontrollable fury.\n\n&lt;color=#E5E54C&gt;Lycanthropic Fatigue&lt;/color&gt;\nWhen a lycanthropes transformation ends, any accumulated stress will be converted into fatigue. Lycanthropes are unable to transform in this state.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_ConsumeHeart</AbilityDef>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeClaws</HediffDef>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeTeeth</HediffDef>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeFatigue</HediffDef>
+			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
+			<MentalStateDef>Mashed_Bloodmoon_LycanthropeFury</MentalStateDef>
+		</descriptionHyperlinks>
 		<comps>
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_LycanthropeTransformed"/>
@@ -93,7 +106,7 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeFatigue</defName>
 		<label>lycanthrope fatigue</label>
-		<description>TODO</description>
+		<description>The result of stress accumulated while a lycanthrope is transformed into their beastial form. They will be unable to transform until their body has recovered.</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>True</showRemainingTime>
@@ -112,7 +125,10 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeClaws</defName>
 		<label>lycanthrope claws</label>
-		<description>TODO</description>
+		<description>The rending claws of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
 		<comps>
 			<li Class="HediffCompProperties_VerbGiver">
 				<tools>
@@ -136,7 +152,10 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTeeth</defName>
 		<label>lycanthrope teeth</label>
-		<description>TODO</description>
+		<description>The snarling maw of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
 		<comps>
 			<li Class="HediffCompProperties_VerbGiver">
 				<tools>

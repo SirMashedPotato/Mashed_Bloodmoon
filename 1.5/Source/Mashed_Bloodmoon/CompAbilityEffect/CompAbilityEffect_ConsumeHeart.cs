@@ -83,6 +83,10 @@ namespace Mashed_Bloodmoon
             {
                 if (target is Corpse c)
                 {
+                    if (c.GetRotStage() != RotStage.Fresh)
+                    {
+                        return null;
+                    }
                     pawn = c.InnerPawn;
                 }
             }

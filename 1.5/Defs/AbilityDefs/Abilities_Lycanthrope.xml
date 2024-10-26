@@ -5,6 +5,9 @@
 		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
 		<label>consume heart</label>
 		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one, however this change will only come into effect with the next transformation.</description>
+		<descriptionHyperlinks>
+			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
+		</descriptionHyperlinks>
 		<cooldownTicksRange>300</cooldownTicksRange>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_ConsumeHeart</iconPath>
 		<jobDef>CastAbilityOnThingMelee</jobDef>
