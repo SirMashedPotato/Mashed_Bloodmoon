@@ -8,7 +8,7 @@
 		<statDefs>
 			<li>Mashed_Bloodmoon_LycanthropicStressMax</li>
 		</statDefs>
-		<useLimit>100</useLimit>
+		<useLimit>500</useLimit>
 		<increasePerLevel>1</increasePerLevel>
 		<onlyTransformed>false</onlyTransformed>
 		<displayAsTotem>false</displayAsTotem>
