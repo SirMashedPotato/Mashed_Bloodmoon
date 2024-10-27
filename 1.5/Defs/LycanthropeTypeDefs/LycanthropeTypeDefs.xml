@@ -12,6 +12,16 @@
 			<drawSize>1.4</drawSize>
 		</graphicData>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfLegacy]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_WerewolfLegacy</defName>
+		<label>werewolf (Legacy)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacy</texPath>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
 	<Mashed_Bloodmoon.LycanthropeTypeDef MayRequire="ludeon.rimworld.royalty">
 		<defName>Mashed_Bloodmoon_WerewolfAnima</defName>
