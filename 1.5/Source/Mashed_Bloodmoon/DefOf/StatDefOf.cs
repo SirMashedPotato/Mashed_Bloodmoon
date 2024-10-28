@@ -11,5 +11,6 @@ namespace Mashed_Bloodmoon
         }
         public static StatDef Mashed_Bloodmoon_LycanthropyResistance;
         public static StatDef Mashed_Bloodmoon_LycanthropicStressMax;
+        public static StatDef Mashed_Bloodmoon_LycanthropeSilverWeakness;
     }
 }

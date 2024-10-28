@@ -40,19 +40,22 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
 		<label>lycanthrope</label>
-		<description>TODO\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beastial form.</description>
+		<description>TODO\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beastial form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.</description>
+		<descriptionShort>TODO</descriptionShort>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
 		</descriptionHyperlinks>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_Lycanthrope"/>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
 		</comps>
 		<stages>
 			<li>
 				<statOffsets>
 					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
 					<Mashed_Bloodmoon_LycanthropicStressMax>30</Mashed_Bloodmoon_LycanthropicStressMax>
+					<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.5</Mashed_Bloodmoon_LycanthropeSilverWeakness>
 				</statOffsets>
 			</li>
 		</stages>
@@ -61,7 +64,8 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTransformed</defName>
 		<label>lycanthrope transformation</label>
-		<description>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.\n\n&lt;color=#E5E54C&gt;Consume Heart&lt;/color&gt;\nTransformed Lycanthropes are able to consume the hearts of fresh corpses, and downed pawns, permanentely increasing their lycanthropic stress limit in the process.\n\n&lt;color=#E5E54C&gt;Lycanthropic Stress&lt;/color&gt;\nLycanthropic stress will gradually build up while in their beastial form. If this ever reaches its limit, the lycanthrope will enter an uncontrollable fury.\n\n&lt;color=#E5E54C&gt;Lycanthropic Fatigue&lt;/color&gt;\nWhen a lycanthropes transformation ends, any accumulated stress will be converted into fatigue. Lycanthropes are unable to transform in this state.\n\n&lt;color=#E5E54C&gt;Wolfsbane&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<description>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.\n\n&lt;color=#E5E54C&gt;Consume Heart&lt;/color&gt;\nTransformed Lycanthropes are able to consume the hearts of fresh corpses, and downed pawns, permanentely increasing their lycanthropic stress limit in the process.\n\n&lt;color=#E5E54C&gt;Lycanthropic Stress&lt;/color&gt;\nLycanthropic stress will gradually build up while in their beastial form. If this ever reaches its limit, the lycanthrope will enter an uncontrollable fury.\n\n&lt;color=#E5E54C&gt;Lycanthropic Fatigue&lt;/color&gt;\nWhen a lycanthropes transformation ends, any accumulated stress will be converted into fatigue. Lycanthropes are unable to transform in this state.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<descriptionShort>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.</descriptionShort>
 		<descriptionHyperlinks>
 			<AbilityDef>Mashed_Bloodmoon_ConsumeHeart</AbilityDef>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClaws</HediffDef>

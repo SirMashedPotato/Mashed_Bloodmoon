@@ -1,8 +1,6 @@
 ﻿using HarmonyLib;
 using Verse;
 using System.Reflection;
-using System.Collections.Generic;
-using System;
 using RimWorld;
 
 namespace Mashed_Bloodmoon

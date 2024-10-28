@@ -89,9 +89,11 @@
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
+    <Compile Include="HediffComp\HediffComp_SilverWeakness.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_Lycanthrope.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_SilverWeakness.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
