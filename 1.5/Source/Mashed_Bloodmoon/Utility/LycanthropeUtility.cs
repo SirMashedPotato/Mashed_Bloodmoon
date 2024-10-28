@@ -116,6 +116,17 @@ namespace Mashed_Bloodmoon
             }
         }
 
+        internal static void MoveEquippedToInventory(Pawn pawn)
+        {
+            if (pawn.equipment.HasAnything())
+            {
+                foreach(Thing thing in pawn.equipment.GetDirectlyHeldThings())
+                {
+                    pawn.equipment.TryTransferEquipmentToContainer(thing as ThingWithComps, pawn.inventory.innerContainer);
+                }
+            }
+        }
+
         internal static void RemoveLinkedHediff(Pawn pawn, HediffDef hediffDef)
         {
             Hediff hediff;
