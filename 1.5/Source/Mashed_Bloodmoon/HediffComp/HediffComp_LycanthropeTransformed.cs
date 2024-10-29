@@ -38,6 +38,9 @@ namespace Mashed_Bloodmoon
                 }
                 return stressMax;
             }
+            set { 
+                stressMax = value;
+            }
         }
 
         public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks);
@@ -105,6 +108,10 @@ namespace Mashed_Bloodmoon
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
             foreach (KeyValuePair<TotemTypeDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
+                if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
+                {
+                    parent.pawn.abilities.GainAbility(usedTotem.Key.abilityDef);
+                }
                 usedTotem.Key.transformationWorker?.PostTransformationBegin(parent.pawn, usedTotem.Value);
             }
         }
@@ -123,6 +130,10 @@ namespace Mashed_Bloodmoon
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
             foreach (KeyValuePair<TotemTypeDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
+                if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
+                {
+                    parent.pawn.abilities.RemoveAbility(usedTotem.Key.abilityDef);
+                }
                 usedTotem.Key.transformationWorker?.PostTransformationEnd(parent.pawn, usedTotem.Value);
             }
             int fatigueDuration = CurrentFatigueDuration();

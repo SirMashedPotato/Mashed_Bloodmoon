@@ -20,10 +20,10 @@
 		<labelShort>totem (Endurance)</labelShort>
 		<totemThingDef>Mashed_Bloodmoon_TotemEndurance</totemThingDef>
 		<statDefs>
-			<li>RestFallRateFactor</li>
+			<li>InjuryHealingFactor</li>
 		</statDefs>
 		<useLimit>100</useLimit>
-		<increasePerLevel>-0.01</increasePerLevel>
+		<increasePerLevel>0.01</increasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->

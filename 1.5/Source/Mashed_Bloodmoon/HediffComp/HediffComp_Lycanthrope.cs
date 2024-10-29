@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using static UnityEngine.Random;
 
 namespace Mashed_Bloodmoon
 {
@@ -91,10 +92,10 @@ namespace Mashed_Bloodmoon
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = "Mashed_Bloodmoon_TransformLycanthrope_Label".Translate(),
-                    defaultDesc = "Mashed_Bloodmoon_TransformLycanthrope_Desc".Translate(parent.pawn, 
+                    defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn, 
                     ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
-                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformLycanthrope", true),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
                     action = delegate ()
                     {
                         parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
@@ -157,6 +158,10 @@ namespace Mashed_Bloodmoon
                                 {
                                     description += " (H)";
                                 }
+                            }
+                            if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
+                            {
+                                description += "Mashed_Bloodmoon_TotemAbility".Translate(usedTotem.Key.abilityDef);
                             }
                         }
                     }

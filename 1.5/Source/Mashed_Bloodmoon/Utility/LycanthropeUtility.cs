@@ -9,14 +9,14 @@ namespace Mashed_Bloodmoon
         internal static readonly float lycanthropeStressToTicks = GenDate.TicksPerHour * 0.3f;
         internal static readonly int lycanthropeStressRate = GenDate.TicksPerHour / 10;
 
-        internal static bool PawnIsTransformedLycanthrope(Pawn pawn)
-        {
-            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null;
-        }
-
         internal static bool PawnIsLycanthrope(Pawn pawn)
         {
-            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope) != null;
+            return GetCompLycanthrope(pawn) != null;
+        }
+
+        internal static bool PawnIsTransformedLycanthrope(Pawn pawn)
+        {
+            return GetCompLycanthropeTransformed(pawn) != null;
         }
 
         internal static bool PawnIsDormantLycanthrope(Pawn pawn)
@@ -34,7 +34,7 @@ namespace Mashed_Bloodmoon
         internal static void LycanthropeIngestedWolfsbane(Pawn pawn, float severity = 0.3f)
         {
             Hediff toxicBuildup = HediffMaker.MakeHediff(RimWorld.HediffDefOf.ToxicBuildup, pawn);
-            toxicBuildup.Severity = severity;
+            toxicBuildup.Severity = severity * pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness);
             pawn.health.AddHediff(toxicBuildup);
         }
 
@@ -44,6 +44,14 @@ namespace Mashed_Bloodmoon
         internal static HediffComp_Lycanthrope GetCompLycanthrope(Pawn pawn)
         {
             return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
+        }
+
+        /// <summary>
+        /// Returns the pawns HediffComp_LycanthropeTransformed
+        /// </summary>
+        internal static HediffComp_LycanthropeTransformed GetCompLycanthropeTransformed(Pawn pawn)
+        {
+            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed).TryGetComp<HediffComp_LycanthropeTransformed>();
         }
 
         /// <summary>

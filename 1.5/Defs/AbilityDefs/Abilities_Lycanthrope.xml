@@ -4,7 +4,7 @@
 	<AbilityDef>
 		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
 		<label>consume heart</label>
-		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one, however this change will only come into effect with the next transformation.\n\nConsuming the heart of a pawn under the effect of a wolfsbane elixir will cause toxic buildup.</description>
+		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one, as well as reducing hunger based on the size of the heart.\n\nConsuming the heart of a pawn under the effect of a wolfsbane elixir will cause toxic buildup.</description>
 		<descriptionHyperlinks>
 			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
 		</descriptionHyperlinks>

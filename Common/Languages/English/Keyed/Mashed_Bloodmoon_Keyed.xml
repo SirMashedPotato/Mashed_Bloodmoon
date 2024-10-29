@@ -3,14 +3,15 @@
 	<!-- ==========[transform gizmo (Human)]==========-->
 	 <Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	 <Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
-	<!-- ==========[transform gizmo (Lycanthrope)]==========-->
-	 <Mashed_Bloodmoon_TransformLycanthrope_Label>beast form</Mashed_Bloodmoon_TransformLycanthrope_Label>
-	 <Mashed_Bloodmoon_TransformLycanthrope_Desc>Transform {0_labelShort} into their beast form. Lycanthrope stress will accumulate during this transformation, which will be converted into lycanthrope fatigue once the transformation ends. If lycanthrope stress reaches 100%, {0_labelShort} will enter a rage state.\n\nMaximum transformation duration: {1}</Mashed_Bloodmoon_TransformLycanthrope_Desc>
+	<!-- ==========[transform gizmo (Beast)]==========-->
+	 <Mashed_Bloodmoon_TransformBeast_Label>beast form</Mashed_Bloodmoon_TransformBeast_Label>
+	 <Mashed_Bloodmoon_TransformBeast_Desc>Transform {0_labelShort} into their beast form. Lycanthrope stress will accumulate during this transformation, which will be converted into lycanthrope fatigue once the transformation ends. If lycanthrope stress reaches 100%, {0_labelShort} will enter a rage state.\n\nMaximum transformation duration: {1}</Mashed_Bloodmoon_TransformBeast_Desc>
 	<!-- ==========[lycanthrope stress gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: 10 per hour</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
 	<!-- ==========[lycanthrope hediff description]==========-->
 	<Mashed_Bloodmoon_UsedTotems>\n\nUsed totems:</Mashed_Bloodmoon_UsedTotems>
+	<Mashed_Bloodmoon_TotemAbility>\n    - Added ability : {0_label}</Mashed_Bloodmoon_TotemAbility>
 	<Mashed_Bloodmoon_LycanthropeFormOnly>\n\nBonuses marked with (H) are also active outside of beast form.</Mashed_Bloodmoon_LycanthropeFormOnly>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>

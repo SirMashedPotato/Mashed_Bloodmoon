@@ -5,7 +5,7 @@
 		<defName>Mashed_Bloodmoon_LycanthropyResistance</defName>
 		<label>lycanthropy resistance</label>
 		<description>How resistant this organism is to being infected by Sanies Lupinus.</description>
-		<category>Basics</category>
+		<category>BasicsPawn</category>
 		<defaultBaseValue>0</defaultBaseValue>
 		<hideAtValue>0</hideAtValue>
 		<maxValue>1</maxValue>
@@ -13,7 +13,7 @@
 		<showOnAnimals>false</showOnAnimals>
 		<showOnMechanoids>false</showOnMechanoids>
 		<showOnEntities>false</showOnEntities>
-		<displayPriorityInCategory>3452</displayPriorityInCategory>
+		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropicStressMax]==========-->
 	<StatDef>
@@ -42,7 +42,24 @@
 	<StatDef>
 		<defName>Mashed_Bloodmoon_LycanthropeSilverWeakness</defName>
 		<label>silver weakness</label>
-		<description>How much extra damage a lycanthrope takes, when damaged by a weapon made out of silver.</description>
+		<description>How much additional damage a lycanthrope takes from weapons made out of silver.</description>
+		<category>BasicsPawn</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<showOnMechanoids>false</showOnMechanoids>
+		<showOnEntities>false</showOnEntities>
+		<showIfHediffsPresent>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</showIfHediffsPresent>
+		<displayPriorityInCategory>3500</displayPriorityInCategory>
+	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness]==========-->
+	<StatDef>
+		<defName>Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness</defName>
+		<label>Wolfsbane weakness</label>
+		<description>How susceptible a lycanthrope is to the toxic effects of wolfsbane.</description>
 		<category>BasicsPawn</category>
 		<defaultBaseValue>0</defaultBaseValue>
 		<minValue>0</minValue>

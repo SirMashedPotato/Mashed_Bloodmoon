@@ -19,7 +19,10 @@ namespace Mashed_Bloodmoon
                 ThoughtUtility.GiveThoughtsForPawnExecuted(targetPawn, parent.pawn, PawnExecutionKind.GenericBrutal);
             }
 
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, partRecord.def.GetMaxHealth(targetPawn), 1, -1, parent.pawn, partRecord);
+            float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
+            target.Thing.Ingested(parent.pawn, Props.nutritionFactor * maxHealth);
+
+            DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
             targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
 
             if (LycanthropeUtility.PawnHasWolfsbaneHediff(targetPawn))
@@ -29,7 +32,9 @@ namespace Mashed_Bloodmoon
 
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parent.pawn);
             compLycanthrope.usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
-            parent.pawn.needs.food.CurLevel += 0.1f;
+            HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);
+            comp_LycanthropeTransformed.StressMax += 1;
+            parent.pawn.needs.food.CurLevel += (Props.nutritionFactor * maxHealth);
 
             base.Apply(target, dest);
         }

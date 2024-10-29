@@ -9,6 +9,8 @@ namespace Mashed_Bloodmoon
         public string labelShort = "???";
         public ThingDef totemThingDef;
         public List<StatDef> statDefs;
+        public AbilityDef abilityDef;
+        public int abilityUnlocksAt = 10;
         public int useLimit = 30;
         public float increasePerLevel = 1f;
         public bool onlyTransformed = true;
@@ -16,6 +18,8 @@ namespace Mashed_Bloodmoon
         public LycanthropeTypeTransformationWorker transformationWorker;
 
         public string LabelShortCap => labelShort.CapitalizeFirst();
+
+        public bool AbilityUnlocked(int usedCount) => abilityDef != null && usedCount >= abilityUnlocksAt;
 
         public override IEnumerable<string> ConfigErrors()
         {

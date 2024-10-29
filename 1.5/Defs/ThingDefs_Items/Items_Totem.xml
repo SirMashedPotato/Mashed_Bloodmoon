@@ -5,7 +5,6 @@
 		<thingClass>ThingWithComps</thingClass>
 		<techLevel>Neolithic</techLevel>
 		<graphicData>
-			<texPath>Things/Item/Special/Mashed_Eurekacorn</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<thingCategories>
@@ -41,9 +40,9 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
 		<label>Huntsman's totem (Endurance)</label>
-		<description>A totem of the hunt, made in the semblance of a wolf. Totems such as these may seem worthless to most, for their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent reduction to rest fall rate, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, made in the semblance of a wolf. Totems such as these may seem worthless to most, for their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a bonus to the rate wounds heal, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
-			<StatDef>RestFallRateFactor</StatDef>
+			<StatDef>InjuryHealingFactor</StatDef>
 		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemEndurance</texPath>

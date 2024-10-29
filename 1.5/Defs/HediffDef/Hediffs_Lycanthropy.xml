@@ -40,8 +40,8 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
 		<label>lycanthrope</label>
-		<description>TODO\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.</description>
-		<descriptionShort>TODO</descriptionShort>
+		<description>A fully fledged lycanthrope, now able to transform into their beast form at a moments notice. While the Hunstman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.</description>
+		<descriptionShort>A fully fledged lycanthrope, now able to transform into their beast form at a moments notice. While the Hunstman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.</descriptionShort>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
 		</descriptionHyperlinks>
@@ -52,6 +52,12 @@
 		</comps>
 		<stages>
 			<li>
+				<makeImmuneTo>
+					<li>Malaria</li>
+					<li>Plague</li>
+					<li>SleepingSickness</li>
+					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_SwampFever</li>
+				  </makeImmuneTo>
 				<statOffsets>
 					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
 					<Mashed_Bloodmoon_LycanthropicStressMax>30</Mashed_Bloodmoon_LycanthropicStressMax>
@@ -63,9 +69,9 @@
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeTransformed]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTransformed</defName>
-		<label>lycanthrope transformation</label>
-		<description>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.\n\n&lt;color=#E5E54C&gt;Consume Heart&lt;/color&gt;\nTransformed Lycanthropes are able to consume the hearts of fresh corpses, and downed pawns, permanentely increasing their lycanthropic stress limit in the process.\n\n&lt;color=#E5E54C&gt;Lycanthropic Stress&lt;/color&gt;\nLycanthropic stress will gradually build up while in their beastial form. If this ever reaches its limit, the lycanthrope will enter an uncontrollable fury.\n\n&lt;color=#E5E54C&gt;Lycanthropic Fatigue&lt;/color&gt;\nWhen a lycanthropes transformation ends, any accumulated stress will be converted into fatigue. Lycanthropes are unable to transform in this state.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
-		<descriptionShort>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.</descriptionShort>
+		<label>lycanthrope beast form</label>
+		<description>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.\n\n&lt;color=#E5E54C&gt;Consume Heart&lt;/color&gt;\nTransformed Lycanthropes are able to consume the hearts of fresh corpses, and downed pawns, permanentely increasing their lycanthropic stress limit in the process.\n\n&lt;color=#E5E54C&gt;Supressed Inhibitions&lt;/color&gt;\nTransformed Lycanthropes can eat corpses and raw food without any negative effects.\n\n&lt;color=#E5E54C&gt;Lycanthropic Stress&lt;/color&gt;\nLycanthropic stress will gradually build up while in their beastial form. If this ever reaches its limit, the lycanthrope will enter an uncontrollable fury.\n\n&lt;color=#E5E54C&gt;Lycanthropic Fatigue&lt;/color&gt;\nWhen a lycanthropes transformation ends, any accumulated stress will be converted into fatigue. Lycanthropes are unable to transform in this state.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<descriptionShort>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech. Contact with wolfsbane will also cause toxic buildup.</descriptionShort>
 		<descriptionHyperlinks>
 			<AbilityDef>Mashed_Bloodmoon_ConsumeHeart</AbilityDef>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClaws</HediffDef>
@@ -102,7 +108,23 @@
 						<setMax>0</setMax>
 					</li>
 				</capMods>
+				<damageFactors>
+					<Flame>2</Flame>
+				</damageFactors>
+				<statOffsets>
+					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+    				<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+					<Flammability>0.5</Flammability>
+					<InjuryHealingFactor>0.5</InjuryHealingFactor>
+					<MoveSpeed>1</MoveSpeed>
+					<PsychicSensitivity>0.5</PsychicSensitivity>
+					<RestFallRateFactor>-0.5</RestFallRateFactor>
+					<ToxicResistance>-0.3</ToxicResistance>
+					<Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>1</Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>
+				</statOffsets>
 				<disabledWorkTags>AllWork</disabledWorkTags>
+				<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
 			</li>
 		</stages>
 	</HediffDef>
@@ -121,7 +143,10 @@
 		</renderNodeProperties>
 		<stages>
 			<li>
-				
+				<hungerRateFactor>1.1</hungerRateFactor>
+				<statOffsets>
+					<RestRateMultiplier>-0.3</RestRateMultiplier>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -141,7 +166,7 @@
 						<capacities>
 							<li>Mashed_Bloodmoon_LycanthropeScratch</li>
 						</capacities>
-						<power>12</power>
+						<power>17</power>
 						<armorPenetration>0.25</armorPenetration>
 						<cooldownTime>1</cooldownTime>
 					</li>
