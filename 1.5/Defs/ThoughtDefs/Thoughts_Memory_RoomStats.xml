@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_RestlessSleep]==========-->
 	<ThoughtDef>
@@ -9,7 +9,7 @@
 			<li>
 				<label>restless sleep</label>
 				<description>I guess sleeping here doesn't make a difference...</description>
-				<baseMoodEffect>-2</baseMoodEffect>
+				<baseMoodEffect>-4</baseMoodEffect>
 			</li>
 			<li>
 				<label>restless sleep in bedroom</label>
