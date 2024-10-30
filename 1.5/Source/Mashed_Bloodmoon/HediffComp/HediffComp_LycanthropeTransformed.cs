@@ -145,6 +145,15 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
+        /// Doing this here instead of using HediffCompProperties_DisappearsOnDeath avoids an out of bounds error if the pawn dies while transformed
+        /// </summary>
+        public override void Notify_PawnKilled()
+        {
+            base.Notify_PawnKilled();
+            parent.pawn.health.RemoveHediff(parent);
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()

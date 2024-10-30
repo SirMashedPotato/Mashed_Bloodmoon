@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
     }
 
     /// <summary>
-    /// 
+    /// Gives lycanthropes the restless sleep thought
     /// </summary>
     [HarmonyPatch(typeof(Toils_LayDown))]
     [HarmonyPatch("ApplyBedThoughts")]
@@ -44,7 +44,6 @@ namespace Mashed_Bloodmoon
     {
         public static void Postfix(Pawn actor, Building_Bed bed)
         {
-            Log.Message("1");
             if (LycanthropeUtility.PawnIsLycanthrope(actor))
             {
                 if (actor.needs.mood == null)

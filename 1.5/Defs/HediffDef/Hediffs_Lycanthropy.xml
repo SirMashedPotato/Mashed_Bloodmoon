@@ -81,7 +81,6 @@
 			<MentalStateDef>Mashed_Bloodmoon_LycanthropeFury</MentalStateDef>
 		</descriptionHyperlinks>
 		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_LycanthropeTransformed"/>
 		</comps>
 		<renderNodeProperties>
