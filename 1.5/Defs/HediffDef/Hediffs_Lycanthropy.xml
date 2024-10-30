@@ -11,7 +11,7 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeDormant</defName>
 		<label>dormant lycanthropy</label>
-		<description>The result of leaving Sanies Lupinus left untreated. The pawn will violently transform when the next Huntsman's Moon rises, completely succumbing to their beastial side in the process. Once they are fatigued enough, the transformation will come to an end, and they will gain full control of their lycanthropy.</description>
+		<description>The result of leaving Sanies Lupinus untreated. The pawn will violently transform when the next Huntsman's Moon rises, completely succumbing to their beastial side in the process. Once they are fatigued enough, the transformation will come to an end, and they will gain full control over their lycanthropy.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_Lycanthrope</HediffDef>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
@@ -40,8 +40,8 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
 		<label>lycanthrope</label>
-		<description>A fully fledged lycanthrope, now able to transform into their beast form at a moments notice. While the Hunstman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.</description>
-		<descriptionShort>A fully fledged lycanthrope, now able to transform into their beast form at a moments notice. While the Hunstman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.</descriptionShort>
+		<description>A fully fledged lycanthrope, now able to transform into their beast form at will. While the Huntsman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.</description>
+		<descriptionShort>A fully fledged lycanthrope, now able to transform into their beast form at will. While the Huntsman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.</descriptionShort>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
 		</descriptionHyperlinks>
@@ -166,7 +166,7 @@
 						<capacities>
 							<li>Mashed_Bloodmoon_LycanthropeScratch</li>
 						</capacities>
-						<power>17</power>
+						<power>12</power>
 						<armorPenetration>0.25</armorPenetration>
 						<cooldownTime>1</cooldownTime>
 					</li>
