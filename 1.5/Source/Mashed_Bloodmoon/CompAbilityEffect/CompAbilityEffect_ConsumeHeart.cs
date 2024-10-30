@@ -20,7 +20,7 @@ namespace Mashed_Bloodmoon
             }
 
             float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
-            target.Thing.Ingested(parent.pawn, Props.nutritionFactor * maxHealth);
+            target.Thing.Ingested(parent.pawn, Props.nutritionFactor * maxHealth); //Error if pawn is downed
 
             DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
             targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
