@@ -51,7 +51,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
 		<defName>Mashed_Bloodmoon_BeltWolfsbaneVessel</defName>
 		<label>wolfsbane vessel belt</label>
-		<description>A belt with several glass vessels attached to it, each one filled with a wolfsbane mixture. The vessels can be thrown, releasing a cloud of wolfsbane gas when upon impact. Any transformed lycanthropes caught within will be forced to breathe in the wolfsbane gas, causing gradual toxic buildup.</description>
+		<description>A belt with several glass vessels attached to it, each one filled with a wolfsbane mixture. The vessels can be thrown, releasing a cloud of wolfsbane gas upon impact. Any transformed lycanthropes caught within will be forced to breathe in the wolfsbane gas, causing gradual toxic buildup.</description>
 		<comps>
 			<li Class="CompProperties_ApparelReloadable">
 				<maxCharges>3</maxCharges>
