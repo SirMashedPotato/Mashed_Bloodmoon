@@ -40,7 +40,7 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
 		<label>lycanthrope</label>
-		<description>A fully fledged lycanthrope, now able to transform into their beast form at will. While the Huntsman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.</description>
+		<description>A fully fledged lycanthrope, now able to transform into their beast form at will. While the Huntsman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.\n\n&lt;color=#E5E54C&gt;Totems of the Hunt&lt;/color&gt;\nLycanthropes are able to use Hunstman's Totems to permanently empower their beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Restless Sleep&lt;/color&gt;\nThose with lycanthropy always struggle to get a good nights sleep. They gain no mood bonuses for sleeping in impressive bedrooms or barracks, and instead will always gain a mood debuff after sleep.</description>
 		<descriptionShort>A fully fledged lycanthrope, now able to transform into their beast form at will. While the Huntsman's blood offers little benefit outside of beast form, it does provide immunity to certain infections.</descriptionShort>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeTransformed</HediffDef>
