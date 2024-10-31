@@ -10,32 +10,31 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-
             Pawn targetPawn = GetTargetPawn(target.Thing);
             BodyPartRecord partRecord = GetBodyPartRecord(targetPawn);
-
+            
             if (targetPawn.Corpse == null)
             {
                 ThoughtUtility.GiveThoughtsForPawnExecuted(targetPawn, parent.pawn, PawnExecutionKind.GenericBrutal);
             }
-
-            float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
-            target.Thing.Ingested(parent.pawn, Props.nutritionFactor * maxHealth); //Error if pawn is downed
-
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
-            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
-
+            
             if (LycanthropeUtility.PawnHasWolfsbaneHediff(targetPawn))
             {
                 LycanthropeUtility.LycanthropeIngestedWolfsbane(parent.pawn);
             }
-
+            
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parent.pawn);
             compLycanthrope.usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
             HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);
             comp_LycanthropeTransformed.StressMax += 1;
+            
+            float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
+            DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
+            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
+            
             parent.pawn.needs.food.CurLevel += (Props.nutritionFactor * maxHealth);
-
+            targetPawn.Corpse.Ingested(parent.pawn, Props.nutritionFactor * maxHealth);
+            
             base.Apply(target, dest);
         }
 
@@ -71,6 +70,10 @@ namespace Mashed_Bloodmoon
             }
 
             BodyPartRecord part = GetBodyPartRecord(pawn);
+            if (part == null)
+            {
+                return false;
+            }
             if (pawn.health.hediffSet.hediffs.Where((Hediff x) => x.Part == part).Any())
             {
                 return false;
@@ -106,7 +109,8 @@ namespace Mashed_Bloodmoon
 
         private BodyPartRecord GetBodyPartRecord(Pawn pawn) 
         {
-            return pawn.health.hediffSet.GetBodyPartRecord(RimWorld.BodyPartDefOf.Heart);
+            ///return pawn.health.hediffSet.GetBodyPartRecord(RimWorld.BodyPartDefOf.Heart);
+            return pawn.health.hediffSet.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).RandomElement();
         }
     }
 }
