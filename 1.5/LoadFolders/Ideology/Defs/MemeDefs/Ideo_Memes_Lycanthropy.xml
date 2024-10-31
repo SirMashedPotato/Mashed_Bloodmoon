@@ -7,6 +7,9 @@
 		<description>Lycanthropy is a gift from The Huntsman. Lycanthropes should be worshipped.</description>
 		<iconPath>UI/Memes/Mashed_Bloodmoon_Lycanthropy</iconPath>
 		<groupDef>Misc</groupDef>
+		<exclusionTags>
+			<li>Mashed_Bloodmoon_Lycanthropy</li>
+		  </exclusionTags>
 		<impact>2</impact>
 		<renderOrder>999</renderOrder>
 		<requireOne>
