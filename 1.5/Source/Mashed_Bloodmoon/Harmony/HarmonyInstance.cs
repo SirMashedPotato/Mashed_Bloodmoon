@@ -2,7 +2,8 @@
 using Verse;
 using System.Reflection;
 using RimWorld;
-using System.Collections.Generic;
+using System;
+using static RimWorld.Dialog_EditIdeoStyleItems;
 
 namespace Mashed_Bloodmoon
 {
@@ -31,6 +32,36 @@ namespace Mashed_Bloodmoon
             {
                 __result = false;
                 cantReason = "Mashed_Bloodmoon_LycanthropeCantEquip".Translate(pawn);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Add any render nodes that are in the lycanthrope type def
+    /// </summary>
+    [HarmonyPatch(typeof(PawnRenderTree))]
+    [HarmonyPatch("SetupDynamicNodes")]
+    public static class PawnRenderTree_SetupDynamicNodes_Patch
+    {
+        public static void Postfix(PawnRenderTree __instance)
+        {
+            if (LycanthropeUtility.PawnIsTransformedLycanthrope(__instance.pawn))
+            {
+                LycanthropeTypeDef typeDef = LycanthropeUtility.GetCompLycanthrope(__instance.pawn).LycanthropeTypeDef;
+                if (typeDef.RenderNodeProperties.NullOrEmpty())
+                {
+                    return;
+                }
+
+                MethodInfo addChild = __instance.GetType().GetMethod("AddChild", BindingFlags.NonPublic | BindingFlags.Instance);
+                Hediff hediff = __instance.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
+
+                foreach (PawnRenderNodeProperties nodeProps in typeDef.RenderNodeProperties)
+                {
+                    PawnRenderNode pawnRenderNode = (PawnRenderNode)Activator.CreateInstance(nodeProps.nodeClass, __instance.pawn, nodeProps, __instance);
+                    pawnRenderNode.hediff = hediff;
+                    addChild.Invoke(__instance, new object[] { pawnRenderNode, null });
+                }
             }
         }
     }

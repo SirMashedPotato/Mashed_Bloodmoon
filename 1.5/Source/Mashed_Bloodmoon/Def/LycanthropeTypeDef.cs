@@ -5,12 +5,13 @@ namespace Mashed_Bloodmoon
 {
     public class LycanthropeTypeDef : Def
     {
-        //public string defName;
-        //public string label;
         public string artist = "???";
         public GraphicData graphicData;
+        private List<PawnRenderNodeProperties> renderNodeProperties;
         public LycanthropeTypeRequirementWorker requirementWorker;
         public LycanthropeTypeTransformationWorker transformationWorker;
+
+        public List<PawnRenderNodeProperties> RenderNodeProperties => renderNodeProperties ?? PawnRenderUtility.EmptyRenderNodeProperties;
 
         public AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -19,6 +20,15 @@ namespace Mashed_Bloodmoon
                 return requirementWorker.PawnRequirementsMet(pawn);
             }
             return true;
+        }
+
+        public override void ResolveReferences()
+        {
+            base.ResolveReferences();
+            foreach(PawnRenderNodeProperties props in RenderNodeProperties)
+            {
+                props.ResolveReferences();
+            }
         }
 
         public override IEnumerable<string> ConfigErrors()

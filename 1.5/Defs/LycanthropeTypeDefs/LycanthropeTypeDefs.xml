@@ -11,6 +11,15 @@
 			<colorTwo>(123,112,93)</colorTwo>
 			<drawSize>1.4</drawSize>
 		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformedGlow</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+			</li>
+		</renderNodeProperties>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfLegacy]========== -->
 	<Mashed_Bloodmoon.LycanthropeTypeDef>
@@ -21,6 +30,15 @@
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacy</texPath>
 			<drawSize>1.4</drawSize>
 		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformedGlow</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+			</li>
+		</renderNodeProperties>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
 	<Mashed_Bloodmoon.LycanthropeTypeDef MayRequire="ludeon.rimworld.royalty">
