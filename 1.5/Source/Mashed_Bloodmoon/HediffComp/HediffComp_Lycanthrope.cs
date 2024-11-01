@@ -34,6 +34,8 @@ namespace Mashed_Bloodmoon
                         item = new FloatMenuOption(def.label, delegate
                         {
                             lycanthropeTypeDef = def;
+                            primaryColour = def.graphicData.color;
+                            secondaryColour = def.graphicData.colorTwo;
                         });
                         lycanthropeTypeOptions.Add(item);
                     }
