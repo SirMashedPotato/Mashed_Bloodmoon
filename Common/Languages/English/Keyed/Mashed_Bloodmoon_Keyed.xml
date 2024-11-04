@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+	<!-- ==========[Customise beast form gizmo]==========-->
+	 <Mashed_Bloodmoon_CustomiseBeastForm_Label>customise beast form</Mashed_Bloodmoon_CustomiseBeastForm_Label>
+	 <Mashed_Bloodmoon_CustomiseBeastForm_Desc>Customise the appearance of {0_labelShort}'s beast form.\n\nCurrent form: {1_label}\n\nPrimary colour: {2}\nSecondary colour: {3}\nEye colour: {4}</Mashed_Bloodmoon_CustomiseBeastForm_Desc>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	 <Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	 <Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>

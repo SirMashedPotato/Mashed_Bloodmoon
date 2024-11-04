@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using static UnityEngine.Random;
 
 namespace Mashed_Bloodmoon
 {
@@ -13,6 +12,7 @@ namespace Mashed_Bloodmoon
         private LycanthropeTypeDef lycanthropeTypeDef;
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
+        public Color eyeColour = Color.white; //TODO
         private List<FloatMenuOption> lycanthropeTypeOptions;
         public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
 
@@ -90,8 +90,19 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            if (!parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed))
+            if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
             {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_CustomiseBeastForm_Desc".Translate(parent.pawn, lycanthropeTypeDef, primaryColour.ToString(), secondaryColour.ToString(), eyeColour.ToString()),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_CustomiseLycanthrope", true),
+                    action = delegate ()
+                    {
+                        
+                    },
+                };
+
                 yield return new Command_Action
                 {
                     defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
