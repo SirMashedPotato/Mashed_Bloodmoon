@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
         private LycanthropeTypeDef lycanthropeTypeDef;
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
-        public Color eyeColour = Color.white; //TODO
+        public Color tertiaryColour = Color.white; //TODO
         
         public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
 
@@ -62,7 +62,7 @@ namespace Mashed_Bloodmoon
                 yield return new Command_Action
                 {
                     defaultLabel = "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate(),
-                    defaultDesc = "Mashed_Bloodmoon_CustomiseBeastForm_Desc".Translate(parent.pawn, lycanthropeTypeDef, primaryColour.ToString(), secondaryColour.ToString(), eyeColour.ToString()),
+                    defaultDesc = "Mashed_Bloodmoon_CustomiseBeastForm_Desc".Translate(parent.pawn, lycanthropeTypeDef, primaryColour.ToString(), secondaryColour.ToString(), tertiaryColour.ToString()),
                     icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_CustomiseLycanthrope", true),
                     action = delegate ()
                     {
@@ -149,6 +149,7 @@ namespace Mashed_Bloodmoon
             Scribe_Defs.Look(ref lycanthropeTypeDef, "lycanthropeTypeDef");
             Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);
+            Scribe_Values.Look(ref tertiaryColour, "tertiaryColour", Color.white);
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
         }
     }

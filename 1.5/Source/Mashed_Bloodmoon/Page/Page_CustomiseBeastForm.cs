@@ -1,9 +1,6 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
@@ -24,10 +21,10 @@ namespace Mashed_Bloodmoon
         float secondaryR;
         float secondaryG;
         float secondaryB;
-        Color eyeColour = Color.white; //TODO
-        float eyeR;
-        float eyeG;
-        float eyeB;
+        Color tertiaryColour = Color.white; //TODO
+        float tertiaryR;
+        float tertiaryG;
+        float tertiaryB;
 
         const float rectPadding = 12f;
         const float rectLimitY = 45f;
@@ -66,19 +63,45 @@ namespace Mashed_Bloodmoon
             Rect primaryRect = inRect;
             primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
+            DoColourSection(primaryRect, ref primaryColour, compLycanthrope.primaryColour, ref primaryR, ref primaryG, ref primaryB, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
 
             Rect secondaryRect = primaryRect;
             secondaryRect.y += primaryRect.height + rectPadding;
             Widgets.DrawMenuSection(secondaryRect);
+            DoColourSection(secondaryRect, ref secondaryColour, compLycanthrope.secondaryColour, ref secondaryR, ref secondaryG, ref secondaryB, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
 
-            Rect eyeRect = secondaryRect;
-            eyeRect.y += secondaryRect.height + rectPadding;
-            Widgets.DrawMenuSection(eyeRect);
+            Rect tertiaryRect = secondaryRect;
+            tertiaryRect.y += secondaryRect.height + rectPadding;
+            Widgets.DrawMenuSection(tertiaryRect);
+            DoColourSection(tertiaryRect, ref tertiaryColour, compLycanthrope.tertiaryColour, ref tertiaryR, ref tertiaryG, ref tertiaryB, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
-        public void DoColourSection(ref Color newColor, ref Color oldColor, ref float r, ref float g, ref float b)
+        public void DoColourSection(Rect mainRect, ref Color newColor, Color oldColor, ref float r, ref float g, ref float b, string label)
         {
             
+            Rect inRect = mainRect;
+            inRect.x += rectPadding;
+            inRect.y += rectPadding;
+            inRect.width -= rectPadding;
+            inRect.height -= rectPadding;
+
+            Listing_Standard listing_Standard = new Listing_Standard
+            {
+                ColumnWidth = inRect.width / 2
+            };
+            listing_Standard.Begin(inRect);
+            listing_Standard.Label(label.Translate());
+            listing_Standard.Gap();
+            DoColourLine(ref r, ref listing_Standard, "Red");
+            DoColourLine(ref g, ref listing_Standard, "Green");
+            DoColourLine(ref b, ref listing_Standard, "Blue");
+            newColor = new Color(r, g, b, 1);
+            listing_Standard.End();
+        }
+
+        public void DoColourLine(ref float color, ref Listing_Standard listing_Standard, string label)
+        {
+            color = (float)Math.Round(listing_Standard.SliderLabeled(label.Translate().CapitalizeFirst() + " (" + color.ToStringPercent() + ")", color, 0, 1) * 100) / 100;
         }
 
         public void DoRightSide(Rect inRect)
@@ -94,7 +117,7 @@ namespace Mashed_Bloodmoon
             compLycanthrope.LycanthropeTypeDef = lycanthropeTypeDef;
             compLycanthrope.primaryColour = primaryColour;
             compLycanthrope.secondaryColour = secondaryColour;
-            compLycanthrope.eyeColour = eyeColour;
+            compLycanthrope.tertiaryColour = tertiaryColour;
 
             ///TODO
             ///If the gizmo is only avaliable while transfromed
@@ -172,10 +195,10 @@ namespace Mashed_Bloodmoon
             secondaryG = secondaryColour.g;
             secondaryB = secondaryColour.b;
 
-            eyeColour = compLycanthrope.eyeColour;
-            eyeR = eyeColour.r;
-            eyeG = eyeColour.g;
-            eyeB = eyeColour.b;
+            tertiaryColour = compLycanthrope.tertiaryColour;
+            tertiaryR = tertiaryColour.r;
+            tertiaryG = tertiaryColour.g;
+            tertiaryB = tertiaryColour.b;
         }
     }
 }
