@@ -29,9 +29,12 @@ namespace Mashed_Bloodmoon
         float eyeG;
         float eyeB;
 
+        const float rectPadding = 12f;
+        const float rectLimitY = 45f;
+
         List<FloatMenuOption> lycanthropeTypeOptions;
 
-        public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate().CapitalizeFirst();
+        public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate().CapitalizeFirst() + ": " + parent.NameShortColored;
 
         public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) 
         {
@@ -45,8 +48,37 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            inRect.yMin += 45f;
+            inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, "Accept".Translate(), "Reset".Translate().CapitalizeFirst(), midAct: Reset, showNext: true, doNextOnKeypress: false);
+
+            Rect leftRect = inRect;
+            leftRect.width = (inRect.width / 2) - (rectPadding / 2);
+            DoLeftSide(leftRect);
+
+            Rect rightRect = leftRect;
+            rightRect.x += rightRect.width + (rectPadding);
+            rightRect.height -= (rectPadding * 4);
+            DoRightSide(rightRect);
+        }
+
+        public void DoLeftSide(Rect inRect)
+        {
+            Rect primaryRect = inRect;
+            primaryRect.height = (inRect.height / 3) - (rectPadding * 2);
+            Widgets.DrawMenuSection(primaryRect);
+
+            Rect secondaryRect = primaryRect;
+            secondaryRect.y += primaryRect.height + rectPadding;
+            Widgets.DrawMenuSection(secondaryRect);
+
+            Rect eyeRect = secondaryRect;
+            eyeRect.y += secondaryRect.height + rectPadding;
+            Widgets.DrawMenuSection(eyeRect);
+        }
+
+        public void DoRightSide(Rect inRect)
+        {
+            Widgets.DrawMenuSection(inRect);
         }
 
         /// <summary>
@@ -58,6 +90,12 @@ namespace Mashed_Bloodmoon
             compLycanthrope.primaryColour = primaryColour;
             compLycanthrope.secondaryColour = secondaryColour;
             compLycanthrope.eyeColour = eyeColour;
+
+            ///TODO
+            ///If the gizmo is only avaliable while transfromed
+            ///Call transformation end in the original type def
+            ///Then switch type
+            ///Then call transformation started in the new type def
 
             base.DoNext();
         }
