@@ -45,7 +45,7 @@ namespace Mashed_Bloodmoon
     {
         public static void Postfix(PawnRenderTree __instance)
         {
-            if (LycanthropeUtility.PawnIsTransformedLycanthrope(__instance.pawn))
+            if (LycanthropeUtility.PawnIsTransformedLycanthrope(__instance.pawn, true))
             {
                 LycanthropeTypeDef typeDef = LycanthropeUtility.GetCompLycanthrope(__instance.pawn).LycanthropeTypeDef;
                 if (typeDef.RenderNodeProperties.NullOrEmpty())

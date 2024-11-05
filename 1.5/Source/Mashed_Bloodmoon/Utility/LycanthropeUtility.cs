@@ -11,12 +11,13 @@ namespace Mashed_Bloodmoon
 
         internal static bool PawnIsLycanthrope(Pawn pawn)
         {
-            return GetCompLycanthrope(pawn) != null;
+            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope) != null;
         }
 
-        internal static bool PawnIsTransformedLycanthrope(Pawn pawn)
+        internal static bool PawnIsTransformedLycanthrope(Pawn pawn, bool includeDummy = false)
         {
-            return GetCompLycanthropeTransformed(pawn) != null;
+            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null 
+                || (includeDummy && pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformedDummy) != null);
         }
 
         internal static bool PawnIsDormantLycanthrope(Pawn pawn)

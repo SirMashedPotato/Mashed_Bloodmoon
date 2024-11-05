@@ -67,7 +67,22 @@
 		</stages>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeTransformed]==========-->
-	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase" Name="Mashed_Bloodmoon_LycanthropeTransformedBase">
+		<defName>Mashed_Bloodmoon_LycanthropeTransformedDummy</defName>
+		<label>lycanthrope beast form preview</label>
+		<description>A purely cosmetic transformation used for previews.</description>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope transformation</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformed</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeTransformedBody</workerClass>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>1</baseLayer>
+			</li>
+		</renderNodeProperties>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeTransformed]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeTransformedBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTransformed</defName>
 		<label>lycanthrope beast form</label>
 		<description>A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech.\n\n&lt;color=#E5E54C&gt;Consume Heart&lt;/color&gt;\nTransformed Lycanthropes are able to consume the hearts of fresh corpses, and downed pawns, permanentely increasing their lycanthropic stress limit in the process.\n\n&lt;color=#E5E54C&gt;Supressed Inhibitions&lt;/color&gt;\nTransformed Lycanthropes can eat corpses and raw food without any negative effects.\n\n&lt;color=#E5E54C&gt;Lycanthropic Stress&lt;/color&gt;\nLycanthropic stress will gradually build up while in their beastial form. If this ever reaches its limit, the lycanthrope will enter an uncontrollable fury.\n\n&lt;color=#E5E54C&gt;Lycanthropic Fatigue&lt;/color&gt;\nWhen a lycanthropes transformation ends, any accumulated stress will be converted into fatigue. Lycanthropes are unable to transform in this state.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
@@ -83,15 +98,6 @@
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_LycanthropeTransformed"/>
 		</comps>
-		<renderNodeProperties>
-			<li>
-				<debugLabel>lycanthrope transformation</debugLabel>
-				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTransformed</nodeClass>
-				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeTransformedBody</workerClass>
-				<overlayLayer>Body</overlayLayer>
-				<baseLayer>1</baseLayer>
-			</li>
-		</renderNodeProperties>
 		<stages>
 			<li>
 				<capMods>

@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
     public class Page_CustomiseBeastForm : Page
     {
         HediffComp_Lycanthrope compLycanthrope;
-        Pawn parent;
+        Pawn pawn;
 
         ///Temporary values
         LycanthropeTypeDef lycanthropeTypeDef;
@@ -34,12 +34,12 @@ namespace Mashed_Bloodmoon
 
         List<FloatMenuOption> lycanthropeTypeOptions;
 
-        public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate().CapitalizeFirst() + ": " + parent.NameShortColored;
+        public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
         public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) 
         {
             compLycanthrope = comp;
-            parent = comp.parent.pawn;
+            pawn = comp.parent.pawn;
             Reset();
 
             lycanthropeTypeOptions = CacheLycanthropeTypeOptions();
@@ -78,7 +78,7 @@ namespace Mashed_Bloodmoon
 
         public void DoColourSection(ref Color newColor, ref Color oldColor, ref float r, ref float g, ref float b)
         {
-
+            
         }
 
         public void DoRightSide(Rect inRect)
@@ -106,6 +106,24 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
+        /// Adds the dummy transformation hediff
+        /// </summary>
+        public override void PreOpen()
+        {
+            pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformedDummy);
+            base.PreOpen();
+        }
+
+        /// <summary>
+        /// Removes the dummy transformation hediff
+        /// </summary>
+        public override void PreClose()
+        {
+            pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformedDummy));
+            base.PreClose();
+        }
+
+        /// <summary>
         /// Get list of all types that have been unlocked
         /// </summary>
         private List<FloatMenuOption> CacheLycanthropeTypeOptions()
@@ -115,7 +133,7 @@ namespace Mashed_Bloodmoon
             foreach (LycanthropeTypeDef def in DefDatabase<LycanthropeTypeDef>.AllDefs)
             {
                 FloatMenuOption item;
-                AcceptanceReport allowed = def.PawnRequirementsMet(parent);
+                AcceptanceReport allowed = def.PawnRequirementsMet(pawn);
                 if (allowed)
                 {
                     item = new FloatMenuOption(def.label, delegate

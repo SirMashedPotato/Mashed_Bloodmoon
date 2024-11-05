@@ -57,19 +57,20 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            yield return new Command_Action
-            {
-                defaultLabel = "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate(),
-                defaultDesc = "Mashed_Bloodmoon_CustomiseBeastForm_Desc".Translate(parent.pawn, lycanthropeTypeDef, primaryColour.ToString(), secondaryColour.ToString(), eyeColour.ToString()),
-                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_CustomiseLycanthrope", true),
-                action = delegate ()
-                {
-                    Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
-                    Find.WindowStack.Add(page);
-                },
-            };
             if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
             {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_CustomiseBeastForm_Desc".Translate(parent.pawn, lycanthropeTypeDef, primaryColour.ToString(), secondaryColour.ToString(), eyeColour.ToString()),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_CustomiseLycanthrope", true),
+                    action = delegate ()
+                    {
+                        Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
+                        Find.WindowStack.Add(page);
+                    },
+                };
+
                 yield return new Command_Action
                 {
                     defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
