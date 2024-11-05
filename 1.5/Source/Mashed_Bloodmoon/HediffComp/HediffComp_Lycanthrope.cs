@@ -13,51 +13,18 @@ namespace Mashed_Bloodmoon
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
         public Color eyeColour = Color.white; //TODO
-        private List<FloatMenuOption> lycanthropeTypeOptions;
+        
         public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
-
-        /// <summary>
-        /// Debug tool, replace with proper gizmo
-        /// </summary>
-        private List<FloatMenuOption> LycanthropeTypeOptions
-        {
-            get
-            {
-                lycanthropeTypeOptions = new List<FloatMenuOption>();
-
-                foreach (LycanthropeTypeDef def in DefDatabase<LycanthropeTypeDef>.AllDefs)
-                {
-                    FloatMenuOption item;
-                    AcceptanceReport allowed = def.PawnRequirementsMet(parent.pawn);
-                    if (allowed)
-                    {
-                        item = new FloatMenuOption(def.label, delegate
-                        {
-                            lycanthropeTypeDef = def;
-                            primaryColour = def.graphicData.color;
-                            secondaryColour = def.graphicData.colorTwo;
-                        });
-                        lycanthropeTypeOptions.Add(item);
-                    }
-                    else
-                    {
-                        item = new FloatMenuOption(def.label + " (" + allowed.Reason + ")", delegate
-                        {
-                            
-                        });
-                        lycanthropeTypeOptions.Add(item);
-                    }
-                }
-                return lycanthropeTypeOptions;
-
-            }
-        }
 
         public LycanthropeTypeDef LycanthropeTypeDef
         {
             get
             {
                 return lycanthropeTypeDef;
+            }
+            set 
+            { 
+                lycanthropeTypeDef = value; 
             }
         }
 
@@ -99,7 +66,8 @@ namespace Mashed_Bloodmoon
                     icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_CustomiseLycanthrope", true),
                     action = delegate ()
                     {
-                        
+                        Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
+                        Find.WindowStack.Add(page);
                     },
                 };
 
@@ -117,18 +85,6 @@ namespace Mashed_Bloodmoon
                 };
             }
 
-            if (DebugSettings.ShowDevGizmos)
-            {
-                yield return new Command_Action
-                {
-                    defaultLabel = "DEV: Swap lycanthrope type",
-                    action = delegate ()
-                    {
-                        FloatMenu floatMenu = new FloatMenu(LycanthropeTypeOptions);
-                        Find.WindowStack.Add(floatMenu);
-                    },
-                };
-            }
         }
 
         /// <summary>
