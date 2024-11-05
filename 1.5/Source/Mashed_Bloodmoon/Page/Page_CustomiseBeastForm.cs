@@ -49,22 +49,22 @@ namespace Mashed_Bloodmoon
         {
             DrawPageTitle(inRect);
             inRect.yMin += rectLimitY;
-            DoBottomButtons(inRect, "Accept".Translate(), "Reset".Translate().CapitalizeFirst(), midAct: Reset, showNext: true, doNextOnKeypress: false);
+            DoBottomButtons(inRect, "Accept".Translate(), "Reset".Translate(), midAct: Reset, showNext: true, doNextOnKeypress: false);
 
             Rect leftRect = inRect;
             leftRect.width = (inRect.width / 2) - (rectPadding / 2);
+            leftRect.height -= rectLimitY;
             DoLeftSide(leftRect);
 
             Rect rightRect = leftRect;
             rightRect.x += rightRect.width + (rectPadding);
-            rightRect.height -= (rectPadding * 4);
             DoRightSide(rightRect);
         }
 
         public void DoLeftSide(Rect inRect)
         {
             Rect primaryRect = inRect;
-            primaryRect.height = (inRect.height / 3) - (rectPadding * 2);
+            primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
 
             Rect secondaryRect = primaryRect;
@@ -74,6 +74,11 @@ namespace Mashed_Bloodmoon
             Rect eyeRect = secondaryRect;
             eyeRect.y += secondaryRect.height + rectPadding;
             Widgets.DrawMenuSection(eyeRect);
+        }
+
+        public void DoColourSection(ref Color newColor, ref Color oldColor, ref float r, ref float g, ref float b)
+        {
+
         }
 
         public void DoRightSide(Rect inRect)
