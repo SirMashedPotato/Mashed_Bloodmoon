@@ -97,11 +97,41 @@ namespace Mashed_Bloodmoon
             DoColourLine(ref b, ref listing_Standard, "Blue");
             newColor = new Color(r, g, b, 1);
             listing_Standard.End();
+
+            Rect colorDisplayRect = inRect;
+            colorDisplayRect.y += inRect.height * 0.7f;
+            colorDisplayRect.height = inRect.height * 0.3f;
+            ColorReadback(colorDisplayRect, ref newColor, oldColor);
         }
 
         public void DoColourLine(ref float color, ref Listing_Standard listing_Standard, string label)
         {
             color = (float)Math.Round(listing_Standard.SliderLabeled(label.Translate().CapitalizeFirst() + " (" + color.ToStringPercent() + ")", color, 0, 1) * 100) / 100;
+        }
+
+        /// <summary>
+        /// Pretty much copied from Dialog_GlowerColorPicker
+        /// </summary>
+        private static void ColorReadback(Rect rect, ref Color color, Color oldColor)
+        {
+            rect.SplitVertically(rect.width / 2f, out Rect parent, out Rect parent2);
+            RectDivider rectDivider = new RectDivider(parent, 195906069, null);
+            TaggedString label = "CurrentColor".Translate().CapitalizeFirst();
+            TaggedString label2 = "OldColor".Translate().CapitalizeFirst();
+            float width = Mathf.Max(new float[]
+            {
+                100f,
+                label.GetWidthCached(),
+                label2.GetWidthCached()
+            });
+            RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            Widgets.Label(rect2.NewCol(width, HorizontalJustification.Left), label);
+            Widgets.DrawBoxSolid(rect2, color);
+            RectDivider rect3 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            Widgets.Label(rect3.NewCol(width, HorizontalJustification.Left), label2);
+            Widgets.DrawBoxSolid(rect3, oldColor);
+            RectDivider rect4 = new RectDivider(parent2, 195906069, null);
+            rect4.NewCol(26f, HorizontalJustification.Left);
         }
 
         public void DoRightSide(Rect inRect)
