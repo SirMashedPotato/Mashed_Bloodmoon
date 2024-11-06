@@ -32,9 +32,9 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public Color PrimaryColorDefault => graphicData.color == null ? graphicData.color : Color.white;
-        public Color SecondaryColorDefault => graphicData.colorTwo == null ? graphicData.colorTwo : Color.white;
-        public Color TertiaryColorDefault => graphicData.colorTwo == null ? graphicData.colorTwo : Color.white; //TODO
+        public Color PrimaryColorDefault => graphicData.color;
+        public Color SecondaryColorDefault => graphicData.colorTwo;
+        public Color TertiaryColorDefault => Color.white; //TODO
 
         public override IEnumerable<string> ConfigErrors()
         {

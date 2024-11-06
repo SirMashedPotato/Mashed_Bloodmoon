@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using static HarmonyLib.Code;
 
 namespace Mashed_Bloodmoon
 {
@@ -105,6 +106,12 @@ namespace Mashed_Bloodmoon
             colorDisplayRect.y += inRect.height * 0.7f;
             colorDisplayRect.height = inRect.height * 0.3f;
             ColorReadback(colorDisplayRect, defaultColor, oldColor);
+
+            Rect newColorDisplayRect = inRect;
+            newColorDisplayRect.x = (inRect.width / 2) + rectLimitY;
+            newColorDisplayRect.width = (inRect.width / 2) - rectLimitY;
+            newColorDisplayRect.height -= rectPadding;
+            Widgets.DrawBoxSolid(newColorDisplayRect, newColor);
         }
 
         public void DoColourLine(ref float color, ref Listing_Standard listing_Standard, string label)
@@ -133,6 +140,7 @@ namespace Mashed_Bloodmoon
             RectDivider rect3 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(rect3.NewCol(width, HorizontalJustification.Left), label2);
             Widgets.DrawBoxSolid(rect3, oldColor);
+            ///Widgets.ColorBox TODO
             RectDivider rect4 = new RectDivider(parent2, 195906069, null);
             rect4.NewCol(26f, HorizontalJustification.Left);
         }
