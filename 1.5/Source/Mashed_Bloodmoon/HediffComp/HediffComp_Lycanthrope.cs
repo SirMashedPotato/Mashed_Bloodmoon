@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
         private LycanthropeTypeDef lycanthropeTypeDef;
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
-        public Color tertiaryColour = Color.white; //TODO
+        public Color tertiaryColour = Color.white;
         
         public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
 
@@ -35,8 +35,9 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostMake();
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
-            primaryColour = lycanthropeTypeDef.graphicData.color;
-            secondaryColour = lycanthropeTypeDef.graphicData.colorTwo;
+            primaryColour = lycanthropeTypeDef.PrimaryColorDefault;
+            secondaryColour = lycanthropeTypeDef.SecondaryColorDefault;
+            tertiaryColour = lycanthropeTypeDef.TertiaryColorDefault;
             foreach (TotemTypeDef def in DefDatabase<TotemTypeDef>.AllDefs)
             {
                 usedTotemTracker.Add(def, 0);

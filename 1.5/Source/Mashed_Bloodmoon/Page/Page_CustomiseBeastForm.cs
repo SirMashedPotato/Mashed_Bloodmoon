@@ -63,20 +63,23 @@ namespace Mashed_Bloodmoon
             Rect primaryRect = inRect;
             primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
-            DoColourSection(primaryRect, ref primaryColour, compLycanthrope.primaryColour, ref primaryR, ref primaryG, ref primaryB, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
+            DoColourSection(primaryRect, ref primaryColour, compLycanthrope.primaryColour, compLycanthrope.LycanthropeTypeDef.PrimaryColorDefault,
+                ref primaryR, ref primaryG, ref primaryB, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
 
             Rect secondaryRect = primaryRect;
             secondaryRect.y += primaryRect.height + rectPadding;
             Widgets.DrawMenuSection(secondaryRect);
-            DoColourSection(secondaryRect, ref secondaryColour, compLycanthrope.secondaryColour, ref secondaryR, ref secondaryG, ref secondaryB, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
+            DoColourSection(secondaryRect, ref secondaryColour, compLycanthrope.secondaryColour, compLycanthrope.LycanthropeTypeDef.SecondaryColorDefault,
+                ref secondaryR, ref secondaryG, ref secondaryB, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
 
             Rect tertiaryRect = secondaryRect;
             tertiaryRect.y += secondaryRect.height + rectPadding;
             Widgets.DrawMenuSection(tertiaryRect);
-            DoColourSection(tertiaryRect, ref tertiaryColour, compLycanthrope.tertiaryColour, ref tertiaryR, ref tertiaryG, ref tertiaryB, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
+            DoColourSection(tertiaryRect, ref tertiaryColour, compLycanthrope.tertiaryColour, compLycanthrope.LycanthropeTypeDef.TertiaryColorDefault,
+                ref tertiaryR, ref tertiaryG, ref tertiaryB, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
-        public void DoColourSection(Rect mainRect, ref Color newColor, Color oldColor, ref float r, ref float g, ref float b, string label)
+        public void DoColourSection(Rect mainRect, ref Color newColor, Color oldColor, Color defaultColor, ref float r, ref float g, ref float b, string label)
         {
             
             Rect inRect = mainRect;
@@ -101,7 +104,7 @@ namespace Mashed_Bloodmoon
             Rect colorDisplayRect = inRect;
             colorDisplayRect.y += inRect.height * 0.7f;
             colorDisplayRect.height = inRect.height * 0.3f;
-            ColorReadback(colorDisplayRect, ref newColor, oldColor);
+            ColorReadback(colorDisplayRect, defaultColor, oldColor);
         }
 
         public void DoColourLine(ref float color, ref Listing_Standard listing_Standard, string label)
@@ -112,11 +115,11 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Pretty much copied from Dialog_GlowerColorPicker
         /// </summary>
-        private static void ColorReadback(Rect rect, ref Color color, Color oldColor)
+        private static void ColorReadback(Rect rect, Color defaultColor, Color oldColor)
         {
             rect.SplitVertically(rect.width / 2f, out Rect parent, out Rect parent2);
             RectDivider rectDivider = new RectDivider(parent, 195906069, null);
-            TaggedString label = "CurrentColor".Translate().CapitalizeFirst();
+            TaggedString label = "Mashed_Bloodmoon_DefaultColor".Translate().CapitalizeFirst();
             TaggedString label2 = "OldColor".Translate().CapitalizeFirst();
             float width = Mathf.Max(new float[]
             {
@@ -126,7 +129,7 @@ namespace Mashed_Bloodmoon
             });
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(rect2.NewCol(width, HorizontalJustification.Left), label);
-            Widgets.DrawBoxSolid(rect2, color);
+            Widgets.DrawBoxSolid(rect2, defaultColor);
             RectDivider rect3 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(rect3.NewCol(width, HorizontalJustification.Left), label2);
             Widgets.DrawBoxSolid(rect3, oldColor);

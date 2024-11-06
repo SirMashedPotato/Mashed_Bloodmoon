@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -30,6 +31,10 @@ namespace Mashed_Bloodmoon
                 props.ResolveReferences();
             }
         }
+
+        public Color PrimaryColorDefault => graphicData.color == null ? graphicData.color : Color.white;
+        public Color SecondaryColorDefault => graphicData.colorTwo == null ? graphicData.colorTwo : Color.white;
+        public Color TertiaryColorDefault => graphicData.colorTwo == null ? graphicData.colorTwo : Color.white; //TODO
 
         public override IEnumerable<string> ConfigErrors()
         {
