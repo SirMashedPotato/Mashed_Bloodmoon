@@ -99,19 +99,21 @@ namespace Mashed_Bloodmoon
             DoColourLine(ref r, ref listing_Standard, "Red");
             DoColourLine(ref g, ref listing_Standard, "Green");
             DoColourLine(ref b, ref listing_Standard, "Blue");
-            newColor = new Color(r, g, b, 1);
+            
             listing_Standard.End();
 
             Rect colorDisplayRect = inRect;
             colorDisplayRect.y += inRect.height * 0.7f;
             colorDisplayRect.height = inRect.height * 0.3f;
-            ColorReadback(colorDisplayRect, defaultColor, oldColor);
+            ColorReadback(colorDisplayRect, defaultColor, oldColor, ref r, ref g, ref b);
 
             Rect newColorDisplayRect = inRect;
             newColorDisplayRect.x = (inRect.width / 2) + rectLimitY;
             newColorDisplayRect.width = (inRect.width / 2) - rectLimitY;
             newColorDisplayRect.height -= rectPadding;
             Widgets.DrawBoxSolid(newColorDisplayRect, newColor);
+
+            newColor = new Color(r, g, b, 1);
         }
 
         public void DoColourLine(ref float color, ref Listing_Standard listing_Standard, string label)
@@ -120,9 +122,9 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Pretty much copied from Dialog_GlowerColorPicker
+        /// Based on Dialog_GlowerColorPicker.ColorReadback
         /// </summary>
-        private static void ColorReadback(Rect rect, Color defaultColor, Color oldColor)
+        private static void ColorReadback(Rect rect, Color defaultColor, Color oldColor, ref float r, ref float g, ref float b)
         {
             rect.SplitVertically(rect.width / 2f, out Rect parent, out Rect parent2);
             RectDivider rectDivider = new RectDivider(parent, 195906069, null);
@@ -135,12 +137,23 @@ namespace Mashed_Bloodmoon
                 label2.GetWidthCached()
             });
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            Widgets.Label(rect2.NewCol(width, HorizontalJustification.Left), label);
+            if (Widgets.ButtonText(rect2.NewCol(width, HorizontalJustification.Left), label))
+            {
+                r = defaultColor.r;
+                g = defaultColor.g;
+                b = defaultColor.b;
+            }
             Widgets.DrawBoxSolid(rect2, defaultColor);
+
             RectDivider rect3 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            Widgets.Label(rect3.NewCol(width, HorizontalJustification.Left), label2);
+            if (Widgets.ButtonText(rect3.NewCol(width, HorizontalJustification.Left), label2))
+            {
+                r = oldColor.r;
+                g = oldColor.g;
+                b = oldColor.b;
+            }
             Widgets.DrawBoxSolid(rect3, oldColor);
-            ///Widgets.ColorBox TODO
+
             RectDivider rect4 = new RectDivider(parent2, 195906069, null);
             rect4.NewCol(26f, HorizontalJustification.Left);
         }
@@ -224,6 +237,7 @@ namespace Mashed_Bloodmoon
 
         private void Reset()
         {
+            //TODO dropdown with choice between default and original?
             lycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
 
             primaryColour = compLycanthrope.primaryColour;
