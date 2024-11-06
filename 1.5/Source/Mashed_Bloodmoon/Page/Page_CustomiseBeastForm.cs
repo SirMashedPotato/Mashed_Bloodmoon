@@ -102,8 +102,8 @@ namespace Mashed_Bloodmoon
             listing_Standard.End();
 
             Rect colorDisplayRect = inRect;
-            colorDisplayRect.y += inRect.height * 0.7f;
-            colorDisplayRect.height = inRect.height * 0.3f;
+            colorDisplayRect.height = inRect.height * 0.25f;
+            colorDisplayRect.y = inRect.y + inRect.height - colorDisplayRect.height - rectPadding;
             ColorReadback(colorDisplayRect, defaultColor, oldColor, ref r, ref g, ref b);
 
             Rect newColorDisplayRect = inRect;
@@ -114,7 +114,7 @@ namespace Mashed_Bloodmoon
 
             Rect randomiseRect = newColorDisplayRect;
             randomiseRect.height = colorDisplayRect.height / 2;
-            randomiseRect.y = colorDisplayRect.y + (colorDisplayRect.height / 2) - rectPadding;
+            randomiseRect.y = inRect.y + inRect.height - randomiseRect.height - rectPadding;
 
             if (Widgets.ButtonText(randomiseRect, "Random".Translate()))
             {
