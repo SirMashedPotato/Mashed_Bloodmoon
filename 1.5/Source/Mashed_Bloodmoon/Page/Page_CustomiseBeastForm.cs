@@ -21,7 +21,7 @@ namespace Mashed_Bloodmoon
         float secondaryR;
         float secondaryG;
         float secondaryB;
-        Color tertiaryColour = Color.white; //TODO
+        Color tertiaryColour = Color.white;
         float tertiaryR;
         float tertiaryG;
         float tertiaryB;

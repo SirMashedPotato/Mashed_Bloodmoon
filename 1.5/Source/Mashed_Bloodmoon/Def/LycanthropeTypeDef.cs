@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
     public class LycanthropeTypeDef : Def
     {
         public string artist = "???";
-        public GraphicData graphicData;
+        public LycanthropeGraphicData graphicData;
         private List<PawnRenderNodeProperties> renderNodeProperties;
         public LycanthropeTypeRequirementWorker requirementWorker;
         public LycanthropeTypeTransformationWorker transformationWorker;
@@ -34,7 +34,7 @@ namespace Mashed_Bloodmoon
 
         public Color PrimaryColorDefault => graphicData.color;
         public Color SecondaryColorDefault => graphicData.colorTwo;
-        public Color TertiaryColorDefault => Color.white; //TODO
+        public Color TertiaryColorDefault => graphicData.colorThree;
 
         public override IEnumerable<string> ConfigErrors()
         {

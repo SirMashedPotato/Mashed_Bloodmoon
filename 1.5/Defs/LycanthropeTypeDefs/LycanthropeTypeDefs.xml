@@ -9,14 +9,15 @@
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
 			<color>(53,54,50)</color>
 			<colorTwo>(123,112,93)</colorTwo>
+			<colorThree>(233,208,138)</colorThree>
 			<drawSize>1.4</drawSize>
 		</graphicData>
 		<renderNodeProperties>
 			<li>
 				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
 				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
 				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
-				<color>(233,208,138)</color>
 				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>2</baseLayer>
@@ -33,14 +34,15 @@
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacy</texPath>
 			<color>(53,54,50)</color>
 			<colorTwo>(123,112,93)</colorTwo>
+			<colorThree>(233,208,138)</colorThree>
 			<drawSize>1.4</drawSize>
 		</graphicData>
 		<renderNodeProperties>
 			<li>
 				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
 				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
 				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacyEyeGlow</texPath>
-				<color>(233,208,138)</color>
 				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>2</baseLayer>
@@ -57,14 +59,15 @@
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
 			<color>(167,199,175)</color>
 			<colorTwo>(98,87,72)</colorTwo>
+			<colorThree>(210,193,232)</colorThree>
 			<drawSize>1.4</drawSize>
 		</graphicData>
 		<renderNodeProperties>
 			<li>
 				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
 				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
 				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
-				<color>(210,193,232)</color>
 				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>2</baseLayer>
