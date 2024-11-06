@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 using static HarmonyLib.Code;
@@ -110,8 +111,21 @@ namespace Mashed_Bloodmoon
             Rect newColorDisplayRect = inRect;
             newColorDisplayRect.x = (inRect.width / 2) + rectLimitY;
             newColorDisplayRect.width = (inRect.width / 2) - rectLimitY;
-            newColorDisplayRect.height -= rectPadding;
+            newColorDisplayRect.height -= rectLimitY;
             Widgets.DrawBoxSolid(newColorDisplayRect, newColor);
+
+            Rect randomiseRect = newColorDisplayRect;
+            randomiseRect.height = colorDisplayRect.height / 2;
+            //randomiseRect.y = newColorDisplayRect.y + newColorDisplayRect.height + rectPadding;
+            randomiseRect.y = colorDisplayRect.y + (colorDisplayRect.height / 2) - rectPadding;
+
+            if (Widgets.ButtonText(randomiseRect, "Random".Translate()))
+            {
+                Log.Message(label);
+                r = Rand.Range(0f, 1f);
+                g = Rand.Range(0f, 1f);
+                b = Rand.Range(0f, 1f);
+            }
 
             newColor = new Color(r, g, b, 1);
         }
