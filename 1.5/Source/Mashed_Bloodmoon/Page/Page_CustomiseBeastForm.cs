@@ -184,12 +184,6 @@ namespace Mashed_Bloodmoon
             compLycanthrope.secondaryColour = secondaryColour;
             compLycanthrope.tertiaryColour = tertiaryColour;
 
-            ///TODO
-            ///If the gizmo is only avaliable while transfromed
-            ///Call transformation end in the original type def
-            ///Then switch type
-            ///Then call transformation started in the new type def
-
             base.DoNext();
         }
 
