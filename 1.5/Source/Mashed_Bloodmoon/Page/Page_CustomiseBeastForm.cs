@@ -11,21 +11,11 @@ namespace Mashed_Bloodmoon
         HediffComp_Lycanthrope compLycanthrope;
         Pawn pawn;
 
-        ///Temporary values
-        LycanthropeTypeDef lycanthropeTypeDef;
-
-        Color primaryColour = Color.white;
-        float primaryR;
-        float primaryG;
-        float primaryB;
-        Color secondaryColour = Color.white;
-        float secondaryR;
-        float secondaryG;
-        float secondaryB;
-        Color tertiaryColour = Color.white;
-        float tertiaryR;
-        float tertiaryG;
-        float tertiaryB;
+        ///Cached values
+        LycanthropeTypeDef originalLycanthropeTypeDef;
+        Color originalPrimaryColour;
+        Color originalSecondaryColour;
+        Color originalTertiaryColour;
 
         const float rectPadding = 12f;
         const float rectLimitY = 45f;
@@ -38,6 +28,12 @@ namespace Mashed_Bloodmoon
         {
             compLycanthrope = comp;
             pawn = comp.parent.pawn;
+
+            originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
+            originalPrimaryColour = compLycanthrope.primaryColour;
+            originalSecondaryColour = compLycanthrope.secondaryColour;
+            originalTertiaryColour = compLycanthrope.tertiaryColour;
+
             Reset();
 
             lycanthropeTypeOptions = CacheLycanthropeTypeOptions();
@@ -64,23 +60,20 @@ namespace Mashed_Bloodmoon
             Rect primaryRect = inRect;
             primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
-            DoColourSection(primaryRect, ref primaryColour, compLycanthrope.primaryColour, lycanthropeTypeDef.PrimaryColorDefault,
-                ref primaryR, ref primaryG, ref primaryB, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
+            DoColourSection(primaryRect, ref compLycanthrope.primaryColour, originalPrimaryColour, compLycanthrope.LycanthropeTypeDef.PrimaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
 
             Rect secondaryRect = primaryRect;
             secondaryRect.y += primaryRect.height + rectPadding;
             Widgets.DrawMenuSection(secondaryRect);
-            DoColourSection(secondaryRect, ref secondaryColour, compLycanthrope.secondaryColour, lycanthropeTypeDef.SecondaryColorDefault,
-                ref secondaryR, ref secondaryG, ref secondaryB, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
+            DoColourSection(secondaryRect, ref compLycanthrope.secondaryColour, originalSecondaryColour, compLycanthrope.LycanthropeTypeDef.SecondaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
 
             Rect tertiaryRect = secondaryRect;
             tertiaryRect.y += secondaryRect.height + rectPadding;
             Widgets.DrawMenuSection(tertiaryRect);
-            DoColourSection(tertiaryRect, ref tertiaryColour, compLycanthrope.tertiaryColour, lycanthropeTypeDef.TertiaryColorDefault,
-                ref tertiaryR, ref tertiaryG, ref tertiaryB, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
+            DoColourSection(tertiaryRect, ref compLycanthrope.tertiaryColour, originalTertiaryColour, compLycanthrope.LycanthropeTypeDef.TertiaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
-        public void DoColourSection(Rect mainRect, ref Color newColor, Color oldColor, Color defaultColor, ref float r, ref float g, ref float b, string label)
+        public void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
         {
             
             Rect inRect = mainRect;
@@ -96,22 +89,22 @@ namespace Mashed_Bloodmoon
             listing_Standard.Begin(inRect);
             listing_Standard.Label(label.Translate());
             listing_Standard.Gap();
-            DoColourLine(ref r, ref listing_Standard, "Red");
-            DoColourLine(ref g, ref listing_Standard, "Green");
-            DoColourLine(ref b, ref listing_Standard, "Blue");
+            DoColourLine(ref compColor.r, ref listing_Standard, "Red");
+            DoColourLine(ref compColor.g, ref listing_Standard, "Green");
+            DoColourLine(ref compColor.b, ref listing_Standard, "Blue");
             
             listing_Standard.End();
 
             Rect colorDisplayRect = inRect;
             colorDisplayRect.height = inRect.height * 0.25f;
             colorDisplayRect.y = inRect.y + inRect.height - colorDisplayRect.height - rectPadding;
-            ColorReadback(colorDisplayRect, defaultColor, oldColor, ref r, ref g, ref b);
+            ColorReadback(colorDisplayRect, defaultColor, oldColor, ref compColor);
 
             Rect newColorDisplayRect = inRect;
             newColorDisplayRect.x = (inRect.width / 2) + rectLimitY;
             newColorDisplayRect.width = (inRect.width / 2) - rectLimitY;
             newColorDisplayRect.height -= rectLimitY;
-            Widgets.DrawBoxSolid(newColorDisplayRect, newColor);
+            Widgets.DrawBoxSolid(newColorDisplayRect, compColor);
 
             Rect randomiseRect = newColorDisplayRect;
             randomiseRect.height = colorDisplayRect.height / 2;
@@ -119,23 +112,21 @@ namespace Mashed_Bloodmoon
 
             if (Widgets.ButtonText(randomiseRect, "Random".Translate()))
             {
-                r = Rand.Range(0f, 1f);
-                g = Rand.Range(0f, 1f);
-                b = Rand.Range(0f, 1f);
+                compColor.r = Rand.Range(0f, 1f);
+                compColor.g = Rand.Range(0f, 1f);
+                compColor.b = Rand.Range(0f, 1f);
             }
-
-            newColor = new Color(r, g, b, 1);
         }
 
-        public void DoColourLine(ref float color, ref Listing_Standard listing_Standard, string label)
+        public void DoColourLine(ref float compColor, ref Listing_Standard listing_Standard, string label)
         {
-            color = (float)Math.Round(listing_Standard.SliderLabeled(label.Translate().CapitalizeFirst() + " (" + color.ToStringPercent() + ")", color, 0, 1) * 100) / 100;
+            compColor = (float)Math.Round(listing_Standard.SliderLabeled(label.Translate().CapitalizeFirst() + " (" + compColor.ToStringPercent() + ")", compColor, 0, 1) * 100) / 100;
         }
 
         /// <summary>
         /// Based on Dialog_GlowerColorPicker.ColorReadback
         /// </summary>
-        private static void ColorReadback(Rect rect, Color defaultColor, Color oldColor, ref float r, ref float g, ref float b)
+        private static void ColorReadback(Rect rect, Color defaultColor, Color oldColor, ref Color compColor)
         {
             rect.SplitVertically(rect.width / 2f, out Rect parent, out Rect parent2);
             RectDivider rectDivider = new RectDivider(parent, 195906069, null);
@@ -150,18 +141,14 @@ namespace Mashed_Bloodmoon
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             if (Widgets.ButtonText(rect2.NewCol(width, HorizontalJustification.Left), label))
             {
-                r = defaultColor.r;
-                g = defaultColor.g;
-                b = defaultColor.b;
+                compColor = defaultColor;
             }
             Widgets.DrawBoxSolid(rect2, defaultColor);
 
             RectDivider rect3 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             if (Widgets.ButtonText(rect3.NewCol(width, HorizontalJustification.Left), label2))
             {
-                r = oldColor.r;
-                g = oldColor.g;
-                b = oldColor.b;
+                compColor = oldColor;
             }
             Widgets.DrawBoxSolid(rect3, oldColor);
 
@@ -187,22 +174,15 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Applies changes
+        /// Player closed the menu without accepting changes, reset values in comp to cached values
         /// </summary>
-        protected override void DoNext()
-        {
-            compLycanthrope.LycanthropeTypeDef = lycanthropeTypeDef;
-            compLycanthrope.primaryColour = primaryColour;
-            compLycanthrope.secondaryColour = secondaryColour;
-            compLycanthrope.tertiaryColour = tertiaryColour;
-
-            base.DoNext();
-        }
-
         protected override void DoBack()
         {
-            Log.Message("test");
             base.DoBack();
+            compLycanthrope.LycanthropeTypeDef = originalLycanthropeTypeDef;
+            compLycanthrope.primaryColour = originalPrimaryColour;
+            compLycanthrope.secondaryColour = originalSecondaryColour;
+            compLycanthrope.tertiaryColour = originalTertiaryColour;
         }
 
         /// <summary>
@@ -236,22 +216,10 @@ namespace Mashed_Bloodmoon
                 AcceptanceReport acceptanceReport = def.PawnRequirementsMet(pawn);
                 item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
                 {
-                    lycanthropeTypeDef = def;
-
-                    primaryColour = compLycanthrope.primaryColour;
-                    primaryR = def.PrimaryColorDefault.r;
-                    primaryG = def.PrimaryColorDefault.g;
-                    primaryB = def.PrimaryColorDefault.b;
-
-                    secondaryColour = compLycanthrope.secondaryColour;
-                    secondaryR = def.SecondaryColorDefault.r;
-                    secondaryG = def.SecondaryColorDefault.g;
-                    secondaryB = def.SecondaryColorDefault.b;
-
-                    tertiaryColour = compLycanthrope.tertiaryColour;
-                    tertiaryR = def.TertiaryColorDefault.r;
-                    tertiaryG = def.TertiaryColorDefault.g;
-                    tertiaryB = def.TertiaryColorDefault.b;
+                    compLycanthrope.LycanthropeTypeDef = def;
+                    compLycanthrope.primaryColour = def.PrimaryColorDefault;
+                    compLycanthrope.secondaryColour = def.SecondaryColorDefault;
+                    compLycanthrope.tertiaryColour = def.TertiaryColorDefault;
                 });
 
                 if (!acceptanceReport.Accepted)
@@ -267,22 +235,10 @@ namespace Mashed_Bloodmoon
 
         private void Reset()
         {
-            lycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
-
-            primaryColour = compLycanthrope.primaryColour;
-            primaryR = primaryColour.r;
-            primaryG = primaryColour.g;
-            primaryB = primaryColour.b;
-
-            secondaryColour = compLycanthrope.secondaryColour;
-            secondaryR = secondaryColour.r;
-            secondaryG = secondaryColour.g;
-            secondaryB = secondaryColour.b;
-
-            tertiaryColour = compLycanthrope.tertiaryColour;
-            tertiaryR = tertiaryColour.r;
-            tertiaryG = tertiaryColour.g;
-            tertiaryB = tertiaryColour.b;
+            originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
+            compLycanthrope.primaryColour = originalPrimaryColour;
+            compLycanthrope.secondaryColour = originalSecondaryColour;
+            compLycanthrope.tertiaryColour = originalTertiaryColour;
         }
     }
 }
