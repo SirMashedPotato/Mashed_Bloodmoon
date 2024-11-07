@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfLegacy]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_EyeGlowBase">
+		<defName>Mashed_Bloodmoon_WerewolfLegacy</defName>
+		<label>werewolf (Legacy)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacy</texPath>
+			<color>(53,54,50)</color>
+			<colorTwo>(123,112,93)</colorTwo>
+			<colorThree>(233,208,138)</colorThree>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<renderNodeProperties/>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+</Defs>

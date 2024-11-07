@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_EyeGlowBase]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef Name="Mashed_Bloodmoon_EyeGlowBase" Abstract="True">
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+</Defs>

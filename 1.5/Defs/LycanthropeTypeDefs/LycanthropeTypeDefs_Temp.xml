@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_Daedroth</defName>
+		<label>daedroth</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Daedroth/Mashed_Bloodmoon_Daedroth</texPath>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<transformationWorker Class="Mashed_Bloodmoon.LTTWorker_AddAbility">
+			<abilityDef>Mashed_Ashlands_DaedrothFirebloom</abilityDef>
+		</transformationWorker>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
+		<label>udyrfrykte</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Udyrfrykte/Mashed_Bloodmoon_Udyrfrykte</texPath>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+</Defs>

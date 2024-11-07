@@ -18,7 +18,7 @@ namespace Mashed_Bloodmoon
                 {
                     if (pawn.health.hediffSet.HasHediff(def))
                     {
-                        return true;
+                        return minSeverity == -1f || pawn.health.hediffSet.GetFirstHediffOfDef(def).Severity >= minSeverity;
                     }
                 }
             }
@@ -39,5 +39,6 @@ namespace Mashed_Bloodmoon
 
         public HediffDef hediffDef;
         public List<HediffDef> hediffDefs;
+        public float minSeverity = -1f;
     }
 }

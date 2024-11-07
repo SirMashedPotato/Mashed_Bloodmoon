@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using UnityEngine;
 using Verse;
 
@@ -13,6 +14,7 @@ namespace Mashed_Bloodmoon
 
         ///Temporary values
         LycanthropeTypeDef lycanthropeTypeDef;
+
         Color primaryColour = Color.white;
         float primaryR;
         float primaryG;
@@ -63,19 +65,19 @@ namespace Mashed_Bloodmoon
             Rect primaryRect = inRect;
             primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
-            DoColourSection(primaryRect, ref primaryColour, compLycanthrope.primaryColour, compLycanthrope.LycanthropeTypeDef.PrimaryColorDefault,
+            DoColourSection(primaryRect, ref primaryColour, compLycanthrope.primaryColour, lycanthropeTypeDef.PrimaryColorDefault,
                 ref primaryR, ref primaryG, ref primaryB, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
 
             Rect secondaryRect = primaryRect;
             secondaryRect.y += primaryRect.height + rectPadding;
             Widgets.DrawMenuSection(secondaryRect);
-            DoColourSection(secondaryRect, ref secondaryColour, compLycanthrope.secondaryColour, compLycanthrope.LycanthropeTypeDef.SecondaryColorDefault,
+            DoColourSection(secondaryRect, ref secondaryColour, compLycanthrope.secondaryColour, lycanthropeTypeDef.SecondaryColorDefault,
                 ref secondaryR, ref secondaryG, ref secondaryB, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
 
             Rect tertiaryRect = secondaryRect;
             tertiaryRect.y += secondaryRect.height + rectPadding;
             Widgets.DrawMenuSection(tertiaryRect);
-            DoColourSection(tertiaryRect, ref tertiaryColour, compLycanthrope.tertiaryColour, compLycanthrope.LycanthropeTypeDef.TertiaryColorDefault,
+            DoColourSection(tertiaryRect, ref tertiaryColour, compLycanthrope.tertiaryColour, lycanthropeTypeDef.TertiaryColorDefault,
                 ref tertiaryR, ref tertiaryG, ref tertiaryB, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
@@ -118,7 +120,6 @@ namespace Mashed_Bloodmoon
 
             if (Widgets.ButtonText(randomiseRect, "Random".Translate()))
             {
-                Log.Message(label);
                 r = Rand.Range(0f, 1f);
                 g = Rand.Range(0f, 1f);
                 b = Rand.Range(0f, 1f);
@@ -172,6 +173,18 @@ namespace Mashed_Bloodmoon
         public void DoRightSide(Rect inRect)
         {
             Widgets.DrawMenuSection(inRect);
+
+            Rect setTypeRect = inRect;
+            setTypeRect.height = Text.LineHeight * 2;
+            setTypeRect.width = inRect.width / 3;
+            setTypeRect.y += rectPadding;
+            setTypeRect.x += setTypeRect.width;
+
+            if (Widgets.ButtonText(setTypeRect, "Mashed_Bloodmoon_SelectLycanthropeType".Translate().CapitalizeFirst()))
+            {
+                FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
+                Find.WindowStack.Add(typeOptions);
+            }
         }
 
         /// <summary>
@@ -215,34 +228,40 @@ namespace Mashed_Bloodmoon
             foreach (LycanthropeTypeDef def in DefDatabase<LycanthropeTypeDef>.AllDefs)
             {
                 FloatMenuOption item;
-                AcceptanceReport allowed = def.PawnRequirementsMet(pawn);
-                if (allowed)
+                AcceptanceReport acceptanceReport = def.PawnRequirementsMet(pawn);
+                item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
                 {
-                    item = new FloatMenuOption(def.label, delegate
-                    {
-                        lycanthropeTypeDef = def;
-                        primaryColour = def.graphicData.color;
-                        secondaryColour = def.graphicData.colorTwo;
-                    });
-                    lycanthropeTypeOptions.Add(item);
-                }
-                /*
-                else
-                {
-                    item = new FloatMenuOption(def.label + " (" + allowed.Reason + ")", delegate
-                    {
+                    lycanthropeTypeDef = def;
 
-                    });
-                    lycanthropeTypeOptions.Add(item);
+                    primaryColour = compLycanthrope.primaryColour;
+                    primaryR = def.PrimaryColorDefault.r;
+                    primaryG = def.PrimaryColorDefault.g;
+                    primaryB = def.PrimaryColorDefault.b;
+
+                    secondaryColour = compLycanthrope.secondaryColour;
+                    secondaryR = def.SecondaryColorDefault.r;
+                    secondaryG = def.SecondaryColorDefault.g;
+                    secondaryB = def.SecondaryColorDefault.b;
+
+                    tertiaryColour = compLycanthrope.tertiaryColour;
+                    tertiaryR = def.TertiaryColorDefault.r;
+                    tertiaryG = def.TertiaryColorDefault.g;
+                    tertiaryB = def.TertiaryColorDefault.b;
+                });
+
+                if (!acceptanceReport.Accepted)
+                {
+                    item.Label += " (" + acceptanceReport.Reason + ")";
+                    item.Disabled = true;
                 }
-                */
+
+                lycanthropeTypeOptions.Add(item);
             }
             return lycanthropeTypeOptions;
         }
 
         private void Reset()
         {
-            //TODO dropdown with choice between default and original?
             lycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
 
             primaryColour = compLycanthrope.primaryColour;
