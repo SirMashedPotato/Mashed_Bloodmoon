@@ -11,7 +11,7 @@
 	<RecordDef>
 		<defName>Mashed_Bloodmoon_HeartsConsumed</defName>
 		<label>lycanthrope hearts consumed</label>
-		<description>The number of hearts I have consumed while transformed.</description>
+		<description>The number of hearts I have consumed hearts while transformed.</description>
 		<type>Int</type>
 	</RecordDef>
 </Defs>
