@@ -1,7 +1,6 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Reflection.Emit;
 using UnityEngine;
 using Verse;
 
@@ -198,6 +197,12 @@ namespace Mashed_Bloodmoon
             compLycanthrope.tertiaryColour = tertiaryColour;
 
             base.DoNext();
+        }
+
+        protected override void DoBack()
+        {
+            Log.Message("test");
+            base.DoBack();
         }
 
         /// <summary>
