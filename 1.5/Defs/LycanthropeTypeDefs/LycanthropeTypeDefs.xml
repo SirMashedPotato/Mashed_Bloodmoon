@@ -49,9 +49,10 @@
 				<rotDrawMode>Fresh</rotDrawMode>
 			</li>
 			<li>
-				<debugLabel>anima antlers</debugLabel>
+				<debugLabel>werewolf antlers</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeSecondaryColor</nodeClass>
 				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
-				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfAnima/Mashed_Bloodmoon_WerewolfAnimaAntler</texPath>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfAntler</texPath>
 				<overlayLayer>Body</overlayLayer>
 				<baseLayer>2</baseLayer>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>

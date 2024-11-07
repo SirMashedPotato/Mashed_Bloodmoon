@@ -115,6 +115,8 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
     <Compile Include="Page\Page_CustomiseBeastForm.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_Lycanthrope.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropePrimaryColor.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeSecondaryColor.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTertiaryColor.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformed.cs" />
     <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeScaled.cs" />
