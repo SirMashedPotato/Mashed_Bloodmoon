@@ -4,7 +4,14 @@
 	<RecordDef>
 		<defName>Mashed_Bloodmoon_TransformationCount</defName>
 		<label>lycanthrope transformation count</label>
-		<description>The number of times I have transformed into a lycanthrope.</description>
+		<description>The number of times I have transformed into my beast form.</description>
+		<type>Int</type>
+	</RecordDef>
+	<!-- ==========[Mashed_Bloodmoon_HeartsConsumed]==========-->
+	<RecordDef>
+		<defName>Mashed_Bloodmoon_HeartsConsumed</defName>
+		<label>lycanthrope hearts consumed</label>
+		<description>The number of hearts I have consumed while transformed.</description>
 		<type>Int</type>
 	</RecordDef>
 </Defs>

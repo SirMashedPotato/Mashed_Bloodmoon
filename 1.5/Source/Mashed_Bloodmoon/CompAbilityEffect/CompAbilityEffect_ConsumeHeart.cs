@@ -27,6 +27,7 @@ namespace Mashed_Bloodmoon
             compLycanthrope.usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
             HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);
             comp_LycanthropeTransformed.StressMax += 1;
+            parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_HeartsConsumed);
             
             float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
             DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
