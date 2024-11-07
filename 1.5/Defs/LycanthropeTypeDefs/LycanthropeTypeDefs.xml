@@ -48,6 +48,14 @@
 				<baseLayer>2</baseLayer>
 				<rotDrawMode>Fresh</rotDrawMode>
 			</li>
+			<li>
+				<debugLabel>lycanthrope antlers</debugLabel>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfAnima/Mashed_Bloodmoon_WerewolfAnimaAntler</texPath>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			</li>
 		</renderNodeProperties>
 		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
