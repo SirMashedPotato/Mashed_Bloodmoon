@@ -10,6 +10,7 @@ namespace Mashed_Bloodmoon
     {
         HediffComp_Lycanthrope compLycanthrope;
         Pawn pawn;
+        Rot4 pawnRotation = new Rot4(2);
 
         ///Cached values
         LycanthropeTypeDef originalLycanthropeTypeDef;
@@ -95,8 +96,8 @@ namespace Mashed_Bloodmoon
             listing_Standard.End();
 
             Rect colorDisplayRect = inRect;
-            colorDisplayRect.height = inRect.height * 0.25f;
-            colorDisplayRect.y = inRect.y + inRect.height - colorDisplayRect.height - rectPadding;
+            colorDisplayRect.height *= 0.25f;
+            colorDisplayRect.y += inRect.height - colorDisplayRect.height - rectPadding;
             ColorReadback(colorDisplayRect, defaultColor, oldColor, ref compColor);
 
             Rect newColorDisplayRect = inRect;
@@ -185,7 +186,7 @@ namespace Mashed_Bloodmoon
 
             ///Thank god the ui pauses the game
             pawn.Drawer.renderer.SetAllGraphicsDirty();
-            RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), new Rot4(2), 
+            RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), pawnRotation, 
                 cameraZoom: 1f, supersample: true, compensateForUIScale: true, stylingStation: true);
             GUI.DrawTexture(pawnRect, pawnImage);
         }
@@ -202,6 +203,26 @@ namespace Mashed_Bloodmoon
             {
                 FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
                 Find.WindowStack.Add(typeOptions);
+            }
+
+            ///Rotate button left
+            Rect rotateLeftRect = mainRect;
+            rotateLeftRect.height = Text.LineHeight * 2;
+            rotateLeftRect.width = rotateLeftRect.height;
+            rotateLeftRect.x += rectPadding;
+
+            if (Widgets.ButtonText(rotateLeftRect, "<"))
+            {
+                pawnRotation.Rotate(RotationDirection.Clockwise);
+            }
+
+            ///Rotate button right
+            Rect rotateRightRect = rotateLeftRect;
+            rotateRightRect.x = mainRect.x + mainRect.width - rotateRightRect.width - rectPadding;
+
+            if (Widgets.ButtonText(rotateRightRect, ">"))
+            {
+                pawnRotation.Rotate(RotationDirection.Counterclockwise);
             }
         }
 
@@ -269,9 +290,6 @@ namespace Mashed_Bloodmoon
                 item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
                 {
                     compLycanthrope.LycanthropeTypeDef = def;
-                    compLycanthrope.primaryColour = def.PrimaryColorDefault;
-                    compLycanthrope.secondaryColour = def.SecondaryColorDefault;
-                    compLycanthrope.tertiaryColour = def.TertiaryColorDefault;
                 });
 
                 if (!acceptanceReport.Accepted)
