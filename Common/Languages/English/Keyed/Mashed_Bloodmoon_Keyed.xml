@@ -18,7 +18,7 @@
 	 <Mashed_Bloodmoon_LTR_MissingIdeo>ideoligion requires {0_label}</Mashed_Bloodmoon_LTR_MissingIdeo>
 	 <Mashed_Bloodmoon_LTR_MissingIdeoOneOf>ideoligion requires one of:</Mashed_Bloodmoon_LTR_MissingIdeoOneOf>
 	 <Mashed_Bloodmoon_LTR_MissingPsylink>requires a psylink of at least level {0}</Mashed_Bloodmoon_LTR_MissingPsylink>
-	 <Mashed_Bloodmoon_LTR_HediffSeverity>of at least severity {0}</Mashed_Bloodmoon_LTR_HediffSeverity>
+	 <Mashed_Bloodmoon_LTR_HediffSeverity>of at least a severity of {0}</Mashed_Bloodmoon_LTR_HediffSeverity>
 	 <Mashed_Bloodmoon_LTR_InvalidRace>is not a {0_label}</Mashed_Bloodmoon_LTR_InvalidRace>
 	 <Mashed_Bloodmoon_LTR_InvalidRaceOneOf>is not of any race:</Mashed_Bloodmoon_LTR_InvalidRaceOneOf>
 	 <Mashed_Bloodmoon_LTR_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_LTR_InvalidRecord>
