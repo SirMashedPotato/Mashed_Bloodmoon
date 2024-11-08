@@ -13,11 +13,15 @@ namespace Mashed_Bloodmoon
                 return true;
             }
 
-            if (!raceDefs.NullOrEmpty() && raceDefs.Contains(pawn.def))
+            if (!raceDefs.NullOrEmpty())
             {
-                return true;
+                if (raceDefs.Contains(pawn.def))
+                {
+                    return true;
+                }
+                return "Mashed_Bloodmoon_LTR_InvalidRaceOneOf".Translate() + DoMissingList(raceDefs);
             }
-            return "Mashed_Bloodmoon_LTR_InvalidRace".Translate();
+            return "Mashed_Bloodmoon_LTR_InvalidRace".Translate(raceDef);
         }
 
         public override IEnumerable<string> ConfigErrors()

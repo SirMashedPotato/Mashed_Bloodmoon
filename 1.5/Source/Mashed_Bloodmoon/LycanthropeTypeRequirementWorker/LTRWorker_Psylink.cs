@@ -11,9 +11,9 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_MissingPsylink".Translate();
+            return "Mashed_Bloodmoon_LTR_MissingPsylink".Translate(level);
         }
 
-        public int level = 0;
+        public int level = 1;
     }
 }

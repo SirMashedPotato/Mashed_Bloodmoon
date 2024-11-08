@@ -17,7 +17,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidRecord".Translate();
+            return "Mashed_Bloodmoon_LTR_InvalidRecord".Translate(recordDef.label, minCount);
         }
 
         public override IEnumerable<string> ConfigErrors()

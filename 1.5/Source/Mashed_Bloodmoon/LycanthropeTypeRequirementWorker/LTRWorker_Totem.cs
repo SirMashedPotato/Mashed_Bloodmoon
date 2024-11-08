@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidTotem".Translate();
+            return "Mashed_Bloodmoon_LTR_InvalidTotemCount".Translate(totemTypeDef, usedCount);
         }
 
         public override IEnumerable<string> ConfigErrors()

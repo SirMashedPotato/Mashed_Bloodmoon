@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -21,8 +22,9 @@ namespace Mashed_Bloodmoon
                         return minSeverity == -1f || pawn.health.hediffSet.GetFirstHediffOfDef(def).Severity >= minSeverity;
                     }
                 }
+                return "Mashed_Bloodmoon_LTR_MissingOneOf".Translate() + DoMissingList(hediffDefs) + " " + "Mashed_Bloodmoon_LTR_HediffSeverity".Translate(minSeverity.ToStringPercent());
             }
-            return "Mashed_Bloodmoon_LTR_InvalidHediff".Translate();
+            return "Mashed_Bloodmoon_LTR_Missing".Translate(hediffDef) + " " + "Mashed_Bloodmoon_LTR_HediffSeverity".Translate(minSeverity.ToStringPercent());
         }
 
         public override IEnumerable<string> ConfigErrors()
@@ -39,6 +41,6 @@ namespace Mashed_Bloodmoon
 
         public HediffDef hediffDef;
         public List<HediffDef> hediffDefs;
-        public float minSeverity = -1f;
+        public float minSeverity = 0f;
     }
 }

@@ -12,6 +12,18 @@
 	 <Mashed_Bloodmoon_Artist>Artist</Mashed_Bloodmoon_Artist>
 	 <Mashed_Bloodmoon_Type>Type</Mashed_Bloodmoon_Type>
 	 <Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
+	<!-- ==========[Type requirement worker requirement not met]==========-->
+	 <Mashed_Bloodmoon_LTR_MissingOneOf>requires one of:</Mashed_Bloodmoon_LTR_MissingOneOf>
+	 <Mashed_Bloodmoon_LTR_Missing>requires {0_label}</Mashed_Bloodmoon_LTR_Missing>
+	 <Mashed_Bloodmoon_LTR_MissingIdeo>ideoligion requires {0_label}</Mashed_Bloodmoon_LTR_MissingIdeo>
+	 <Mashed_Bloodmoon_LTR_MissingIdeoOneOf>ideoligion requires one of:</Mashed_Bloodmoon_LTR_MissingIdeoOneOf>
+	 <Mashed_Bloodmoon_LTR_MissingPsylink>requires a psylink of at least level {0}</Mashed_Bloodmoon_LTR_MissingPsylink>
+	 <Mashed_Bloodmoon_LTR_HediffSeverity>of at least severity {0}</Mashed_Bloodmoon_LTR_HediffSeverity>
+	 <Mashed_Bloodmoon_LTR_InvalidRace>is not a {0_label}</Mashed_Bloodmoon_LTR_InvalidRace>
+	 <Mashed_Bloodmoon_LTR_InvalidRaceOneOf>is not of any race:</Mashed_Bloodmoon_LTR_InvalidRaceOneOf>
+	 <Mashed_Bloodmoon_LTR_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_LTR_InvalidRecord>
+	 <Mashed_Bloodmoon_LTR_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_LTR_InvalidSkill>
+	 <Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
@@ -30,5 +42,5 @@
 	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
 	<Mashed_Bloodmoon_TotemLimitReached>{0_labelShort} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
 	<!-- ==========[misc]==========-->
-	<Mashed_Bloodmoon_LycanthropeCantEquip>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantEquip>
+	<Mashed_Bloodmoon_LycanthropeCantDo>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantDo>
 </LanguageData>

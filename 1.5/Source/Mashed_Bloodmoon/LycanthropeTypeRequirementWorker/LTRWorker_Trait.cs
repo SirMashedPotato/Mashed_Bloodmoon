@@ -22,8 +22,9 @@ namespace Mashed_Bloodmoon
                         return true;
                     }
                 }
+                return "Mashed_Bloodmoon_LTR_MissingOneOf".Translate() + DoMissingList(traitDefs);
             }
-            return "Mashed_Bloodmoon_LTR_InvalidTrait".Translate();
+            return "Mashed_Bloodmoon_LTR_Missing".Translate(traitDef);
         }
 
         public override IEnumerable<string> ConfigErrors()

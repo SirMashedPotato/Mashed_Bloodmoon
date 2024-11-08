@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidSkill".Translate();
+            return "Mashed_Bloodmoon_LTR_InvalidSkill".Translate(skillDef, skillLevel);
         }
 
         public override IEnumerable<string> ConfigErrors()

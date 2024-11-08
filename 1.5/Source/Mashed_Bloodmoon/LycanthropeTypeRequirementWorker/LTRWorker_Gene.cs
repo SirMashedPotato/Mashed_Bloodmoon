@@ -24,8 +24,9 @@ namespace Mashed_Bloodmoon
                         }
                     }
                 }
+                return "Mashed_Bloodmoon_LTR_MissingOneOf".Translate() + DoMissingList(geneDefs);
             }
-            return "Mashed_Bloodmoon_LTR_InvalidGene".Translate();
+            return "Mashed_Bloodmoon_LTR_Missing".Translate(geneDef);
         }
 
         public override IEnumerable<string> ConfigErrors()

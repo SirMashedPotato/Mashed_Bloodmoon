@@ -31,7 +31,7 @@ namespace Mashed_Bloodmoon
             if (__result && LycanthropeUtility.PawnIsTransformedLycanthrope(pawn))
             {
                 __result = false;
-                cantReason = "Mashed_Bloodmoon_LycanthropeCantEquip".Translate(pawn);
+                cantReason = "Mashed_Bloodmoon_LycanthropeCantDo".Translate(pawn);
             }
         }
     }

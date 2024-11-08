@@ -24,8 +24,9 @@ namespace Mashed_Bloodmoon
                         }
                     }
                 }
+                return "Mashed_Bloodmoon_LTR_MissingIdeoOneOf".Translate() + DoMissingList(preceptDefs);
             }
-            return "Mashed_Bloodmoon_LTR_InvalidPrecept".Translate();
+            return "Mashed_Bloodmoon_LTR_MissingIdeo".Translate(preceptDef);
         }
 
         public override IEnumerable<string> ConfigErrors()

@@ -24,8 +24,9 @@ namespace Mashed_Bloodmoon
                         }
                     }
                 }
+                return "Mashed_Bloodmoon_LTR_MissingIdeoOneOf".Translate() + DoMissingList(memeDefs);
             }
-            return "Mashed_Bloodmoon_LTR_InvalidMeme".Translate();
+            return "Mashed_Bloodmoon_LTR_MissingIdeo".Translate(memeDef);
         }
 
         public override IEnumerable<string> ConfigErrors()
