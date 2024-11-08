@@ -20,6 +20,7 @@ namespace Mashed_Bloodmoon
 
         const float rectPadding = 12f;
         const float rectLimitY = 45f;
+        const float pawnZoom = 0.9f;
 
         List<FloatMenuOption> lycanthropeTypeOptions;
 
@@ -187,7 +188,7 @@ namespace Mashed_Bloodmoon
             ///Thank god the ui pauses the game
             pawn.Drawer.renderer.SetAllGraphicsDirty();
             RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), pawnRotation, 
-                cameraZoom: 1f, supersample: true, compensateForUIScale: true, stylingStation: true);
+                cameraZoom: pawnZoom, supersample: true, compensateForUIScale: true, stylingStation: true);
             GUI.DrawTexture(pawnRect, pawnImage);
         }
 
