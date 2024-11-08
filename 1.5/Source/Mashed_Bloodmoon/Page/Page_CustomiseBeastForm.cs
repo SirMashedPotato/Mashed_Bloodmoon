@@ -162,7 +162,7 @@ namespace Mashed_Bloodmoon
             DoPreviewSection(previewRect);
 
             Rect descriptionRect = previewRect;
-            descriptionRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
+            descriptionRect.height = Text.LineHeight * 3.5f;
             descriptionRect.y += previewRect.height + rectPadding;
             DoDescriptionSection(descriptionRect);
         }
@@ -210,7 +210,7 @@ namespace Mashed_Bloodmoon
             RectDivider rectDivider = new RectDivider(inRect, inRect.GetHashCode(), null);
 
             RectDivider rect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            TaggedString label1 = compLycanthrope.LycanthropeTypeDef.LabelCap;
+            TaggedString label1 = "Mashed_Bloodmoon_Type".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.LabelCap;
             Widgets.Label(rect1.NewCol(label1.GetWidthCached(), HorizontalJustification.Left), label1);
 
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);

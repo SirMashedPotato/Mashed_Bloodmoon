@@ -10,6 +10,7 @@
 	 <Mashed_Bloodmoon_DefaultColor>default color</Mashed_Bloodmoon_DefaultColor>
 	 <Mashed_Bloodmoon_UndoChanges>Undo changes</Mashed_Bloodmoon_UndoChanges>
 	 <Mashed_Bloodmoon_Artist>Artist</Mashed_Bloodmoon_Artist>
+	 <Mashed_Bloodmoon_Type>Type</Mashed_Bloodmoon_Type>
 	 <Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
