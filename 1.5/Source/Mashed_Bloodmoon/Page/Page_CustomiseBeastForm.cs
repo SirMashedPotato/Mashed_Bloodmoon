@@ -43,7 +43,7 @@ namespace Mashed_Bloodmoon
         {
             DrawPageTitle(inRect);
             inRect.yMin += rectLimitY;
-            DoBottomButtons(inRect, "Accept".Translate(), "Reset".Translate(), midAct: Reset, showNext: true, doNextOnKeypress: false);
+            DoBottomButtons(inRect, "Accept".Translate(), "Mashed_Bloodmoon_UndoChanges".Translate(), midAct: Reset, showNext: true, doNextOnKeypress: false);
 
             Rect leftRect = inRect;
             leftRect.width = (inRect.width / 2) - (rectPadding / 2);
@@ -183,6 +183,19 @@ namespace Mashed_Bloodmoon
                 FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
                 Find.WindowStack.Add(typeOptions);
             }
+
+            ///Pawn preview
+            Rect pawnRect = mainRect;
+            pawnRect.x += rectPadding;
+            pawnRect.y += rectPadding;
+            pawnRect.width -= rectPadding;
+            pawnRect.height = pawnRect.width;
+
+            ///Thank god the ui pauses the game
+            pawn.Drawer.renderer.SetAllGraphicsDirty();
+            RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), new Rot4(2), 
+                cameraZoom: 1f, supersample: true, compensateForUIScale: true, stylingStation: true);
+            GUI.DrawTexture(pawnRect, pawnImage);
         }
 
         private void DoDescriptionSection(Rect mainRect)
@@ -201,7 +214,7 @@ namespace Mashed_Bloodmoon
             Widgets.Label(rect1.NewCol(label1.GetWidthCached(), HorizontalJustification.Left), label1);
 
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            TaggedString label2 = "Artist".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.artist;
+            TaggedString label2 = "Mashed_Bloodmoon_Artist".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.artist;
             Widgets.Label(rect2.NewCol(label2.GetWidthCached(), HorizontalJustification.Left), label2);
         }
 
