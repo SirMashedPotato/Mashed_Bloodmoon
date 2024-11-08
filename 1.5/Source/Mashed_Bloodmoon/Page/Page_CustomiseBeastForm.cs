@@ -157,25 +157,45 @@ namespace Mashed_Bloodmoon
 
         private void DoRightSide(Rect inRect)
         {
+            Rect descriptionRect = inRect;
+            descriptionRect.height = Text.LineHeight * 3.5f;
+            DoDescriptionSection(descriptionRect);
+
             Rect previewRect = inRect;
             previewRect.height = (((inRect.height / 3) - ((rectPadding / 3) * 2)) * 2) + rectPadding;
+            previewRect.y += descriptionRect.height + rectPadding;
             DoPreviewSection(previewRect);
 
-            Rect descriptionRect = previewRect;
-            descriptionRect.height = Text.LineHeight * 3.5f;
-            descriptionRect.y += previewRect.height + rectPadding;
-            DoDescriptionSection(descriptionRect);
+            Rect buttonRect = previewRect;
+            buttonRect.height = Text.LineHeight * 2f;
+            buttonRect.y += previewRect.height + rectPadding;
+            DoButtonSection(buttonRect);
         }
 
         private void DoPreviewSection(Rect mainRect)
         {
             Widgets.DrawMenuSection(mainRect);
 
+            ///Pawn preview
+            Rect pawnRect = mainRect;
+            pawnRect.x += rectPadding;
+            pawnRect.y += rectPadding;
+            pawnRect.width -= (rectPadding * 2);
+            pawnRect.height -= (rectPadding * 2);
+
+            ///Thank god the ui pauses the game
+            pawn.Drawer.renderer.SetAllGraphicsDirty();
+            RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), new Rot4(2), 
+                cameraZoom: 1f, supersample: true, compensateForUIScale: true, stylingStation: true);
+            GUI.DrawTexture(pawnRect, pawnImage);
+        }
+
+        private void DoButtonSection(Rect mainRect)
+        {
             ///Swap type button
             Rect setTypeRect = mainRect;
             setTypeRect.height = Text.LineHeight * 2;
-            setTypeRect.width = mainRect.width / 3;
-            setTypeRect.y = mainRect.height - rectPadding;
+            setTypeRect.width /= 3;
             setTypeRect.x += setTypeRect.width;
 
             if (Widgets.ButtonText(setTypeRect, "Mashed_Bloodmoon_SelectLycanthropeType".Translate().CapitalizeFirst()))
@@ -183,19 +203,6 @@ namespace Mashed_Bloodmoon
                 FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
                 Find.WindowStack.Add(typeOptions);
             }
-
-            ///Pawn preview
-            Rect pawnRect = mainRect;
-            pawnRect.x += rectPadding;
-            pawnRect.y += rectPadding;
-            pawnRect.width -= rectPadding;
-            pawnRect.height = pawnRect.width;
-
-            ///Thank god the ui pauses the game
-            pawn.Drawer.renderer.SetAllGraphicsDirty();
-            RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), new Rot4(2), 
-                cameraZoom: 1f, supersample: true, compensateForUIScale: true, stylingStation: true);
-            GUI.DrawTexture(pawnRect, pawnImage);
         }
 
         private void DoDescriptionSection(Rect mainRect)
