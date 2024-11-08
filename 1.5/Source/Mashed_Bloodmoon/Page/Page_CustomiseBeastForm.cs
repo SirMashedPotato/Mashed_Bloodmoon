@@ -55,7 +55,7 @@ namespace Mashed_Bloodmoon
             DoRightSide(rightRect);
         }
 
-        public void DoLeftSide(Rect inRect)
+        private void DoLeftSide(Rect inRect)
         {
             Rect primaryRect = inRect;
             primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
@@ -73,9 +73,8 @@ namespace Mashed_Bloodmoon
             DoColourSection(tertiaryRect, ref compLycanthrope.tertiaryColour, originalTertiaryColour, compLycanthrope.LycanthropeTypeDef.TertiaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
-        public void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
+        private void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
         {
-            
             Rect inRect = mainRect;
             inRect.x += rectPadding;
             inRect.y += rectPadding;
@@ -118,7 +117,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void DoColourLine(ref float compColor, ref Listing_Standard listing_Standard, string label)
+        private void DoColourLine(ref float compColor, ref Listing_Standard listing_Standard, string label)
         {
             compColor = (float)Math.Round(listing_Standard.SliderLabeled(label.Translate().CapitalizeFirst() + " (" + compColor.ToStringPercent() + ")", compColor, 0, 1) * 100) / 100;
         }
@@ -156,14 +155,27 @@ namespace Mashed_Bloodmoon
             rect4.NewCol(26f, HorizontalJustification.Left);
         }
 
-        public void DoRightSide(Rect inRect)
+        private void DoRightSide(Rect inRect)
         {
-            Widgets.DrawMenuSection(inRect);
+            Rect previewRect = inRect;
+            previewRect.height = (((inRect.height / 3) - ((rectPadding / 3) * 2)) * 2) + rectPadding;
+            DoPreviewSection(previewRect);
 
-            Rect setTypeRect = inRect;
+            Rect descriptionRect = previewRect;
+            descriptionRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
+            descriptionRect.y += previewRect.height + rectPadding;
+            DoDescriptionSection(descriptionRect);
+        }
+
+        private void DoPreviewSection(Rect mainRect)
+        {
+            Widgets.DrawMenuSection(mainRect);
+
+            ///Swap type button
+            Rect setTypeRect = mainRect;
             setTypeRect.height = Text.LineHeight * 2;
-            setTypeRect.width = inRect.width / 3;
-            setTypeRect.y += rectPadding;
+            setTypeRect.width = mainRect.width / 3;
+            setTypeRect.y = mainRect.height - rectPadding;
             setTypeRect.x += setTypeRect.width;
 
             if (Widgets.ButtonText(setTypeRect, "Mashed_Bloodmoon_SelectLycanthropeType".Translate().CapitalizeFirst()))
@@ -171,6 +183,26 @@ namespace Mashed_Bloodmoon
                 FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
                 Find.WindowStack.Add(typeOptions);
             }
+        }
+
+        private void DoDescriptionSection(Rect mainRect)
+        {
+            Widgets.DrawMenuSection(mainRect);
+            Rect inRect = mainRect;
+            inRect.x += rectPadding;
+            inRect.y += rectPadding;
+            inRect.width -= rectPadding;
+            inRect.height -= rectPadding;
+
+            RectDivider rectDivider = new RectDivider(inRect, inRect.GetHashCode(), null);
+
+            RectDivider rect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            TaggedString label1 = compLycanthrope.LycanthropeTypeDef.LabelCap;
+            Widgets.Label(rect1.NewCol(label1.GetWidthCached(), HorizontalJustification.Left), label1);
+
+            RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            TaggedString label2 = "Artist".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.artist;
+            Widgets.Label(rect2.NewCol(label2.GetWidthCached(), HorizontalJustification.Left), label2);
         }
 
         /// <summary>
