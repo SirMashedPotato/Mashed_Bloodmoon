@@ -31,6 +31,19 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
+        public void TransformPawn()
+        {
+            parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
+            if (!parent.Visible)
+            {
+                parent.Severity = 0.5f;
+                ///TODO Letter/message
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public override void CompPostMake()
         {
             base.CompPostMake();
@@ -51,6 +64,21 @@ namespace Mashed_Bloodmoon
         {
             base.Notify_PawnDied(dinfo, culprit);
             Find.HistoryEventsManager.RecordEvent(new HistoryEvent(HistoryEventDefOf.Mashed_Bloodmoon_LycanthropeDied));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void Notify_PawnPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
+        {
+            if (LycanthropeUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
+            {
+                if (Rand.Chance(0.1f))
+                {
+                    TransformPawn();
+                }
+            }
+            base.Notify_PawnPostApplyDamage(dinfo, totalDamageDealt);
         }
 
         /// <summary>
@@ -80,7 +108,7 @@ namespace Mashed_Bloodmoon
                     icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
                     action = delegate ()
                     {
-                        parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
+                        TransformPawn();
                     },
                     Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue),
                 };

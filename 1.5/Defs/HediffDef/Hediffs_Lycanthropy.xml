@@ -52,6 +52,22 @@
 		</comps>
 		<stages>
 			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
+				<makeImmuneTo>
+					<li>Malaria</li>
+					<li>Plague</li>
+					<li>SleepingSickness</li>
+					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_SwampFever</li>
+				  </makeImmuneTo>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+					<Mashed_Bloodmoon_LycanthropicStressMax>30</Mashed_Bloodmoon_LycanthropicStressMax>
+					<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.5</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
 				<makeImmuneTo>
 					<li>Malaria</li>
 					<li>Plague</li>
