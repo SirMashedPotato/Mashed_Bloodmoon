@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LostWandererJoin]==========-->
+	<QuestScriptDef>
+		<defName>Mashed_Bloodmoon_LostWandererJoin</defName>
+		<autoAccept>true</autoAccept>
+		<defaultHidden>true</defaultHidden>
+		<isRootSpecial>true</isRootSpecial>
+		<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+		<failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Lost wanderer joins</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription-></li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="Mashed_Bloodmoon.QuestNode_Root_LostWandererJoin_WalkIn"/>
+	</QuestScriptDef>
+</Defs>
