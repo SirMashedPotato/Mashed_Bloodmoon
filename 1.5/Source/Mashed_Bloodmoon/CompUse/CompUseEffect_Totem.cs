@@ -14,11 +14,7 @@ namespace Mashed_Bloodmoon
         public override void DoEffect(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            if (!compLycanthrope.usedTotemTracker.ContainsKey(Props.totemTypeDef))
-            {
-                compLycanthrope.usedTotemTracker.Add(Props.totemTypeDef, 0);
-            }
-            compLycanthrope.usedTotemTracker[Props.totemTypeDef]++;
+            LycanthropeUtility.UseTotem(compLycanthrope, Props.totemTypeDef, Props.usedCount);
         }
 
         public override AcceptanceReport CanBeUsedBy(Pawn pawn)

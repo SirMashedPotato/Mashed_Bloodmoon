@@ -71,6 +71,7 @@
     <Compile Include="CompUse\Properties\CompProperties_UseEffectTotem.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
+    <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
     <Compile Include="DefOf\AbilityDefOf.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
@@ -87,6 +88,9 @@
     <Compile Include="Gene\Gene_Lycanthrope.cs" />
     <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\Patch_GenerateInitialHediffs.cs" />
+    <Compile Include="Harmony\Patch_SetupDynamicNodes.cs" />
+    <Compile Include="Harmony\Patch_ApplyBedThoughts.cs" />
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
@@ -130,8 +134,9 @@
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptIsLycanthrope.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
-    <Compile Include="Utility\LycanthropeGraphicData.cs" />
+    <Compile Include="Def\LycanthropeGraphicData.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
+    <Compile Include="DefModExtension\PawnTotemRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

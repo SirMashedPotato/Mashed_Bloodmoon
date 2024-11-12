@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
 
         internal static bool PawnIsLycanthrope(Pawn pawn)
         {
-            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope) != null;
+            return GetLycanthropeHediff(pawn) != null;
         }
 
         internal static bool PawnIsFatigued(Pawn pawn)
@@ -26,7 +26,7 @@ namespace Mashed_Bloodmoon
 
         internal static bool PawnIsTransformedLycanthrope(Pawn pawn, bool includeDummy = false)
         {
-            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null 
+            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null
                 || (includeDummy && pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformedDummy) != null);
         }
 
@@ -54,7 +54,15 @@ namespace Mashed_Bloodmoon
         /// </summary>
         internal static HediffComp_Lycanthrope GetCompLycanthrope(Pawn pawn)
         {
-            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
+            return GetLycanthropeHediff(pawn).TryGetComp<HediffComp_Lycanthrope>();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        internal static Hediff GetLycanthropeHediff(Pawn pawn)
+        {
+            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope);
         }
 
         /// <summary>
@@ -77,6 +85,16 @@ namespace Mashed_Bloodmoon
                 hediffComp_Disappears.ticksToDisappear = duration;
             }
             pawn.health.AddHediff(hediff);
+        }
+
+        public static void UseTotem(HediffComp_Lycanthrope compLycanthrope, TotemTypeDef totemTypeDef, int usedCount)
+        {
+            if (!compLycanthrope.usedTotemTracker.ContainsKey(totemTypeDef))
+            {
+                compLycanthrope.usedTotemTracker.Add(totemTypeDef, 0);
+            }
+            compLycanthrope.usedTotemTracker[totemTypeDef] += usedCount;
+
         }
 
         public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus, bool ignoreTransformed = false)
@@ -146,7 +164,7 @@ namespace Mashed_Bloodmoon
         {
             if (pawn.equipment.HasAnything())
             {
-                foreach(Thing thing in pawn.equipment.GetDirectlyHeldThings())
+                foreach (Thing thing in pawn.equipment.GetDirectlyHeldThings())
                 {
                     pawn.equipment.TryTransferEquipmentToContainer(thing as ThingWithComps, pawn.inventory.innerContainer);
                 }

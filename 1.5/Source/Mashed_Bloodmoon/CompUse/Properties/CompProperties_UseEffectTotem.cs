@@ -10,5 +10,6 @@ namespace Mashed_Bloodmoon
         }
 
         public TotemTypeDef totemTypeDef;
+        public int usedCount = 1;
     }
 }

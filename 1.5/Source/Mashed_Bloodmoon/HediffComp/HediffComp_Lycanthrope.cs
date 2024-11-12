@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
         public Color tertiaryColour = Color.white;
-        
+
         public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
 
         public LycanthropeTypeDef LycanthropeTypeDef
@@ -22,10 +22,17 @@ namespace Mashed_Bloodmoon
             {
                 return lycanthropeTypeDef;
             }
-            set 
-            { 
-                lycanthropeTypeDef = value; 
+            set
+            {
+                lycanthropeTypeDef = value;
             }
+        }
+
+        public void ResetColours()
+        {
+            primaryColour = lycanthropeTypeDef.PrimaryColorDefault;
+            secondaryColour = lycanthropeTypeDef.SecondaryColorDefault;
+            tertiaryColour = lycanthropeTypeDef.TertiaryColorDefault;
         }
 
         /// <summary>
@@ -53,9 +60,7 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostMake();
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
-            primaryColour = lycanthropeTypeDef.PrimaryColorDefault;
-            secondaryColour = lycanthropeTypeDef.SecondaryColorDefault;
-            tertiaryColour = lycanthropeTypeDef.TertiaryColorDefault;
+            ResetColours();
             foreach (TotemTypeDef def in DefDatabase<TotemTypeDef>.AllDefs)
             {
                 usedTotemTracker.Add(def, 0);
@@ -107,7 +112,7 @@ namespace Mashed_Bloodmoon
                 yield return new Command_Action
                 {
                     defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
-                    defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn, 
+                    defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn,
                     ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
                     icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
                     action = delegate ()
@@ -130,9 +135,9 @@ namespace Mashed_Bloodmoon
                 string description = "\n";
 
                 ///Consumed hearts
-                description += "\n" + TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.LabelCap + ": " 
+                description += "\n" + TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.LabelCap + ": "
                     + usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts];
-                foreach(StatDef statDef in TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.statDefs)
+                foreach (StatDef statDef in TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.statDefs)
                 {
                     LycanthropeUtility.TotemStatBonus(parent.pawn, TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts, out float bonus, true);
                     description += "\n  - " + statDef.LabelCap + ": +" + bonus;
@@ -155,7 +160,7 @@ namespace Mashed_Bloodmoon
                                 {
                                     description += "+";
                                 }
-                                description += bonus;
+                                description += bonus.ToString("0.000");
                                 if (!usedTotem.Key.onlyTransformed)
                                 {
                                     description += " (H)";

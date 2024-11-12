@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
         public override void PostAdd()
         {
             base.PostAdd();
-            if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope) == null)
+            if (!LycanthropeUtility.PawnIsLycanthrope(pawn))
             {
                 Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_SaniesLupinus);
                 if (hediff != null)
