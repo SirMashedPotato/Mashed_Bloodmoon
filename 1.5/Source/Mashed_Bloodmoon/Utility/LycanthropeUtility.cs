@@ -1,4 +1,6 @@
 ﻿using RimWorld;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -8,6 +10,7 @@ namespace Mashed_Bloodmoon
     {
         internal static readonly float lycanthropeStressToTicks = GenDate.TicksPerHour * 0.3f;
         internal static readonly int lycanthropeStressRate = GenDate.TicksPerHour / 10;
+        internal static readonly float totemTransferPercent = 0.3f;
 
         internal static bool IsNight(Pawn pawn)
         {
@@ -92,6 +95,21 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(hediff);
         }
 
+        public static void TransferTotems(Pawn pawn, Pawn victim)
+        {
+            HediffComp_Lycanthrope victimCompLycanthrope = GetCompLycanthrope(victim);
+            if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
+            {
+                foreach (KeyValuePair<TotemTypeDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
+                {
+                    if (usedTotem.Key.canBeTransferred)
+                    {
+                        UseTotem(pawn, usedTotem.Key, (int)(usedTotem.Value * totemTransferPercent));
+                    }
+                }
+            }
+        }
+
         public static void UseTotem(Pawn pawn, TotemTypeDef totemTypeDef, int usedCount)
         {
             UseTotem(GetCompLycanthrope(pawn), totemTypeDef, usedCount);
@@ -103,7 +121,8 @@ namespace Mashed_Bloodmoon
             {
                 compLycanthrope.usedTotemTracker.Add(totemTypeDef, 0);
             }
-            compLycanthrope.usedTotemTracker[totemTypeDef] += usedCount;
+            int finalCount = Mathf.Clamp(compLycanthrope.usedTotemTracker[totemTypeDef] + usedCount, 0, totemTypeDef.useLimit);
+            compLycanthrope.usedTotemTracker[totemTypeDef] = finalCount;
         }
 
         public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus, bool ignoreTransformed = false)

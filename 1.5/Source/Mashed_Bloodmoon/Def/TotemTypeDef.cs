@@ -15,6 +15,7 @@ namespace Mashed_Bloodmoon
         public float increasePerLevel = 1f;
         public bool onlyTransformed = true;
         public bool displayAsTotem = true;
+        public bool canBeTransferred = true;
         public LycanthropeTypeTransformationWorker transformationWorker;
 
         public string LabelShortCap => labelShort.CapitalizeFirst();

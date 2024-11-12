@@ -160,7 +160,7 @@ namespace Mashed_Bloodmoon
                                 {
                                     description += "+";
                                 }
-                                description += bonus.ToString("0.000");
+                                description += bonus.ToString();
                                 if (!usedTotem.Key.onlyTransformed)
                                 {
                                     description += " (H)";

@@ -22,6 +22,12 @@ namespace Mashed_Bloodmoon
             {
                 LycanthropeUtility.LycanthropeIngestedWolfsbane(parent.pawn);
             }
+
+            if (LycanthropeUtility.PawnIsLycanthrope(targetPawn))
+            {
+                LycanthropeUtility.TransferTotems(parent.pawn, targetPawn);
+                targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
+            }
             
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parent.pawn);
             compLycanthrope.usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts]++;

@@ -12,6 +12,7 @@
 		<increasePerLevel>1</increasePerLevel>
 		<onlyTransformed>false</onlyTransformed>
 		<displayAsTotem>false</displayAsTotem>
+		<canBeTransferred>false</canBeTransferred>
 	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemEndurance]========== -->
 	<Mashed_Bloodmoon.TotemTypeDef>
