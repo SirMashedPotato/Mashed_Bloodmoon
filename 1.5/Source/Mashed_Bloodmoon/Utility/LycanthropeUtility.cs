@@ -19,6 +19,11 @@ namespace Mashed_Bloodmoon
             return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope) != null;
         }
 
+        internal static bool PawnIsFatigued(Pawn pawn)
+        {
+            return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue) != null;
+        }
+
         internal static bool PawnIsTransformedLycanthrope(Pawn pawn, bool includeDummy = false)
         {
             return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed) != null 
@@ -113,9 +118,8 @@ namespace Mashed_Bloodmoon
         internal static void ForceTransformation(Pawn pawn, Hediff dormantHediff)
         {
             pawn.health.RemoveHediff(dormantHediff);
-            pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope);
-            HediffComp_LycanthropeTransformed compTransformed = pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed).TryGetComp<HediffComp_LycanthropeTransformed>();
-            compTransformed.StartFury();
+            HediffComp_Lycanthrope compLycanthrope = pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
+            compLycanthrope.TransformPawn(true);
         }
 
         internal static void AddLinkedHediff(Pawn pawn, HediffDef hediffDef, BodyPartDef partDef)
@@ -129,6 +133,14 @@ namespace Mashed_Bloodmoon
                 }
             }
         }
+        internal static void RemoveLinkedHediff(Pawn pawn, HediffDef hediffDef)
+        {
+            Hediff hediff;
+            while ((hediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef)) != null)
+            {
+                pawn.health.RemoveHediff(hediff);
+            }
+        }
 
         internal static void MoveEquippedToInventory(Pawn pawn)
         {
@@ -138,15 +150,6 @@ namespace Mashed_Bloodmoon
                 {
                     pawn.equipment.TryTransferEquipmentToContainer(thing as ThingWithComps, pawn.inventory.innerContainer);
                 }
-            }
-        }
-
-        internal static void RemoveLinkedHediff(Pawn pawn, HediffDef hediffDef)
-        {
-            Hediff hediff;
-            while ((hediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef)) != null)
-            {
-                pawn.health.RemoveHediff(hediff);
             }
         }
     }

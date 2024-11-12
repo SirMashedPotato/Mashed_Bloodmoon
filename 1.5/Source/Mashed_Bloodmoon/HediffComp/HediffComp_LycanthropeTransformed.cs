@@ -114,6 +114,23 @@ namespace Mashed_Bloodmoon
                 }
                 usedTotem.Key.transformationWorker?.PostTransformationBegin(parent.pawn, usedTotem.Value);
             }
+
+            DoTransformationEffects();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void DoTransformationEffects()
+        {
+            GenExplosion.DoExplosion(parent.pawn.Position, parent.pawn.Map, 1.9f, DamageDefOf.Smoke, null, ignoredThings: new List<Thing> { parent.pawn });
+            Vector3 loc = parent.pawn.Position.ToVector3Shifted();
+            for (int i = 0; i < 4; i++)
+            {
+                FleckMaker.ThrowSmoke(loc, parent.pawn.Map, 1.5f);
+                FleckMaker.ThrowMicroSparks(loc, parent.pawn.Map);
+                FleckMaker.ThrowLightningGlow(loc, parent.pawn.Map, 1.5f);
+            }
         }
 
         /// <summary>

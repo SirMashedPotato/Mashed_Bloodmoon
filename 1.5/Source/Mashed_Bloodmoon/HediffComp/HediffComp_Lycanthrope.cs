@@ -31,13 +31,18 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
-        public void TransformPawn()
+        public void TransformPawn(bool startInFury = false)
         {
-            parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
+            Hediff transformed = parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
             if (!parent.Visible)
             {
                 parent.Severity = 0.5f;
                 ///TODO Letter/message
+            }
+            if (startInFury)
+            {
+                HediffComp_LycanthropeTransformed compTransformed = transformed.TryGetComp<HediffComp_LycanthropeTransformed>();
+                compTransformed.StartFury();
             }
         }
 
@@ -99,7 +104,6 @@ namespace Mashed_Bloodmoon
                         Find.WindowStack.Add(page);
                     },
                 };
-
                 yield return new Command_Action
                 {
                     defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
