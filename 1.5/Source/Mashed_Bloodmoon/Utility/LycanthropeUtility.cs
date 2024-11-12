@@ -9,6 +9,11 @@ namespace Mashed_Bloodmoon
         internal static readonly float lycanthropeStressToTicks = GenDate.TicksPerHour * 0.3f;
         internal static readonly int lycanthropeStressRate = GenDate.TicksPerHour / 10;
 
+        internal static bool IsNight(Pawn pawn)
+        {
+            return (GenLocalDate.HourInteger(pawn) >= 23 || GenLocalDate.HourInteger(pawn) <= 5);
+        }
+
         internal static bool PawnCanTransform(Pawn pawn)
         {
             return !PawnIsTransformedLycanthrope(pawn) && pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue) == null;

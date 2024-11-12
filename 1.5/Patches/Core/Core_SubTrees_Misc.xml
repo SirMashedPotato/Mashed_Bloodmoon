@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+	<!-- ==========[MentalStateCritical]==========-->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
 		<value>
@@ -12,6 +13,24 @@
 							<li Class="JobGiver_WanderAnywhere">
 								<maxDanger>Deadly</maxDanger>
 							</li>
+						</subNodes>
+					</li>
+				</subNodes>
+			</li>
+		</value>
+	</Operation>
+	<!-- ==========[MainWildManBehaviorCore]==========-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThinkTreeDef[defName="MainWildManBehaviorCore"]/thinkRoot/subNodes</xpath>
+		<value>
+			<li Class="ThinkNode_ChancePerHour_Constant">
+				<mtbHours>16</mtbHours>
+				<subNodes>
+					<li Class="Mashed_Bloodmoon.ThinkNode_Lycanthrope">
+						<onlyIfCanTransform>true</onlyIfCanTransform>
+						<onlyNight>true</onlyNight>
+						<subNodes>
+							<li Class="Mashed_Bloodmoon.JobGiver_NightTransformation"/>
 						</subNodes>
 					</li>
 				</subNodes>
