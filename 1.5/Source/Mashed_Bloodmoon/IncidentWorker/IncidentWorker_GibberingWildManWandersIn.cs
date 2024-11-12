@@ -5,6 +5,8 @@ namespace Mashed_Bloodmoon
 {
     public class IncidentWorker_GibberingWildManWandersIn : IncidentWorker_WildManWandersIn
     {
+        IntRange consumedHeartsRange = new IntRange(10,30);
+
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
@@ -24,7 +26,10 @@ namespace Mashed_Bloodmoon
                 allowFood: false));
 
             pawn.SetFaction(null);
+
             pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).Severity = 0.1f;
+            LycanthropeUtility.UseTotem(pawn, TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts, consumedHeartsRange.RandomInRange);
+
             GenSpawn.Spawn(pawn, cell, map);
 
             TaggedString taggedString = pawn.kindDef.GetLabelGendered(pawn.gender);

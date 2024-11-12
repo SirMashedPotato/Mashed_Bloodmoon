@@ -87,6 +87,11 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(hediff);
         }
 
+        public static void UseTotem(Pawn pawn, TotemTypeDef totemTypeDef, int usedCount)
+        {
+            UseTotem(GetCompLycanthrope(pawn), totemTypeDef, usedCount);
+        }
+
         public static void UseTotem(HediffComp_Lycanthrope compLycanthrope, TotemTypeDef totemTypeDef, int usedCount)
         {
             if (!compLycanthrope.usedTotemTracker.ContainsKey(totemTypeDef))
@@ -94,7 +99,6 @@ namespace Mashed_Bloodmoon
                 compLycanthrope.usedTotemTracker.Add(totemTypeDef, 0);
             }
             compLycanthrope.usedTotemTracker[totemTypeDef] += usedCount;
-
         }
 
         public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus, bool ignoreTransformed = false)
