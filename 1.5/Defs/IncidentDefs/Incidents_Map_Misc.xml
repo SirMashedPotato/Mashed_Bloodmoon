@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LostWandererJoin]==========-->
+	<IncidentDef>
+		<defName>Mashed_Bloodmoon_LostWandererJoin</defName>
+		<label>lost wanderer join</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest</workerClass>
+		<questScriptDef>Mashed_Bloodmoon_LostWandererJoin</questScriptDef>
+		<baseChance>0.3</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+	</IncidentDef>
+</Defs>
