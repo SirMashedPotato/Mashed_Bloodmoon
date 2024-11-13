@@ -99,7 +99,6 @@
     <Compile Include="HediffComp\Properties\HediffCompProperties_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SilverWeakness.cs" />
-    <Compile Include="IncidentWorker\IncidentWorker_GibberingWildManWandersIn.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
@@ -143,6 +142,8 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IncidentWorker\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

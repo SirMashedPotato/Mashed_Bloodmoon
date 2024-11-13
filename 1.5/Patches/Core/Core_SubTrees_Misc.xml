@@ -19,22 +19,4 @@
 			</li>
 		</value>
 	</Operation>
-	<!-- ==========[MainWildManBehaviorCore]==========-->
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThinkTreeDef[defName="MainWildManBehaviorCore"]/thinkRoot/subNodes</xpath>
-		<value>
-			<li Class="ThinkNode_ChancePerHour_Constant">
-				<mtbHours>16</mtbHours>
-				<subNodes>
-					<li Class="Mashed_Bloodmoon.ThinkNode_Lycanthrope">
-						<onlyIfCanTransform>true</onlyIfCanTransform>
-						<onlyNight>true</onlyNight>
-						<subNodes>
-							<li Class="Mashed_Bloodmoon.JobGiver_NightTransformation"/>
-						</subNodes>
-					</li>
-				</subNodes>
-			</li>
-		</value>
-	</Operation>
 </Patch>

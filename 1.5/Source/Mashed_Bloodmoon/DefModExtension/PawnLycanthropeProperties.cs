@@ -6,7 +6,6 @@ namespace Mashed_Bloodmoon
     public class PawnLycanthropeProperties : DefModExtension
     {
         public float chance = 1f;
-        public bool startHidden = false;
         public LycanthropeTypeDef forcedTypeDef;
         public List<PawnTotemRecord> startingTotemCounts;
 

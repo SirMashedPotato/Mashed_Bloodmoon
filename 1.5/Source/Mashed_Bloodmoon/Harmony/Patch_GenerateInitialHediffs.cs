@@ -20,11 +20,6 @@ namespace Mashed_Bloodmoon
                     pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope);
                 }
 
-                if (props.startHidden)
-                {
-                    LycanthropeUtility.GetLycanthropeHediff(pawn).Severity = 0.1f;
-                }
-
                 HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
 
                 if (props.forcedTypeDef != null)
