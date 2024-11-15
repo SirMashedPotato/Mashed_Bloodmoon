@@ -27,6 +27,19 @@
 		<increasePerLevel>0.01</increasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.TotemTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
+	<Mashed_Bloodmoon.TotemTypeDef>
+		<defName>Mashed_Bloodmoon_TotemGuile</defName>
+		<label>Huntsman's totem (Guile)</label>
+		<labelShort>totem (Guile)</labelShort>
+		<totemThingDef>Mashed_Bloodmoon_TotemGuile</totemThingDef>
+		<statDefs>
+			<li>MeleeDodgeChance</li>
+		</statDefs>
+		<useLimit>100</useLimit>
+		<increasePerLevel>0.005</increasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
 	<Mashed_Bloodmoon.TotemTypeDef MayRequire="ludeon.rimworld.ideology">
 		<defName>Mashed_Bloodmoon_TotemSight</defName>
