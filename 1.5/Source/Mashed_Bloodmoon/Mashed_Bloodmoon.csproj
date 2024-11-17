@@ -131,6 +131,7 @@
     <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
     <Compile Include="StatPart\StatPart_LycanthropeTotems.cs" />
     <Compile Include="ThingClass\Gas_Wolfsbane.cs" />
+    <Compile Include="ThingClass\Gas_Wolfsblood.cs" />
     <Compile Include="ThinkNode\ThinkNode_Lycanthrope.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptIsLycanthrope.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />

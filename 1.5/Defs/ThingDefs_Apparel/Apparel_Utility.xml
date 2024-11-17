@@ -51,7 +51,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
 		<defName>Mashed_Bloodmoon_BeltWolfsbaneVessel</defName>
 		<label>wolfsbane vessel belt</label>
-		<description>A belt with several glass vessels attached to it, each one filled with a wolfsbane mixture. The vessels can be thrown, releasing a cloud of wolfsbane gas upon impact. Any transformed lycanthropes caught within will be forced to breathe in the wolfsbane gas, causing gradual toxic buildup.</description>
+		<description>A belt with several glass vessels attached to it, each one filled with a wolfsbane mixture. The vessels can be thrown, releasing a cloud of wolfsbane mist upon impact. Any transformed lycanthropes caught within will be forced to breathe in the wolfsbane mist, causing toxic buildup.</description>
 		<comps>
 			<li Class="CompProperties_ApparelReloadable">
 				<maxCharges>3</maxCharges>
@@ -110,6 +110,71 @@
 			<damageDef>Smoke</damageDef>
 			<!-- Use default damage from explosion def -->
 			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasWolfsbane</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltWolfsbloodVessel]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltWolfsbloodVessel</defName>
+		<label>wolfsblood vessel belt</label>
+		<description>A belt with several glass vessels attached to it, each one filled with a wolfsblood mixture. The vessels can be thrown, releasing a cloud of wolfsblood mist upon impact. Any transformed lycanthropes caught within will breathe in the wolfsblood mist, reducing bloodloss.</description>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>Mashed_Bloodmoon_PotionWolfsblood</ammoDef>
+				<ammoCountToRefill>3</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_MolotovCocktail</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>vessel</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw vessel</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Mashed_Bloodmoon_WolfsbloodVesselThrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Wolfsblood</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_PotionWolfsblood>3</Mashed_Bloodmoon_PotionWolfsblood>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltWolfsbloodVessel</texPath>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbloodVesselThrown]==========-->
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Mashed_Bloodmoon_WolfsbloodVesselThrown</defName>
+		<label>wolfsblood vessel</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_WolfsbloodVesselThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Smoke</damageDef>
+			<!-- Use default damage from explosion def -->
+			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasWolfsblood</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
 </Defs>

@@ -19,10 +19,22 @@
 	<!-- ==========[Mashed_Bloodmoon_GasWolfsbane]========== -->
 	<ThingDef ParentName="Mashed_Bloodmoon_GasBase">
 		<defName>Mashed_Bloodmoon_GasWolfsbane</defName>
-		<label>wolfsbane gas cloud</label>
+		<label>wolfsbane mist cloud</label>
 		<thingClass>Mashed_Bloodmoon.Gas_Wolfsbane</thingClass>
 		<graphicData>
 			<color>(115,83,156,50)</color>
+		</graphicData>
+		<gas>
+			<expireSeconds>16~32</expireSeconds>
+		</gas>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_GasWolfsblood]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_GasBase">
+		<defName>Mashed_Bloodmoon_GasWolfsblood</defName>
+		<label>wolfsblood mist cloud</label>
+		<thingClass>Mashed_Bloodmoon.Gas_Wolfsblood</thingClass>
+		<graphicData>
+			<color>(151,50,57,50)</color>
 		</graphicData>
 		<gas>
 			<expireSeconds>16~32</expireSeconds>
