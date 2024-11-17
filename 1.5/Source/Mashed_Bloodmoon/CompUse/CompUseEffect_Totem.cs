@@ -14,7 +14,7 @@ namespace Mashed_Bloodmoon
         public override void DoEffect(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            LycanthropeUtility.UseTotem(compLycanthrope, Props.totemTypeDef, Props.usedCount);
+            Props.totemTypeDef.UseTotem(compLycanthrope, Props.usedCount);
         }
 
         public override AcceptanceReport CanBeUsedBy(Pawn pawn)

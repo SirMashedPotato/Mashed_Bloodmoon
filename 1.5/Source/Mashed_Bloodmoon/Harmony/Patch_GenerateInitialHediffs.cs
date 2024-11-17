@@ -35,7 +35,7 @@ namespace Mashed_Bloodmoon
                         int value = pawnTotemRecord.startingCountRange.RandomInRange;
                         if (value > 0)
                         {
-                            LycanthropeUtility.UseTotem(compLycanthrope, pawnTotemRecord.totemTypeDef, value);
+                            pawnTotemRecord.totemTypeDef.UseTotem(compLycanthrope, value);
                         }
                     }
                 }

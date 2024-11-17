@@ -134,7 +134,7 @@ namespace Mashed_Bloodmoon
                     + usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts];
                 foreach (StatDef statDef in TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.statDefs)
                 {
-                    LycanthropeUtility.TotemStatBonus(parent.pawn, TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts, out float bonus, true);
+                    TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.TotemStatBonus(parent.pawn, out float bonus, true);
                     description += "\n  - " + statDef.LabelCap + ": +" + bonus;
                 }
 
@@ -149,7 +149,7 @@ namespace Mashed_Bloodmoon
                         {
                             foreach (StatDef statDef in usedTotem.Key.statDefs)
                             {
-                                LycanthropeUtility.TotemStatBonus(parent.pawn, usedTotem.Key, out float bonus, true);
+                                usedTotem.Key.TotemStatBonus(parent.pawn, out float bonus, true);
                                 description += "\n    - " + statDef.LabelCap + ": ";
                                 if (bonus > 0)
                                 {

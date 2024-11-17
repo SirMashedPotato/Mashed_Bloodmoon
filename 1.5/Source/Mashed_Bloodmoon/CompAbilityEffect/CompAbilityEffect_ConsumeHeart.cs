@@ -28,8 +28,8 @@ namespace Mashed_Bloodmoon
                 LycanthropeUtility.TransferTotems(parent.pawn, targetPawn);
                 targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
             }
-            
-            LycanthropeUtility.UseTotem(parent.pawn, TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts, 1);
+
+            TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
             HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);
             comp_LycanthropeTransformed.StressMax += 1;
             parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_HeartsConsumed);

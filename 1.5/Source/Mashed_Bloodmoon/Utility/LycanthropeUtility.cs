@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
@@ -95,58 +94,22 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(hediff);
         }
 
-        public static void TransferTotems(Pawn pawn, Pawn victim)
+        /// <summary>
+        /// Utility method for transferring totems from one lyacnthrope to another
+        /// </summary>
+        internal static void TransferTotems(Pawn pawn, Pawn victim)
         {
-            HediffComp_Lycanthrope victimCompLycanthrope = GetCompLycanthrope(victim);
+            HediffComp_Lycanthrope victimCompLycanthrope = LycanthropeUtility.GetCompLycanthrope(victim);
             if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
             {
                 foreach (KeyValuePair<TotemTypeDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
                 {
                     if (usedTotem.Key.canBeTransferred)
                     {
-                        UseTotem(pawn, usedTotem.Key, (int)(usedTotem.Value * totemTransferPercent));
+                        usedTotem.Key.UseTotem(pawn, (int)(usedTotem.Value * totemTransferPercent));
                     }
                 }
             }
-        }
-
-        public static void UseTotem(Pawn pawn, TotemTypeDef totemTypeDef, int usedCount)
-        {
-            UseTotem(GetCompLycanthrope(pawn), totemTypeDef, usedCount);
-        }
-
-        public static void UseTotem(HediffComp_Lycanthrope compLycanthrope, TotemTypeDef totemTypeDef, int usedCount)
-        {
-            if (!compLycanthrope.usedTotemTracker.ContainsKey(totemTypeDef))
-            {
-                compLycanthrope.usedTotemTracker.Add(totemTypeDef, 0);
-            }
-            int finalCount = Mathf.Clamp(compLycanthrope.usedTotemTracker[totemTypeDef] + usedCount, 0, totemTypeDef.useLimit);
-            compLycanthrope.usedTotemTracker[totemTypeDef] = finalCount;
-        }
-
-        public static bool TotemStatBonus(Pawn pawn, TotemTypeDef totemTypeDef, out float bonus, bool ignoreTransformed = false)
-        {
-            bonus = 0;
-            if (totemTypeDef == null)
-            {
-                return false;
-            }
-            HediffComp_Lycanthrope compLycanthrope = GetCompLycanthrope(pawn);
-            if (compLycanthrope == null)
-            {
-                return false;
-            }
-            if (totemTypeDef.onlyTransformed && !PawnIsTransformedLycanthrope(pawn) && !ignoreTransformed)
-            {
-                return false;
-            }
-            if (compLycanthrope.usedTotemTracker.TryGetValue(totemTypeDef, out int usedCount))
-            {
-                bonus = usedCount * totemTypeDef.increasePerLevel;
-                return true;
-            }
-            return false;
         }
 
         internal static void ApplyLycanthropeDamage(Pawn pawn, float factor = 1f)
