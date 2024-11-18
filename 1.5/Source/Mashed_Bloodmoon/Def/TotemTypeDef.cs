@@ -57,8 +57,12 @@ namespace Mashed_Bloodmoon
             {
                 compLycanthrope.usedTotemTracker.Add(this, 0);
             }
-            int finalCount = Mathf.Clamp(compLycanthrope.usedTotemTracker[this] + usedCount, 0, useLimit);
-            compLycanthrope.usedTotemTracker[this] = finalCount;
+            int finalCount = Mathf.Clamp(usedCount, 0, useLimit - compLycanthrope.usedTotemTracker[this]);
+            if (finalCount > 0)
+            {
+                compLycanthrope.usedTotemTracker[this] += finalCount;
+                Messages.Message("Mashed_Bloodmoon_TotemLevelUp".Translate(compLycanthrope.parent.pawn, this, finalCount), compLycanthrope.parent.pawn, MessageTypeDefOf.PositiveEvent);
+            }
         }
 
         /// <summary>

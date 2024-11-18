@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -10,7 +11,7 @@ namespace Mashed_Bloodmoon
         {
             if (parent.Severity + severityAdjustment >= 1.0f && !parent.FullyImmune())
             {
-                ///TODO letter etc
+                Messages.Message("Mashed_Bloodmoon_SaniesLupinusTransitioned".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.ThreatSmall);
                 parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant);
                 parent.pawn.health.RemoveHediff(parent);
                 return;

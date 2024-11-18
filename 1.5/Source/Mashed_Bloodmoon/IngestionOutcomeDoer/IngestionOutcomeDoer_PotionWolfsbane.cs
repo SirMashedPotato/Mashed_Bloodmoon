@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -21,7 +22,7 @@ namespace Mashed_Bloodmoon
 
             if (Rand.Chance(0.1f))
             {
-                ///TODO utility method with letter etc
+                Messages.Message("Mashed_Bloodmoon_LycanthropeCured".Translate(pawn), pawn, MessageTypeDefOf.PositiveEvent);
                 pawn.health.RemoveHediff(hediff);
             }
         }

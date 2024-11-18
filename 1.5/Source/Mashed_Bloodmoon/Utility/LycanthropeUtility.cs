@@ -102,12 +102,19 @@ namespace Mashed_Bloodmoon
             HediffComp_Lycanthrope victimCompLycanthrope = GetCompLycanthrope(victim);
             if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
             {
+                int transferredTotemCount = 0;
                 foreach (KeyValuePair<TotemTypeDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
                 {
                     if (usedTotem.Key.canBeTransferred)
                     {
-                        usedTotem.Key.UseTotem(pawn, (int)(usedTotem.Value * totemTransferPercent));
+                        int count = (int)(usedTotem.Value * totemTransferPercent);
+                        transferredTotemCount += count;
+                        usedTotem.Key.UseTotem(pawn, count);
                     }
+                }
+                if (transferredTotemCount > 0)
+                {
+                    Messages.Message("Mashed_Bloodmoon_ConsumedTotemsTransferred".Translate(pawn, transferredTotemCount, victim), pawn, MessageTypeDefOf.PositiveEvent);
                 }
             }
         }
