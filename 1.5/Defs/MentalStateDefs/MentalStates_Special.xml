@@ -18,6 +18,5 @@
 		<recoveryMessage>{0}'s lycanthrope fury has come to an end.</recoveryMessage>
 		<baseInspectLine>Maddened: lycanthrope fury</baseInspectLine>
 		<stateEffecter>Berserk</stateEffecter>
-		<tale>Mashed_Bloodmoon_MentalStateLycanthropeFury</tale>
 	</MentalStateDef>
 </Defs>
