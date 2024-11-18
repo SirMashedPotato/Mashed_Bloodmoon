@@ -99,7 +99,7 @@ namespace Mashed_Bloodmoon
         /// </summary>
         internal static void TransferTotems(Pawn pawn, Pawn victim)
         {
-            HediffComp_Lycanthrope victimCompLycanthrope = LycanthropeUtility.GetCompLycanthrope(victim);
+            HediffComp_Lycanthrope victimCompLycanthrope = GetCompLycanthrope(victim);
             if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
             {
                 foreach (KeyValuePair<TotemTypeDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
