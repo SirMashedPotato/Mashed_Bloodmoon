@@ -2,8 +2,9 @@
 <LanguageData>
 	<!-- ==========[lycanthrope options gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeOptions_Label>lycanthrope options</Mashed_Bloodmoon_LycanthropeOptions_Label>
-	<Mashed_Bloodmoon_LycanthropeOptions_Desc>Access several options, such as customising {0_labelShort}'s' beast form, and vewing current totem levels.</Mashed_Bloodmoon_LycanthropeOptions_Desc>
+	<Mashed_Bloodmoon_LycanthropeOptions_Desc>Access several options, such as customising and upgrading {0_labelShort}'s' beast form.</Mashed_Bloodmoon_LycanthropeOptions_Desc>
 	<Mashed_Bloodmoon_CustomiseBeastForm>Customise beast form</Mashed_Bloodmoon_CustomiseBeastForm>
+	<Mashed_Bloodmoon_UpgradeBeastForm>Upgrade beast form</Mashed_Bloodmoon_UpgradeBeastForm>
 	<!-- ==========[Customise beast form window]==========-->
 	 <Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel>Primary colour:</Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel>
 	 <Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel>Secondary colour:</Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel>

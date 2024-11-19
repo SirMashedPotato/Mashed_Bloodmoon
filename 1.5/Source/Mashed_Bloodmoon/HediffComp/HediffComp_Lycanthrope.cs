@@ -105,6 +105,14 @@ namespace Mashed_Bloodmoon
                         Find.WindowStack.Add(page);
                     });
                     lycanthropeGizmoOptions.Add(item);
+
+                    ///Customise beast form
+                    item = new FloatMenuOption("Mashed_Bloodmoon_UpgradeBeastForm".Translate(), delegate
+                    {
+                        Page_UpgradeBeastForm page = new Page_UpgradeBeastForm(this);
+                        Find.WindowStack.Add(page);
+                    });
+                    lycanthropeGizmoOptions.Add(item);
                 }
                 return lycanthropeGizmoOptions;
             }
