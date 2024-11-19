@@ -28,6 +28,6 @@ namespace Mashed_Bloodmoon
                 }
             }
         }
-        public TotemTypeDef totemTypeDef;
+        public LycanthropeTotemDef totemTypeDef;
     }
 }

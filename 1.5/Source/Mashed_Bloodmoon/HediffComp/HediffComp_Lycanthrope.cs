@@ -14,7 +14,10 @@ namespace Mashed_Bloodmoon
         public Color secondaryColour = Color.white;
         public Color tertiaryColour = Color.white;
 
-        public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
+        public Dictionary<LycanthropeTotemDef, int> usedTotemTracker = new Dictionary<LycanthropeTotemDef, int>();
+        public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
+        public List<GreatBeastDef> greatBeastHeartTracker = new List<GreatBeastDef>();
+
         List<FloatMenuOption> lycanthropeGizmoOptions;
 
         public LycanthropeTypeDef LycanthropeTypeDef
@@ -57,10 +60,11 @@ namespace Mashed_Bloodmoon
             base.CompPostMake();
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
             ResetColours();
-            foreach (TotemTypeDef def in DefDatabase<TotemTypeDef>.AllDefs)
+            foreach (LycanthropeTotemDef def in DefDatabase<LycanthropeTotemDef>.AllDefs)
             {
                 usedTotemTracker.Add(def, 0);
             }
+            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart, 0);
         }
 
         /// <summary>
@@ -161,17 +165,17 @@ namespace Mashed_Bloodmoon
                 string description = "\n";
 
                 ///Consumed hearts
-                description += "\n" + TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.LabelCap + ": "
-                    + usedTotemTracker[TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts];
-                foreach (StatDef statDef in TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.statDefs)
+                description += "\n" + LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.LabelCap + ": "
+                    + usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts];
+                foreach (StatDef statDef in LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.statDefs)
                 {
-                    TotemTypeDefOf.Mashed_Bloodmoon_ConsumedHearts.TotemStatBonus(parent.pawn, out float bonus, true);
+                    LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.TotemStatBonus(parent.pawn, out float bonus, true);
                     description += "\n  - " + statDef.LabelCap + ": +" + bonus;
                 }
 
                 ///Totems
                 description += "Mashed_Bloodmoon_UsedTotems".Translate();
-                foreach (KeyValuePair<TotemTypeDef, int> usedTotem in usedTotemTracker)
+                foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in usedTotemTracker)
                 {
                     if (usedTotem.Key.displayAsTotem)
                     {
@@ -215,6 +219,8 @@ namespace Mashed_Bloodmoon
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);
             Scribe_Values.Look(ref tertiaryColour, "tertiaryColour", Color.white);
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
+            Scribe_Collections.Look(ref unlockedAbilityTracker, "unlockedAbilityTracker", LookMode.Def);
+            Scribe_Collections.Look(ref greatBeastHeartTracker, "greatBeastHeartTracker", LookMode.Def);
         }
     }
 }

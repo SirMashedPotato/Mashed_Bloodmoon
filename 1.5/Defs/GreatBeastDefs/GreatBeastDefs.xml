@@ -6,4 +6,22 @@
 		<label>thrumbo</label>
 		<thingDef>Thrumbo</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_Ogrim]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
+		<defName>Mashed_Bloodmoon_Ogrim</defName>
+		<label>ogrim</label>
+		<thingDef>Mashed_Ashlands_Ogrim</thingDef>
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_Grahl]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef MayRequire="escp.trolls">
+		<defName>Mashed_Bloodmoon_Grahl</defName>
+		<label>grahl</label>
+		<thingDef>ESCP_TrollGrahl</thingDef>
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef MayRequire="escp.trolls">
+		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
+		<label>udyrfrykte</label>
+		<thingDef>ESCP_TrollUdyrfrykte</thingDef>
+	</Mashed_Bloodmoon.GreatBeastDef>
 </Defs>

@@ -25,7 +25,7 @@ namespace Mashed_Bloodmoon
                 return "Mashed_Bloodmoon_NotLycanthrope".Translate(pawn);
             }
 
-            if (compLycanthrope.usedTotemTracker.TryGetValue(Props.totemTypeDef, out int usedCount) && usedCount >= Props.totemTypeDef.useLimit)
+            if (compLycanthrope.usedTotemTracker.TryGetValue(Props.totemTypeDef, out int usedCount) && usedCount >= Props.totemTypeDef.maxLevel)
             {
                 return "Mashed_Bloodmoon_TotemLimitReached".Translate(pawn, Props.totemTypeDef);
             }

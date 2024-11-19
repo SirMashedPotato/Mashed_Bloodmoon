@@ -5,7 +5,7 @@ namespace Mashed_Bloodmoon
 {
     public class PawnTotemRecord
     {
-        public TotemTypeDef totemTypeDef;
+        public LycanthropeTotemDef totemTypeDef;
         public IntRange startingCountRange;
 
         public void LoadDataFromXmlCustom(XmlNode xmlRoot)

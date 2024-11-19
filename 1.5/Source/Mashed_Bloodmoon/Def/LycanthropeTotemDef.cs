@@ -5,14 +5,15 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class TotemTypeDef : Def
+    public class LycanthropeTotemDef : Def
     {
         public string labelShort = "???";
         public ThingDef totemThingDef;
         public List<StatDef> statDefs;
         public AbilityDef abilityDef;
         public int abilityUnlocksAt = 10;
-        public int useLimit = 30;
+        public int maxLevel = 30;
+        public int purchaseHeartCost = 10;
         public float increasePerLevel = 1f;
         public bool onlyTransformed = true;
         public bool displayAsTotem = true;
@@ -49,6 +50,14 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
+        /// Utility method to check if the pawn can upgrade the ability
+        /// </summary>
+        public bool CanUpgrade(int curLevel)
+        {
+            return curLevel < maxLevel;
+        }
+
+        /// <summary>
         /// Utility method for using a totem def
         /// Adds the totem to the lycanthropes totem tracker if it is missing
         /// </summary>
@@ -58,7 +67,7 @@ namespace Mashed_Bloodmoon
             {
                 compLycanthrope.usedTotemTracker.Add(this, 0);
             }
-            int finalCount = Mathf.Clamp(usedCount, 0, useLimit - compLycanthrope.usedTotemTracker[this]);
+            int finalCount = Mathf.Clamp(usedCount, 0, maxLevel - compLycanthrope.usedTotemTracker[this]);
             if (finalCount > 0)
             {
                 compLycanthrope.usedTotemTracker[this] += finalCount;

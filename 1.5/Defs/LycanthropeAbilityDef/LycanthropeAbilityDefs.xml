@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_ConsumeHeart]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
+		<label>Consume heart</label>
+		<abilityDefs>
+			<li>Mashed_Bloodmoon_ConsumeHeart</li>
+		</abilityDefs>
+		<canBePurchased>false</canBePurchased>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+</Defs>

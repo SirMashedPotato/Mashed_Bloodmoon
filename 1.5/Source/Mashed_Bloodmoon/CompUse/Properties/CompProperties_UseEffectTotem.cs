@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
             compClass = typeof(CompUseEffect_Totem);
         }
 
-        public TotemTypeDef totemTypeDef;
+        public LycanthropeTotemDef totemTypeDef;
         public int usedCount = 1;
     }
 }

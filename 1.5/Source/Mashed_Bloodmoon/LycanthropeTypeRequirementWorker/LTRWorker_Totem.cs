@@ -24,7 +24,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public TotemTypeDef totemTypeDef;
+        public LycanthropeTotemDef totemTypeDef;
         public int usedCount = 1;
     }
 }

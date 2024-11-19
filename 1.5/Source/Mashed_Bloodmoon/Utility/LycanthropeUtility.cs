@@ -103,7 +103,7 @@ namespace Mashed_Bloodmoon
             if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
             {
                 int transferredTotemCount = 0;
-                foreach (KeyValuePair<TotemTypeDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
+                foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
                 {
                     if (usedTotem.Key.canBeTransferred)
                     {
