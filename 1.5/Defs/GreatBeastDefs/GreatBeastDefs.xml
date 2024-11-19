@@ -6,6 +6,12 @@
 		<label>thrumbo</label>
 		<thingDef>Thrumbo</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
+		<defName>Mashed_Bloodmoon_Daedroth</defName>
+		<label>daedroth</label>
+		<thingDef>Mashed_Ashlands_Daedroth</thingDef>
+	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Ogrim]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Ogrim</defName>
@@ -23,5 +29,11 @@
 		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
 		<label>udyrfrykte</label>
 		<thingDef>ESCP_TrollUdyrfrykte</thingDef>
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_Test]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef>
+		<defName>Mashed_Bloodmoon_Test</defName>
+		<label>rat</label>
+		<thingDef>Rat</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 </Defs>

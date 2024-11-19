@@ -18,5 +18,15 @@ namespace Mashed_Bloodmoon
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
         }
+
+        public void DoLeftSide(Rect inRect)
+        {
+
+        }
+
+        public void DoRightSide(Rect inRect)
+        {
+
+        }
     }
 }
