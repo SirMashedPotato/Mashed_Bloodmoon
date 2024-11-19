@@ -117,6 +117,14 @@ namespace Mashed_Bloodmoon
                         Find.WindowStack.Add(page);
                     });
                     lycanthropeGizmoOptions.Add(item);
+
+                    ///Customise beast form
+                    item = new FloatMenuOption("Mashed_Bloodmoon_GreatBeastHunt".Translate(), delegate
+                    {
+                        Page_GreatBeastHunt page = new Page_GreatBeastHunt(this);
+                        Find.WindowStack.Add(page);
+                    });
+                    lycanthropeGizmoOptions.Add(item);
                 }
                 return lycanthropeGizmoOptions;
             }
