@@ -29,6 +29,9 @@ namespace Mashed_Bloodmoon
                 targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
             }
 
+            GreatBeastDef greatBeastDef = DefDatabase<GreatBeastDef>.AllDefsListForReading.Where(x => x.thingDef == targetPawn.def).First();
+            greatBeastDef?.ConsumeGreatBeastHeart(parent.pawn);
+
             LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
             HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);
             comp_LycanthropeTransformed.StressMax += 1;

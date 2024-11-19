@@ -107,6 +107,7 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
     <Compile Include="JobGiver\JobGiver_LycanthropeFury.cs" />
     <Compile Include="JobGiver\JobGiver_NightTransformation.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_GreatBeast.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Totem.cs" />
     <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddAbility.cs" />

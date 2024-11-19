@@ -26,6 +26,7 @@
 	 <Mashed_Bloodmoon_LTR_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_LTR_InvalidRecord>
 	 <Mashed_Bloodmoon_LTR_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_LTR_InvalidSkill>
 	 <Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
+	 <Mashed_Bloodmoon_LTR_InvalidGreatBeast>has not consumed the heart of a {0_label}</Mashed_Bloodmoon_LTR_InvalidGreatBeast>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
@@ -48,6 +49,7 @@
 	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
 	<Mashed_Bloodmoon_TotemLevelUp>{0_labelShort} has increased their {1_label} level by {2}</Mashed_Bloodmoon_TotemLevelUp>
 	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
+	<Mashed_Bloodmoon_ConsumedGreatBeastHeart>{0_labelShort} has consumed the heart of a great beast ({1_label})</Mashed_Bloodmoon_ConsumedGreatBeastHeart>
 	<!-- ==========[misc]==========-->
 	<Mashed_Bloodmoon_LycanthropeCantDo>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantDo>
 	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>
