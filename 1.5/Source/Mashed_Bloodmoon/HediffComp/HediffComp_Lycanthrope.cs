@@ -15,6 +15,7 @@ namespace Mashed_Bloodmoon
         public Color tertiaryColour = Color.white;
 
         public Dictionary<TotemTypeDef, int> usedTotemTracker = new Dictionary<TotemTypeDef, int>();
+        List<FloatMenuOption> lycanthropeGizmoOptions;
 
         public LycanthropeTypeDef LycanthropeTypeDef
         {
@@ -89,19 +90,41 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
+        private List<FloatMenuOption> LycanthropeGizmoOptions
+        {
+            get
+            {
+                if (lycanthropeGizmoOptions.NullOrEmpty())
+                {
+                    lycanthropeGizmoOptions = new List<FloatMenuOption>();
+
+                    ///Customise beast form
+                    FloatMenuOption item = new FloatMenuOption("Mashed_Bloodmoon_CustomiseBeastForm".Translate(), delegate
+                    {
+                        Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
+                        Find.WindowStack.Add(page);
+                    });
+                    lycanthropeGizmoOptions.Add(item);
+                }
+                return lycanthropeGizmoOptions;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
             if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
             {
                 yield return new Command_Action
                 {
-                    defaultLabel = "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate(),
-                    defaultDesc = "Mashed_Bloodmoon_CustomiseBeastForm_Desc".Translate(parent.pawn, lycanthropeTypeDef, primaryColour.ToString(), secondaryColour.ToString(), tertiaryColour.ToString()),
-                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_CustomiseLycanthrope", true),
+                    defaultLabel = "Mashed_Bloodmoon_LycanthropeOptions_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_LycanthropeOptions_Desc".Translate(parent.pawn),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions", true),
                     action = delegate ()
                     {
-                        Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
-                        Find.WindowStack.Add(page);
+                        Find.WindowStack.Add(new FloatMenu(LycanthropeGizmoOptions));
                     },
                 };
                 yield return new Command_Action

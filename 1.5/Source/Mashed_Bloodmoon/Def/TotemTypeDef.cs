@@ -17,6 +17,7 @@ namespace Mashed_Bloodmoon
         public bool onlyTransformed = true;
         public bool displayAsTotem = true;
         public bool canBeTransferred = true;
+        public bool canBePurchased = true;
         public LycanthropeTypeTransformationWorker transformationWorker;
 
         public string LabelShortCap => labelShort.CapitalizeFirst();

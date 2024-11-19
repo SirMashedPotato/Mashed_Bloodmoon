@@ -6,10 +6,9 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class Page_CustomiseBeastForm : Page
+    public class Page_CustomiseBeastForm : LycanthropePage
     {
-        HediffComp_Lycanthrope compLycanthrope;
-        Pawn pawn;
+        const float pawnZoom = 0.9f;
         Rot4 pawnRotation = new Rot4(2);
 
         ///Cached values
@@ -18,26 +17,17 @@ namespace Mashed_Bloodmoon
         Color originalSecondaryColour;
         Color originalTertiaryColour;
 
-        const float rectPadding = 12f;
-        const float rectLimitY = 45f;
-        const float pawnZoom = 0.9f;
-
         List<FloatMenuOption> lycanthropeTypeOptions;
 
-        public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm_Label".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
+        public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
-        public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) 
+        public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
-            compLycanthrope = comp;
-            pawn = comp.parent.pawn;
-
             originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
             originalPrimaryColour = compLycanthrope.primaryColour;
             originalSecondaryColour = compLycanthrope.secondaryColour;
             originalTertiaryColour = compLycanthrope.tertiaryColour;
-
             Reset();
-
             lycanthropeTypeOptions = CacheLycanthropeTypeOptions();
         }
 

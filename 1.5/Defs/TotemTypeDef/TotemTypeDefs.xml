@@ -13,6 +13,7 @@
 		<onlyTransformed>false</onlyTransformed>
 		<displayAsTotem>false</displayAsTotem>
 		<canBeTransferred>false</canBeTransferred>
+		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.TotemTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemEndurance]========== -->
 	<Mashed_Bloodmoon.TotemTypeDef>

@@ -82,6 +82,7 @@
     <Compile Include="DefOf\StatDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefof.cs" />
     <Compile Include="DefOf\TotemTypeDefOf.cs" />
+    <Compile Include="Def\GreatBeastDef.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
     <Compile Include="Def\TotemTypeDef.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Trait.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
+    <Compile Include="Page\LycanthropePage.cs" />
     <Compile Include="Page\Page_CustomiseBeastForm.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_Lycanthrope.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropePrimaryColor.cs" />
