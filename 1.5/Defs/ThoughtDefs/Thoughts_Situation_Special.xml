@@ -7,7 +7,7 @@
 		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>
-				<label>great beasts hunted</label>
+				<label>great beasts hunted x{0}</label>
 				<description>I have proven my worth to The Huntsman by consuming the heart of a great beast!</description>
 				<baseMoodEffect>1</baseMoodEffect>
 			</li>

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -20,12 +21,22 @@ namespace Mashed_Bloodmoon
                 return ThoughtState.Inactive;
             }
 
-            return ThoughtState.ActiveDefault;
+            int count = CompletedCount(p);
+            if (count > 0)
+            {
+                return ThoughtState.ActiveAtStage(0, count.ToString());
+            }
+            return ThoughtState.Inactive;
         }
 
         public override float MoodMultiplier(Pawn p)
         {
-            return LycanthropeUtility.GetCompLycanthrope(p).greatBeastHeartTracker.Count;
+            return CompletedCount(p);
+        }
+
+        public int CompletedCount(Pawn p)
+        {
+            return LycanthropeUtility.GetCompLycanthrope(p).greatBeastHeartTracker.Where(x => x.Key.Completed(x.Value)).Count();
         }
     }
 }
