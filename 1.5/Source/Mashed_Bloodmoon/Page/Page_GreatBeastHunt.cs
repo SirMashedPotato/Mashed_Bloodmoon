@@ -75,13 +75,10 @@ namespace Mashed_Bloodmoon
         public void DoRowRightRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
             Widgets.DrawMenuSection(inRect);
+            GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
             if (compLycanthrope.greatBeastHeartTracker.Contains(greatBeastDef))
             {
-                GUI.DrawTexture(inRect, consumedTexture);
-            }
-            else
-            {
-                GUI.DrawTexture(inRect, heartTexture);
+                GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
             }
         }
     }

@@ -117,6 +117,10 @@ namespace Mashed_Bloodmoon
             {
                 parent.pawn.abilities.GainAbility(unlockedAbility.Key.abilityDefs[unlockedAbility.Value]);
             }
+            foreach(GreatBeastDef greatBeastDef in CompLycanthrope.greatBeastHeartTracker)
+            {
+                greatBeastDef.transformationWorker?.PostTransformationBegin(parent.pawn);
+            }
 
             DoTransformationEffects();
         }
@@ -158,6 +162,10 @@ namespace Mashed_Bloodmoon
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
                 parent.pawn.abilities.RemoveAbility(unlockedAbility.Key.abilityDefs[unlockedAbility.Value]);
+            }
+            foreach (GreatBeastDef greatBeastDef in CompLycanthrope.greatBeastHeartTracker)
+            {
+                greatBeastDef.transformationWorker?.PostTransformationEnd(parent.pawn);
             }
             int fatigueDuration = CurrentFatigueDuration();
             if (inFury)

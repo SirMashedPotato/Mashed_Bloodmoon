@@ -7,6 +7,11 @@ namespace Mashed_Bloodmoon
     public class GreatBeastDef : Def
     {
         public ThingDef thingDef;
+        public LycanthropeTypeTransformationWorker transformationWorker;
+        [NoTranslate]
+        public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeart";
+        [NoTranslate]
+        public string consumedTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeartConsumed";
 
         public override IEnumerable<string> ConfigErrors()
         {
@@ -18,6 +23,14 @@ namespace Mashed_Bloodmoon
             if (thingDef == null)
             {
                 yield return "null thingDef";
+            }
+
+            if (transformationWorker != null)
+            {
+                foreach (string item in transformationWorker.ConfigErrors())
+                {
+                    yield return item;
+                }
             }
         }
 
