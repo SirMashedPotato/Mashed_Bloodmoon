@@ -144,6 +144,7 @@
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
     <Compile Include="Def\LycanthropeGraphicData.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_GreatBeastHunt.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
     <Compile Include="DefModExtension\PawnTotemRecord.cs" />
   </ItemGroup>

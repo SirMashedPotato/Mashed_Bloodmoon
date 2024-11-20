@@ -4,36 +4,35 @@
 	<Mashed_Bloodmoon.GreatBeastDef>
 		<defName>Mashed_Bloodmoon_Thrumbo</defName>
 		<label>thrumbo</label>
+		<description>Unlocks the werethrumbo beast form.</description>
 		<thingDef>Thrumbo</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Daedroth</defName>
 		<label>daedroth</label>
+		<description>Unlocks the daedroth beast form.</description>
 		<thingDef>Mashed_Ashlands_Daedroth</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Ogrim]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Ogrim</defName>
 		<label>ogrim</label>
+		<description>Unlocks the ogrim beast form.</description>
 		<thingDef>Mashed_Ashlands_Ogrim</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Grahl]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="escp.trolls">
 		<defName>Mashed_Bloodmoon_Grahl</defName>
 		<label>grahl</label>
+		<description>Unlocks the grahl beast form.</description>
 		<thingDef>ESCP_TrollGrahl</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="escp.trolls">
 		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
 		<label>udyrfrykte</label>
+		<description>Unlocks the udyrfrykte beast form.</description>
 		<thingDef>ESCP_TrollUdyrfrykte</thingDef>
-	</Mashed_Bloodmoon.GreatBeastDef>
-	<!-- ==========[Mashed_Bloodmoon_Test]========== -->
-	<Mashed_Bloodmoon.GreatBeastDef>
-		<defName>Mashed_Bloodmoon_Test</defName>
-		<label>rat</label>
-		<thingDef>Rat</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 </Defs>

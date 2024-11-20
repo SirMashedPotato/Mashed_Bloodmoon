@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
 {
+    [StaticConstructorOnStartup]
     public class Page_GreatBeastHunt : LycanthropePage
     {
         public static readonly Vector2 PageSize = new Vector2(512f, 764f);
@@ -11,6 +13,9 @@ namespace Mashed_Bloodmoon
         public float innerRectHeight;
         private List<GreatBeastDef> greatBeastList;
         private static Vector2 scrollPosition = Vector2.zero;
+
+        private static Texture2D heartTexture = ContentFinder<Texture2D>.Get("UI/Icons/Mashed_Bloodmoon_GreatBeastHeart");
+        private static Texture2D consumedTexture = ContentFinder<Texture2D>.Get("UI/Icons/Mashed_Bloodmoon_GreatBeastHeartConsumed");
 
         public override string PageTitle => "Mashed_Bloodmoon_GreatBeastHunt".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
@@ -25,6 +30,8 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_GreatBeastHuntDesc".Translate(pawn));
+
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
             inRect.height -= rectLimitY;
@@ -41,17 +48,41 @@ namespace Mashed_Bloodmoon
                 Rect greatBeastRect = innerRect;
                 greatBeastRect.height = rowHeight;
                 greatBeastRect.y += (((rectPadding / 2f) + rowHeight) * index);
-                DoGreatBeastRow(greatBeastRect);
+                DoGreatBeastRow(greatBeastRect, greatBeastDef);
                 index++;
             }
-            //Widgets.DrawMenuSection(innerRect);
             Widgets.EndScrollView();
 
         }
 
-        public void DoGreatBeastRow(Rect inRect)
+        public void DoGreatBeastRow(Rect inRect, GreatBeastDef greatBeastDef)
+        {
+            Rect rightRect = inRect;
+            Rect leftRect = inRect;
+            rightRect.width = rightRect.height;
+            leftRect.width -= rightRect.width + (rectPadding / 2f);
+            rightRect.x += leftRect.width + (rectPadding / 2f);
+
+            DoRowLeftRect(leftRect, greatBeastDef);
+            DoRowRightRect(rightRect, greatBeastDef);
+        }
+
+        public void DoRowLeftRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
             Widgets.DrawMenuSection(inRect);
+        }
+
+        public void DoRowRightRect(Rect inRect, GreatBeastDef greatBeastDef)
+        {
+            Widgets.DrawMenuSection(inRect);
+            if (compLycanthrope.greatBeastHeartTracker.Contains(greatBeastDef))
+            {
+                GUI.DrawTexture(inRect, consumedTexture);
+            }
+            else
+            {
+                GUI.DrawTexture(inRect, heartTexture);
+            }
         }
     }
 }
