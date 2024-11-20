@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
 
         public Dictionary<LycanthropeTotemDef, int> usedTotemTracker = new Dictionary<LycanthropeTotemDef, int>();
         public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
-        public List<GreatBeastDef> greatBeastHeartTracker = new List<GreatBeastDef>();
+        public Dictionary<GreatBeastDef, int> greatBeastHeartTracker = new Dictionary<GreatBeastDef, int>();
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
 

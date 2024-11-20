@@ -7,6 +7,14 @@
 		<description>Consume the heart of a thrumbo.</description>
 		<thingDef>Thrumbo</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolves]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolves</defName>
+		<label>great beast hunt: Hounds</label>
+		<description>Consume the hearts of 30 feral werewolves.</description>
+		<thingDef>Rat</thingDef>
+		<consumeCount>30</consumeCount>
+	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Daedroth</defName>

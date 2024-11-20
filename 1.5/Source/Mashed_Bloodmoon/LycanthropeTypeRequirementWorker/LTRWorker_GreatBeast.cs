@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            if (compLycanthrope.greatBeastHeartTracker.Contains(greatBeastDef))
+            if (compLycanthrope.greatBeastHeartTracker.TryGetValue(greatBeastDef, out int currentUsedCount) && currentUsedCount >= greatBeastDef.consumeCount)
             {
                 return true;
             }

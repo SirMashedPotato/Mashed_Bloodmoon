@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -7,6 +8,7 @@ namespace Mashed_Bloodmoon
     public class GreatBeastDef : Def
     {
         public ThingDef thingDef;
+        public int consumeCount = 1;
         public LycanthropeTypeTransformationWorker transformationWorker;
         [NoTranslate]
         public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeart";
@@ -34,19 +36,40 @@ namespace Mashed_Bloodmoon
             }
         }
 
+        public bool Completed(int currentCount)
+        {
+            return currentCount >= consumeCount;
+        }
+
         /// <summary>
         /// Utility method for consuming a great beast heart
         /// </summary>
-        public bool ConsumeGreatBeastHeart(Pawn pawn)
+        public void ConsumeGreatBeastHeart(Pawn pawn)
         {
-            HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            if (!compLycanthrope.greatBeastHeartTracker.Contains(this))
+            ConsumeGreatBeastHeart(LycanthropeUtility.GetCompLycanthrope(pawn), pawn);
+        }
+
+        /// <summary>
+        /// Utility method for consuming a great beast heart
+        /// </summary>
+        public void ConsumeGreatBeastHeart(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
+        {
+            if (!compLycanthrope.greatBeastHeartTracker.ContainsKey(this))
             {
-                compLycanthrope.greatBeastHeartTracker.Add(this);
-                Messages.Message("Mashed_Bloodmoon_ConsumedGreatBeastHeart".Translate(pawn, thingDef), pawn, MessageTypeDefOf.PositiveEvent);
-                return true;
+                compLycanthrope.greatBeastHeartTracker.Add(this, 0);
             }
-            return false;
+
+            if (Completed(compLycanthrope.greatBeastHeartTracker[this]))
+            {
+                return;
+            }
+
+            compLycanthrope.greatBeastHeartTracker[this]++;
+
+            if (Completed(compLycanthrope.greatBeastHeartTracker[this]))
+            {
+                Messages.Message("Mashed_Bloodmoon_GreatBeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
+            }
         }
     }
 }

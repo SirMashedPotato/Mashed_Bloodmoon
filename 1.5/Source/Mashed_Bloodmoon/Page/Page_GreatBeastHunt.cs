@@ -91,10 +91,10 @@ namespace Mashed_Bloodmoon
         {
             Widgets.DrawMenuSection(inRect);
             GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
-            if (compLycanthrope.greatBeastHeartTracker.Contains(greatBeastDef))
+            /*if (compLycanthrope.greatBeastHeartTracker.Contains(greatBeastDef))
             {
                 GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
-            }
+            }*/
         }
     }
 }
