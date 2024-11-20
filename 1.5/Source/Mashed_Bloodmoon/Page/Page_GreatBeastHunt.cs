@@ -9,13 +9,10 @@ namespace Mashed_Bloodmoon
     public class Page_GreatBeastHunt : LycanthropePage
     {
         public static readonly Vector2 PageSize = new Vector2(512f, 764f);
-        public const float rowHeight = 128f;
+        public const float rowHeight = 90f;
         public float innerRectHeight;
-        private List<GreatBeastDef> greatBeastList;
+        private readonly List<GreatBeastDef> greatBeastList;
         private static Vector2 scrollPosition = Vector2.zero;
-
-        private static Texture2D heartTexture = ContentFinder<Texture2D>.Get("UI/Icons/Mashed_Bloodmoon_GreatBeastHeart");
-        private static Texture2D consumedTexture = ContentFinder<Texture2D>.Get("UI/Icons/Mashed_Bloodmoon_GreatBeastHeartConsumed");
 
         public override string PageTitle => "Mashed_Bloodmoon_GreatBeastHunt".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
@@ -52,7 +49,6 @@ namespace Mashed_Bloodmoon
                 index++;
             }
             Widgets.EndScrollView();
-
         }
 
         public void DoGreatBeastRow(Rect inRect, GreatBeastDef greatBeastDef)
@@ -70,6 +66,13 @@ namespace Mashed_Bloodmoon
         public void DoRowLeftRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
             Widgets.DrawMenuSection(inRect);
+            Rect detailsRect = inRect.ContractedBy(rectPadding);
+
+            Listing_Standard listing_Standard = new Listing_Standard();
+            listing_Standard.Begin(detailsRect);
+            listing_Standard.Label(greatBeastDef.LabelCap);
+            listing_Standard.Label(greatBeastDef.description);
+            listing_Standard.End();
         }
 
         public void DoRowRightRect(Rect inRect, GreatBeastDef greatBeastDef)
