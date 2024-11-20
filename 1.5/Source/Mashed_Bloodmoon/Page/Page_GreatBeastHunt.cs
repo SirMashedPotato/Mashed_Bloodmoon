@@ -1,16 +1,14 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    [StaticConstructorOnStartup]
     public class Page_GreatBeastHunt : LycanthropePage
     {
-        public static readonly Vector2 PageSize = new Vector2(512f, 764f);
-        public const float rowHeight = 90f;
-        public float innerRectHeight;
+        public const int columnNumber = 5;
         private readonly List<GreatBeastDef> greatBeastList;
         private static Vector2 scrollPosition = Vector2.zero;
 
@@ -19,10 +17,7 @@ namespace Mashed_Bloodmoon
         public Page_GreatBeastHunt(HediffComp_Lycanthrope comp) : base(comp)
         {
             greatBeastList = DefDatabase<GreatBeastDef>.AllDefsListForReading;
-            innerRectHeight = greatBeastList.Count * (rowHeight + (rectPadding / 2f));
         }
-
-        public override Vector2 InitialSize => PageSize;
 
         public override void DoWindowContents(Rect inRect)
         {
@@ -35,35 +30,52 @@ namespace Mashed_Bloodmoon
 
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
-            innerRect.height = innerRectHeight;
             innerRect.width -= 30f;
-            
+
+            float gridWidth = (innerRect.width / columnNumber) - rectPadding;
+            float gridHeight = gridWidth * 1.5f;
+            float rowCount = ((float)greatBeastList.Count / columnNumber) + 0.5f;
+            innerRect.height = Mathf.Round(rowCount) * (gridHeight + rectPadding);
+
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
-            int index = 0;
+            int row = 0;
+            int column = 0;
+            Rect greatBeastRect = new Rect(innerRect.x, innerRect.y, gridWidth, gridHeight);
+
             foreach (GreatBeastDef greatBeastDef in greatBeastList)
             {
-                Rect greatBeastRect = innerRect;
-                greatBeastRect.height = rowHeight;
-                greatBeastRect.y += (((rectPadding / 2f) + rowHeight) * index);
-                DoGreatBeastRow(greatBeastRect, greatBeastDef);
-                index++;
+                //DoGreatBeastGrid(greatBeastRect, greatBeastDef);
+                Widgets.DrawMenuSection(greatBeastRect);
+                Widgets.Label(greatBeastRect, greatBeastDef.label);
+
+                if (++column >= columnNumber)
+                {
+                    greatBeastRect.y += ((rectPadding / 2f) + gridHeight);
+                    greatBeastRect.x = innerRect.x;
+                    column = 0;
+                    row++;
+                }
+                else
+                {
+                    greatBeastRect.x += ((rectPadding / 2f) + gridWidth);
+                }
             }
             Widgets.EndScrollView();
         }
 
-        public void DoGreatBeastRow(Rect inRect, GreatBeastDef greatBeastDef)
+        public void DoGreatBeastGrid(Rect inRect, GreatBeastDef greatBeastDef)
         {
             Rect rightRect = inRect;
             Rect leftRect = inRect;
             rightRect.width = rightRect.height;
             leftRect.width -= rightRect.width + (rectPadding / 2f);
             rightRect.x += leftRect.width + (rectPadding / 2f);
-
-            DoRowLeftRect(leftRect, greatBeastDef);
-            DoRowRightRect(rightRect, greatBeastDef);
+            
+            DoGridLowerRect(leftRect, greatBeastDef);
+            DoGridUpperRect(rightRect, greatBeastDef);
         }
 
-        public void DoRowLeftRect(Rect inRect, GreatBeastDef greatBeastDef)
+        public void DoGridLowerRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
             Widgets.DrawMenuSection(inRect);
             Rect detailsRect = inRect.ContractedBy(rectPadding);
@@ -75,7 +87,7 @@ namespace Mashed_Bloodmoon
             listing_Standard.End();
         }
 
-        public void DoRowRightRect(Rect inRect, GreatBeastDef greatBeastDef)
+        public void DoGridUpperRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
             Widgets.DrawMenuSection(inRect);
             GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
