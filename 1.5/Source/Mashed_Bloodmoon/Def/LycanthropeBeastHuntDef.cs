@@ -4,17 +4,17 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class GreatBeastDef : Def
+    public class LycanthropeBeastHuntDef : Def
     {
-        public ThingDef thingDef;
+        public ThingDef targetThingDef;
         public int consumeCount = 1;
         public LycanthropeTypeTransformationWorker transformationWorker;
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
         [NoTranslate]
-        public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeart";
+        public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHeart";
         [NoTranslate]
-        public string consumedTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeartConsumed";
+        public string consumedTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHuntCompleted";
 
         public override IEnumerable<string> ConfigErrors()
         {
@@ -23,7 +23,7 @@ namespace Mashed_Bloodmoon
                 yield return item;
             }
 
-            if (thingDef == null)
+            if (targetThingDef == null)
             {
                 yield return "null thingDef";
             }
@@ -44,7 +44,7 @@ namespace Mashed_Bloodmoon
 
         public bool Completed(HediffComp_Lycanthrope compLycanthrope)
         {
-            return Completed(compLycanthrope.greatBeastHeartTracker.TryGetValue(this, 0));
+            return Completed(compLycanthrope.beastHuntTracker.TryGetValue(this, 0));
         }
 
         public bool Completed(int currentCount)
@@ -54,42 +54,43 @@ namespace Mashed_Bloodmoon
 
         public int Progress(HediffComp_Lycanthrope compLycanthrope)
         {
-            return compLycanthrope.greatBeastHeartTracker.TryGetValue(this, 0);
+            return compLycanthrope.beastHuntTracker.TryGetValue(this, 0);
         }
 
         public float CompletionProgress(HediffComp_Lycanthrope compLycanthrope)
         {
-            return compLycanthrope.greatBeastHeartTracker.TryGetValue(this, 0) / (float)consumeCount;
+            return compLycanthrope.beastHuntTracker.TryGetValue(this, 0) / (float)consumeCount;
         }
 
         /// <summary>
         /// Utility method for consuming a great beast heart
         /// </summary>
-        public void ConsumeGreatBeastHeart(Pawn pawn)
+        public void ConsumeBeastHeart(Pawn pawn)
         {
-            ConsumeGreatBeastHeart(LycanthropeUtility.GetCompLycanthrope(pawn), pawn);
+            ConsumeBeastHeart(LycanthropeUtility.GetCompLycanthrope(pawn), pawn);
         }
 
         /// <summary>
         /// Utility method for consuming a great beast heart
         /// </summary>
-        public void ConsumeGreatBeastHeart(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
+        public void ConsumeBeastHeart(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
-            if (!compLycanthrope.greatBeastHeartTracker.ContainsKey(this))
+            if (!compLycanthrope.beastHuntTracker.ContainsKey(this))
             {
-                compLycanthrope.greatBeastHeartTracker.Add(this, 0);
+                compLycanthrope.beastHuntTracker.Add(this, 0);
             }
 
-            if (Completed(compLycanthrope.greatBeastHeartTracker[this]))
+            if (Completed(compLycanthrope.beastHuntTracker[this]))
             {
                 return;
             }
 
-            compLycanthrope.greatBeastHeartTracker[this]++;
+            compLycanthrope.beastHuntTracker[this]++;
 
-            if (Completed(compLycanthrope.greatBeastHeartTracker[this]))
+            if (Completed(compLycanthrope.beastHuntTracker[this]))
             {
-                Messages.Message("Mashed_Bloodmoon_GreatBeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
+                pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_BeastHuntsCompleted);
+                Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
             }
         }
     }

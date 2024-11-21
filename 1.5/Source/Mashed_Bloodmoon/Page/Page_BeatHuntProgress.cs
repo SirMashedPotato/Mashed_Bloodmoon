@@ -6,23 +6,23 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class Page_GreatBeastHunt : LycanthropePage
+    public class Page_BeatHuntProgress : LycanthropePage
     {
         public const int columnNumber = 5;
-        private readonly List<GreatBeastDef> greatBeastList;
+        private readonly List<LycanthropeBeastHuntDef> greatBeastList;
         private static Vector2 scrollPosition = Vector2.zero;
 
-        public override string PageTitle => "Mashed_Bloodmoon_GreatBeastHunt".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
+        public override string PageTitle => "Mashed_Bloodmoon_BeastHuntProgress".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
-        public Page_GreatBeastHunt(HediffComp_Lycanthrope comp) : base(comp)
+        public Page_BeatHuntProgress(HediffComp_Lycanthrope comp) : base(comp)
         {
-            greatBeastList = DefDatabase<GreatBeastDef>.AllDefsListForReading;
+            greatBeastList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading;
         }
 
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_GreatBeastHuntDesc".Translate(pawn));
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn));
 
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
@@ -42,9 +42,9 @@ namespace Mashed_Bloodmoon
             int column = 0;
             Rect greatBeastRect = new Rect(innerRect.x, innerRect.y, gridWidth, gridHeight);
 
-            foreach (GreatBeastDef greatBeastDef in greatBeastList)
+            foreach (LycanthropeBeastHuntDef beastHuntDef in greatBeastList)
             {
-                DoGreatBeastGrid(greatBeastRect, greatBeastDef);
+                DoBeastHuntGrid(greatBeastRect, beastHuntDef);
                 if (++column >= columnNumber)
                 {
                     greatBeastRect.y += ((rectPadding / 2f) + gridHeight);
@@ -60,7 +60,7 @@ namespace Mashed_Bloodmoon
             Widgets.EndScrollView();
         }
 
-        public void DoGreatBeastGrid(Rect inRect, GreatBeastDef greatBeastDef)
+        public void DoBeastHuntGrid(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
         {
             Widgets.DrawMenuSection(inRect);
             Rect upperRect = inRect;
@@ -73,7 +73,7 @@ namespace Mashed_Bloodmoon
             DoGridLowerRect(lowerRect, greatBeastDef);
         }
 
-        public void DoGridUpperRect(Rect inRect, GreatBeastDef greatBeastDef)
+        public void DoGridUpperRect(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
         {
             Rect mainRect = inRect.ContractedBy(rectPadding);
             GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.backgroundTexPath));
@@ -95,7 +95,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void DoGridLowerRect(Rect inRect, GreatBeastDef greatBeastDef)
+        public void DoGridLowerRect(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
         {
             Rect detailsRect = inRect.ContractedBy(rectPadding);
             TaggedString label = greatBeastDef.LabelCap;

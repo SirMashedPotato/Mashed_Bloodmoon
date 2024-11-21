@@ -12,5 +12,6 @@ namespace Mashed_Bloodmoon
         public static RecordDef Mashed_Bloodmoon_TransformationCount;
         public static RecordDef Mashed_Bloodmoon_TransformationTime;
         public static RecordDef Mashed_Bloodmoon_HeartsConsumed;
+        public static RecordDef Mashed_Bloodmoon_BeastHuntsCompleted;
     }
 }

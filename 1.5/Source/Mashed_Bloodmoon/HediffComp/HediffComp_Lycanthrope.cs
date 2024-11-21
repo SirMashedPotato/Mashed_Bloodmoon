@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
 
         public Dictionary<LycanthropeTotemDef, int> usedTotemTracker = new Dictionary<LycanthropeTotemDef, int>();
         public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
-        public Dictionary<GreatBeastDef, int> greatBeastHeartTracker = new Dictionary<GreatBeastDef, int>();
+        public Dictionary<LycanthropeBeastHuntDef, int> beastHuntTracker = new Dictionary<LycanthropeBeastHuntDef, int>();
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
 
@@ -119,9 +119,9 @@ namespace Mashed_Bloodmoon
                     lycanthropeGizmoOptions.Add(item);
 
                     ///Customise beast form
-                    item = new FloatMenuOption("Mashed_Bloodmoon_GreatBeastHunt".Translate(), delegate
+                    item = new FloatMenuOption("Mashed_Bloodmoon_BeastHuntProgress".Translate(), delegate
                     {
-                        Page_GreatBeastHunt page = new Page_GreatBeastHunt(this);
+                        Page_BeatHuntProgress page = new Page_BeatHuntProgress(this);
                         Find.WindowStack.Add(page);
                     });
                     lycanthropeGizmoOptions.Add(item);
@@ -228,7 +228,7 @@ namespace Mashed_Bloodmoon
             Scribe_Values.Look(ref tertiaryColour, "tertiaryColour", Color.white);
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref unlockedAbilityTracker, "unlockedAbilityTracker", LookMode.Def);
-            Scribe_Collections.Look(ref greatBeastHeartTracker, "greatBeastHeartTracker", LookMode.Def);
+            Scribe_Collections.Look(ref beastHuntTracker, "beastHuntTracker", LookMode.Def);
         }
     }
 }

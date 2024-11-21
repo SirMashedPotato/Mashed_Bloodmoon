@@ -117,7 +117,7 @@ namespace Mashed_Bloodmoon
             {
                 parent.pawn.abilities.GainAbility(unlockedAbility.Key.abilityDefs[unlockedAbility.Value]);
             }
-            foreach (KeyValuePair<GreatBeastDef, int> greatBeastDef in CompLycanthrope.greatBeastHeartTracker)
+            foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
             {
                 if (greatBeastDef.Key.Completed(greatBeastDef.Value))
                 {
@@ -166,7 +166,7 @@ namespace Mashed_Bloodmoon
             {
                 parent.pawn.abilities.RemoveAbility(unlockedAbility.Key.abilityDefs[unlockedAbility.Value]);
             }
-            foreach (KeyValuePair<GreatBeastDef, int> greatBeastDef in CompLycanthrope.greatBeastHeartTracker)
+            foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
             {
                 if (greatBeastDef.Key.Completed(greatBeastDef.Value))
                 {

@@ -83,7 +83,7 @@
     <Compile Include="DefOf\StatDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefof.cs" />
     <Compile Include="DefOf\LycanthropeTotemDefOf.cs" />
-    <Compile Include="Def\GreatBeastDef.cs" />
+    <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
@@ -107,7 +107,7 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
     <Compile Include="JobGiver\JobGiver_LycanthropeFury.cs" />
     <Compile Include="JobGiver\JobGiver_NightTransformation.cs" />
-    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_GreatBeast.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHunt.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Totem.cs" />
     <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddAbility.cs" />
@@ -124,7 +124,7 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
     <Compile Include="Page\LycanthropePage.cs" />
     <Compile Include="Page\Page_CustomiseBeastForm.cs" />
-    <Compile Include="Page\Page_GreatBeastHunt.cs" />
+    <Compile Include="Page\Page_BeatHuntProgress.cs" />
     <Compile Include="Page\Page_UpgradeBeastForm.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_Lycanthrope.cs" />
     <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropePrimaryColor.cs" />
@@ -144,7 +144,7 @@
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
     <Compile Include="Def\LycanthropeGraphicData.cs" />
-    <Compile Include="ThoughtWorker\ThoughtWorker_GreatBeastHunt.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_BeastHuntCompleted.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
     <Compile Include="DefModExtension\PawnTotemRecord.cs" />
   </ItemGroup>

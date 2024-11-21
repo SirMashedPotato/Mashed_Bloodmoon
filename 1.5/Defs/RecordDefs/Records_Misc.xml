@@ -14,4 +14,11 @@
 		<description>The number of hearts I have consumed hearts while transformed.</description>
 		<type>Int</type>
 	</RecordDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastHuntsCompleted]==========-->
+	<RecordDef>
+		<defName>Mashed_Bloodmoon_BeastHuntsCompleted</defName>
+		<label>lycanthrope beast hunts completed</label>
+		<description>The number of beast hunts I have completed.</description>
+		<type>Int</type>
+	</RecordDef>
 </Defs>

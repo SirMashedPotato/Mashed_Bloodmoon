@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Thrumbo]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_Thrumbo</defName>
+		<label>beast hunt: Thrumbo</label>
+		<description>Consume the heart of a thrumbo.</description>
+		<targetThingDef>Thrumbo</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

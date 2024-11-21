@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesBase]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_FeralWerewolvesBase" Abstract="true">
+		<targetThingDef>Rat</targetThingDef><!-- todo -->
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesI]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesI</defName>
+		<label>beast hunt: Hounds I</label>
+		<description>Consume the hearts of 10 feral werewolves.</description>
+		<consumeCount>10</consumeCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesII</defName>
+		<label>beast hunt: Hounds II</label>
+		<description>Consume the hearts of 25 feral werewolves.</description>
+		<consumeCount>25</consumeCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesIII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesIII</defName>
+		<label>beast hunt: Hounds III</label>
+		<description>Consume the hearts of 50 feral werewolves.</description>
+		<consumeCount>50</consumeCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesIV]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesIV</defName>
+		<label>beast hunt: Hounds IV</label>
+		<description>Consume the hearts of 100 feral werewolves.</description>
+		<consumeCount>100</consumeCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesV]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesV</defName>
+		<label>beast hunt: Hounds V</label>
+		<description>Consume the hearts of 200 feral werewolves.</description>
+		<consumeCount>200</consumeCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

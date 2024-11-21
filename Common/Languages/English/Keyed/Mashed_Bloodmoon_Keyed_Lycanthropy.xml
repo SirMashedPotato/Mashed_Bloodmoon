@@ -5,7 +5,7 @@
 	<Mashed_Bloodmoon_LycanthropeOptions_Desc>Access several options, such as customising and upgrading {0_labelShort}'s' beast form.</Mashed_Bloodmoon_LycanthropeOptions_Desc>
 	<Mashed_Bloodmoon_CustomiseBeastForm>Customise beast form</Mashed_Bloodmoon_CustomiseBeastForm>
 	<Mashed_Bloodmoon_UpgradeBeastForm>Upgrade beast form</Mashed_Bloodmoon_UpgradeBeastForm>
-	<Mashed_Bloodmoon_GreatBeastHunt>Great beast hunt progress</Mashed_Bloodmoon_GreatBeastHunt>
+	<Mashed_Bloodmoon_BeastHuntProgress>Beast hunt progress</Mashed_Bloodmoon_BeastHuntProgress>
 	<!-- ==========[Customise beast form page]==========-->
 	<Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel>Primary colour:</Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel>
 	<Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel>Secondary colour:</Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel>
@@ -17,7 +17,7 @@
 	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
 	<!-- ==========[Upgrade beast form page]==========-->
 	<!-- ==========[Great beast hunt page]==========-->
-	<Mashed_Bloodmoon_GreatBeastHuntDesc>Prove yourself to The Huntsman by consuming the hearts of powerful beasts. Each completed great beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_GreatBeastHuntDesc>
+	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by consuming the hearts of beasts. Each completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_BeastHuntDesc>
 	<!-- ==========[Type requirement worker requirement not met]==========-->
 	<Mashed_Bloodmoon_LTR_MissingOneOf>requires one of:</Mashed_Bloodmoon_LTR_MissingOneOf>
 	<Mashed_Bloodmoon_LTR_Missing>requires {0_label}</Mashed_Bloodmoon_LTR_Missing>
@@ -30,7 +30,7 @@
 	<Mashed_Bloodmoon_LTR_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_LTR_InvalidRecord>
 	<Mashed_Bloodmoon_LTR_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_LTR_InvalidSkill>
 	<Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
-	<Mashed_Bloodmoon_LTR_InvalidGreatBeast>has not completed the {0_label} great beast hunt</Mashed_Bloodmoon_LTR_InvalidGreatBeast>
+	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>has not completed the {0_label}</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
@@ -53,7 +53,7 @@
 	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
 	<Mashed_Bloodmoon_TotemLevelUp>{0_labelShort} has increased their {1_label} level by {2}</Mashed_Bloodmoon_TotemLevelUp>
 	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
-	<Mashed_Bloodmoon_GreatBeastHuntComplete>{0_labelShort} has completed the {1_label}</Mashed_Bloodmoon_GreatBeastHuntComplete>
+	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed the {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
 	<!-- ==========[misc]==========-->
 	<Mashed_Bloodmoon_LycanthropeCantDo>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantDo>
 	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>

@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class ThoughtWorker_GreatBeastHunt : ThoughtWorker
+    public class ThoughtWorker_BeastHuntCompleted : ThoughtWorker
     {
 
         protected override ThoughtState CurrentStateInternal(Pawn p)
@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
 
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(p);
 
-            if (compLycanthrope.greatBeastHeartTracker.NullOrEmpty())
+            if (compLycanthrope.beastHuntTracker.NullOrEmpty())
             {
                 return ThoughtState.Inactive;
             }
@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
 
         public int CompletedCount(Pawn p)
         {
-            return LycanthropeUtility.GetCompLycanthrope(p).greatBeastHeartTracker.Where(x => x.Key.Completed(x.Value)).Count();
+            return LycanthropeUtility.GetCompLycanthrope(p).beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
         }
     }
 }

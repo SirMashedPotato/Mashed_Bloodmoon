@@ -30,10 +30,10 @@ namespace Mashed_Bloodmoon
                 targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
             }
 
-            List<GreatBeastDef> greatBeastDefList = DefDatabase<GreatBeastDef>.AllDefsListForReading.Where(x => x.thingDef == targetPawn.def).ToList();
-            foreach(GreatBeastDef greatBeastDef in greatBeastDefList)
+            List<LycanthropeBeastHuntDef> greatBeastDefList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.targetThingDef == targetPawn.def).ToList();
+            foreach(LycanthropeBeastHuntDef greatBeastDef in greatBeastDefList)
             {
-                greatBeastDef.ConsumeGreatBeastHeart(parent.pawn);
+                greatBeastDef.ConsumeBeastHeart(parent.pawn);
             }
 
             LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
