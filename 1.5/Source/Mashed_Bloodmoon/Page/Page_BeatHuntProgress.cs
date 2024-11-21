@@ -34,7 +34,11 @@ namespace Mashed_Bloodmoon
 
             float gridWidth = (innerRect.width / columnNumber) - rectPadding;
             float gridHeight = gridWidth * 1.6f;
-            float rowCount = ((float)greatBeastList.Count / columnNumber) + 0.5f;
+            float rowCount = ((float)greatBeastList.Count / columnNumber);
+            if (rowCount % 1 != 0)
+            {
+                rowCount += 0.5f;
+            }
             innerRect.height = Mathf.Round(rowCount) * (gridHeight + rectPadding);
 
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
