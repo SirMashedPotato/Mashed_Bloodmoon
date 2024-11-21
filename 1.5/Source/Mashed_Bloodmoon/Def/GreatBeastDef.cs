@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
-using UnityEngine;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -38,11 +37,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public bool Completed(int currentCount)
-        {
-            return currentCount >= consumeCount;
-        }
-
         public bool Completed(Pawn pawn)
         {
             return Completed(LycanthropeUtility.GetCompLycanthrope(pawn));
@@ -50,7 +44,22 @@ namespace Mashed_Bloodmoon
 
         public bool Completed(HediffComp_Lycanthrope compLycanthrope)
         {
-            return Completed(compLycanthrope.greatBeastHeartTracker.TryGetValue(this));
+            return Completed(compLycanthrope.greatBeastHeartTracker.TryGetValue(this, 0));
+        }
+
+        public bool Completed(int currentCount)
+        {
+            return currentCount >= consumeCount;
+        }
+
+        public int Progress(HediffComp_Lycanthrope compLycanthrope)
+        {
+            return compLycanthrope.greatBeastHeartTracker.TryGetValue(this, 0);
+        }
+
+        public float CompletionProgress(HediffComp_Lycanthrope compLycanthrope)
+        {
+            return compLycanthrope.greatBeastHeartTracker.TryGetValue(this, 0) / (float)consumeCount;
         }
 
         /// <summary>

@@ -82,6 +82,17 @@ namespace Mashed_Bloodmoon
             {
                 GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
             }
+            else
+            {
+                if (greatBeastDef.consumeCount > 1)
+                {
+                    TaggedString label = greatBeastDef.Progress(compLycanthrope) + "/" + greatBeastDef.consumeCount;
+                    Rect progressRect = mainRect.ContractedBy(rectPadding);
+                    progressRect.height = Text.LineHeight;
+                    progressRect.y += mainRect.height - (progressRect.height + (rectPadding * 1.5f));
+                    Widgets.Label(progressRect, label);
+                }
+            }
         }
 
         public void DoGridLowerRect(Rect inRect, GreatBeastDef greatBeastDef)
