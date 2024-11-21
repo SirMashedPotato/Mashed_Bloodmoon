@@ -41,6 +41,16 @@ namespace Mashed_Bloodmoon
             return currentCount >= consumeCount;
         }
 
+        public bool Completed(Pawn pawn)
+        {
+            return Completed(LycanthropeUtility.GetCompLycanthrope(pawn));
+        }
+
+        public bool Completed(HediffComp_Lycanthrope compLycanthrope)
+        {
+            return Completed(compLycanthrope.greatBeastHeartTracker.TryGetValue(this));
+        }
+
         /// <summary>
         /// Utility method for consuming a great beast heart
         /// </summary>

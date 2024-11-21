@@ -1,51 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesBase]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef Name="Mashed_Bloodmoon_FeralWerewolvesBase" Abstract="true">
+		<thingDef>Rat</thingDef><!-- todo -->
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesI]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesI</defName>
+		<label>beast hunt: Hounds I</label>
+		<description>Consume the hearts of 10 feral werewolves.</description>
+		<consumeCount>10</consumeCount> 
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesII]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesII</defName>
+		<label>beast hunt: Hounds II</label>
+		<description>Consume the hearts of 25 feral werewolves.</description>
+		<consumeCount>25</consumeCount> 
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesIII]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesIII</defName>
+		<label>beast hunt: Hounds III</label>
+		<description>Consume the hearts of 50 feral werewolves.</description>
+		<consumeCount>50</consumeCount> 
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesIV]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesIV</defName>
+		<label>beast hunt: Hounds IV</label>
+		<description>Consume the hearts of 100 feral werewolves.</description>
+		<consumeCount>100</consumeCount> 
+	</Mashed_Bloodmoon.GreatBeastDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesV]========== -->
+	<Mashed_Bloodmoon.GreatBeastDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolvesV</defName>
+		<label>beast hunt: Hounds V</label>
+		<description>Consume the hearts of 200 feral werewolves.</description>
+		<consumeCount>200</consumeCount> 
+	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Thrumbo]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef>
 		<defName>Mashed_Bloodmoon_Thrumbo</defName>
-		<label>great beast hunt: Thrumbo</label>
+		<label>beast hunt: Thrumbo</label>
 		<description>Consume the heart of a thrumbo.</description>
 		<thingDef>Thrumbo</thingDef>
-	</Mashed_Bloodmoon.GreatBeastDef>
-	<!-- ==========[Mashed_Bloodmoon_FeralWerewolves]========== -->
-	<Mashed_Bloodmoon.GreatBeastDef>
-		<defName>Mashed_Bloodmoon_FeralWerewolves</defName>
-		<label>great beast hunt: Hounds</label>
-		<description>Consume the hearts of 30 feral werewolves.</description>
-		<thingDef>Rat</thingDef><!-- todo -->
-		<consumeCount>30</consumeCount> 
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Daedroth</defName>
-		<label>great beast hunt: Daedroth</label>
+		<label>beast hunt: Daedroth</label>
+		<description>Consume the heart of a daedroth.</description>
 		<thingDef>Mashed_Ashlands_Daedroth</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Ogrim]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Ogrim</defName>
-		<label>great beast hunt: Ogrim</label>
+		<label>beast hunt: Ogrim</label>
 		<description>Consume the heart of an ogrim.</description>
 		<thingDef>Mashed_Ashlands_Ogrim</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_SiltStrider]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_SiltStrider</defName>
-		<label>great beast hunt: Silt strider</label>
-		<description>Consume the heart of an silt strider.</description>
+		<label>beast hunt: Silt strider</label>
+		<description>Consume the heart of a silt strider.</description>
 		<thingDef>Mashed_Ashlands_SiltStrider</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Grahl]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="escp.trolls">
 		<defName>Mashed_Bloodmoon_Grahl</defName>
-		<label>great beast hunt: Grahl</label>
+		<label>beast hunt: Grahl</label>
 		<description>Consume the heart of a grahl.</description>
 		<thingDef>ESCP_TrollGrahl</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>
 	<!-- ==========[Mashed_Bloodmoon_Udyrfrykte]========== -->
 	<Mashed_Bloodmoon.GreatBeastDef MayRequire="escp.trolls">
 		<defName>Mashed_Bloodmoon_Udyrfrykte</defName>
-		<label>great beast hunt: Udyrfrykte</label>
+		<label>beast hunt: Udyrfrykte</label>
 		<description>Consume the heart of an udyrfrykte.</description>
 		<thingDef>ESCP_TrollUdyrfrykte</thingDef>
 	</Mashed_Bloodmoon.GreatBeastDef>

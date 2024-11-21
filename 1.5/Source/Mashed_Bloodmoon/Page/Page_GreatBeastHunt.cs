@@ -33,7 +33,7 @@ namespace Mashed_Bloodmoon
             innerRect.width -= 30f;
 
             float gridWidth = (innerRect.width / columnNumber) - rectPadding;
-            float gridHeight = gridWidth * 1.5f;
+            float gridHeight = gridWidth * 1.6f;
             float rowCount = ((float)greatBeastList.Count / columnNumber) + 0.5f;
             innerRect.height = Mathf.Round(rowCount) * (gridHeight + rectPadding);
 
@@ -44,10 +44,7 @@ namespace Mashed_Bloodmoon
 
             foreach (GreatBeastDef greatBeastDef in greatBeastList)
             {
-                //DoGreatBeastGrid(greatBeastRect, greatBeastDef);
-                Widgets.DrawMenuSection(greatBeastRect);
-                Widgets.Label(greatBeastRect, greatBeastDef.label);
-
+                DoGreatBeastGrid(greatBeastRect, greatBeastDef);
                 if (++column >= columnNumber)
                 {
                     greatBeastRect.y += ((rectPadding / 2f) + gridHeight);
@@ -65,36 +62,40 @@ namespace Mashed_Bloodmoon
 
         public void DoGreatBeastGrid(Rect inRect, GreatBeastDef greatBeastDef)
         {
-            Rect rightRect = inRect;
-            Rect leftRect = inRect;
-            rightRect.width = rightRect.height;
-            leftRect.width -= rightRect.width + (rectPadding / 2f);
-            rightRect.x += leftRect.width + (rectPadding / 2f);
-            
-            DoGridLowerRect(leftRect, greatBeastDef);
-            DoGridUpperRect(rightRect, greatBeastDef);
-        }
-
-        public void DoGridLowerRect(Rect inRect, GreatBeastDef greatBeastDef)
-        {
             Widgets.DrawMenuSection(inRect);
-            Rect detailsRect = inRect.ContractedBy(rectPadding);
-
-            Listing_Standard listing_Standard = new Listing_Standard();
-            listing_Standard.Begin(detailsRect);
-            listing_Standard.Label(greatBeastDef.LabelCap);
-            listing_Standard.Label(greatBeastDef.description);
-            listing_Standard.End();
+            Rect upperRect = inRect;
+            Rect lowerRect = inRect;
+            upperRect.height = upperRect.width;
+            lowerRect.height -= upperRect.height + (rectPadding / 2f);
+            lowerRect.y += upperRect.height + (rectPadding / 2f);
+            
+            DoGridUpperRect(upperRect, greatBeastDef);
+            DoGridLowerRect(lowerRect, greatBeastDef);
         }
 
         public void DoGridUpperRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
-            Widgets.DrawMenuSection(inRect);
             GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
-            /*if (compLycanthrope.greatBeastHeartTracker.Contains(greatBeastDef))
+            if (greatBeastDef.Completed(compLycanthrope))
             {
                 GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
-            }*/
+            }
+        }
+
+        public void DoGridLowerRect(Rect inRect, GreatBeastDef greatBeastDef)
+        {
+            Rect detailsRect = inRect.ContractedBy(rectPadding);
+            TaggedString label = greatBeastDef.LabelCap;
+            detailsRect.SplitHorizontally(detailsRect.height / 3f, out Rect upperRect, out Rect lowerRect);
+            var anchor = Text.Anchor;
+            var font = Text.Font;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.LabelFit(upperRect, label);
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(lowerRect, greatBeastDef.description);
+            Text.Anchor = anchor;
+            Text.Font = font;
+
         }
     }
 }
