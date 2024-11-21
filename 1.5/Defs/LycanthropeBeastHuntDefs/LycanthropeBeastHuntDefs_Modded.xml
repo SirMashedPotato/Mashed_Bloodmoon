@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_AABehemoth]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sarg.alphaanimals">
+		<defName>Mashed_Bloodmoon_AABehemoth</defName>
+		<label>beast hunt: Behemoth</label>
+		<description>Consume the heart of a forsaken behemoth.</description>
+		<targetThingDef>AA_Behemoth</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Night</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_GuldenRuneBear]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="pphhyy.guldennew">
 		<defName>Mashed_Bloodmoon_GuldenRuneBear</defName>
@@ -8,12 +16,21 @@
 		<targetThingDef>GuldenRuneBear</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Gold</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_pphhyyVargulf]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="pphhyy.sanguinaryanimals">
+		<defName>Mashed_Bloodmoon_pphhyyVargulf</defName>
+		<label>beast hunt: Vargulf</label>
+		<description>Consume the heart of a vargulf.</description>
+		<targetThingDef>pphhyy_Vargulf</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Sanguo</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Daedroth]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Daedroth</defName>
 		<label>beast hunt: Daedroth</label>
 		<description>Consume the heart of a daedroth.</description>
 		<targetThingDef>Mashed_Ashlands_Daedroth</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Ogrim]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
@@ -21,6 +38,7 @@
 		<label>beast hunt: Ogrim</label>
 		<description>Consume the heart of an ogrim.</description>
 		<targetThingDef>Mashed_Ashlands_Ogrim</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SiltStrider]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
@@ -28,6 +46,7 @@
 		<label>beast hunt: Silt strider</label>
 		<description>Consume the heart of a silt strider.</description>
 		<targetThingDef>Mashed_Ashlands_SiltStrider</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_TrollAnima]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="escp.trolls">
