@@ -80,7 +80,7 @@ namespace Mashed_Bloodmoon
             GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
             if (greatBeastDef.Completed(compLycanthrope))
             {
-                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
+                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.completedTexPath));
             }
             else
             {
