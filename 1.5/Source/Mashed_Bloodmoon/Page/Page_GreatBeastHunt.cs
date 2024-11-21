@@ -75,10 +75,12 @@ namespace Mashed_Bloodmoon
 
         public void DoGridUpperRect(Rect inRect, GreatBeastDef greatBeastDef)
         {
-            GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
+            Rect mainRect = inRect.ContractedBy(rectPadding);
+            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.backgroundTexPath));
+            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
             if (greatBeastDef.Completed(compLycanthrope))
             {
-                GUI.DrawTexture(inRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
+                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.consumedTexPath));
             }
         }
 

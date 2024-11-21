@@ -11,6 +11,8 @@ namespace Mashed_Bloodmoon
         public int consumeCount = 1;
         public LycanthropeTypeTransformationWorker transformationWorker;
         [NoTranslate]
+        public string backgroundTexPath = "UI/Widgets/DesButBG";
+        [NoTranslate]
         public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeart";
         [NoTranslate]
         public string consumedTexPath = "UI/Icons/Mashed_Bloodmoon_GreatBeastHeartConsumed";
