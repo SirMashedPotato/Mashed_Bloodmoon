@@ -30,7 +30,7 @@
 	<Mashed_Bloodmoon_LTR_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_LTR_InvalidRecord>
 	<Mashed_Bloodmoon_LTR_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_LTR_InvalidSkill>
 	<Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
-	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>has not completed the {0_label}</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
+	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>has not completed {0}</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
