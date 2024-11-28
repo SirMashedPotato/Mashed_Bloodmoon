@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -116,6 +117,23 @@ namespace Mashed_Bloodmoon
                 {
                     Messages.Message("Mashed_Bloodmoon_ConsumedTotemsTransferred".Translate(pawn, transferredTotemCount, victim), pawn, MessageTypeDefOf.PositiveEvent);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Utility method to progress all relevant beast hunts
+        /// </summary>
+        internal static void ProgressBeastHunts(Pawn parent, ThingDef victim, BeastHuntType beastHuntType)
+        {
+            List<LycanthropeBeastHuntDef> greatBeastDefList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == beastHuntType
+                && (x.targetThingDef == null || x.targetThingDef == victim)).ToList();
+            if (greatBeastDefList.NullOrEmpty())
+            {
+                return;
+            }
+            foreach (LycanthropeBeastHuntDef greatBeastDef in greatBeastDefList)
+            {
+                greatBeastDef.ConsumeBeastHeart(parent);
             }
         }
 

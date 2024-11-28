@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterI]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_SlaughterI</defName>
+		<label>beast hunt: Slaughter I</label>
+		<description>Kill 25 pawns while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetCount>25</targetCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_SlaughterII</defName>
+		<label>beast hunt: Slaughter II</label>
+		<description>Kill 50 pawns while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetCount>50</targetCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterIII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_SlaughterIII</defName>
+		<label>beast hunt: Slaughter III</label>
+		<description>Kill 100 pawns while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetCount>100</targetCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterIV]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_SlaughterIV</defName>
+		<label>beast hunt: Slaughter IV</label>
+		<description>Kill 200 pawns while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetCount>200</targetCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterV]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_SlaughterV</defName>
+		<label>beast hunt: Slaughter V</label>
+		<description>Kill 500 pawns while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetCount>500</targetCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

@@ -88,9 +88,9 @@ namespace Mashed_Bloodmoon
             }
             else
             {
-                if (greatBeastDef.consumeCount > 1)
+                if (greatBeastDef.targetCount > 1)
                 {
-                    TaggedString label = greatBeastDef.Progress(compLycanthrope) + "/" + greatBeastDef.consumeCount;
+                    TaggedString label = greatBeastDef.Progress(compLycanthrope) + "/" + greatBeastDef.targetCount;
                     Rect progressRect = mainRect.ContractedBy(rectPadding);
                     progressRect.height = Text.LineHeight;
                     progressRect.y += mainRect.height - (progressRect.height + (rectPadding * 1.5f));

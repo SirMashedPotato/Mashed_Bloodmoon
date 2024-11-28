@@ -6,8 +6,9 @@ namespace Mashed_Bloodmoon
 {
     public class LycanthropeBeastHuntDef : Def
     {
+        public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
-        public int consumeCount = 1;
+        public int targetCount = 1;
         public LycanthropeTypeTransformationWorker transformationWorker;
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
@@ -21,11 +22,6 @@ namespace Mashed_Bloodmoon
             foreach (string item in base.ConfigErrors())
             {
                 yield return item;
-            }
-
-            if (targetThingDef == null)
-            {
-                yield return "null thingDef";
             }
 
             if (transformationWorker != null)
@@ -49,7 +45,7 @@ namespace Mashed_Bloodmoon
 
         public bool Completed(int currentCount)
         {
-            return currentCount >= consumeCount;
+            return currentCount >= targetCount;
         }
 
         public int Progress(HediffComp_Lycanthrope compLycanthrope)
@@ -59,7 +55,7 @@ namespace Mashed_Bloodmoon
 
         public float CompletionProgress(HediffComp_Lycanthrope compLycanthrope)
         {
-            return compLycanthrope.beastHuntTracker.TryGetValue(this, 0) / (float)consumeCount;
+            return compLycanthrope.beastHuntTracker.TryGetValue(this, 0) / (float)targetCount;
         }
 
         /// <summary>

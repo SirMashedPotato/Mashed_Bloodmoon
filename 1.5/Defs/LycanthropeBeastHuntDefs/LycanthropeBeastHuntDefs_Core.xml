@@ -1,10 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_Rat]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_Rat</defName>
+		<label>beast hunt: Rats</label>
+		<description>Consume the hearts of 13 rats.</description>
+		<targetThingDef>Rat</targetThingDef>
+		<targetCount>13</targetCount>
+		<!-- unlocks were-rat form -->
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Thrumbo]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_Thrumbo</defName>
 		<label>beast hunt: Thrumbo</label>
 		<description>Consume the heart of a thrumbo.</description>
 		<targetThingDef>Thrumbo</targetThingDef>
+		<!-- unlocks were-thrumbo form -->
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

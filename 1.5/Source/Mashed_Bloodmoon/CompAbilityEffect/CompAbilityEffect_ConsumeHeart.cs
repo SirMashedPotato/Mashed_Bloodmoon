@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using System.Linq;
 using Verse;
 
@@ -30,11 +29,7 @@ namespace Mashed_Bloodmoon
                 targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
             }
 
-            List<LycanthropeBeastHuntDef> greatBeastDefList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.targetThingDef == targetPawn.def).ToList();
-            foreach(LycanthropeBeastHuntDef greatBeastDef in greatBeastDefList)
-            {
-                greatBeastDef.ConsumeBeastHeart(parent.pawn);
-            }
+            LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn.def, BeastHuntType.Heart);
 
             LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
             HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);

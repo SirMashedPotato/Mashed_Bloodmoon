@@ -193,6 +193,18 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
+        public override void Notify_KilledPawn(Pawn victim, DamageInfo? dinfo)
+        {
+            if (victim != null)
+            {
+                LycanthropeUtility.ProgressBeastHunts(parent.pawn, victim.def, BeastHuntType.Kill);
+            }
+            base.Notify_KilledPawn(victim, dinfo);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
             yield return new Command_Action
