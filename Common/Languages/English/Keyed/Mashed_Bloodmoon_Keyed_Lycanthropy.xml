@@ -17,7 +17,7 @@
 	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
 	<!-- ==========[Upgrade beast form page]==========-->
 	<!-- ==========[Great beast hunt page]==========-->
-	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by consuming the hearts of beasts. Each completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_BeastHuntDesc>
+	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing The Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form. Each completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_BeastHuntDesc>
 	<!-- ==========[Type requirement worker requirement not met]==========-->
 	<Mashed_Bloodmoon_LTR_MissingOneOf>requires one of:</Mashed_Bloodmoon_LTR_MissingOneOf>
 	<Mashed_Bloodmoon_LTR_Missing>requires {0_label}</Mashed_Bloodmoon_LTR_Missing>
