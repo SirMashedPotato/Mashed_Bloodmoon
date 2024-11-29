@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTTWorker_AddAbility : LycanthropeTypeTransformationWorker
+    public class LTWorker_AddAbility : LycanthropeTransformationWorker
     {
         public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {

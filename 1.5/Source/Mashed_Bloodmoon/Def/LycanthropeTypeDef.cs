@@ -10,7 +10,7 @@ namespace Mashed_Bloodmoon
         public LycanthropeGraphicData graphicData;
         private List<PawnRenderNodeProperties> renderNodeProperties;
         public LycanthropeTypeRequirementWorker requirementWorker;
-        public LycanthropeTypeTransformationWorker transformationWorker;
+        public LycanthropeTransformationWorker transformationWorker;
 
         public List<PawnRenderNodeProperties> RenderNodeProperties => renderNodeProperties ?? PawnRenderUtility.EmptyRenderNodeProperties;
 

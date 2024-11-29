@@ -108,12 +108,14 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
     <Compile Include="JobGiver\JobGiver_LycanthropeFury.cs" />
     <Compile Include="JobGiver\JobGiver_NightTransformation.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UpgradeTotem.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\LycanthropeBeastHuntCompletionWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHunt.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Totem.cs" />
-    <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddAbility.cs" />
-    <Compile Include="LycanthropeTypeTransformationWorker\LTTWorker_AddHediff.cs" />
-    <Compile Include="LycanthropeTypeTransformationWorker\LycanthropeTypeTransformationWorker.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LTWorker_AddAbility.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LTWorker_AddHediff.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LycanthropeTransformationWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Gene.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Hediff.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Meme.cs" />

@@ -9,7 +9,8 @@ namespace Mashed_Bloodmoon
         public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
         public int targetCount = 1;
-        public LycanthropeTypeTransformationWorker transformationWorker;
+        public LycanthropeBeastHuntCompletionWorker completionWorker;
+        public LycanthropeTransformationWorker transformationWorker;
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
         [NoTranslate]
@@ -22,6 +23,14 @@ namespace Mashed_Bloodmoon
             foreach (string item in base.ConfigErrors())
             {
                 yield return item;
+            }
+
+            if (completionWorker != null)
+            {
+                foreach (string item in completionWorker.ConfigErrors())
+                {
+                    yield return item;
+                }
             }
 
             if (transformationWorker != null)
@@ -59,17 +68,17 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Utility method for consuming a great beast heart
+        /// Utility method for progressing a beast hunt
         /// </summary>
-        public void ConsumeBeastHeart(Pawn pawn)
+        public void ProgressBeastHunt(Pawn pawn)
         {
-            ConsumeBeastHeart(LycanthropeUtility.GetCompLycanthrope(pawn), pawn);
+            ProgressBeastHunt(LycanthropeUtility.GetCompLycanthrope(pawn), pawn);
         }
 
         /// <summary>
-        /// Utility method for consuming a great beast heart
+        /// Utility method for progressing a beast hunt
         /// </summary>
-        public void ConsumeBeastHeart(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
+        public void ProgressBeastHunt(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
             if (!compLycanthrope.beastHuntTracker.ContainsKey(this))
             {
@@ -86,6 +95,7 @@ namespace Mashed_Bloodmoon
             if (Completed(compLycanthrope.beastHuntTracker[this]))
             {
                 pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_BeastHuntsCompleted);
+                completionWorker?.PostBeastHuntCompleted(compLycanthrope, pawn);
                 Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
             }
         }

@@ -4,11 +4,9 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public abstract class LycanthropeTypeTransformationWorker
+    public abstract class LycanthropeBeastHuntCompletionWorker
     {
-        public abstract void PostTransformationBegin(Pawn pawn, int value = 0);
-
-        public abstract void PostTransformationEnd(Pawn pawn, int value = 0);
+        public abstract void PostBeastHuntCompleted(HediffComp_Lycanthrope compLycanthrope, Pawn pawn);
 
         public virtual IEnumerable<string> ConfigErrors()
         {
