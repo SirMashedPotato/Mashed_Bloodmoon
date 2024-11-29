@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_CliffRacerCulling]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="sirmashedpotato.ashlands">
+		<defName>Mashed_Bloodmoon_CliffRacerCulling</defName>
+		<label>beast hunt: Winged Menace</label>
+		<description>Kill 333 cliff racers while in beast form.</description>
+		<targetCount>333</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

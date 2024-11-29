@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_BeastFormKillBase]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_BeastFormKillBase" Abstract="true">
+		<beastHuntType>Kill</beastHuntType>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>
