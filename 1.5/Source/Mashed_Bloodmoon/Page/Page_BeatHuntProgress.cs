@@ -58,7 +58,7 @@ namespace Mashed_Bloodmoon
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
 
-            float gridWidth = (innerRect.width / columnNumber) - rectPadding;
+            float gridWidth = (innerRect.width / columnNumber) - (rectPadding / 2f);
             float gridHeight = gridWidth * 1.6f;
             float rowCount = ((float)beastHuntList.Count / columnNumber);
             if (rowCount % 1 != 0)
@@ -70,21 +70,21 @@ namespace Mashed_Bloodmoon
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
             int row = 0;
             int column = 0;
-            Rect greatBeastRect = new Rect(innerRect.x, innerRect.y, gridWidth, gridHeight);
+            Rect beastHuntRect = new Rect(innerRect.x, innerRect.y, gridWidth, gridHeight);
 
             foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
-                DoBeastHuntGrid(greatBeastRect, beastHuntDef);
+                DoBeastHuntGrid(beastHuntRect, beastHuntDef);
                 if (++column >= columnNumber)
                 {
-                    greatBeastRect.y += ((rectPadding / 2f) + gridHeight);
-                    greatBeastRect.x = innerRect.x;
+                    beastHuntRect.y += ((rectPadding / 2f) + gridHeight);
+                    beastHuntRect.x = innerRect.x;
                     column = 0;
                     row++;
                 }
                 else
                 {
-                    greatBeastRect.x += ((rectPadding / 2f) + gridWidth);
+                    beastHuntRect.x += ((rectPadding / 2f) + gridWidth);
                 }
             }
         }
