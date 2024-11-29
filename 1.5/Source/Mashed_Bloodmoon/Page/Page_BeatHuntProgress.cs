@@ -1,6 +1,6 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -9,14 +9,33 @@ namespace Mashed_Bloodmoon
     public class Page_BeatHuntProgress : LycanthropePage
     {
         public const int columnNumber = 5;
-        private readonly List<LycanthropeBeastHuntDef> greatBeastList;
+        private readonly List<LycanthropeBeastHuntDef> BeastHuntListHeart;
+        private readonly List<LycanthropeBeastHuntDef> BeastHuntListKill;
         private static Vector2 scrollPosition = Vector2.zero;
+        private static BeastHuntType curTab = BeastHuntType.Heart;
+        private readonly List<TabRecord> tabs = new List<TabRecord>();
 
         public override string PageTitle => "Mashed_Bloodmoon_BeastHuntProgress".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
         public Page_BeatHuntProgress(HediffComp_Lycanthrope comp) : base(comp)
         {
-            greatBeastList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading;
+            BeastHuntListHeart = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Heart).ToList();
+            BeastHuntListKill = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Kill).ToList();
+            ReadySettingsTabs();
+        }
+
+        private void ReadySettingsTabs()
+        {
+            tabs.Add(new TabRecord("Mashed_Bloodmoon_BeastHuntTab_Hearts".Translate(), delegate
+            {
+                curTab = BeastHuntType.Heart;
+            }, () => curTab == BeastHuntType.Heart));
+
+            tabs.Add(new TabRecord("Mashed_Bloodmoon_BeastHuntTab_Kills".Translate(), delegate
+            {
+                curTab = BeastHuntType.Kill;
+            }, () => curTab == BeastHuntType.Kill));
+
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -24,17 +43,25 @@ namespace Mashed_Bloodmoon
             DrawPageTitle(inRect);
             Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn));
 
-            inRect.yMin += rectLimitY;
-            DoBottomButtons(inRect, showNext: false);
-            inRect.height -= rectLimitY;
+            Rect mainRect = new Rect(inRect.x, inRect.yMin + 45f, inRect.width, inRect.height - 45f);
+            TabDrawer.DrawTabs(new Rect(mainRect.x, mainRect.yMin + 45f, mainRect.width, mainRect.height - 45f), tabs);
 
+            mainRect.yMin += rectLimitY;
+            DoBottomButtons(mainRect, showNext: false);
+            mainRect.height -= rectLimitY;
+            DoBeastHuntWindow(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : BeastHuntListKill);
+            Widgets.EndScrollView();
+        }
+
+        public void DoBeastHuntWindow(Rect inRect, List<LycanthropeBeastHuntDef> beastHuntList)
+        {
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
 
             float gridWidth = (innerRect.width / columnNumber) - rectPadding;
             float gridHeight = gridWidth * 1.6f;
-            float rowCount = ((float)greatBeastList.Count / columnNumber);
+            float rowCount = ((float)beastHuntList.Count / columnNumber);
             if (rowCount % 1 != 0)
             {
                 rowCount += 0.5f;
@@ -46,7 +73,7 @@ namespace Mashed_Bloodmoon
             int column = 0;
             Rect greatBeastRect = new Rect(innerRect.x, innerRect.y, gridWidth, gridHeight);
 
-            foreach (LycanthropeBeastHuntDef beastHuntDef in greatBeastList)
+            foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
                 DoBeastHuntGrid(greatBeastRect, beastHuntDef);
                 if (++column >= columnNumber)
@@ -61,7 +88,6 @@ namespace Mashed_Bloodmoon
                     greatBeastRect.x += ((rectPadding / 2f) + gridWidth);
                 }
             }
-            Widgets.EndScrollView();
         }
 
         public void DoBeastHuntGrid(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
