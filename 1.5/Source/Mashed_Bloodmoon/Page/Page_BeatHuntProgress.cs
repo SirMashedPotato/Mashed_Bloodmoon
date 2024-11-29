@@ -35,7 +35,6 @@ namespace Mashed_Bloodmoon
             {
                 curTab = BeastHuntType.Kill;
             }, () => curTab == BeastHuntType.Kill));
-
         }
 
         public override void DoWindowContents(Rect inRect)
