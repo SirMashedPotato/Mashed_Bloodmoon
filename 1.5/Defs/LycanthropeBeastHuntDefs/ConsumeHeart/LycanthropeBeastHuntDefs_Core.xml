@@ -9,6 +9,16 @@
 		<targetCount>13</targetCount>
 		<!-- unlocks were-rat form -->
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_WasteRat]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_WasteRat</defName>
+		<label>beast hunt: Waste Rats</label>
+		<description>Consume the hearts of 13 waste rats.</description>
+		<targetThingDef>WasteRat</targetThingDef>
+		<targetCount>13</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Glowing</heartTexPath>
+		<!-- unlocks glowing were-rat form -->
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Thrumbo]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_Thrumbo</defName>
