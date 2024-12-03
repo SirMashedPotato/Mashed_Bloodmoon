@@ -6,7 +6,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class Page_BeatHuntProgress : LycanthropePage
+    public class Page_BeastHuntProgress : LycanthropePage
     {
         public const int columnNumber = 5;
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListHeart;
@@ -17,7 +17,7 @@ namespace Mashed_Bloodmoon
 
         public override string PageTitle => "Mashed_Bloodmoon_BeastHuntProgress".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
-        public Page_BeatHuntProgress(HediffComp_Lycanthrope comp) : base(comp)
+        public Page_BeastHuntProgress(HediffComp_Lycanthrope comp) : base(comp)
         {
             BeastHuntListHeart = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Heart).ToList();
             BeastHuntListKill = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Kill).ToList();
@@ -121,6 +121,15 @@ namespace Mashed_Bloodmoon
                     progressRect.y += mainRect.height - (progressRect.height + (rectPadding * 1.5f));
                     Widgets.Label(progressRect, label);
                 }
+            }
+            if (greatBeastDef.extraTooltip !=  null)
+            {
+                Rect extraTooltipRect = mainRect.ContractedBy(rectPadding);
+                extraTooltipRect.height = Text.LineHeight;
+                extraTooltipRect.width = extraTooltipRect.height;
+                extraTooltipRect.y += mainRect.height - (extraTooltipRect.height + (rectPadding * 1.5f));
+                extraTooltipRect.x += mainRect.width - extraTooltipRect.height - (rectPadding * 1.5f);
+                Widgets.ButtonImage(extraTooltipRect, TexButton.Info, true, greatBeastDef.extraTooltip);
             }
         }
 

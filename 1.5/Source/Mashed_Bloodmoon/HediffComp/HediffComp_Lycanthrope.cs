@@ -121,7 +121,7 @@ namespace Mashed_Bloodmoon
                     ///Customise beast form
                     item = new FloatMenuOption("Mashed_Bloodmoon_BeastHuntProgress".Translate(), delegate
                     {
-                        Page_BeatHuntProgress page = new Page_BeatHuntProgress(this);
+                        Page_BeastHuntProgress page = new Page_BeastHuntProgress(this);
                         Find.WindowStack.Add(page);
                     });
                     lycanthropeGizmoOptions.Add(item);

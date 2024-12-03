@@ -17,6 +17,8 @@ namespace Mashed_Bloodmoon
         public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHeart";
         [NoTranslate]
         public string completedTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHuntCompleted";
+        [MustTranslate]
+        public string extraTooltip;
 
         public override IEnumerable<string> ConfigErrors()
         {
