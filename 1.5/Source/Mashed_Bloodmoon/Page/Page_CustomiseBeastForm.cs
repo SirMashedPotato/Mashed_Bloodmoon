@@ -220,11 +220,7 @@ namespace Mashed_Bloodmoon
         private void DoDescriptionSection(Rect mainRect)
         {
             Widgets.DrawMenuSection(mainRect);
-            Rect inRect = mainRect;
-            inRect.x += rectPadding;
-            inRect.y += rectPadding;
-            inRect.width -= rectPadding;
-            inRect.height -= rectPadding;
+            Rect inRect = mainRect.ContractedBy(rectPadding);
 
             RectDivider rectDivider = new RectDivider(inRect, inRect.GetHashCode(), null);
 
