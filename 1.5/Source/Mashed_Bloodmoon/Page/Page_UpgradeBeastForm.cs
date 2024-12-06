@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
@@ -29,6 +30,11 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
+            if(Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate(pawn)))
+            {
+                //display new page with list of all stat bonuses. use string maker, set scroll bar size based on string size.
+            }
+
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
 
@@ -84,12 +90,27 @@ namespace Mashed_Bloodmoon
         public void DoTotemRightRect(Rect inRect, LycanthropeTotemDef totemDef)
         {
             Widgets.DrawMenuSection(inRect);
-            Widgets.Label(inRect, totemDef.label);
+            Rect mainRect = inRect.ContractedBy(rectPadding);
+            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
+
+            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            Widgets.Label(labelRect.NewCol(totemDef.label.GetWidthCached(), HorizontalJustification.Left), totemDef.label);
+            TaggedString levelLabel = "(" + compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) + " / " + totemDef.maxLevel + ")";
+            Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
+
+            foreach (StatDef statDef in totemDef.statDefs)
+            {
+                float statValue = compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) * totemDef.statIncreasePerLevel;
+                RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+                TaggedString statLabel = " - " + statDef.LabelCap + ": " + statValue.ToStringWithSign();
+                Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
+            }
         }
 
         public void DoTotemLeftRect(Rect inRect, LycanthropeTotemDef totemDef)
         {
             Widgets.DrawMenuSection(inRect);
+            Rect mainRect = inRect.ContractedBy(rectPadding);
         }
 
         public void DoRightSide(Rect inRect)

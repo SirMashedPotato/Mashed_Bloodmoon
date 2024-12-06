@@ -14,7 +14,7 @@ namespace Mashed_Bloodmoon
         public int abilityUnlocksAt = 10;
         public int maxLevel = 30;
         public int purchaseHeartCost = 10;
-        public float increasePerLevel = 1f;
+        public float statIncreasePerLevel = 1f;
         public bool onlyTransformed = true;
         public bool displayAsTotem = true;
         public bool canBeTransferred = true;
@@ -50,11 +50,32 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Utility method to check if the pawn can upgrade the ability
+        /// Utility method to check if the pawn can upgrade the totem
         /// </summary>
-        public bool CanUpgrade(int curLevel)
+        public bool CanUpgrade(HediffComp_Lycanthrope compLycanthrope)
         {
-            return curLevel < maxLevel;
+            if (!canBePurchased)
+            {
+                return false;
+            }
+            if (compLycanthrope.usedTotemTracker.TryGetValue(this, 0) >= maxLevel)
+            {
+                return false;
+            }
+            if (compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0) < purchaseHeartCost)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Utility method for purchasing a totem level with hearts
+        /// </summary>
+        public void PurchaseTotemLevel(HediffComp_Lycanthrope compLycanthrope)
+        {
+            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost;
+            UseTotem(compLycanthrope, 1);
         }
 
         /// <summary>
@@ -92,7 +113,7 @@ namespace Mashed_Bloodmoon
             }
             if (compLycanthrope.usedTotemTracker.TryGetValue(this, out int usedCount))
             {
-                bonus = usedCount * increasePerLevel;
+                bonus = usedCount * statIncreasePerLevel;
                 return true;
             }
             return false;
