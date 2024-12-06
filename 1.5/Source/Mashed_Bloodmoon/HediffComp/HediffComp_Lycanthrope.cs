@@ -60,10 +60,7 @@ namespace Mashed_Bloodmoon
             base.CompPostMake();
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
             ResetColours();
-            foreach (LycanthropeTotemDef def in DefDatabase<LycanthropeTotemDef>.AllDefs)
-            {
-                usedTotemTracker.Add(def, 0);
-            }
+            usedTotemTracker.Add(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
             unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart, 0);
         }
 

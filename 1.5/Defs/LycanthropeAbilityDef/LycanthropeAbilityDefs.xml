@@ -9,4 +9,13 @@
 		</abilityDefs>
 		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
+	<!--<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>Moon veil</label>
+		<abilityDefs>
+			<li>Mashed_Bloodmoon_MoonVeil</li>
+		</abilityDefs>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>-->
 </Defs>
