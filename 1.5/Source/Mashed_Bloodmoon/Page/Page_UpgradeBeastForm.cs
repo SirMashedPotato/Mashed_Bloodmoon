@@ -30,10 +30,11 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            if(Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate(pawn)))
-            {
-                //display new page with list of all stat bonuses. use string maker, set scroll bar size based on string size.
-            }
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate());
+            //if(Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate(pawn)))
+            //{
+            //display new page with list of all stat bonuses. use string maker, set scroll bar size based on string size.
+            //}
 
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
@@ -66,10 +67,10 @@ namespace Mashed_Bloodmoon
             int index = 0;
             foreach (LycanthropeTotemDef totemDef in TotemList)
             {
-                Rect greatBeastRect = innerRect;
-                greatBeastRect.height = rowHeight;
-                greatBeastRect.y += (((rectPadding / 2f) + rowHeight) * index);
-                DoTotemRow(greatBeastRect, totemDef);
+                Rect totemRect = innerRect;
+                totemRect.height = rowHeight;
+                totemRect.y += ((rectPadding / 2f) + rowHeight) * index;
+                DoTotemRow(totemRect, totemDef);
                 index++;
             }
             Widgets.EndScrollView();
@@ -98,12 +99,35 @@ namespace Mashed_Bloodmoon
             TaggedString levelLabel = "(" + compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) + " / " + totemDef.maxLevel + ")";
             Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
 
+            var font = Text.Font;
+            Text.Font = GameFont.Tiny;
             foreach (StatDef statDef in totemDef.statDefs)
             {
                 float statValue = compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) * totemDef.statIncreasePerLevel;
                 RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
                 TaggedString statLabel = " - " + statDef.LabelCap + ": " + statValue.ToStringWithSign();
+                if (!totemDef.onlyTransformed)
+                {
+                    statLabel += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
+                }
                 Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
+            }
+            Text.Font = font;
+
+            if (totemDef.canBePurchased)
+            {
+                Rect upgradeRect = mainRect;
+                upgradeRect.height = Text.LineHeight * 1.5f;
+                upgradeRect.width = 130f;
+                upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
+                upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - rectPadding;
+                bool canPurchase = totemDef.CanUpgrade(compLycanthrope);
+                string upgradeLabel = "Mashed_Bloodmoon_UpgradeTotemLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost);
+                Color textColor = canPurchase ? Color.cyan : Color.red;
+                if (Widgets.ButtonText(upgradeRect, upgradeLabel, true, canPurchase, textColor, active: canPurchase))
+                {
+                    totemDef.PurchaseTotemLevel(compLycanthrope);
+                }
             }
         }
 

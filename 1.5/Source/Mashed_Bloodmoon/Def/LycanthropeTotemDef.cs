@@ -54,10 +54,6 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public bool CanUpgrade(HediffComp_Lycanthrope compLycanthrope)
         {
-            if (!canBePurchased)
-            {
-                return false;
-            }
             if (compLycanthrope.usedTotemTracker.TryGetValue(this, 0) >= maxLevel)
             {
                 return false;
