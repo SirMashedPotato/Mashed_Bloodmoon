@@ -8,6 +8,8 @@ namespace Mashed_Bloodmoon
     public class LycanthropeTotemDef : Def
     {
         public string labelShort = "???";
+        [NoTranslate]
+        public string iconPath = "Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemHeart";
         public ThingDef totemThingDef;
         public List<StatDef> statDefs;
         public AbilityDef abilityDef;
@@ -23,7 +25,7 @@ namespace Mashed_Bloodmoon
 
         public string LabelShortCap => labelShort.CapitalizeFirst();
 
-        public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : "UI/Icons/Mashed_Bloodmoon_BeastHeart";
+        public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : iconPath;
         public Color IconColor => totemThingDef != null ? totemThingDef.graphic.color : Color.white;
 
         public bool AbilityUnlocked(int usedCount) => abilityDef != null && usedCount >= abilityUnlocksAt;

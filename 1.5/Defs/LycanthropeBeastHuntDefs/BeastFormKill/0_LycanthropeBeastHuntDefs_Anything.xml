@@ -5,39 +5,59 @@
 		<defName>Mashed_Bloodmoon_SlaughterI</defName>
 		<label>beast hunt: Slaughter I</label>
 		<description>Kill 25 pawns while in beast form.</description>
-		<extraTooltip>Completing this Beast Hunt increases the level of the Slaughter Totem by 1.</extraTooltip>
-		<targetCount>25</targetCount> 
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Slaughter by 1.</extraTooltip>
+		<targetCount>25</targetCount>
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SlaughterII]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase">
 		<defName>Mashed_Bloodmoon_SlaughterII</defName>
 		<label>beast hunt: Slaughter II</label>
 		<description>Kill 50 pawns while in beast form.</description>
-		<extraTooltip>Completing this Beast Hunt increases the level of the Slaughter Totem by 1.</extraTooltip>
-		<targetCount>50</targetCount> 
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Slaughter by 1.</extraTooltip>
+		<targetCount>50</targetCount>
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SlaughterIII]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase">
 		<defName>Mashed_Bloodmoon_SlaughterIII</defName>
 		<label>beast hunt: Slaughter III</label>
 		<description>Kill 100 pawns while in beast form.</description>
-		<extraTooltip>Completing this Beast Hunt increases the level of the Slaughter Totem by 1.</extraTooltip>
-		<targetCount>100</targetCount> 
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Slaughter by 1.</extraTooltip>
+		<targetCount>100</targetCount>
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SlaughterIV]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase">
 		<defName>Mashed_Bloodmoon_SlaughterIV</defName>
 		<label>beast hunt: Slaughter IV</label>
 		<description>Kill 200 pawns while in beast form.</description>
-		<extraTooltip>Completing this Beast Hunt increases the level of the Slaughter Totem by 1.</extraTooltip>
-		<targetCount>200</targetCount> 
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Slaughter by 1.</extraTooltip>
+		<targetCount>200</targetCount>
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SlaughterV]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase">
 		<defName>Mashed_Bloodmoon_SlaughterV</defName>
 		<label>beast hunt: Slaughter V</label>
 		<description>Kill 500 pawns while in beast form.</description>
-		<extraTooltip>Completing this Beast Hunt increases the level of the Slaughter Totem by 1.</extraTooltip>
-		<targetCount>500</targetCount> 
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Slaughter by 1.</extraTooltip>
+		<targetCount>500</targetCount>
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

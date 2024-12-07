@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemSlaughter]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemSlaughter</defName>
+		<label>Totem of Slaughter</label>
+		<labelShort>slaughter totem</labelShort>
+		<description>Proof of a merciless hunter. Each level grants a 2% to reduce lycanthropic stress upon a landing a killing blow while in beast form.\n\nThis totem can only by upgraded by completing Slaughter beast hunts.</description>
+		<statDefs>
+			<li>IncomingDamageFactor</li> <!-- TODO -->
+		</statDefs>
+		<maxLevel>5</maxLevel>
+		<statIncreasePerLevel>0.02</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+		<canBeTransferred>false</canBeTransferred>
+		<canBePurchased>false</canBePurchased>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+</Defs>
