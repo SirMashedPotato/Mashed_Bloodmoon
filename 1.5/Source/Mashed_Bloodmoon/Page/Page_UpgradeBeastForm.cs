@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using static UnityEngine.Random;
 
 namespace Mashed_Bloodmoon
 {
@@ -10,6 +11,7 @@ namespace Mashed_Bloodmoon
     {
         public override string PageTitle => "Mashed_Bloodmoon_UpgradeBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
+        private static readonly Texture2D ConsumedHeartsFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.7f, 0.3f, 0.3f));
         private readonly List<LycanthropeTotemDef> TotemList;
         private readonly List<LycanthropeAbilityDef> AbilityList;
         private static Vector2 scrollPositionTotem = Vector2.zero;
@@ -17,7 +19,7 @@ namespace Mashed_Bloodmoon
 
         public float innerRectHeightTotem;
         public float innerRectHeightAbility;
-        public static float rowHeight = Text.LineHeight * 5f;
+        public static float rowHeight = Text.LineHeight * 6f;
 
         public Page_UpgradeBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
@@ -39,9 +41,14 @@ namespace Mashed_Bloodmoon
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
 
+            Rect consumedHeartsRect = inRect;
+            consumedHeartsRect.height = Text.LineHeight * 2f;
+            DoConsumedHeartsBar(consumedHeartsRect);
+
             Rect leftRect = inRect;
             leftRect.width = (inRect.width / 2) - (rectPadding / 2);
-            leftRect.height -= rectLimitY;
+            leftRect.y += consumedHeartsRect.height + rectPadding;
+            leftRect.height -= (consumedHeartsRect.height + rectLimitY + rectPadding);
             DoLeftSide(leftRect);
 
             Rect rightRect = leftRect;
@@ -49,15 +56,21 @@ namespace Mashed_Bloodmoon
             DoRightSide(rightRect);
         }
 
+        public void DoConsumedHeartsBar(Rect inRect)
+        {
+            int consumedCount = compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
+            int maxLevel = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
+            float fillPercent = (float)consumedCount / maxLevel;
+            Widgets.FillableBar(inRect, fillPercent, ConsumedHeartsFillTex, Texture2D.grayTexture, true);
+            var anchor = Text.Anchor;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(inRect, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.label + " (" + consumedCount + " / " + maxLevel + ")");
+            Text.Anchor = anchor;
+        }
+
         public void DoLeftSide(Rect inRect)
         {
-            Rect totemRowRect = inRect;
-            totemRowRect.height = rowHeight;
-            DoTotemRow(totemRowRect, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts);
-
             Rect scrollRect = inRect;
-            scrollRect.height -= totemRowRect.height + (rectPadding / 2f);
-            scrollRect.y += totemRowRect.height + (rectPadding / 2f);
 
             Rect innerRect = scrollRect;
             innerRect.height = innerRectHeightTotem;
