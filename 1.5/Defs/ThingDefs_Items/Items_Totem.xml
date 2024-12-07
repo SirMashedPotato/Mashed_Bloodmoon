@@ -41,7 +41,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
 		<label>Huntsman's totem (Endurance)</label>
-		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a bonus to the rate wounds heal, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a bonus to the rate wounds heal, while in beast form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			<StatDef>InjuryHealingFactor</StatDef>
 		</descriptionHyperlinks>
@@ -58,7 +58,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemGuile</defName>
 		<label>Huntsman's totem (Guile)</label>
-		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee dodge chance, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee dodge chance, while in beast form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			
 		</descriptionHyperlinks>
@@ -75,7 +75,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase" MayRequire="ludeon.rimworld.ideology">
 		<defName>Mashed_Bloodmoon_TotemSight</defName>
 		<label>Huntsman's totem (Sight)</label>
-		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee hit chance in low light, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee hit chance in low light, while in beast form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			<StatDef>MeleeHitChanceOutdoorsDarkOffset</StatDef>
 			<StatDef>MeleeHitChanceIndoorsDarkOffset</StatDef>
@@ -93,7 +93,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemSpeed</defName>
 		<label>Huntsman's totem (Speed)</label>
-		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to movement speed, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to movement speed, while in beast form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			<StatDef>MoveSpeed</StatDef>
 		</descriptionHyperlinks>
@@ -110,7 +110,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemStrength</defName>
 		<label>Huntsman's totem (Strength)</label>
-		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee damage, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent bonus to melee damage, while in beast form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			<StatDef>MeleeDamageFactor</StatDef>
 		</descriptionHyperlinks>
@@ -127,7 +127,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
 		<defName>Mashed_Bloodmoon_TotemTenacity</defName>
 		<label>Huntsman's totem (Tenacity)</label>
-		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent reduction to incoming damage, while in lycanthrope form. A single lycanthrope can use multiple totems of the same type.</description>
+		<description>A totem of the hunt, a skull seemingly made entirely out of crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to gain a permanent reduction to incoming damage, while in beast form. A single lycanthrope can use multiple totems of the same type.</description>
 		<descriptionHyperlinks>
 			<StatDef>IncomingDamageFactor</StatDef>
 		</descriptionHyperlinks>

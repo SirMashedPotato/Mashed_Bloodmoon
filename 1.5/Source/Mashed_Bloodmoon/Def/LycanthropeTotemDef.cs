@@ -23,6 +23,9 @@ namespace Mashed_Bloodmoon
 
         public string LabelShortCap => labelShort.CapitalizeFirst();
 
+        public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : "UI/Icons/Mashed_Bloodmoon_BeastHeart";
+        public Color IconColor => totemThingDef != null ? totemThingDef.graphic.color : Color.white;
+
         public bool AbilityUnlocked(int usedCount) => abilityDef != null && usedCount >= abilityUnlocksAt;
 
         public override IEnumerable<string> ConfigErrors()

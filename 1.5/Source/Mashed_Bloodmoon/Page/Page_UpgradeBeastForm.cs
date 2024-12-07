@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using static UnityEngine.Random;
 
 namespace Mashed_Bloodmoon
 {
@@ -148,6 +147,23 @@ namespace Mashed_Bloodmoon
         {
             Widgets.DrawMenuSection(inRect);
             Rect mainRect = inRect.ContractedBy(rectPadding);
+            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(totemDef.IconTexPath), ScaleMode.StretchToFill, true, 0, totemDef.IconColor, 0f, 0f);
+
+            if (totemDef.description != null)
+            {
+                Rect descriptionRect = mainRect;
+                descriptionRect.height = Text.LineHeight;
+                descriptionRect.width = descriptionRect.height;
+                descriptionRect.y += mainRect.height - descriptionRect.height;
+                descriptionRect.x += mainRect.width - descriptionRect.width;
+                if (Widgets.ButtonImage(descriptionRect, TexButton.Info, true, totemDef.description))
+                {
+                    if (totemDef.totemThingDef != null)
+                    {
+                        Find.WindowStack.Add(new Dialog_InfoCard(totemDef.totemThingDef));
+                    }
+                }
+            }
         }
 
         public void DoRightSide(Rect inRect)

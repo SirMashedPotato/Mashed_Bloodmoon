@@ -146,7 +146,6 @@ namespace Mashed_Bloodmoon
             Widgets.Label(lowerRect, greatBeastDef.description);
             Text.Anchor = anchor;
             Text.Font = font;
-
         }
     }
 }
