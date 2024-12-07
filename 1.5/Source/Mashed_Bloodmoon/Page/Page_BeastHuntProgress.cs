@@ -40,7 +40,7 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn));
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn));
 
             Rect mainRect = new Rect(inRect.x, inRect.yMin + 45f, inRect.width, inRect.height - 45f);
             TabDrawer.DrawTabs(new Rect(mainRect.x, mainRect.yMin + 45f, mainRect.width, mainRect.height - 45f), tabs);
@@ -129,7 +129,7 @@ namespace Mashed_Bloodmoon
                 extraTooltipRect.width = extraTooltipRect.height;
                 extraTooltipRect.y += mainRect.height - (extraTooltipRect.height + (rectPadding * 1.5f));
                 extraTooltipRect.x += mainRect.width - extraTooltipRect.height - (rectPadding * 1.5f);
-                Widgets.ButtonImage(extraTooltipRect, TexButton.Info, true, greatBeastDef.extraTooltip);
+                Widgets.ButtonImage(extraTooltipRect, TexButton.Info, false, greatBeastDef.extraTooltip);
             }
         }
 

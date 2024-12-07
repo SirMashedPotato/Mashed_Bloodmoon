@@ -17,13 +17,10 @@
 	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
 	<!-- ==========[Upgrade beast form page]==========-->
 	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Totem levels, abilities, and ability levels can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\nAll stat bonuses are only active while in Beast Form, unless marked with an (H). All abilities are only avaliable while in Beast Form.</Mashed_Bloodmoon_UpgradeBeastFormDesc>
+	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
+	<Mashed_Bloodmoon_UnlockedAbilities>\n\nUnlocked abilities:</Mashed_Bloodmoon_UnlockedAbilities>
 	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
 	<Mashed_Bloodmoon_UpgradeTotemLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeTotemLabel>
-	<Mashed_Bloodmoon_UpgradeTotemDesc>Spend {0} Consumed Hearts to increase the level of this totem by 1.</Mashed_Bloodmoon_UpgradeTotemDesc>
-	<!-- ==========[lycanthrope hediff description]==========-->
-	<Mashed_Bloodmoon_UsedTotems>\n\nUsed totems:</Mashed_Bloodmoon_UsedTotems>
-	<Mashed_Bloodmoon_TotemAbility>\n    - Added ability : {0_label}</Mashed_Bloodmoon_TotemAbility>
-	<Mashed_Bloodmoon_LycanthropeFormOnly>\n\nBonuses marked with (H) are also active outside of beast form.</Mashed_Bloodmoon_LycanthropeFormOnly>
 	<!-- ==========[Great beast hunt page]==========-->
 	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_BeastHuntDesc>
 	<Mashed_Bloodmoon_BeastHuntTab_Hearts>Consume Hearts</Mashed_Bloodmoon_BeastHuntTab_Hearts>

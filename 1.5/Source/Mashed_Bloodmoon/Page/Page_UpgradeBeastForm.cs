@@ -31,11 +31,8 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate());
-            //if(Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, true, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate(pawn)))
-            //{
-            //display new page with list of all stat bonuses. use string maker, set scroll bar size based on string size.
-            //}
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate());
+            Widgets.ButtonImage(new Rect(inRect.width - (60f + rectPadding), 0f, 30f, 30f), TexButton.CategorizedResourceReadout, false, EffectsTooltip());
 
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, showNext: false);
@@ -67,6 +64,40 @@ namespace Mashed_Bloodmoon
             Text.Anchor = anchor;
         }
 
+        public string EffectsTooltip()
+        {
+            string tooltip = "Mashed_Bloodmoon_CurrentBonuses".Translate();
+
+            foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in compLycanthrope.usedTotemTracker)
+            {
+                foreach (StatDef statDef in usedTotem.Key.statDefs)
+                {
+                    usedTotem.Key.TotemStatBonus(pawn, out float bonus, true);
+                    tooltip += "\n - " + statDef.LabelCap + ": " + bonus.ToStringWithSign();
+                    if (!usedTotem.Key.onlyTransformed)
+                    {
+                        tooltip += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
+                    }
+                }
+            }
+
+            tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
+
+            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in compLycanthrope.unlockedAbilityTracker)
+            {
+                if (!unlockedAbility.Key.abilityDefs.NullOrEmpty())
+                {
+                    tooltip += "\n - " + unlockedAbility.Key.abilityDefs[unlockedAbility.Value].LabelCap;
+                    if (unlockedAbility.Key.abilityDefs.Count > 1)
+                    {
+                        tooltip += " (" + "Level: " + unlockedAbility.Value + ")";
+                    }
+                }
+            }
+
+            return tooltip;
+        }
+
         public void DoLeftSide(Rect inRect)
         {
             Rect scrollRect = inRect;
@@ -96,11 +127,11 @@ namespace Mashed_Bloodmoon
             leftRect.width -= rightRect.width + (rectPadding / 2f);
             rightRect.x += leftRect.width + (rectPadding / 2f);
 
-            DoTotemRightRect(leftRect, totemDef);
-            DoTotemLeftRect(rightRect, totemDef);
+            DoTotemLeftRect(leftRect, totemDef);
+            DoTotemRightRect(rightRect, totemDef);
         }
 
-        public void DoTotemRightRect(Rect inRect, LycanthropeTotemDef totemDef)
+        public void DoTotemLeftRect(Rect inRect, LycanthropeTotemDef totemDef)
         {
             Widgets.DrawMenuSection(inRect);
             Rect mainRect = inRect.ContractedBy(rectPadding);
@@ -143,7 +174,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void DoTotemLeftRect(Rect inRect, LycanthropeTotemDef totemDef)
+        public void DoTotemRightRect(Rect inRect, LycanthropeTotemDef totemDef)
         {
             Widgets.DrawMenuSection(inRect);
             Rect mainRect = inRect.ContractedBy(rectPadding);
