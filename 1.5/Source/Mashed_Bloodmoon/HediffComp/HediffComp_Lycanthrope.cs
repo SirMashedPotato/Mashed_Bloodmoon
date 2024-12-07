@@ -177,39 +177,6 @@ namespace Mashed_Bloodmoon
                     LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.TotemStatBonus(parent.pawn, out float bonus, true);
                     description += "\n  - " + statDef.LabelCap + ": +" + bonus;
                 }
-
-                ///Totems
-                description += "Mashed_Bloodmoon_UsedTotems".Translate();
-                foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in usedTotemTracker)
-                {
-                    if (usedTotem.Key.displayAsTotem)
-                    {
-                        description += "\n  - " + usedTotem.Key.LabelShortCap + ": " + usedTotem.Value;
-                        if (!usedTotem.Key.statDefs.NullOrEmpty())
-                        {
-                            foreach (StatDef statDef in usedTotem.Key.statDefs)
-                            {
-                                usedTotem.Key.TotemStatBonus(parent.pawn, out float bonus, true);
-                                description += "\n    - " + statDef.LabelCap + ": ";
-                                if (bonus > 0)
-                                {
-                                    description += "+";
-                                }
-                                description += bonus.ToString();
-                                if (!usedTotem.Key.onlyTransformed)
-                                {
-                                    description += " (H)";
-                                }
-                            }
-                            if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
-                            {
-                                description += "Mashed_Bloodmoon_TotemAbility".Translate(usedTotem.Key.abilityDef);
-                            }
-                        }
-                    }
-                }
-                description += "Mashed_Bloodmoon_LycanthropeFormOnly".Translate();
-
                 return description;
             }
         }
