@@ -20,7 +20,8 @@
 	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
 	<Mashed_Bloodmoon_UnlockedAbilities>\n\nUnlocked abilities:</Mashed_Bloodmoon_UnlockedAbilities>
 	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
-	<Mashed_Bloodmoon_UpgradeTotemLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeTotemLabel>
+	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
+	<Mashed_Bloodmoon_UpgradeLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeLabel>
 	<!-- ==========[Great beast hunt page]==========-->
 	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_BeastHuntDesc>
 	<Mashed_Bloodmoon_BeastHuntTab_Hearts>Consume Hearts</Mashed_Bloodmoon_BeastHuntTab_Hearts>

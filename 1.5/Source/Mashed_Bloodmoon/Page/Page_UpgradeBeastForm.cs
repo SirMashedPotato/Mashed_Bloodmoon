@@ -83,16 +83,9 @@ namespace Mashed_Bloodmoon
 
             tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
 
-            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in compLycanthrope.unlockedAbilityTracker)
+            foreach (LycanthropeAbilityDef unlockedAbility in compLycanthrope.unlockedAbilityTracker)
             {
-                if (!unlockedAbility.Key.abilityDefs.NullOrEmpty())
-                {
-                    tooltip += "\n - " + unlockedAbility.Key.abilityDefs[unlockedAbility.Value].LabelCap;
-                    if (unlockedAbility.Key.abilityDefs.Count > 1)
-                    {
-                        tooltip += " (" + "Level: " + unlockedAbility.Value + ")";
-                    }
-                }
+                tooltip += "\n - " + unlockedAbility.LabelCap;
             }
 
             return tooltip;
@@ -157,7 +150,7 @@ namespace Mashed_Bloodmoon
             }
             Text.Font = font;
 
-            if (totemDef.canBePurchased)
+            if (totemDef.canBePurchased && (!compLycanthrope.usedTotemTracker.ContainsKey(totemDef) || compLycanthrope.usedTotemTracker[totemDef] < totemDef.maxLevel))
             {
                 Rect upgradeRect = mainRect;
                 upgradeRect.height = Text.LineHeight * 1.5f;
@@ -165,9 +158,8 @@ namespace Mashed_Bloodmoon
                 upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
                 upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - rectPadding;
                 bool canPurchase = totemDef.CanUpgrade(compLycanthrope);
-                string upgradeLabel = "Mashed_Bloodmoon_UpgradeTotemLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost);
-                Color textColor = canPurchase ? Color.cyan : Color.red;
-                if (Widgets.ButtonText(upgradeRect, upgradeLabel, true, canPurchase, textColor, active: canPurchase))
+                string upgradeLabel = "Mashed_Bloodmoon_UpgradeLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost);
+                if (Widgets.ButtonText(upgradeRect, upgradeLabel, true, canPurchase, active: canPurchase))
                 {
                     totemDef.PurchaseTotemLevel(compLycanthrope);
                 }
@@ -199,12 +191,89 @@ namespace Mashed_Bloodmoon
 
         public void DoRightSide(Rect inRect)
         {
-            Widgets.DrawMenuSection(inRect);
+            Rect scrollRect = inRect;
+
+            Rect innerRect = scrollRect;
+            innerRect.height = innerRectHeightAbility;
+            innerRect.width -= 30f;
+
+            Widgets.BeginScrollView(scrollRect, ref scrollPositionAbility, innerRect);
+            int index = 0;
+            foreach (LycanthropeAbilityDef abilityDef in AbilityList)
+            {
+                Rect abilityRect = innerRect;
+                abilityRect.height = rowHeight;
+                abilityRect.y += ((rectPadding / 2f) + rowHeight) * index;
+                DoAbilityRow(abilityRect, abilityDef);
+                index++;
+            }
+            Widgets.EndScrollView();
         }
 
         public void DoAbilityRow(Rect inRect, LycanthropeAbilityDef abilityDef)
         {
+            Rect rightRect = inRect;
+            Rect leftRect = inRect;
+            rightRect.width = rightRect.height;
+            leftRect.width -= rightRect.width + (rectPadding / 2f);
+            rightRect.x += leftRect.width + (rectPadding / 2f);
 
+            DoAbilityLeftRect(leftRect, abilityDef);
+            DoAbilityRightRect(rightRect, abilityDef);
+        }
+
+        public void DoAbilityLeftRect(Rect inRect, LycanthropeAbilityDef abilityDef)
+        {
+            Widgets.DrawMenuSection(inRect);
+            Rect mainRect = inRect.ContractedBy(rectPadding);
+            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
+
+            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            Widgets.Label(labelRect.NewCol(abilityDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), abilityDef.LabelCap);
+            if (!abilityDef.CanGainAbility(compLycanthrope))
+            {
+                TaggedString levelLabel = "Unlocked".Translate();
+                Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
+            }
+
+            /*
+            var font = Text.Font;
+            Text.Font = GameFont.Tiny;
+            foreach (StatDef statDef in totemDef.statDefs)
+            {
+                float statValue = compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) * totemDef.statIncreasePerLevel;
+                RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+                TaggedString statLabel = " - " + statDef.LabelCap + ": " + statValue.ToStringWithSign();
+                if (!totemDef.onlyTransformed)
+                {
+                    statLabel += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
+                }
+                Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
+            }
+            Text.Font = font;
+            */
+
+            if (abilityDef.canBePurchased && abilityDef.CanGainAbility(compLycanthrope))
+            {
+                Rect upgradeRect = mainRect;
+                upgradeRect.height = Text.LineHeight * 1.5f;
+                upgradeRect.width = 130f;
+                upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
+                upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - rectPadding;
+                bool canPurchase = abilityDef.CanPurchase(compLycanthrope);
+                string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.heartCost);;
+                if (Widgets.ButtonText(upgradeRect, unlockLabel, true, canPurchase, active: canPurchase))
+                {
+                    abilityDef.PurchaseAbility(compLycanthrope);
+                }
+            }
+        }
+
+        public void DoAbilityRightRect(Rect inRect, LycanthropeAbilityDef abilityDef)
+        {
+            Widgets.DrawMenuSection(inRect);
+            Rect mainRect = inRect.ContractedBy(rectPadding);
+            GUI.DrawTexture(mainRect, abilityDef.abilityDef.uiIcon);
         }
     }
 }

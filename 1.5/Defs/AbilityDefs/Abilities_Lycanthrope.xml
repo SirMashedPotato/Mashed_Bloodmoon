@@ -8,7 +8,7 @@
 		<descriptionHyperlinks>
 			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
 		</descriptionHyperlinks>
-		<level>0</level>
+		<level>1</level>
 		<cooldownTicksRange>300</cooldownTicksRange>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_ConsumeHeart</iconPath>
 		<jobDef>CastAbilityOnThingMelee</jobDef>

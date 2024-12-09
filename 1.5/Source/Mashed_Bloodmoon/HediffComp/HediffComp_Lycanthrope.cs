@@ -14,8 +14,14 @@ namespace Mashed_Bloodmoon
         public Color secondaryColour = Color.white;
         public Color tertiaryColour = Color.white;
 
+        public List<LycanthropeAbilityDef> unlockedAbilityTracker = new List<LycanthropeAbilityDef>();
+        /// <summary>
+        /// The int is the level of the totem
+        /// </summary>
         public Dictionary<LycanthropeTotemDef, int> usedTotemTracker = new Dictionary<LycanthropeTotemDef, int>();
-        public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
+        /// <summary>
+        /// The int is the progress towards the beast hunt
+        /// </summary>
         public Dictionary<LycanthropeBeastHuntDef, int> beastHuntTracker = new Dictionary<LycanthropeBeastHuntDef, int>();
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
@@ -61,7 +67,7 @@ namespace Mashed_Bloodmoon
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
             ResetColours();
             usedTotemTracker.Add(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
-            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart, 0);
+            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart);
         }
 
         /// <summary>
@@ -190,8 +196,8 @@ namespace Mashed_Bloodmoon
             Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);
             Scribe_Values.Look(ref tertiaryColour, "tertiaryColour", Color.white);
-            Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref unlockedAbilityTracker, "unlockedAbilityTracker", LookMode.Def);
+            Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref beastHuntTracker, "beastHuntTracker", LookMode.Def);
         }
     }

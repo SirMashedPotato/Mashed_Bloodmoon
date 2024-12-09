@@ -105,6 +105,10 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
+            foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
+            {
+                parent.pawn.abilities.GainAbility(unlockedAbility.abilityDef);
+            }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
                 if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
@@ -112,10 +116,6 @@ namespace Mashed_Bloodmoon
                     parent.pawn.abilities.GainAbility(usedTotem.Key.abilityDef);
                 }
                 usedTotem.Key.transformationWorker?.PostTransformationBegin(parent.pawn, usedTotem.Value);
-            }
-            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
-            {
-                parent.pawn.abilities.GainAbility(unlockedAbility.Key.abilityDefs[unlockedAbility.Value]);
             }
             foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
             {
@@ -154,6 +154,10 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
+            foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
+            {
+                parent.pawn.abilities.RemoveAbility(unlockedAbility.abilityDef);
+            }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
                 if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
@@ -161,10 +165,6 @@ namespace Mashed_Bloodmoon
                     parent.pawn.abilities.RemoveAbility(usedTotem.Key.abilityDef);
                 }
                 usedTotem.Key.transformationWorker?.PostTransformationEnd(parent.pawn, usedTotem.Value);
-            }
-            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
-            {
-                parent.pawn.abilities.RemoveAbility(unlockedAbility.Key.abilityDefs[unlockedAbility.Value]);
             }
             foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
             {

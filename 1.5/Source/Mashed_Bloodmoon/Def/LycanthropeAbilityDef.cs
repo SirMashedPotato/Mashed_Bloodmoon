@@ -1,30 +1,46 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using Verse;
 
 namespace Mashed_Bloodmoon
 {
     public class LycanthropeAbilityDef : Def
     {
-        public List<AbilityDef> abilityDefs;
+        public AbilityDef abilityDef;
         public int heartCost = 0;
-        public float upgradeCostMult = 2f;
         public bool canBePurchased = true;
 
         /// <summary>
-        /// Utility method to check if the pawn can upgrade the ability
+        /// Utility method to check if the pawn can purchase the ability
         /// </summary>
-        public bool CanUpgrade(int curLevel)
+        public bool CanPurchase(HediffComp_Lycanthrope compLycanthrope)
         {
-            return curLevel < abilityDefs.Count;
+            return CanPurchase(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0));
         }
 
         /// <summary>
-        /// Utility method to get the heart cost of upgrading an ability
+        /// Utility method to check if the pawn can purchase the ability
         /// </summary>
-        public float GetUpgradeCost(int curLevel)
+        public bool CanPurchase(int curHeartCount)
         {
-            return heartCost * (upgradeCostMult * (curLevel + 1));
+            return curHeartCount >= heartCost;
+        }
+
+        /// <summary>
+        /// Utility method to check if the pawn can gain the ability
+        /// </summary>
+        public bool CanGainAbility(HediffComp_Lycanthrope compLycanthrope)
+        {
+            return !compLycanthrope.unlockedAbilityTracker.Contains(this);
+        }
+
+        /// <summary>
+        /// Utility method for upgrading or unlocking an ability
+        /// Adds the ability to the lycanthropes ability tracker if it is missing
+        /// </summary>
+        public void PurchaseAbility(HediffComp_Lycanthrope compLycanthrope)
+        {
+            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= heartCost;
+            compLycanthrope.unlockedAbilityTracker.Add(this);
         }
     }
 }

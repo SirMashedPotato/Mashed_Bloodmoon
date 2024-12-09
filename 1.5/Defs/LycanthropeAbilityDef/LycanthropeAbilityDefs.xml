@@ -3,19 +3,37 @@
 	<!-- ==========[Mashed_Bloodmoon_ConsumeHeart]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
-		<label>Consume heart</label>
-		<abilityDefs>
-			<li>Mashed_Bloodmoon_ConsumeHeart</li>
-		</abilityDefs>
+		<label>consume heart</label>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<heartCost>1</heartCost>
 		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
-	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
-	<!--<Mashed_Bloodmoon.LycanthropeAbilityDef>
-		<defName>Mashed_Bloodmoon_MoonVeil</defName>
-		<label>Moon veil</label>
-		<abilityDefs>
-			<li>Mashed_Bloodmoon_MoonVeil</li>
-		</abilityDefs>
+	<!-- ==========[Mashed_Bloodmoon_BeastCall]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_BeastCall</defName>
+		<label>beast call</label>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
 		<heartCost>50</heartCost>
-	</Mashed_Bloodmoon.LycanthropeAbilityDef>-->
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_BeastHowl</defName>
+		<label>beast howl</label>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastLeap]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_BeastLeap</defName>
+		<label>beast leap</label>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>moon veil</label>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 </Defs>
