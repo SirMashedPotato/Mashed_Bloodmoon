@@ -10,7 +10,6 @@ namespace Mashed_Bloodmoon
     {
         public override string PageTitle => "Mashed_Bloodmoon_UpgradeBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
-        private static readonly Texture2D ConsumedHeartsFillTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.7f, 0.3f, 0.3f));
         private readonly List<LycanthropeTotemDef> TotemList;
         private readonly List<LycanthropeAbilityDef> AbilityList;
         private static Vector2 scrollPositionTotem = Vector2.zero;
@@ -57,7 +56,7 @@ namespace Mashed_Bloodmoon
             int consumedCount = compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
             int maxLevel = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
             float fillPercent = (float)consumedCount / maxLevel;
-            Widgets.FillableBar(inRect, fillPercent, ConsumedHeartsFillTex, Texture2D.grayTexture, true);
+            Widgets.FillableBar(inRect, fillPercent, Assets.ConsumedHeartsFillTex, Texture2D.grayTexture, true);
             var anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(inRect, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.label + " (" + consumedCount + " / " + maxLevel + ")");

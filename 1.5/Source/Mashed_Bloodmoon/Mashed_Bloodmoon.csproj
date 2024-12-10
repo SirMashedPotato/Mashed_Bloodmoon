@@ -148,6 +148,7 @@
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
     <Compile Include="Def\LycanthropeGraphicData.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_BeastHuntCompleted.cs" />
+    <Compile Include="Utility\Assets.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
     <Compile Include="DefModExtension\PawnTotemRecord.cs" />
   </ItemGroup>
