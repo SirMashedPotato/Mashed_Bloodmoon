@@ -198,6 +198,11 @@ namespace Mashed_Bloodmoon
             if (victim != null)
             {
                 LycanthropeUtility.ProgressBeastHunts(parent.pawn, victim.def, BeastHuntType.Kill);
+                if (Rand.Chance(parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeKillStressReductionChance)))
+                {
+                    currentStress -= Mathf.Clamp((int)(StressMax * 0.9f), 0, currentStress);
+                    Messages.Message("Mashed_Bloodmoon_StressReduced".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.PositiveEvent);
+                }
             }
             base.Notify_KilledPawn(victim, dinfo);
         }

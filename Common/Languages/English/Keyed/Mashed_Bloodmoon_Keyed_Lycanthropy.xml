@@ -58,6 +58,7 @@
 	<Mashed_Bloodmoon_TotemLevelUp>{0_labelShort} has increased their {1_label} level by {2}</Mashed_Bloodmoon_TotemLevelUp>
 	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
 	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed the {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
+	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
 	<!-- ==========[misc]==========-->
 	<Mashed_Bloodmoon_LycanthropeCantDo>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantDo>
 	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>

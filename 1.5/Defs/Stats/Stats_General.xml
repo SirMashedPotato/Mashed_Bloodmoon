@@ -38,6 +38,29 @@
 			</li>
 		</parts>
 	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeKillStressReductionChance]==========-->
+	<StatDef>
+		<defName>Mashed_Bloodmoon_LycanthropeKillStressReductionChance</defName>
+		<label>kill stress reduction chance</label>
+		<description>The chance a pawns lycanthropic stress will be reduced upon landing a killing blow while in beast form.</description>
+		<category>BasicsPawn</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<hideAtValue>0</hideAtValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<showOnMechanoids>false</showOnMechanoids>
+		<showOnEntities>false</showOnEntities>
+		<showIfHediffsPresent>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</showIfHediffsPresent>
+		<displayPriorityInCategory>3500</displayPriorityInCategory>
+		<parts>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			</li>
+		</parts>
+	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeSilverWeakness]==========-->
 	<StatDef>
 		<defName>Mashed_Bloodmoon_LycanthropeSilverWeakness</defName>
