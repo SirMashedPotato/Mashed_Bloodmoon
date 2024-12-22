@@ -61,6 +61,18 @@ namespace Mashed_Bloodmoon
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(inRect, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.label + " (" + consumedCount + " / " + maxLevel + ")");
             Text.Anchor = anchor;
+
+            if (DebugSettings.ShowDevGizmos)
+            {
+                Rect devCheatRect = inRect;
+                devCheatRect.width = 160f;
+                devCheatRect.x = inRect.width - devCheatRect.width;
+                devCheatRect = devCheatRect.ContractedBy(rectPadding);
+                if (Widgets.ButtonText(devCheatRect, "Dev: max hearts", true))
+                {
+                    LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(pawn, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel);
+                }
+            }
         }
 
         public string EffectsTooltip()
