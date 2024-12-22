@@ -14,6 +14,20 @@
 		<statIncreasePerLevel>0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemFortitude]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemFortitude</defName>
+		<label>Huntsman's totem (Fortitude)</label>
+		<labelShort>totem (Fortitude)</labelShort>
+		<description>Proof of a skilled hunter. It reduces incoming damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemFortitude</totemThingDef>
+		<statDefs>
+			<li>IncomingDamageFactor</li>
+		</statDefs>
+		<maxLevel>100</maxLevel>
+		<statIncreasePerLevel>-0.005</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemGuile</defName>
@@ -76,10 +90,10 @@
 		<defName>Mashed_Bloodmoon_TotemTenacity</defName>
 		<label>Huntsman's totem (Tenacity)</label>
 		<labelShort>totem (Tenacity)</labelShort>
-		<description>Proof of a skilled hunter. It reduces incoming damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<description>Proof of a skilled hunter. It reduces melee cooldown while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemTenacity</totemThingDef>
 		<statDefs>
-			<li>IncomingDamageFactor</li>
+			<li>MeleeCooldownFactor</li>
 		</statDefs>
 		<maxLevel>100</maxLevel>
 		<statIncreasePerLevel>-0.005</statIncreasePerLevel>

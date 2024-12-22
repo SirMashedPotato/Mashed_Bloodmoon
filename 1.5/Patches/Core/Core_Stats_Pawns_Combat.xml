@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+	<!-- ==========[Mashed_Bloodmoon_TotemFortitude]========== -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath>
+			<value>
+				<parts/>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
+		<value>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemFortitude</totemTypeDef>
+			</li>
+		</value>
+	</Operation>
 	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
@@ -38,16 +56,16 @@
 	</Operation>
 	<!-- ==========[Mashed_Bloodmoon_TotemTenacity]========== -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
+		<xpath>Defs/StatDef[defName="MeleeCooldownFactor"]/parts</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath>
+			<xpath>Defs/StatDef[defName="MeleeCooldownFactor"]</xpath>
 			<value>
 				<parts/>
 			</value>
 		</nomatch>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
+		<xpath>Defs/StatDef[defName="MeleeCooldownFactor"]/parts</xpath>
 		<value>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemTenacity</totemTypeDef>
