@@ -21,6 +21,7 @@
 	<Mashed_Bloodmoon_UnlockedAbilities>\n\nUnlocked abilities:</Mashed_Bloodmoon_UnlockedAbilities>
 	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
 	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
+	<Mashed_Bloodmoon_Unlocked>Unlocked</Mashed_Bloodmoon_Unlocked>
 	<Mashed_Bloodmoon_UpgradeLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeLabel>
 	<!-- ==========[Great beast hunt page]==========-->
 	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.</Mashed_Bloodmoon_BeastHuntDesc>
@@ -48,6 +49,9 @@
 	<!-- ==========[lycanthrope stress gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: 10 per hour</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
+	<!-- ==========[abilities]==========-->
+	<Mashed_Bloodmoon_AbilityStressCost>Ability use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
+	<Mashed_Bloodmoon_AbilityStressTooHigh>using {0_label} would exceed stress limit</Mashed_Bloodmoon_AbilityStressTooHigh>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
 	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>

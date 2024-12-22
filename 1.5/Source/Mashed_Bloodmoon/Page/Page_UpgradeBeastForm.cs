@@ -243,26 +243,23 @@ namespace Mashed_Bloodmoon
             Widgets.Label(labelRect.NewCol(abilityDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), abilityDef.LabelCap);
             if (!abilityDef.CanGainAbility(compLycanthrope))
             {
-                TaggedString levelLabel = "Unlocked".Translate();
+                TaggedString levelLabel = "Mashed_Bloodmoon_Unlocked".Translate();
                 Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
             }
 
-            /*
             var font = Text.Font;
             Text.Font = GameFont.Tiny;
-            foreach (StatDef statDef in totemDef.statDefs)
+            RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
+            Widgets.TextArea(descRect, abilityDef.description, true);
+
+            CompProperties_StressCost compStressCost = (CompProperties_StressCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_StressCost);
+            if (compStressCost != null)
             {
-                float statValue = compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) * totemDef.statIncreasePerLevel;
-                RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                TaggedString statLabel = " - " + statDef.LabelCap + ": " + statValue.ToStringWithSign();
-                if (!totemDef.onlyTransformed)
-                {
-                    statLabel += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
-                }
-                Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
+                Rect stressCostRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+                Widgets.Label(stressCostRect, "Mashed_Bloodmoon_AbilityStressCost".Translate(compStressCost.stressCost));
             }
+
             Text.Font = font;
-            */
 
             if (abilityDef.canBePurchased && abilityDef.CanGainAbility(compLycanthrope))
             {

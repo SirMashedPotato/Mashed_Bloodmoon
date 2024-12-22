@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class CompAbilityEffect_ConsumeHeart : CompAbilityEffect
+    public class CompAbilityEffect_ConsumeHeart : LycanthropeAbilityEffectComp
     {
         public new CompProperties_ConsumeHeart Props => (CompProperties_ConsumeHeart)props;
 
@@ -32,8 +32,7 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn.def, BeastHuntType.Heart);
 
             LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
-            HediffComp_LycanthropeTransformed comp_LycanthropeTransformed = LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn);
-            comp_LycanthropeTransformed.StressMax += 1;
+            CompLycanthropeTransformed.StressMax += 1;
             parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_HeartsConsumed);
             
             float maxHealth = partRecord.def.GetMaxHealth(targetPawn);

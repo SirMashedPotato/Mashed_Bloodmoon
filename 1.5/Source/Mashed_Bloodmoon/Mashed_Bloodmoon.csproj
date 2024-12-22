@@ -65,6 +65,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect\LycanthropeAbilityEffectComp.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_StressCost.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_StressCost.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_ConsumeHeart.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_ConsumeHeart.cs" />
     <Compile Include="CompUse\CompUseEffect_Totem.cs" />

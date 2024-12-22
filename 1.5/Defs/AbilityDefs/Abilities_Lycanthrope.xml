@@ -34,4 +34,9 @@
 			</targetParams>
 		</verbProperties>
 	</AbilityDef>
+	<!--
+	<li Class="Mashed_Bloodmoon.CompProperties_StressCost">
+		<stressCost>10</stressCost>
+	</li>
+	-->
 </Defs>
