@@ -33,28 +33,27 @@
 		<defName>Mashed_Bloodmoon_TotemGuile</defName>
 		<label>Huntsman's totem (Guile)</label>
 		<labelShort>totem (Guile)</labelShort>
-		<description>Proof of a skilled hunter. It gives a bonus to melee dodge chance while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<description>Proof of a skilled hunter. It gives a bonus to psychic sensitivity while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemGuile</totemThingDef>
 		<statDefs>
-			<li>MeleeDodgeChance</li>
-		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>0.005</statIncreasePerLevel>
-		<onlyTransformed>true</onlyTransformed>
-	</Mashed_Bloodmoon.LycanthropeTotemDef>
-	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
-	<Mashed_Bloodmoon.LycanthropeTotemDef MayRequire="ludeon.rimworld.ideology">
-		<defName>Mashed_Bloodmoon_TotemSight</defName>
-		<label>Huntsman's totem (Sight)</label>
-		<labelShort>totem (Sight)</labelShort>
-		<description>Proof of a skilled hunter. It gives a bonus to melee hit chance in low light while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
-		<totemThingDef>Mashed_Bloodmoon_TotemSight</totemThingDef>
-		<statDefs>
-			<li>MeleeHitChanceIndoorsDarkOffset</li>
-			<li>MeleeHitChanceOutdoorsDarkOffset</li>
+			<li>PsychicSensitivity</li>
 		</statDefs>
 		<maxLevel>100</maxLevel>
 		<statIncreasePerLevel>0.01</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemSight</defName>
+		<label>Huntsman's totem (Sight)</label>
+		<labelShort>totem (Sight)</labelShort>
+		<description>Proof of a skilled hunter. It gives a reduction to stagger duration while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemSight</totemThingDef>
+		<statDefs>
+			<li>StaggerDurationFactor</li>
+		</statDefs>
+		<maxLevel>100</maxLevel>
+		<statIncreasePerLevel>-0.005</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->

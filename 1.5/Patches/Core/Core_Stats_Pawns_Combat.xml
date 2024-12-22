@@ -18,21 +18,21 @@
 			</li>
 		</value>
 	</Operation>
-	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
+	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+		<xpath>Defs/StatDef[defName="StaggerDurationFactor"]/parts</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="MeleeDodgeChance"]</xpath>
+			<xpath>Defs/StatDef[defName="StaggerDurationFactor"]</xpath>
 			<value>
 				<parts/>
 			</value>
 		</nomatch>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/StatDef[defName="MeleeDodgeChance"]/parts</xpath>
+		<xpath>Defs/StatDef[defName="StaggerDurationFactor"]/parts</xpath>
 		<value>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
-				<totemTypeDef>Mashed_Bloodmoon_TotemGuile</totemTypeDef>
+				<totemTypeDef>Mashed_Bloodmoon_TotemSight</totemTypeDef>
 			</li>
 		</value>
 	</Operation>
