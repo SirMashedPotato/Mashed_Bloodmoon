@@ -29,6 +29,13 @@
 		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HunstmansMark]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
+		<label>huntsman's mark</label>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
