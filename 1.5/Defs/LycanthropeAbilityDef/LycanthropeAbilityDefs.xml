@@ -10,17 +10,20 @@
 		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastCall]========== -->
+	<!--
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastCall</defName>
 		<label>beast call</label>
 		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	-->
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastHowl</defName>
 		<label>beast howl</label>
-		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<description>Unleash a terrifying howl that momentarily stuns all nearby hostiles.</description>
+		<abilityDef>Mashed_Bloodmoon_BeastHowl</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastLeap]========== -->

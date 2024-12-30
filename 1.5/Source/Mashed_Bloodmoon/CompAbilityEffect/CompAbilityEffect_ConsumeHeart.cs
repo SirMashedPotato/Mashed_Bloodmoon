@@ -6,7 +6,7 @@ namespace Mashed_Bloodmoon
 {
     public class CompAbilityEffect_ConsumeHeart : LycanthropeAbilityEffectComp
     {
-        public new CompProperties_ConsumeHeart Props => (CompProperties_ConsumeHeart)props;
+        public new CompProperties_AbilityConsumeHeart Props => (CompProperties_AbilityConsumeHeart)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {

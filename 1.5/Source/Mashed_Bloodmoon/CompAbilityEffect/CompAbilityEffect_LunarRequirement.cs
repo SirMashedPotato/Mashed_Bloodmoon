@@ -5,7 +5,7 @@ namespace Mashed_Bloodmoon
 {
     public class CompAbilityEffect_LunarRequirement : LycanthropeAbilityEffectComp
     {
-        public new CompProperties_LunarRequirement Props => (CompProperties_LunarRequirement)props;
+        public new CompProperties_AbilityLunarRequirement Props => (CompProperties_AbilityLunarRequirement)props;
 
         public override bool GizmoDisabled(out string reason)
         {

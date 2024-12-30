@@ -18,7 +18,7 @@
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<warmupEffecter>EatMeat</warmupEffecter>
 		<comps>
-			<li Class="Mashed_Bloodmoon.CompProperties_ConsumeHeart">
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityConsumeHeart">
 				<goodwillImpact>-70</goodwillImpact>
 			</li>
 		</comps>
@@ -33,6 +33,42 @@
 				<canTargetCorpses>true</canTargetCorpses>
 			</targetParams>
 		</verbProperties>
+	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastHowl]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_BeastHowl</defName>
+		<label>beast howl</label>
+		<description>Unleash a terrifying howl that momentarily stuns all nearby hostiles.</description>
+		<iconPath>UI/Abilities/BlindingPulse</iconPath>
+		<statBases>
+			<Ability_EffectRadius>4.9</Ability_EffectRadius>
+			<Ability_Duration>6</Ability_Duration>
+		</statBases>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0.5</warmupTime>
+			<range>4.9</range>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>10</stressCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityDoDamage">
+				<damageDef>Stun</damageDef>
+			</li>
+		</comps>
 	</AbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastLeap]==========-->
 	<AbilityDef>
@@ -61,7 +97,7 @@
 		</verbProperties>
 		<jobDef>CastJump</jobDef>
 		<comps>
-			<li Class="Mashed_Bloodmoon.CompProperties_StressCost">
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
 				<stressCost>5</stressCost>
 			</li>
 		</comps>
@@ -88,12 +124,11 @@
 				<canTargetSelf>true</canTargetSelf>
 			</targetParams>
 		</verbProperties>
-		<jobDef>CastJump</jobDef>
 		<comps>
-			<li Class="Mashed_Bloodmoon.CompProperties_StressCost">
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
 				<stressCost>10</stressCost>
 			</li>
-			<li Class="Mashed_Bloodmoon.CompProperties_LunarRequirement">
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityLunarRequirement">
 				<gameConditions>
 					<li>Eclipse</li>
 				</gameConditions>

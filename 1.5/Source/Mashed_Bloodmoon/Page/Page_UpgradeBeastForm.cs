@@ -252,7 +252,7 @@ namespace Mashed_Bloodmoon
             RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
             Widgets.TextArea(descRect, abilityDef.description, true);
 
-            CompProperties_StressCost compStressCost = (CompProperties_StressCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_StressCost);
+            CompProperties_AbilityStressCost compStressCost = (CompProperties_AbilityStressCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_AbilityStressCost);
             if (compStressCost != null)
             {
                 Rect stressCostRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);

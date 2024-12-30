@@ -5,7 +5,7 @@ namespace Mashed_Bloodmoon
 {
     public class CompAbilityEffect_StressCost : LycanthropeAbilityEffectComp
     {
-        public new CompProperties_StressCost Props => (CompProperties_StressCost)props;
+        public new CompProperties_AbilityStressCost Props => (CompProperties_AbilityStressCost)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
