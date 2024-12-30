@@ -9,6 +9,8 @@ namespace Mashed_Bloodmoon
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(HistoryEventDefOf));
         }
+
+        [MayRequireIdeology]
         public static HistoryEventDef Mashed_Bloodmoon_LycanthropeDied;
     }
 }

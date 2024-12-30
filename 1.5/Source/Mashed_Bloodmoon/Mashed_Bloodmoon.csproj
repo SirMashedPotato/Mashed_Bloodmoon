@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_GiveHediffLinked.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_LunarRequirement.cs" />
     <Compile Include="CompAbilityEffect\LycanthropeAbilityEffectComp.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_StressCost.cs" />

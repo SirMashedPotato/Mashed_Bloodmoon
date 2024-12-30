@@ -102,6 +102,84 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HunstmansMark]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
+		<label>Hunstman's mark</label>
+		<description>Set your sights on a specific target, increasing all damage the target takes by 50% for a short period of time.</description>
+		<iconPath>UI/Abilities/Burden</iconPath>
+		<statBases>
+			<Ability_Duration>150</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<drawAimPie>false</drawAimPie>
+			<range>14.9</range>
+			<warmupTime>0.25</warmupTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<targetParams>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<mustBeSelectable>true</mustBeSelectable>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>10</stressCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_GiveHediffLinked</compClass>
+				<hediffDef>Mashed_Bloodmoon_HunstmansMark</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>true</applicableToMechs>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef>
+		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
+		<label>Huntsman's mark</label>
+		<description>This pawn has been marked by lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
+		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>999</maxDistance>
+				<customMote>Mashed_Bloodmoon_HunstmansMarkLinkLine</customMote>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>Mashed_Bloodmoon_HunstmansMarkLinkLine</defName>
+		<thingClass>MoteDualAttached</thingClass>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<mote>
+			<fadeInTime>0.1</fadeInTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<solidTime>999999</solidTime>
+			<needsMaintenance>true</needsMaintenance>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+			<scaleToConnectTargets>true</scaleToConnectTargets>
+		</mote>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/CombatCommandLinkLine</texPath>
+		</graphicData>
+	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
 	<AbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
