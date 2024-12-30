@@ -27,6 +27,7 @@
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastLeap</defName>
 		<label>beast leap</label>
+		<description>Leap to a nearby location using strong beastial legs.</description>
 		<abilityDef>Mashed_Bloodmoon_BeastLeap</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
@@ -41,6 +42,7 @@
 	<Mashed_Bloodmoon.LycanthropeAbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
 		<label>moon veil</label>
+		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar conditions.</description>
 		<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
