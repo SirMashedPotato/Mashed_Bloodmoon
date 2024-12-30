@@ -27,7 +27,7 @@
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastLeap</defName>
 		<label>beast leap</label>
-		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<abilityDef>Mashed_Bloodmoon_BeastLeap</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_HunstmansMark]========== -->
@@ -38,10 +38,10 @@
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
-	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<Mashed_Bloodmoon.LycanthropeAbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
 		<label>moon veil</label>
-		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 </Defs>

@@ -52,6 +52,7 @@
 	<!-- ==========[abilities]==========-->
 	<Mashed_Bloodmoon_AbilityStressCost>Ability use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
 	<Mashed_Bloodmoon_AbilityStressTooHigh>using {0_label} would exceed stress limit</Mashed_Bloodmoon_AbilityStressTooHigh>
+	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
 	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>

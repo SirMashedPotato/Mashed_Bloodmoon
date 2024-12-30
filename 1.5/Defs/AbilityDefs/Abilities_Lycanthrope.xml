@@ -34,9 +34,74 @@
 			</targetParams>
 		</verbProperties>
 	</AbilityDef>
-	<!--
-	<li Class="Mashed_Bloodmoon.CompProperties_StressCost">
-		<stressCost>10</stressCost>
-	</li>
-	-->
+	<!-- ==========[Mashed_Bloodmoon_BeastLeap]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_BeastLeap</defName>
+		<label>beast leap</label>
+		<description>Leap to a nearby location using strong beastial legs.</description>
+		<iconPath>UI/Abilities/Longjump</iconPath>
+		<cooldownTicksRange>60</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityJump</verbClass>
+			<label>leap</label>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.5</warmupTime>
+			<range>6.9</range>
+			<requireLineOfSight>true</requireLineOfSight>
+			<soundCast>Longjump_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_StressCost">
+				<stressCost>5</stressCost>
+			</li>
+		</comps>
+	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
+	<AbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>moon veil</label>
+		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar events.</description>
+		<iconPath>UI/Abilities/Invisibility</iconPath>
+		<cooldownTicksRange>1200</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>20</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_StressCost">
+				<stressCost>10</stressCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_LunarRequirement">
+				<gameConditions>
+					<li>Eclipse</li>
+				</gameConditions>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>PsychicInvisibility</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>
