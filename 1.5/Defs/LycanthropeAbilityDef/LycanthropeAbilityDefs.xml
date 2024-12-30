@@ -39,7 +39,7 @@
 		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
 		<label>huntsman's mark</label>
 		<description>Mark a target, increasing all damage the target takes by 50% for a short period of time.</description>
-		<abilityDef>Mashed_Bloodmoon_HunstmansMark</abilityDef>
+		<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->

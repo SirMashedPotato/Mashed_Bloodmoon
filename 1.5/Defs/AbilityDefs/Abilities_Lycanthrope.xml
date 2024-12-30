@@ -102,10 +102,10 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	<!-- ==========[Mashed_Bloodmoon_HunstmansMark]==========-->
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]==========-->
 	<AbilityDef>
-		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
-		<label>Hunstman's mark</label>
+		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
+		<label>Huntsman's mark</label>
 		<description>Set your sights on a specific target, increasing all damage the target takes by 50% for a short period of time.</description>
 		<iconPath>UI/Abilities/Burden</iconPath>
 		<statBases>
@@ -132,14 +132,14 @@
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>Mashed_Bloodmoon.CompAbilityEffect_GiveHediffLinked</compClass>
-				<hediffDef>Mashed_Bloodmoon_HunstmansMark</hediffDef>
+				<hediffDef>Mashed_Bloodmoon_HuntsmansMark</hediffDef>
 				<onlyBrain>false</onlyBrain>
 				<applicableToMechs>true</applicableToMechs>
 			</li>
 		</comps>
 	</AbilityDef>
 	<HediffDef>
-		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
+		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
 		<label>Huntsman's mark</label>
 		<description>This pawn has been marked by lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
 		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
@@ -152,7 +152,7 @@
 			<li Class="HediffCompProperties_Link">
 				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
 				<maxDistance>999</maxDistance>
-				<customMote>Mashed_Bloodmoon_HunstmansMarkLinkLine</customMote>
+				<customMote>Mashed_Bloodmoon_HuntsmansMarkLinkLine</customMote>
 			</li>
 		</comps>
 		<stages>
@@ -164,7 +164,7 @@
 		</stages>
 	</HediffDef>
 	<ThingDef ParentName="MoteBase">
-		<defName>Mashed_Bloodmoon_HunstmansMarkLinkLine</defName>
+		<defName>Mashed_Bloodmoon_HuntsmansMarkLinkLine</defName>
 		<thingClass>MoteDualAttached</thingClass>
 		<altitudeLayer>MoteLow</altitudeLayer>
 		<mote>
