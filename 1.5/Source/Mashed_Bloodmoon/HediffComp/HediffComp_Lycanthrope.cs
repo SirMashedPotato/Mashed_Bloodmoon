@@ -14,7 +14,12 @@ namespace Mashed_Bloodmoon
         public Color secondaryColour = Color.white;
         public Color tertiaryColour = Color.white;
 
-        public List<LycanthropeAbilityDef> unlockedAbilityTracker = new List<LycanthropeAbilityDef>();
+        /// <summary>
+        /// The int is the level of the ability
+        /// Or it would be if that was implemented
+        /// 1 is level 1, and would in theory correspond to the first abilityDef in the list in LycanthropeAbilityDef 
+        /// </summary>
+        public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
         /// <summary>
         /// The int is the level of the totem
         /// </summary>
@@ -67,7 +72,7 @@ namespace Mashed_Bloodmoon
             lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
             ResetColours();
             usedTotemTracker.Add(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
-            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart);
+            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart, 1);
         }
 
         /// <summary>

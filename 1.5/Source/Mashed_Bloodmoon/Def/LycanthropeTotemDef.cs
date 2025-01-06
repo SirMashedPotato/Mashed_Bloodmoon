@@ -12,8 +12,6 @@ namespace Mashed_Bloodmoon
         public string iconPath = "Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemHeart";
         public ThingDef totemThingDef;
         public List<StatDef> statDefs;
-        public AbilityDef abilityDef;
-        public int abilityUnlocksAt = 10;
         public int maxLevel = 30;
         public int purchaseHeartCost = 10;
         public float statIncreasePerLevel = 1f;
@@ -27,8 +25,6 @@ namespace Mashed_Bloodmoon
 
         public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : iconPath;
         public Color IconColor => totemThingDef != null ? totemThingDef.graphic.color : Color.white;
-
-        public bool AbilityUnlocked(int usedCount) => abilityDef != null && usedCount >= abilityUnlocksAt;
 
         public override IEnumerable<string> ConfigErrors()
         {

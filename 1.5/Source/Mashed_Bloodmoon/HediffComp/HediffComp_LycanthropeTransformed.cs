@@ -105,16 +105,12 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
-            foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
+            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
-                parent.pawn.abilities.GainAbility(unlockedAbility.abilityDef);
+                parent.pawn.abilities.GainAbility(unlockedAbility.Key.abilityDef);
             }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
-                if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
-                {
-                    parent.pawn.abilities.GainAbility(usedTotem.Key.abilityDef);
-                }
                 usedTotem.Key.transformationWorker?.PostTransformationBegin(parent.pawn, usedTotem.Value);
             }
             foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
@@ -154,16 +150,12 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
             LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
-            foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
+            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
-                parent.pawn.abilities.RemoveAbility(unlockedAbility.abilityDef);
+                parent.pawn.abilities.RemoveAbility(unlockedAbility.Key.abilityDef);
             }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
-                if (usedTotem.Key.AbilityUnlocked(usedTotem.Value))
-                {
-                    parent.pawn.abilities.RemoveAbility(usedTotem.Key.abilityDef);
-                }
                 usedTotem.Key.transformationWorker?.PostTransformationEnd(parent.pawn, usedTotem.Value);
             }
             foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)

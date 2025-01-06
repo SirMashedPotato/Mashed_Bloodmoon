@@ -94,9 +94,9 @@ namespace Mashed_Bloodmoon
 
             tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
 
-            foreach (LycanthropeAbilityDef unlockedAbility in compLycanthrope.unlockedAbilityTracker)
+            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in compLycanthrope.unlockedAbilityTracker)
             {
-                tooltip += "\n - " + unlockedAbility.LabelCap;
+                tooltip += "\n - " + unlockedAbility.Key.LabelCap;
             }
 
             return tooltip;

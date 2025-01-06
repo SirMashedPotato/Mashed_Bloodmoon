@@ -30,7 +30,7 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public bool CanGainAbility(HediffComp_Lycanthrope compLycanthrope)
         {
-            return !compLycanthrope.unlockedAbilityTracker.Contains(this);
+            return !compLycanthrope.unlockedAbilityTracker.ContainsKey(this);
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace Mashed_Bloodmoon
         public void PurchaseAbility(HediffComp_Lycanthrope compLycanthrope)
         {
             compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= heartCost;
-            compLycanthrope.unlockedAbilityTracker.Add(this);
+            compLycanthrope.unlockedAbilityTracker.Add(this, 1);
         }
     }
 }
