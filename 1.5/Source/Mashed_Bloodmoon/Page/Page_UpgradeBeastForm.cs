@@ -250,7 +250,7 @@ namespace Mashed_Bloodmoon
             var font = Text.Font;
             Text.Font = GameFont.Tiny;
             RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
-            Widgets.TextArea(descRect, abilityDef.description, true);
+            Widgets.Label(descRect, abilityDef.description);
 
             CompProperties_AbilityStressCost compStressCost = (CompProperties_AbilityStressCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_AbilityStressCost);
             if (compStressCost != null)
