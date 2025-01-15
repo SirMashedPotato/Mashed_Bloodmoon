@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Chimera]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Chimera</defName>
+		<label>beast hunt: Chimera</label>
+		<description>Consume the heart of a chimera.</description>
+		<targetThingDef>Chimera</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Devourer]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Devourer</defName>
+		<label>beast hunt: Devourer</label>
+		<description>Consume the heart of a devourer.</description>
+		<targetThingDef>Devourer</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Gorehulk]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Gorehulk</defName>
+		<label>beast hunt: Gorehulk</label>
+		<description>Consume the hearts of 3 gorehulk.</description>
+		<targetThingDef>Gorehulk</targetThingDef>
+		<targetCount>3</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Noctol]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Noctol</defName>
+		<label>beast hunt: Noctol</label>
+		<description>Consume the hearts of 3 noctol.</description>
+		<targetThingDef>Noctol</targetThingDef>
+		<targetCount>3</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Revenant]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Revenant</defName>
+		<label>beast hunt: Revenant</label>
+		<description>Consume the heart of a revenant.</description>
+		<targetThingDef>Revenant</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Sightstealer]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Sightstealer</defName>
+		<label>beast hunt: Sightstealer</label>
+		<description>Consume the hearts of 3 sightstealer.</description>
+		<targetThingDef>Sightstealer</targetThingDef>
+		<targetCount>3</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

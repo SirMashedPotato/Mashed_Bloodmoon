@@ -34,12 +34,19 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Utility method for upgrading or unlocking an ability
-        /// Adds the ability to the lycanthropes ability tracker if it is missing
+        /// Utility method for purchasing an ability
         /// </summary>
         public void PurchaseAbility(HediffComp_Lycanthrope compLycanthrope)
         {
             compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= heartCost;
+            UnlockAbility(compLycanthrope);
+        }
+
+        /// <summary>
+        /// Utility method for unlocking an ability
+        /// </summary>
+        public void UnlockAbility(HediffComp_Lycanthrope compLycanthrope)
+        {
             compLycanthrope.unlockedAbilityTracker.Add(this, 1);
         }
     }

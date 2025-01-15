@@ -9,6 +9,7 @@ namespace Mashed_Bloodmoon
         public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
         public int targetCount = 1;
+        public bool startHidden = false;
         public LycanthropeBeastHuntCompletionWorker completionWorker;
         public LycanthropeTransformationWorker transformationWorker;
         [NoTranslate]
@@ -67,6 +68,11 @@ namespace Mashed_Bloodmoon
         public float CompletionProgress(HediffComp_Lycanthrope compLycanthrope)
         {
             return compLycanthrope.beastHuntTracker.TryGetValue(this, 0) / (float)targetCount;
+        }
+
+        public bool IsHidden(HediffComp_Lycanthrope compLycanthrope)
+        {
+            return startHidden && Progress(compLycanthrope) == 0;
         }
 
         /// <summary>

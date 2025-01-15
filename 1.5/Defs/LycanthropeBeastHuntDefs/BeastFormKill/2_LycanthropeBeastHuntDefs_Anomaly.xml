@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Fingerspike]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
+		<defName>Mashed_Bloodmoon_Fingerspike</defName>
+		<label>beast hunt: Fingerspike</label>
+		<description>Kill 100 fingerspike while in beast form.</description>
+		<targetThingDef>Fingerspike</targetThingDef>
+		<targetCount>100</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Toughspike]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
+		<defName>Mashed_Bloodmoon_Toughspike</defName>
+		<label>beast hunt: Toughspike</label>
+		<description>Kill 25 toughspike while in beast form.</description>
+		<targetThingDef>Toughspike</targetThingDef>
+		<targetCount>25</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Trispike]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
+		<defName>Mashed_Bloodmoon_Trispike</defName>
+		<label>beast hunt: Trispike</label>
+		<description>Kill 25 trispike while in beast form.</description>
+		<targetThingDef>Trispike</targetThingDef>
+		<targetCount>25</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Bulbfreak]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
+		<defName>Mashed_Bloodmoon_Bulbfreak</defName>
+		<label>beast hunt: Bulbfreak</label>
+		<description>Kill 5 bulbfreak while in beast form.</description>
+		<targetThingDef>Bulbfreak</targetThingDef>
+		<targetCount>5</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Dreadmeld]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
+		<defName>Mashed_Bloodmoon_Dreadmeld</defName>
+		<label>beast hunt: Dreadmeld</label>
+		<description>Kill a dreadmeld while in beast form.</description>
+		<targetThingDef>Dreadmeld</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
+		<startHidden>true</startHidden>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

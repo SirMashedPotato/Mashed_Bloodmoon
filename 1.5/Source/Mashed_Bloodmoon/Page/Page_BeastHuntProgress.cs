@@ -141,9 +141,19 @@ namespace Mashed_Bloodmoon
             var anchor = Text.Anchor;
             var font = Text.Font;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.LabelFit(upperRect, label);
-            Text.Font = GameFont.Tiny;
-            Widgets.Label(lowerRect, greatBeastDef.description);
+            if (greatBeastDef.IsHidden(compLycanthrope))
+            {
+                Widgets.LabelFit(upperRect, "Mashed_Bloodmoon_BeastHuntHidden".Translate());
+                Text.Font = GameFont.Tiny;
+                Widgets.Label(lowerRect, "Mashed_Bloodmoon_BeastHuntHiddenDesc".Translate());
+            }
+            else
+            {
+                Widgets.LabelFit(upperRect, label);
+                Text.Font = GameFont.Tiny;
+                Widgets.Label(lowerRect, greatBeastDef.description);
+            }
+            
             Text.Anchor = anchor;
             Text.Font = font;
         }
