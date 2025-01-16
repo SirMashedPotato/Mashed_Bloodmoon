@@ -10,12 +10,15 @@ namespace Mashed_Bloodmoon
         public ThingDef targetThingDef;
         public int targetCount = 1;
         public bool startHidden = false;
+        public int anomalyLevelToReveal = 0;
         public LycanthropeBeastHuntCompletionWorker completionWorker;
         public LycanthropeTransformationWorker transformationWorker;
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
         [NoTranslate]
         public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHeart";
+        [NoTranslate]
+        public string incompleteTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHeartIncomplete";
         [NoTranslate]
         public string completedTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHuntCompleted";
         [MustTranslate]
@@ -42,6 +45,11 @@ namespace Mashed_Bloodmoon
                 {
                     yield return item;
                 }
+            }
+
+            if (startHidden && anomalyLevelToReveal > 0)
+            {
+                yield return "Only use one of startHidden and anomalyLevelToReveal";
             }
         }
 
@@ -73,6 +81,13 @@ namespace Mashed_Bloodmoon
         public bool IsHidden(HediffComp_Lycanthrope compLycanthrope)
         {
             return startHidden && Progress(compLycanthrope) == 0;
+        }
+
+        public bool AnomalyIsHidden()
+        {
+            return ModsConfig.AnomalyActive && anomalyLevelToReveal > 0
+                && Find.Storyteller.difficulty.AnomalyPlaystyleDef == AnomalyPlaystyleDefOf.Standard
+                && Find.Anomaly.Level < anomalyLevelToReveal;
         }
 
         /// <summary>

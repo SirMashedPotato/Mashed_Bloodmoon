@@ -7,7 +7,7 @@
 		<description>Consume the heart of a chimera.</description>
 		<targetThingDef>Chimera</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Devourer]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
@@ -16,7 +16,7 @@
 		<description>Consume the heart of a devourer.</description>
 		<targetThingDef>Devourer</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Gorehulk]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
@@ -26,7 +26,7 @@
 		<targetThingDef>Gorehulk</targetThingDef>
 		<targetCount>3</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Noctol]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
@@ -36,7 +36,7 @@
 		<targetThingDef>Noctol</targetThingDef>
 		<targetCount>3</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Revenant]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
@@ -45,7 +45,7 @@
 		<description>Consume the heart of a revenant.</description>
 		<targetThingDef>Revenant</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Sightstealer]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
@@ -55,6 +55,6 @@
 		<targetThingDef>Sightstealer</targetThingDef>
 		<targetCount>3</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

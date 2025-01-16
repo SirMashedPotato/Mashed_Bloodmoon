@@ -8,7 +8,7 @@
 		<targetThingDef>Fingerspike</targetThingDef>
 		<targetCount>100</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Toughspike]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
@@ -18,7 +18,7 @@
 		<targetThingDef>Toughspike</targetThingDef>
 		<targetCount>25</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Trispike]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
@@ -28,7 +28,7 @@
 		<targetThingDef>Trispike</targetThingDef>
 		<targetCount>25</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Bulbfreak]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
@@ -38,7 +38,7 @@
 		<targetThingDef>Bulbfreak</targetThingDef>
 		<targetCount>5</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_Dreadmeld]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_BeastFormKillBase">
@@ -47,6 +47,6 @@
 		<description>Kill a dreadmeld while in beast form.</description>
 		<targetThingDef>Dreadmeld</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
-		<startHidden>true</startHidden>
+		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

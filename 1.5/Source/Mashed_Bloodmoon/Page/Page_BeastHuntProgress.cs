@@ -113,6 +113,7 @@ namespace Mashed_Bloodmoon
             }
             else
             {
+                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.incompleteTexPath));
                 if (greatBeastDef.targetCount > 1)
                 {
                     TaggedString label = greatBeastDef.Progress(compLycanthrope) + "/" + greatBeastDef.targetCount;
@@ -133,25 +134,31 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void DoGridLowerRect(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
+        public void DoGridLowerRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
             Rect detailsRect = inRect.ContractedBy(rectPadding);
-            TaggedString label = greatBeastDef.LabelCap;
+            TaggedString label = beastHuntDef.LabelCap;
             detailsRect.SplitHorizontally(detailsRect.height / 3f, out Rect upperRect, out Rect lowerRect);
             var anchor = Text.Anchor;
             var font = Text.Font;
             Text.Anchor = TextAnchor.MiddleCenter;
-            if (greatBeastDef.IsHidden(compLycanthrope))
+            if (beastHuntDef.IsHidden(compLycanthrope))
             {
                 Widgets.LabelFit(upperRect, "Mashed_Bloodmoon_BeastHuntHidden".Translate());
                 Text.Font = GameFont.Tiny;
                 Widgets.Label(lowerRect, "Mashed_Bloodmoon_BeastHuntHiddenDesc".Translate());
             }
+            else if (beastHuntDef.AnomalyIsHidden())
+            {
+                Widgets.LabelFit(upperRect, "Mashed_Bloodmoon_BeastHuntHidden".Translate());
+                Text.Font = GameFont.Tiny;
+                Widgets.Label(lowerRect, "Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc".Translate(beastHuntDef.anomalyLevelToReveal));
+            }
             else
             {
                 Widgets.LabelFit(upperRect, label);
                 Text.Font = GameFont.Tiny;
-                Widgets.Label(lowerRect, greatBeastDef.description);
+                Widgets.Label(lowerRect, beastHuntDef.description);
             }
             
             Text.Anchor = anchor;
