@@ -226,6 +226,24 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// 
         /// </summary>
+        public override string CompDescriptionExtra
+        {
+            get
+            {
+                string tooltip = "\n";
+
+                foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in compLycanthrope.usedTotemTracker)
+                {
+                    tooltip += usedTotem.Key.StatBonusList(compLycanthrope, true);
+                }
+
+                return tooltip;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public override void CompExposeData()
         {
             Scribe_Values.Look(ref currentStress, "currentStress", 0);

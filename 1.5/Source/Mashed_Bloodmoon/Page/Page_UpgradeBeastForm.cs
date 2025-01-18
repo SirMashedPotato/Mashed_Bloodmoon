@@ -81,15 +81,7 @@ namespace Mashed_Bloodmoon
 
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in compLycanthrope.usedTotemTracker)
             {
-                foreach (StatDef statDef in usedTotem.Key.statDefs)
-                {
-                    usedTotem.Key.TotemStatBonus(pawn, out float bonus, true);
-                    tooltip += "\n - " + statDef.LabelCap + ": " + bonus.ToStringWithSign();
-                    if (!usedTotem.Key.onlyTransformed)
-                    {
-                        tooltip += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
-                    }
-                }
+                tooltip += usedTotem.Key.StatBonusList(compLycanthrope, true);
             }
 
             tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
@@ -150,13 +142,8 @@ namespace Mashed_Bloodmoon
             Text.Font = GameFont.Tiny;
             foreach (StatDef statDef in totemDef.statDefs)
             {
-                float statValue = compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) * totemDef.statIncreasePerLevel;
                 RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                TaggedString statLabel = " - " + statDef.LabelCap + ": " + statValue.ToStringWithSign();
-                if (!totemDef.onlyTransformed)
-                {
-                    statLabel += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
-                }
+                TaggedString statLabel = totemDef.StatBonusLine(statDef, compLycanthrope, true);
                 Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
             }
             Text.Font = font;

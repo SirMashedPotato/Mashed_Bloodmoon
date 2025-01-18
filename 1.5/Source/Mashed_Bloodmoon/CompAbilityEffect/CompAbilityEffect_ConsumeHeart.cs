@@ -46,7 +46,7 @@ namespace Mashed_Bloodmoon
             }
             if (parent.pawn.needs?.rest?.CurLevel != null)
             {
-                parent.pawn.needs.rest.CurLevel += (Props.nutritionFactor * maxHealth);
+                parent.pawn.needs.rest.CurLevel += ((Props.nutritionFactor / 2f) * maxHealth);
             }
 
             targetPawn.Corpse.Ingested(parent.pawn, Props.nutritionFactor * maxHealth);

@@ -5,7 +5,7 @@
 		<defName>Mashed_Bloodmoon_TotemSlaughter</defName>
 		<label>Totem of Slaughter</label>
 		<labelShort>slaughter totem</labelShort>
-		<description>Proof of a merciless hunter. Each level grants a 2% to reduce lycanthropic stress upon a landing a killing blow while in beast form.\n\nThis totem can only by upgraded by completing the Slaughter beast hunts.</description>
+		<description>Proof of a merciless hunter. Each level grants a 2% chance to reduce lycanthropic stress upon a landing a killing blow while in beast form.\n\nThis totem can only by upgraded by completing the Slaughter beast hunts.</description>
 		<statDefs>
 			<li>Mashed_Bloodmoon_LycanthropeKillStressReductionChance</li>
 		</statDefs>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using static UnityEngine.Random;
 
 namespace Mashed_Bloodmoon
 {
@@ -94,7 +95,7 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Utility method to get a lyncathropes current totem stat bonus
+        /// Utility method to get a lycanthropes current totem stat bonus
         /// </summary>
         public bool TotemStatBonus(Pawn pawn, out float bonus, bool ignoreTransformed = false)
         {
@@ -108,12 +109,51 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
+            return TotemStatBonus(compLycanthrope, out bonus);
+        }
+
+        // <summary>
+        /// Utility method to get a lycanthropes current totem stat bonus
+        /// </summary>
+        public bool TotemStatBonus(HediffComp_Lycanthrope compLycanthrope, out float bonus)
+        {
+            bonus = 0;
             if (compLycanthrope.usedTotemTracker.TryGetValue(this, out int usedCount))
             {
                 bonus = usedCount * statIncreasePerLevel;
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// A list of all currently active stat bonuses from this totem
+        /// </summary>
+        public string StatBonusList(HediffComp_Lycanthrope compLycanthrope, bool displayOnlyTransformed)
+        {
+            string tooltip = "";
+
+            foreach (StatDef statDef in statDefs)
+            {
+                tooltip += "\n - " + StatBonusLine(statDef, compLycanthrope, displayOnlyTransformed);
+            }
+
+            return tooltip;
+        }
+
+        /// <summary>
+        /// A singular stat bonus from this totem
+        /// </summary>
+        public string StatBonusLine(StatDef statDef, HediffComp_Lycanthrope compLycanthrope, bool displayOnlyTransformed)
+        {
+            TotemStatBonus(compLycanthrope, out float bonus);
+            string tooltip =  statDef.LabelCap + ": " + bonus.ToStringWithSign("0.###");
+            if (!onlyTransformed && displayOnlyTransformed)
+            {
+                tooltip += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
+            }
+
+            return tooltip;
         }
     }
 }
