@@ -2,14 +2,19 @@
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesBase]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_FeralWerewolvesBase" Abstract="true">
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Hunger by 1.</extraTooltip>
 		<targetThingDef>Rat</targetThingDef><!-- todo -->
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesI]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolvesI</defName>
 		<label>beast hunt: Hounds I</label>
 		<description>Consume the hearts of 10 feral werewolves.</description>
-		<targetCount>10</targetCount> 
+		<targetCount>10</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesII]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
@@ -38,5 +43,13 @@
 		<label>beast hunt: Hounds V</label>
 		<description>Consume the hearts of 200 feral werewolves.</description>
 		<targetCount>200</targetCount> 
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesVI]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolvesVI</defName>
+		<label>beast hunt: Hounds VI</label>
+		<description>Consume the hearts of 500 feral werewolves.</description>
+		<targetThingDef>Rat</targetThingDef><!-- todo -->
+		<targetCount>500</targetCount> 
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

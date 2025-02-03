@@ -40,16 +40,18 @@ namespace Mashed_Bloodmoon
             targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
 
 
+            float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
+
             if (parent.pawn.needs?.food?.CurLevel != null)
             {
-                parent.pawn.needs.food.CurLevel += (Props.nutritionFactor * maxHealth);
+                parent.pawn.needs.food.CurLevel += (nutritionFactor * maxHealth);
             }
             if (parent.pawn.needs?.rest?.CurLevel != null)
             {
-                parent.pawn.needs.rest.CurLevel += ((Props.nutritionFactor / 2f) * maxHealth);
+                parent.pawn.needs.rest.CurLevel += ((nutritionFactor / 2f) * maxHealth);
             }
 
-            targetPawn.Corpse.Ingested(parent.pawn, Props.nutritionFactor * maxHealth);
+            targetPawn.Corpse.Ingested(parent.pawn, nutritionFactor * maxHealth);
             
             base.Apply(target, dest);
         }

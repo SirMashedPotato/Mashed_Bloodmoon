@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeStat]==========-->
+	<StatDef Name="Mashed_Bloodmoon_LycanthropeStat" Abstract="True"> 
+		<category>BasicsPawn</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<hideAtValue>0</hideAtValue>
+		<showOnAnimals>false</showOnAnimals>
+		<showOnMechanoids>false</showOnMechanoids>
+		<showOnEntities>false</showOnEntities>
+		<showIfHediffsPresent>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</showIfHediffsPresent>
+		<displayPriorityInCategory>3500</displayPriorityInCategory>
+	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropyResistance]==========-->
 	<StatDef>
 		<defName>Mashed_Bloodmoon_LycanthropyResistance</defName>
@@ -16,22 +30,11 @@
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropicStressMax]==========-->
-	<StatDef>
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
 		<defName>Mashed_Bloodmoon_LycanthropicStressMax</defName>
 		<label>lycanthropic stress limit</label>
 		<description>The maximum amount of lycanthropic stress an individual can tolerate while transformed before entering a lycanthropic rage.</description>
-		<category>BasicsPawn</category>
-		<defaultBaseValue>0</defaultBaseValue>
-		<minValue>0</minValue>
-		<hideAtValue>0</hideAtValue>
 		<toStringStyle>FloatOne</toStringStyle>
-		<showOnAnimals>false</showOnAnimals>
-		<showOnMechanoids>false</showOnMechanoids>
-		<showOnEntities>false</showOnEntities>
-		<showIfHediffsPresent>
-			<li>Mashed_Bloodmoon_Lycanthrope</li>
-		</showIfHediffsPresent>
-		<displayPriorityInCategory>3500</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_ConsumedHearts</totemTypeDef>
@@ -39,60 +42,44 @@
 		</parts>
 	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeKillStressReductionChance]==========-->
-	<StatDef>
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
 		<defName>Mashed_Bloodmoon_LycanthropeKillStressReductionChance</defName>
 		<label>kill stress reduction chance</label>
 		<description>The chance a pawns lycanthropic stress will be reduced upon landing a killing blow while in beast form.</description>
-		<category>BasicsPawn</category>
-		<defaultBaseValue>0</defaultBaseValue>
-		<minValue>0</minValue>
-		<hideAtValue>0</hideAtValue>
 		<toStringStyle>FloatOne</toStringStyle>
-		<showOnAnimals>false</showOnAnimals>
-		<showOnMechanoids>false</showOnMechanoids>
-		<showOnEntities>false</showOnEntities>
-		<showIfHediffsPresent>
-			<li>Mashed_Bloodmoon_Lycanthrope</li>
-		</showIfHediffsPresent>
-		<displayPriorityInCategory>3500</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
 			</li>
 		</parts>
 	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeHeartSatiationFactor]==========-->
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
+		<defName>Mashed_Bloodmoon_LycanthropeHeartSatiationFactor</defName>
+		<label>heart satiation factor</label>
+		<description>How much consuming a heart satiates the hunger and rest needs of a lycanthrope.</description>
+		<toStringStyle>FloatOne</toStringStyle>
+		<defaultBaseValue>0.01</defaultBaseValue>
+		<parts>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>
+			</li>
+		</parts>
+	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeSilverWeakness]==========-->
-	<StatDef>
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
 		<defName>Mashed_Bloodmoon_LycanthropeSilverWeakness</defName>
 		<label>silver weakness</label>
 		<description>How much additional damage a lycanthrope takes from weapons made out of silver.</description>
-		<category>BasicsPawn</category>
-		<defaultBaseValue>0</defaultBaseValue>
-		<minValue>0</minValue>
 		<toStringStyle>PercentZero</toStringStyle>
-		<showOnAnimals>false</showOnAnimals>
-		<showOnMechanoids>false</showOnMechanoids>
-		<showOnEntities>false</showOnEntities>
-		<showIfHediffsPresent>
-			<li>Mashed_Bloodmoon_Lycanthrope</li>
-		</showIfHediffsPresent>
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness]==========-->
-	<StatDef>
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
 		<defName>Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness</defName>
 		<label>Wolfsbane weakness</label>
 		<description>How susceptible a lycanthrope is to the toxic effects of wolfsbane.</description>
-		<category>BasicsPawn</category>
-		<defaultBaseValue>0</defaultBaseValue>
-		<minValue>0</minValue>
 		<toStringStyle>PercentZero</toStringStyle>
-		<showOnAnimals>false</showOnAnimals>
-		<showOnMechanoids>false</showOnMechanoids>
-		<showOnEntities>false</showOnEntities>
-		<showIfHediffsPresent>
-			<li>Mashed_Bloodmoon_Lycanthrope</li>
-		</showIfHediffsPresent>
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
 </Defs>

@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemHunger]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemHunger</defName>
+		<label>Totem of Hunger</label>
+		<labelShort>hunger totem</labelShort>
+		<description>Proof of a ravenous hunter. Each level grants a 1% increase to the satiation provided by consuming a heart while in beast form.\n\nThis totem can only by upgraded by completing the Hound beast hunts.</description>
+		<statDefs>
+			<li>Mashed_Bloodmoon_LycanthropeHeartSatiationFactor</li>
+		</statDefs>
+		<maxLevel>5</maxLevel>
+		<statIncreasePerLevel>0.01</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+		<canBeTransferred>false</canBeTransferred>
+		<canBePurchased>false</canBePurchased>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSlaughter]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemSlaughter</defName>
