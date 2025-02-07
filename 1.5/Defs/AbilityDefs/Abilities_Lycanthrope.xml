@@ -37,7 +37,7 @@
 	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]==========-->
 	<AbilityDef>
 		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
-		<label>Adrenaline rush</label>
+		<label>adrenaline rush</label>
 		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</iconPath>
 		<cooldownTicksRange>1200</cooldownTicksRange>
@@ -68,7 +68,7 @@
 	</AbilityDef>
 	<HediffDef>
 		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
-		<label>Adrenlaine rush</label>
+		<label>adrenaline rush</label>
 		<description>Adrenaline surging throughout the body, completely nullifying pain and staunching bleeding.</description>
 		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -78,16 +78,12 @@
 			</li>
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 			<li Class="HediffCompProperties_Effecter">
-				<stateEffecter>Mashed_Bloodmoon_HuntsmansMark</stateEffecter>
-				<severityIndices>0~1</severityIndices>
+				<stateEffecter>Mashed_Bloodmoon_AdrenalineRush</stateEffecter>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<painFactor>0</painFactor>
-				<statOffsets>
-					<IncomingDamageFactor>0.5</IncomingDamageFactor>
-				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -214,7 +210,6 @@
 			</li>
 			<li Class="HediffCompProperties_Effecter">
 				<stateEffecter>Mashed_Bloodmoon_HuntsmansMark</stateEffecter>
-				<severityIndices>0~1</severityIndices>
 			</li>
 		</comps>
 		<stages>
