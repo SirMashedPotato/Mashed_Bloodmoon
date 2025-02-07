@@ -141,8 +141,8 @@
 	<HediffDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
 		<label>Huntsman's mark</label>
-		<description>This pawn has been marked by lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
-		<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+		<description>This pawn has been marked by a lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
+		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
@@ -154,6 +154,10 @@
 				<maxDistance>999</maxDistance>
 				<customMote>Mashed_Bloodmoon_HuntsmansMarkLinkLine</customMote>
 			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_HuntsmansMark</stateEffecter>
+				<severityIndices>0~1</severityIndices>
+			</li>
 		</comps>
 		<stages>
 			<li>
@@ -163,23 +167,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<ThingDef ParentName="MoteBase">
-		<defName>Mashed_Bloodmoon_HuntsmansMarkLinkLine</defName>
-		<thingClass>MoteDualAttached</thingClass>
-		<altitudeLayer>MoteLow</altitudeLayer>
-		<mote>
-			<fadeInTime>0.1</fadeInTime>
-			<fadeOutTime>0.1</fadeOutTime>
-			<solidTime>999999</solidTime>
-			<needsMaintenance>true</needsMaintenance>
-			<rotateTowardsTarget>true</rotateTowardsTarget>
-			<scaleToConnectTargets>true</scaleToConnectTargets>
-		</mote>
-		<graphicData>
-			<shaderType>MoteGlow</shaderType>
-			<texPath>Things/Mote/CombatCommandLinkLine</texPath>
-		</graphicData>
-	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
 	<AbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
