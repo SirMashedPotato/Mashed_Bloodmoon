@@ -34,6 +34,63 @@
 			</targetParams>
 		</verbProperties>
 	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<label>Adrenaline rush</label>
+		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</iconPath>
+		<cooldownTicksRange>1200</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>20</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>15</stressCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>Mashed_Bloodmoon_AdrenalineRush</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef>
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<label>Adrenlaine rush</label>
+		<description>Adrenaline surging throughout the body, completely nullifying pain and staunching bleeding.</description>
+		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_HuntsmansMark</stateEffecter>
+				<severityIndices>0~1</severityIndices>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+				<statOffsets>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]==========-->
 	<AbilityDef>
 		<defName>Mashed_Bloodmoon_BeastHowl</defName>
@@ -135,6 +192,7 @@
 				<hediffDef>Mashed_Bloodmoon_HuntsmansMark</hediffDef>
 				<onlyBrain>false</onlyBrain>
 				<applicableToMechs>true</applicableToMechs>
+				<replaceExisting>true</replaceExisting>
 			</li>
 		</comps>
 	</AbilityDef>

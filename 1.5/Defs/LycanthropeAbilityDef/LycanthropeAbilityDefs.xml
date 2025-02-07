@@ -9,6 +9,14 @@
 		<heartCost>1</heartCost>
 		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<label>adrenaline rush</label>
+		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
+		<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastCall]========== -->
 	<!--
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
@@ -34,9 +42,9 @@
 		<abilityDef>Mashed_Bloodmoon_BeastLeap</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
-	<!-- ==========[Mashed_Bloodmoon_HunstmansMark]========== -->
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
-		<defName>Mashed_Bloodmoon_HunstmansMark</defName>
+		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
 		<label>huntsman's mark</label>
 		<description>Mark a target, increasing all damage the target takes by 50% for a short period of time.</description>
 		<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
