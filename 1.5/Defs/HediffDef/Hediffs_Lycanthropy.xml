@@ -4,7 +4,7 @@
 	<HediffDef Name="Mashed_Bloodmoon_LycanthropeBase" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
 		<maxSeverity>1</maxSeverity>
-		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
 		<isBad>false</isBad>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeDormant]==========-->

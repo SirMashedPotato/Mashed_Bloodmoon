@@ -172,7 +172,7 @@
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
 		<label>moon veil</label>
 		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar conditions.</description>
-		<iconPath>UI/Abilities/Invisibility</iconPath>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</iconPath>
 		<cooldownTicksRange>1200</cooldownTicksRange>
 		<hostile>false</hostile>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>

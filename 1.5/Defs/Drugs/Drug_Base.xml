@@ -2,7 +2,6 @@
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_PotionBase]==========-->
 	<ThingDef ParentName="MakeableDrugBase" Name="Mashed_Bloodmoon_PotionBase" Abstract="True">
-		<defName>Mashed_Ashlands_BugMusk</defName>
 		<possessionCount>3</possessionCount>
 		<graphicData>
 			<graphicClass>Graphic_StackCount</graphicClass>
