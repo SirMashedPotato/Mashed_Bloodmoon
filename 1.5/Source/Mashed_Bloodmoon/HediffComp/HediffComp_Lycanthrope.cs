@@ -94,7 +94,23 @@ namespace Mashed_Bloodmoon
         {
             if (LycanthropeUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
             {
-                if (Rand.Chance(0.1f))
+                float chance = 0.1f;
+
+                PawnLycanthropeProperties props = PawnLycanthropeProperties.Get(parent.pawn.kindDef);
+                if (props != null)
+                {
+                    chance = props.chance;
+                }
+                else
+                {
+                    props = PawnLycanthropeProperties.Get(parent.pawn.def);
+                    if (props != null)
+                    {
+                        chance = props.chance;
+                    }
+                }
+
+                if (Rand.Chance(chance))
                 {
                     TransformPawn();
                 }
