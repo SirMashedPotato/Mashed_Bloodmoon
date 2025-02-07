@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- ==========[Mashed_Bloodmoon_HuntsmansMarkAlt]========== -->
-	<EffecterDef>
-		<defName>Mashed_Bloodmoon_HuntsmansMarkAlt</defName>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<scale>0.2~0.1</scale>
-				<chancePerTick>0.03</chancePerTick>
-				<positionRadius>0.3</positionRadius>
-				<fleckDef>Mashed_Bloodmoon_HuntsmansMarkAlt</fleckDef>
-				<speed>0.18~0.18</speed>
-				<angle>10~80</angle>
-			</li>
-		</children>
-	</EffecterDef>
-	<FleckDef ParentName="FleckBase_Thrown">
-		<defName>Mashed_Bloodmoon_HuntsmansMarkAlt</defName>
-		<graphicData>
-			<texPath>Things/Mote/Mashed_Bloodmoon_HuntsmansMarkTarget</texPath>
-			<shaderType>MoteGlow</shaderType>
-		</graphicData>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<fadeInTime>0.5</fadeInTime>
-		<solidTime>1.5</solidTime>
-		<fadeOutTime>2</fadeOutTime>
-	</FleckDef>
-	
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]==========-->
 	<EffecterDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
