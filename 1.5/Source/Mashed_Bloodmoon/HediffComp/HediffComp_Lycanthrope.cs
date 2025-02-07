@@ -96,18 +96,10 @@ namespace Mashed_Bloodmoon
             {
                 float chance = 0.1f;
 
-                PawnLycanthropeProperties props = PawnLycanthropeProperties.Get(parent.pawn.kindDef);
+                PawnLycanthropeProperties props = PawnLycanthropeProperties.GetProps(parent.pawn);
                 if (props != null)
                 {
                     chance = props.chance;
-                }
-                else
-                {
-                    props = PawnLycanthropeProperties.Get(parent.pawn.def);
-                    if (props != null)
-                    {
-                        chance = props.chance;
-                    }
                 }
 
                 if (Rand.Chance(chance))

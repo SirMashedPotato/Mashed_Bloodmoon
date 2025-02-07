@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
     {
         public static void Postfix(Pawn pawn)
         {
-            PawnLycanthropeProperties props = PawnLycanthropeProperties.Get(pawn.kindDef) ?? PawnLycanthropeProperties.Get(pawn.def);
+            PawnLycanthropeProperties props = PawnLycanthropeProperties.GetProps(pawn);
             if (props != null)
             {
                 if (!LycanthropeUtility.PawnIsLycanthrope(pawn))
@@ -36,6 +36,17 @@ namespace Mashed_Bloodmoon
                         if (value > 0)
                         {
                             pawnTotemRecord.totemTypeDef.UseTotem(compLycanthrope, value);
+                        }
+                    }
+                }
+
+                if (!props.startingAbilities.NullOrEmpty())
+                {
+                    foreach(LycanthropeAbilityDef abilityDef in props.startingAbilities)
+                    {
+                        if (abilityDef.CanGainAbility(compLycanthrope))
+                        {
+                            abilityDef.UnlockAbility(compLycanthrope);
                         }
                     }
                 }
