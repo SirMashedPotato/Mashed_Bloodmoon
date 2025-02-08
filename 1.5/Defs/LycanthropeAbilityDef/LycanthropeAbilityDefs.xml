@@ -17,15 +17,6 @@
 		<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
-	<!-- ==========[Mashed_Bloodmoon_BeastCall]========== -->
-	<!--
-	<Mashed_Bloodmoon.LycanthropeAbilityDef>
-		<defName>Mashed_Bloodmoon_BeastCall</defName>
-		<label>beast call</label>
-		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
-		<heartCost>50</heartCost>
-	</Mashed_Bloodmoon.LycanthropeAbilityDef>
-	-->
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastHowl</defName>
