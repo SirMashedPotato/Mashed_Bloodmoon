@@ -258,14 +258,16 @@
 		</comps>
 	</AbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_QuillBarrage]========== -->
-	<AbilityDef ParentName="SpikeLaunchBase">
+	<AbilityDef>
 		<defName>Mashed_Bloodmoon_QuillBarrage</defName>
 		<label>quill barrage</label>
 		<description>Launch a volley of keratinised quills with low accuracy at a target. The quills will take some time to regrow afterwards.</description>
 		<cooldownTicksRange>2400</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
 		<verbProperties>
 			<ai_IsWeapon>true</ai_IsWeapon>
 			<verbClass>Verb_AbilityShoot</verbClass>
+			<warmupTime>0.5</warmupTime>
 			<burstShotCount>13</burstShotCount>
 			<ticksBetweenBurstShots>0.3</ticksBetweenBurstShots>
 			<accuracyTouch>0.5</accuracyTouch>
