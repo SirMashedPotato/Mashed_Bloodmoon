@@ -265,7 +265,7 @@
 		<cooldownTicksRange>2400</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
-			<ai_IsWeapon>true</ai_IsWeapon>
+			<ai_IsWeapon>false</ai_IsWeapon>
 			<verbClass>Verb_AbilityShoot</verbClass>
 			<warmupTime>0.5</warmupTime>
 			<burstShotCount>13</burstShotCount>
