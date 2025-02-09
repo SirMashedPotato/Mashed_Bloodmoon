@@ -86,7 +86,6 @@
     <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
     <Compile Include="DefOf\AbilityDefOf.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
-    <Compile Include="DefOf\FleckDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\LycanthropeAbilityDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
