@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace Mashed_Bloodmoon
 {
@@ -129,14 +130,8 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public void DoTransformationEffects()
         {
-            GenExplosion.DoExplosion(parent.pawn.Position, parent.pawn.Map, 1.9f, DamageDefOf.Smoke, null, ignoredThings: new List<Thing> { parent.pawn });
-            Vector3 loc = parent.pawn.Position.ToVector3Shifted();
-            for (int i = 0; i < 4; i++)
-            {
-                FleckMaker.ThrowSmoke(loc, parent.pawn.Map, 1.5f);
-                FleckMaker.ThrowMicroSparks(loc, parent.pawn.Map);
-                FleckMaker.ThrowLightningGlow(loc, parent.pawn.Map, 1.5f);
-            }
+            SoundDefOf.Mashed_Bloodmoon_BeastHowl.PlayOneShot(new TargetInfo(parent.pawn.Position, parent.pawn.Map));
+            MoteMaker.MakeAttachedOverlay(parent.pawn, ThingDefOf.Mashed_Bloodmoon_TransformEffect, Vector3.zero, parent.pawn.DrawSize.y);
         }
 
         /// <summary>
