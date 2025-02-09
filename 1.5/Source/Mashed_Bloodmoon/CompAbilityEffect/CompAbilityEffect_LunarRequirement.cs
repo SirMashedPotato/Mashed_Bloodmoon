@@ -19,6 +19,10 @@ namespace Mashed_Bloodmoon
 
         public bool RequirementsMet()
         {
+            if (!parent.pawn.Spawned || parent.pawn.Map == null)
+            {
+                return false;
+            }
             if (GenLocalDate.DayPercent(parent.pawn) < 0.25f || GenLocalDate.DayPercent(parent.pawn) > 0.8f)
             {
                 return true;

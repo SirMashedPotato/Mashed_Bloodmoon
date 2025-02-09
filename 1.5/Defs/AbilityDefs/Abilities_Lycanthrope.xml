@@ -40,6 +40,7 @@
 		<label>adrenaline rush</label>
 		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_AdrenalineRush</iconPath>
+		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
 		<cooldownTicksRange>1200</cooldownTicksRange>
 		<hostile>false</hostile>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
@@ -93,6 +94,8 @@
 		<label>beast howl</label>
 		<description>Unleash a terrifying howl that momentarily stuns all nearby hostiles.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</iconPath>
+		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
+		<cooldownTicksRange>360</cooldownTicksRange>
 		<statBases>
 			<Ability_EffectRadius>4.9</Ability_EffectRadius>
 			<Ability_Duration>6</Ability_Duration>
@@ -120,6 +123,17 @@
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityDoDamage">
 				<damageDef>Stun</damageDef>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityFleckOnTargetExt">
+				<fleckDef>Mashed_Bloodmoon_BeastHowlFleck</fleckDef>
+				<scale>4.9</scale>
+				<preCastTicks>0</preCastTicks>
+				<onlySelf>true</onlySelf>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityEffecterOnTargetExt">
+				<effecterDef>Mashed_Bloodmoon_BeastHowl</effecterDef>
+				<maintainForTicks>30</maintainForTicks>
+				<onlyHostile>true</onlyHostile>
 			</li>
 		</comps>
 	</AbilityDef>
@@ -161,8 +175,10 @@
 		<label>Huntsman's mark</label>
 		<description>Set your sights on a specific target, increasing all damage the target takes by 50% for a short period of time.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansMark</iconPath>
+		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
+		<cooldownTicksRange>3600</cooldownTicksRange>
 		<statBases>
-			<Ability_Duration>150</Ability_Duration>
+			<Ability_Duration>60</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<drawAimPie>false</drawAimPie>
@@ -226,6 +242,7 @@
 		<label>moon veil</label>
 		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar conditions.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</iconPath>
+		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
 		<cooldownTicksRange>1200</cooldownTicksRange>
 		<hostile>false</hostile>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>

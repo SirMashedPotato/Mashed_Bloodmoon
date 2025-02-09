@@ -234,9 +234,9 @@ namespace Mashed_Bloodmoon
             {
                 string tooltip = "\n";
 
-                foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in compLycanthrope.usedTotemTracker)
+                foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
                 {
-                    tooltip += usedTotem.Key.StatBonusList(compLycanthrope, true);
+                    tooltip += usedTotem.Key.StatBonusList(CompLycanthrope, true);
                 }
 
                 return tooltip;

@@ -66,11 +66,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_EffecterOnTargetExt.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_FleckOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_GiveHediffLinked.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_LunarRequirement.cs" />
     <Compile Include="CompAbilityEffect\LycanthropeAbilityEffectComp.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_StressCost.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityDoDamage.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityEffecterOnTargetExt.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityFleckOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityLunarRequirement.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityStressCost.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_ConsumeHeart.cs" />
