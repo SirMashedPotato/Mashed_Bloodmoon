@@ -40,7 +40,7 @@
 		<label>adrenaline rush</label>
 		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_AdrenalineRush</iconPath>
-		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
+		<warmupStartSound>Mashed_Bloodmoon_AdrenalineRush</warmupStartSound>
 		<cooldownTicksRange>1200</cooldownTicksRange>
 		<hostile>false</hostile>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
@@ -94,7 +94,7 @@
 		<label>beast howl</label>
 		<description>Unleash a terrifying howl that momentarily stuns all nearby hostiles.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</iconPath>
-		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
+		<warmupStartSound>Mashed_Bloodmoon_BeastHowl</warmupStartSound>
 		<cooldownTicksRange>360</cooldownTicksRange>
 		<statBases>
 			<Ability_EffectRadius>4.9</Ability_EffectRadius>
@@ -175,7 +175,7 @@
 		<label>Huntsman's mark</label>
 		<description>Set your sights on a specific target, increasing all damage the target takes by 50% for a short period of time.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansMark</iconPath>
-		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
+		<warmupStartSound>Mashed_Bloodmoon_HuntsmansMark</warmupStartSound>
 		<cooldownTicksRange>3600</cooldownTicksRange>
 		<statBases>
 			<Ability_Duration>60</Ability_Duration>
@@ -242,7 +242,7 @@
 		<label>moon veil</label>
 		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar conditions.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</iconPath>
-		<warmupStartSound>Pawn_Warg_Angry</warmupStartSound>
+		<warmupStartSound>Mashed_Bloodmoon_MoonVeil</warmupStartSound>
 		<cooldownTicksRange>1200</cooldownTicksRange>
 		<hostile>false</hostile>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
