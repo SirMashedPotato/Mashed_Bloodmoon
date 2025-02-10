@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolf]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
+		<label>feral werewolf</label>
+		<description>A lycanthrope that has fully succumbed to its beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
+		</comps>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>eye glow</debugLabel>
+				<color>(233,208,138)</color>
+				<drawSize>1.4</drawSize>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>1</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+				<pawnType>NonHumanlikeOnly</pawnType>
+			</li>
+		</renderNodeProperties>
+		<stages>
+			<li>
+				<damageFactors>
+					<Flame>2</Flame>
+				</damageFactors>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

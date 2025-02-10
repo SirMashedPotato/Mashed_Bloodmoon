@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Ashlands_DaedraReptileThingBase]========== -->
+	<ThingDef ParentName="AnimalThingBase" Name="Mashed_Bloodmoon_FeralWerewolfThingBase" Abstract="True">
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<MoveSpeed>5.2</MoveSpeed>
+			<InjuryHealingFactor>1.5</InjuryHealingFactor>
+			<PsychicSensitivity>1.5</PsychicSensitivity>
+			<Flammability>1.5</Flammability>
+			<ToxicResistance>-0.3</ToxicResistance>
+			<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+			<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.5</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+			<Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>1</Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>
+			<FilthRate>5</FilthRate>
+			<MarketValue>600</MarketValue>
+		</statBases>
+		<comps>
+
+		</comps>
+		<race>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<foodType>CarnivoreAnimal</foodType>
+			<body>Human</body>
+			<leatherDef>Leather_Wolf</leatherDef>
+			<useMeatFrom>Wolf_Timber</useMeatFrom>
+			<needsRest>false</needsRest>
+			<wildness>1</wildness>
+			<lifeExpectancy>60</lifeExpectancy>
+			<trainability>Advanced</trainability>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolf]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerewolfThingBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
+		<label>feral werewolf</label>
+		<description>A lycanthrope that has fully succumbed to its beast form. Most would consider it nothing more than a mindless animal now.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<tools>
+			<li>
+				<label>left hand</label>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>1.0</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right hand</label>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>1.0</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeBite</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<predator>true</predator>
+			<maxPreyBodySize>3</maxPreyBodySize>
+			<baseBodySize>1.6</baseBodySize>
+			<baseHealthScale>2</baseHealthScale>
+			<baseHungerRate>0.3</baseHungerRate>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dog_Injured</soundWounded>
+					<soundDeath>Pawn_Dog_Death</soundDeath>
+					<soundCall>Pawn_Dog_Call</soundCall>
+					<soundAngry>Pawn_Dog_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<butcherProducts>
+				<Mashed_Bloodmoon_WerewolfBlood>3</Mashed_Bloodmoon_WerewolfBlood>
+			</butcherProducts>
+		</race>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
+		<label>feral werewolf</label>
+		<race>Mashed_Bloodmoon_FeralWerewolf</race>
+		<combatPower>300</combatPower>
+		<ecoSystemWeight>1.0</ecoSystemWeight>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
+					<color>(53,54,50)</color>
+					<colorTwo>(123,112,93)</colorTwo>
+					<drawSize>2.1</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Mashed_Ashlands_Daedroth/Mashed_Ashlands_Dessicated_Daedroth</texPath>
+					<drawSize>2.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

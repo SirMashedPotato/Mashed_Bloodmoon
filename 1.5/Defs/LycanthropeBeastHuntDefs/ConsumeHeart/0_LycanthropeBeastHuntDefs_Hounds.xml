@@ -3,7 +3,7 @@
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesBase]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_FeralWerewolvesBase" Abstract="true">
 		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Hunger by 1.</extraTooltip>
-		<targetThingDef>Rat</targetThingDef><!-- todo -->
+		<targetThingDef>Mashed_Bloodmoon_FeralWerewolf</targetThingDef>
 		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
 			<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>
 			<useCount>1</useCount>
