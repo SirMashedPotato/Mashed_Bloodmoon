@@ -85,6 +85,7 @@
 		</comps>
 		<stages>
 			<li>
+				<totalBleedFactor>0</totalBleedFactor>
 				<painFactor>0</painFactor>
 			</li>
 		</stages>
