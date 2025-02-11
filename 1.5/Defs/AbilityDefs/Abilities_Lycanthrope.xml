@@ -272,8 +272,28 @@
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>PsychicInvisibility</hediffDef>
+				<hediffDef>Mashed_Bloodmoon_MoonVeil</hediffDef>
 			</li>
 		</comps>
 	</AbilityDef>
+	<HediffDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>moon veil</label>
+		<description>A lycanthrope blended into the moonlight, rendering it effectively invisible to others.</description>
+		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_MoonVeil</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>
