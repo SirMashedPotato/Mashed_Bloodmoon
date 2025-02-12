@@ -20,7 +20,7 @@ namespace Mashed_Bloodmoon
 
         public override void IngestionOutcome_Lycanthrope(Pawn pawn, Hediff hediff)
         {
-            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbloodAdrenaline).Severity = 1f;
+            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbloodAdrenaline);
         }
 
         public override void IngestionOutcome_SaniesLupinus(Pawn pawn, Hediff hediff)
@@ -30,7 +30,7 @@ namespace Mashed_Bloodmoon
 
         public override void IngestionOutcome_Transformed(Pawn pawn, Hediff hediff)
         {
-            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration).Severity = 1f;
+            LycanthropeUtility.GetCompLycanthropeTransformed(pawn).AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
         }
     }
 }

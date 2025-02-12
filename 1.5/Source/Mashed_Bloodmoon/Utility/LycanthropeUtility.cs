@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -154,26 +155,6 @@ namespace Mashed_Bloodmoon
             pawn.health.RemoveHediff(dormantHediff);
             HediffComp_Lycanthrope compLycanthrope = pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
             compLycanthrope.TransformPawn(true);
-        }
-
-        internal static void AddLinkedHediff(Pawn pawn, HediffDef hediffDef, BodyPartDef partDef)
-        {
-            foreach (BodyPartRecord bodyPartRecord in pawn.health.hediffSet.GetNotMissingParts())
-            {
-                if (bodyPartRecord.def == partDef)
-                {
-                    Hediff hediff = HediffMaker.MakeHediff(hediffDef, pawn, bodyPartRecord);
-                    pawn.health.AddHediff(hediff);
-                }
-            }
-        }
-        internal static void RemoveLinkedHediff(Pawn pawn, HediffDef hediffDef)
-        {
-            Hediff hediff;
-            while ((hediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef)) != null)
-            {
-                pawn.health.RemoveHediff(hediff);
-            }
         }
 
         internal static void MoveEquippedToInventory(Pawn pawn)

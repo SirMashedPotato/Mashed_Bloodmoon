@@ -14,6 +14,7 @@ namespace Mashed_Bloodmoon
         private int stressMax = -1;
         private Gizmo_LycanthropeStress lycanthropeStressGizmo;
         private HediffComp_Lycanthrope compLycanthrope;
+        public List<Hediff> linkedHediffs;
 
         public HediffCompProperties_LycanthropeTransformed Props => (HediffCompProperties_LycanthropeTransformed)props;
 
@@ -102,8 +103,11 @@ namespace Mashed_Bloodmoon
             base.CompPostMake();
             currentStress = 0;
             parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_TransformationCount);
-            LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
-            LycanthropeUtility.AddLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
+
+            linkedHediffs = new List<Hediff> { };
+            AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
+            AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
+
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
@@ -126,6 +130,30 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
+        /// Adds a linked hediff
+        /// </summary>
+        public void AddLinkedHediff(HediffDef hediffDef, BodyPartRecord bodyPartRecord = null)
+        {
+            Hediff hediff = HediffMaker.MakeHediff(hediffDef, parent.pawn, bodyPartRecord);
+            parent.pawn.health.AddHediff(hediff);
+            linkedHediffs.Add(hediff);
+        }
+
+        /// <summary>
+        /// Adds a linked hediff to all body parts of a specific def
+        /// </summary>
+        public void AddLinkedHediff(HediffDef hediffDef, BodyPartDef partDef)
+        {
+            foreach (BodyPartRecord bodyPartRecord in parent.pawn.health.hediffSet.GetNotMissingParts())
+            {
+                if (bodyPartRecord.def == partDef)
+                {
+                    AddLinkedHediff(hediffDef, bodyPartRecord);
+                }
+            }
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         public void DoTransformationEffects()
@@ -135,16 +163,13 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Removing linked hediff
-        /// Adding fatigue hediff
+        /// 
         /// </summary>
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
-            LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws);
-            LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth);
-            LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_WolfsbloodRegeneration);
-            LycanthropeUtility.RemoveLinkedHediff(parent.pawn, HediffDefOf.Mashed_Bloodmoon_AdrenalineRush);
+
+            RemoveLinkedHediffs();
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
@@ -167,6 +192,18 @@ namespace Mashed_Bloodmoon
                 fatigueDuration *= 2;
             }
             LycanthropeUtility.AddFatigueHediff(parent.pawn, fatigueDuration);
+        }
+
+        /// <summary>
+        /// Removes all linked hediffs
+        /// </summary>
+        public void RemoveLinkedHediffs()
+        {
+            foreach (Hediff hediff in linkedHediffs)
+            {
+                hediff?.pawn.health.RemoveHediff(hediff);
+            }
+            linkedHediffs.Clear();
         }
 
         /// <summary>
@@ -245,6 +282,7 @@ namespace Mashed_Bloodmoon
         {
             Scribe_Values.Look(ref currentStress, "currentStress", 0);
             Scribe_Values.Look(ref stressMax, "stressMax", 0);
+            Scribe_Collections.Look(ref linkedHediffs, "linkedHediffs", lookMode: LookMode.Reference);
         }
     }
 }

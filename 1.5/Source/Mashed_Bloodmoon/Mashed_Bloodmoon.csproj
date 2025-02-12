@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_AddLinkedHediff.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_EffecterOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_FleckOnTargetExt.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UnlockAbility.cs" />
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UpgradeTotem.cs" />
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LycanthropeBeastHuntCompletionWorker.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LTWorker_AddLinkedHediff.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHunt.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Totem.cs" />

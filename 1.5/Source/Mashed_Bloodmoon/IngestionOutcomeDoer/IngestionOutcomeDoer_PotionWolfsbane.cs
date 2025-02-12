@@ -7,18 +7,18 @@ namespace Mashed_Bloodmoon
     {
         public override void IngestionOutcome_Dormant(Pawn pawn, Hediff hediff)
         {
-            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention).Severity = 1f;
+            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention);
         }
 
         public override void IngestionOutcome_Human(Pawn pawn)
         {
-            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneResistance).Severity = 1f;
+            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneResistance);
 
         }
 
         public override void IngestionOutcome_Lycanthrope(Pawn pawn, Hediff hediff)
         {
-            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea).Severity = 1f;
+            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea);
 
             if (Rand.Chance(0.1f))
             {
@@ -34,7 +34,7 @@ namespace Mashed_Bloodmoon
 
         public override void IngestionOutcome_Transformed(Pawn pawn, Hediff hediff)
         {
-            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea).Severity = 1f;
+            pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea);
             LycanthropeUtility.LycanthropeIngestedWolfsbane(pawn);
         }
     }

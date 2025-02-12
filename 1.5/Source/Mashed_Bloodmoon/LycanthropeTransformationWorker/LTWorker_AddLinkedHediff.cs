@@ -1,30 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    [Obsolete]
-    public class LTWorker_AddHediff : LycanthropeTransformationWorker
+    public class LTWorker_AddLinkedHediff : LycanthropeTransformationWorker
     {
         public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {
-            if (hediffDef != null)
+            if (partDef != null)
             {
-                pawn.health.AddHediff(hediffDef);
+                LycanthropeUtility.GetCompLycanthropeTransformed(pawn).AddLinkedHediff(hediffDef, partDef);
+                return;
             }
+
+            LycanthropeUtility.GetCompLycanthropeTransformed(pawn).AddLinkedHediff(hediffDef);
         }
 
         public override void PostTransformationEnd(Pawn pawn, int value = 0)
         {
-            if (hediffDef != null)
-            {
-                Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
-                if (hediff != null) 
-                { 
-                    pawn.health.RemoveHediff(hediff); 
-                }
-            }
+            return;
         }
 
         public override IEnumerable<string> ConfigErrors()
@@ -36,5 +30,6 @@ namespace Mashed_Bloodmoon
         }
 
         public HediffDef hediffDef;
+        public BodyPartDef partDef;
     }
 }

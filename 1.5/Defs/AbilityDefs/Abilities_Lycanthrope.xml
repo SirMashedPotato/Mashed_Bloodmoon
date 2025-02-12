@@ -63,7 +63,7 @@
 				<stressCost>15</stressCost>
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_AddLinkedHediff</compClass>
 				<hediffDef>Mashed_Bloodmoon_AdrenalineRush</hediffDef>
 			</li>
 		</comps>
@@ -271,7 +271,7 @@
 				</gameConditions>
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_AddLinkedHediff</compClass>
 				<hediffDef>Mashed_Bloodmoon_MoonVeil</hediffDef>
 			</li>
 		</comps>
