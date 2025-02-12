@@ -68,12 +68,33 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public int MaxPurchaseableUpgrades(HediffComp_Lycanthrope compLycanthrope)
+        {
+            if (!CanUpgrade(compLycanthrope))
+            {
+                return 1;
+            }
+            int maxPurchaseableUpgrades = 0;
+            int heartCount = compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
+            while (heartCount >= purchaseHeartCost)
+            {
+                heartCount -= purchaseHeartCost;
+                maxPurchaseableUpgrades++;
+            }
+            int maxAdditionalUpgrades =  maxLevel - compLycanthrope.usedTotemTracker.TryGetValue(this, 0);
+            int finalValue = Mathf.Clamp(maxPurchaseableUpgrades, 1, maxAdditionalUpgrades);
+            return finalValue;
+        }
+
+        /// <summary>
         /// Utility method for purchasing a totem level with hearts
         /// </summary>
-        public void PurchaseTotemLevel(HediffComp_Lycanthrope compLycanthrope)
+        public void PurchaseTotemLevel(HediffComp_Lycanthrope compLycanthrope, int count = 1)
         {
-            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost;
-            UseTotem(compLycanthrope, 1);
+            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost * count;
+            UseTotem(compLycanthrope, count);
         }
 
         /// <summary>

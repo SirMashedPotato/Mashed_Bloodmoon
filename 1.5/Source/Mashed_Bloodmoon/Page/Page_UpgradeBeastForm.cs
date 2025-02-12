@@ -8,12 +8,25 @@ namespace Mashed_Bloodmoon
 {
     public class Page_UpgradeBeastForm : LycanthropePage
     {
+        public class UpgradeAmount
+        {
+            public LycanthropeTotemDef totemTypeDef;
+            public float amount;
+
+            public UpgradeAmount(LycanthropeTotemDef def)
+            {
+                totemTypeDef = def;
+                amount = 1f;
+            }
+        }
+
         public override string PageTitle => "Mashed_Bloodmoon_UpgradeBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
         private readonly List<LycanthropeTotemDef> TotemList;
         private readonly List<LycanthropeAbilityDef> AbilityList;
         private static Vector2 scrollPositionTotem = Vector2.zero;
         private static Vector2 scrollPositionAbility = Vector2.zero;
+        private readonly List<UpgradeAmount> upgradeAmountList = new List<UpgradeAmount>();
 
         public float innerRectHeightTotem;
         public float innerRectHeightAbility;
@@ -25,6 +38,14 @@ namespace Mashed_Bloodmoon
             AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading;
             innerRectHeightTotem = TotemList.Count * (rowHeight + (rectPadding / 2f));
             innerRectHeightAbility = AbilityList.Count * (rowHeight + (rectPadding / 2f));
+
+            foreach (LycanthropeTotemDef def in TotemList)
+            {
+                if (def.canBePurchased)
+                {
+                    upgradeAmountList.Add(new UpgradeAmount(def));
+                }
+            }
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -152,14 +173,23 @@ namespace Mashed_Bloodmoon
             {
                 Rect upgradeRect = mainRect;
                 upgradeRect.height = Text.LineHeight * 1.5f;
-                upgradeRect.width = 130f;
                 upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
-                upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - rectPadding;
+
+                upgradeRect.SplitVerticallyWithMargin(out Rect upgradeSliderRect, out Rect upgradeButtonRect, rectPadding);
+
+                UpgradeAmount upgradeAmount = upgradeAmountList.Where(x => x.totemTypeDef == totemDef).First();
+
+                Widgets.HorizontalSlider(upgradeSliderRect, ref upgradeAmount.amount, new FloatRange(1, totemDef.MaxPurchaseableUpgrades(compLycanthrope)), "+" + upgradeAmount.amount, roundTo: 1f);
+
                 bool canPurchase = totemDef.CanUpgrade(compLycanthrope);
-                string upgradeLabel = "Mashed_Bloodmoon_UpgradeLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost);
-                if (Widgets.ButtonText(upgradeRect, upgradeLabel, true, canPurchase, active: canPurchase))
+                string upgradeLabel = "Mashed_Bloodmoon_UpgradeLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost * upgradeAmount.amount);
+                if (Widgets.ButtonText(upgradeButtonRect, upgradeLabel, true, canPurchase, active: canPurchase))
                 {
-                    totemDef.PurchaseTotemLevel(compLycanthrope);
+                    totemDef.PurchaseTotemLevel(compLycanthrope, (int)upgradeAmount.amount);
+                    foreach(UpgradeAmount val in upgradeAmountList)
+                    {
+                        val.amount = 1;
+                    }
                 }
             }
         }
