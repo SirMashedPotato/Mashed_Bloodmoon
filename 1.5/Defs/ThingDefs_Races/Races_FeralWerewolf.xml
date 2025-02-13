@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- ==========[Mashed_Ashlands_DaedraReptileThingBase]========== -->
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfThingBase]========== -->
 	<ThingDef ParentName="AnimalThingBase" Name="Mashed_Bloodmoon_FeralWerewolfThingBase" Abstract="True">
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
