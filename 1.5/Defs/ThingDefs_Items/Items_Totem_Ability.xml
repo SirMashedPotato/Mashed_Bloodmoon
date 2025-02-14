@@ -7,7 +7,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>500</MarketValue>
+			<MarketValue>600</MarketValue>
 		</statBases>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemAdrenalineRush]==========-->
