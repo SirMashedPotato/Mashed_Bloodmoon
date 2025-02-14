@@ -47,7 +47,9 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public void UnlockAbility(HediffComp_Lycanthrope compLycanthrope)
         {
+
             compLycanthrope.unlockedAbilityTracker.Add(this, 1);
+            Messages.Message("Mashed_Bloodmoon_AbilityUnlocked".Translate(compLycanthrope.parent.pawn, this), compLycanthrope.parent.pawn, MessageTypeDefOf.PositiveEvent);
         }
     }
 }

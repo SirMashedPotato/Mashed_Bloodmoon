@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase" Name="Mashed_Bloodmoon_TotemAbilityBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemCrystalSkullAlt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemAdrenalineRush]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase">
+		<defName>Mashed_Bloodmoon_TotemAdrenalineRush</defName>
+		<label>Huntsman's totem (Adrenaline Rush)</label>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Adrenaline Rush lycanthrope ability for use in beast form.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_AdrenalineRush</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
+				<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemBeastHowl]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase">
+		<defName>Mashed_Bloodmoon_TotemBeastHowl</defName>
+		<label>Huntsman's totem (Beast Howl)</label>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Beast Howl lycanthrope ability for use in beast form.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_BeastHowl</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
+				<abilityDef>Mashed_Bloodmoon_BeastHowl</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemBeastLeap]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase">
+		<defName>Mashed_Bloodmoon_TotemBeastLeap</defName>
+		<label>Huntsman's totem (Beast Leap)</label>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Beast Leap lycanthrope ability for use in beast form.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_BeastLeap</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
+				<abilityDef>Mashed_Bloodmoon_BeastLeap</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemHuntsmansMark]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase">
+		<defName>Mashed_Bloodmoon_TotemHuntsmansMark</defName>
+		<label>Huntsman's totem (Huntsman's Mark)</label>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Huntsman's Mark lycanthrope ability for use in beast form.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_HuntsmansMark</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
+				<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemMoonVeil]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase" MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_TotemMoonVeil</defName>
+		<label>Huntsman's totem (Moon Veil)</label>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Moon Veil lycanthrope ability for use in beast form.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_MoonVeil</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
+				<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

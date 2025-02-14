@@ -60,12 +60,14 @@
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
 	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
 	<Mashed_Bloodmoon_TotemLimitReached>{0_labelShort} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
+	<Mashed_Bloodmoon_AbilityAlreadyUnlocked>{0_labelShort} has already unlocked the {1_label} ability</Mashed_Bloodmoon_AbilityAlreadyUnlocked>
 	<!-- ==========[messages]==========-->
 	<Mashed_Bloodmoon_SaniesLupinusTransitioned>{0_labelShort}'s Sanies Lupinus has transitioned into dormant lycanthropy</Mashed_Bloodmoon_SaniesLupinusTransitioned>
 	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
 	<Mashed_Bloodmoon_TotemLevelUp>{0_labelShort} has increased their {1_label} level by {2}</Mashed_Bloodmoon_TotemLevelUp>
 	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
 	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed the {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
+	<Mashed_Bloodmoon_AbilityUnlocked>{0_labelShort} has unlocked the {1_label} ability for use in beast form</Mashed_Bloodmoon_AbilityUnlocked>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
 	<!-- ==========[misc]==========-->
 	<Mashed_Bloodmoon_LycanthropeCantDo>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantDo>

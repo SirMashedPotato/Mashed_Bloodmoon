@@ -3,9 +3,9 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class CompUseEffect_Totem : CompUseEffect
+    public class CompUseEffect_UnlockAbility : CompUseEffect
     {
-        public CompProperties_UseEffectTotem Props => (CompProperties_UseEffectTotem)props;
+        public CompProperties_UseEffectUnlockAbility Props => (CompProperties_UseEffectUnlockAbility)props;
 
         public override void PrepareTick()
         {
@@ -14,7 +14,7 @@ namespace Mashed_Bloodmoon
         public override void DoEffect(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            Props.totemTypeDef.UseTotem(compLycanthrope, Props.usedCount);
+            Props.abilityDef.UnlockAbility(compLycanthrope);
         }
 
         public override AcceptanceReport CanBeUsedBy(Pawn pawn)
@@ -25,9 +25,9 @@ namespace Mashed_Bloodmoon
                 return "Mashed_Bloodmoon_NotLycanthrope".Translate(pawn);
             }
 
-            if (!Props.totemTypeDef.CanUpgrade(compLycanthrope))
+            if (!Props.abilityDef.CanGainAbility(compLycanthrope))
             {
-                return "Mashed_Bloodmoon_TotemLimitReached".Translate(pawn, Props.totemTypeDef);
+                return "Mashed_Bloodmoon_AbilityAlreadyUnlocked".Translate(pawn, Props.abilityDef);
             }
 
             return true;

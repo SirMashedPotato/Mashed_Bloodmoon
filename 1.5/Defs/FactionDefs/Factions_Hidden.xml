@@ -57,6 +57,7 @@
 			<fixedParams>
 				<filter>
 					<thingDefs>
+						<!-- Normal Totems -->
 						<li>Mashed_Bloodmoon_TotemEndurance</li>
 						<li>Mashed_Bloodmoon_TotemFortitude</li>
 						<li>Mashed_Bloodmoon_TotemGuile</li>
@@ -64,6 +65,12 @@
 						<li>Mashed_Bloodmoon_TotemSpeed</li>
 						<li>Mashed_Bloodmoon_TotemStrength</li>
 						<li>Mashed_Bloodmoon_TotemTenacity</li>
+						<!-- Ability Totems -->
+						<li>Mashed_Bloodmoon_TotemAdrenalineRush</li>
+						<li>Mashed_Bloodmoon_TotemBeastHowl</li>
+						<li>Mashed_Bloodmoon_TotemBeastLeap</li>
+						<li>Mashed_Bloodmoon_TotemHuntsmansMark</li>
+						<li MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">Mashed_Bloodmoon_TotemMoonVeil</li>
 					</thingDefs>
 				</filter>
 			</fixedParams>

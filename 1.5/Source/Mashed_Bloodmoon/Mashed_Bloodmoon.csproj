@@ -81,7 +81,9 @@
     <Compile Include="CompAbilityEffect\CompAbilityEffect_ConsumeHeart.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityConsumeHeart.cs" />
     <Compile Include="CompUse\CompUseEffect_Totem.cs" />
+    <Compile Include="CompUse\CompUseEffect_UnlockAbility.cs" />
     <Compile Include="CompUse\Properties\CompProperties_UseEffectTotem.cs" />
+    <Compile Include="CompUse\Properties\CompProperties_UseEffectUnlockAbility.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
     <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
