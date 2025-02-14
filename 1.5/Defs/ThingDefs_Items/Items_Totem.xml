@@ -18,7 +18,7 @@
 			<li>RewardStandardLowFreq</li>
 		</thingSetMakerTags>
 		<statBases>
-			<MarketValue>100</MarketValue>
+			<MarketValue>150</MarketValue>
 			<MaxHitPoints>80</MaxHitPoints>
 			<Mass>0.5</Mass>
 		</statBases>
