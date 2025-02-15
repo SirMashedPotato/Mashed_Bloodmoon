@@ -11,6 +11,11 @@
 		<defName>Mashed_Bloodmoon_LycanthropeDied</defName>
 		<label>lycanthrope died</label>
 	</HistoryEventDef>
+	<!-- ==========[Mashed_Bloodmoon_CleansedFeralWerewolfPack]==========-->
+	<HistoryEventDef>
+		<defName>Mashed_Bloodmoon_CleansedFeralWerewolfPack</defName>
+		<label>cleansed feral werewolf pack</label>
+	</HistoryEventDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeRevered]==========-->
 	<PreceptDef>
 		<defName>Mashed_Bloodmoon_LycanthropeRevered</defName>
@@ -118,6 +123,10 @@
 			<li Class="PreceptComp_SituationalThought">
 				<thought>Mashed_Bloodmoon_LycanthropeReviled_LycanthropeColonist</thought>
 				<description>Lycanthrope among us</description>
+			</li>
+			<li Class="PreceptComp_DevelopmentPoints">
+				<eventDef>Mashed_Bloodmoon_CleansedFeralWerewolfPack</eventDef>
+				<points>2</points>
 			</li>
 		</comps>
 		<statOffsets>

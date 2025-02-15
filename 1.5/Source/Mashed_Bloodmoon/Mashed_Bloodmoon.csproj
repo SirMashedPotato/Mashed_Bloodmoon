@@ -89,6 +89,7 @@
     <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
     <Compile Include="DefOf\AbilityDefOf.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
+    <Compile Include="DefOf\FactionDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\LycanthropeAbilityDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
@@ -158,6 +159,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quests\QuestNode_Root_LostWandererJoin_WalkIn.cs" />
     <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
+    <Compile Include="Sites\SitePartWorker\SitePartWorker_FeralWerewolfPack.cs" />
+    <Compile Include="Sites\GenStep\GenStep_FeralWerewolfPack.cs" />
     <Compile Include="StatPart\StatPart_LycanthropeTotems.cs" />
     <Compile Include="ThingClass\Gas_Wolfsbane.cs" />
     <Compile Include="ThingClass\Gas_Wolfsblood.cs" />
@@ -170,6 +173,7 @@
     <Compile Include="Utility\Assets.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
     <Compile Include="DefModExtension\PawnTotemRecord.cs" />
+    <Compile Include="Utility\WerewolfUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

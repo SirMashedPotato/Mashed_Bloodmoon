@@ -14,9 +14,6 @@
 		<tradeTags>
 			<li>Mashed_Bloodmoon_LycanthropeTotems</li>
 		</tradeTags>
-		<thingSetMakerTags>
-			<li>RewardStandardLowFreq</li>
-		</thingSetMakerTags>
 		<statBases>
 			<MarketValue>150</MarketValue>
 			<MaxHitPoints>80</MaxHitPoints>
