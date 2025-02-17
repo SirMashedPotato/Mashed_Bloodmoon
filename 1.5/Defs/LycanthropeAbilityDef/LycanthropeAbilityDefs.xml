@@ -49,4 +49,12 @@
 		<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
+		<label>summon spectral werewolf</label>
+		<description>Summon a spectral werewolf to temporarily fight alongside you. It can not be controlled directly, and will seek out hostile targets on its own.</description>
+		<abilityDef>Mashed_Bloodmoon_SummonSpectralWerewolf</abilityDef>
+		<heartCost>50</heartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 </Defs>

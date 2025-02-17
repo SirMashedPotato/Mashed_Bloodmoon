@@ -11,6 +11,7 @@
 		<showOnEntities>false</showOnEntities>
 		<showIfHediffsPresent>
 			<li>Mashed_Bloodmoon_Lycanthrope</li>
+			<li>Mashed_Bloodmoon_FeralWerewolf</li>
 		</showIfHediffsPresent>
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>

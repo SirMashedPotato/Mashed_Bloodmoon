@@ -296,4 +296,36 @@
 			</li>
 		</comps>
 	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
+		<label>summon spectral werewolf</label>
+		<description>Summon a spectral werewolf to temporarily fight alongside you. It can not be controlled directly, and will seek out hostile targets on its own.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_BeastHowl</warmupStartSound>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<drawAimPie>false</drawAimPie>
+			<range>9.9</range>
+			<warmupTime>0.25</warmupTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>15</stressCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilitySummonBeast">
+				<pawnKindDef>Mashed_Bloodmoon_FeralWerewolf</pawnKindDef>
+				<linkedHediff>Mashed_Bloodmoon_SpectralWerewolf</linkedHediff>
+			</li>
+		</comps>
+	</AbilityDef>
 </Defs>

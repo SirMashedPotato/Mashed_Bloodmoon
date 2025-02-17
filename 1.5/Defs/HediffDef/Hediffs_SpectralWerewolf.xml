@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SpectralWerewolf]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_SpectralWerewolf</defName>
+		<label>spectral werewolf</label>
+		<description>A spectral werewolf summoned by a lycanthrope. It will dissipate after a short duration.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
+		</comps>
+		<renderNodeProperties>
+			
+		</renderNodeProperties>
+	</HediffDef>
+</Defs>
