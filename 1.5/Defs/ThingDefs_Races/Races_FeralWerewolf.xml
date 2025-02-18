@@ -32,9 +32,18 @@
 			<wildness>1</wildness>
 			<lifeExpectancy>60</lifeExpectancy>
 			<intelligence>ToolUser</intelligence>
-			<trainability>Advanced</trainability>
 			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dog_Injured</soundWounded>
+					<soundDeath>Pawn_Dog_Death</soundDeath>
+					<soundCall>Pawn_Dog_Call</soundCall>
+					<soundAngry>Pawn_Dog_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
 			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
@@ -55,7 +64,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerewolfThingBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
 		<label>feral werewolf</label>
-		<description>A lycanthrope that has fully succumbed to its beast form. Most would consider it nothing more than a mindless animal now.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<description>A lycanthrope that has fully succumbed to its beast form. Most would consider it nothing more than a mindless animal now.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
 		<uiIconScale>1.35</uiIconScale>
 		<tools>
 			<li>
@@ -111,16 +120,6 @@
 			<baseBodySize>1.6</baseBodySize>
 			<baseHealthScale>2</baseHealthScale>
 			<baseHungerRate>0.3</baseHungerRate>
-			<lifeStageAges>
-				<li>
-					<def>AnimalAdult</def>
-					<minAge>0</minAge>
-					<soundWounded>Pawn_Dog_Injured</soundWounded>
-					<soundDeath>Pawn_Dog_Death</soundDeath>
-					<soundCall>Pawn_Dog_Call</soundCall>
-					<soundAngry>Pawn_Dog_Angry</soundAngry>
-				</li>
-			</lifeStageAges>
 		</race>
 		<butcherProducts>
 			<Mashed_Bloodmoon_WerewolfBlood>3</Mashed_Bloodmoon_WerewolfBlood>

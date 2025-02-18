@@ -4,7 +4,7 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
 		<label>feral werewolf</label>
-		<description>A lycanthrope that has fully succumbed to its beast form.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nConsuming wolfsbane through any means will cause a great deal of toxic buildup to a transformed lycanthrope. Standing in wolfsbane gas will also cause constant toxic buildup.</description>
+		<description>A lycanthrope that has fully succumbed to its beast form.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
 		</descriptionHyperlinks>

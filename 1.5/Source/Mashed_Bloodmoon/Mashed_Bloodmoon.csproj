@@ -115,10 +115,12 @@
     <Compile Include="Harmony\Patch_GenerateInitialHediffs.cs" />
     <Compile Include="Harmony\Patch_SetupDynamicNodes.cs" />
     <Compile Include="Harmony\Patch_ApplyBedThoughts.cs" />
+    <Compile Include="HediffComp\HediffComp_KillOnRemove.cs" />
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
     <Compile Include="HediffComp\HediffComp_SilverWeakness.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_KillOnRemove.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_Lycanthrope.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />

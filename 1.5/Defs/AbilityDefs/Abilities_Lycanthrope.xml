@@ -297,10 +297,10 @@
 		</comps>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]==========-->
-	<AbilityDef>
+	<AbilityDef MayRequire="ludeon.rimworld.biotech">
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
 		<label>summon spectral werewolf</label>
-		<description>Summon a spectral werewolf to temporarily fight alongside you. It can not be controlled directly, and will seek out hostile targets on its own.</description>
+		<description>Summon a spectral werewolf to temporarily fight alongside you. It can not be controlled directly, but will seek out hostile targets on its own.</description>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</iconPath>
 		<warmupStartSound>Mashed_Bloodmoon_BeastHowl</warmupStartSound>
 		<cooldownTicksRange>3600</cooldownTicksRange>
@@ -323,8 +323,9 @@
 				<stressCost>15</stressCost>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilitySummonBeast">
-				<pawnKindDef>Mashed_Bloodmoon_FeralWerewolf</pawnKindDef>
+				<pawnKindDef>Mashed_Bloodmoon_SpectralWerewolf</pawnKindDef>
 				<linkedHediff>Mashed_Bloodmoon_SpectralWerewolf</linkedHediff>
+				<stateDef>BerserkWarcall</stateDef>
 			</li>
 		</comps>
 	</AbilityDef>

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -44,7 +45,11 @@ namespace Mashed_Bloodmoon
         {
             if (Props.stateDef != null)
             {
-                pawn.mindState.mentalStateHandler.TryStartMentalState(Props.stateDef);
+                if (pawn.mindState.mentalStateHandler.TryStartMentalState(Props.stateDef))
+                {
+                    pawn.mindState.mentalStateHandler.CurState.forceRecoverAfterTicks = parent.def.GetStatValueAbstract(RimWorld.StatDefOf.Ability_Duration).SecondsToTicks();
+                    pawn.mindState.mentalStateHandler.CurState.sourceFaction = parent.pawn.Faction;
+                }
             }
         }
     }
