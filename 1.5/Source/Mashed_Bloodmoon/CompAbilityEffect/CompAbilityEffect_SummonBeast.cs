@@ -15,6 +15,8 @@ namespace Mashed_Bloodmoon
             for (int i = 0; i < Props.count; i++)
             {
                 Pawn pawn = PawnGenerator.GeneratePawn(Props.pawnKindDef, null);
+                Name pawnName = new NameSingle("Mashed_Bloodmoon_SpectralBeastName".Translate(parent.pawn.Name.ToStringShort, pawn.Label));
+                pawn.Name = pawnName;
                 GenSpawn.Spawn(pawn, target.Cell, parent.pawn.MapHeld, WipeMode.Vanish);
                 AddLinkedHediff(pawn);
                 PlaySummonEffects(pawn);

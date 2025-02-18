@@ -16,19 +16,6 @@
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_KillOnRemove"/>
 		</comps>
-		<renderNodeProperties>
-			<li>
-				<debugLabel>eye glow</debugLabel>
-				<color>(222,33,33)</color>
-				<drawSize>1.4</drawSize>
-				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
-				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
-				<overlayLayer>Body</overlayLayer>
-				<baseLayer>1</baseLayer>
-				<rotDrawMode>Fresh</rotDrawMode>
-				<pawnType>NonHumanlikeOnly</pawnType>
-			</li>
-		</renderNodeProperties>
 		<stages>
 			<li>
 				<totalBleedFactor>0</totalBleedFactor>

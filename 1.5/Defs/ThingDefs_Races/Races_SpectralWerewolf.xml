@@ -63,6 +63,7 @@
 			<baseHungerRate>0</baseHungerRate>
 			<bloodDef IsNull="true"/>
 			<bloodSmearDef IsNull="true"/>
+			<foodType Inherit="false">None</foodType>
 			<alwaysAwake>true</alwaysAwake>
 			<hasMeat>false</hasMeat>
 			<hasCorpse>false</hasCorpse>
@@ -79,10 +80,6 @@
 					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_SpectralWerewolf/Mashed_Bloodmoon_SpectralWerewolf</texPath>
 					<drawSize>2.1</drawSize>
 					<shaderType>TransparentPostLight</shaderType>
-					<shadowData>
-						<volume>(0.4, 0.4, 0.4)</volume>
-						<offset>(0,0,-0.2)</offset>
-					</shadowData>
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
