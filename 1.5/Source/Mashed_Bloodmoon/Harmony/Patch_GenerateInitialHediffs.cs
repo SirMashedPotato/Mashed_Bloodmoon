@@ -28,6 +28,21 @@ namespace Mashed_Bloodmoon
                     compLycanthrope.ResetColours();
                 }
 
+                if (props.primaryColourOverride != null)
+                {
+                    compLycanthrope.primaryColour = props.primaryColourOverride;
+                }
+
+                if (props.secondaryColourOverride != null)
+                {
+                    compLycanthrope.secondaryColour = props.secondaryColourOverride;
+                }
+
+                if (props.tertiaryColourOverride != null)
+                {
+                    compLycanthrope.tertiaryColour = props.tertiaryColourOverride;
+                }
+
                 if (!props.startingTotemCounts.NullOrEmpty())
                 {
                     foreach (PawnTotemRecord pawnTotemRecord in props.startingTotemCounts)
