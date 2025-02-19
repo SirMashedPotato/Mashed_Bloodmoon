@@ -24,8 +24,13 @@ namespace Mashed_Bloodmoon
         public static HediffDef Mashed_Bloodmoon_WolfsbaneResistance;
         public static HediffDef Mashed_Bloodmoon_WolfsbanePrevention;
         public static HediffDef Mashed_Bloodmoon_WolfsbaneNausea;
+
         ///Wolfsblood
         public static HediffDef Mashed_Bloodmoon_WolfsbloodAdrenaline;
         public static HediffDef Mashed_Bloodmoon_WolfsbloodRegeneration;
+
+        ///Abilities
+        public static HediffDef Mashed_Bloodmoon_SpectralBeast;
+        public static HediffDef Mashed_Bloodmoon_HuntsmansMark;
     }
 }

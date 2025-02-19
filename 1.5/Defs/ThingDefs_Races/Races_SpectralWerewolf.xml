@@ -6,9 +6,6 @@
 		<label>spectral werewolf</label>
 		<description>A spectral werewolf summoned by a lycanthrope. It will only remain in this form for a short time before dissipating.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
 		<uiIconScale>1.35</uiIconScale>
-		<statBases>
-			<Mashed_Bloodmoon_LycanthropeSilverWeakness>1</Mashed_Bloodmoon_LycanthropeSilverWeakness>
-		</statBases>
 		<tools>
 			<li>
 				<label>left hand</label>

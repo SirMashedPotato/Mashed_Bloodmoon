@@ -33,11 +33,16 @@ namespace Mashed_Bloodmoon
             {
                 hediffComp_Disappears.ticksToDisappear = parent.def.GetStatValueAbstract(RimWorld.StatDefOf.Ability_Duration).SecondsToTicks();
             }
+            HediffComp_SummonedBeast hediffComp_SummonedBeast = hediff.TryGetComp<HediffComp_SummonedBeast>();
+            if (hediffComp_SummonedBeast != null)
+            {
+                hediffComp_SummonedBeast.parentPawn = parent.pawn;
+            }
             pawn.health.AddHediff(hediff);
             CompLycanthropeTransformed.linkedHediffs.Add(hediff);
         }
 
-        private void PlaySummonEffects(Pawn pawn) 
+        private void PlaySummonEffects(Pawn pawn)
         {
             SoundDefOf.Mashed_Bloodmoon_BeastHowl.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
             MoteMaker.MakeAttachedOverlay(pawn, ThingDefOf.Mashed_Bloodmoon_TransformEffect, Vector3.zero, pawn.DrawSize.y);

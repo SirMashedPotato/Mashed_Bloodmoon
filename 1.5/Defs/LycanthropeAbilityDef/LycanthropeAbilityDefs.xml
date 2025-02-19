@@ -50,10 +50,10 @@
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
-	<Mashed_Bloodmoon.LycanthropeAbilityDef MayRequire="ludeon.rimworld.biotech">
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
 		<label>summon spectral werewolf</label>
-		<description>Summon a spectral werewolf to temporarily fight alongside you. It can not be controlled directly, but will seek out hostile targets on its own.</description>
+		<description>Summon a spectral werewolf to temporarily fight alongside you. It will priorities targets marked by the Huntsman's mark ability.</description>
 		<abilityDef>Mashed_Bloodmoon_SummonSpectralWerewolf</abilityDef>
 		<heartCost>50</heartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>

@@ -1,20 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- ==========[Mashed_Bloodmoon_SpectralWerewolf]==========-->
+	<!-- ==========[Mashed_Bloodmoon_SpectralBeast]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
-		<defName>Mashed_Bloodmoon_SpectralWerewolf</defName>
-		<label>spectral werewolf</label>
-		<description>A spectral werewolf summoned by a lycanthrope. It will dissipate after a short duration.</description>
-		<descriptionHyperlinks>
-			<AbilityDef>Mashed_Bloodmoon_SummonSpectralWerewolf</AbilityDef>
-		</descriptionHyperlinks>
+		<defName>Mashed_Bloodmoon_SpectralBeast</defName>
+		<label>spectral beast</label>
+		<description>A spectral beast summoned by a lycanthrope. It will dissipate after a short duration.</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
-			<li Class="Mashed_Bloodmoon.HediffCompProperties_KillOnRemove"/>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_SummonedBeast"/>
 		</comps>
 		<stages>
 			<li>

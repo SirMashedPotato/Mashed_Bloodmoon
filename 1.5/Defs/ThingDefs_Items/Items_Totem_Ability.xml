@@ -81,7 +81,7 @@
 		</comps>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSummonSpectralWerewolf]==========-->
-	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase" MayRequire="ludeon.rimworld.biotech">
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase">
 		<defName>Mashed_Bloodmoon_TotemSummonSpectralWerewolf</defName>
 		<label>Huntsman's totem (Summon Spectral Werewolf)</label>
 		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Summon Spectral Werewolf lycanthrope ability for use in beast form.</description>

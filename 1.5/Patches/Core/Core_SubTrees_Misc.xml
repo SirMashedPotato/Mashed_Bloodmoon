@@ -4,6 +4,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
 		<value>
+			<!-- ==========[Mashed_Bloodmoon_LycanthropeFury]========== -->
 			<li Class="ThinkNode_ConditionalMentalState">
 				<state>Mashed_Bloodmoon_LycanthropeFury</state>
 				<subNodes>
@@ -13,6 +14,22 @@
 							<li Class="JobGiver_WanderAnywhere">
 								<maxDanger>Deadly</maxDanger>
 							</li>
+						</subNodes>
+					</li>
+				</subNodes>
+			</li>
+			<!-- ==========[Mashed_Bloodmoon_SpectralBeast]========== -->
+			<li Class="ThinkNode_ConditionalMentalState">
+				<state>Mashed_Bloodmoon_SpectralBeast</state>
+				<subNodes>
+					<li Class="ThinkNode_Priority">
+						<subNodes>
+							<li Class="Mashed_Bloodmoon.JobGiver_AttackMarkedTarget"/>
+							<li Class="Mashed_Bloodmoon.JobGiver_SpectralBeastDefendParent">
+								<attackMeleeThreatEvenIfNotHostile>true</attackMeleeThreatEvenIfNotHostile>
+							</li>
+							<li Class="Mashed_Bloodmoon.JobGiver_SpectralBeastFollowParent"/>
+							<li Class="Mashed_Bloodmoon.JobGiver_SpectralBeastWanderNearParent"/>
 						</subNodes>
 					</li>
 				</subNodes>

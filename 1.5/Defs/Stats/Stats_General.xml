@@ -12,7 +12,7 @@
 		<showIfHediffsPresent>
 			<li>Mashed_Bloodmoon_Lycanthrope</li>
 			<li>Mashed_Bloodmoon_FeralWerewolf</li>
-			<li>Mashed_Bloodmoon_SpectralWerewolf</li>
+			<li>Mashed_Bloodmoon_SpectralBeast</li>
 		</showIfHediffsPresent>
 		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
