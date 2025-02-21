@@ -15,7 +15,7 @@ namespace Mashed_Bloodmoon
                 Hediff hediff = target.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
                 if (hediff != null)
                 {
-                    LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn).linkedHediffs.Add(hediff);
+                    LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn).AddLinkedHediff(hediff);
                 }
             }
         }

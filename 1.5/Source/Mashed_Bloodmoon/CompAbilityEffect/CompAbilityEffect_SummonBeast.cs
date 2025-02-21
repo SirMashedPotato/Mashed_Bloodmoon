@@ -39,7 +39,7 @@ namespace Mashed_Bloodmoon
                 hediffComp_SummonedBeast.parentPawn = parent.pawn;
             }
             pawn.health.AddHediff(hediff);
-            CompLycanthropeTransformed.linkedHediffs.Add(hediff);
+            CompLycanthropeTransformed.AddLinkedHediff(hediff);
         }
 
         private void PlaySummonEffects(Pawn pawn)

@@ -132,11 +132,19 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Adds a linked hediff
         /// </summary>
+        public void AddLinkedHediff(Hediff hediff)
+        {
+            linkedHediffs.Add(hediff);
+        }
+
+        /// <summary>
+        /// Adds a linked hediff
+        /// </summary>
         public void AddLinkedHediff(HediffDef hediffDef, BodyPartRecord bodyPartRecord = null)
         {
             Hediff hediff = HediffMaker.MakeHediff(hediffDef, parent.pawn, bodyPartRecord);
             parent.pawn.health.AddHediff(hediff);
-            linkedHediffs.Add(hediff);
+            AddLinkedHediff(hediff);
         }
 
         /// <summary>
