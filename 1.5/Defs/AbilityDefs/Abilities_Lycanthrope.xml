@@ -268,6 +268,7 @@
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityLunarRequirement">
 				<gameConditions>
 					<li>Eclipse</li>
+					<li>Mashed_Bloodmoon_HuntsmansMoon</li>
 				</gameConditions>
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">

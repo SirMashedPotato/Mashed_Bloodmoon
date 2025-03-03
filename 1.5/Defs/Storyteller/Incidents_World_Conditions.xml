@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoon]==========-->
+	<IncidentCategoryDef>
+		<defName>Mashed_Bloodmoon_HuntsmansMoon</defName>
+	</IncidentCategoryDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoon]==========-->
+	<IncidentDef>
+		<defName>Mashed_Bloodmoon_HuntsmansMoon</defName>
+		<label>Huntsman's moon</label>
+		<category>Mashed_Bloodmoon_HuntsmansMoon</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>Mashed_Bloodmoon_HuntsmansMoon</gameCondition>
+		<letterLabel>Huntsman's moon</letterLabel>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>1</baseChance>
+		<minRefireDays>15</minRefireDays>
+		<earliestDay>15</earliestDay>
+		<durationDays>0.75~1.25</durationDays>
+		<!--<tale>Eclipse</tale>-->
+	</IncidentDef>
+</Defs>

@@ -109,6 +109,7 @@
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
     <Compile Include="Def\LycanthropeTotemDef.cs" />
+    <Compile Include="GameCondition\GameCondition_HuntsmansMoon.cs" />
     <Compile Include="Gene\Gene_Lycanthrope.cs" />
     <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
@@ -171,6 +172,8 @@
     <Compile Include="Sites\SitePartWorker\SitePartWorker_FeralWerewolfPack.cs" />
     <Compile Include="Sites\GenStep\GenStep_FeralWerewolfPack.cs" />
     <Compile Include="StatPart\StatPart_LycanthropeTotems.cs" />
+    <Compile Include="StorytellerComp\Properties\StorytellerCompProperties_CategoryMTBCustom.cs" />
+    <Compile Include="StorytellerComp\StorytellerComp_CategoryMTBCustom.cs" />
     <Compile Include="ThingClass\Gas_Wolfsbane.cs" />
     <Compile Include="ThingClass\Gas_Wolfsblood.cs" />
     <Compile Include="ThinkNode\ThinkNode_Lycanthrope.cs" />
@@ -189,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IncidentWorker\" />
+    <Folder Include="WorldComp\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
