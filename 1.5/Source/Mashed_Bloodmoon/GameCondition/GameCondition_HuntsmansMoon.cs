@@ -1,5 +1,7 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -25,6 +27,7 @@ namespace Mashed_Bloodmoon
             if (TicksPassed >= ticksToNextRaid)
             {
                 RandomizeTicksToNextRaid();
+                TriggerWerewolfAttack();
             }
         }
 
@@ -49,6 +52,43 @@ namespace Mashed_Bloodmoon
                     }
                 }
             }
+        }
+
+        private void TriggerWerewolfAttack()
+        {
+            int caravanCount = Find.WorldObjects.CaravansCount;
+            List<Map> playerMaps = Find.Maps.Where(x => x.IncidentTargetTags().Contains(IncidentTargetTagDefOf.Map_PlayerHome)).ToList();
+            if (caravanCount > 0 && Rand.RangeInclusive(0, caravanCount + playerMaps.Count()) > caravanCount)
+            {
+                TriggerWerewolfAmbush();
+                return;
+            }
+            if (!playerMaps.NullOrEmpty())
+            {
+                TriggerWerewolfRaid(playerMaps);
+                return;
+            }
+        }
+
+        private void TriggerWerewolfAmbush()
+        {
+            Log.Message("werewolf ambush");
+        }
+
+        private void TriggerWerewolfRaid(List<Map> possibleMaps)
+        {
+            Log.Message("werewolf raid");
+            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.RaidEnemy.category, possibleMaps.RandomElement());
+            incidentParms.forced = true;
+            incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
+            incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
+            incidentParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
+            if (incidentParms.points < 200)
+            {
+                incidentParms.points = 200;
+            }
+            IncidentDef incidentDef = IncidentDefOf.RaidEnemy;
+            incidentDef.Worker.TryExecute(incidentParms);
         }
 
         public override void ExposeData()

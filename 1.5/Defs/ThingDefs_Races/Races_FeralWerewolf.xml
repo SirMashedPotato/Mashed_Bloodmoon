@@ -129,7 +129,7 @@
 		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
 		<label>feral werewolf</label>
 		<race>Mashed_Bloodmoon_FeralWerewolf</race>
-		<combatPower>120</combatPower>
+		<combatPower>100</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
