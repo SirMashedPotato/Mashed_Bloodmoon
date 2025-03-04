@@ -1,9 +1,5 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
@@ -11,7 +7,6 @@ namespace Mashed_Bloodmoon
 {
     public class GameCondition_HuntsmansMoon : GameCondition
     {
-        private bool bloodmoonBegun = false;
         private int ticksToNextRaid = 0;
         private const float MaxSkyLerpFactor = 0.5f;
         private const float SkyGlow = 0.85f;
@@ -20,31 +15,17 @@ namespace Mashed_Bloodmoon
         public override void Init()
         {
             RandomizeTicksToNextRaid();
+            ApplyHuntsmanMoonTransformation();
         }
 
         public override void GameConditionTick()
         {
             base.GameConditionTick();
 
-            if (TicksPassed > TransitionTicks)
+            if (TicksPassed >= ticksToNextRaid)
             {
-                if (!bloodmoonBegun)
-                {
-                    Log.Message("initial actions");
-                    DoInitialActions();
-                    return;
-                }
-                if (TicksPassed >= ticksToNextRaid)
-                {
-                    Log.Message("ticks reached");
-                    RandomizeTicksToNextRaid();
-                }
+                RandomizeTicksToNextRaid();
             }
-        }
-
-        private void DoInitialActions()
-        {
-            bloodmoonBegun = true;
         }
 
         private void RandomizeTicksToNextRaid()
@@ -52,10 +33,27 @@ namespace Mashed_Bloodmoon
             ticksToNextRaid += Rand.RangeInclusive(GenDate.TicksPerHour * 3, GenDate.TicksPerHour * 6); //TODO get values from setting
         }
 
+        private void ApplyHuntsmanMoonTransformation()
+        {
+            foreach(Map map in AffectedMaps)
+            {
+                List<Pawn> pawns = map.mapPawns.AllHumanlikeSpawned;
+                foreach(Pawn pawn in pawns)
+                {
+                    if (pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant))
+                    {
+                        if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention))
+                        {
+                            LycanthropeUtility.ApplyImminentTransformation(pawn, TransitionTicks);
+                        }
+                    }
+                }
+            }
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref bloodmoonBegun, "bloodmoonBegun", false);
             Scribe_Values.Look(ref ticksToNextRaid, "ticksToNextRaid", 0);
         }
 

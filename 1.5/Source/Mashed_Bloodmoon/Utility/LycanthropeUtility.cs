@@ -150,6 +150,23 @@ namespace Mashed_Bloodmoon
             }
         }
 
+        internal static void ApplyImminentTransformation(Pawn pawn, int baseTicks)
+        {
+            Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeImminentTransformation, pawn);
+            HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
+            if (hediffComp_Disappears != null)
+            {
+                hediffComp_Disappears.ticksToDisappear = (int)(baseTicks * Rand.Range(1f, 1.5f));
+            }
+            pawn.health.AddHediff(hediff);
+        }
+
+        internal static void ForceTransformation(Pawn pawn)
+        {
+            Hediff dormantHediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant);
+            ForceTransformation(pawn, dormantHediff);
+        }
+
         internal static void ForceTransformation(Pawn pawn, Hediff dormantHediff)
         {
             pawn.health.RemoveHediff(dormantHediff);

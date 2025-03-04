@@ -36,6 +36,33 @@
 			</li>
 		</stages>
 	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeImminentTransformation]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeImminentTransformation</defName>
+		<label>immenent transformation</label>
+		<description>A lycanthrope about to experience their first transformation.</description>
+		<stages>
+			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
+				<vomitMtbDays>0.1</vomitMtbDays>
+				<statFactors>
+					<MoveSpeed>0.2</MoveSpeed>
+				</statFactors>
+				<disabledWorkTags>AllWork</disabledWorkTags>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_ForcedTransformOnRemoved"/>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_AdrenalineRush</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_Lycanthrope]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
@@ -58,7 +85,7 @@
 					<li>Plague</li>
 					<li>SleepingSickness</li>
 					<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_SwampFever</li>
-				  </makeImmuneTo>
+				</makeImmuneTo>
 				<statOffsets>
 					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
 					<Mashed_Bloodmoon_LycanthropicStressMax>30</Mashed_Bloodmoon_LycanthropicStressMax>
@@ -112,7 +139,7 @@
 				</damageFactors>
 				<statOffsets>
 					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-    				<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
 					<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 					<Flammability>0.5</Flammability>
 					<InjuryHealingFactor>0.5</InjuryHealingFactor>
@@ -138,7 +165,7 @@
 			</li>
 		</comps>
 		<renderNodeProperties>
-			
+
 		</renderNodeProperties>
 		<stages>
 			<li>
