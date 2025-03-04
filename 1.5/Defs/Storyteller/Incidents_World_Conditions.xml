@@ -15,7 +15,7 @@
 		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
 		<gameCondition>Mashed_Bloodmoon_HuntsmansMoon</gameCondition>
 		<letterLabel>Huntsman's moon</letterLabel>
-		<letterDef>NegativeEvent</letterDef>
+		<letterDef>ThreatBig</letterDef>
 		<baseChance>1</baseChance>
 		<minRefireDays>15</minRefireDays>
 		<earliestDay>15</earliestDay>
