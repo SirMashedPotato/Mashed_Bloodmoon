@@ -172,8 +172,6 @@
     <Compile Include="Sites\SitePartWorker\SitePartWorker_FeralWerewolfPack.cs" />
     <Compile Include="Sites\GenStep\GenStep_FeralWerewolfPack.cs" />
     <Compile Include="StatPart\StatPart_LycanthropeTotems.cs" />
-    <Compile Include="StorytellerComp\Properties\StorytellerCompProperties_CategoryMTBCustom.cs" />
-    <Compile Include="StorytellerComp\StorytellerComp_CategoryMTBCustom.cs" />
     <Compile Include="ThingClass\Gas_Wolfsbane.cs" />
     <Compile Include="ThingClass\Gas_Wolfsblood.cs" />
     <Compile Include="ThinkNode\ThinkNode_Lycanthrope.cs" />

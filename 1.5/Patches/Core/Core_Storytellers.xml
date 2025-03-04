@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
 		<value>
-			<li Class="Mashed_Bloodmoon.StorytellerCompProperties_CategoryMTBCustom">
+			<li Class="StorytellerCompProperties_CategoryMTB">
 				<category>Mashed_Bloodmoon_HuntsmansMoon</category>
 				<mtbDays>15</mtbDays>
 			</li>
