@@ -93,6 +93,7 @@
     <Compile Include="DefOf\BodyPartDefOf.cs" />
     <Compile Include="DefOf\FactionDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
+    <Compile Include="DefOf\IncidentDefOf.cs" />
     <Compile Include="DefOf\LycanthropeAbilityDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
     <Compile Include="DefOf\HediffDefOf.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="HediffComp\Properties\HediffCompProperties_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SilverWeakness.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_Ambush_FeralWerewolves.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
@@ -191,7 +193,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IncidentWorker\" />
     <Folder Include="WorldComp\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

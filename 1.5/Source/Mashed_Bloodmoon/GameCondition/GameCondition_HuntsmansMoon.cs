@@ -58,7 +58,7 @@ namespace Mashed_Bloodmoon
         {
             int caravanCount = Find.WorldObjects.CaravansCount;
             List<Map> playerMaps = Find.Maps.Where(x => x.IncidentTargetTags().Contains(IncidentTargetTagDefOf.Map_PlayerHome)).ToList();
-            if (caravanCount > 0 && Rand.RangeInclusive(0, caravanCount + playerMaps.Count()) > caravanCount)
+            if (caravanCount > 0 && Rand.RangeInclusive(0, caravanCount + playerMaps.Count()) < caravanCount - 1)
             {
                 TriggerWerewolfAmbush();
                 return;
@@ -73,12 +73,21 @@ namespace Mashed_Bloodmoon
         private void TriggerWerewolfAmbush()
         {
             Log.Message("werewolf ambush");
+            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, Find.WorldObjects.Caravans.RandomElement());
+            incidentParms.forced = true;
+            incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
+            IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;
+            if (incidentParms.points < 200)
+            {
+                incidentParms.points = 200;
+            }
+            incidentDef.Worker.TryExecute(incidentParms);
         }
 
         private void TriggerWerewolfRaid(List<Map> possibleMaps)
         {
             Log.Message("werewolf raid");
-            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.RaidEnemy.category, possibleMaps.RandomElement());
+            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(RimWorld.IncidentDefOf.RaidEnemy.category, possibleMaps.RandomElement());
             incidentParms.forced = true;
             incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
             incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
@@ -87,7 +96,7 @@ namespace Mashed_Bloodmoon
             {
                 incidentParms.points = 200;
             }
-            IncidentDef incidentDef = IncidentDefOf.RaidEnemy;
+            IncidentDef incidentDef = RimWorld.IncidentDefOf.RaidEnemy;
             incidentDef.Worker.TryExecute(incidentParms);
         }
 
