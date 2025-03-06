@@ -79,6 +79,8 @@
 					<li>totemAnimal->raven</li>
 					<li>totemAnimal->owl</li>
 					<li>totemAnimal->boar</li>
+					<li>totemAnimal->elk</li>
+					<li>totemAnimal->stag</li>
 				</rulesStrings>
 			</rules>
 		</descriptionMaker>

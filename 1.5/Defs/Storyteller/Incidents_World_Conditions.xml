@@ -20,7 +20,7 @@
 		<minRefireDays>15</minRefireDays>
 		<earliestDay>15</earliestDay>
 		<durationDays>0.75~1.25</durationDays>
-		<!--<tale>Eclipse</tale>-->
+		<tale>Mashed_Bloodmoon_HuntsmansMoon</tale>
 	</IncidentDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAmbush]==========-->
 	<IncidentDef>
@@ -36,6 +36,6 @@
 		<letterText>{0} has been ambushed by a pack of feral werewolves!</letterText>
 		<letterLabel>Caravan ambushed (Huntsman's Moon)</letterLabel>
 		<letterDef>ThreatBig</letterDef>
-		<!--<tale>CaravanAmbushedByHumanlike</tale>-->
+		<tale>Mashed_Bloodmoon_CaravanAmbushedByWerewolves</tale>
 	</IncidentDef>
 </Defs>
