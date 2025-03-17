@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_AchievementBloodmoon_KillFeralWerewolves]========== -->
+	<AchievementsExpanded.AchievementDef ParentName="Mashed_AchievementBloodmoon_Base">
+		<defName>Mashed_AchievementBloodmoon_KillFeralWerewolves</defName>
+		<label>Placeholder</label>
+		<description>Kill 100 feral werewolves</description>
+		<tracker Class="AchievementsExpanded.KillTracker">
+			<factionDefs>
+				<li>Mashed_Bloodmoon_FeralWerewolves</li>
+			</factionDefs>
+			<count>100</count>
+		</tracker>
+		<texPath>Achievements/Mashed_AchievementBloodmoon_KillFeralWerewolves</texPath>
+		<points>20</points>
+	</AchievementsExpanded.AchievementDef>
+	<!-- ==========[Mashed_AchievementBloodmoon_QuestFeralWerewolfPack]========== -->
+	<AchievementsExpanded.AchievementDef ParentName="Mashed_AchievementBloodmoon_Base">
+		<defName>Mashed_AchievementBloodmoon_QuestFeralWerewolfPack</defName>
+		<label>Placeholder</label>
+		<description>Successfully complete 6 feral werewolf pack quests</description>
+		<tracker Class="AchievementsExpanded.QuestTracker">
+			<def>Mashed_Bloodmoon_OpportunitySite_FeralWerewolfPack</def>
+			<outcome>Success</outcome>
+			<count>6</count>
+		</tracker>
+		<texPath>Achievements/Mashed_AchievementBloodmoon_QuestFeralWerewolfPack</texPath>
+		<points>20</points>
+	</AchievementsExpanded.AchievementDef>
+</Defs>

@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using RimWorld.Planet;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -72,7 +71,6 @@ namespace Mashed_Bloodmoon
 
         private void TriggerWerewolfAmbush()
         {
-            Log.Message("werewolf ambush");
             IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, Find.WorldObjects.Caravans.RandomElement());
             incidentParms.forced = true;
             incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
@@ -86,7 +84,6 @@ namespace Mashed_Bloodmoon
 
         private void TriggerWerewolfRaid(List<Map> possibleMaps)
         {
-            Log.Message("werewolf raid");
             IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(RimWorld.IncidentDefOf.RaidEnemy.category, possibleMaps.RandomElement());
             incidentParms.forced = true;
             incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);

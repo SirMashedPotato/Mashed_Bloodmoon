@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
     {
         public override void IngestionOutcome_Dormant(Pawn pawn, Hediff hediff)
         {
-            LycanthropeUtility.ForceTransformation(pawn, hediff);
+            LycanthropeUtility.ApplyImminentTransformation(pawn, 300);
         }
 
         public override void IngestionOutcome_Human(Pawn pawn)
