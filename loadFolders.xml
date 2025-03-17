@@ -16,8 +16,10 @@
 		<!-- VE_Framework -->
 		<li IfModActive="oskarpotocki.vanillafactionsexpanded.core">1.5/LoadFolders/VE_Framework</li>
 		<!-- VE_Achievements -->
+		<!--
 		<li IfModActive="vanillaexpanded.achievements">LoadFolders/VE_AchievementsTextures</li>
 		<li IfModActive="vanillaexpanded.achievements">1.5/LoadFolders/VE_Achievements</li>
+		-->
 		<!-- SeedsPleaseLite -->
 		<li IfModActive="owlchemist.seedspleaselite,evyatar108.seedspleaseliteredux">LoadFolders/SeedsPleaseLiteTextures</li>
 		<li IfModActive="owlchemist.seedspleaselite,evyatar108.seedspleaseliteredux">1.5/LoadFolders/SeedsPleaseLite</li>
