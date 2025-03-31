@@ -6,7 +6,7 @@
 		<conditionClass>Mashed_Bloodmoon.GameCondition_HuntsmansMoon</conditionClass>
 		<label>Huntsman's moon</label>
 		<description>The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominious howling can be heard in the distance, growing ever closer.\n\nFeral werewolf packs will occasionally attack settlements, or ambush caravans.</description>
-		<endMessage>The Huntsman's moon is ending.</endMessage>
+		<endMessage>The Huntsman's moon is ending. The Huntsman's Hounds retreat.</endMessage>
 		<letterText>One of the moons of this planet has begun to glow blood red. Feral werewolves will periodically attack your colony. Those infected with dormant lycanthropy will be unable to control the beast slumbering within.</letterText>
 		<letterDef>NegativeEvent</letterDef>
 		<canBePermanent>true</canBePermanent>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using Verse.AI;
+using Verse.AI.Group;
 
 namespace Mashed_Bloodmoon
 {
@@ -95,6 +97,31 @@ namespace Mashed_Bloodmoon
             }
             IncidentDef incidentDef = RimWorld.IncidentDefOf.RaidEnemy;
             incidentDef.Worker.TryExecute(incidentParms);
+        }
+
+        public override void End()
+        {
+            foreach (Map map in AffectedMaps)
+            {
+                EndWerewolfRaids(map);
+            }
+
+            base.End();
+        }
+
+        private void EndWerewolfRaids(Map map)
+        {
+            List<Lord> lords = map.lordManager.lords.FindAll(x => x.faction == Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves)).ToList();
+            foreach (Lord lord in lords)
+            {
+                LordToil_ExitMap lordToil = new LordToil_ExitMap(LocomotionUrgency.Sprint, true, true)
+                {
+                    lord = lord,
+                    useAvoidGrid = true,
+                };
+
+                lord.GotoToil(lordToil);
+            }
         }
 
         public override void ExposeData()
