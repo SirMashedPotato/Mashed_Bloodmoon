@@ -5,7 +5,6 @@
 		<defName>Mashed_Bloodmoon_Rat</defName>
 		<label>beast hunt: Rats</label>
 		<description>Consume the hearts of 13 rats.</description>
-		<extraTooltip>Completing this Beast Hunt unlocks the Wererat beast form.</extraTooltip>
 		<targetThingDef>Rat</targetThingDef>
 		<targetCount>13</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -14,7 +13,6 @@
 		<defName>Mashed_Bloodmoon_WasteRat</defName>
 		<label>beast hunt: Waste Rats</label>
 		<description>Consume the hearts of 13 waste rats.</description>
-		<extraTooltip>Completing this Beast Hunt unlocks the Glowing Wererat beast form.</extraTooltip>
 		<targetThingDef>WasteRat</targetThingDef>
 		<targetCount>13</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Glowing</heartTexPath>
@@ -24,7 +22,6 @@
 		<defName>Mashed_Bloodmoon_Thrumbo</defName>
 		<label>beast hunt: Thrumbo</label>
 		<description>Consume the heart of a thrumbo.</description>
-		<extraTooltip>Completing this Beast Hunt unlocks the Werethrumbo beast form.</extraTooltip>
 		<targetThingDef>Thrumbo</targetThingDef>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

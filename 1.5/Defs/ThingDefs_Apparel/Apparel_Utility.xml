@@ -21,6 +21,8 @@
 			<recipeUsers>
 				<li>DrugLab</li>
 				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench_Electric</li>
 			</recipeUsers>
 		</recipeMaker>
 		<thingCategories>

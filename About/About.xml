@@ -27,8 +27,4 @@
 		<li>owlchemist.seedspleaselite</li>
 		<li>evyatar108.seedspleaseliteredux</li>
 	</loadAfter>
-	<incompatibleWith>
-		<!-- Old MorrowRim -->
-		<li>SirMashedPotato.MorrowRim.Bloodmoon</li>
-	</incompatibleWith>
 </ModMetaData>
