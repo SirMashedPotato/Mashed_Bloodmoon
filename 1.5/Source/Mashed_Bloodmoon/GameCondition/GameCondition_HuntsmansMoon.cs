@@ -1,10 +1,12 @@
 ﻿using RimWorld;
+using RimWorld.QuestGen;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
+using static HarmonyLib.Code;
 
 namespace Mashed_Bloodmoon
 {
@@ -106,6 +108,8 @@ namespace Mashed_Bloodmoon
                 EndWerewolfRaids(map);
             }
 
+            GenerateWerewolfPackQuest();
+
             base.End();
         }
 
@@ -122,6 +126,14 @@ namespace Mashed_Bloodmoon
 
                 lord.GotoToil(lordToil);
             }
+        }
+
+        private void GenerateWerewolfPackQuest()
+        {
+            Slate slate = new Slate();
+            slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(Find.World));
+            Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.Mashed_Bloodmoon_OpportunitySite_FeralWerewolfPack, slate);
+            QuestUtility.SendLetterQuestAvailable(quest);
         }
 
         public override void ExposeData()

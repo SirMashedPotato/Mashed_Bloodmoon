@@ -39,7 +39,7 @@
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeImminentTransformation]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeImminentTransformation</defName>
-		<label>immenent transformation</label>
+		<label>imminent transformation</label>
 		<description>A lycanthrope about to experience their first transformation.</description>
 		<stages>
 			<li>

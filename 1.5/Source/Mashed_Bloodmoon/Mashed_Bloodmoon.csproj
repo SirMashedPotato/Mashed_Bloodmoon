@@ -98,6 +98,7 @@
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
     <Compile Include="DefOf\HediffDefOf.cs" />
     <Compile Include="DefOf\MentalStateDefOf.cs" />
+    <Compile Include="DefOf\QuestScriptDefOf.cs" />
     <Compile Include="DefOf\RecordDefOf.cs" />
     <Compile Include="DefOf\SoundDefOf.cs" />
     <Compile Include="DefOf\StatDefOf.cs" />
