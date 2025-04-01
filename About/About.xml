@@ -24,7 +24,9 @@
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>Ludeon.RimWorld.Anomaly</li>
 		<!-- loadfolders -->
+		<!--
 		<li>owlchemist.seedspleaselite</li>
 		<li>evyatar108.seedspleaseliteredux</li>
+		-->
 	</loadAfter>
 </ModMetaData>
