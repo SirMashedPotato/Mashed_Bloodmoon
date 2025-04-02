@@ -17,6 +17,30 @@ namespace Mashed_Bloodmoon
 
         public static PawnLycanthropeProperties Get(Def def) => def.GetModExtension<PawnLycanthropeProperties>();
 
-        public static PawnLycanthropeProperties GetProps(Pawn pawn) => Get(pawn.kindDef) ?? Get(pawn.def) ?? null;
+        /// <summary>
+        /// Returns PawnLycanthropeProperties, checked from all valid source defs, in order of priority.
+        /// </summary>
+        public static PawnLycanthropeProperties GetProps(Pawn pawn) 
+        {
+            if (pawn.story?.Adulthood != null)
+            {
+                PawnLycanthropeProperties props = Get(pawn.story.Adulthood);
+                if (props != null)
+                {
+                    return props;
+                }
+            }
+
+            if (pawn.story?.Childhood != null)
+            {
+                PawnLycanthropeProperties props = Get(pawn.story.Childhood);
+                if (props != null)
+                {
+                    return props;
+                }
+            }
+
+            return Get(pawn.kindDef) ?? Get(pawn.def) ?? null;
+        } 
     }
 }
