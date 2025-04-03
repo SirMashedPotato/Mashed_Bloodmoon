@@ -56,7 +56,15 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public bool CanUpgrade(HediffComp_Lycanthrope compLycanthrope)
         {
-            if (compLycanthrope.usedTotemTracker.TryGetValue(this, 0) >= maxLevel)
+            return compLycanthrope.usedTotemTracker.TryGetValue(this, 0) < maxLevel;
+        }
+
+        /// <summary>
+        /// Utility method to check if the pawn can purchase the totem
+        /// </summary>
+        public bool CanPurchase(HediffComp_Lycanthrope compLycanthrope)
+        {
+            if (!CanUpgrade(compLycanthrope))
             {
                 return false;
             }
@@ -72,7 +80,7 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public int MaxPurchaseableUpgrades(HediffComp_Lycanthrope compLycanthrope)
         {
-            if (!CanUpgrade(compLycanthrope))
+            if (!CanPurchase(compLycanthrope))
             {
                 return 1;
             }
@@ -101,7 +109,7 @@ namespace Mashed_Bloodmoon
         /// Utility method for using a totem def
         /// Adds the totem to the lycanthropes totem tracker if it is missing
         /// </summary>
-        public void UseTotem(HediffComp_Lycanthrope compLycanthrope, int usedCount)
+        public void UseTotem(HediffComp_Lycanthrope compLycanthrope, int usedCount, bool message = true)
         {
             if (!compLycanthrope.usedTotemTracker.ContainsKey(this))
             {
@@ -111,7 +119,10 @@ namespace Mashed_Bloodmoon
             if (finalCount > 0)
             {
                 compLycanthrope.usedTotemTracker[this] += finalCount;
-                Messages.Message("Mashed_Bloodmoon_TotemLevelUp".Translate(compLycanthrope.parent.pawn, this, finalCount), compLycanthrope.parent.pawn, MessageTypeDefOf.PositiveEvent);
+                if (message)
+                {
+                    Messages.Message("Mashed_Bloodmoon_TotemLevelUp".Translate(compLycanthrope.parent.pawn, this, finalCount), compLycanthrope.parent.pawn, MessageTypeDefOf.PositiveEvent);
+                }
             }
         }
 

@@ -25,7 +25,7 @@ namespace Mashed_Bloodmoon
                 return "Mashed_Bloodmoon_NotLycanthrope".Translate(pawn);
             }
 
-            if (!Props.totemTypeDef.CanUpgrade(compLycanthrope))
+            if (!Props.totemTypeDef.CanPurchase(compLycanthrope))
             {
                 return "Mashed_Bloodmoon_TotemLimitReached".Translate(pawn, Props.totemTypeDef);
             }

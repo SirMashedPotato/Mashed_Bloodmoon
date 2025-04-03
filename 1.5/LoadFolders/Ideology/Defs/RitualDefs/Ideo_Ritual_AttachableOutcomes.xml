@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemRitualReward]==========-->
+	<RitualAttachableOutcomeEffectDef>
+		<defName>Mashed_Bloodmoon_TotemRitualReward</defName>
+		<label>Huntsman's gift</label>
+		<effectDesc>every lycanthrope present will gain a level in a random totem. If the ritual is of the highest quality then they will gain an additional level in a random totem.</effectDesc>
+		<letterInfoText>The Huntsman has bestowed gifts.</letterInfoText>
+		<workerClass>Mashed_Bloodmoon.RitualAttachableOutcomeEffectWorker_GrantTotem</workerClass>
+		<requiredMemeAny>
+			<li>Mashed_Bloodmoon_Lycanthropy</li>
+		</requiredMemeAny>
+		<disallowedRituals>
+			<li>FuneralStandard</li>
+			<li>FuneralNoCorpse</li>
+		</disallowedRituals>
+	</RitualAttachableOutcomeEffectDef>
+</Defs>
