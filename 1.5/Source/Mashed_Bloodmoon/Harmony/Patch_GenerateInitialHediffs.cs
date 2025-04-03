@@ -4,7 +4,8 @@ using Verse;
 namespace Mashed_Bloodmoon
 {
     /// <summary>
-    /// Just adds hediffs and abilities to pawns when they are generated.
+    /// Just adds hediffs and abilities to pawns when they are generated, based on the presence of PawnLycanthropeProperties.
+    /// Checks to see if the pawn already has the lycanthrope hediff, so it can be used in conjunction with the gene etc.
     /// </summary>
     [HarmonyPatch(typeof(PawnGenerator))]
     [HarmonyPatch("GenerateInitialHediffs")]

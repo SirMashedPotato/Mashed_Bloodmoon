@@ -164,15 +164,29 @@
 				<showRemainingTime>True</showRemainingTime>
 			</li>
 		</comps>
-		<renderNodeProperties>
-
-		</renderNodeProperties>
 		<stages>
 			<li>
 				<hungerRateFactor>1.1</hungerRateFactor>
 				<statOffsets>
 					<RestRateMultiplier>-0.3</RestRateMultiplier>
 				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeTransformationEnd]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeTransformationEnd</defName>
+		<label>lycanthrope transformation end</label>
+		<description>Purely used for behind the scenes shenanigans. Just ignore this existing.</description>
+		<comps>
+			<li>
+				<compClass>Mashed_Bloodmoon.HediffComp_LycanthropeTransformationEnd</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>hidden</label>
+				<becomeVisible>false</becomeVisible>
 			</li>
 		</stages>
 	</HediffDef>

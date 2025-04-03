@@ -20,6 +20,7 @@ namespace Mashed_Bloodmoon
         public static HediffDef Mashed_Bloodmoon_LycanthropeTeeth;
         public static HediffDef Mashed_Bloodmoon_LycanthropeTransformedDummy;
         public static HediffDef Mashed_Bloodmoon_LycanthropeImminentTransformation;
+        public static HediffDef Mashed_Bloodmoon_LycanthropeTransformationEnd;
 
         ///Wolfsbane
         public static HediffDef Mashed_Bloodmoon_WolfsbaneResistance;

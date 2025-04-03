@@ -10,6 +10,7 @@ namespace Mashed_Bloodmoon
         public HediffCompProperties_Lycanthrope Props => (HediffCompProperties_Lycanthrope)props;
 
         private LycanthropeTypeDef lycanthropeTypeDef;
+        public DefMap<WorkTypeDef, int> cachedWorkPriorities;
         public Color primaryColour = Color.white;
         public Color secondaryColour = Color.white;
         public Color tertiaryColour = Color.white;
@@ -51,15 +52,29 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// 
+        /// Used to activate a pawns beast form
+        /// Caches work priorities before hand, because beast form resets them
         /// </summary>
         public void TransformPawn(bool startInFury = false)
         {
+            CacheWorkPriorities();
             Hediff transformed = parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed);
             if (startInFury)
             {
-                HediffComp_LycanthropeTransformed compTransformed = transformed.TryGetComp<HediffComp_LycanthropeTransformed>();
-                compTransformed.StartFury();
+                transformed.TryGetComp<HediffComp_LycanthropeTransformed>().StartFury();
+            }
+        }
+
+        /// <summary>
+        /// Caches the pawns work priorities before the transformed hediff is added
+        /// The transformed hediff disables all work types, and resets work priorities when the transformation ends
+        /// </summary>
+        private void CacheWorkPriorities()
+        {
+            cachedWorkPriorities = new DefMap<WorkTypeDef, int>();
+            foreach (WorkTypeDef workTypeDef in DefDatabase<WorkTypeDef>.AllDefs)
+            {
+                cachedWorkPriorities[workTypeDef] = parent.pawn.workSettings.GetPriority(workTypeDef);
             }
         }
 
@@ -208,6 +223,7 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompExposeData()
         {
+            Scribe_Deep.Look(ref cachedWorkPriorities, "cachedWorkPriorities");
             Scribe_Defs.Look(ref lycanthropeTypeDef, "lycanthropeTypeDef");
             Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);

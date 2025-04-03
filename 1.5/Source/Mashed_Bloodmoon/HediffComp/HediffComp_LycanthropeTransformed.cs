@@ -200,6 +200,7 @@ namespace Mashed_Bloodmoon
                 fatigueDuration *= 2;
             }
             LycanthropeUtility.AddFatigueHediff(parent.pawn, fatigueDuration);
+            parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformationEnd);
         }
 
         /// <summary>
