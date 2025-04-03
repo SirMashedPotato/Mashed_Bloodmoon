@@ -15,4 +15,16 @@
 			<li>FuneralNoCorpse</li>
 		</disallowedRituals>
 	</RitualAttachableOutcomeEffectDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfPackRitualReward]==========-->
+	<RitualAttachableOutcomeEffectDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolfPackRitualReward</defName>
+		<label>discover feral werewolf pack</label>
+		<effectDesc>discover the location of a feral werewolf pack. If the ritual is of the highest quality then there is a 50% chance to discover the location of a second feral werewolf pack.</effectDesc>
+		<letterInfoText>You have discovered the location of a feral werewolf pack.</letterInfoText>
+		<workerClass>Mashed_Bloodmoon.RitualAttachableOutcomeEffectWorker_DiscoverFeralWerewolfPack</workerClass>
+		<disallowedRituals>
+			<li>FuneralStandard</li>
+			<li>FuneralNoCorpse</li>
+		</disallowedRituals>
+	</RitualAttachableOutcomeEffectDef>
 </Defs>

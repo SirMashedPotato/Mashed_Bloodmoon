@@ -11,7 +11,6 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
-            extraOutcomeDesc = null;
             validTotemDefs = DefDatabase<LycanthropeTotemDef>.AllDefs.Where(x=>x.canBePurchased).ToList();
             extraOutcomeDesc = IncreaseTotemLevels(totalPresence, outcome.BestPositiveOutcome(jobRitual));
         }

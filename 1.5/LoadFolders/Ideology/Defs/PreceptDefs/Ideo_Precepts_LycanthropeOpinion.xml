@@ -124,6 +124,10 @@
 				<thought>Mashed_Bloodmoon_LycanthropeReviled_LycanthropeColonist</thought>
 				<description>Lycanthrope among us</description>
 			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>Mashed_Bloodmoon_CleansedFeralWerewolfPack</eventDef>
+				<thought>Mashed_Bloodmoon_LycanthropeReviled_CleansedFeralWerewolfPack</thought>
+			</li>
 			<li Class="PreceptComp_DevelopmentPoints">
 				<eventDef>Mashed_Bloodmoon_CleansedFeralWerewolfPack</eventDef>
 				<points>2</points>
@@ -184,6 +188,20 @@
 				<label>lyvanthrope among us</label>
 				<description>I can barely sleep at night knowing that abomination lives amongst us.</description>
 				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeReviled_CleansedFeralWerewolfPack]==========-->
+	<ThoughtDef>
+		<defName>Mashed_Bloodmoon_LycanthropeReviled_CleansedFeralWerewolfPack</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<durationDays>10</durationDays>
+		<stages>
+			<li>
+				<label>cleansed feral werewolf pack</label>
+				<description>It feels good to put those feral mutts where they belong.</description>
+				<baseMoodEffect>10</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>

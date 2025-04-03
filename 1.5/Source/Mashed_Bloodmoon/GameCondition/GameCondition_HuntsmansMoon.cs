@@ -77,7 +77,7 @@ namespace Mashed_Bloodmoon
         {
             IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, Find.WorldObjects.Caravans.RandomElement());
             incidentParms.forced = true;
-            incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
+            incidentParms.faction = WerewolfUtility.GetFeralWerewolfFaction();
             IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;
             if (incidentParms.points < 200)
             {
@@ -90,7 +90,7 @@ namespace Mashed_Bloodmoon
         {
             IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(RimWorld.IncidentDefOf.RaidEnemy.category, possibleMaps.RandomElement());
             incidentParms.forced = true;
-            incidentParms.faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
+            incidentParms.faction = WerewolfUtility.GetFeralWerewolfFaction();
             incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
             incidentParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
             if (incidentParms.points < 200)
@@ -108,14 +108,14 @@ namespace Mashed_Bloodmoon
                 EndWerewolfRaids(map);
             }
 
-            GenerateWerewolfPackQuest();
+            WerewolfUtility.GenerateWerewolfPackQuest(out _);
 
             base.End();
         }
 
         private void EndWerewolfRaids(Map map)
         {
-            List<Lord> lords = map.lordManager.lords.FindAll(x => x.faction == Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves)).ToList();
+            List<Lord> lords = map.lordManager.lords.FindAll(x => x.faction == WerewolfUtility.GetFeralWerewolfFaction()).ToList();
             foreach (Lord lord in lords)
             {
                 LordToil_ExitMap lordToil = new LordToil_ExitMap(LocomotionUrgency.Sprint, true, true)
@@ -128,13 +128,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        private void GenerateWerewolfPackQuest()
-        {
-            Slate slate = new Slate();
-            slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(Find.World));
-            Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.Mashed_Bloodmoon_OpportunitySite_FeralWerewolfPack, slate);
-            QuestUtility.SendLetterQuestAvailable(quest);
-        }
 
         public override void ExposeData()
         {
