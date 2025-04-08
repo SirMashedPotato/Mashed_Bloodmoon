@@ -3,6 +3,7 @@
     public enum BeastHuntType
     {
         Heart,
-        Kill
+        Kill,
+        Other
     }
 }
