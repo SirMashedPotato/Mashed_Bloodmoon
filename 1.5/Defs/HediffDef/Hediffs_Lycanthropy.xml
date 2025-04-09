@@ -244,4 +244,31 @@
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
 	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeHorn]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_LycanthropeHorn</defName>
+		<label>lycanthrope horn</label>
+		<description>The piercing horn of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>lycanthrope horn</label>
+						<capacities>
+							<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+						</capacities>
+						<power>20</power>
+						<armorPenetration>0.5</armorPenetration>
+						<cooldownTime>2</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
 </Defs>

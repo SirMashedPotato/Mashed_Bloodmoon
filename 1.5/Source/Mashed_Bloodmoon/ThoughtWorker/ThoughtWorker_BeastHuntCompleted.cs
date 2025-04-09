@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -14,17 +13,10 @@ namespace Mashed_Bloodmoon
                 return ThoughtState.Inactive;
             }
 
-            HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(p);
-
-            if (compLycanthrope.beastHuntTracker.NullOrEmpty())
+            int completedCount = CompletedCount(p);
+            if (completedCount > 0)
             {
-                return ThoughtState.Inactive;
-            }
-
-            int count = CompletedCount(p);
-            if (count > 0)
-            {
-                return ThoughtState.ActiveAtStage(0, count.ToString());
+                return ThoughtState.ActiveAtStage(0, completedCount.ToString());
             }
             return ThoughtState.Inactive;
         }
@@ -36,7 +28,7 @@ namespace Mashed_Bloodmoon
 
         public int CompletedCount(Pawn p)
         {
-            return LycanthropeUtility.GetCompLycanthrope(p).beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
+            return LycanthropeUtility.GetCompLycanthrope(p).completedBeastHunts;
         }
     }
 }

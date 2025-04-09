@@ -29,6 +29,7 @@ namespace Mashed_Bloodmoon
         /// The int is the progress towards the beast hunt
         /// </summary>
         public Dictionary<LycanthropeBeastHuntDef, int> beastHuntTracker = new Dictionary<LycanthropeBeastHuntDef, int>();
+        public int completedBeastHunts = 0;
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
 
@@ -231,6 +232,7 @@ namespace Mashed_Bloodmoon
             Scribe_Collections.Look(ref unlockedAbilityTracker, "unlockedAbilityTracker", LookMode.Def);
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref beastHuntTracker, "beastHuntTracker", LookMode.Def);
+            Scribe_Values.Look(ref completedBeastHunts, "completedBeastHunts", 0);
         }
     }
 }
