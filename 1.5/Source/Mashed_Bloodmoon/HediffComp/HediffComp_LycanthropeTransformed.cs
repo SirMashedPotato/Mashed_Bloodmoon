@@ -96,7 +96,7 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Adding linked hediff
+        /// 
         /// </summary>
         public override void CompPostMake()
         {
@@ -109,6 +109,16 @@ namespace Mashed_Bloodmoon
             AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
 
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
+            
+            DoTransformationEffects();
+        }
+
+        /// <summary>
+        /// Transformation workers are called here instead of in CompPostMake due to potential null references when trying to fetch this comp
+        /// </summary>
+        public override void CompPostPostAdd(DamageInfo? dinfo)
+        {
+            base.CompPostPostAdd(dinfo);
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
@@ -125,8 +135,6 @@ namespace Mashed_Bloodmoon
                     greatBeastDef.Key.transformationWorker?.PostTransformationBegin(parent.pawn);
                 }
             }
-
-            DoTransformationEffects();
         }
 
         /// <summary>
