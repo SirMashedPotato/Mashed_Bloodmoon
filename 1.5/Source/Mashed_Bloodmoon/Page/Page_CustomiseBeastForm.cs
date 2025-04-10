@@ -231,6 +231,9 @@ namespace Mashed_Bloodmoon
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             TaggedString label2 = "Mashed_Bloodmoon_Artist".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.artist;
             Widgets.Label(rect2.NewCol(label2.GetWidthCached(), HorizontalJustification.Left), label2);
+
+            TaggedString label3 = "Source".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.modContentPack.Name;
+            Widgets.Label(rect2.NewCol(label3.GetWidthCached(), HorizontalJustification.Right), label3);
         }
 
         /// <summary>
