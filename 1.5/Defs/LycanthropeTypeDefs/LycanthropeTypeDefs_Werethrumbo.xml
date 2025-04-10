@@ -23,6 +23,16 @@
 				<baseLayer>2</baseLayer>
 				<rotDrawMode>Fresh</rotDrawMode>
 			</li>
+			<li>
+				<debugLabel>lycanthrope horn glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_WerethrumboHornGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
 		</renderNodeProperties>
 		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
 			<beastHuntDef>Mashed_Bloodmoon_Thrumbo</beastHuntDef>
