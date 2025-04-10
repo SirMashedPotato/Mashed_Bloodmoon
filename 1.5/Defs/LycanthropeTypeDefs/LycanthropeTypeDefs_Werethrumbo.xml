@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Werethrumbo]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef>
+		<defName>Mashed_Bloodmoon_Werethrumbo</defName>
+		<label>werethrumbo</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo</texPath>
+			<color>(239,239,239)</color>
+			<colorTwo>(199,207,215)</colorTwo>
+			<colorThree>(215,231,244)</colorThree>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_WerethrumboEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<beastHuntDef>Mashed_Bloodmoon_Thrumbo</beastHuntDef>
+		</requirementWorker>
+		<transformationWorker Class="Mashed_Bloodmoon.LTWorker_AddLinkedHediff">
+			<hediffDef>Mashed_Bloodmoon_LycanthropeHorn</hediffDef>
+			<partDef>Head</partDef>
+		</transformationWorker>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+</Defs>

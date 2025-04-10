@@ -22,6 +22,7 @@
 		<defName>Mashed_Bloodmoon_Thrumbo</defName>
 		<label>beast hunt: Thrumbo</label>
 		<description>Consume the heart of a thrumbo.</description>
+		<extraTooltip>Completing this Beast Hunt unlocks the Werethrumbo beast form.</extraTooltip>
 		<targetThingDef>Thrumbo</targetThingDef>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
