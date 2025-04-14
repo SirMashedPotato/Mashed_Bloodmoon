@@ -109,8 +109,13 @@ namespace Mashed_Bloodmoon
             AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
 
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
-            
-            DoTransformationEffects();
+
+            //TODO remove at some point
+            if (CompLycanthrope.TransformationTypeDef == null)
+            {
+                CompLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
+            }
+            CompLycanthrope.TransformationTypeDef.PlayTransformationEffects(parent.pawn);
         }
 
         /// <summary>
@@ -167,15 +172,6 @@ namespace Mashed_Bloodmoon
                     AddLinkedHediff(hediffDef, bodyPartRecord);
                 }
             }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoTransformationEffects()
-        {
-            SoundDefOf.Mashed_Bloodmoon_BeastHowl.PlayOneShot(new TargetInfo(parent.pawn.Position, parent.pawn.Map));
-            MoteMaker.MakeAttachedOverlay(parent.pawn, ThingDefOf.Mashed_Bloodmoon_TransformEffect, Vector3.zero, parent.pawn.DrawSize.y);
         }
 
         /// <summary>

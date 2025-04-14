@@ -13,22 +13,33 @@ namespace Mashed_Bloodmoon
 
         ///Cached values
         LycanthropeTypeDef originalLycanthropeTypeDef;
+        LycanthropeTransformationTypeDef originalLycanthropeTransformationTypeDef;
         Color originalPrimaryColour;
         Color originalSecondaryColour;
         Color originalTertiaryColour;
 
         List<FloatMenuOption> lycanthropeTypeOptions;
+        List<FloatMenuOption> transformationTypeOptions;
 
         public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
         public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
+            //TODO remove at some point
+            if (compLycanthrope.TransformationTypeDef == null)
+            {
+                compLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
+            }
+
             originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
+            originalLycanthropeTransformationTypeDef = compLycanthrope.TransformationTypeDef;
             originalPrimaryColour = compLycanthrope.primaryColour;
             originalSecondaryColour = compLycanthrope.secondaryColour;
             originalTertiaryColour = compLycanthrope.tertiaryColour;
             Reset();
             lycanthropeTypeOptions = CacheLycanthropeTypeOptions();
+            transformationTypeOptions = CacheTransformationTypeOptions();
+
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -185,12 +196,12 @@ namespace Mashed_Bloodmoon
         private void DoButtonSection(Rect mainRect)
         {
             ///Swap type button
-            Rect setTypeRect = mainRect;
-            setTypeRect.height = Text.LineHeight * 2;
-            setTypeRect.width /= 3;
-            setTypeRect.x += setTypeRect.width;
+            Rect lycanthropeTypeRect = mainRect;
+            lycanthropeTypeRect.height = Text.LineHeight * 2;
+            lycanthropeTypeRect.width /= 3;
+            lycanthropeTypeRect.x += lycanthropeTypeRect.width;
 
-            if (Widgets.ButtonText(setTypeRect, "Mashed_Bloodmoon_SelectLycanthropeType".Translate().CapitalizeFirst()))
+            if (Widgets.ButtonText(lycanthropeTypeRect, "Mashed_Bloodmoon_SelectLycanthropeType".Translate().CapitalizeFirst()))
             {
                 FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
                 Find.WindowStack.Add(typeOptions);
@@ -215,6 +226,16 @@ namespace Mashed_Bloodmoon
             {
                 pawnRotation.Rotate(RotationDirection.Counterclockwise);
             }
+
+            ///Transformation type button
+            Rect transformationTypeRect = lycanthropeTypeRect;
+            transformationTypeRect.y += rectPadding + transformationTypeRect.height;
+
+            if (Widgets.ButtonText(transformationTypeRect, "Mashed_Bloodmoon_SelectTransformationType".Translate().CapitalizeFirst()))
+            {
+                FloatMenu typeOptions = new FloatMenu(transformationTypeOptions);
+                Find.WindowStack.Add(typeOptions);
+            }
         }
 
         private void DoDescriptionSection(Rect mainRect)
@@ -232,8 +253,11 @@ namespace Mashed_Bloodmoon
             TaggedString label2 = "Mashed_Bloodmoon_Artist".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.artist;
             Widgets.Label(rect2.NewCol(label2.GetWidthCached(), HorizontalJustification.Left), label2);
 
-            TaggedString label3 = "Source".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.modContentPack.Name;
-            Widgets.Label(rect2.NewCol(label3.GetWidthCached(), HorizontalJustification.Right), label3);
+            TaggedString label3 = "Mashed_Bloodmoon_Effect".Translate() + ": " + compLycanthrope.TransformationTypeDef.LabelCap;
+            Widgets.Label(rect1.NewCol(label3.GetWidthCached(), HorizontalJustification.Right), label3);
+
+            TaggedString label4 = "Source".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.modContentPack.Name;
+            Widgets.Label(rect2.NewCol(label4.GetWidthCached(), HorizontalJustification.Right), label4);
         }
 
         /// <summary>
@@ -243,6 +267,7 @@ namespace Mashed_Bloodmoon
         {
             base.DoBack();
             compLycanthrope.LycanthropeTypeDef = originalLycanthropeTypeDef;
+            compLycanthrope.TransformationTypeDef = originalLycanthropeTransformationTypeDef;
             compLycanthrope.primaryColour = originalPrimaryColour;
             compLycanthrope.secondaryColour = originalSecondaryColour;
             compLycanthrope.tertiaryColour = originalTertiaryColour;
@@ -267,7 +292,7 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// Get list of all types that have been unlocked
+        /// Get list of all lycanthrope types that have been unlocked
         /// </summary>
         private List<FloatMenuOption> CacheLycanthropeTypeOptions()
         {
@@ -293,9 +318,36 @@ namespace Mashed_Bloodmoon
             return lycanthropeTypeOptions;
         }
 
+        /// <summary>
+        /// Get list of all transformation types that have been unlocked
+        /// </summary>
+        private List<FloatMenuOption> CacheTransformationTypeOptions()
+        {
+            transformationTypeOptions = new List<FloatMenuOption>();
+
+            foreach (LycanthropeTransformationTypeDef def in DefDatabase<LycanthropeTransformationTypeDef>.AllDefs)
+            {
+                FloatMenuOption item;
+                AcceptanceReport acceptanceReport = def.PawnRequirementsMet(pawn);
+                item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
+                {
+                    compLycanthrope.TransformationTypeDef = def;
+                });
+
+                if (!acceptanceReport.Accepted)
+                {
+                    item.Label += " (" + acceptanceReport.Reason + ")";
+                    item.Disabled = true;
+                }
+
+                transformationTypeOptions.Add(item);
+            }
+            return transformationTypeOptions;
+        }
+
         private void Reset()
         {
-            originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
+            originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef; //todo double check
             compLycanthrope.primaryColour = originalPrimaryColour;
             compLycanthrope.secondaryColour = originalSecondaryColour;
             compLycanthrope.tertiaryColour = originalTertiaryColour;

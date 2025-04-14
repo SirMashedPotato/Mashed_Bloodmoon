@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Bloodmoon]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+		<defName>Mashed_Bloodmoon_Bloodmoon</defName>
+		<label>bloodmoon (default)</label>
+		<moteDef>Mashed_Bloodmoon_TransformEffect</moteDef>
+		<soundDef>Mashed_Bloodmoon_BeastHowl</soundDef>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_GoreExplosion]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+		<defName>Mashed_Bloodmoon_GoreExplosion</defName>
+		<label>gore explosion</label>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_LightningStrike]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+		<defName>Mashed_Bloodmoon_LightningStrike</defName>
+		<label>lightning strike</label>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<requriedCount>9</requriedCount>
+		</requirementWorker>
+		<transformationWorker Class="Mashed_Bloodmoon.LTEWorker_LightningStrike">
+			<explosionDamageDef>Flame</explosionDamageDef>
+		</transformationWorker>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+</Defs>

@@ -95,6 +95,7 @@
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />
     <Compile Include="DefOf\LycanthropeAbilityDefOf.cs" />
+    <Compile Include="DefOf\LycanthropeTransformationDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
     <Compile Include="DefOf\HediffDefOf.cs" />
     <Compile Include="DefOf\MentalStateDefOf.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Def\BeastHuntType.cs" />
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
+    <Compile Include="Def\LycanthropeTransformationTypeDef.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
     <Compile Include="Def\LycanthropeTotemDef.cs" />
@@ -145,7 +147,10 @@
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UpgradeTotem.cs" />
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LycanthropeBeastHuntCompletionWorker.cs" />
     <Compile Include="LycanthropeTransformationWorker\LTWorker_AddLinkedHediff.cs" />
+    <Compile Include="LycanthropeTransformationWorker\TransformationEffectWorker\LTEWorker_Explosion.cs" />
+    <Compile Include="LycanthropeTransformationWorker\TransformationEffectWorker\LTEWorker_LightningStrike.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHunt.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHuntCount.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Totem.cs" />
     <Compile Include="LycanthropeTransformationWorker\LTWorker_AddAbility.cs" />

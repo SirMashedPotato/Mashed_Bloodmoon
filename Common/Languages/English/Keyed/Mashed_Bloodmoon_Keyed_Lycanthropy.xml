@@ -14,7 +14,9 @@
 	<Mashed_Bloodmoon_UndoChanges>Undo changes</Mashed_Bloodmoon_UndoChanges>
 	<Mashed_Bloodmoon_Artist>Artist</Mashed_Bloodmoon_Artist>
 	<Mashed_Bloodmoon_Type>Type</Mashed_Bloodmoon_Type>
+	<Mashed_Bloodmoon_Effect>Effect</Mashed_Bloodmoon_Effect>
 	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
+	<Mashed_Bloodmoon_SelectTransformationType>select transformation effect</Mashed_Bloodmoon_SelectTransformationType>
 	<!-- ==========[Upgrade beast form page]==========-->
 	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Totem levels, abilities, and ability levels can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\nAll stat bonuses are only active while in Beast Form, unless marked with an (H). All abilities are only avaliable while in Beast Form.</Mashed_Bloodmoon_UpgradeBeastFormDesc>
 	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
@@ -44,6 +46,7 @@
 	<Mashed_Bloodmoon_LTR_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_LTR_InvalidSkill>
 	<Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
 	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>has not completed {0}</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
+	<Mashed_Bloodmoon_LTR_InvalidBeastHuntCount>must complete at least {0} beast hunts</Mashed_Bloodmoon_LTR_InvalidBeastHuntCount>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
