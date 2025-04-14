@@ -21,10 +21,5 @@ namespace Mashed_Bloodmoon
             SoundInfo info = SoundInfo.InMap(new TargetInfo(pawn.Position, pawn.Map));
             RimWorld.SoundDefOf.Thunder_OnMap.PlayOneShot(info);
         }
-
-        public override void PostTransformationEnd(Pawn pawn, int value = 0)
-        {
-            return;
-        }
     }
 }

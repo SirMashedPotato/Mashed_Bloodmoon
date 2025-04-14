@@ -347,7 +347,8 @@ namespace Mashed_Bloodmoon
 
         private void Reset()
         {
-            originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef; //todo double check
+            compLycanthrope.LycanthropeTypeDef = originalLycanthropeTypeDef;
+            compLycanthrope.TransformationTypeDef = originalLycanthropeTransformationTypeDef;
             compLycanthrope.primaryColour = originalPrimaryColour;
             compLycanthrope.secondaryColour = originalSecondaryColour;
             compLycanthrope.tertiaryColour = originalTertiaryColour;

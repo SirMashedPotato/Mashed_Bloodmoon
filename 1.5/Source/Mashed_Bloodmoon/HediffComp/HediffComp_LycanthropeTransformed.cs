@@ -109,13 +109,6 @@ namespace Mashed_Bloodmoon
             AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
 
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
-
-            //TODO remove at some point
-            if (CompLycanthrope.TransformationTypeDef == null)
-            {
-                CompLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
-            }
-            CompLycanthrope.TransformationTypeDef.PlayTransformationEffects(parent.pawn);
         }
 
         /// <summary>
@@ -124,6 +117,14 @@ namespace Mashed_Bloodmoon
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             base.CompPostPostAdd(dinfo);
+
+            //TODO remove at some point
+            if (CompLycanthrope.TransformationTypeDef == null)
+            {
+                CompLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
+            }
+            CompLycanthrope.TransformationTypeDef.PlayTransformationStartEffects(parent.pawn);
+
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
@@ -181,6 +182,13 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostPostRemoved();
 
+            //TODO remove at some point
+            if (CompLycanthrope.TransformationTypeDef == null)
+            {
+                CompLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
+            }
+            CompLycanthrope.TransformationTypeDef.PlayTransformationEndEffects(parent.pawn);
+
             RemoveLinkedHediffs();
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
@@ -198,6 +206,7 @@ namespace Mashed_Bloodmoon
                     greatBeastDef.Key.transformationWorker?.PostTransformationEnd(parent.pawn);
                 }
             }
+
             int fatigueDuration = CurrentFatigueDuration();
             if (inFury)
             {
