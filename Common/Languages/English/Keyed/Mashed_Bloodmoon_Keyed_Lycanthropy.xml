@@ -30,6 +30,7 @@
 	<Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>Reach monolith level {0} to reveal it.</Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>
 	<Mashed_Bloodmoon_BeastHuntTab_Hearts>Consume Hearts</Mashed_Bloodmoon_BeastHuntTab_Hearts>
 	<Mashed_Bloodmoon_BeastHuntTab_Kills>Beast Form Kills</Mashed_Bloodmoon_BeastHuntTab_Kills>
+	<Mashed_Bloodmoon_BeastHuntTab_Other>Other</Mashed_Bloodmoon_BeastHuntTab_Other>
 	<!-- ==========[Type requirement worker requirement not met]==========-->
 	<Mashed_Bloodmoon_LTR_MissingOneOf>requires one of:</Mashed_Bloodmoon_LTR_MissingOneOf>
 	<Mashed_Bloodmoon_LTR_Missing>requires {0_label}</Mashed_Bloodmoon_LTR_Missing>

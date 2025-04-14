@@ -11,6 +11,7 @@ namespace Mashed_Bloodmoon
         public const int columnNumber = 5;
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListHeart;
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListKill;
+        private readonly List<LycanthropeBeastHuntDef> BeastHuntListOther;
         private static Vector2 scrollPosition = Vector2.zero;
         private static BeastHuntType curTab = BeastHuntType.Heart;
         private readonly List<TabRecord> tabs = new List<TabRecord>();
@@ -21,6 +22,7 @@ namespace Mashed_Bloodmoon
         {
             BeastHuntListHeart = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Heart).ToList();
             BeastHuntListKill = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Kill).ToList();
+            BeastHuntListOther = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Other).ToList();
             ReadySettingsTabs();
         }
 
@@ -35,6 +37,14 @@ namespace Mashed_Bloodmoon
             {
                 curTab = BeastHuntType.Kill;
             }, () => curTab == BeastHuntType.Kill));
+
+            if (!BeastHuntListOther.NullOrEmpty())
+            {
+                tabs.Add(new TabRecord("Mashed_Bloodmoon_BeastHuntTab_Other".Translate(), delegate
+                {
+                    curTab = BeastHuntType.Other;
+                }, () => curTab == BeastHuntType.Other));
+            }
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -42,14 +52,28 @@ namespace Mashed_Bloodmoon
             DrawPageTitle(inRect);
             Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHunts));
 
+            if (DebugSettings.ShowDevGizmos)
+            {
+                Rect devRecalculate = new Rect(inRect.width - 220f, 0f, 180f, 30f);
+                if (Widgets.ButtonText(devRecalculate, "Dev: recalculate thought", true))
+                {
+                    RecalculateBeastHuntTHought();
+                }
+            }
+
             Rect mainRect = new Rect(inRect.x, inRect.yMin + 45f, inRect.width, inRect.height - 45f);
             TabDrawer.DrawTabs(new Rect(mainRect.x, mainRect.yMin + 45f, mainRect.width, mainRect.height - 45f), tabs);
 
             mainRect.yMin += rectLimitY;
             DoBottomButtons(mainRect, showNext: false);
             mainRect.height -= rectLimitY;
-            DoBeastHuntWindow(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : BeastHuntListKill);
+            DoBeastHuntWindow(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : curTab == BeastHuntType.Kill ? BeastHuntListKill : BeastHuntListOther);
             Widgets.EndScrollView();
+        }
+
+        private void RecalculateBeastHuntTHought()
+        {
+            compLycanthrope.completedBeastHunts = compLycanthrope.beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
         }
 
         public void DoBeastHuntWindow(Rect inRect, List<LycanthropeBeastHuntDef> beastHuntList)
