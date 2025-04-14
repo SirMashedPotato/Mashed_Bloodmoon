@@ -29,6 +29,11 @@ namespace Mashed_Bloodmoon
                     compLycanthrope.ResetColours();
                 }
 
+                if (props.forcedTransformationTypeDef != null)
+                {
+                    compLycanthrope.TransformationTypeDef = props.forcedTransformationTypeDef;
+                }
+
                 if (props.primaryColourOverride != null)
                 {
                     compLycanthrope.primaryColour = props.primaryColourOverride;

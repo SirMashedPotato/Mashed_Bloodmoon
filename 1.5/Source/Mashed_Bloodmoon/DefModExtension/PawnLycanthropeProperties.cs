@@ -9,6 +9,7 @@ namespace Mashed_Bloodmoon
         public float chance = 1f;
         public float transformOnDamageChanceOverride = 0.1f;
         public LycanthropeTypeDef forcedTypeDef;
+        public LycanthropeTransformationTypeDef forcedTransformationTypeDef;
         public Color primaryColourOverride;
         public Color secondaryColourOverride;
         public Color tertiaryColourOverride;
