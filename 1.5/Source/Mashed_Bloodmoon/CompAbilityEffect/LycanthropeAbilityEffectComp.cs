@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -29,6 +30,18 @@ namespace Mashed_Bloodmoon
                 }
                 return compLycanthropeTransformed;
             }
+        }
+
+        public override bool GizmoDisabled(out string reason)
+        {
+            if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
+            {
+                reason = "Mashed_Bloodmoon_NotLycanthrope".Translate(parent.pawn);
+                parent.pawn.abilities.RemoveAbility(parent.def);
+                return true;
+            }
+
+            return base.GizmoDisabled(out reason);
         }
     }
 }

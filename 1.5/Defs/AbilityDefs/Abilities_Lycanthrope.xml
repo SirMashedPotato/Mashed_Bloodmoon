@@ -68,12 +68,10 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	<HediffDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
 		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
 		<label>adrenaline rush</label>
 		<description>Adrenaline surging throughout the body, completely nullifying pain and staunching bleeding.</description>
-		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
@@ -210,12 +208,10 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	<HediffDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
 		<label>Huntsman's mark</label>
 		<description>This pawn has been marked by a lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
-		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
@@ -277,12 +273,10 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	<HediffDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+	<HediffDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
 		<label>moon veil</label>
 		<description>A lycanthrope blended into the moonlight, rendering it effectively invisible to others.</description>
-		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">

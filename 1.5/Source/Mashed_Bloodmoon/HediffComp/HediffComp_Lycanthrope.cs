@@ -58,6 +58,24 @@ namespace Mashed_Bloodmoon
             }
         }
 
+        public override void CopyFrom(HediffComp other)
+        {
+            base.CopyFrom(other);
+            if (other is HediffComp_Lycanthrope otherLycanthrope)
+            {
+                lycanthropeTypeDef = otherLycanthrope.LycanthropeTypeDef;
+                transformationTypeDef = otherLycanthrope.TransformationTypeDef;
+                cachedWorkPriorities = otherLycanthrope.cachedWorkPriorities;
+                primaryColour = otherLycanthrope.primaryColour;
+                secondaryColour = otherLycanthrope.secondaryColour;
+                tertiaryColour = otherLycanthrope.tertiaryColour;
+                unlockedAbilityTracker = otherLycanthrope.unlockedAbilityTracker;
+                usedTotemTracker = otherLycanthrope.usedTotemTracker;
+                beastHuntTracker = otherLycanthrope.beastHuntTracker;
+                completedBeastHunts = otherLycanthrope.completedBeastHunts;
+            }
+        }
+
         public void ResetColours()
         {
             primaryColour = lycanthropeTypeDef.PrimaryColorDefault;

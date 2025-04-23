@@ -32,7 +32,6 @@
 		<defName>Mashed_Bloodmoon_WolfsbloodAdrenaline</defName>
 		<label>wolfsblood adrenaline</label>
 		<description>A wolfsblood elixir active in ones bloodstream. Temporarily increase the amount of lycanthropic stress they can withstand while transformed.</description>
-		<isBad>true</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-1.5</severityPerDay>
@@ -52,7 +51,7 @@
 		<defName>Mashed_Bloodmoon_WolfsbloodRegeneration</defName>
 		<label>wolfsblood regeneration</label>
 		<description>A wolfsblood elixir active in ones bloodstream. Temporarily increase the rate that wounds heal.</description>
-		<isBad>true</isBad>
+		<duplicationAllowed>false</duplicationAllowed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-6</severityPerDay>

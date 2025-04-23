@@ -7,6 +7,10 @@
 		<defaultLabelColor>(0.95, 0.52, 0.52)</defaultLabelColor>
 		<isBad>false</isBad>
 	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeLinkedHediffBase]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase" Name="Mashed_Bloodmoon_LycanthropeLinkedHediffBase" Abstract="True">
+		<duplicationAllowed>false</duplicationAllowed>
+	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeDormant]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_LycanthropeDormant</defName>
@@ -99,6 +103,7 @@
 		<defName>Mashed_Bloodmoon_LycanthropeTransformedDummy</defName>
 		<label>lycanthrope beast form preview</label>
 		<description>A purely cosmetic transformation used for previews.</description>
+		<duplicationAllowed>false</duplicationAllowed>
 		<renderNodeProperties>
 			<li>
 				<debugLabel>lycanthrope transformation</debugLabel>
@@ -178,6 +183,7 @@
 		<defName>Mashed_Bloodmoon_LycanthropeTransformationEnd</defName>
 		<label>lycanthrope transformation end</label>
 		<description>Purely used for behind the scenes shenanigans. Just ignore this existing.</description>
+		<duplicationAllowed>false</duplicationAllowed>
 		<comps>
 			<li>
 				<compClass>Mashed_Bloodmoon.HediffComp_LycanthropeTransformationEnd</compClass>
@@ -191,13 +197,14 @@
 		</stages>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeClaws]==========-->
-	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
 		<defName>Mashed_Bloodmoon_LycanthropeClaws</defName>
 		<label>lycanthrope claws</label>
 		<description>The rending claws of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
 		</descriptionHyperlinks>
+		<duplicationAllowed>false</duplicationAllowed>
 		<comps>
 			<li Class="HediffCompProperties_VerbGiver">
 				<tools>
@@ -218,7 +225,7 @@
 		</addedPartProps>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeTeeth]==========-->
-	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
 		<defName>Mashed_Bloodmoon_LycanthropeTeeth</defName>
 		<label>lycanthrope teeth</label>
 		<description>The snarling maw of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
@@ -245,7 +252,7 @@
 		</addedPartProps>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeHorn]==========-->
-	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
 		<defName>Mashed_Bloodmoon_LycanthropeHorn</defName>
 		<label>lycanthrope horn</label>
 		<description>The piercing horn of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>

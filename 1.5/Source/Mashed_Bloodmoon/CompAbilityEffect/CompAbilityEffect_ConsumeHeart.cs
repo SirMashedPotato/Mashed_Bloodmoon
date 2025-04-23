@@ -58,12 +58,6 @@ namespace Mashed_Bloodmoon
 
         public override bool GizmoDisabled(out string reason)
         {
-            if (!LycanthropeUtility.PawnIsLycanthrope(parent.pawn))
-            {
-                reason = "Mashed_Bloodmoon_NotLycanthrope".Translate(parent.pawn);
-                return true;
-            }
-
             if (!parent.pawn.health.capacities.CapableOf(PawnCapacityDefOf.Eating))
             {
                 reason = "AbilityDisabledNoCapacity".Translate(parent.pawn, PawnCapacityDefOf.Eating.label);
