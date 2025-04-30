@@ -1,15 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeFury]==========-->
+	<MentalBreakDef>
+		<defName>Mashed_Bloodmoon_LycanthropeFury</defName>
+		<mentalState>Mashed_Bloodmoon_LycanthropeFury</mentalState>
+		<baseCommonality>1</baseCommonality>
+		<intensity>Extreme</intensity>
+		<requiredTrait>Mashed_Bloodmoon_UncontrollableLycanthropy</requiredTrait>
+	</MentalBreakDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeFury]==========-->
 	<MentalStateDef>
 		<defName>Mashed_Bloodmoon_LycanthropeFury</defName>
 		<label>lycanthrope fury</label>
 		<category>Aggro</category>
-		<stateClass>MentalState_Berserk</stateClass>
+		<stateClass>Mashed_Bloodmoon.MentalState_LycanthropeFury</stateClass>
 		<minTicksBeforeRecovery>99999999</minTicksBeforeRecovery>
 		<blockRandomInteraction>true</blockRandomInteraction>
 		<recoverFromSleep>false</recoverFromSleep>
-		<recoverFromDowned>false</recoverFromDowned>
+		<recoverFromDowned>true</recoverFromDowned>
 		<recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
 		<blockNormalThoughts>true</blockNormalThoughts>
 		<nameColor>(0.9,0.2,0.5)</nameColor>

@@ -85,7 +85,7 @@ namespace Mashed_Bloodmoon
 
         /// <summary>
         /// Used to activate a pawns beast form
-        /// Caches work priorities before hand, because beast form resets them
+        /// Caches work priorities before hand, because beast form (disabled work) resets them
         /// </summary>
         public void TransformPawn(bool startInFury = false)
         {
@@ -94,6 +94,11 @@ namespace Mashed_Bloodmoon
             if (startInFury)
             {
                 transformed.TryGetComp<HediffComp_LycanthropeTransformed>().StartFury();
+            }
+            Hediff fatigue = parent.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue);
+            if (fatigue != null)
+            {
+                parent.pawn.health.RemoveHediff(fatigue);
             }
         }
 
@@ -140,21 +145,29 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void Notify_PawnPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
-            if (LycanthropeUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
+            if (Pawn.story.traits.HasTrait(TraitDefOf.Mashed_Bloodmoon_UncontrollableLycanthropy) && LycanthropeUtility.PawnCanTransform(Pawn, true) && Rand.Chance(0.6f))
             {
-                float chance = 0.1f;
-
-                PawnLycanthropeProperties props = PawnLycanthropeProperties.GetProps(parent.pawn);
-                if (props != null)
+                TransformPawn(true);
+            }
+            else
+            {
+                if (LycanthropeUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
                 {
-                    chance = props.chance;
-                }
+                    float chance = 0.1f;
 
-                if (Rand.Chance(chance))
-                {
-                    TransformPawn();
+                    PawnLycanthropeProperties props = PawnLycanthropeProperties.GetProps(parent.pawn);
+                    if (props != null)
+                    {
+                        chance = props.chance;
+                    }
+
+                    if (Rand.Chance(chance))
+                    {
+                        TransformPawn();
+                    }
                 }
             }
+
             base.Notify_PawnPostApplyDamage(dinfo, totalDamageDealt);
         }
 

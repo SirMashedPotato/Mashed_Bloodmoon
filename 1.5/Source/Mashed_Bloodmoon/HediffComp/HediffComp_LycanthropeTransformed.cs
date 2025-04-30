@@ -87,6 +87,9 @@ namespace Mashed_Bloodmoon
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void StartFury()
         {
             parent.pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Mashed_Bloodmoon_LycanthropeFury, null, true, true);
@@ -248,6 +251,7 @@ namespace Mashed_Bloodmoon
                 if (Rand.Chance(parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeKillStressReductionChance)))
                 {
                     currentStress -= Mathf.Clamp((int)(StressMax * 0.9f), 0, currentStress);
+                    MoteMaker.MakeAttachedOverlay(parent.pawn, ThingDefOf.Mashed_Bloodmoon_TransformEffect, Vector3.zero, parent.pawn.DrawSize.y);
                     Messages.Message("Mashed_Bloodmoon_StressReduced".Translate(parent.pawn), parent.pawn, MessageTypeDefOf.PositiveEvent);
                 }
             }

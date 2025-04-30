@@ -48,7 +48,7 @@
 		<defName>Mashed_Bloodmoon_LycanthropeKillStressReductionChance</defName>
 		<label>kill stress reduction chance</label>
 		<description>The chance a pawns lycanthropic stress will be reduced upon landing a killing blow while in beast form.</description>
-		<toStringStyle>FloatOne</toStringStyle>
+		<toStringStyle>PercentZero</toStringStyle>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
@@ -60,7 +60,7 @@
 		<defName>Mashed_Bloodmoon_LycanthropeHeartSatiationFactor</defName>
 		<label>heart satiation factor</label>
 		<description>How much consuming a heart satiates the hunger and rest needs of a lycanthrope.</description>
-		<toStringStyle>FloatOne</toStringStyle>
+		<toStringStyle>PercentZero</toStringStyle>
 		<defaultBaseValue>0.01</defaultBaseValue>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">

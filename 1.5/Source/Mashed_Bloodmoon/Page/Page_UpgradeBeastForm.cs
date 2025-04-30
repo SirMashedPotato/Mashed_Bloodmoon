@@ -85,13 +85,46 @@ namespace Mashed_Bloodmoon
 
             if (DebugSettings.ShowDevGizmos)
             {
-                Rect devCheatRect = inRect;
-                devCheatRect.width = 160f;
-                devCheatRect.x = inRect.width - devCheatRect.width;
-                devCheatRect = devCheatRect.ContractedBy(rectPadding);
-                if (Widgets.ButtonText(devCheatRect, "Dev: max hearts", true))
+                //Left
+                Rect devCheatRectLeft = inRect;
+                devCheatRectLeft.width = 320f;
+
+                devCheatRectLeft.SplitVertically(devCheatRectLeft.width / 2f, out Rect cheatRectLeft1, out Rect cheatRectLeft2);
+
+                cheatRectLeft1 = cheatRectLeft1.ContractedBy(rectPadding);
+                if (Widgets.ButtonText(cheatRectLeft1, "Dev: min hearts", true))
                 {
-                    LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(pawn, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel);
+                    compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = 0;
+                }
+
+                cheatRectLeft2 = cheatRectLeft2.ContractedBy(rectPadding);
+                if (Widgets.ButtonText(cheatRectLeft2, "Dev: -1 heart", true))
+                {
+                    if (consumedCount > 0)
+                    {
+                        compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts]--;
+                    }
+                }
+
+                //Right
+                Rect devCheatRectRight = devCheatRectLeft;
+                devCheatRectRight.x = inRect.width - devCheatRectRight.width;
+
+                devCheatRectRight.SplitVertically(devCheatRectRight.width / 2f, out Rect cheatRectRight1, out Rect cheatRectRight2);
+
+                cheatRectRight1 = cheatRectRight1.ContractedBy(rectPadding);
+                if (Widgets.ButtonText(cheatRectRight1, "Dev: +1 heart", true))
+                {
+                    if (consumedCount < LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel)
+                    {
+                        compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
+                    }
+                }
+
+                cheatRectRight2 = cheatRectRight2.ContractedBy(rectPadding);
+                if (Widgets.ButtonText(cheatRectRight2, "Dev: max hearts", true))
+                {
+                    compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
                 }
             }
         }

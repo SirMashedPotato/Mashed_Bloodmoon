@@ -106,6 +106,7 @@
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="DefOf\ThoughtDefof.cs" />
     <Compile Include="DefOf\LycanthropeTotemDefOf.cs" />
+    <Compile Include="DefOf\TraitDefOf.cs" />
     <Compile Include="Def\BeastHuntType.cs" />
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SilverWeakness.cs" />
     <Compile Include="IncidentWorker\IncidentWorker_Ambush_FeralWerewolves.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_LunaticWandersIn.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
@@ -165,6 +167,7 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Trait.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
+    <Compile Include="MentalState\MentalState_LycanthropeFury.cs" />
     <Compile Include="MentalState\MentalState_SpectralBeast.cs" />
     <Compile Include="Page\LycanthropePage.cs" />
     <Compile Include="Page\Page_CustomiseBeastForm.cs" />

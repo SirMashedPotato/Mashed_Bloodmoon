@@ -13,4 +13,28 @@
 		<baseChance>0.3</baseChance>
 		<populationEffect>IncreaseMedium</populationEffect>
 	</IncidentDef>
+	<!-- ==========[Mashed_Bloodmoon_ConfusedLunatic]==========-->
+	<IncidentDef>
+		<defName>Mashed_Bloodmoon_ConfusedLunatic</defName>
+		<label>confused lunatic wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>Mashed_Bloodmoon.IncidentWorker_LunaticWandersIn</workerClass>
+		<baseChance>0.4</baseChance>
+		<letterLabel>{0} wanders in</letterLabel>
+		<letterText>A confused {1} has wandered into the area. {PAWN_pronoun}'s called {0}. {PAWN_pronoun} reeks of wet dog, and appears to have somewhat fresh blood around {PAWN_possessive} mouth, and on {PAWN_possessive} hands. {0} is a lycanthrope, and likely barely in control of {PAWN_possessive} inner beast.\n\nYou can attempt to tame {PAWN_objective}, but it may be better to deal with {PAWN_objective} before {PAWN_pronoun} spreads {PAWN_possessive} lycanthropy.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<modExtensions>
+			<li Class="Mashed_Bloodmoon.PawnLycanthropeProperties">
+				<startingTotemCounts>
+					<Mashed_Bloodmoon_ConsumedHearts>10~30</Mashed_Bloodmoon_ConsumedHearts>
+					<Mashed_Bloodmoon_TotemEndurance>5~20</Mashed_Bloodmoon_TotemEndurance>
+					<Mashed_Bloodmoon_TotemTenacity>5~20</Mashed_Bloodmoon_TotemTenacity>
+				</startingTotemCounts>
+				<tertiaryColourOverride>(233,138,138)</tertiaryColourOverride>
+			</li>
+		</modExtensions>
+	</IncidentDef>
 </Defs>

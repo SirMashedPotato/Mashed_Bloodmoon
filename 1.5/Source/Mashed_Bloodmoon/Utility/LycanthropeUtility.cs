@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -18,9 +17,9 @@ namespace Mashed_Bloodmoon
             return (GenLocalDate.HourInteger(pawn) >= 23 || GenLocalDate.HourInteger(pawn) <= 5);
         }
 
-        internal static bool PawnCanTransform(Pawn pawn)
+        internal static bool PawnCanTransform(Pawn pawn, bool ignoreFatigue = false)
         {
-            return !PawnIsTransformedLycanthrope(pawn) && pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue) == null;
+            return !PawnIsTransformedLycanthrope(pawn) && (ignoreFatigue || pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue) == null);
         }
 
         internal static bool PawnIsLycanthrope(Pawn pawn)
