@@ -26,7 +26,6 @@ namespace Mashed_Bloodmoon
                             || (t.def.costList != null && t.def.costList.Where(x => x.thingDef == RimWorld.ThingDefOf.Silver) != null))
                         {
                             dinfo.SetAmount(dinfo.Amount * (silverWeakness + 1f));
-                            Log.Message("modified = " + dinfo.Amount);
                         }
                     }
                 }
