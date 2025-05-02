@@ -10,7 +10,6 @@
 				<showRemainingTime>true</showRemainingTime>
 			</li>
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
-			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_SummonedBeast"/>
 		</comps>
 		<stages>

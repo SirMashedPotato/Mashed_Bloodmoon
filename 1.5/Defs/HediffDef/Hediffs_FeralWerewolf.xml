@@ -8,9 +8,6 @@
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
 		</descriptionHyperlinks>
-		<comps>
-			<li Class="Mashed_Bloodmoon.HediffCompProperties_SilverWeakness"/>
-		</comps>
 		<renderNodeProperties>
 			<li>
 				<debugLabel>eye glow</debugLabel>

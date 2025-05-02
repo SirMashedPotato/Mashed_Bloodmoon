@@ -64,7 +64,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerewolfThingBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
 		<label>feral werewolf</label>
-		<description>A lycanthrope that has fully succumbed to its beast form. Most would consider it nothing more than a mindless animal now.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver, in the form of a burn.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
+		<description>A lycanthrope that has fully succumbed to its beast form. Most would consider it nothing more than a mindless animal now.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
 		<uiIconScale>1.35</uiIconScale>
 		<tools>
 			<li>
