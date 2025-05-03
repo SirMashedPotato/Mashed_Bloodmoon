@@ -86,6 +86,7 @@
     <Compile Include="CompUse\CompUseEffect_UnlockAbility.cs" />
     <Compile Include="CompUse\Properties\CompProperties_UseEffectTotem.cs" />
     <Compile Include="CompUse\Properties\CompProperties_UseEffectUnlockAbility.cs" />
+    <Compile Include="DamageWorker\DamageWorker_AddInjurySilver.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
     <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
@@ -119,9 +120,9 @@
     <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Patch_GenerateInitialHediffs.cs" />
-    <Compile Include="Harmony\Patch_DamageWorker_AddInjury.cs" />
     <Compile Include="Harmony\Patch_SetupDynamicNodes.cs" />
     <Compile Include="Harmony\Patch_ApplyBedThoughts.cs" />
+    <Compile Include="Harmony\Patch_Verb_MeleeAttackDamage.cs" />
     <Compile Include="HediffComp\HediffComp_ForcedTransformOnRemoved.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformationEnd.cs" />
     <Compile Include="HediffComp\HediffComp_SummonedBeast.cs" />

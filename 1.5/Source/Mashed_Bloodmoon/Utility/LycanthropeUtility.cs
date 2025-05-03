@@ -57,6 +57,11 @@ namespace Mashed_Bloodmoon
             pawn.health.AddHediff(toxicBuildup);
         }
 
+        internal static float LycanthropeSilverDamageFactor(float baseDamage, float pawnSilverWeakness, float silverDamageFactor)
+        {
+            return baseDamage * ((pawnSilverWeakness * silverDamageFactor) + 1f);
+        }
+
         /// <summary>
         /// Returns the pawns HediffComp_Lycanthrope
         /// </summary>
