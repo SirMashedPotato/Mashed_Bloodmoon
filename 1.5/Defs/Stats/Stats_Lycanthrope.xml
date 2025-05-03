@@ -2,19 +2,13 @@
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeStat]==========-->
 	<StatDef Name="Mashed_Bloodmoon_LycanthropeStat" Abstract="True"> 
-		<category>BasicsPawn</category>
+		<category>Mashed_Bloodmoon_Lycanthrope</category>
 		<defaultBaseValue>0</defaultBaseValue>
 		<minValue>0</minValue>
 		<hideAtValue>0</hideAtValue>
 		<showOnAnimals>false</showOnAnimals>
 		<showOnMechanoids>false</showOnMechanoids>
 		<showOnEntities>false</showOnEntities>
-		<showIfHediffsPresent>
-			<li>Mashed_Bloodmoon_Lycanthrope</li>
-			<li>Mashed_Bloodmoon_FeralWerewolf</li>
-			<li>Mashed_Bloodmoon_SpectralBeast</li>
-		</showIfHediffsPresent>
-		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropyResistance]==========-->
 	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
@@ -24,12 +18,32 @@
 		<toStringStyle>PercentZero</toStringStyle>
 		<maxValue>1</maxValue>
 		<showIfHediffsPresent Inherit="False"/>
+		<displayPriorityInCategory>1</displayPriorityInCategory>
+	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeSilverWeakness]==========-->
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
+		<defName>Mashed_Bloodmoon_LycanthropeSilverWeakness</defName>
+		<label>silver weakness</label>
+		<description>How much additional damage a lycanthrope takes from weapons with silver properties.</description>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>true</showOnAnimals>
+		<displayPriorityInCategory>2</displayPriorityInCategory>
+	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness]==========-->
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
+		<defName>Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness</defName>
+		<label>Wolfsbane weakness</label>
+		<description>How susceptible a lycanthrope is to the toxic effects of wolfsbane.</description>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>true</showOnAnimals>
+		<displayPriorityInCategory>3</displayPriorityInCategory>
 	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropicStressMax]==========-->
 	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
 		<defName>Mashed_Bloodmoon_LycanthropicStressMax</defName>
 		<label>lycanthropic stress limit</label>
 		<description>The maximum amount of lycanthropic stress an individual can tolerate while transformed before entering a lycanthropic rage.</description>
+		<displayPriorityInCategory>4</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_ConsumedHearts</totemTypeDef>
@@ -42,6 +56,7 @@
 		<label>kill stress reduction chance</label>
 		<description>The chance a pawns lycanthropic stress will be reduced upon landing a killing blow while in beast form.</description>
 		<toStringStyle>PercentZero</toStringStyle>
+		<displayPriorityInCategory>5</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
@@ -54,27 +69,11 @@
 		<label>heart satiation factor</label>
 		<description>How much consuming a heart satiates the hunger and rest needs of a lycanthrope.</description>
 		<toStringStyle>PercentZero</toStringStyle>
-		<defaultBaseValue>0.01</defaultBaseValue>
+		<displayPriorityInCategory>6</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>
 			</li>
 		</parts>
-	</StatDef>
-	<!-- ==========[Mashed_Bloodmoon_LycanthropeSilverWeakness]==========-->
-	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
-		<defName>Mashed_Bloodmoon_LycanthropeSilverWeakness</defName>
-		<label>silver weakness</label>
-		<description>How much additional damage a lycanthrope takes from weapons made out of silver.</description>
-		<toStringStyle>PercentZero</toStringStyle>
-		<displayPriorityInCategory>3500</displayPriorityInCategory>
-	</StatDef>
-	<!-- ==========[Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness]==========-->
-	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
-		<defName>Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness</defName>
-		<label>Wolfsbane weakness</label>
-		<description>How susceptible a lycanthrope is to the toxic effects of wolfsbane.</description>
-		<toStringStyle>PercentZero</toStringStyle>
-		<displayPriorityInCategory>3500</displayPriorityInCategory>
 	</StatDef>
 </Defs>

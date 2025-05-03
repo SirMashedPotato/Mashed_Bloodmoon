@@ -151,6 +151,7 @@
 					<RestFallRateFactor>-0.5</RestFallRateFactor>
 					<ToxicResistance>-0.3</ToxicResistance>
 					<Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>1</Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>
+					<Mashed_Bloodmoon_LycanthropeHeartSatiationFactor>0.01</Mashed_Bloodmoon_LycanthropeHeartSatiationFactor>
 				</statOffsets>
 				<disabledWorkTags>AllWork</disabledWorkTags>
 				<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
