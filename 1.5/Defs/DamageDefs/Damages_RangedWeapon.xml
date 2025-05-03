@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SilverBullet]==========-->
+	<DamageDef ParentName="Bullet">
+		<defName>Mashed_Bloodmoon_SilverBullet</defName>
+		<label>silver bullet</label>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_AddInjurySilver</workerClass>
+	</DamageDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverArrow]==========-->
+	<DamageDef ParentName="Arrow">
+		<defName>Mashed_Bloodmoon_SilverArrow</defName>
+		<label>silver arrow</label>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_AddInjurySilver</workerClass>
+	</DamageDef>
+</Defs>

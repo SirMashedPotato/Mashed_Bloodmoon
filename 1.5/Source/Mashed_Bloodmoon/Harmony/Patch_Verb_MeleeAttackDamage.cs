@@ -31,7 +31,6 @@ namespace Mashed_Bloodmoon
             }
 
             float silverDamageFactor = GetDamageFactor(ref __instance);
-
             if (silverDamageFactor == 0)
             {
                 return;
