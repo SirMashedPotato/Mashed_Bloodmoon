@@ -53,6 +53,7 @@
 		<defName>Mashed_Bloodmoon_CliffRacerCulling</defName>
 		<label>beast hunt: Winged Menace</label>
 		<description>Kill 333 cliff racers while in beast form.</description>
+		<targetThingDef>Mashed_Ashlands_CliffRacer</targetThingDef>
 		<targetCount>333</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
