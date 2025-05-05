@@ -311,7 +311,7 @@ namespace Mashed_Bloodmoon
 
             Text.Font = font;
 
-            if (abilityDef.canBePurchased && abilityDef.CanGainAbility(compLycanthrope))
+            if (abilityDef.purchaseHeartCost > 0 && abilityDef.CanGainAbility(compLycanthrope))
             {
                 Rect upgradeRect = mainRect;
                 upgradeRect.height = Text.LineHeight * 1.5f;
@@ -319,7 +319,7 @@ namespace Mashed_Bloodmoon
                 upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
                 upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - rectPadding;
                 bool canPurchase = abilityDef.CanPurchase(compLycanthrope);
-                string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.heartCost);;
+                string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.purchaseHeartCost);;
                 if (Widgets.ButtonText(upgradeRect, unlockLabel, true, canPurchase, active: canPurchase))
                 {
                     abilityDef.PurchaseAbility(compLycanthrope);

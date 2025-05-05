@@ -6,8 +6,7 @@ namespace Mashed_Bloodmoon
     public class LycanthropeAbilityDef : Def
     {
         public AbilityDef abilityDef;
-        public int heartCost = 0;
-        public bool canBePurchased = true;
+        public int purchaseHeartCost = 0;
 
         /// <summary>
         /// Utility method to check if the pawn can purchase the ability
@@ -22,7 +21,7 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public bool CanPurchase(int curHeartCount)
         {
-            return curHeartCount >= heartCost;
+            return curHeartCount >= purchaseHeartCost;
         }
 
         /// <summary>
@@ -38,7 +37,7 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public void PurchaseAbility(HediffComp_Lycanthrope compLycanthrope)
         {
-            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= heartCost;
+            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost;
             UnlockAbility(compLycanthrope);
         }
 
