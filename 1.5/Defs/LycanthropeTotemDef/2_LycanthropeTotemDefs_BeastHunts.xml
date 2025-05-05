@@ -13,7 +13,6 @@
 		<statIncreasePerLevel>0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 		<canBeTransferred>false</canBeTransferred>
-		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSlaughter]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
@@ -28,6 +27,5 @@
 		<statIncreasePerLevel>0.02</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 		<canBeTransferred>false</canBeTransferred>
-		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 </Defs>

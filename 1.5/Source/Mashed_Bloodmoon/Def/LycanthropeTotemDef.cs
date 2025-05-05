@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using static UnityEngine.Random;
 
 namespace Mashed_Bloodmoon
 {
@@ -14,12 +13,11 @@ namespace Mashed_Bloodmoon
         public ThingDef totemThingDef;
         public List<StatDef> statDefs;
         public int maxLevel = 30;
-        public int purchaseHeartCost = 10;
+        public int purchaseHeartCost = 0;
         public float statIncreasePerLevel = 1f;
         public bool onlyTransformed = true;
         public bool displayAsTotem = true;
         public bool canBeTransferred = true;
-        public bool canBePurchased = true;
         public LycanthropeTransformationWorker transformationWorker;
 
         public string LabelShortCap => labelShort.CapitalizeFirst();

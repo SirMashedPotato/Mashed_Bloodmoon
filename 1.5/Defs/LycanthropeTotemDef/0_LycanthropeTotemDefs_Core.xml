@@ -13,6 +13,5 @@
 		<onlyTransformed>false</onlyTransformed>
 		<displayAsTotem>false</displayAsTotem>
 		<canBeTransferred>false</canBeTransferred>
-		<canBePurchased>false</canBePurchased>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 </Defs>

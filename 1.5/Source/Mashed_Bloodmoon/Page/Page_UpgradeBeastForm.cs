@@ -41,7 +41,7 @@ namespace Mashed_Bloodmoon
 
             foreach (LycanthropeTotemDef def in TotemList)
             {
-                if (def.canBePurchased)
+                if (def.purchaseHeartCost > 0)
                 {
                     upgradeAmountList.Add(new UpgradeAmount(def));
                 }
@@ -202,7 +202,7 @@ namespace Mashed_Bloodmoon
             }
             Text.Font = font;
 
-            if (totemDef.canBePurchased && (!compLycanthrope.usedTotemTracker.ContainsKey(totemDef) || compLycanthrope.usedTotemTracker[totemDef] < totemDef.maxLevel))
+            if (totemDef.purchaseHeartCost > 0 && (!compLycanthrope.usedTotemTracker.ContainsKey(totemDef) || compLycanthrope.usedTotemTracker[totemDef] < totemDef.maxLevel))
             {
                 Rect upgradeRect = mainRect;
                 upgradeRect.height = Text.LineHeight * 1.5f;

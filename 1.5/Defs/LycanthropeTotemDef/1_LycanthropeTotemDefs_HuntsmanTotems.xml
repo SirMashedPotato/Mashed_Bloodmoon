@@ -10,8 +10,9 @@
 		<statDefs>
 			<li>InjuryHealingFactor</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>0.01</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.03</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemFortitude]========== -->
@@ -24,8 +25,9 @@
 		<statDefs>
 			<li>IncomingDamageFactor</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>-0.005</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
@@ -38,8 +40,9 @@
 		<statDefs>
 			<li>PsychicSensitivity</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>0.01</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.02</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
@@ -52,8 +55,9 @@
 		<statDefs>
 			<li>StaggerDurationFactor</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>-0.005</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->
@@ -66,8 +70,9 @@
 		<statDefs>
 			<li>MoveSpeed</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>0.02</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.04</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemStrength]========== -->
@@ -80,8 +85,9 @@
 		<statDefs>
 			<li>MeleeDamageFactor</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>0.01</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.02</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemTenacity]========== -->
@@ -94,8 +100,9 @@
 		<statDefs>
 			<li>MeleeCooldownFactor</li>
 		</statDefs>
-		<maxLevel>100</maxLevel>
-		<statIncreasePerLevel>-0.005</statIncreasePerLevel>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 </Defs>
