@@ -8,11 +8,6 @@ namespace Mashed_Bloodmoon
 
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            if (!LycanthropeUtility.PawnIsLycanthrope(p))
-            {
-                return ThoughtState.Inactive;
-            }
-
             int completedCount = CompletedCount(p);
             if (completedCount > 0)
             {

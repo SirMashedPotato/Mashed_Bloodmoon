@@ -184,7 +184,9 @@
 		<defName>Mashed_Bloodmoon_BeltSilverdustVessel</defName>
 		<label>silverdust vessel belt</label>
 		<description>A belt with several glass vessels attached to it, each one filled with a silverdust mixture. The vessels can be thrown, releasing a cloud of silverdust upon impact. Any lycanthropes caught within will suffer constant burns.</description>
-		<MarketValue>80</MarketValue>
+		<statBases>
+			<MarketValue>80</MarketValue>
+		</statBases>
 		<comps>
 			<li Class="CompProperties_ApparelReloadable">
 				<maxCharges>3</maxCharges>

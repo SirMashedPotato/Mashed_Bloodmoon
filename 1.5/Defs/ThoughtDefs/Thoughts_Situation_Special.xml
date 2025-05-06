@@ -12,8 +12,51 @@
 				<baseMoodEffect>1</baseMoodEffect>
 			</li>
 		</stages>
+		<requiredHediffs>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</requiredHediffs>
 		<nullifyingPrecepts>
 			<li MayRequire="ludeon.rimworld.ideology">Mashed_Bloodmoon_LycanthropeReviled</li>
 		</nullifyingPrecepts>
+	</ThoughtDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeSilverApparelSad]==========-->
+	<ThoughtDef>
+		<defName>Mashed_Bloodmoon_LycanthropeSilverApparelSad</defName>
+		<workerClass>Mashed_Bloodmoon.ThoughtWorker_SilverApparel</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<effectMultiplyingStat>Mashed_Bloodmoon_LycanthropeSilverWeakness</effectMultiplyingStat>
+		<stages>
+			<li>
+				<label>wearing silver x{0}</label>
+				<description>Yep, silver does still burn me. Maybe I shouldn't be wearing this.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+		<requiredHediffs>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</requiredHediffs>
+		<nullifyingTraits>
+			<li>Masochist</li>
+		</nullifyingTraits>
+	</ThoughtDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeSilverApparelHappy]==========-->
+	<ThoughtDef>
+		<defName>Mashed_Bloodmoon_LycanthropeSilverApparelHappy</defName>
+		<workerClass>Mashed_Bloodmoon.ThoughtWorker_SilverApparel</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<effectMultiplyingStat>Mashed_Bloodmoon_LycanthropeSilverWeakness</effectMultiplyingStat>
+		<stages>
+			<li>
+				<label>wearing silver x{0}</label>
+				<description>Yep, silver does still burn me. I know I shouldn't be wearing this... Maybe just a little bit longer.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+		<requiredHediffs>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</requiredHediffs>
+		<requiredTraits>
+			<li>Masochist</li>
+		</requiredTraits>
 	</ThoughtDef>
 </Defs>
