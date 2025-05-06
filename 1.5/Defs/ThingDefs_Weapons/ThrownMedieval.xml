@@ -37,6 +37,7 @@
 			<Silver>2</Silver>
 		</costList>
 		<statBases>
+			<MarketValue>105</MarketValue>
 			<WorkToMake>2000</WorkToMake>
 			<Mass>0.5</Mass>
 		</statBases>

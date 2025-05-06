@@ -44,6 +44,7 @@
 			<Silver>2</Silver>
 		</costList>
 		<statBases>
+			<MarketValue>150</MarketValue>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>0.85</Mass>
 		</statBases>
@@ -97,6 +98,7 @@
 			<Silver>3</Silver>
 		</costList>
 		<statBases>
+			<MarketValue>280</MarketValue>
 			<WorkToMake>24000</WorkToMake>
 			<Mass>2</Mass>
 		</statBases>

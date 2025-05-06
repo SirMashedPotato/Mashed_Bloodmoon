@@ -185,7 +185,7 @@
 		<label>silverdust vessel belt</label>
 		<description>A belt with several glass vessels attached to it, each one filled with a silverdust mixture. The vessels can be thrown, releasing a cloud of silverdust upon impact. Any lycanthropes caught within will suffer constant burns.</description>
 		<statBases>
-			<MarketValue>80</MarketValue>
+			<MarketValue>90</MarketValue>
 		</statBases>
 		<comps>
 			<li Class="CompProperties_ApparelReloadable">
@@ -253,7 +253,7 @@
 		<label>houndslayer throwing knife belt</label>
 		<description>A belt with several silver knives attached to it, each one specially designed for hunting lycanthropes.</description>
 		<statBases>
-			<MarketValue>80</MarketValue>
+			<MarketValue>110</MarketValue>
 			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
 		</statBases>
 		<comps>
