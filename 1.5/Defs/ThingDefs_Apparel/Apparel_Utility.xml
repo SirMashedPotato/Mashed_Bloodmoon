@@ -179,4 +179,51 @@
 			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasWolfsblood</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltHoundslayerThrowingKnife]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltHoundslayerThrowingKnife</defName>
+		<label>houndslayer throwing knife belt</label>
+		<description>A belt with several silver knives attached to it, each one specially designed for hunting lycanthropes.</description>
+		<statBases>
+			<MarketValue>80</MarketValue>
+			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>10</maxCharges>
+				<ammoDef>Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife</ammoDef>
+				<ammoCountToRefill>1</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_BeatFire</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>throwing knife</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw knife</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>10.9</range>
+				<warmupTime>1</warmupTime>
+				<soundCast>Interact_BeatFire</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<defaultProjectile>Mashed_Bloodmoon_HoundslayerThrowingKnife_Thrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife>1</Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltSilverThrowingKnife</texPath>
+		</graphicData>
+	</ThingDef>
 </Defs>

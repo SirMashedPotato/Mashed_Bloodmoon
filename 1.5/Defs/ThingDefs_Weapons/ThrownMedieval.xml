@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HoundslayerThrownBase]==========-->
+	<ThingDef Name="Mashed_Bloodmoon_HoundslayerThrownBase" ParentName="Mashed_Bloodmoon_HoundslayerMeleeBase" Abstract="true">
+		<uiIconScale>1.5</uiIconScale>
+		<soundInteract>Interact_BeatFire</soundInteract>
+		<weaponClasses Inherit="False">
+			<li>Ranged</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>Mashed_Bloodmoon_HoundslayerThrown</li>
+		</weaponTags>
+		<statBases>
+			<Mass>1</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerThrownBase">
+		<defName>Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife</defName>
+		<label>houndslayer throwing knives</label>
+		<description>Throwing knives designed for taking down lycanthropes from a safe distance, though they can still be used in melee if needed.</description>
+		<modExtensions>
+			<li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<usableWithShields>true</usableWithShields>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mashed_Bloodmoon_SilverThrowingKnife</texPath>
+		</graphicData>
+		<costList>
+			<Steel>40</Steel>
+			<Silver>2</Silver>
+		</costList>
+		<statBases>
+			<WorkToMake>2000</WorkToMake>
+			<Mass>0.5</Mass>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Mashed_Bloodmoon_HoundslayerThrowingKnife_Thrown</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>10.9</range>
+				<soundCast>Interact_BeatFire</soundCast>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>Mashed_Bloodmoon_HoundslayerThrowingKnife_Thrown</defName>
+		<label>houndslayer throwing knife</label>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_SilverThrowingKnife_Thrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Mashed_Bloodmoon_SilverRangedStab</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<stoppingPower>0.5</stoppingPower>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<speed>26</speed>
+			<spinRate>3</spinRate>
+		</projectile>
+	</ThingDef>
+</Defs>

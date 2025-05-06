@@ -5,6 +5,7 @@
 		<baseCost>500</baseCost>
 		<techLevel>Medieval</techLevel>
 		<tab>Mashed_ResearchTab_ElderScrolls</tab>
+		<researchViewY>6.00</researchViewY>
 	</ResearchProjectDef>
 	<!-- ==========[Mashed_Bloodmoon_Wolfsbane]==========-->
 	<ResearchProjectDef ParentName="Mashed_Bloodmoon_ResearchBase">
@@ -12,7 +13,6 @@
 		<label>wolfsbane</label>
 		<description>Learn how to sow wolfsbane flowers, and how to use their petals to fight back against The Huntsman's hounds.</description>
 		<researchViewX>0.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
 		<prerequisites>
 			<li>DrugProduction</li>
 		</prerequisites>
@@ -36,7 +36,6 @@
 		<label>wolfsblood</label>
 		<description>Learn how to use werewolf blood to brew wolfblood elixirs.</description>
 		<researchViewX>1.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
 		<prerequisites>
 			<li>DrugProduction</li>
 		</prerequisites>
@@ -49,6 +48,25 @@
 				<li>subject_story->how to turn yourself into a lycanthrope with one simple trick</li>
 				<li>subject_gerund->processing werewolf blood</li>
 				<li>subject_gerund->brewing wolfsblood elixir</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+	<!-- ==========[Mashed_Bloodmoon_Houndslayer]==========-->
+	<ResearchProjectDef ParentName="Mashed_Bloodmoon_ResearchBase">
+		<defName>Mashed_Bloodmoon_Houndslayer</defName>
+		<label>houndslayer</label>
+		<description>Learn how to create equipment specially designed for hunting lycanthropes.</description>
+		<researchViewX>2.00</researchViewX>
+		<baseCost>700</baseCost>
+		<prerequisites>
+			<li>Smithing</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Steel</li>
+		</prerequisites>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->houndslayer equipment</li>
+				<li>subject_story->how to properly forge houndslayer blades</li>
+				<li>subject_gerund->forging houndslayer blades</li>
 			</rulesStrings>
 		</generalRules>
 	</ResearchProjectDef>

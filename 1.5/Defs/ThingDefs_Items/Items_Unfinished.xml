@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_UnfinishedHoundslayerWeapon]==========-->
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>Mashed_Bloodmoon_UnfinishedHoundslayerWeapon</defName>
+		<label>unfinished houndslayer weapon</label>
+		<description>An unfinished houndslayer weapon.</description>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(204,208,193)</color>
+		</graphicData>
+		<stuffCategories Inherit="false"/>
+	</ThingDef>
+</Defs>
