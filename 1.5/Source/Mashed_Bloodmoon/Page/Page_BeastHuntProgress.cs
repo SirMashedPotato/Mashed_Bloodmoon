@@ -137,7 +137,7 @@ namespace Mashed_Bloodmoon
             }
             else
             {
-                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.incompleteTexPath));
+                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath), ScaleMode.StretchToFill, true, 0f, color: new Color(0,0,0,0.8f), 0f, 0f);
                 if (greatBeastDef.targetCount > 1)
                 {
                     TaggedString label = greatBeastDef.Progress(compLycanthrope) + "/" + greatBeastDef.targetCount;
