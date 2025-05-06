@@ -179,6 +179,72 @@
 			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasWolfsblood</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltSilverdustVessel]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltSilverdustVessel</defName>
+		<label>silverdust vessel belt</label>
+		<description>A belt with several glass vessels attached to it, each one filled with a silverdust mixture. The vessels can be thrown, releasing a cloud of silverdust upon impact. Any lycanthropes caught within will suffer constant burns.</description>
+		<MarketValue>80</MarketValue>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>Silver</ammoDef>
+				<ammoCountToRefill>60</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_MolotovCocktail</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>vessel</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw vessel</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Mashed_Bloodmoon_SilverdustVesselThrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Silver>6</Silver>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltSilverdustVessel</texPath>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverdustVesselThrown]==========-->
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Mashed_Bloodmoon_SilverdustVesselThrown</defName>
+		<label>silverdust vessel</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_SilverdustVesselThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Smoke</damageDef>
+			<!-- Use default damage from explosion def -->
+			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasSilverdust</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_BeltHoundslayerThrowingKnife]==========-->
 	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
 		<defName>Mashed_Bloodmoon_BeltHoundslayerThrowingKnife</defName>

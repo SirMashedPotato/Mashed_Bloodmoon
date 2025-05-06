@@ -40,4 +40,16 @@
 			<expireSeconds>16~32</expireSeconds>
 		</gas>
 	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_GasSilverdust]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_GasBase">
+		<defName>Mashed_Bloodmoon_GasSilverdust</defName>
+		<label>silverdust cloud</label>
+		<thingClass>Mashed_Bloodmoon.Gas_Silverdust</thingClass>
+		<graphicData>
+			<color>(204,208,193,50)</color>
+		</graphicData>
+		<gas>
+			<expireSeconds>16~32</expireSeconds>
+		</gas>
+	</ThingDef>
 </Defs>
