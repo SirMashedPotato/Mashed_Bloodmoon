@@ -177,7 +177,7 @@ namespace Mashed_Bloodmoon
         public string StatBonusLine(StatDef statDef, HediffComp_Lycanthrope compLycanthrope, bool displayOnlyTransformed)
         {
             TotemStatBonus(compLycanthrope, out float bonus);
-            string tooltip =  statDef.LabelCap + ": " + bonus.ToStringWithSign("0.###");
+            string tooltip =  statDef.LabelCap + ": " + bonus.ToStringByStyle(statDef.toStringStyle);
             if (!onlyTransformed && displayOnlyTransformed)
             {
                 tooltip += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
