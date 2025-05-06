@@ -34,6 +34,18 @@
 			<intelligence>ToolUser</intelligence>
 			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<ageGenerationCurve>
+				<points>
+					<li>(0,0)</li>
+					<li>(15,0)</li>
+					<li>(18,30)</li>
+					<li>(25,100)</li>
+					<li>(30,100)</li>
+					<li>(40,40)</li>
+					<li>(50,10)</li>
+					<li>(60,0)</li>
+				</points>
+			</ageGenerationCurve>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
