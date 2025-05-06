@@ -86,10 +86,6 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
-            if (pawn.health.hediffSet.hediffs.Where((Hediff x) => x.Part == part).Any())
-            {
-                return false;
-            }
             return base.Valid(target, throwMessages);
         }
 
@@ -121,7 +117,6 @@ namespace Mashed_Bloodmoon
 
         private BodyPartRecord GetBodyPartRecord(Pawn pawn) 
         {
-            ///return pawn.health.hediffSet.GetBodyPartRecord(RimWorld.BodyPartDefOf.Heart);
             return pawn.health.hediffSet.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).RandomElement();
         }
     }
