@@ -137,6 +137,7 @@
     <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />
     <Compile Include="IncidentWorker\IncidentWorker_Ambush_FeralWerewolves.cs" />
     <Compile Include="IncidentWorker\IncidentWorker_LunaticWandersIn.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_MakeGameCondition_HuntsmanMoon.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
