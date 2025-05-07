@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -37,7 +36,7 @@ namespace Mashed_Bloodmoon
             
             float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
             DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
-            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
+            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord);
 
 
             float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
@@ -51,8 +50,6 @@ namespace Mashed_Bloodmoon
                 parent.pawn.needs.rest.CurLevel += ((nutritionFactor / 2f) * maxHealth);
             }
 
-            targetPawn.Corpse.Ingested(parent.pawn, nutritionFactor * maxHealth);
-            
             base.Apply(target, dest);
         }
 
