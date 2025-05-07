@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
             
             float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
             DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
-            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord);
+            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
 
 
             float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
