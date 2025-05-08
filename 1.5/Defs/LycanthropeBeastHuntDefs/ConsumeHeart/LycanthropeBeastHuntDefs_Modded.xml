@@ -14,7 +14,7 @@
 		<label>beast hunt: Gulden bear</label>
 		<description>Consume the heart of a gulden rune bear.</description>
 		<targetThingDef>GuldenRuneBear</targetThingDef>
-		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Gold</heartTexPath>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Gulden</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_pphhyyVargulf]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="pphhyy.sanguinaryanimals">

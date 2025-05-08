@@ -247,7 +247,7 @@ namespace Mashed_Bloodmoon
             if (victim != null)
             {
                 parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_PawnsKilledTransformed);
-                LycanthropeUtility.ProgressBeastHunts(parent.pawn, victim.def, BeastHuntType.Kill);
+                LycanthropeUtility.ProgressBeastHunts(parent.pawn, victim, BeastHuntType.Kill);
                 if (Rand.Chance(parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeKillStressReductionChance)))
                 {
                     currentStress -= Mathf.Clamp((int)(StressMax * 0.9f), 0, currentStress);

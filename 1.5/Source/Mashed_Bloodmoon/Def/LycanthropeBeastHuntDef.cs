@@ -8,6 +8,7 @@ namespace Mashed_Bloodmoon
     {
         public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
+        public PawnKindDef targetKindDef;
         public int targetCount = 1;
         public bool startHidden = false;
         public int anomalyLevelToReveal = 0;
@@ -43,6 +44,11 @@ namespace Mashed_Bloodmoon
                 {
                     yield return item;
                 }
+            }
+
+            if (targetThingDef != null && targetKindDef != null)
+            {
+                yield return "Only use one of targetThingDef and targetKindDef";
             }
 
             if (startHidden && anomalyLevelToReveal > 0)

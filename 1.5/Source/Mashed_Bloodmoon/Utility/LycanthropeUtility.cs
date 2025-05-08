@@ -128,15 +128,17 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Utility method to progress all relevant beast hunts
         /// </summary>
-        internal static void ProgressBeastHunts(Pawn parent, ThingDef victim, BeastHuntType beastHuntType)
+        internal static void ProgressBeastHunts(Pawn parent, Pawn victim, BeastHuntType beastHuntType)
         {
-            List<LycanthropeBeastHuntDef> greatBeastDefList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == beastHuntType
-                && (x.targetThingDef == null || x.targetThingDef == victim)).ToList();
-            if (greatBeastDefList.NullOrEmpty())
+            List<LycanthropeBeastHuntDef> beastHuntList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == beastHuntType
+                && ((x.targetThingDef == null && x.targetKindDef == null) 
+                || x.targetThingDef == victim.def 
+                || x.targetKindDef == victim.kindDef)).ToList();
+            if (beastHuntList.NullOrEmpty())
             {
                 return;
             }
-            foreach (LycanthropeBeastHuntDef greatBeastDef in greatBeastDefList)
+            foreach (LycanthropeBeastHuntDef greatBeastDef in beastHuntList)
             {
                 greatBeastDef.ProgressBeastHunt(parent);
             }

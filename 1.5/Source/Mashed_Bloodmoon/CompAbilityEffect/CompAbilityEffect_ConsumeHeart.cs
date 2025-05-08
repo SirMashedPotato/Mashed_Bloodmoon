@@ -28,7 +28,7 @@ namespace Mashed_Bloodmoon
                 targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
             }
 
-            LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn.def, BeastHuntType.Heart);
+            LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
 
             LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
             CompLycanthropeTransformed.StressMax += 1;
