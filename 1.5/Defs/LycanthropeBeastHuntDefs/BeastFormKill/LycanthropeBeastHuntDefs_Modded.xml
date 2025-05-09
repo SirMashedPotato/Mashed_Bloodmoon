@@ -1,58 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidEmpress]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="oskarpotocki.vfe.insectoid2">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
 		<defName>Mashed_Bloodmoon_InsectoidEmpress</defName>
 		<label>beast hunt: Empress</label>
 		<description>Kill an insectoid empress while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>VFEI2_Empress</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidPatriarch]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="oskarpotocki.vfe.insectoid2">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
 		<defName>Mashed_Bloodmoon_InsectoidPatriarch</defName>
 		<label>beast hunt: Patriarch</label>
 		<description>Kill an insectoid patriarch while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>VFEI2_Patriarch</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidTitantick]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="oskarpotocki.vfe.insectoid2">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
 		<defName>Mashed_Bloodmoon_InsectoidTitantick</defName>
 		<label>beast hunt: Titantick</label>
 		<description>Kill an insectoid titantick while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>VFEI2_Titantick</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidTeramantis]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="oskarpotocki.vfe.insectoid2">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
 		<defName>Mashed_Bloodmoon_InsectoidTeramantis</defName>
 		<label>beast hunt: Teramantis</label>
 		<description>Kill an insectoid teramantis while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>VFEI2_Teramantis</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidGigamite]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="oskarpotocki.vfe.insectoid2">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
 		<defName>Mashed_Bloodmoon_InsectoidGigamite</defName>
 		<label>beast hunt: Gigamite</label>
 		<description>Kill an insectoid gigamite while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>VFEI2_Gigamite</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidSilverfish]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="oskarpotocki.vfe.insectoid2">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
 		<defName>Mashed_Bloodmoon_InsectoidSilverfish</defName>
 		<label>beast hunt: Silverfish</label>
 		<description>Kill an insectoid silverfish while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>VFEI2_Silverfish</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_CliffRacerCulling]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" MayRequire="sirmashedpotato.ashlands">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_CliffRacerCulling</defName>
 		<label>beast hunt: Winged Menace</label>
 		<description>Kill 333 cliff racers while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>Mashed_Ashlands_CliffRacer</targetThingDef>
 		<targetCount>333</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>

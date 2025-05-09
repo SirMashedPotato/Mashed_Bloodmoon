@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_SlaughterBase]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase" Name="Mashed_Bloodmoon_SlaughterBase" Abstract="true">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_SlaughterBase" Abstract="true">
+		<beastHuntType>Kill</beastHuntType>
 		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Hunger by 1.</extraTooltip>
 		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
 			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
