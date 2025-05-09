@@ -275,7 +275,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<onlyManualCast>True</onlyManualCast>
 				<range>10.9</range>
-				<warmupTime>1</warmupTime>
+				<warmupTime>1.5</warmupTime>
 				<soundCast>Interact_BeatFire</soundCast>
 				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
 				<defaultProjectile>Mashed_Bloodmoon_HoundslayerThrowingAxe_Thrown</defaultProjectile>
