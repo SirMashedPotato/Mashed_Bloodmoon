@@ -19,6 +19,80 @@
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 		</statBases>
 	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingAxe]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerThrownBase">
+		<defName>Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingAxe</defName>
+		<label>houndslayer throwing axes</label>
+		<description>Throwing axes designed for taking down lycanthropes from a safe distance, though they can still be used in melee if needed.</description>
+		<modExtensions>
+			<li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<usableWithShields>true</usableWithShields>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mashed_Bloodmoon_SilverThrowingAxe</texPath>
+		</graphicData>
+		<costList>
+			<Steel>40</Steel>
+			<Silver>2</Silver>
+		</costList>
+		<statBases>
+			<MarketValue>105</MarketValue>
+			<WorkToMake>2000</WorkToMake>
+			<Mass>0.5</Mass>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Mashed_Bloodmoon_HoundslayerThrowingAxe_Thrown</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>10.9</range>
+				<soundCast>Interact_BeatFire</soundCast>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>Mashed_Bloodmoon_HoundslayerThrowingAxe_Thrown</defName>
+		<label>houndslayer throwing axe</label>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_SilverThrowingAxe_Thrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Mashed_Bloodmoon_SilverRangedCut</damageDef>
+			<damageAmountBase>14</damageAmountBase>
+			<stoppingPower>1</stoppingPower>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<speed>20</speed>
+			<arcHeightFactor>1.5</arcHeightFactor>
+			<spinRate>2</spinRate>
+		</projectile>
+	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife]==========-->
 	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerThrownBase">
 		<defName>Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife</defName>

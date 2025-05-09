@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- ==========[Mashed_Bloodmoon_SilverRangedStab]==========-->
+	<!-- ==========[Mashed_Bloodmoon_SilverRangedCut]==========-->
+	<DamageDef ParentName="CutBase">
+		<defName>Mashed_Bloodmoon_SilverRangedCut</defName>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_CutSilver</workerClass>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	  </DamageDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverRangedStab]==========-->
 	<DamageDef>
 		<defName>Mashed_Bloodmoon_SilverRangedStab</defName>
 		<label>stab</label>

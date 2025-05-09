@@ -89,6 +89,7 @@
     <Compile Include="CompUse\Properties\CompProperties_UseEffectTotem.cs" />
     <Compile Include="CompUse\Properties\CompProperties_UseEffectUnlockAbility.cs" />
     <Compile Include="DamageWorker\DamageWorker_AddInjurySilver.cs" />
+    <Compile Include="DamageWorker\DamageWorker_CutSilver.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
     <Compile Include="DamageWorker\DamageWorker_StabSilver.cs" />
