@@ -49,7 +49,7 @@
 		<description>Use summon spectral werewolf 30 times while in beast form.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability:\n - Summon an additional spectral werewolf.</extraTooltip> 
 		<beastHuntType>Proficiency</beastHuntType>
-		<targetCount>3</targetCount>
+		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
