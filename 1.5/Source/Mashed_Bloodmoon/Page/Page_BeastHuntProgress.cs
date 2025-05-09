@@ -8,9 +8,10 @@ namespace Mashed_Bloodmoon
 {
     public class Page_BeastHuntProgress : LycanthropePage
     {
-        public const int columnNumber = 5;
+        public const int columnCount = 5;
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListHeart;
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListKill;
+        private readonly List<LycanthropeBeastHuntDef> BeastHuntListProficiency;
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListOther;
         private static Vector2 scrollPosition = Vector2.zero;
         private static BeastHuntType curTab = BeastHuntType.Heart;
@@ -22,6 +23,7 @@ namespace Mashed_Bloodmoon
         {
             BeastHuntListHeart = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Heart).ToList();
             BeastHuntListKill = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Kill).ToList();
+            BeastHuntListProficiency = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Proficiency).ToList();
             BeastHuntListOther = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Other).ToList();
             ReadySettingsTabs();
         }
@@ -37,6 +39,11 @@ namespace Mashed_Bloodmoon
             {
                 curTab = BeastHuntType.Kill;
             }, () => curTab == BeastHuntType.Kill));
+
+            tabs.Add(new TabRecord("Mashed_Bloodmoon_BeastHuntTab_Proficiency".Translate(), delegate
+            {
+                curTab = BeastHuntType.Proficiency;
+            }, () => curTab == BeastHuntType.Proficiency));
 
             if (!BeastHuntListOther.NullOrEmpty())
             {
@@ -67,7 +74,8 @@ namespace Mashed_Bloodmoon
             mainRect.yMin += rectLimitY;
             DoBottomButtons(mainRect, showNext: false);
             mainRect.height -= rectLimitY;
-            DoBeastHuntWindow(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : curTab == BeastHuntType.Kill ? BeastHuntListKill : BeastHuntListOther);
+            DoBeastHuntWindow(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : curTab == BeastHuntType.Kill ? BeastHuntListKill 
+                : curTab == BeastHuntType.Proficiency ? BeastHuntListProficiency : BeastHuntListOther);
             Widgets.EndScrollView();
         }
 
@@ -82,9 +90,9 @@ namespace Mashed_Bloodmoon
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
 
-            float gridWidth = (innerRect.width / columnNumber) - (rectPadding / 2f);
+            float gridWidth = (innerRect.width / columnCount) - (rectPadding / 2f);
             float gridHeight = gridWidth * 1.6f;
-            float rowCount = ((float)beastHuntList.Count / columnNumber);
+            float rowCount = ((float)beastHuntList.Count / columnCount);
             if (rowCount % 1 != 0)
             {
                 rowCount += 0.5f;
@@ -99,7 +107,7 @@ namespace Mashed_Bloodmoon
             foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
                 DoBeastHuntGrid(beastHuntRect, beastHuntDef);
-                if (++column >= columnNumber)
+                if (++column >= columnCount)
                 {
                     beastHuntRect.y += ((rectPadding / 2f) + gridHeight);
                     beastHuntRect.x = innerRect.x;
@@ -126,35 +134,37 @@ namespace Mashed_Bloodmoon
             DoGridLowerRect(lowerRect, greatBeastDef);
         }
 
-        public void DoGridUpperRect(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
+        public void DoGridUpperRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
             Rect mainRect = inRect.ContractedBy(rectPadding);
-            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.backgroundTexPath));
-            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath));
-            if (greatBeastDef.Completed(compLycanthrope))
+            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(beastHuntDef.backgroundTexPath));
+            Rect heartRect = mainRect.ContractedBy(rectPadding/2f);
+            Texture2D heartTex = ContentFinder<Texture2D>.Get(beastHuntDef.heartTexPath);
+            GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit);
+            if (beastHuntDef.Completed(compLycanthrope))
             {
-                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.completedTexPath));
+                GUI.DrawTexture(heartRect, ContentFinder<Texture2D>.Get(beastHuntDef.completedTexPath));
             }
             else
             {
-                GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(greatBeastDef.heartTexPath), ScaleMode.StretchToFill, true, 0f, color: new Color(0,0,0,0.8f), 0f, 0f);
-                if (greatBeastDef.targetCount > 1)
+                GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit, true, 0f, color: new Color(0,0,0,0.8f), 0f, 0f);
+                if (beastHuntDef.targetCount > 1)
                 {
-                    TaggedString label = greatBeastDef.Progress(compLycanthrope) + "/" + greatBeastDef.targetCount;
+                    TaggedString label = beastHuntDef.Progress(compLycanthrope) + "/" + beastHuntDef.targetCount;
                     Rect progressRect = mainRect.ContractedBy(rectPadding);
                     progressRect.height = Text.LineHeight;
                     progressRect.y += mainRect.height - (progressRect.height + (rectPadding * 1.5f));
                     Widgets.Label(progressRect, label);
                 }
             }
-            if (greatBeastDef.extraTooltip !=  null)
+            if (beastHuntDef.extraTooltip !=  null)
             {
                 Rect extraTooltipRect = mainRect.ContractedBy(rectPadding);
                 extraTooltipRect.height = Text.LineHeight;
                 extraTooltipRect.width = extraTooltipRect.height;
                 extraTooltipRect.y += mainRect.height - (extraTooltipRect.height + (rectPadding * 1.5f));
                 extraTooltipRect.x += mainRect.width - extraTooltipRect.height - (rectPadding * 1.5f);
-                Widgets.ButtonImage(extraTooltipRect, TexButton.Info, false, greatBeastDef.extraTooltip);
+                Widgets.ButtonImage(extraTooltipRect, TexButton.Info, false, beastHuntDef.extraTooltip);
             }
         }
 

@@ -12,7 +12,14 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            for (int i = 0; i < Props.count; i++)
+            int count = Props.count;
+
+            if (Props.proficiencyBeastHuntDef != null && Props.proficiencyBeastHuntDef.Completed(CompLycanthrope))
+            {
+                count += Props.proficiencyExtraCount;
+            }
+
+            for (int i = 0; i < count; i++)
             {
                 Pawn pawn = PawnGenerator.GeneratePawn(Props.pawnKindDef, null);
                 Name pawnName = new NameSingle("Mashed_Bloodmoon_SpectralBeastName".Translate(parent.pawn.Name.ToStringShort, pawn.Label));

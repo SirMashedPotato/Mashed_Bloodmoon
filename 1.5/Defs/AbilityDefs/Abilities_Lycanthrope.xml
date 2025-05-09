@@ -59,6 +59,10 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRush</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nIncrease the duration of adrenaline rush by 5 seconds upon landing a killing blow.</completedTooltip>
+			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
 				<stressCost>15</stressCost>
 			</li>
@@ -196,6 +200,10 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMark</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nKilling the marked target resets the cooldown of huntsman's mark.</completedTooltip>
+			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
 				<stressCost>10</stressCost>
 			</li>
@@ -314,6 +322,10 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nSummon an additional spectral werewolf.</completedTooltip>
+			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
 				<stressCost>20</stressCost>
 			</li>
@@ -321,6 +333,7 @@
 				<pawnKindDef>Mashed_Bloodmoon_SpectralWerewolf</pawnKindDef>
 				<linkedHediff>Mashed_Bloodmoon_SpectralBeast</linkedHediff>
 				<stateDef>Mashed_Bloodmoon_SpectralBeast</stateDef>
+				<proficiencyBeastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</proficiencyBeastHuntDef>
 			</li>
 		</comps>
 	</AbilityDef>

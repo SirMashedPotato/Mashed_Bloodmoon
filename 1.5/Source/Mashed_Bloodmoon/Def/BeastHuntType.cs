@@ -4,6 +4,7 @@
     {
         Heart,
         Kill,
+        Proficiency,
         Other
     }
 }

@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_AbilityProficiency.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_AddLinkedHediff.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_EffecterOnTargetExt.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityEffecterOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityFleckOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityLunarRequirement.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityProficiency.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityStressCost.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_ConsumeHeart.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityConsumeHeart.cs" />
