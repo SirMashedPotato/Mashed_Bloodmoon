@@ -6,6 +6,7 @@ namespace Mashed_Bloodmoon
 {
     public class LycanthropeBeastHuntDef : Def
     {
+        public new string description;
         public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
         public PawnKindDef targetKindDef;

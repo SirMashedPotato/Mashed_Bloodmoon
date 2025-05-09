@@ -5,6 +5,7 @@ namespace Mashed_Bloodmoon
 {
     public class LycanthropeAbilityDef : Def
     {
+        public new string description;
         public AbilityDef abilityDef;
         public int purchaseHeartCost = 0;
 
