@@ -6,6 +6,7 @@
 		<label>consume heart</label>
 		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one.</description>
 		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]========== -->
 	<!-- 
