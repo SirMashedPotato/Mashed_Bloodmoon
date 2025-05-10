@@ -9,11 +9,6 @@
 		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]========== -->
-	<!-- 
-		Ideas for leveled verions
-		Level 2: Also increases movement speed
-		Level 3: Increase/reset duration left on kill
-	-->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
 		<label>adrenaline rush</label>
@@ -22,11 +17,6 @@
 		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
-	<!-- 
-		Ideas for leveled verions
-		Level 2: ???
-		Level 3: ???
-	-->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastHowl</defName>
 		<label>beast howl</label>
@@ -35,11 +25,6 @@
 		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastLeap]========== -->
-	<!-- 
-		Ideas for leveled verions
-		Level 2: ???
-		Level 3: ???
-	-->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_BeastLeap</defName>
 		<label>beast leap</label>
@@ -48,11 +33,6 @@
 		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
-	<!-- 
-		Ideas for leveled verions
-		Level 2: Damage taken increased to 75%
-		Level 3: The target dying resets the cooldown
-	-->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
 		<label>huntsman's mark</label>
@@ -61,11 +41,6 @@
 		<purchaseHeartCost>50</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
-	<!-- 
-		Ideas for leveled verions
-		Level 2: Double duration
-		Level 3: Remove ability restriction 
-	-->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
 		<label>moon veil</label>
@@ -74,11 +49,6 @@
 		<purchaseHeartCost>50</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
-	<!-- 
-		Ideas for leveled verions
-		Level 2: Summon two spectral werewolves
-		Level 3: The spectral werewolves gain the casters totem bonuses
-	-->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
 		<label>summon spectral werewolf</label>

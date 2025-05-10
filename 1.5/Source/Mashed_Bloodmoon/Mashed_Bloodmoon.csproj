@@ -122,6 +122,7 @@
     <Compile Include="GameCondition\GameCondition_HuntsmansMoon.cs" />
     <Compile Include="Gene\Gene_Lycanthrope.cs" />
     <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
+    <Compile Include="Harmony\Compat_SimpleSidearms.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Patch_GenerateInitialHediffs.cs" />
     <Compile Include="Harmony\Patch_SetupDynamicNodes.cs" />
