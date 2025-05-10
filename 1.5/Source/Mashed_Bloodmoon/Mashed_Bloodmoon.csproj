@@ -129,11 +129,15 @@
     <Compile Include="Harmony\Patch_Verb_MeleeAttackDamage.cs" />
     <Compile Include="HediffComp\HediffComp_ForcedTransformOnRemoved.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformationEnd.cs" />
+    <Compile Include="HediffComp\HediffComp_IncreaseDurationOnKill.cs" />
+    <Compile Include="HediffComp\HediffComp_ResetCooldownOnKilled.cs" />
     <Compile Include="HediffComp\HediffComp_SummonedBeast.cs" />
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_IncreaseDurationOnKill.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_ForcedTransformOnRemoved.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_ResetCooldownOnKilled.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_SummonedBeast.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_Lycanthrope.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_LycanthropeTransformed.cs" />

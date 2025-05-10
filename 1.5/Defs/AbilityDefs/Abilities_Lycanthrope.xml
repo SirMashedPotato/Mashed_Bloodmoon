@@ -77,6 +77,11 @@
 		<label>adrenaline rush</label>
 		<description>Adrenaline surging throughout the body, completely nullifying pain and staunching bleeding.</description>
 		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_IncreaseDurationOnKill">
+				<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
+				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRush</beastHuntDef>
+				<secondsPerKill>5</secondsPerKill>
+			</li>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
 			</li>
@@ -221,6 +226,10 @@
 		<label>Huntsman's mark</label>
 		<description>This pawn has been marked by a lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
 		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_ResetCooldownOnKilled">
+				<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMark</beastHuntDef>
+			</li>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
 			</li>
