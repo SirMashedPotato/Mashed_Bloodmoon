@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -11,6 +12,7 @@ namespace Mashed_Bloodmoon
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
+            MoteMaker.MakeStaticMote(parent.pawn.Position.ToVector3(), parent.pawn.Map, ThingDefOf.Mashed_Bloodmoon_TransformEffect, parent.pawn.DrawSize.y);
             if (Props.killOnRemove && !parent.pawn.Dead)
             {
                 parent.pawn.Kill(null);
