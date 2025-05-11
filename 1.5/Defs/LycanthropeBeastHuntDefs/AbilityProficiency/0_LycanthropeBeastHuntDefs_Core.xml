@@ -26,7 +26,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
 		<label>proficiency: Huntsman's Mark</label>
-		<description>Kill 30 marked targets.</description>
+		<description>Kill 30 targets that have been marked by this lycanthrope.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Killing the marked target resets the cooldown.</extraTooltip>
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
