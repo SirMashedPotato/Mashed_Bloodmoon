@@ -8,6 +8,7 @@ namespace Mashed_Bloodmoon
         public CompProperties_AbilityProficiency() => compClass = typeof(CompAbilityEffect_AbilityProficiency);
 
         public LycanthropeBeastHuntDef beastHuntDef;
+        public bool incrementBeastHunt = false;
         [MustTranslate]
         public string completedTooltip;
     }

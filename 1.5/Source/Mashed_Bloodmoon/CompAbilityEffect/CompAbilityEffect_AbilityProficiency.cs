@@ -8,7 +8,10 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Props.beastHuntDef.ProgressBeastHunt(CompLycanthrope, parent.pawn);
+            if (Props.incrementBeastHunt)
+            {
+                Props.beastHuntDef.ProgressBeastHunt(CompLycanthrope, parent.pawn);
+            }
             base.Apply(target, dest);
         }
 

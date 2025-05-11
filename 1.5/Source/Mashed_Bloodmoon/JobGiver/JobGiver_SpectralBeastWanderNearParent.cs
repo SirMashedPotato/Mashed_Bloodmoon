@@ -10,7 +10,7 @@ namespace Mashed_Bloodmoon
             Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_SpectralBeast);
             if (hediff != null)
             {
-                return WanderUtility.BestCloseWanderRoot(hediff.TryGetComp<HediffComp_SummonedBeast>().parentPawn.PositionHeld, pawn);
+                return WanderUtility.BestCloseWanderRoot(hediff.TryGetComp<HediffComp_SummonedBeast>().linkedPawn.PositionHeld, pawn);
             }
             return WanderUtility.BestCloseWanderRoot(pawn.PositionHeld, pawn);
         }

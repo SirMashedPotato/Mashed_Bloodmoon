@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
             Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_SpectralBeast);
             if (hediff != null)
             {
-                return hediff.TryGetComp<HediffComp_SummonedBeast>().parentPawn;
+                return hediff.TryGetComp<HediffComp_SummonedBeast>().linkedPawn;
             }
             return null;
         }

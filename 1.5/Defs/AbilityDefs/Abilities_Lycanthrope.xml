@@ -321,7 +321,7 @@
 		</statBases>
 		<verbProperties>
 			<drawAimPie>false</drawAimPie>
-			<range>9.9</range>
+			<range>3.9</range>
 			<warmupTime>0.25</warmupTime>
 			<verbClass>Verb_CastAbility</verbClass>
 			<targetParams>
@@ -342,7 +342,7 @@
 				<pawnKindDef>Mashed_Bloodmoon_SpectralWerewolf</pawnKindDef>
 				<linkedHediff>Mashed_Bloodmoon_SpectralBeast</linkedHediff>
 				<stateDef>Mashed_Bloodmoon_SpectralBeast</stateDef>
-				<proficiencyBeastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</proficiencyBeastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</beastHuntDef>
 			</li>
 		</comps>
 	</AbilityDef>

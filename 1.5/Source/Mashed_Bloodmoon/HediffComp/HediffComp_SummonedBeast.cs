@@ -6,7 +6,9 @@ namespace Mashed_Bloodmoon
     public class HediffComp_SummonedBeast : HediffComp
     {
         public HediffCompProperties_SummonedBeast Props => (HediffCompProperties_SummonedBeast)props;
-        public Pawn parentPawn;
+        public Pawn linkedPawn;
+        public bool incrementBeastHuntOnKill = false;
+        public LycanthropeBeastHuntDef beastHuntDef;
 
 
         public override void CompPostPostRemoved()
@@ -19,12 +21,23 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public override string CompLabelInBracketsExtra => parentPawn.NameShortColored;
+        public override void Notify_KilledPawn(Pawn victim, DamageInfo? dinfo)
+        {
+            if (incrementBeastHuntOnKill && beastHuntDef != null)
+            {
+                beastHuntDef.ProgressBeastHunt(linkedPawn);
+            }
+            base.Notify_KilledPawn(victim, dinfo);
+        }
+
+        public override string CompLabelInBracketsExtra => linkedPawn.NameShortColored;
 
         public override void CompExposeData()
         {
             base.CompExposeData();
-            Scribe_References.Look(ref parentPawn, "parentPawn");
+            Scribe_References.Look(ref linkedPawn, "linkedPawn");
+            Scribe_Values.Look(ref incrementBeastHuntOnKill, "incrementBeastHuntOnKill");
+            Scribe_Defs.Look(ref beastHuntDef, "beastHuntDef");
         }
     }
 }

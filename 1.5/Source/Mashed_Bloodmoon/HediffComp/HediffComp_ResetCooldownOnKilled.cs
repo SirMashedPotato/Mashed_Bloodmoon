@@ -9,7 +9,17 @@ namespace Mashed_Bloodmoon
         public override void Notify_PawnKilled()
         {
             HediffComp_Link compLink = parent.TryGetComp<HediffComp_Link>();
-            compLink?.OtherPawn.abilities.GetAbility(Props.abilityDef);
+            if (compLink != null)
+            {
+                if (Props.beastHuntDef.Completed(compLink.OtherPawn))
+                {
+                    compLink.OtherPawn.abilities.GetAbility(Props.abilityDef).ResetCooldown();
+                }
+                else
+                {
+                    Props.beastHuntDef.ProgressBeastHunt(compLink.OtherPawn);
+                }
+            }
             base.Notify_PawnKilled();
         }
     }

@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
         public MentalStateDef stateDef;
         public int count = 1;
         public float radius = 1.9f;
-        public LycanthropeBeastHuntDef proficiencyBeastHuntDef;
+        public LycanthropeBeastHuntDef beastHuntDef;
         public int proficiencyExtraCount = 1;
     }
 }

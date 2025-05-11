@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
             Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_SpectralBeast);
             if (hediff != null)
             {
-                Pawn parentPawn = hediff.TryGetComp<HediffComp_SummonedBeast>().parentPawn;
+                Pawn parentPawn = hediff.TryGetComp<HediffComp_SummonedBeast>().linkedPawn;
                 Hediff markedHediff = LycanthropeUtility.GetCompLycanthropeTransformed(parentPawn).linkedHediffs.LastOrDefault(x=>x.def == HediffDefOf.Mashed_Bloodmoon_HuntsmansMark);
                 if (markedHediff != null && markedHediff.pawn != null && markedHediff.pawn.Map != null && markedHediff.pawn.Map == parentPawn.Map 
                     && !markedHediff.pawn.DeadOrDowned)

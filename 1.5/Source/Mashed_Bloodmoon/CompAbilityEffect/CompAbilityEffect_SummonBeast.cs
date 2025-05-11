@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -14,7 +13,7 @@ namespace Mashed_Bloodmoon
         {
             int count = Props.count;
 
-            if (Props.proficiencyBeastHuntDef != null && Props.proficiencyBeastHuntDef.Completed(CompLycanthrope))
+            if (Props.beastHuntDef != null && Props.beastHuntDef.Completed(CompLycanthrope))
             {
                 count += Props.proficiencyExtraCount;
             }
@@ -43,7 +42,12 @@ namespace Mashed_Bloodmoon
             HediffComp_SummonedBeast hediffComp_SummonedBeast = hediff.TryGetComp<HediffComp_SummonedBeast>();
             if (hediffComp_SummonedBeast != null)
             {
-                hediffComp_SummonedBeast.parentPawn = parent.pawn;
+                hediffComp_SummonedBeast.linkedPawn = parent.pawn;
+                if (Props.beastHuntDef != null)
+                {
+                    hediffComp_SummonedBeast.beastHuntDef = Props.beastHuntDef;
+                    hediffComp_SummonedBeast.incrementBeastHuntOnKill = true;
+                }
             }
             pawn.health.AddHediff(hediff);
             CompLycanthropeTransformed.AddLinkedHediff(hediff);

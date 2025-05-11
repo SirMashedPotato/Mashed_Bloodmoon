@@ -15,6 +15,10 @@ namespace Mashed_Bloodmoon
                 Ability ability = parent.pawn.abilities.GetAbility(Props.abilityDef);
                 ability.StartCooldown(ability.CooldownTicksRemaining + Props.TicksPerKill);
             }
+            else
+            {
+                Props.beastHuntDef.ProgressBeastHunt(parent.pawn);
+            }
             base.Notify_KilledPawn(victim, dinfo);
         }
 
