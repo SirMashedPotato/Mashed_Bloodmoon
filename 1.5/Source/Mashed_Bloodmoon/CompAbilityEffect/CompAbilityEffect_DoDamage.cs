@@ -23,6 +23,24 @@ namespace Mashed_Bloodmoon
                     };
                     damageInfo.SetAmount(Props.damageAmount);
                     target.Pawn.TakeDamage(damageInfo);
+
+                    if (Props.beastHuntDef != null)
+                    {
+                        if (Props.beastHuntDef.Completed(parent.pawn) && Props.extraHediffDef != null)
+                        {
+                            Hediff hediff = HediffMaker.MakeHediff(Props.extraHediffDef, target.Pawn);
+                            HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
+                            if (hediffComp_Disappears != null)
+                            {
+                                hediffComp_Disappears.ticksToDisappear = Props.extraHediffDuration.SecondsToTicks();
+                            }
+                            target.Pawn.health.AddHediff(hediff);
+                        }
+                        else
+                        {
+                            Props.beastHuntDef.ProgressBeastHunt(parent.pawn);
+                        }
+                    }
                 }
             }
         }

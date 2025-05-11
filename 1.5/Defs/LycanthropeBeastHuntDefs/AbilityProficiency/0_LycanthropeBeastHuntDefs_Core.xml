@@ -12,15 +12,16 @@
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
-	<!-- <Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_BeastHowl</defName>
 		<label>proficiency: Beast Howl</label>
-		<description>Use beast howl 30 times while in beast form.</description>
+		<description>Stun targets 60 times with beast howl.</description>
+		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Temporarily slows all stunned targets.</extraTooltip>
 		<beastHuntType>Proficiency</beastHuntType>
-		<targetCount>30</targetCount>
+		<targetCount>60</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
-	</Mashed_Bloodmoon.LycanthropeBeastHuntDef> -->
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
