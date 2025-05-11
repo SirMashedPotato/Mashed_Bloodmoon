@@ -9,5 +9,6 @@ namespace Mashed_Bloodmoon
         public CompProperties_AbilityLunarRequirement() => compClass = typeof(CompAbilityEffect_LunarRequirement);
 
         public List<GameConditionDef> gameConditions;
+        public LycanthropeBeastHuntDef beastHuntDef;
     }
 }

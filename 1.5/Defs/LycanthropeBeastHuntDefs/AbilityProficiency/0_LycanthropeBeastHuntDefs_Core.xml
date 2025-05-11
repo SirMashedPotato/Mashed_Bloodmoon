@@ -34,15 +34,16 @@
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
-	<!-- <Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
 		<label>proficiency: Moon Veil</label>
 		<description>Use moon veil 30 times while in beast form.</description>
+		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Moon veil can be used regardless of the current lunar conditions.</extraTooltip>
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
-	</Mashed_Bloodmoon.LycanthropeBeastHuntDef> -->
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>

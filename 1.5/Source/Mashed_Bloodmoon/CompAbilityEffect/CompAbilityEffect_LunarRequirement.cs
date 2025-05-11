@@ -23,6 +23,10 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
+            if (Props.beastHuntDef != null && Props.beastHuntDef.Completed(parent.pawn))
+            {
+                return true;
+            }
             if (GenLocalDate.DayPercent(parent.pawn) < 0.25f || GenLocalDate.DayPercent(parent.pawn) > 0.8f)
             {
                 return true;
