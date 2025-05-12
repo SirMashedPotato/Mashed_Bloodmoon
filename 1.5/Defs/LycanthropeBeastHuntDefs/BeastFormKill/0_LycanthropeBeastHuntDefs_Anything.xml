@@ -45,7 +45,7 @@
 		<targetCount>500</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SlaughterVI]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_BeastFormKillBase">
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
 		<defName>Mashed_Bloodmoon_SlaughterVI</defName>
 		<label>beast hunt: Slaughter VI</label>
 		<description>Kill 1,000 pawns while in beast form.</description>
