@@ -15,10 +15,5 @@
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.5/LoadFolders/Anomaly</li>
 		<!-- VE_Framework -->
 		<li IfModActive="oskarpotocki.vanillafactionsexpanded.core">1.5/LoadFolders/VE_Framework</li>
-		<!-- VE_Achievements -->
-		<!--
-		<li IfModActive="vanillaexpanded.achievements">LoadFolders/VE_AchievementsTextures</li>
-		<li IfModActive="vanillaexpanded.achievements">1.5/LoadFolders/VE_Achievements</li>
-		-->
 	</v1.5>
 </loadFolders>

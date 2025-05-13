@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-	<!-- ==========[Mashed_AchievementBloodmoon_Base]========== -->
-	<AchievementsExpanded.AchievementDef Name="Mashed_AchievementBloodmoon_Base" Abstract="True">
-		<bgtexPath>Achievements/Mashed_AchievementBackground_Bloodmoon</bgtexPath>
-		<tab>Mashed_AchievementsTab</tab>
-	</AchievementsExpanded.AchievementDef>
-</Defs>
