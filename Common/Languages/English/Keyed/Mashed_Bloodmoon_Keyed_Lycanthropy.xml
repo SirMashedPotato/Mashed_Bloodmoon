@@ -32,7 +32,7 @@
 	<Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>Reach monolith level {0} to reveal it.</Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>
 	<Mashed_Bloodmoon_BeastHuntTab_Hearts>Consume Hearts</Mashed_Bloodmoon_BeastHuntTab_Hearts>
 	<Mashed_Bloodmoon_BeastHuntTab_Kills>Beast Form Kills</Mashed_Bloodmoon_BeastHuntTab_Kills>
-	<Mashed_Bloodmoon_BeastHuntTab_Proficiency>Ability Proficiency</Mashed_Bloodmoon_BeastHuntTab_Proficiency>
+	<Mashed_Bloodmoon_BeastHuntTab_Proficiency>Lycanthrope Proficiency</Mashed_Bloodmoon_BeastHuntTab_Proficiency>
 	<Mashed_Bloodmoon_BeastHuntTab_Other>Other</Mashed_Bloodmoon_BeastHuntTab_Other>
 	<!-- ==========[Type requirement worker requirement not met]==========-->
 	<Mashed_Bloodmoon_LTR_MissingOneOf>requires one of:</Mashed_Bloodmoon_LTR_MissingOneOf>
@@ -46,7 +46,7 @@
 	<Mashed_Bloodmoon_LTR_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_LTR_InvalidRecord>
 	<Mashed_Bloodmoon_LTR_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_LTR_InvalidSkill>
 	<Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
-	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>has not completed {0}</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
+	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>must complete the {0} beast hunt</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
 	<Mashed_Bloodmoon_LTR_InvalidBeastHuntCount>must complete at least {0} beast hunts</Mashed_Bloodmoon_LTR_InvalidBeastHuntCount>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
@@ -60,6 +60,8 @@
 	<!-- ==========[abilities]==========-->
 	<Mashed_Bloodmoon_AbilityStressCost>Ability use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
 	<Mashed_Bloodmoon_AbilityStressTooHigh>using {0_label} would exceed stress limit</Mashed_Bloodmoon_AbilityStressTooHigh>
+	<Mashed_Bloodmoon_AbilityHeartCost>Ability use heart cost: {0}</Mashed_Bloodmoon_AbilityHeartCost>
+	<Mashed_Bloodmoon_AbilityNotEnoughHearts>not enough consumed hearts to use {0_label} </Mashed_Bloodmoon_AbilityNotEnoughHearts>
 	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>

@@ -25,7 +25,7 @@ namespace Mashed_Bloodmoon
                 return "Mashed_Bloodmoon_NotLycanthrope".Translate(pawn);
             }
 
-            if (!Props.abilityDef.CanGainAbility(compLycanthrope))
+            if (Props.abilityDef.HasAbility(compLycanthrope))
             {
                 return "Mashed_Bloodmoon_AbilityAlreadyUnlocked".Translate(pawn, Props.abilityDef);
             }

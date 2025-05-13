@@ -99,7 +99,7 @@ namespace Mashed_Bloodmoon
             {
                 foreach (LycanthropeAbilityDef abilityDef in startingAbilities)
                 {
-                    if (abilityDef.CanGainAbility(compLycanthrope))
+                    if (!abilityDef.HasAbility(compLycanthrope))
                     {
                         abilityDef.UnlockAbility(compLycanthrope);
                     }

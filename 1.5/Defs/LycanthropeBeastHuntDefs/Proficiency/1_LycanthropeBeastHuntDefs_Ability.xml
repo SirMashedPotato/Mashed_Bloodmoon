@@ -49,7 +49,7 @@
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
 		<label>proficiency: Spectral Werewolf</label>
 		<description>Have your spectral werewolf land 30 killing blows.</description>
-		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Summon an additional spectral werewolf.</extraTooltip> 
+		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Summon an additional spectral werewolf.</extraTooltip>
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</heartTexPath>
