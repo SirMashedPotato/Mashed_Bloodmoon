@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- All sounds used here are otained from https://mixkit.co/ -->
 	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]==========-->
 	<SoundDef>
 		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>

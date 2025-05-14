@@ -32,6 +32,17 @@
 		<abilityDef>Mashed_Bloodmoon_BeastLeap</abilityDef>
 		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>huntsman's bounty</label>
+		<description>Place a bounty on a target. Successfully killing the target in time will grant a gold reward based on the targets combat power.</description>
+		<abilityDef>Mashed_Bloodmoon_HuntsmansBounty</abilityDef>
+		<purchaseHeartCost>15</purchaseHeartCost>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<requiredCount>10</requiredCount>
+		</requirementWorker>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>

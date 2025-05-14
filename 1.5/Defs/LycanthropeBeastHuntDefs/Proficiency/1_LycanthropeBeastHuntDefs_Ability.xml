@@ -22,6 +22,17 @@
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>proficiency: Huntsman's Bounty</label>
+		<description>Kill 30 targets that have had a bounty placed on them by this lycanthrope.</description>
+		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for the Huntsman's Bounty ability: Increase the gold reward to 25% of the targets combat power.</extraTooltip>
+		<beastHuntType>Proficiency</beastHuntType>
+		<targetCount>30</targetCount>
+		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansBounty</heartTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>

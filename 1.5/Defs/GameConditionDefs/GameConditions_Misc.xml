@@ -11,8 +11,10 @@
 		<letterDef>NegativeEvent</letterDef>
 		<canBePermanent>true</canBePermanent>
 		<allowUnderground>false</allowUnderground>
+		<preventNeutralVisitors>true</preventNeutralVisitors>
 		<exclusiveConditions>
 			<li MayRequire="Ludeon.RimWorld.Anomaly">UnnaturalDarkness</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlpEclipse</li>
 		</exclusiveConditions>
 	</GameConditionDef>
 </Defs>

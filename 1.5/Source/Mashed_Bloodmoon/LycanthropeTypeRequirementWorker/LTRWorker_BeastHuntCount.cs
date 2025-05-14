@@ -8,13 +8,13 @@ namespace Mashed_Bloodmoon
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            if (compLycanthrope.completedBeastHunts >= requriedCount)
+            if (compLycanthrope.completedBeastHunts >= requiredCount)
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidBeastHuntCount".Translate(requriedCount);
+            return "Mashed_Bloodmoon_LTR_InvalidBeastHuntCount".Translate(requiredCount);
         }
 
-        public int requriedCount;
+        public int requiredCount;
     }
 }

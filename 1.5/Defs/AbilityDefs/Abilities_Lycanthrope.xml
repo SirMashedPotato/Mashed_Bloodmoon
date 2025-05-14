@@ -206,6 +206,67 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>Huntsman's bounty</label>
+		<description>Place a bounty on a wild animal, or hostile target. Successfully killing the target in time will grant a gold reward based on the targets combat power.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansBounty</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_HuntsmansMark</warmupStartSound>
+		<cooldownTicksRange>7200</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>90</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<drawAimPie>false</drawAimPie>
+			<range>14.9</range>
+			<warmupTime>0.25</warmupTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<targetParams>
+				<canTargetBuildings>false</canTargetBuildings>
+				<mustBeSelectable>true</mustBeSelectable>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBounty</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\n.Increase the gold reward to 25% of the targets combat power.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityHeartCost">
+				<heartCost>1</heartCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_GiveHediffLinked</compClass>
+				<hediffDef>Mashed_Bloodmoon_HuntsmansBounty</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>true</applicableToMechs>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>Huntsman's bounty</label>
+		<description>This pawn has had a bounty placed on them by a lycanthrope. They will leave a gold reward if they are killed before the bounty expires.</description>
+		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_HuntsmansBounty">
+				<rewardThingDef>Gold</rewardThingDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBounty</beastHuntDef>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>999</maxDistance>
+				<customMote>Mashed_Bloodmoon_HuntsmansBountyLinkLine</customMote>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_HuntsmansBounty</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]==========-->
 	<AbilityDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>

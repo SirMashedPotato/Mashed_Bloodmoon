@@ -131,6 +131,7 @@
     <Compile Include="Harmony\Patch_ApplyBedThoughts.cs" />
     <Compile Include="Harmony\Patch_Verb_MeleeAttackDamage.cs" />
     <Compile Include="HediffComp\HediffComp_ForcedTransformOnRemoved.cs" />
+    <Compile Include="HediffComp\HediffComp_HuntsmansBounty.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformationEnd.cs" />
     <Compile Include="HediffComp\HediffComp_IncreaseDurationOnKill.cs" />
     <Compile Include="HediffComp\HediffComp_ResetCooldownOnKilled.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
     <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
     <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_HuntsmansBounty.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_IncreaseDurationOnKill.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_ForcedTransformOnRemoved.cs" />
     <Compile Include="HediffComp\Properties\HediffCompProperties_ResetCooldownOnKilled.cs" />
@@ -151,10 +153,9 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
-    <Compile Include="JobGiver\JobGiver_AttackMarkedTarget.cs" />
+    <Compile Include="ThinkNode\JobGiver_AttackMarkedTarget.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastDefendParent.cs" />
-    <Compile Include="JobGiver\JobGiver_LycanthropeFury.cs" />
-    <Compile Include="JobGiver\JobGiver_NightTransformation.cs" />
+    <Compile Include="ThinkNode\JobGiver_LycanthropeFury.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastFollowParent.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastWanderNearParent.cs" />
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UnlockAbility.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
     <Compile Include="Rituals\RitualAttachableOutcomeEffectWorker\RitualAttachableOutcomeEffectWorker_DiscoverFeralWerewolfPack.cs" />
     <Compile Include="Rituals\RitualAttachableOutcomeEffectWorker\RitualAttachableOutcomeEffectWorker_GrantTotem.cs" />
+    <Compile Include="RoleRequirement\RoleRequirement_Lycanthrope.cs" />
     <Compile Include="Settings\Mashed_Bloodmoon_Mod.cs" />
     <Compile Include="Settings\Mashed_Bloodmoon_ModSettings.cs" />
     <Compile Include="Sites\SitePartWorker\SitePartWorker_FeralWerewolfPack.cs" />
