@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using Verse;
+﻿using Verse;
 
 namespace Mashed_Bloodmoon
 {
@@ -19,12 +18,6 @@ namespace Mashed_Bloodmoon
         public override void IngestionOutcome_Lycanthrope(Pawn pawn, Hediff hediff)
         {
             pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea);
-
-            if (Rand.Chance(0.1f))
-            {
-                Messages.Message("Mashed_Bloodmoon_LycanthropeCured".Translate(pawn), pawn, MessageTypeDefOf.PositiveEvent);
-                pawn.health.RemoveHediff(hediff);
-            }
         }
 
         public override void IngestionOutcome_SaniesLupinus(Pawn pawn, Hediff hediff)

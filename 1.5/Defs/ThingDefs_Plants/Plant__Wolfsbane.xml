@@ -4,7 +4,7 @@
 	<ThingDef ParentName="PlantBase" Name="Mashed_Bloodmoon_WolfsbanePlantBase">
 		<defName>Mashed_Bloodmoon_WolfsbanePlantDecorative</defName>
 		<label>fools wolfsbane</label>
-		<description>A small flowering plant, only found growing in the highest mountains. In theory lycanthropes would have a rather strong reaction to the petals of these flowers, except that this particular strain is purely decorative. It offers nothing of practical use, and is only nice to look at.</description>
+		<description>A small flowering plant, only found growing in the highest mountains. In theory lycanthropes would have a rather strong reaction to the petals of these flowers, except this particular strain is purely decorative. It offers nothing of practical use, and is only nice to look at.</description>
 		<statBases>
 			<Beauty>6</Beauty>
 			<BeautyOutdoors>6</BeautyOutdoors>
