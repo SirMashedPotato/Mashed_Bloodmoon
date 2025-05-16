@@ -45,11 +45,10 @@
 		<targetCount>200</targetCount> 
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesVI]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolvesVI</defName>
 		<label>beast hunt: Hounds VI</label>
 		<description>Consume the hearts of 500 feral werewolves.</description>
-		<targetThingDef>Rat</targetThingDef><!-- todo -->
 		<targetCount>500</targetCount> 
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
