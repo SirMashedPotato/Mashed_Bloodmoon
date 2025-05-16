@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
 
         public override Pawn GeneratePawn()
         {
-            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind: PawnKindDefOf.Villager, context: PawnGenerationContext.NonPlayer, 
+            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind: RimWorld.PawnKindDefOf.Villager, context: PawnGenerationContext.NonPlayer, 
                 mustBeCapableOfViolence: true, 
                 dontGiveWeapon: true,
                 allowPregnant: false,

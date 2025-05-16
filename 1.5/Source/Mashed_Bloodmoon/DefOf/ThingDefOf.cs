@@ -11,5 +11,6 @@ namespace Mashed_Bloodmoon
             DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
         }
         public static ThingDef Mashed_Bloodmoon_TransformEffect;
+        public static ThingDef Mashed_Bloodmoon_SpectralWerewolfSpawner;
     }
 }

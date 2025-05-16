@@ -23,14 +23,18 @@ namespace Mashed_Bloodmoon
 
         public override void Notify_KilledPawn(Pawn victim, DamageInfo? dinfo)
         {
-            if (incrementBeastHuntOnKill && beastHuntDef != null)
+            if (linkedPawn != null)
             {
-                beastHuntDef.ProgressBeastHunt(linkedPawn);
+                if (incrementBeastHuntOnKill && beastHuntDef != null)
+                {
+                    beastHuntDef.ProgressBeastHunt(linkedPawn);
+                }
             }
+          
             base.Notify_KilledPawn(victim, dinfo);
         }
 
-        public override string CompLabelInBracketsExtra => linkedPawn.NameShortColored;
+        public override string CompLabelInBracketsExtra => linkedPawn != null ? linkedPawn.NameShortColored : null;
 
         public override void CompExposeData()
         {

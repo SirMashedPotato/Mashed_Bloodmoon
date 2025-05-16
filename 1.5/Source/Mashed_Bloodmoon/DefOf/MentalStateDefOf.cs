@@ -11,5 +11,6 @@ namespace Mashed_Bloodmoon
             DefOfHelper.EnsureInitializedInCtor(typeof(MentalStateDefOf));
         }
         public static MentalStateDef Mashed_Bloodmoon_LycanthropeFury;
+        public static MentalStateDef Mashed_Bloodmoon_SpectralBeast;
     }
 }

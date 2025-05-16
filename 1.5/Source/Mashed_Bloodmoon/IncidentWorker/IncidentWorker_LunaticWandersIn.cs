@@ -18,7 +18,7 @@ namespace Mashed_Bloodmoon
                 return false;
             }
 
-            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.WildMan, formerFaction, 
+            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(RimWorld.PawnKindDefOf.WildMan, formerFaction, 
                 mustBeCapableOfViolence: true, 
                 forcedTraits: new List<TraitDef> { TraitDefOf.Mashed_Bloodmoon_UncontrollableLycanthropy }
                 ));

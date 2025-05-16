@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SpectralWerewolfSpawner]========== -->
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>Mashed_Bloodmoon_SpectralWerewolfSpawner</defName>
+		<label>forming spectral werewolf</label>
+		<thingClass>Mashed_Bloodmoon.SpectralWerewolfSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_SpectralWerewolf/Mashed_Bloodmoon_SpectralWerewolf_south</texPath>
+			<drawSize>2</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<building>
+			<groundSpawnerSustainedEffecter>Mashed_Bloodmoon_SpectralWerewolfSpawner</groundSpawnerSustainedEffecter>
+		</building>
+	</ThingDef>
+</Defs>

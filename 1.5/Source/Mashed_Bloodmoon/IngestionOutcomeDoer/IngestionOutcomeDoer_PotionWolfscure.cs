@@ -16,10 +16,13 @@ namespace Mashed_Bloodmoon
 
         public override void IngestionOutcome_Lycanthrope(Pawn pawn, Hediff hediff)
         {
+            SpectralWerewolfSpawner spectralWerewolfSpawner = (SpectralWerewolfSpawner)ThingMaker.MakeThing(ThingDefOf.Mashed_Bloodmoon_SpectralWerewolfSpawner);
+            spectralWerewolfSpawner.werewolfLifespan = (int)(pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate);
+            GenSpawn.Spawn(spectralWerewolfSpawner, pawn.Position, pawn.Map);
+
             pawn.health.RemoveHediff(hediff);
-            pawn.jobs.StartJob(new Job(JobDefOf.Vomit));
+            pawn.jobs.StartJob(new Job(JobDefOf.Vomit), JobCondition.Succeeded);
             Messages.Message("Mashed_Bloodmoon_LycanthropeCured".Translate(pawn), pawn, MessageTypeDefOf.PositiveEvent);
-            //todo spawn a thing that spawns a spectral werewolf
         }
 
         public override void IngestionOutcome_SaniesLupinus(Pawn pawn, Hediff hediff)
