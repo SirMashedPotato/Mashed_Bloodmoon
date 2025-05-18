@@ -123,6 +123,7 @@
     <Compile Include="Def\LycanthropeTotemDef.cs" />
     <Compile Include="DefOf\PawnKindDefOf.cs" />
     <Compile Include="GameCondition\GameCondition_HuntsmansMoon.cs" />
+    <Compile Include="Gene\ConditionalStatAffecter\ConditionalStatAffecter_LycanthropeTransformed.cs" />
     <Compile Include="Gene\Gene_Lycanthrope.cs" />
     <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
     <Compile Include="Harmony\Compat_SimpleSidearms.cs" />

@@ -77,9 +77,9 @@
 	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
 	<Mashed_Bloodmoon_AbilityUnlocked>{0_labelShort} has unlocked the {1_label} ability for use in beast form</Mashed_Bloodmoon_AbilityUnlocked>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
-	<!-- ==========[misc]==========-->
+	<!-- ==========[genes]==========-->
 	<Mashed_Bloodmoon_LycanthropeCantDo>{0_labelShort} is in their beast form</Mashed_Bloodmoon_LycanthropeCantDo>
+	<Mashed_Bloodmoon_InBeastForm>in beast form</Mashed_Bloodmoon_InBeastForm>
 	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>
-	<Mashed_Bloodmoon_BeastForm>Beast form</Mashed_Bloodmoon_BeastForm>
 	<Mashed_Bloodmoon_SpectralBeastName>{0}'s {1}</Mashed_Bloodmoon_SpectralBeastName>
 </LanguageData>
