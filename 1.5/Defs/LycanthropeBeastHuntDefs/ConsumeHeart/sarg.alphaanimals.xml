@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_AABehemoth]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sarg.alphaanimals">
+		<defName>Mashed_Bloodmoon_AABehemoth</defName>
+		<label>beast hunt: Behemoth</label>
+		<description>Consume the heart of a forsaken behemoth.</description>
+		<targetThingDef>AA_Behemoth</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Night</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

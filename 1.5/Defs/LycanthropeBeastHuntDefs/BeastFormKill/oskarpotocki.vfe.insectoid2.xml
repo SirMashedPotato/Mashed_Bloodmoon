@@ -54,13 +54,4 @@
 		<targetThingDef>VFEI2_Silverfish</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
-	<!-- ==========[Mashed_Bloodmoon_CliffRacerCulling]========== -->
-	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
-		<defName>Mashed_Bloodmoon_CliffRacerCulling</defName>
-		<label>beast hunt: Winged Menace</label>
-		<description>Kill 333 cliff racers while in beast form.</description>
-		<beastHuntType>Kill</beastHuntType>
-		<targetThingDef>Mashed_Ashlands_CliffRacer</targetThingDef>
-		<targetCount>333</targetCount>
-	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
