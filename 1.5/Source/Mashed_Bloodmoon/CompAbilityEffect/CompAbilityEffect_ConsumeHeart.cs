@@ -41,13 +41,17 @@ namespace Mashed_Bloodmoon
 
             float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
 
-            if (parent.pawn.needs?.food?.CurLevel != null)
+            if (parent.pawn.needs?.food != null)
             {
                 parent.pawn.needs.food.CurLevel += (nutritionFactor * maxHealth);
             }
-            if (parent.pawn.needs?.rest?.CurLevel != null)
+            if (parent.pawn.needs?.rest != null)
             {
                 parent.pawn.needs.rest.CurLevel += ((nutritionFactor / 2f) * maxHealth);
+            }
+            if (ModsConfig.RoyaltyActive && parent.pawn.psychicEntropy != null)
+            {
+                parent.pawn.psychicEntropy.OffsetPsyfocusDirectly(nutritionFactor / 3f * maxHealth);
             }
 
             base.Apply(target, dest);
