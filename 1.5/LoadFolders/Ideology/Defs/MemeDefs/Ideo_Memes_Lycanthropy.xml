@@ -4,7 +4,7 @@
 	<MemeDef>
 		<defName>Mashed_Bloodmoon_Lycanthropy</defName>
 		<label>lycanthropy</label>
-		<description>Lycanthropy is a gift from The Huntsman. Lycanthropes should be worshipped.</description>
+		<description>Lycanthropy is a gift from The Huntsman. Lycanthropes should be worshipped.\n\n&lt;color=#E5E54C&gt;Unlocked ritual attachable outcomes:&lt;/color&gt;\n - Huntsman's Gift</description>
 		<iconPath>UI/Memes/Mashed_Bloodmoon_Lycanthropy</iconPath>
 		<groupDef>Misc</groupDef>
 		<exclusionTags>
