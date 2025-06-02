@@ -22,6 +22,9 @@
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityConsumeHeart">
 				<goodwillImpact>-70</goodwillImpact>
 			</li>
+			<li Class="CompProperties_AbilityRequiresCapacity">
+				<capacity>Eating</capacity>
+			</li>
 		</comps>
 		<verbProperties>
 			<drawAimPie>False</drawAimPie>
@@ -340,6 +343,40 @@
 			</li>
 		</stages>
 	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_MetabolicSurge]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_MetabolicSurge</defName>
+		<label>metabolic surge</label>
+		<description>Spend a consumed heart to instantly tend up to five wounds.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_MetabolicSurge</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_AdrenalineRush</warmupStartSound>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityHeartCost">
+				<heartCost>1</heartCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityTendWounds">
+				<tendCount>5</tendCount>
+				<tendQualityRange>0.3~0.6</tendQualityRange>
+			</li>
+			<li Class="CompProperties_AbilityEffecterOnTarget">
+				<effecterDef>Mashed_Bloodmoon_MetabolicSurge</effecterDef>
+				<maintainForTicks>3</maintainForTicks>
+			</li>
+		</comps>
+	</AbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
 	<AbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>

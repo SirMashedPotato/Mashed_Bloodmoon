@@ -57,17 +57,6 @@ namespace Mashed_Bloodmoon
             base.Apply(target, dest);
         }
 
-        public override bool GizmoDisabled(out string reason)
-        {
-            if (!parent.pawn.health.capacities.CapableOf(PawnCapacityDefOf.Eating))
-            {
-                reason = "AbilityDisabledNoCapacity".Translate(parent.pawn, PawnCapacityDefOf.Eating.label);
-                return true;
-            }
-
-            return base.GizmoDisabled(out reason);
-        }
-
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
             if (target.Thing == null)
