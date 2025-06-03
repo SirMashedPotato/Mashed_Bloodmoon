@@ -142,6 +142,38 @@
 		<label>feral werewolf</label>
 		<race>Mashed_Bloodmoon_FeralWerewolf</race>
 		<combatPower>100</combatPower>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<!-- default -->
+				<color>(53,54,50)</color>
+				<colorTwo>(123,112,93)</colorTwo>
+			</li>
+			<li>
+				<color>(62,64,59)</color>
+				<colorTwo>(135,122,102)</colorTwo>
+			</li>
+			<li>
+				<color>(45,46,43)</color>
+				<colorTwo>(110,100,83)</colorTwo>
+			</li>
+			<li>
+				<color>(54,54,54)</color>
+				<colorTwo>(123,116,103)</colorTwo>
+			</li>
+			<li>
+				<color>(54,50,50)</color>
+				<colorTwo>(125,119,111)</colorTwo>
+			</li>
+			<li>
+				<color>(56,52,47)</color>
+				<colorTwo>(130,117,104)</colorTwo>
+			</li>
+			<li>
+				<color>(56,50,43)</color>
+				<colorTwo>(130,121,98)</colorTwo>
+			</li>
+		</alternateGraphics>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
