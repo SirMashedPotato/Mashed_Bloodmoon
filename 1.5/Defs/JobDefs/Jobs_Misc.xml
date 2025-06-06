@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_CustomiseBeastForm]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_CustomiseBeastForm</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_CustomiseBeastForm</driverClass>
+		<reportString>customising beast form at TargetA.</reportString>
+	</JobDef>
+	<!-- ==========[Mashed_Bloodmoon_UpgradeBeastForm]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_UpgradeBeastForm</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_UpgradeBeastForm</driverClass>
+		<reportString>upgrading beast form at TargetA.</reportString>
+	</JobDef>
+	<!-- ==========[Mashed_Bloodmoon_ViewBeastHuntProgress]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_ViewBeastHuntProgress</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_ViewBeastHuntProgress</driverClass>
+		<reportString>viewing beast hunt progress at TargetA.</reportString>
+	</JobDef>
+	<!-- ==========[Mashed_Bloodmoon_SummonHuntsmansMoon]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_SummonHuntsmansMoon</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_CustomiseBeastForm</driverClass>
+		<reportString>summoning Huntsman's Moon at TargetA.</reportString>
+	</JobDef>
+</Defs>

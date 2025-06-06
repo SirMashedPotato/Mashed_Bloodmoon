@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbloodAltar]========== -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Mashed_Bloodmoon_WolfsbloodAltar</defName>
+		<label>wolfsblood altar</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Things/Building/Art/Mashed_Bloodmoon_WerewolfTrophySmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+
+		<designationCategory>Misc</designationCategory>
+		<techLevel>Medieval</techLevel>
+		<rotatable>false</rotatable>
+		<passability>PassThroughOnly</passability>
+		<pathCost>42</pathCost>
+		<fillPercent>0.20</fillPercent>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+		</statBases>
+
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<defaultStuff>BlocksGranite</defaultStuff>
+		<costStuffCount>100</costStuffCount>
+
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+			<li>Mashed_Bloodmoon_Wolfsblood</li>
+		</researchPrerequisites>
+
+		<comps>
+			<!-- Filling/Drinking -->
+			<!-- Summonning -->
+			 <li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
+				<useJob>Mashed_Bloodmoon_SummonHuntsmansMoon</useJob>
+				<useLabel>Summon Huntsman's Moon</useLabel>
+				<useDuration>600</useDuration>
+				<userMustHaveHediff>Mashed_Bloodmoon_Lycanthrope</userMustHaveHediff>
+				<showUseGizmo>true</showUseGizmo>
+				<gizmoDescription>Sacrifice a large quantity of lycanthrope blood to summon a Huntsman's Moon.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
+			</li>
+			<!-- Lycanthrope options -->
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
+				<useJob>Mashed_Bloodmoon_CustomiseBeastForm</useJob>
+				<useLabel>Customise beast form</useLabel>
+				<useDuration>0</useDuration>
+				<userMustHaveHediff>Mashed_Bloodmoon_Lycanthrope</userMustHaveHediff>
+				<showUseGizmo>true</showUseGizmo>
+				<allowTransformed>false</allowTransformed>
+				<gizmoDescription>Customise the beast form of a lycanthrope. The lycanthrope must not be transformed.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions</gizmoTexPath>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
+				<useJob>Mashed_Bloodmoon_UpgradeBeastForm</useJob>
+				<useLabel>Upgrade beast form</useLabel>
+				<useDuration>0</useDuration>
+				<userMustHaveHediff>Mashed_Bloodmoon_Lycanthrope</userMustHaveHediff>
+				<showUseGizmo>true</showUseGizmo>
+				<allowTransformed>false</allowTransformed>
+				<gizmoDescription>Upgrade the beast form of a lycanthrope. The lycanthrope must not be transformed.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions</gizmoTexPath>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
+				<useJob>Mashed_Bloodmoon_ViewBeastHuntProgress</useJob>
+				<useLabel>Beast hunt progress</useLabel>
+				<useDuration>0</useDuration>
+				<userMustHaveHediff>Mashed_Bloodmoon_Lycanthrope</userMustHaveHediff>
+				<showUseGizmo>true</showUseGizmo>
+				<gizmoDescription>View the beast hunt progress of a lycanthrope.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions</gizmoTexPath>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

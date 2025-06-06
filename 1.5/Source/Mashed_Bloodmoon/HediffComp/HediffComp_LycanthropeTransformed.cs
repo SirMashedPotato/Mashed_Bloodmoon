@@ -120,11 +120,7 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostPostAdd(dinfo);
 
-            //TODO remove at some point
-            if (CompLycanthrope.TransformationTypeDef == null)
-            {
-                CompLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
-            }
+            parent.pawn.jobs.StopAll();
             CompLycanthrope.TransformationTypeDef.PlayTransformationStartEffects(parent.pawn);
 
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
@@ -184,11 +180,7 @@ namespace Mashed_Bloodmoon
         {
             base.CompPostPostRemoved();
 
-            //TODO remove at some point
-            if (CompLycanthrope.TransformationTypeDef == null)
-            {
-                CompLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
-            }
+            parent.pawn.jobs.StopAll();
             CompLycanthrope.TransformationTypeDef.PlayTransformationEndEffects(parent.pawn);
 
             RemoveLinkedHediffs();

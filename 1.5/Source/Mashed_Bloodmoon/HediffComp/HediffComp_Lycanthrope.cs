@@ -182,7 +182,7 @@ namespace Mashed_Bloodmoon
                 {
                     lycanthropeGizmoOptions = new List<FloatMenuOption>();
 
-                    ///Customise beast form
+                    //Customise beast form
                     FloatMenuOption item = new FloatMenuOption("Mashed_Bloodmoon_CustomiseBeastForm".Translate(), delegate
                     {
                         Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
@@ -190,7 +190,7 @@ namespace Mashed_Bloodmoon
                     });
                     lycanthropeGizmoOptions.Add(item);
 
-                    ///Customise beast form
+                    //Upgrade beast form
                     item = new FloatMenuOption("Mashed_Bloodmoon_UpgradeBeastForm".Translate(), delegate
                     {
                         Page_UpgradeBeastForm page = new Page_UpgradeBeastForm(this);
@@ -198,7 +198,7 @@ namespace Mashed_Bloodmoon
                     });
                     lycanthropeGizmoOptions.Add(item);
 
-                    ///Customise beast form
+                    //Beast hunt progress
                     item = new FloatMenuOption("Mashed_Bloodmoon_BeastHuntProgress".Translate(), delegate
                     {
                         Page_BeastHuntProgress page = new Page_BeastHuntProgress(this);
