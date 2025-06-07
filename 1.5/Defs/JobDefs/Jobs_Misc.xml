@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_DrinkFromWolfsbloodAltar]========== -->
+	 <JobDef>
+		<defName>Mashed_Bloodmoon_DrinkFromWolfsbloodAltar</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_WolfsbloodAltarDrinkBlood</driverClass>
+		<reportString>drinking from TargetA.</reportString>
+	</JobDef>
+	<!-- ==========[Mashed_Bloodmoon_FillWolfsbloodAltar]========== -->
+	 <JobDef>
+		<defName>Mashed_Bloodmoon_FillWolfsbloodAltar</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_WolfsbloodAltarFillBlood</driverClass>
+		<reportString>filling TargetA.</reportString>
+	</JobDef>
 	<!-- ==========[Mashed_Bloodmoon_CustomiseBeastForm]========== -->
 	<JobDef>
 		<defName>Mashed_Bloodmoon_CustomiseBeastForm</defName>

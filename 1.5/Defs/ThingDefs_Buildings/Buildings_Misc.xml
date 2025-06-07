@@ -4,7 +4,8 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Mashed_Bloodmoon_WolfsbloodAltar</defName>
 		<label>wolfsblood altar</label>
-		<description>.</description>
+		<description>A ritualistic altar used to commune with The Huntsman. The large stone bowl at its centre can be filled with lycanthrope blood. The blood can then be consumed, or sacrificed as an offering to The Huntsman.\n\nWhen ingested by those without any traces of lycanthropy, it will infect them with Sanies Lupinus.\n\nWhen ingested by those that are currently infected by Sanies Lupinus, it will strengthen infection, increasing the severity of it.\n\nWhen ingested by those with dormant lycanthropy, it will force a transformation. Progressing the disease into full lycanthropy, and also temporarily causing the ingestor to lose control of their new form.\n\nWhen ingested by a lycanthrope, it will temporarily increase the amount of lycanthropic stress they can withstand while transformed.\n\nWhen ingested by a transformed lycanthrope, it strengthens the transformation. Wound healing rate is greatly enhanced for a short period of time, or until the transformation ends.</description>
+		<thingClass>Mashed_Bloodmoon.Building_WolfsbloodAltar</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Art/Mashed_Bloodmoon_WerewolfTrophySmall</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -37,12 +38,28 @@
 
 		<comps>
 			<!-- Filling/Drinking -->
-			<!-- Summonning -->
-			 <li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarDrinkBlood</compClass>
+				<useJob>Mashed_Bloodmoon_DrinkFromWolfsbloodAltar</useJob>
+				<useLabel>Drink from wolfsblood altar</useLabel>
+				<showUseGizmo>true</showUseGizmo>
+				<gizmoDescription>Drink from the wolfsblood altar, consuming 10% of the lycanthrope blood it contains.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarFillBlood</compClass>
+				<useJob>Mashed_Bloodmoon_FillWolfsbloodAltar</useJob>
+				<useLabel>Fill wolfsblood altar</useLabel>
+				<userMustHaveHediff>Mashed_Bloodmoon_Lycanthrope</userMustHaveHediff>
+				<showUseGizmo>true</showUseGizmo>
+				<gizmoDescription>Have a lycanthrope bleed into the altar. Increases the amount of lycanthrope blood in the altar by 10%, and increases the lycanthropes bloodloss by 10%.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
+			</li>
+			<!-- Sacrificing -->
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
 				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
 				<useJob>Mashed_Bloodmoon_SummonHuntsmansMoon</useJob>
 				<useLabel>Summon Huntsman's Moon</useLabel>
-				<useDuration>600</useDuration>
 				<userMustHaveHediff>Mashed_Bloodmoon_Lycanthrope</userMustHaveHediff>
 				<showUseGizmo>true</showUseGizmo>
 				<gizmoDescription>Sacrifice a large quantity of lycanthrope blood to summon a Huntsman's Moon.</gizmoDescription>

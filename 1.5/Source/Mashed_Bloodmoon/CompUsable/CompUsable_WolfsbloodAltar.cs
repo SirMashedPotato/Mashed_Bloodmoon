@@ -10,6 +10,9 @@ namespace Mashed_Bloodmoon
     {
         public new CompProperties_UsableAltar Props => (CompProperties_UsableAltar)props;
 
+        /// <summary>
+        /// We don't want it doing anything other than starting the job
+        /// </summary>
         public override void UsedBy(Pawn p)
         {
             return;
