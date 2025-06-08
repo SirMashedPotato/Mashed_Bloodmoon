@@ -74,7 +74,10 @@ namespace Mashed_Bloodmoon
             mainRect.yMin += rectLimitY;
             DoBottomButtons(mainRect, showNext: false);
             mainRect.height -= rectLimitY;
-            DoBeastHuntWindow(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : curTab == BeastHuntType.Kill ? BeastHuntListKill 
+            Widgets.DrawMenuSection(mainRect);
+            mainRect = mainRect.ContractedBy(rectPadding);
+
+            DoBeastHuntGrid(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : curTab == BeastHuntType.Kill ? BeastHuntListKill 
                 : curTab == BeastHuntType.Proficiency ? BeastHuntListProficiency : BeastHuntListOther);
             Widgets.EndScrollView();
         }
@@ -84,57 +87,57 @@ namespace Mashed_Bloodmoon
             compLycanthrope.completedBeastHunts = compLycanthrope.beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
         }
 
-        public void DoBeastHuntWindow(Rect inRect, List<LycanthropeBeastHuntDef> beastHuntList)
+        public void DoBeastHuntGrid(Rect inRect, List<LycanthropeBeastHuntDef> beastHuntList)
         {
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
 
-            float gridWidth = (innerRect.width / columnCount) - (rectPadding / 2f);
-            float gridHeight = gridWidth * 1.6f;
+            float cellWidth = (innerRect.width / columnCount) - (rectPadding / 3f);
+            float cellHeight = cellWidth * 1.6f;
             float rowCount = ((float)beastHuntList.Count / columnCount);
             if (rowCount % 1 != 0)
             {
                 rowCount += 0.5f;
             }
-            innerRect.height = Mathf.Round(rowCount) * (gridHeight + rectPadding);
+            innerRect.height = Mathf.Round(rowCount) * (cellHeight + rectPadding);
 
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
             int row = 0;
             int column = 0;
-            Rect beastHuntRect = new Rect(innerRect.x, innerRect.y, gridWidth, gridHeight);
+            Rect beastHuntRect = new Rect(innerRect.x, innerRect.y, cellWidth, cellHeight);
 
             foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
-                DoBeastHuntGrid(beastHuntRect, beastHuntDef);
+                DoBeastHuntCell(beastHuntRect, beastHuntDef);
                 if (++column >= columnCount)
                 {
-                    beastHuntRect.y += ((rectPadding / 2f) + gridHeight);
+                    beastHuntRect.y += ((rectPadding / 2f) + cellHeight);
                     beastHuntRect.x = innerRect.x;
                     column = 0;
                     row++;
                 }
                 else
                 {
-                    beastHuntRect.x += ((rectPadding / 2f) + gridWidth);
+                    beastHuntRect.x += ((rectPadding / 2f) + cellWidth);
                 }
             }
         }
 
-        public void DoBeastHuntGrid(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
+        public void DoBeastHuntCell(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
         {
-            Widgets.DrawMenuSection(inRect);
+            Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
             Rect upperRect = inRect;
             Rect lowerRect = inRect;
             upperRect.height = upperRect.width;
             lowerRect.height -= upperRect.height + (rectPadding / 2f);
             lowerRect.y += upperRect.height + (rectPadding / 2f);
             
-            DoGridUpperRect(upperRect, greatBeastDef);
-            DoGridLowerRect(lowerRect, greatBeastDef);
+            DoCellUpperRect(upperRect, greatBeastDef);
+            DoCellGridLowerRect(lowerRect, greatBeastDef);
         }
 
-        public void DoGridUpperRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
+        public void DoCellUpperRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
             Rect mainRect = inRect.ContractedBy(rectPadding);
             GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(beastHuntDef.backgroundTexPath));
@@ -168,7 +171,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void DoGridLowerRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
+        public void DoCellGridLowerRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
             Rect detailsRect = inRect.ContractedBy(rectPadding);
             TaggedString label = beastHuntDef.LabelCap;
