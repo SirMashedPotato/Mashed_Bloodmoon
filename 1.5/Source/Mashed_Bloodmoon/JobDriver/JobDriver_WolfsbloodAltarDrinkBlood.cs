@@ -4,20 +4,8 @@ using Verse.AI;
 
 namespace Mashed_Bloodmoon
 {
-    public class JobDriver_WolfsbloodAltarDrinkBlood : JobDriver
+    public class JobDriver_WolfsbloodAltarDrinkBlood : JobDriver_WolfsbloodAltar
     {
-        private int useDuration = -1;
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref useDuration, "useDuration", 0);
-        }
-
-        public override bool TryMakePreToilReservations(bool errorOnFailed)
-        {
-            return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
-        }
-
         public override void Notify_Starting()
         {
             base.Notify_Starting();
@@ -26,11 +14,10 @@ namespace Mashed_Bloodmoon
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.A);
-
-            Toil toiLWait = Toils_General.Wait(useDuration, TargetIndex.A);
-            toiLWait.WithProgressBarToilDelay(TargetIndex.A);
-            yield return toiLWait;
+            foreach (Toil toil in base.MakeNewToils())
+            {
+                yield return toil;
+            }
 
             yield return Toils_General.Do(delegate
             {

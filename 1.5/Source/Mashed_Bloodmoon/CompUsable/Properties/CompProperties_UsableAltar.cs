@@ -9,6 +9,9 @@ namespace Mashed_Bloodmoon
         public string gizmoDescription = "";
         [NoTranslate]
         public string gizmoTexPath;
+        public bool compUseEffects = false;
+        public bool onlyLycanthrope = true;
         public bool allowTransformed = true;
+        public int heartCost = 0;
     }
 }

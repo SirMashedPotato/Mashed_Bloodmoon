@@ -10,12 +10,12 @@ namespace Mashed_Bloodmoon
     {
         public new CompProperties_UsableAltar Props => (CompProperties_UsableAltar)props;
 
-        /// <summary>
-        /// We don't want it doing anything other than starting the job
-        /// </summary>
         public override void UsedBy(Pawn p)
         {
-            return;
+            if (Props.compUseEffects) 
+            {
+                base.UsedBy(p);
+            }
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -38,9 +38,20 @@ namespace Mashed_Bloodmoon
 
         public override AcceptanceReport CanBeUsedBy(Pawn p, bool forced = false, bool ignoreReserveAndReachable = false)
         {
+            HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(p);
+            if (Props.onlyLycanthrope && compLycanthrope == null)
+            {
+                return "Mashed_Bloodmoon_NotLycanthrope".Translate(p);
+            }
+
             if (!Props.allowTransformed && LycanthropeUtility.PawnIsTransformedLycanthrope(p))
             {
                 return "Mashed_Bloodmoon_LycanthropeCantDo".Translate(p);
+            }
+
+            if (Props.heartCost > 0 && compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] - Props.heartCost < 0)
+            {
+                return "Mashed_Bloodmoon_AbilityNotEnoughHearts".Translate(parent);
             }
 
             return base.CanBeUsedBy(p, forced, ignoreReserveAndReachable);

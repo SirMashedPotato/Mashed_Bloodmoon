@@ -65,11 +65,12 @@
 	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
-	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
 	<Mashed_Bloodmoon_MustBeLycanthrope>must be a lycanthrope</Mashed_Bloodmoon_MustBeLycanthrope>
 	<Mashed_Bloodmoon_TotemLimitReached>{0_labelShort} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
 	<Mashed_Bloodmoon_AbilityAlreadyUnlocked>{0_labelShort} has already unlocked the {1_label} ability</Mashed_Bloodmoon_AbilityAlreadyUnlocked>
 	<!-- ==========[messages]==========-->
+	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
+	<Mashed_Bloodmoon_NotTransformedLycanthrope>{0_labelShort} is not a transformed lycanthrope</Mashed_Bloodmoon_NotTransformedLycanthrope>
 	<Mashed_Bloodmoon_SaniesLupinusTransitioned>{0_labelShort}'s Sanies Lupinus has transitioned into dormant lycanthropy</Mashed_Bloodmoon_SaniesLupinusTransitioned>
 	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
 	<Mashed_Bloodmoon_TotemLevelUp>{0_labelShort} has increased their {1_label} level by {2}</Mashed_Bloodmoon_TotemLevelUp>

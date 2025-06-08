@@ -65,7 +65,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompAbilityEffect\CompAbilityEffect_AbilityTendWounds.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_AbilityProficiency.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_AddLinkedHediff.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
@@ -80,7 +79,6 @@
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityDoDamage.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityEffecterOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityFleckOnTargetExt.cs" />
-    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityTendWounds.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityHeartCost.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityLunarRequirement.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityProficiency.cs" />
@@ -91,6 +89,7 @@
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltar.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFillBlood.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarTendWounds.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_Totem.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_UnlockAbility.cs" />
     <Compile Include="CompUsable\Properties\CompProperties_UsableAltar.cs" />
@@ -165,8 +164,10 @@
     <Compile Include="JobDriver\JobDriver_CustomiseBeastForm.cs" />
     <Compile Include="JobDriver\JobDriver_UpgradeBeastForm.cs" />
     <Compile Include="JobDriver\JobDriver_ViewBeastHuntProgress.cs" />
+    <Compile Include="JobDriver\JobDriver_WolfsbloodAltar.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarFillBlood.cs" />
+    <Compile Include="JobDriver\JobDriver_SacrificeTending.cs" />
     <Compile Include="ThingClass\Building_WolfsbloodAltar.cs" />
     <Compile Include="ThingClass\SpectralWerewolfSpawner.cs" />
     <Compile Include="ThinkNode\JobGiver_AttackMarkedTarget.cs" />

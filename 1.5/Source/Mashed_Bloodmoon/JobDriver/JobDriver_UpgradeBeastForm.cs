@@ -4,13 +4,8 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class JobDriver_UpgradeBeastForm : JobDriver
+    public class JobDriver_UpgradeBeastForm : JobDriver_WolfsbloodAltar
     {
-        public override bool TryMakePreToilReservations(bool errorOnFailed)
-        {
-            return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
-        }
-
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.A);

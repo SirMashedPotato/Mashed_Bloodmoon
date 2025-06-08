@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
         {
             if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
             {
-                reason = "Mashed_Bloodmoon_NotLycanthrope".Translate(parent.pawn);
+                reason = "Mashed_Bloodmoon_NotTransformedLycanthrope".Translate(parent.pawn);
                 parent.pawn.abilities.RemoveAbility(parent.def);
                 return true;
             }

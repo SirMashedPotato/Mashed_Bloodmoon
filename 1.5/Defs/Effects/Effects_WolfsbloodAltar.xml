@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- ==========[Mashed_Bloodmoon_MetabolicSurge]==========-->
+	<!-- ==========[Mashed_Bloodmoon_WolfsbloodAltarUse]==========-->
 	<EffecterDef>
-		<defName>Mashed_Bloodmoon_MetabolicSurge</defName>
+		<defName>Mashed_Bloodmoon_WolfsbloodAltarUse</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
 				<scale>0.08~0.12</scale>
-				<burstCount>3~6</burstCount>
-				<chancePerTick>1</chancePerTick>
+				<chancePerTick>0.3</chancePerTick>
 				<positionRadius>1</positionRadius>
 				<fleckDef>Mashed_Bloodmoon_AdrenalineRushFleck</fleckDef>
-				<speed>0.6~0.6</speed>
+				<speed>0.3~0.3</speed>
 				<angle>10~80</angle>
 			</li>
 		</children>
