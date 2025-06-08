@@ -217,16 +217,20 @@ namespace Mashed_Bloodmoon
         {
             if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
             {
-                yield return new Command_Action
+                if (Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableOptionsGizmo)
                 {
-                    defaultLabel = "Mashed_Bloodmoon_LycanthropeOptions_Label".Translate(),
-                    defaultDesc = "Mashed_Bloodmoon_LycanthropeOptions_Desc".Translate(parent.pawn),
-                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions", true),
-                    action = delegate ()
+                    yield return new Command_Action
                     {
-                        Find.WindowStack.Add(new FloatMenu(LycanthropeGizmoOptions));
-                    },
-                };
+                        defaultLabel = "Mashed_Bloodmoon_LycanthropeOptions_Label".Translate(),
+                        defaultDesc = "Mashed_Bloodmoon_LycanthropeOptions_Desc".Translate(parent.pawn),
+                        icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions", true),
+                        action = delegate ()
+                        {
+                            Find.WindowStack.Add(new FloatMenu(LycanthropeGizmoOptions));
+                        },
+                    };
+                }
+                
                 yield return new Command_Action
                 {
                     defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),

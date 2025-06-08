@@ -4,4 +4,7 @@
 	<Mashed_Bloodmoon_ModName>Mashed's Bloodmoon</Mashed_Bloodmoon_ModName>
 	<!-- ==========[Huntsman Moon]==========-->
 	<Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>Enable the Huntsman's Moon incidents</Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>
+	<!-- ==========[Lycanthropy]==========-->
+	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
+	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>
 </LanguageData>
