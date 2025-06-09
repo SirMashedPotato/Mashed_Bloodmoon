@@ -25,6 +25,9 @@
 	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
 	<Mashed_Bloodmoon_Unlocked>Unlocked</Mashed_Bloodmoon_Unlocked>
 	<Mashed_Bloodmoon_UpgradeLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeLabel>
+	<Mashed_Bloodmoon_UpgradeTab_Abilities>Beast Form Abilities</Mashed_Bloodmoon_UpgradeTab_Abilities>
+	<Mashed_Bloodmoon_UpgradeTab_Claws>Beast form Claws</Mashed_Bloodmoon_UpgradeTab_Claws>
+	<Mashed_Bloodmoon_UpgradeTab_Totems>Totems</Mashed_Bloodmoon_UpgradeTab_Totems>
 	<!-- ==========[Beast hunt page]==========-->
 	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.\n\nCompleted beast hunts: {1}</Mashed_Bloodmoon_BeastHuntDesc>
 	<Mashed_Bloodmoon_BeastHuntHidden>Hidden</Mashed_Bloodmoon_BeastHuntHidden>

@@ -6,7 +6,10 @@ namespace Mashed_Bloodmoon
 {
     public class LycanthropeAbilityDef : Def
     {
+        [MustTranslate]
         public new string description;
+        [NoTranslate]
+        public string backgroundTexPath = "UI/Widgets/DesButBG";
         public AbilityDef abilityDef;
         public int purchaseHeartCost = 0;
         public LycanthropeTypeRequirementWorker requirementWorker;

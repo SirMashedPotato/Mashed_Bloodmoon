@@ -124,7 +124,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public void DoBeastHuntCell(Rect inRect, LycanthropeBeastHuntDef greatBeastDef)
+        public void DoBeastHuntCell(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
             Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
             Rect upperRect = inRect;
@@ -133,8 +133,8 @@ namespace Mashed_Bloodmoon
             lowerRect.height -= upperRect.height + (rectPadding / 2f);
             lowerRect.y += upperRect.height + (rectPadding / 2f);
             
-            DoCellUpperRect(upperRect, greatBeastDef);
-            DoCellGridLowerRect(lowerRect, greatBeastDef);
+            DoCellUpperRect(upperRect, beastHuntDef);
+            DoCellGridLowerRect(lowerRect, beastHuntDef);
         }
 
         public void DoCellUpperRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)

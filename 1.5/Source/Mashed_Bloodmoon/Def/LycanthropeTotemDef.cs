@@ -10,6 +10,8 @@ namespace Mashed_Bloodmoon
         public string labelShort = "???";
         [NoTranslate]
         public string iconPath = "Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemHeart";
+        [NoTranslate]
+        public string backgroundTexPath = "UI/Widgets/DesButBG";
         public ThingDef totemThingDef;
         public List<StatDef> statDefs;
         public int maxLevel = 30;
