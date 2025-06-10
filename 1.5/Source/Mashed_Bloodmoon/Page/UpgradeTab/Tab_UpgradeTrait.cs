@@ -38,7 +38,9 @@ namespace Mashed_Bloodmoon
             var font = Text.Font;
             Text.Font = GameFont.Tiny;
             RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
-            Widgets.Label(descRect, traitDef.description.Formatted(pawn.Named("PAWN")).AdjustedFor(pawn).Resolve());
+            string description = traitDef.description ?? traitDef.traitDef.DataAtDegree(traitDef.traitDegree).description;
+
+            Widgets.Label(descRect, description.Formatted(pawn.Named("PAWN")).AdjustedFor(pawn).Resolve());
             Text.Font = font;
 
 

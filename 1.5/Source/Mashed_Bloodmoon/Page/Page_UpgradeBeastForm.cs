@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
         {
             AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading;
             TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.Where(x => x.displayAsTotem).ToList();
-            TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading;
+            TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading.OrderBy(x=>x.traitDef.DataAtDegree(x.traitDegree).GetLabelCapFor(pawn)).ToList();
             ReadySettingsTabs();
 
             foreach (LycanthropeTotemDef def in TotemList)
