@@ -12,11 +12,11 @@ namespace Mashed_Bloodmoon
         Rot4 pawnRotation = new Rot4(2);
 
         ///Cached values
-        LycanthropeTypeDef originalLycanthropeTypeDef;
-        LycanthropeTransformationTypeDef originalLycanthropeTransformationTypeDef;
-        Color originalPrimaryColour;
-        Color originalSecondaryColour;
-        Color originalTertiaryColour;
+        readonly LycanthropeTypeDef originalLycanthropeTypeDef;
+        readonly LycanthropeTransformationTypeDef originalLycanthropeTransformationTypeDef;
+        readonly Color originalPrimaryColour;
+        readonly Color originalSecondaryColour;
+        readonly Color originalTertiaryColour;
 
         List<FloatMenuOption> lycanthropeTypeOptions;
         List<FloatMenuOption> transformationTypeOptions;
@@ -25,12 +25,6 @@ namespace Mashed_Bloodmoon
 
         public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
-            //TODO remove at some point
-            if (compLycanthrope.TransformationTypeDef == null)
-            {
-                compLycanthrope.TransformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
-            }
-
             originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
             originalLycanthropeTransformationTypeDef = compLycanthrope.TransformationTypeDef;
             originalPrimaryColour = compLycanthrope.primaryColour;
