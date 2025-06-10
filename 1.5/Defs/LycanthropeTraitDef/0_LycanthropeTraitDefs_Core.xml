@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Ascetic]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Ascetic</defName>
+		<description>{PAWN_nameDef} prefers a simple life, with only the necessary earthly posessions.</description>
+		<traitDef>Ascetic</traitDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Bloodlust]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Bloodlust</defName>
+		<description>{PAWN_nameDef} enjoys hurting others, and does not mind the sight of corpses.</description>
+		<traitDef>Bloodlust</traitDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Brawler]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Brawler</defName>
+		<description>{PAWN_nameDef} prefers to fight up close and personal.</description>
+		<traitDef>Brawler</traitDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Cannibal]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Cannibal</defName>
+		<description>{PAWN_nameDef} not only does not mind consuming human flesh, but actually enjoys it.</description>
+		<traitDef>Cannibal</traitDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_CarefulShooter]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_CarefulShooter</defName>
+		<description>{PAWN_nameDef} is very accurate with a ranged weapon, but never fires until the moment is right.</description>
+		<traitDef>ShootingAccuracy</traitDef>
+		<traitDegree>1</traitDegree>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_IronWilled]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_IronWilled</defName>
+		<description>{PAWN_nameDef} has nerves of steel, and never flees from danger.</description>
+		<traitDef>Nerves</traitDef>
+		<traitDegree>2</traitDegree>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Jogger]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Jogger</defName>
+		<description>{PAWN_nameDef} is always the first to reach the destination.</description>
+		<traitDef>SpeedOffset</traitDef>
+		<traitDegree>2</traitDegree>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Masochist]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Masochist</defName>
+		<description>{PAWN_nameDef} enjoys getting hurt, maybe a little too much.</description>
+		<traitDef>Masochist</traitDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_NightOwl]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_NightOwl</defName>
+		<description>{PAWN_nameDef} prefers to be awake while the moon is high in the sky.</description>
+		<traitDef>NightOwl</traitDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Nimble]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Nimble</defName>
+		<description>{PAWN_nameDef} is rather adept at avoiding traps and melee weapons.</description>
+		<traitDef>Nimble</traitDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Psycopath]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Psycopath</defName>
+		<description>{PAWN_nameDef} simply does not care about anyone else, alive or dead.</description>
+		<traitDef>Psychopath</traitDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_QuickSleeper]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_QuickSleeper</defName>
+		<description>{PAWN_nameDef} doesn't need to sleep as long as others.</description>
+		<traitDef>QuickSleeper</traitDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Recluse]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_Recluse</defName>
+		<description>{PAWN_nameDef} prefers a quiet life, far away from everyone else, and will be unhappy around others.</description>
+		<traitDef>Recluse</traitDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_SuperImmune]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_SuperImmune</defName>
+		<description>{PAWN_nameDef} has an immune system that works overtime, and gains immunity to illnesses faster.</description>
+		<traitDef>Immunity</traitDef>
+		<traitDegree>1</traitDegree>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_Tough]========== -->
+	<Mashed_Bloodmoon.LycanthropeTraitDef>
+		<defName>Mashed_Bloodmoon_Tough</defName>
+		<description>{PAWN_nameDef} is built like a brick wall, and takes far less damage than others.</description>
+		<traitDef>Tough</traitDef>
+		<purchaseHeartCost>75</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeTraitDef>
+</Defs>

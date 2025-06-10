@@ -8,12 +8,15 @@ namespace Mashed_Bloodmoon
 {
     public class Page_UpgradeBeastForm : LycanthropePage
     {
+        public const int columnCount = 2;
+        public const int altColumnCount = 3;
         private readonly List<LycanthropeAbilityDef> AbilityList;
-        private readonly List<LycanthropeTotemDef> TotemList;
+        private readonly List<LycanthropeTotemDef> TotemList; 
+        private readonly List<LycanthropeTraitDef> TraitList;
         private static Vector2 scrollPosition = Vector2.zero;
         private static LycanthropeUpgradeType curTab = LycanthropeUpgradeType.Ability;
         private readonly List<TabRecord> tabs = new List<TabRecord>();
-        private readonly List<UpgradeAmount> upgradeAmountList = new List<UpgradeAmount>();
+        private List<UpgradeAmount> upgradeAmountList = new List<UpgradeAmount>();
 
         public float innerRectHeightTotem;
         public float innerRectHeightAbility;
@@ -25,13 +28,15 @@ namespace Mashed_Bloodmoon
         {
             Ability,
             Claw,
-            Totem
+            Totem,
+            Trait
         }
 
         public Page_UpgradeBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
             AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading;
             TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.Where(x => x.displayAsTotem).ToList();
+            TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading;
             ReadySettingsTabs();
 
             foreach (LycanthropeTotemDef def in TotemList)
@@ -49,19 +54,24 @@ namespace Mashed_Bloodmoon
             {
                 curTab = LycanthropeUpgradeType.Ability;
             }, () => curTab == LycanthropeUpgradeType.Ability));
-            /*
+
             tabs.Add(new TabRecord("Mashed_Bloodmoon_UpgradeTab_Claws".Translate(), delegate
             {
                 curTab = LycanthropeUpgradeType.Claw;
             }, () => curTab == LycanthropeUpgradeType.Claw));
-            */
+
             tabs.Add(new TabRecord("Mashed_Bloodmoon_UpgradeTab_Totems".Translate(), delegate
             {
                 curTab = LycanthropeUpgradeType.Totem;
             }, () => curTab == LycanthropeUpgradeType.Totem));
+
+            tabs.Add(new TabRecord("Traits".Translate(), delegate
+            {
+                curTab = LycanthropeUpgradeType.Trait;
+            }, () => curTab == LycanthropeUpgradeType.Trait));
         }
 
-        private class UpgradeAmount
+        public class UpgradeAmount
         {
             public LycanthropeTotemDef totemTypeDef;
             public float amount;
@@ -76,8 +86,8 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate());
-            Widgets.ButtonImage(new Rect(inRect.width - (60f + rectPadding), 0f, 30f, 30f), TexButton.CategorizedResourceReadout, false, EffectsTooltip());
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate().Resolve());
+            Widgets.ButtonImage(new Rect(inRect.width - (60f + Assets.RectPadding), 0f, 30f, 30f), TexButton.CategorizedResourceReadout, false, EffectsTooltip());
 
             inRect.yMin += rectLimitY;
             Rect consumedHeartsRect = inRect;
@@ -91,7 +101,7 @@ namespace Mashed_Bloodmoon
             DoBottomButtons(mainRect, showNext: false);
             mainRect.height -= rectLimitY;
             Widgets.DrawMenuSection(mainRect);
-            mainRect = mainRect.ContractedBy(rectPadding);
+            mainRect = mainRect.ContractedBy(Assets.RectPadding);
 
             switch (curTab)
             {
@@ -105,6 +115,10 @@ namespace Mashed_Bloodmoon
 
                 case LycanthropeUpgradeType.Totem:
                     DoUpgradeGrid(mainRect, TotemList.Count());
+                    break;
+
+                case LycanthropeUpgradeType.Trait:
+                    DoUpgradeGrid(mainRect, TraitList.Count());
                     break;
             }
 
@@ -130,13 +144,13 @@ namespace Mashed_Bloodmoon
 
                 devCheatRectLeft.SplitVertically(devCheatRectLeft.width / 2f, out Rect cheatRectLeft1, out Rect cheatRectLeft2);
 
-                cheatRectLeft1 = cheatRectLeft1.ContractedBy(rectPadding);
+                cheatRectLeft1 = cheatRectLeft1.ContractedBy(Assets.RectPadding);
                 if (Widgets.ButtonText(cheatRectLeft1, "Dev: min hearts", true))
                 {
                     compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = 0;
                 }
 
-                cheatRectLeft2 = cheatRectLeft2.ContractedBy(rectPadding);
+                cheatRectLeft2 = cheatRectLeft2.ContractedBy(Assets.RectPadding);
                 if (Widgets.ButtonText(cheatRectLeft2, "Dev: -1 heart", true))
                 {
                     if (consumedCount > 0)
@@ -151,7 +165,7 @@ namespace Mashed_Bloodmoon
 
                 devCheatRectRight.SplitVertically(devCheatRectRight.width / 2f, out Rect cheatRectRight1, out Rect cheatRectRight2);
 
-                cheatRectRight1 = cheatRectRight1.ContractedBy(rectPadding);
+                cheatRectRight1 = cheatRectRight1.ContractedBy(Assets.RectPadding);
                 if (Widgets.ButtonText(cheatRectRight1, "Dev: +1 heart", true))
                 {
                     if (consumedCount < LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel)
@@ -160,7 +174,7 @@ namespace Mashed_Bloodmoon
                     }
                 }
 
-                cheatRectRight2 = cheatRectRight2.ContractedBy(rectPadding);
+                cheatRectRight2 = cheatRectRight2.ContractedBy(Assets.RectPadding);
                 if (Widgets.ButtonText(cheatRectRight2, "Dev: max hearts", true))
                 {
                     compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
@@ -192,15 +206,16 @@ namespace Mashed_Bloodmoon
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
+            int finalColumnCount = curTab == LycanthropeUpgradeType.Trait ? altColumnCount : columnCount;
 
-            float cellWidth = (innerRect.width / 2) - (rectPadding / 3f);
+            float cellWidth = (innerRect.width / finalColumnCount) - (Assets.RectPadding / 3f);
             float cellHeight = rowHeight;
-            float rowCount = ((float)listCount / 2);
+            float rowCount = ((float)listCount / finalColumnCount);
             if (rowCount % 1 != 0)
             {
                 rowCount += 0.5f;
             }
-            innerRect.height = Mathf.Round(rowCount) * (cellHeight + rectPadding);
+            innerRect.height = Mathf.Round(rowCount) * (cellHeight + Assets.RectPadding);
 
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
             int row = 0;
@@ -210,16 +225,16 @@ namespace Mashed_Bloodmoon
             for(int i = 0; i < listCount; i++)
             {
                 DoUpgradeCelll(upgradeRect, i);
-                if (++column >= 2)
+                if (++column >= finalColumnCount)
                 {
-                    upgradeRect.y += ((rectPadding / 2f) + cellHeight);
+                    upgradeRect.y += ((Assets.RectPadding / 2f) + cellHeight);
                     upgradeRect.x = innerRect.x;
                     column = 0;
                     row++;
                 }
                 else
                 {
-                    upgradeRect.x += ((rectPadding / 2f) + cellWidth);
+                    upgradeRect.x += ((Assets.RectPadding / 2f) + cellWidth);
                 }
             }
         }
@@ -229,207 +244,25 @@ namespace Mashed_Bloodmoon
             Rect rightRect = inRect;
             Rect leftRect = inRect;
             rightRect.width = rightRect.height;
-            leftRect.width -= rightRect.width + (rectPadding / 2f);
-            rightRect.x += leftRect.width + (rectPadding / 2f);
+            leftRect.width -= rightRect.width + (Assets.RectPadding / 2f);
+            rightRect.x += leftRect.width + (Assets.RectPadding / 2f);
             switch (curTab)
             {
                 case LycanthropeUpgradeType.Ability:
-                    DoAbilityCell(leftRect, rightRect, index);
+                    Tab_UpgradeAbility.DoCell(leftRect, rightRect, AbilityList[index], compLycanthrope);
                     break;
 
                 case LycanthropeUpgradeType.Claw:
-
+                    //Tab_UpgradeClaw.DoCell(leftRect, rightRect, AbilityList[index], compLycanthrope);
                     break;
 
                 case LycanthropeUpgradeType.Totem:
-                    DoTotemCell(leftRect, rightRect, index);
+                    Tab_UpgradeTotem.DoCell(leftRect, rightRect, TotemList[index], compLycanthrope, ref upgradeAmountList);
                     break;
-            }
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoAbilityCell(Rect leftRect, Rect rightRect, int index)
-        {
-            LycanthropeAbilityDef abilityDef = AbilityList[index];
-            DoAbilityLeftRect(leftRect, abilityDef);
-            DoAbilityRightRect(rightRect, abilityDef);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoAbilityLeftRect(Rect inRect, LycanthropeAbilityDef abilityDef)
-        {
-            AcceptanceReport acceptanceReport = abilityDef.PawnRequirementsMet(pawn);
-
-            Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
-            Rect mainRect = inRect.ContractedBy(rectPadding);
-            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
-
-            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            Widgets.Label(labelRect.NewCol(abilityDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), abilityDef.LabelCap);
-            if (abilityDef.HasAbility(compLycanthrope))
-            {
-                TaggedString levelLabel = "Mashed_Bloodmoon_Unlocked".Translate();
-                Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
-            }
-            else if (!acceptanceReport)
-            {
-                TaggedString levelLabel = "Locked".Translate();
-                Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
-            }
-
-            var font = Text.Font;
-            Text.Font = GameFont.Tiny;
-            RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
-            Widgets.Label(descRect, abilityDef.description);
-
-            CompProperties_AbilityStressCost compStressCost = (CompProperties_AbilityStressCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_AbilityStressCost);
-            if (compStressCost != null)
-            {
-                Rect stressCostRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                Widgets.Label(stressCostRect, "Mashed_Bloodmoon_AbilityStressCost".Translate(compStressCost.stressCost));
-            }
-            else
-            {
-                CompProperties_AbilityHeartCost compHeartCost = (CompProperties_AbilityHeartCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_AbilityHeartCost);
-                if (compHeartCost != null)
-                {
-                    Rect heartCostRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                    Widgets.Label(heartCostRect, "Mashed_Bloodmoon_AbilityHeartCost".Translate(compHeartCost.heartCost));
-                }
-            }
-
-            Text.Font = font;
-
-            if (!abilityDef.HasAbility(compLycanthrope))
-            {
-                if (!acceptanceReport)
-                {
-                    Rect descriptionRect = mainRect;
-                    descriptionRect.height = Text.LineHeight;
-                    descriptionRect.width = descriptionRect.height;
-                    descriptionRect.y += mainRect.height - descriptionRect.height;
-                    descriptionRect.x += mainRect.width - descriptionRect.width;
-                    Widgets.ButtonImage(descriptionRect, TexButton.Info, true, acceptanceReport.Reason.CapitalizeFirst());
-                    return;
-                }
-
-                if (abilityDef.purchaseHeartCost > 0)
-                {
-                    Rect upgradeRect = mainRect;
-                    upgradeRect.height = Text.LineHeight * 1.5f;
-                    upgradeRect.width = 130f;
-                    upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
-                    upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - rectPadding;
-                    bool canPurchase = abilityDef.CanPurchase(compLycanthrope);
-                    string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.purchaseHeartCost); ;
-                    if (Widgets.ButtonText(upgradeRect, unlockLabel, true, canPurchase, active: canPurchase))
-                    {
-                        abilityDef.PurchaseAbility(compLycanthrope);
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoAbilityRightRect(Rect inRect, LycanthropeAbilityDef abilityDef)
-        {
-            Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
-            Rect mainRect = inRect.ContractedBy(rectPadding);
-            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(abilityDef.backgroundTexPath));
-            Rect iconRect = mainRect.ContractedBy(rectPadding / 2f);
-            GUI.DrawTexture(iconRect, abilityDef.abilityDef.uiIcon);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoTotemCell(Rect leftRect, Rect rightRect, int index)
-        {
-            LycanthropeTotemDef totemDef = TotemList[index];
-            DoTotemLeftRect(leftRect, totemDef);
-            DoTotemRightRect(rightRect, totemDef);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoTotemLeftRect(Rect inRect, LycanthropeTotemDef totemDef)
-        {
-            Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
-            Rect mainRect = inRect.ContractedBy(rectPadding);
-            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
-
-            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            Widgets.Label(labelRect.NewCol(totemDef.label.GetWidthCached(), HorizontalJustification.Left), totemDef.label);
-            TaggedString levelLabel = "(" + compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) + " / " + totemDef.maxLevel + ")";
-            Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
-
-            var font = Text.Font;
-            Text.Font = GameFont.Tiny;
-            foreach (StatDef statDef in totemDef.statDefs)
-            {
-                RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                TaggedString statLabel = totemDef.StatBonusLine(statDef, compLycanthrope, true);
-                Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
-            }
-            Text.Font = font;
-
-            if (totemDef.purchaseHeartCost > 0 && (!compLycanthrope.usedTotemTracker.ContainsKey(totemDef) || compLycanthrope.usedTotemTracker[totemDef] < totemDef.maxLevel))
-            {
-                Rect upgradeRect = mainRect;
-                upgradeRect.height = Text.LineHeight * 1.5f;
-                upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - rectPadding;
-
-                upgradeRect.SplitVerticallyWithMargin(out Rect upgradeSliderRect, out Rect upgradeButtonRect, rectPadding);
-
-                UpgradeAmount upgradeAmount = upgradeAmountList.Where(x => x.totemTypeDef == totemDef).First();
-
-                Widgets.HorizontalSlider(upgradeSliderRect, ref upgradeAmount.amount, new FloatRange(1, totemDef.MaxPurchaseableUpgrades(compLycanthrope)), "+" + upgradeAmount.amount, roundTo: 1f);
-
-                bool canPurchase = totemDef.CanPurchase(compLycanthrope);
-                string upgradeLabel = "Mashed_Bloodmoon_UpgradeLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost * upgradeAmount.amount);
-                if (Widgets.ButtonText(upgradeButtonRect, upgradeLabel, true, canPurchase, active: canPurchase))
-                {
-                    totemDef.PurchaseTotemLevel(compLycanthrope, (int)upgradeAmount.amount);
-                    foreach(UpgradeAmount val in upgradeAmountList)
-                    {
-                        val.amount = 1;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void DoTotemRightRect(Rect inRect, LycanthropeTotemDef totemDef)
-        {
-            Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
-            Rect mainRect = inRect.ContractedBy(rectPadding);
-            GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(totemDef.backgroundTexPath));
-            Rect iconRect = mainRect.ContractedBy(rectPadding / 2f);
-            GUI.DrawTexture(iconRect, ContentFinder<Texture2D>.Get(totemDef.IconTexPath), ScaleMode.StretchToFill, true, 0, totemDef.IconColor, 0f, 0f);
-
-            if (totemDef.description != null)
-            {
-                Rect descriptionRect = iconRect;
-                descriptionRect.height = Text.LineHeight;
-                descriptionRect.width = descriptionRect.height;
-                descriptionRect.y += iconRect.height - descriptionRect.height;
-                descriptionRect.x += iconRect.width - descriptionRect.width;
-                if (Widgets.ButtonImage(descriptionRect, TexButton.Info, true, totemDef.description))
-                {
-                    if (totemDef.totemThingDef != null)
-                    {
-                        Find.WindowStack.Add(new Dialog_InfoCard(totemDef.totemThingDef));
-                    }
-                }
+                case LycanthropeUpgradeType.Trait:
+                    Tab_UpgradeTrait.DoCell(inRect, TraitList[index], compLycanthrope);
+                    break;
             }
         }
     }

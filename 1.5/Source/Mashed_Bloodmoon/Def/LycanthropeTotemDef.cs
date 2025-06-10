@@ -27,22 +27,6 @@ namespace Mashed_Bloodmoon
         public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : iconPath;
         public Color IconColor => totemThingDef != null ? totemThingDef.graphic.color : Color.white;
 
-        public override IEnumerable<string> ConfigErrors()
-        {
-            foreach (string item in base.ConfigErrors())
-            {
-                yield return item;
-            }
-
-            if (transformationWorker != null)
-            {
-                foreach (string item in transformationWorker.ConfigErrors())
-                {
-                    yield return item;
-                }
-            }
-        }
-
         /// <summary>
         /// Utility method for using a totem
         /// </summary>
@@ -186,6 +170,27 @@ namespace Mashed_Bloodmoon
             }
 
             return tooltip;
+        }
+
+        public override IEnumerable<string> ConfigErrors()
+        {
+            foreach (string item in base.ConfigErrors())
+            {
+                yield return item;
+            }
+
+            if (statDefs.NullOrEmpty())
+            {
+                yield return "statDefs is null";
+            }
+
+            if (transformationWorker != null)
+            {
+                foreach (string item in transformationWorker.ConfigErrors())
+                {
+                    yield return item;
+                }
+            }
         }
     }
 }

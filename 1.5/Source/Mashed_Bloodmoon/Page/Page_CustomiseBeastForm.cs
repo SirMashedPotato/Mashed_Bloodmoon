@@ -49,29 +49,29 @@ namespace Mashed_Bloodmoon
             DoBottomButtons(inRect, "Accept".Translate(), "Mashed_Bloodmoon_UndoChanges".Translate(), midAct: Reset, showNext: true, doNextOnKeypress: false);
 
             Rect leftRect = inRect;
-            leftRect.width = (inRect.width / 2) - (rectPadding / 2);
+            leftRect.width = (inRect.width / 2) - (Assets.RectPadding / 2);
             leftRect.height -= rectLimitY;
             DoLeftSide(leftRect);
 
             Rect rightRect = leftRect;
-            rightRect.x += rightRect.width + (rectPadding);
+            rightRect.x += rightRect.width + (Assets.RectPadding);
             DoRightSide(rightRect);
         }
 
         private void DoLeftSide(Rect inRect)
         {
             Rect primaryRect = inRect;
-            primaryRect.height = (inRect.height / 3) - ((rectPadding / 3) * 2);
+            primaryRect.height = (inRect.height / 3) - ((Assets.RectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
             DoColourSection(primaryRect, ref compLycanthrope.primaryColour, originalPrimaryColour, compLycanthrope.LycanthropeTypeDef.PrimaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
 
             Rect secondaryRect = primaryRect;
-            secondaryRect.y += primaryRect.height + rectPadding;
+            secondaryRect.y += primaryRect.height + Assets.RectPadding;
             Widgets.DrawMenuSection(secondaryRect);
             DoColourSection(secondaryRect, ref compLycanthrope.secondaryColour, originalSecondaryColour, compLycanthrope.LycanthropeTypeDef.SecondaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
 
             Rect tertiaryRect = secondaryRect;
-            tertiaryRect.y += secondaryRect.height + rectPadding;
+            tertiaryRect.y += secondaryRect.height + Assets.RectPadding;
             Widgets.DrawMenuSection(tertiaryRect);
             DoColourSection(tertiaryRect, ref compLycanthrope.tertiaryColour, originalTertiaryColour, compLycanthrope.LycanthropeTypeDef.TertiaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
@@ -79,10 +79,10 @@ namespace Mashed_Bloodmoon
         private void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
         {
             Rect inRect = mainRect;
-            inRect.x += rectPadding;
-            inRect.y += rectPadding;
-            inRect.width -= rectPadding;
-            inRect.height -= rectPadding;
+            inRect.x += Assets.RectPadding;
+            inRect.y += Assets.RectPadding;
+            inRect.width -= Assets.RectPadding;
+            inRect.height -= Assets.RectPadding;
 
             Listing_Standard listing_Standard = new Listing_Standard
             {
@@ -99,7 +99,7 @@ namespace Mashed_Bloodmoon
 
             Rect colorDisplayRect = inRect;
             colorDisplayRect.height *= 0.25f;
-            colorDisplayRect.y += inRect.height - colorDisplayRect.height - rectPadding;
+            colorDisplayRect.y += inRect.height - colorDisplayRect.height - Assets.RectPadding;
             ColorReadback(colorDisplayRect, defaultColor, oldColor, ref compColor);
 
             Rect newColorDisplayRect = inRect;
@@ -110,7 +110,7 @@ namespace Mashed_Bloodmoon
 
             Rect randomiseRect = newColorDisplayRect;
             randomiseRect.height = colorDisplayRect.height / 2;
-            randomiseRect.y = inRect.y + inRect.height - randomiseRect.height - rectPadding;
+            randomiseRect.y = inRect.y + inRect.height - randomiseRect.height - Assets.RectPadding;
 
             if (Widgets.ButtonText(randomiseRect, "Random".Translate()))
             {
@@ -165,13 +165,13 @@ namespace Mashed_Bloodmoon
             DoDescriptionSection(descriptionRect);
 
             Rect previewRect = inRect;
-            previewRect.height = (((inRect.height / 3) - ((rectPadding / 3) * 2)) * 2) + rectPadding;
-            previewRect.y += descriptionRect.height + rectPadding;
+            previewRect.height = (((inRect.height / 3) - ((Assets.RectPadding / 3) * 2)) * 2) + Assets.RectPadding;
+            previewRect.y += descriptionRect.height + Assets.RectPadding;
             DoPreviewSection(previewRect);
 
             Rect buttonRect = previewRect;
             buttonRect.height = Text.LineHeight * 2f;
-            buttonRect.y += previewRect.height + rectPadding;
+            buttonRect.y += previewRect.height + Assets.RectPadding;
             DoButtonSection(buttonRect);
         }
 
@@ -181,10 +181,10 @@ namespace Mashed_Bloodmoon
 
             ///Pawn preview
             Rect pawnRect = mainRect;
-            pawnRect.x += rectPadding;
-            pawnRect.y += rectPadding;
-            pawnRect.width -= (rectPadding * 2);
-            pawnRect.height -= (rectPadding * 2);
+            pawnRect.x += Assets.RectPadding;
+            pawnRect.y += Assets.RectPadding;
+            pawnRect.width -= (Assets.RectPadding * 2);
+            pawnRect.height -= (Assets.RectPadding * 2);
 
             ///Thank god the ui pauses the game
             pawn.Drawer.renderer.SetAllGraphicsDirty();
@@ -211,7 +211,7 @@ namespace Mashed_Bloodmoon
             Rect rotateLeftRect = mainRect;
             rotateLeftRect.height = Text.LineHeight * 2;
             rotateLeftRect.width = rotateLeftRect.height;
-            rotateLeftRect.x += rectPadding;
+            rotateLeftRect.x += Assets.RectPadding;
 
             if (Widgets.ButtonText(rotateLeftRect, "<"))
             {
@@ -220,7 +220,7 @@ namespace Mashed_Bloodmoon
 
             ///Rotate button right
             Rect rotateRightRect = rotateLeftRect;
-            rotateRightRect.x = mainRect.x + mainRect.width - rotateRightRect.width - rectPadding;
+            rotateRightRect.x = mainRect.x + mainRect.width - rotateRightRect.width - Assets.RectPadding;
 
             if (Widgets.ButtonText(rotateRightRect, ">"))
             {
@@ -229,7 +229,7 @@ namespace Mashed_Bloodmoon
 
             ///Transformation type button
             Rect transformationTypeRect = lycanthropeTypeRect;
-            transformationTypeRect.y += rectPadding + transformationTypeRect.height;
+            transformationTypeRect.y += Assets.RectPadding + transformationTypeRect.height;
 
             if (Widgets.ButtonText(transformationTypeRect, "Mashed_Bloodmoon_SelectTransformationType".Translate().CapitalizeFirst()))
             {
@@ -241,7 +241,7 @@ namespace Mashed_Bloodmoon
         private void DoDescriptionSection(Rect mainRect)
         {
             Widgets.DrawMenuSection(mainRect);
-            Rect inRect = mainRect.ContractedBy(rectPadding);
+            Rect inRect = mainRect.ContractedBy(Assets.RectPadding);
 
             RectDivider rectDivider = new RectDivider(inRect, inRect.GetHashCode(), null);
 

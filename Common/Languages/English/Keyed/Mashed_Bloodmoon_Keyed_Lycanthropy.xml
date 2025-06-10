@@ -18,15 +18,17 @@
 	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
 	<Mashed_Bloodmoon_SelectTransformationType>select transformation effect</Mashed_Bloodmoon_SelectTransformationType>
 	<!-- ==========[Upgrade beast form page]==========-->
-	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Totem levels, abilities, and ability levels can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\nAll stat bonuses are only active while in Beast Form, unless marked with an (H). All abilities are only avaliable while in Beast Form.</Mashed_Bloodmoon_UpgradeBeastFormDesc>
+	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Various upgrades can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\n&lt;color=#E5E54C&gt;Beast Form Abilities&lt;/color&gt;\nSpend consumed hearts to unlock special abilities for use while in beast form. Many abilities cost lycanthropic stress to use.\n\n&lt;color=#E5E54C&gt;Beast Form Claws&lt;/color&gt;\nSpend consumed hearts to unlock alternative lycanthrope claws for use while in beast form. Only one beast form claw can be equipped at a time.\n\n&lt;color=#E5E54C&gt;Totems&lt;/color&gt;\nSpend consumed hearts to upgrade lycanthrope totems. All totem stat bonuses are only active while in Beast Form, unless marked with an (H).\n\n&lt;color=#E5E54C&gt;Traits&lt;/color&gt;\nSpend consumed hearts to unlock additional traits. Traits are retained if the pawn is cured of lycanthropy.
+	</Mashed_Bloodmoon_UpgradeBeastFormDesc>
 	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
 	<Mashed_Bloodmoon_UnlockedAbilities>\n\nUnlocked abilities:</Mashed_Bloodmoon_UnlockedAbilities>
 	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
 	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
 	<Mashed_Bloodmoon_Unlocked>Unlocked</Mashed_Bloodmoon_Unlocked>
+	<Mashed_Bloodmoon_ConflictingTrait>Conflicts with: {0}</Mashed_Bloodmoon_ConflictingTrait>
 	<Mashed_Bloodmoon_UpgradeLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeLabel>
 	<Mashed_Bloodmoon_UpgradeTab_Abilities>Beast Form Abilities</Mashed_Bloodmoon_UpgradeTab_Abilities>
-	<Mashed_Bloodmoon_UpgradeTab_Claws>Beast form Claws</Mashed_Bloodmoon_UpgradeTab_Claws>
+	<Mashed_Bloodmoon_UpgradeTab_Claws>Beast Form Claws</Mashed_Bloodmoon_UpgradeTab_Claws>
 	<Mashed_Bloodmoon_UpgradeTab_Totems>Totems</Mashed_Bloodmoon_UpgradeTab_Totems>
 	<!-- ==========[Beast hunt page]==========-->
 	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.\n\nCompleted beast hunts: {1}</Mashed_Bloodmoon_BeastHuntDesc>
@@ -80,6 +82,7 @@
 	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
 	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
 	<Mashed_Bloodmoon_AbilityUnlocked>{0_labelShort} has unlocked the {1_label} ability for use in beast form</Mashed_Bloodmoon_AbilityUnlocked>
+	<Mashed_Bloodmoon_GainedTrait>{0_labelShort} has gained the {1} trait</Mashed_Bloodmoon_GainedTrait>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
 	<!-- ==========[wolfsblood altar]==========-->
 	 <Mashed_Bloodmoon_AltarFillAmount>lycanthrope blood amount: {0}</Mashed_Bloodmoon_AltarFillAmount>

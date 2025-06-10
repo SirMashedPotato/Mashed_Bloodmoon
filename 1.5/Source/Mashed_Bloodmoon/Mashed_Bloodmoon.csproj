@@ -122,6 +122,7 @@
     <Compile Include="Def\BeastHuntType.cs" />
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
+    <Compile Include="Def\LycanthropeTraitDef.cs" />
     <Compile Include="Def\LycanthropeTransformationTypeDef.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
@@ -168,6 +169,10 @@
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarFillBlood.cs" />
     <Compile Include="JobDriver\JobDriver_SacrificeTending.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeAbility.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeClaws.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeTotem.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeTrait.cs" />
     <Compile Include="ThingClass\Building_WolfsbloodAltar.cs" />
     <Compile Include="ThingClass\SpectralWerewolfSpawner.cs" />
     <Compile Include="ThinkNode\JobGiver_AttackMarkedTarget.cs" />

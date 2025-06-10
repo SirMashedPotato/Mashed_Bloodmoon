@@ -75,7 +75,7 @@ namespace Mashed_Bloodmoon
             DoBottomButtons(mainRect, showNext: false);
             mainRect.height -= rectLimitY;
             Widgets.DrawMenuSection(mainRect);
-            mainRect = mainRect.ContractedBy(rectPadding);
+            mainRect = mainRect.ContractedBy(Assets.RectPadding);
 
             DoBeastHuntGrid(mainRect, curTab == BeastHuntType.Heart ? BeastHuntListHeart : curTab == BeastHuntType.Kill ? BeastHuntListKill 
                 : curTab == BeastHuntType.Proficiency ? BeastHuntListProficiency : BeastHuntListOther);
@@ -93,14 +93,14 @@ namespace Mashed_Bloodmoon
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
 
-            float cellWidth = (innerRect.width / columnCount) - (rectPadding / 3f);
+            float cellWidth = (innerRect.width / columnCount) - (Assets.RectPadding / 3f);
             float cellHeight = cellWidth * 1.6f;
             float rowCount = ((float)beastHuntList.Count / columnCount);
             if (rowCount % 1 != 0)
             {
                 rowCount += 0.5f;
             }
-            innerRect.height = Mathf.Round(rowCount) * (cellHeight + rectPadding);
+            innerRect.height = Mathf.Round(rowCount) * (cellHeight + Assets.RectPadding);
 
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
             int row = 0;
@@ -112,14 +112,14 @@ namespace Mashed_Bloodmoon
                 DoBeastHuntCell(beastHuntRect, beastHuntDef);
                 if (++column >= columnCount)
                 {
-                    beastHuntRect.y += ((rectPadding / 2f) + cellHeight);
+                    beastHuntRect.y += ((Assets.RectPadding / 2f) + cellHeight);
                     beastHuntRect.x = innerRect.x;
                     column = 0;
                     row++;
                 }
                 else
                 {
-                    beastHuntRect.x += ((rectPadding / 2f) + cellWidth);
+                    beastHuntRect.x += ((Assets.RectPadding / 2f) + cellWidth);
                 }
             }
         }
@@ -130,8 +130,8 @@ namespace Mashed_Bloodmoon
             Rect upperRect = inRect;
             Rect lowerRect = inRect;
             upperRect.height = upperRect.width;
-            lowerRect.height -= upperRect.height + (rectPadding / 2f);
-            lowerRect.y += upperRect.height + (rectPadding / 2f);
+            lowerRect.height -= upperRect.height + (Assets.RectPadding / 2f);
+            lowerRect.y += upperRect.height + (Assets.RectPadding / 2f);
             
             DoCellUpperRect(upperRect, beastHuntDef);
             DoCellGridLowerRect(lowerRect, beastHuntDef);
@@ -139,9 +139,9 @@ namespace Mashed_Bloodmoon
 
         public void DoCellUpperRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
-            Rect mainRect = inRect.ContractedBy(rectPadding);
+            Rect mainRect = inRect.ContractedBy(Assets.RectPadding);
             GUI.DrawTexture(mainRect, ContentFinder<Texture2D>.Get(beastHuntDef.backgroundTexPath));
-            Rect heartRect = mainRect.ContractedBy(rectPadding/2f);
+            Rect heartRect = mainRect.ContractedBy(Assets.RectPadding/2f);
             Texture2D heartTex = ContentFinder<Texture2D>.Get(beastHuntDef.heartTexPath);
             GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit);
             if (beastHuntDef.Completed(compLycanthrope))
@@ -154,26 +154,26 @@ namespace Mashed_Bloodmoon
                 if (beastHuntDef.targetCount > 1)
                 {
                     TaggedString label = beastHuntDef.Progress(compLycanthrope) + "/" + beastHuntDef.targetCount;
-                    Rect progressRect = mainRect.ContractedBy(rectPadding);
+                    Rect progressRect = mainRect.ContractedBy(Assets.RectPadding);
                     progressRect.height = Text.LineHeight;
-                    progressRect.y += mainRect.height - (progressRect.height + (rectPadding * 1.5f));
+                    progressRect.y += mainRect.height - (progressRect.height + (Assets.RectPadding * 1.5f));
                     Widgets.Label(progressRect, label);
                 }
             }
             if (beastHuntDef.extraTooltip !=  null)
             {
-                Rect extraTooltipRect = mainRect.ContractedBy(rectPadding);
+                Rect extraTooltipRect = mainRect.ContractedBy(Assets.RectPadding);
                 extraTooltipRect.height = Text.LineHeight;
                 extraTooltipRect.width = extraTooltipRect.height;
-                extraTooltipRect.y += mainRect.height - (extraTooltipRect.height + (rectPadding * 1.5f));
-                extraTooltipRect.x += mainRect.width - extraTooltipRect.height - (rectPadding * 1.5f);
+                extraTooltipRect.y += mainRect.height - (extraTooltipRect.height + (Assets.RectPadding * 1.5f));
+                extraTooltipRect.x += mainRect.width - extraTooltipRect.height - (Assets.RectPadding * 1.5f);
                 Widgets.ButtonImage(extraTooltipRect, TexButton.Info, false, beastHuntDef.extraTooltip);
             }
         }
 
         public void DoCellGridLowerRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)
         {
-            Rect detailsRect = inRect.ContractedBy(rectPadding);
+            Rect detailsRect = inRect.ContractedBy(Assets.RectPadding);
             TaggedString label = beastHuntDef.LabelCap;
             detailsRect.SplitHorizontally(detailsRect.height / 3f, out Rect upperRect, out Rect lowerRect);
             var anchor = Text.Anchor;

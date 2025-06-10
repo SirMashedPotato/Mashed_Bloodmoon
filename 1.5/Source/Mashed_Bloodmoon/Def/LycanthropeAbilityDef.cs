@@ -73,6 +73,11 @@ namespace Mashed_Bloodmoon
                 yield return item;
             }
 
+            if (abilityDef == null)
+            {
+                yield return "abilityDef is null";
+            }
+
             if (requirementWorker != null)
             {
                 foreach (string item in requirementWorker.ConfigErrors())

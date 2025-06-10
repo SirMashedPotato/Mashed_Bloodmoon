@@ -5,7 +5,6 @@ namespace Mashed_Bloodmoon
 {
     public abstract class LycanthropePage : Page
     {
-        public const float rectPadding = 12f;
         public const float rectLimitY = 45f;
         public HediffComp_Lycanthrope compLycanthrope;
         public Pawn pawn;
