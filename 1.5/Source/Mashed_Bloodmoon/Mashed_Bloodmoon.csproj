@@ -107,6 +107,7 @@
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />
     <Compile Include="DefOf\LycanthropeAbilityDefOf.cs" />
+    <Compile Include="DefOf\LycanthropeClawTypeDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTransformationDefOf.cs" />
     <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
     <Compile Include="DefOf\HediffDefOf.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Def\BeastHuntType.cs" />
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
+    <Compile Include="Def\LycanthropeClawTypeDef.cs" />
     <Compile Include="Def\LycanthropeTraitDef.cs" />
     <Compile Include="Def\LycanthropeTransformationTypeDef.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />
@@ -169,6 +171,8 @@
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarFillBlood.cs" />
     <Compile Include="JobDriver\JobDriver_SacrificeTending.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_ClawType.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_ClawTypeEquipped.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeAbility.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeClaws.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeTotem.cs" />

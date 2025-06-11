@@ -17,11 +17,14 @@ namespace Mashed_Bloodmoon
         public Color tertiaryColour = Color.white;
 
         /// <summary>
-        /// The int is the level of the ability
-        /// Or it would be if that was implemented
-        /// 1 is level 1, and would in theory correspond to the first abilityDef in the list in LycanthropeAbilityDef 
+        /// TODO swap to hashset, wait until 1.0 because it will break lycanthropes
         /// </summary>
         public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
+        /// <summary>
+        /// 
+        /// </summary>
+        public LycanthropeClawTypeDef equippedClawType;
+        public HashSet<LycanthropeClawTypeDef> unlockedClawTracker = new HashSet<LycanthropeClawTypeDef>();
         /// <summary>
         /// The int is the level of the totem
         /// </summary>
@@ -70,6 +73,8 @@ namespace Mashed_Bloodmoon
                 secondaryColour = otherLycanthrope.secondaryColour;
                 tertiaryColour = otherLycanthrope.tertiaryColour;
                 unlockedAbilityTracker = otherLycanthrope.unlockedAbilityTracker;
+                equippedClawType = otherLycanthrope.equippedClawType;
+                unlockedClawTracker = otherLycanthrope.unlockedClawTracker;
                 usedTotemTracker = otherLycanthrope.usedTotemTracker;
                 beastHuntTracker = otherLycanthrope.beastHuntTracker;
                 completedBeastHunts = otherLycanthrope.completedBeastHunts;
@@ -126,6 +131,8 @@ namespace Mashed_Bloodmoon
             ResetColours();
             usedTotemTracker.Add(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
             unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart, 1);
+            equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
+            unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
         }
 
         /// <summary>
@@ -274,12 +281,14 @@ namespace Mashed_Bloodmoon
         public override void CompExposeData()
         {
             Scribe_Deep.Look(ref cachedWorkPriorities, "cachedWorkPriorities");
+            Scribe_Defs.Look(ref equippedClawType, "equippedClawType");
             Scribe_Defs.Look(ref lycanthropeTypeDef, "lycanthropeTypeDef");
             Scribe_Defs.Look(ref transformationTypeDef, "transformationTypeDef");
             Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);
             Scribe_Values.Look(ref tertiaryColour, "tertiaryColour", Color.white);
             Scribe_Collections.Look(ref unlockedAbilityTracker, "unlockedAbilityTracker", LookMode.Def);
+            Scribe_Collections.Look(ref unlockedClawTracker, "unlockedClawTracker", LookMode.Def);
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref beastHuntTracker, "beastHuntTracker", LookMode.Def);
             Scribe_Values.Look(ref completedBeastHunts, "completedBeastHunts", 0);

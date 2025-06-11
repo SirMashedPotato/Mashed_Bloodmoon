@@ -11,6 +11,7 @@ namespace Mashed_Bloodmoon
         public const int columnCount = 2;
         public const int altColumnCount = 3;
         private readonly List<LycanthropeAbilityDef> AbilityList;
+        private readonly List<LycanthropeClawTypeDef> ClawList;
         private readonly List<LycanthropeTotemDef> TotemList; 
         private readonly List<LycanthropeTraitDef> TraitList;
         private static Vector2 scrollPosition = Vector2.zero;
@@ -34,7 +35,15 @@ namespace Mashed_Bloodmoon
 
         public Page_UpgradeBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
+            //TODO remove at some point
+            if (compLycanthrope.equippedClawType == null)
+            {
+                compLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
+                compLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
+            }
+
             AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading;
+            ClawList = DefDatabase<LycanthropeClawTypeDef>.AllDefsListForReading;
             TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.Where(x => x.displayAsTotem).ToList();
             TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading.OrderBy(x=>x.traitDef.DataAtDegree(x.traitDegree).GetLabelCapFor(pawn)).ToList();
             ReadySettingsTabs();
@@ -110,7 +119,7 @@ namespace Mashed_Bloodmoon
                     break;
 
                 case LycanthropeUpgradeType.Claw:
-                    DoUpgradeGrid(mainRect, 2);
+                    DoUpgradeGrid(mainRect, ClawList.Count());
                     break;
 
                 case LycanthropeUpgradeType.Totem:
@@ -185,14 +194,22 @@ namespace Mashed_Bloodmoon
         public string EffectsTooltip()
         {
             string tooltip = "Mashed_Bloodmoon_CurrentBonuses".Translate();
-
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in compLycanthrope.usedTotemTracker)
             {
                 tooltip += usedTotem.Key.StatBonusList(compLycanthrope, true);
             }
 
-            tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
+            tooltip += "Mashed_Bloodmoon_UnlockedClaws".Translate();
+            foreach (LycanthropeClawTypeDef unlockedClaw in compLycanthrope.unlockedClawTracker)
+            {
+                tooltip += "\n - " + unlockedClaw.LabelCap;
+                if (compLycanthrope.equippedClawType == unlockedClaw)
+                {
+                    tooltip += " " + "Mashed_Bloodmoon_EquippedClaw".Translate();
+                }
+            }
 
+            tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
             foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in compLycanthrope.unlockedAbilityTracker)
             {
                 tooltip += "\n - " + unlockedAbility.Key.LabelCap;
@@ -253,7 +270,7 @@ namespace Mashed_Bloodmoon
                     break;
 
                 case LycanthropeUpgradeType.Claw:
-                    //Tab_UpgradeClaw.DoCell(leftRect, rightRect, AbilityList[index], compLycanthrope);
+                    //Tab_UpgradeClaw.DoCell(leftRect, rightRect, ClawList[index], compLycanthrope);
                     break;
 
                 case LycanthropeUpgradeType.Totem:

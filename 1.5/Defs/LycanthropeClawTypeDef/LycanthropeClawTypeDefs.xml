@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_LycanthropeClaws</defName>
+		<label>lycanthrope claws</label>
+		<description>The standard claws of a lycanthrope. Attacks with these may infect victims with Sanies Lupinus</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClaws</clawHediffDef>
+		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+</Defs>

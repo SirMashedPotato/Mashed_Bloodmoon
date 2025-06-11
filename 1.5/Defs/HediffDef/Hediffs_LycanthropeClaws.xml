@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeClaws]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeAddedPartBase">
+		<defName>Mashed_Bloodmoon_LycanthropeClaws</defName>
+		<label>lycanthrope claws</label>
+		<description>The standard claws of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>lycanthrope claws</label>
+						<capacities>
+							<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+						</capacities>
+						<power>15</power>
+						<armorPenetration>0.25</armorPenetration>
+						<cooldownTime>1</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

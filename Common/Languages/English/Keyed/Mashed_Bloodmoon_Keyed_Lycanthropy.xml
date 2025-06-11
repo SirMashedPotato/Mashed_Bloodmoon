@@ -21,6 +21,8 @@
 	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Various upgrades can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\n&lt;color=#E5E54C&gt;Beast Form Abilities&lt;/color&gt;\nSpend consumed hearts to unlock special abilities for use while in beast form. Many abilities cost lycanthropic stress to use.\n\n&lt;color=#E5E54C&gt;Beast Form Claws&lt;/color&gt;\nSpend consumed hearts to unlock alternative lycanthrope claws for use while in beast form. Only one beast form claw can be equipped at a time.\n\n&lt;color=#E5E54C&gt;Totems&lt;/color&gt;\nSpend consumed hearts to upgrade lycanthrope totems. All totem stat bonuses are only active while in Beast Form, unless marked with an (H).\n\n&lt;color=#E5E54C&gt;Traits&lt;/color&gt;\nSpend consumed hearts to unlock additional traits. Traits are retained if the pawn is cured of lycanthropy.
 	</Mashed_Bloodmoon_UpgradeBeastFormDesc>
 	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
+	<Mashed_Bloodmoon_UnlockedClaws>\n\nUnlocked claws:</Mashed_Bloodmoon_UnlockedClaws>
+	<Mashed_Bloodmoon_EquippedClaw>(E)</Mashed_Bloodmoon_EquippedClaw>
 	<Mashed_Bloodmoon_UnlockedAbilities>\n\nUnlocked abilities:</Mashed_Bloodmoon_UnlockedAbilities>
 	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
 	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
@@ -53,6 +55,8 @@
 	<Mashed_Bloodmoon_LTR_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_LTR_InvalidTotemCount>
 	<Mashed_Bloodmoon_LTR_InvalidBeastHunt>must complete the {0} beast hunt</Mashed_Bloodmoon_LTR_InvalidBeastHunt>
 	<Mashed_Bloodmoon_LTR_InvalidBeastHuntCount>must complete at least {0} beast hunts</Mashed_Bloodmoon_LTR_InvalidBeastHuntCount>
+	<Mashed_Bloodmoon_LTR_InvalidClawType>must unlock the {0} beast form claws</Mashed_Bloodmoon_LTR_InvalidClawType>
+	<Mashed_Bloodmoon_LTR_InvalidClawTypeEquipped>must equip the {0} beast form claws</Mashed_Bloodmoon_LTR_InvalidClawTypeEquipped>
 	<!-- ==========[transform gizmo (Human)]==========-->
 	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
 	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
@@ -82,6 +86,7 @@
 	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
 	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
 	<Mashed_Bloodmoon_AbilityUnlocked>{0_labelShort} has unlocked the {1_label} ability for use in beast form</Mashed_Bloodmoon_AbilityUnlocked>
+	<Mashed_Bloodmoon_ClawsUnlocked>{0_labelShort} has unlocked the {1_label} beat form claws for use in beast form</Mashed_Bloodmoon_ClawsUnlocked>
 	<Mashed_Bloodmoon_GainedTrait>{0_labelShort} has gained the {1} trait</Mashed_Bloodmoon_GainedTrait>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
 	<!-- ==========[wolfsblood altar]==========-->

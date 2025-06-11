@@ -102,12 +102,19 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompPostMake()
         {
+            //TODO remove at some point
+            if (compLycanthrope.equippedClawType == null)
+            {
+                compLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
+                compLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
+            }
+
             base.CompPostMake();
             currentStress = 0;
             parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_TransformationCount);
 
             linkedHediffs = new List<Hediff> { };
-            AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeClaws, RimWorld.BodyPartDefOf.Hand);
+            AddLinkedHediff(CompLycanthrope.equippedClawType.clawHediffDef, RimWorld.BodyPartDefOf.Hand);
             AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
 
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
@@ -178,6 +185,13 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompPostPostRemoved()
         {
+            //TODO remove at some point
+            if (compLycanthrope.equippedClawType == null)
+            {
+                compLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
+                compLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
+            }
+
             base.CompPostPostRemoved();
 
             parent.pawn.jobs.StopAll();
