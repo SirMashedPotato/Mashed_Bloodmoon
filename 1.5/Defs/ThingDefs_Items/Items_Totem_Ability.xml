@@ -3,7 +3,7 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase" Name="Mashed_Bloodmoon_TotemAbilityBase" Abstract="True">
 		<graphicData>
-			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemCrystalSkullAlt</texPath>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemCrystalSkullAbility</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>

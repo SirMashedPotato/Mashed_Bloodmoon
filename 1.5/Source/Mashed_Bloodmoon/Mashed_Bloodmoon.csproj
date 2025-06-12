@@ -93,8 +93,10 @@
     <Compile Include="CompUseEffect\CompUseEffect_Totem.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_UnlockAbility.cs" />
     <Compile Include="CompUsable\Properties\CompProperties_UsableAltar.cs" />
+    <Compile Include="CompUseEffect\CompUseEffect_UnlockClaw.cs" />
     <Compile Include="CompUseEffect\Properties\CompProperties_UseEffectTotem.cs" />
     <Compile Include="CompUseEffect\Properties\CompProperties_UseEffectUnlockAbility.cs" />
+    <Compile Include="CompUseEffect\Properties\CompProperties_UseEffectUnlockClaw.cs" />
     <Compile Include="DamageWorker\DamageWorker_AddInjurySilver.cs" />
     <Compile Include="DamageWorker\DamageWorker_CutSilver.cs" />
     <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
