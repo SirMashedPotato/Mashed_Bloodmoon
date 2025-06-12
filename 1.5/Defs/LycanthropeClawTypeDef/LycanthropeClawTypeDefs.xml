@@ -4,8 +4,62 @@
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
 		<defName>Mashed_Bloodmoon_LycanthropeClaws</defName>
 		<label>lycanthrope claws</label>
-		<description>The standard claws of a lycanthrope. Attacks with these may infect victims with Sanies Lupinus</description>
+		<description>The standard claws of a lycanthrope. Attacks with these may infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClaws</clawHediffDef>
 		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_SharpClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_SharpClaws</defName>
+		<label>galvanized claws</label>
+		<description>Strong lycanthrope claws sharpened through many hunts. Attacks from these deal increased damage, and do not infect victims with Sanies Lupinus.</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsSharp</clawHediffDef>
+		<purchaseHeartCost>15</purchaseHeartCost>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<requiredCount>10</requiredCount>
+		</requirementWorker>
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_BluntClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_BluntClaws</defName>
+		<label>hardened claws</label>
+		<description>Strong lycanthrope claws blunted through many hunts. Attacks from these deal high blunt damage, and do not infect victims with Sanies Lupinus.</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsBlunt</clawHediffDef>
+		<purchaseHeartCost>15</purchaseHeartCost>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<requiredCount>10</requiredCount>
+		</requirementWorker>
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_FlameClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_FlameClaws</defName>
+		<label>infernal claws</label>
+		<description>Lycanthrope claws smouldering with an otherwordly fire. Attacks from these have a chance to ignite the target.</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsFlame</clawHediffDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_EMPClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_EMPClaws</defName>
+		<label>magnetic claws</label>
+		<description>Lycanthrope claws pulsing with electricity. Attacks from these deal additional EMP damage.</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsEMP</clawHediffDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_ToxicClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_ToxicClaws</defName>
+		<label>noxious claws</label>
+		<description>Lycanthrope claws dripping with a toxic concoction. Attacks from these inflict toxic buildup.</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsToxic</clawHediffDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_SilverClaws</defName>
+		<label>silver claws</label>
+		<description>Lycanthrope claws coated in silver. Attacks from these deal increased damage to lycanthropes.</description>
+		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsSilver</clawHediffDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 </Defs>

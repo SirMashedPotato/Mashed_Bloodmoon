@@ -7,7 +7,11 @@ namespace Mashed_Bloodmoon
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
-            if (ModsConfig.RoyaltyActive && pawn.HasPsylink && pawn.GetPsylinkLevel() >= level)
+            if (!ModsConfig.RoyaltyActive)
+            {
+                return true;
+            }
+            if (pawn.HasPsylink && pawn.GetPsylinkLevel() >= level)
             {
                 return true;
             }

@@ -31,7 +31,7 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Utility method to check if the pawn can gain the claws
         /// </summary>
-        public bool HasAbility(HediffComp_Lycanthrope compLycanthrope)
+        public bool HasClaw(HediffComp_Lycanthrope compLycanthrope)
         {
             return compLycanthrope.unlockedClawTracker.Contains(this);
         }
@@ -39,16 +39,16 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Utility method for purchasing an claws
         /// </summary>
-        public void PurchaseAbility(HediffComp_Lycanthrope compLycanthrope)
+        public void PurchaseClaw(HediffComp_Lycanthrope compLycanthrope)
         {
             compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost;
-            UnlockClaws(compLycanthrope);
+            UnlockClaw(compLycanthrope);
         }
 
         /// <summary>
         /// Utility method for unlocking an claws
         /// </summary>
-        public void UnlockClaws(HediffComp_Lycanthrope compLycanthrope)
+        public void UnlockClaw(HediffComp_Lycanthrope compLycanthrope)
         {
 
             compLycanthrope.unlockedClawTracker.Add(this);

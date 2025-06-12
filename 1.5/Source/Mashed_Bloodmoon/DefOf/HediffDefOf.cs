@@ -34,5 +34,8 @@ namespace Mashed_Bloodmoon
         ///Abilities
         public static HediffDef Mashed_Bloodmoon_SpectralBeast;
         public static HediffDef Mashed_Bloodmoon_HuntsmansMark;
+
+        ///Misc
+        public static HediffDef Mashed_Bloodmoon_LycanthropeClawsSilver;
     }
 }

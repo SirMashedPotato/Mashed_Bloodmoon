@@ -174,7 +174,7 @@
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_ClawType.cs" />
     <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_ClawTypeEquipped.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeAbility.cs" />
-    <Compile Include="Page\UpgradeTab\Tab_UpgradeClaws.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeClaw.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeTotem.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeTrait.cs" />
     <Compile Include="ThingClass\Building_WolfsbloodAltar.cs" />

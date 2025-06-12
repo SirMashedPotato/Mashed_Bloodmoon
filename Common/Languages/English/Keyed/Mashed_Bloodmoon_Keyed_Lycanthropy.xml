@@ -27,6 +27,7 @@
 	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
 	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
 	<Mashed_Bloodmoon_Unlocked>Unlocked</Mashed_Bloodmoon_Unlocked>
+	<Mashed_Bloodmoon_Equip>Equip</Mashed_Bloodmoon_Equip>
 	<Mashed_Bloodmoon_ConflictingTrait>Conflicts with: {0}</Mashed_Bloodmoon_ConflictingTrait>
 	<Mashed_Bloodmoon_UpgradeLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeLabel>
 	<Mashed_Bloodmoon_UpgradeTab_Abilities>Beast Form Abilities</Mashed_Bloodmoon_UpgradeTab_Abilities>

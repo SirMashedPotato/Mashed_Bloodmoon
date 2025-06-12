@@ -199,6 +199,12 @@ namespace Mashed_Bloodmoon
                 tooltip += usedTotem.Key.StatBonusList(compLycanthrope, true);
             }
 
+            tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
+            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in compLycanthrope.unlockedAbilityTracker)
+            {
+                tooltip += "\n - " + unlockedAbility.Key.LabelCap;
+            }
+
             tooltip += "Mashed_Bloodmoon_UnlockedClaws".Translate();
             foreach (LycanthropeClawTypeDef unlockedClaw in compLycanthrope.unlockedClawTracker)
             {
@@ -209,12 +215,6 @@ namespace Mashed_Bloodmoon
                 }
             }
 
-            tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();
-            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in compLycanthrope.unlockedAbilityTracker)
-            {
-                tooltip += "\n - " + unlockedAbility.Key.LabelCap;
-            }
-
             return tooltip;
         }
 
@@ -223,7 +223,7 @@ namespace Mashed_Bloodmoon
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
-            int finalColumnCount = curTab == LycanthropeUpgradeType.Trait ? altColumnCount : columnCount;
+            int finalColumnCount = curTab == LycanthropeUpgradeType .Claw || curTab == LycanthropeUpgradeType.Trait ? altColumnCount : columnCount;
 
             float cellWidth = (innerRect.width / finalColumnCount) - (Assets.RectPadding / 3f);
             float cellHeight = rowHeight;
@@ -270,7 +270,7 @@ namespace Mashed_Bloodmoon
                     break;
 
                 case LycanthropeUpgradeType.Claw:
-                    //Tab_UpgradeClaw.DoCell(leftRect, rightRect, ClawList[index], compLycanthrope);
+                    Tab_UpgradeClaw.DoCell(inRect, ClawList[index], compLycanthrope);
                     break;
 
                 case LycanthropeUpgradeType.Totem:

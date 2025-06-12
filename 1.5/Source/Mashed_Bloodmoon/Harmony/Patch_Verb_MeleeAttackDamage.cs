@@ -25,13 +25,13 @@ namespace Mashed_Bloodmoon
             }
 
             float pawnSilverWeakness = target.Pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeSilverWeakness);
-            if (pawnSilverWeakness <= 0)
+            if (pawnSilverWeakness <= 0f)
             {
                 return;
             }
 
             float silverDamageFactor = GetDamageFactor(ref __instance);
-            if (silverDamageFactor == 0)
+            if (silverDamageFactor == 0f)
             {
                 return;
             }
@@ -52,8 +52,12 @@ namespace Mashed_Bloodmoon
             {
                 return __instance.EquipmentSource.GetStatValue(StatDefOf.Mashed_Bloodmoon_SilverDamageFactor);
             }
+            if (__instance.HediffSource != null && __instance.HediffSource.def == HediffDefOf.Mashed_Bloodmoon_LycanthropeClawsSilver)
+            {
+                return 1f;
+            }
 
-            return 0;
+            return 0f;
         }
     }
 }
