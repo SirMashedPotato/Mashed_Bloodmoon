@@ -10,11 +10,13 @@ namespace Mashed_Bloodmoon
         public float transformOnDamageChanceOverride = 0.1f;
         public LycanthropeTypeDef forcedTypeDef = null;
         public LycanthropeTransformationTypeDef forcedTransformationTypeDef = null;
+        public LycanthropeClawTypeDef forcedClawTypeDef = null;
         public Color? primaryColourOverride = null;
         public Color? secondaryColourOverride = null;
         public Color? tertiaryColourOverride = null;
         public List<PawnTotemRecord> startingTotemCounts;
         public List<LycanthropeAbilityDef> startingAbilities;
+        public List<LycanthropeClawTypeDef> startingClaws;
 
         public static PawnLycanthropeProperties Get(Def def) => def.GetModExtension<PawnLycanthropeProperties>();
 
@@ -68,6 +70,11 @@ namespace Mashed_Bloodmoon
                 compLycanthrope.TransformationTypeDef = forcedTransformationTypeDef;
             }
 
+            if (forcedClawTypeDef != null)
+            {
+                compLycanthrope.equippedClawType = forcedClawTypeDef;
+            }
+
             if (primaryColourOverride != null)
             {
                 compLycanthrope.primaryColour = (Color)primaryColourOverride;
@@ -102,6 +109,17 @@ namespace Mashed_Bloodmoon
                     if (!abilityDef.HasAbility(compLycanthrope))
                     {
                         abilityDef.UnlockAbility(compLycanthrope);
+                    }
+                }
+            }
+
+            if (!startingClaws.NullOrEmpty())
+            {
+                foreach (LycanthropeClawTypeDef clawDef in startingClaws)
+                {
+                    if (!clawDef.HasClaw(compLycanthrope))
+                    {
+                        clawDef.UnlockClaw(compLycanthrope);
                     }
                 }
             }
