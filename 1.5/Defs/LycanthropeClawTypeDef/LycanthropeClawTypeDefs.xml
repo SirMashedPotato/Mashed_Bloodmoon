@@ -15,8 +15,8 @@
 		<description>Strong lycanthrope claws sharpened through many hunts. Attacks from these deal increased damage, and do not infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsSharp</clawHediffDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
-			<requiredCount>10</requiredCount>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
 		</requirementWorker>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_BluntClaws]========== -->
@@ -26,8 +26,8 @@
 		<description>Strong lycanthrope claws blunted through many hunts. Attacks from these deal high blunt damage, and do not infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsBlunt</clawHediffDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
-			<requiredCount>10</requiredCount>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
 		</requirementWorker>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_FlameClaws]========== -->
