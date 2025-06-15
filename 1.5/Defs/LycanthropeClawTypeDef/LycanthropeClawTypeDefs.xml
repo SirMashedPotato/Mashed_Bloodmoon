@@ -58,7 +58,7 @@
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
 		<defName>Mashed_Bloodmoon_SilverClaws</defName>
 		<label>silver claws</label>
-		<description>Lycanthrope claws coated in silver. Attacks from these deal increased damage to lycanthropes.</description>
+		<description>Lycanthrope claws coated in silver. Attacks from these deal increased damage to lycanthropes, but also increase pain factor.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsSilver</clawHediffDef>
 		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>

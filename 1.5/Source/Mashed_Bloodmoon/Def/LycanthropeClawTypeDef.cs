@@ -43,6 +43,7 @@ namespace Mashed_Bloodmoon
         {
             compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost;
             UnlockClaw(compLycanthrope);
+            compLycanthrope.equippedClawType = this;
         }
 
         /// <summary>

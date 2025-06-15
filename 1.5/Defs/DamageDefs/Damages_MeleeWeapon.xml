@@ -12,4 +12,10 @@
 		<label>lycanthrope scratch</label>
 		<workerClass>Mashed_Bloodmoon.DamageWorker_LycanthropeScratch</workerClass>
 	</DamageDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverScratch]==========-->
+	<DamageDef ParentName="Scratch">
+		<defName>Mashed_Bloodmoon_SilverScratch</defName>
+		<label>silver scratch</label>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_SilverScratch</workerClass>
+	</DamageDef>
 </Defs>

@@ -10,4 +10,9 @@
 		<defName>Mashed_Bloodmoon_LycanthropeScratch</defName>
 		<label>lycanthrope scratch</label>
 	</ToolCapacityDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverScratch]==========-->
+	<ToolCapacityDef>
+		<defName>Mashed_Bloodmoon_SilverScratch</defName>
+		<label>silver scratch</label>
+	</ToolCapacityDef>
 </Defs>

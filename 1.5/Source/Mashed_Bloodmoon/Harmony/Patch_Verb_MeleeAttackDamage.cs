@@ -39,7 +39,7 @@ namespace Mashed_Bloodmoon
             List<DamageInfo> newResult = new List<DamageInfo>();
             foreach (DamageInfo dinfo in __result) 
             {
-                dinfo.SetAmount(LycanthropeUtility.LycanthropeSilverDamageFactor(dinfo.Amount, pawnSilverWeakness, silverDamageFactor));
+                dinfo.SetAmount(SilverDamageUtility.LycanthropeSilverDamageFactor(dinfo.Amount, pawnSilverWeakness, silverDamageFactor));
                 newResult.Add(dinfo);
             }
 
@@ -51,10 +51,6 @@ namespace Mashed_Bloodmoon
             if (__instance.EquipmentSource != null)
             {
                 return __instance.EquipmentSource.GetStatValue(StatDefOf.Mashed_Bloodmoon_SilverDamageFactor);
-            }
-            if (__instance.HediffSource != null && __instance.HediffSource.def == HediffDefOf.Mashed_Bloodmoon_LycanthropeClawsSilver)
-            {
-                return 1f;
             }
 
             return 0f;

@@ -2,7 +2,7 @@
 
 namespace Mashed_Bloodmoon
 {
-    public class DamageWorker_AddInjurySilver : DamageWorker_AddInjury
+    public class DamageWorker_SilverCut : DamageWorker_Cut
     {
         public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {

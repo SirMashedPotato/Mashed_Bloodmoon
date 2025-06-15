@@ -185,10 +185,10 @@ namespace Mashed_Bloodmoon
         public override void CompPostPostRemoved()
         {
             //TODO remove at some point
-            if (compLycanthrope.equippedClawType == null)
+            if (CompLycanthrope.equippedClawType == null)
             {
-                compLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
-                compLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
+                CompLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
+                CompLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
             }
 
             base.CompPostPostRemoved();

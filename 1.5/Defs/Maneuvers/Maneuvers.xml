@@ -28,4 +28,18 @@
 		<combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
 		<combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
 	</ManeuverDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverScratch]==========-->
+	<ManeuverDef>
+		<defName>Mashed_Bloodmoon_SilverScratch</defName>
+		<requiredCapacity>Mashed_Bloodmoon_SilverScratch</requiredCapacity>
+		<verb>
+			<verbClass>Verb_MeleeAttackDamage</verbClass>
+			<meleeDamageDef>Mashed_Bloodmoon_SilverScratch</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Scratch_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Scratch_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
 </Defs>

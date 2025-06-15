@@ -149,14 +149,14 @@
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeAddedPartBase">
 		<defName>Mashed_Bloodmoon_LycanthropeClawsSilver</defName>
 		<label>lycanthrope claws (silver)</label>
-		<description>Lycanthrope claws coated in silver. Attacks from these deal increased damage to lycanthropes.</description>
+		<description>Lycanthrope claws coated in silver. Attacks from these deal increased damage to lycanthropes, but also increase pain factor.</description>
 		<comps>
 			<li Class="HediffCompProperties_VerbGiver">
 				<tools>
 					<li>
 						<label>silver claws</label>
 						<capacities>
-							<li>Scratch</li>
+							<li>Mashed_Bloodmoon_SilverScratch</li>
 						</capacities>
 						<power>15</power>
 						<armorPenetration>0.25</armorPenetration>
@@ -165,5 +165,10 @@
 				</tools>
 			</li>
 		</comps>
+		<stages>
+			<li>
+				<painFactor>1.05</painFactor>
+			</li>
+		</stages>
 	</HediffDef>
 </Defs>

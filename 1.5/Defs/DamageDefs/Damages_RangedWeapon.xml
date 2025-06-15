@@ -3,7 +3,7 @@
 	<!-- ==========[Mashed_Bloodmoon_SilverRangedCut]==========-->
 	<DamageDef ParentName="CutBase">
 		<defName>Mashed_Bloodmoon_SilverRangedCut</defName>
-		<workerClass>Mashed_Bloodmoon.DamageWorker_CutSilver</workerClass>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_SilverCut</workerClass>
 		<isRanged>true</isRanged>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
 	  </DamageDef>
@@ -11,7 +11,7 @@
 	<DamageDef>
 		<defName>Mashed_Bloodmoon_SilverRangedStab</defName>
 		<label>stab</label>
-		<workerClass>Mashed_Bloodmoon.DamageWorker_StabSilver</workerClass>
+		<workerClass>Mashed_Bloodmoon.DamageWorker_SilverStab</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been stabbed to death.</deathMessage>
 		<hediff>Stab</hediff>
