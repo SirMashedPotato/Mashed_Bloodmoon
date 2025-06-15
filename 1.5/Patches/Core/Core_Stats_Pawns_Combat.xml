@@ -15,6 +15,7 @@
 		<value>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemFortitude</totemTypeDef>
+				<isFactor>true</isFactor>
 			</li>
 		</value>
 	</Operation>
@@ -33,6 +34,7 @@
 		<value>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemSight</totemTypeDef>
+				<isFactor>true</isFactor>
 			</li>
 		</value>
 	</Operation>
@@ -69,6 +71,7 @@
 		<value>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemTenacity</totemTypeDef>
+				<isFactor>true</isFactor>
 			</li>
 		</value>
 	</Operation>

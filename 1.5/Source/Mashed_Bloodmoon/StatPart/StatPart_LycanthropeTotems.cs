@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
         {
             if (req.Thing != null && req.Thing is Pawn pawn && totemTypeDef.TotemStatBonus(pawn, out float bonus))
             {
-                return "Mashed_Bloodmoon_TotemStatOffset".Translate(totemTypeDef.LabelCap) + bonus;
+                return "Mashed_Bloodmoon_TotemStatOffset".Translate(totemTypeDef.LabelCap) + bonus.ToStringByStyle(parentStat.toStringStyle);
             }
             return null;
         }
@@ -24,10 +24,18 @@ namespace Mashed_Bloodmoon
             {
                 if (totemTypeDef.TotemStatBonus(pawn, out float bonus))
                 {
-                    val += bonus;
+                    if (isFactor)
+                    {
+                        val *= (parentStat.defaultBaseValue + bonus);
+                    }
+                    else
+                    {
+                        val += bonus;
+                    }
                 }
             }
         }
         public LycanthropeTotemDef totemTypeDef;
+        public bool isFactor = false;
     }
 }
