@@ -13,6 +13,7 @@ namespace Mashed_Bloodmoon
         public override void Tick()
         {
             base.Tick();
+            TickEffecter();
             try
             {
                 if (this.IsHashIntervalTick(tickInterval))
@@ -40,5 +41,28 @@ namespace Mashed_Bloodmoon
 
             }
         }
+
+        public void TickEffecter()
+        {
+            if (!Spawned)
+            {
+                Effecter temp = effecter;
+                temp?.Cleanup();
+                effecter = null;
+                return;
+            }
+            if (effecter == null)
+            {
+                effecter = EffecterDefOf.Mashed_Bloodmoon_Silverdust.SpawnAttached(this, Map, 1f);
+            }
+            Effecter effecter2 = effecter;
+            if (effecter2 == null)
+            {
+                return;
+            }
+            effecter2.EffectTick(this, this);
+        }
+
+        private Effecter effecter;
     }
 }

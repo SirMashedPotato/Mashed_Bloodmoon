@@ -106,6 +106,7 @@
     <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
     <Compile Include="DefOf\AbilityDefOf.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
+    <Compile Include="DefOf\EffecterDefOf.cs" />
     <Compile Include="DefOf\FactionDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />
