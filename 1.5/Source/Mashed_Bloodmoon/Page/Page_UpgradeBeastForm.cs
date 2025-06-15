@@ -196,7 +196,7 @@ namespace Mashed_Bloodmoon
             string tooltip = "Mashed_Bloodmoon_CurrentBonuses".Translate();
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in compLycanthrope.usedTotemTracker)
             {
-                tooltip += usedTotem.Key.StatBonusList(compLycanthrope, true);
+                tooltip += "\n - " + usedTotem.Key.StatBonusLine(compLycanthrope, true);
             }
 
             tooltip += "Mashed_Bloodmoon_UnlockedAbilities".Translate();

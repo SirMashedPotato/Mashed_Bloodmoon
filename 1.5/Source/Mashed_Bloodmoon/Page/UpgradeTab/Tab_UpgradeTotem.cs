@@ -27,12 +27,16 @@ namespace Mashed_Bloodmoon
 
             var font = Text.Font;
             Text.Font = GameFont.Tiny;
-            foreach (StatDef statDef in totemDef.statDefs)
-            {
-                RectDivider statRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                TaggedString statLabel = totemDef.StatBonusLine(statDef, compLycanthrope, true);
-                Widgets.Label(statRect.NewCol(statLabel.GetWidthCached(), HorizontalJustification.Left), statLabel);
-            }
+
+            //stat summary
+            RectDivider statRect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            TaggedString statLabel1 = totemDef.StatBonusLine(compLycanthrope, true);
+            Widgets.Label(statRect1, statLabel1);
+
+            RectDivider statRect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            TaggedString statLabel2 = totemDef.StatPerLevelLine();
+            Widgets.Label(statRect2, statLabel2);
+
             Text.Font = font;
 
             if (totemDef.purchaseHeartCost > 0 && (!compLycanthrope.usedTotemTracker.ContainsKey(totemDef) || compLycanthrope.usedTotemTracker[totemDef] < totemDef.maxLevel))

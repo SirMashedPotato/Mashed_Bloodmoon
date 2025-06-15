@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
         public ThingDef totemThingDef;
-        public List<StatDef> statDefs;
+        public StatDef statDef;
         public int maxLevel = 30;
         public int purchaseHeartCost = 0;
         public float statIncreasePerLevel = 1f;
@@ -143,33 +143,27 @@ namespace Mashed_Bloodmoon
         }
 
         /// <summary>
-        /// A list of all currently active stat bonuses from this totem
+        /// The current stat bonus from this totem
         /// </summary>
-        public string StatBonusList(HediffComp_Lycanthrope compLycanthrope, bool displayOnlyTransformed)
-        {
-            string tooltip = "";
-
-            foreach (StatDef statDef in statDefs)
-            {
-                tooltip += "\n - " + StatBonusLine(statDef, compLycanthrope, displayOnlyTransformed);
-            }
-
-            return tooltip;
-        }
-
-        /// <summary>
-        /// A singular stat bonus from this totem
-        /// </summary>
-        public string StatBonusLine(StatDef statDef, HediffComp_Lycanthrope compLycanthrope, bool displayOnlyTransformed)
+        public string StatBonusLine(HediffComp_Lycanthrope compLycanthrope, bool displayOnlyTransformed = false)
         {
             TotemStatBonus(compLycanthrope, out float bonus);
-            string tooltip =  statDef.LabelCap + ": " + bonus.ToStringByStyle(statDef.toStringStyle);
+            string tooltip = statDef.LabelCap + ": " + bonus.ToStringByStyle(statDef.toStringStyle);
             if (!onlyTransformed && displayOnlyTransformed)
             {
                 tooltip += " " + "Mashed_Bloodmoon_TotemActiveWhileHuman".Translate();
             }
 
             return tooltip;
+        }
+       
+        /// <summary>
+        /// The stat bonus per level from this totem
+        /// </summary>
+        public string StatPerLevelLine()
+        {
+            return "Mashed_Bloodmoon_TotemStatPerLevel".Translate(statIncreasePerLevel.ToStringByStyle(statDef.toStringStyle), 
+                (statIncreasePerLevel * maxLevel).ToStringByStyle(statDef.toStringStyle));
         }
 
         public override IEnumerable<string> ConfigErrors()
@@ -179,9 +173,9 @@ namespace Mashed_Bloodmoon
                 yield return item;
             }
 
-            if (statDefs.NullOrEmpty())
+            if (statDef == null)
             {
-                yield return "statDefs is null";
+                yield return "statDef is null";
             }
 
             if (transformationWorker != null)

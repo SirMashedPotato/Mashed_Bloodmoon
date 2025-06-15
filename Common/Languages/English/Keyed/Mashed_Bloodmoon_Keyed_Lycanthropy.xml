@@ -75,6 +75,7 @@
 	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
+	<Mashed_Bloodmoon_TotemStatPerLevel>Increases by {0} per level ({1} max)</Mashed_Bloodmoon_TotemStatPerLevel>
 	<Mashed_Bloodmoon_MustBeLycanthrope>must be a lycanthrope</Mashed_Bloodmoon_MustBeLycanthrope>
 	<Mashed_Bloodmoon_TotemLimitReached>{0_labelShort} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
 	<Mashed_Bloodmoon_AbilityAlreadyUnlocked>{0_labelShort} has already unlocked the {1_label} ability</Mashed_Bloodmoon_AbilityAlreadyUnlocked>

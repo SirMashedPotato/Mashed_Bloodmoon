@@ -5,9 +5,7 @@
 		<defName>Mashed_Bloodmoon_ConsumedHearts</defName>
 		<label>Consumed hearts</label>
 		<labelShort>Consumed hearts</labelShort>
-		<statDefs>
-			<li>Mashed_Bloodmoon_LycanthropicStressMax</li>
-		</statDefs>
+		<statDef>Mashed_Bloodmoon_LycanthropicStressMax</statDef>
 		<maxLevel>999</maxLevel>
 		<statIncreasePerLevel>1</statIncreasePerLevel>
 		<onlyTransformed>false</onlyTransformed>

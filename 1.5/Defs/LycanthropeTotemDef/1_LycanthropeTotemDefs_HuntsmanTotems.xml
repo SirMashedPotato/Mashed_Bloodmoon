@@ -7,9 +7,7 @@
 		<labelShort>totem (Endurance)</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to the rate wounds heal while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemEndurance</totemThingDef>
-		<statDefs>
-			<li>InjuryHealingFactor</li>
-		</statDefs>
+		<statDef>InjuryHealingFactor</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.03</statIncreasePerLevel>
@@ -22,9 +20,7 @@
 		<labelShort>totem (Fortitude)</labelShort>
 		<description>Proof of a skilled hunter. It reduces incoming damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemFortitude</totemThingDef>
-		<statDefs>
-			<li>IncomingDamageFactor</li>
-		</statDefs>
+		<statDef>IncomingDamageFactor</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
@@ -37,9 +33,7 @@
 		<labelShort>totem (Guile)</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to psychic sensitivity while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemGuile</totemThingDef>
-		<statDefs>
-			<li>PsychicSensitivity</li>
-		</statDefs>
+		<statDef>PsychicSensitivity</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.02</statIncreasePerLevel>
@@ -52,9 +46,7 @@
 		<labelShort>totem (Sight)</labelShort>
 		<description>Proof of a skilled hunter. It gives a reduction to stagger duration while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemSight</totemThingDef>
-		<statDefs>
-			<li>StaggerDurationFactor</li>
-		</statDefs>
+		<statDef>StaggerDurationFactor</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
@@ -67,9 +59,7 @@
 		<labelShort>totem (Speed)</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to movement speed while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemSpeed</totemThingDef>
-		<statDefs>
-			<li>MoveSpeed</li>
-		</statDefs>
+		<statDef>MoveSpeed</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.04</statIncreasePerLevel>
@@ -82,9 +72,7 @@
 		<labelShort>totem (Strength)</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to melee damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemStrength</totemThingDef>
-		<statDefs>
-			<li>MeleeDamageFactor</li>
-		</statDefs>
+		<statDef>MeleeDamageFactor</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.02</statIncreasePerLevel>
@@ -97,9 +85,7 @@
 		<labelShort>totem (Tenacity)</labelShort>
 		<description>Proof of a skilled hunter. It reduces melee cooldown while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemTenacity</totemThingDef>
-		<statDefs>
-			<li>MeleeCooldownFactor</li>
-		</statDefs>
+		<statDef>MeleeCooldownFactor</statDef>
 		<maxLevel>50</maxLevel>
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
