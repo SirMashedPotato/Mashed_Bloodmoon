@@ -14,7 +14,7 @@ namespace Mashed_Bloodmoon
         public override void DoEffect(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            Props.clawDef.UnlockClaw(compLycanthrope);
+            Props.clawDef.Unlock(compLycanthrope);
         }
 
         public override AcceptanceReport CanBeUsedBy(Pawn pawn)
@@ -25,7 +25,7 @@ namespace Mashed_Bloodmoon
                 return "Mashed_Bloodmoon_NotLycanthrope".Translate(pawn);
             }
 
-            if (Props.clawDef.HasClaw(compLycanthrope))
+            if (Props.clawDef.AlreadyUnlocked(compLycanthrope))
             {
                 return "Mashed_Bloodmoon_ClawAlreadyUnlocked".Translate(pawn, Props.clawDef);
             }

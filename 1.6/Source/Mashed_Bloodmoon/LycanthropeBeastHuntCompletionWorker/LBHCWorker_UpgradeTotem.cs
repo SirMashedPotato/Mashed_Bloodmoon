@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
     {
         public override void PostBeastHuntCompleted(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
-            totemTypeDef.UseTotem(compLycanthrope, useCount);
+            totemTypeDef.Upgrade(compLycanthrope, useCount);
         }
 
         public override IEnumerable<string> ConfigErrors()

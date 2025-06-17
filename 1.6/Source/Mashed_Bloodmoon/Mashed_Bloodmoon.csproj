@@ -128,6 +128,7 @@
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
     <Compile Include="Def\LycanthropeClawTypeDef.cs" />
+    <Compile Include="Def\AbstractLycanthropeDef.cs" />
     <Compile Include="Def\LycanthropeTraitDef.cs" />
     <Compile Include="Def\LycanthropeTransformationTypeDef.cs" />
     <Compile Include="Def\LycanthropeTypeDef.cs" />

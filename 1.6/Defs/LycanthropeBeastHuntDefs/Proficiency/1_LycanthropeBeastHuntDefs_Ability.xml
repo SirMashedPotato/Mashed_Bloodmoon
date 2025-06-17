@@ -2,7 +2,7 @@
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
-		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<defName>Mashed_Bloodmoon_AdrenalineRushProficiency</defName>
 		<label>proficiency: Adrenaline Rush</label>
 		<description>Land 30 killing blows while adrenaline rush is active.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Increase the duration by 5 seconds upon landing a killing blow.</extraTooltip>
@@ -13,7 +13,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
-		<defName>Mashed_Bloodmoon_BeastHowl</defName>
+		<defName>Mashed_Bloodmoon_BeastHowlProficiency</defName>
 		<label>proficiency: Beast Howl</label>
 		<description>Stun targets 60 times with beast howl.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Temporarily slows all stunned targets.</extraTooltip>
@@ -24,7 +24,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
-		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<defName>Mashed_Bloodmoon_HuntsmansBountyProficiency</defName>
 		<label>proficiency: Huntsman's Bounty</label>
 		<description>Kill 30 targets that have had a bounty placed on them by this lycanthrope.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for the Huntsman's Bounty ability: Increase the gold reward to 25% of the targets combat power.</extraTooltip>
@@ -35,7 +35,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
-		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
+		<defName>Mashed_Bloodmoon_HuntsmansMarkProficiency</defName>
 		<label>proficiency: Huntsman's Mark</label>
 		<description>Kill 30 targets that have been marked by this lycanthrope.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Killing the marked target resets the cooldown.</extraTooltip>
@@ -46,7 +46,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
-		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<defName>Mashed_Bloodmoon_MoonVeilProficiency</defName>
 		<label>proficiency: Moon Veil</label>
 		<description>Use moon veil 30 times while in beast form.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Moon veil can be used regardless of the current lunar conditions.</extraTooltip>
@@ -57,7 +57,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
-		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
+		<defName>Mashed_Bloodmoon_SummonSpectralWerewolfProficiency</defName>
 		<label>proficiency: Spectral Werewolf</label>
 		<description>Have your spectral werewolf land 30 killing blows.</description>
 		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Summon an additional spectral werewolf.</extraTooltip>

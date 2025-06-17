@@ -97,7 +97,7 @@ namespace Mashed_Bloodmoon
                     int value = pawnTotemRecord.startingCountRange.RandomInRange;
                     if (value > 0)
                     {
-                        pawnTotemRecord.totemTypeDef.UseTotem(compLycanthrope, value, false);
+                        pawnTotemRecord.totemTypeDef.Upgrade(compLycanthrope, value, false);
                     }
                 }
             }
@@ -106,9 +106,9 @@ namespace Mashed_Bloodmoon
             {
                 foreach (LycanthropeAbilityDef abilityDef in startingAbilities)
                 {
-                    if (!abilityDef.HasAbility(compLycanthrope))
+                    if (!abilityDef.AlreadyUnlocked(compLycanthrope))
                     {
-                        abilityDef.UnlockAbility(compLycanthrope);
+                        abilityDef.Unlock(compLycanthrope);
                     }
                 }
             }
@@ -117,9 +117,9 @@ namespace Mashed_Bloodmoon
             {
                 foreach (LycanthropeClawTypeDef clawDef in startingClaws)
                 {
-                    if (!clawDef.HasClaw(compLycanthrope))
+                    if (!clawDef.AlreadyUnlocked(compLycanthrope))
                     {
-                        clawDef.UnlockClaw(compLycanthrope);
+                        clawDef.Unlock(compLycanthrope);
                     }
                 }
             }

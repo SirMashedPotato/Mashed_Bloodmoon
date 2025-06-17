@@ -31,7 +31,7 @@ namespace Mashed_Bloodmoon
                             if (totemDef.CanUpgrade(compLycanthrope))
                             {
                                 extraDescription += pawn.NameShortColored + ": " + totemDef.LabelCap + " + 1\n";
-                                totemDef.UseTotem(compLycanthrope, 1, false);
+                                totemDef.Upgrade(compLycanthrope, 1, false);
                                 break;
                             }
                         }

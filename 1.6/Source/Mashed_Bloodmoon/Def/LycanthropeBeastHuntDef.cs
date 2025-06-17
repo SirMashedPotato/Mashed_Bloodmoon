@@ -4,10 +4,8 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LycanthropeBeastHuntDef : Def
+    public class LycanthropeBeastHuntDef : LycanthropeDef
     {
-        [MustTranslate]
-        public new string description;
         public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
         public PawnKindDef targetKindDef;
@@ -15,49 +13,12 @@ namespace Mashed_Bloodmoon
         public bool startHidden = false;
         public int anomalyLevelToReveal = 0;
         public LycanthropeBeastHuntCompletionWorker completionWorker;
-        public LycanthropeTransformationWorker transformationWorker;
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
         [NoTranslate]
         public string heartTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHeart";
         [NoTranslate]
         public string completedTexPath = "UI/Icons/Mashed_Bloodmoon_BeastHuntCompleted";
-        [MustTranslate]
-        public string extraTooltip;
-
-        public override IEnumerable<string> ConfigErrors()
-        {
-            foreach (string item in base.ConfigErrors())
-            {
-                yield return item;
-            }
-
-            if (completionWorker != null)
-            {
-                foreach (string item in completionWorker.ConfigErrors())
-                {
-                    yield return item;
-                }
-            }
-
-            if (transformationWorker != null)
-            {
-                foreach (string item in transformationWorker.ConfigErrors())
-                {
-                    yield return item;
-                }
-            }
-
-            if (targetThingDef != null && targetKindDef != null)
-            {
-                yield return "Only use one of targetThingDef and targetKindDef";
-            }
-
-            if (startHidden && anomalyLevelToReveal > 0)
-            {
-                yield return "Only use one of startHidden and anomalyLevelToReveal";
-            }
-        }
 
         public bool Completed(Pawn pawn)
         {
@@ -126,6 +87,32 @@ namespace Mashed_Bloodmoon
                 compLycanthrope.completedBeastHunts++;
                 completionWorker?.PostBeastHuntCompleted(compLycanthrope, pawn);
                 Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
+            }
+        }
+
+        public override IEnumerable<string> ConfigErrors()
+        {
+            foreach (string item in base.ConfigErrors())
+            {
+                yield return item;
+            }
+
+            if (completionWorker != null)
+            {
+                foreach (string item in completionWorker.ConfigErrors())
+                {
+                    yield return item;
+                }
+            }
+
+            if (targetThingDef != null && targetKindDef != null)
+            {
+                yield return "Only use one of targetThingDef and targetKindDef";
+            }
+
+            if (startHidden && anomalyLevelToReveal > 0)
+            {
+                yield return "Only use one of startHidden and anomalyLevelToReveal";
             }
         }
     }

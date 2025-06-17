@@ -24,7 +24,7 @@ namespace Mashed_Bloodmoon
             string label = traitDef.traitDef.DataAtDegree(traitDef.traitDegree).GetLabelCapFor(pawn);
             Widgets.Label(labelRect.NewCol(label.GetWidthCached(), HorizontalJustification.Left), label);
 
-            if (traitDef.HasTrait(pawn))
+            if (traitDef.AlreadyUnlocked(pawn))
             {
                 TaggedString levelLabel = "Mashed_Bloodmoon_Unlocked".Translate();
                 Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
@@ -43,7 +43,7 @@ namespace Mashed_Bloodmoon
             Widgets.Label(descRect, description.Formatted(pawn.Named("PAWN")).AdjustedFor(pawn).Resolve());
             Text.Font = font;
 
-            if (traitDef.HasTrait(pawn))
+            if (traitDef.AlreadyUnlocked(pawn))
             {
                 return;
             }
@@ -70,7 +70,7 @@ namespace Mashed_Bloodmoon
                 string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), traitDef.purchaseHeartCost); ;
                 if (Widgets.ButtonText(upgradeRect, unlockLabel, true, canPurchase, active: canPurchase))
                 {
-                    traitDef.PurchaseTrait(compLycanthrope, pawn);
+                    traitDef.Purchase(compLycanthrope);
                 }
             }
         }

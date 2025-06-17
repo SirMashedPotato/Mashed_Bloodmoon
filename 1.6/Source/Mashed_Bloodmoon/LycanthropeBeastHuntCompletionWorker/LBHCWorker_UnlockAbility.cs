@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
     {
         public override void PostBeastHuntCompleted(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
-            abilityDef.UnlockAbility(compLycanthrope);
+            abilityDef.Unlock(compLycanthrope);
         }
 
         public override IEnumerable<string> ConfigErrors()

@@ -4,42 +4,17 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LycanthropeTraitDef : Def
+    public class LycanthropeTraitDef : LycanthropeDef
     {
-        [MustTranslate]
-        public new string description;
         public TraitDef traitDef;
         public int traitDegree = 0;
-        public int purchaseHeartCost = 0;
-
-        /// <summary>
-        /// Utility method to check if the pawn can purchase the trait
-        /// </summary>
-        public bool CanPurchase(HediffComp_Lycanthrope compLycanthrope)
-        {
-            return CanPurchase(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0));
-        }
-
-        /// <summary>
-        /// Utility method to check if the pawn can purchase the trait
-        /// </summary>
-        public bool CanPurchase(int curHeartCount)
-        {
-            return curHeartCount >= purchaseHeartCost;
-        }
-
-        /// <summary>
-        /// Utility method to check if the pawn already has the trait
-        /// </summary>
-        public bool HasTrait(Pawn pawn)
+        
+        public bool AlreadyUnlocked(Pawn pawn)
         {
             return pawn.story.traits.HasTrait(traitDef, traitDegree);
         }
 
-        /// <summary>
-        /// Utility method to check if the pawn can gain the trait
-        /// </summary>
-        public AcceptanceReport PawnRequirementsMet(Pawn pawn)
+        public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
             if (!traitDef.conflictingTraits.NullOrEmpty())
             {
@@ -52,15 +27,13 @@ namespace Mashed_Bloodmoon
                 }
             }
 
-            return true;
+            return base.PawnRequirementsMet(pawn);
         }
 
-        /// <summary>
-        /// Utility method for purchasing an trait
-        /// </summary>
-        public void PurchaseTrait(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
+        public override void Purchase(HediffComp_Lycanthrope compLycanthrope)
         {
-            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost;
+            base.Purchase(compLycanthrope);
+            Pawn pawn = compLycanthrope.Pawn;
             Trait trait = new Trait(traitDef, traitDegree, true);
             pawn.story.traits.GainTrait(trait);
             Messages.Message("Mashed_Bloodmoon_GainedTrait".Translate(pawn, trait.LabelCap), compLycanthrope.parent.pawn, MessageTypeDefOf.PositiveEvent);

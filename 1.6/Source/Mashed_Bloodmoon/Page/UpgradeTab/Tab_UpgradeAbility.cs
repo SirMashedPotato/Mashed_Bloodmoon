@@ -22,7 +22,7 @@ namespace Mashed_Bloodmoon
 
             RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(labelRect.NewCol(abilityDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), abilityDef.LabelCap);
-            if (abilityDef.HasAbility(compLycanthrope))
+            if (abilityDef.AlreadyUnlocked(compLycanthrope))
             {
                 TaggedString levelLabel = "Mashed_Bloodmoon_Unlocked".Translate();
                 Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
@@ -56,7 +56,7 @@ namespace Mashed_Bloodmoon
 
             Text.Font = font;
 
-            if (!abilityDef.HasAbility(compLycanthrope))
+            if (!abilityDef.AlreadyUnlocked(compLycanthrope))
             {
                 if (!acceptanceReport)
                 {
@@ -80,7 +80,7 @@ namespace Mashed_Bloodmoon
                     string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.purchaseHeartCost); ;
                     if (Widgets.ButtonText(upgradeRect, unlockLabel, true, canPurchase, active: canPurchase))
                     {
-                        abilityDef.PurchaseAbility(compLycanthrope);
+                        abilityDef.Purchase(compLycanthrope);
                     }
                 }
             }

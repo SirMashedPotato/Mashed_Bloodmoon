@@ -5,7 +5,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LycanthropeTotemDef : Def
+    public class LycanthropeTotemDef : LycanthropeDef
     {
         public string labelShort = "???";
         [NoTranslate]
@@ -15,53 +15,30 @@ namespace Mashed_Bloodmoon
         public ThingDef totemThingDef;
         public StatDef statDef;
         public int maxLevel = 30;
-        public int purchaseHeartCost = 0;
         public float statIncreasePerLevel = 1f;
         public bool onlyTransformed = true;
         public bool displayAsTotem = true;
         public bool canBeTransferred = true;
-        public LycanthropeTransformationWorker transformationWorker;
 
         public string LabelShortCap => labelShort.CapitalizeFirst();
-
         public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : iconPath;
         public Color IconColor => totemThingDef != null ? totemThingDef.graphic.color : Color.white;
 
-        /// <summary>
-        /// Utility method for using a totem
-        /// </summary>
         public void UseTotem(Pawn pawn, int usedCount)
         {
-            UseTotem(LycanthropeUtility.GetCompLycanthrope(pawn), usedCount);
+            Upgrade(LycanthropeUtility.GetCompLycanthrope(pawn), usedCount);
         }
 
-        /// <summary>
-        /// Utility method to check if the pawn can upgrade the totem
-        /// </summary>
         public bool CanUpgrade(HediffComp_Lycanthrope compLycanthrope)
         {
             return compLycanthrope.usedTotemTracker.TryGetValue(this, 0) < maxLevel;
         }
 
-        /// <summary>
-        /// Utility method to check if the pawn can purchase the totem
-        /// </summary>
-        public bool CanPurchase(HediffComp_Lycanthrope compLycanthrope)
+        public override bool CanPurchase(HediffComp_Lycanthrope compLycanthrope)
         {
-            if (!CanUpgrade(compLycanthrope))
-            {
-                return false;
-            }
-            if (compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0) < purchaseHeartCost)
-            {
-                return false;
-            }
-            return true;
+            return base.CanPurchase(compLycanthrope);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public int MaxPurchaseableUpgrades(HediffComp_Lycanthrope compLycanthrope)
         {
             if (!CanPurchase(compLycanthrope))
@@ -80,20 +57,17 @@ namespace Mashed_Bloodmoon
             return finalValue;
         }
 
-        /// <summary>
-        /// Utility method for purchasing a totem level with hearts
-        /// </summary>
-        public void PurchaseTotemLevel(HediffComp_Lycanthrope compLycanthrope, int count = 1)
+        public override void Purchase(HediffComp_Lycanthrope compLycanthrope, int count = 1)
         {
-            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= purchaseHeartCost * count;
-            UseTotem(compLycanthrope, count);
+            base.Purchase(compLycanthrope, count);
+            Upgrade(compLycanthrope, count);
         }
 
         /// <summary>
         /// Utility method for using a totem def
         /// Adds the totem to the lycanthropes totem tracker if it is missing
         /// </summary>
-        public void UseTotem(HediffComp_Lycanthrope compLycanthrope, int usedCount, bool message = true)
+        public void Upgrade(HediffComp_Lycanthrope compLycanthrope, int usedCount, bool message = true)
         {
             if (!compLycanthrope.usedTotemTracker.ContainsKey(this))
             {
@@ -176,14 +150,6 @@ namespace Mashed_Bloodmoon
             if (statDef == null)
             {
                 yield return "statDef is null";
-            }
-
-            if (transformationWorker != null)
-            {
-                foreach (string item in transformationWorker.ConfigErrors())
-                {
-                    yield return item;
-                }
             }
         }
     }

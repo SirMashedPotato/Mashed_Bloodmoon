@@ -63,7 +63,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
-				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRush</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRushProficiency</beastHuntDef>
 				<completedTooltip>Proficiency Upgrade:\nIncrease the duration of adrenaline rush by 5 seconds upon landing a killing blow.</completedTooltip>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
@@ -82,7 +82,7 @@
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_IncreaseDurationOnKill">
 				<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
-				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRush</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRushProficiency</beastHuntDef>
 				<secondsPerKill>5</secondsPerKill>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
@@ -131,7 +131,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
-				<beastHuntDef>Mashed_Bloodmoon_BeastHowl</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_BeastHowlProficiency</beastHuntDef>
 				<completedTooltip>Proficiency Upgrade:\nTemporarily slows all stunned targets.</completedTooltip>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
@@ -139,7 +139,7 @@
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityDoDamage">
 				<damageDef>Stun</damageDef>
-				<beastHuntDef>Mashed_Bloodmoon_BeastHowl</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_BeastHowlProficiency</beastHuntDef>
 				<extraHediffDef>Mashed_Bloodmoon_BeastHowlSlow</extraHediffDef>
 				<extraHediffDuration>12</extraHediffDuration>
 			</li>
@@ -232,7 +232,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
-				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBounty</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBountyProficiency</beastHuntDef>
 				<completedTooltip>Proficiency Upgrade:\n.Increase the gold reward to 25% of the targets combat power.</completedTooltip>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityHeartCost">
@@ -254,7 +254,7 @@
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_HuntsmansBounty">
 				<rewardThingDef>Gold</rewardThingDef>
-				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBounty</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBountyProficiency</beastHuntDef>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
@@ -298,7 +298,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
-				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMark</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMarkProficiency</beastHuntDef>
 				<completedTooltip>Proficiency Upgrade:\nKilling the marked target resets the cooldown of huntsman's mark.</completedTooltip>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
@@ -320,7 +320,7 @@
 		<comps>
 			<li Class="Mashed_Bloodmoon.HediffCompProperties_ResetCooldownOnKilled">
 				<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
-				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMark</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMarkProficiency</beastHuntDef>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
@@ -369,7 +369,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
-				<beastHuntDef>Mashed_Bloodmoon_MoonVeil</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_MoonVeilProficiency</beastHuntDef>
 				<completedTooltip>Proficiency Upgrade:\nMoon veil can be used regardless of the current lunar conditions.</completedTooltip>
 				<incrementBeastHunt>true</incrementBeastHunt>
 			</li>
@@ -381,7 +381,7 @@
 					<li>Eclipse</li>
 					<li>Mashed_Bloodmoon_HuntsmansMoon</li>
 				</gameConditions>
-				<beastHuntDef>Mashed_Bloodmoon_MoonVeil</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_MoonVeilProficiency</beastHuntDef>
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>Mashed_Bloodmoon.CompAbilityEffect_AddLinkedHediff</compClass>
@@ -431,7 +431,7 @@
 		</verbProperties>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
-				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolfProficiency</beastHuntDef>
 				<completedTooltip>Proficiency Upgrade:\nSummon an additional spectral werewolf.</completedTooltip>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
@@ -441,7 +441,7 @@
 				<pawnKindDef>Mashed_Bloodmoon_SpectralWerewolf</pawnKindDef>
 				<linkedHediff>Mashed_Bloodmoon_SpectralBeast</linkedHediff>
 				<stateDef>Mashed_Bloodmoon_SpectralBeast</stateDef>
-				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</beastHuntDef>
+				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolfProficiency</beastHuntDef>
 			</li>
 		</comps>
 	</AbilityDef>

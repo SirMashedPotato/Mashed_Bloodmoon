@@ -39,7 +39,7 @@ namespace Mashed_Bloodmoon
 
             Text.Font = font;
 
-            if (totemDef.purchaseHeartCost > 0 && (!compLycanthrope.usedTotemTracker.ContainsKey(totemDef) || compLycanthrope.usedTotemTracker[totemDef] < totemDef.maxLevel))
+            if (totemDef.purchaseHeartCost > 0 && totemDef.CanUpgrade(compLycanthrope))
             {
                 Rect upgradeRect = mainRect;
                 upgradeRect.height = Text.LineHeight * 1.5f;
@@ -55,7 +55,7 @@ namespace Mashed_Bloodmoon
                 string upgradeLabel = "Mashed_Bloodmoon_UpgradeLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), totemDef.purchaseHeartCost * upgradeAmount.amount);
                 if (Widgets.ButtonText(upgradeButtonRect, upgradeLabel, true, canPurchase, active: canPurchase))
                 {
-                    totemDef.PurchaseTotemLevel(compLycanthrope, (int)upgradeAmount.amount);
+                    totemDef.Purchase(compLycanthrope, (int)upgradeAmount.amount);
                     foreach (Page_UpgradeBeastForm.UpgradeAmount val in upgradeAmountList)
                     {
                         val.amount = 1;
