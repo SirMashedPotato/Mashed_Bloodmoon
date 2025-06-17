@@ -44,7 +44,7 @@
 				<showUseGizmo>true</showUseGizmo>
 				<onlyLycanthrope>false</onlyLycanthrope>
 				<onlyHuman>true</onlyHuman>
-				<gizmoDescription>Have a non-lycanthrope drink from the wolfsblood altar, consuming 10% of the lycanthrope blood it contains.</gizmoDescription>
+				<gizmoDescription>Have a non-lycanthrope drink from the wolfsblood altar, consuming 10% of the lycanthrope blood it contains. Infecting them with Sanies Lupinus, or progressing an already present infection.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_AltarDrinkBlood</gizmoTexPath>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
