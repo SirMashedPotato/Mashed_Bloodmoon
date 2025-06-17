@@ -30,8 +30,8 @@
 			<li Class="Mashed_Bloodmoon.PawnLycanthropeProperties">
 				<startingTotemCounts>
 					<Mashed_Bloodmoon_ConsumedHearts>10~30</Mashed_Bloodmoon_ConsumedHearts>
-					<Mashed_Bloodmoon_TotemEndurance>5~20</Mashed_Bloodmoon_TotemEndurance>
-					<Mashed_Bloodmoon_TotemTenacity>5~20</Mashed_Bloodmoon_TotemTenacity>
+					<Mashed_Bloodmoon_TotemEndurance>5~15</Mashed_Bloodmoon_TotemEndurance>
+					<Mashed_Bloodmoon_TotemTenacity>5~15</Mashed_Bloodmoon_TotemTenacity>
 				</startingTotemCounts>
 				<tertiaryColourOverride>(233,138,138)</tertiaryColourOverride>
 			</li>
