@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfPack]========== -->
+	<SitePartDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolfPack</defName>
+		<label>feral werewolf pack</label>
+		<description>A pack of feral werewolves.</description>
+		<workerClass>Mashed_Bloodmoon.SitePartWorker_FeralWerewolfPack</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/Mashed_Bloodmoon_FeralWerewolfPackSite</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<arrivedLetter>There is a pack of feral werewolves in this area.</arrivedLetter>
+		<arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<tags>
+			<li>Mashed_Bloodmoon_FeralWerewolfPack</li>
+		</tags>
+	</SitePartDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfShack]========== -->
+	<GenStepDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolfShack</defName>
+		<linkWithSite>Mashed_Bloodmoon_FeralWerewolfPack</linkWithSite>
+		<order>460</order>
+		<genStep Class="GenStep_ItemStash">
+			<thingSetMakerDef>Mashed_Bloodmoon_MapGen_FeralWerewolfShack</thingSetMakerDef>
+			<count>1</count>
+			<nearMapCenter>true</nearMapCenter>
+		</genStep>
+	</GenStepDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfPack]========== -->
+	<GenStepDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolfPack</defName>
+		<linkWithSite>Mashed_Bloodmoon_FeralWerewolfPack</linkWithSite>
+		<order>1600</order>
+		<genStep Class="Mashed_Bloodmoon.GenStep_FeralWerewolfPack"/>
+	</GenStepDef>
+</Defs>

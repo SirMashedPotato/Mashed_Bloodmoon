@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Bloodmoon]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+		<defName>Mashed_Bloodmoon_Bloodmoon</defName>
+		<label>bloodmoon (default)</label>
+		<startMoteDef>Mashed_Bloodmoon_TransformEffect</startMoteDef>
+		<endMoteDef>Mashed_Bloodmoon_TransformEffect</endMoteDef>
+		<startSoundDef>Mashed_Bloodmoon_BeastHowl</startSoundDef>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_GoreExplosion]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_GoreExplosion</defName>
+		<label>gore explosion</label>
+		<startEffecterDef>MeatExplosion</startEffecterDef>
+		<endEffecterDef>MeatExplosionSmall</endEffecterDef>
+		<startSoundDef>Mashed_Bloodmoon_BeastHowl</startSoundDef>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_LightningStrike]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+		<defName>Mashed_Bloodmoon_LightningStrike</defName>
+		<label>lightning strike</label>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<requiredCount>9</requiredCount>
+		</requirementWorker>
+		<transformationWorker Class="Mashed_Bloodmoon.LTEWorker_LightningStrike">
+			<explosionDamageDef>Flame</explosionDamageDef>
+		</transformationWorker>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_PsycastSkip]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef MayRequire="ludeon.rimworld.royalty">
+		<defName>Mashed_Bloodmoon_PsycastSkip</defName>
+		<label>psycast skip</label>
+		<startEffecterDef>Skip_EntryNoDelay</startEffecterDef>
+		<endEffecterDef>Skip_EntryNoDelay</endEffecterDef>
+		<startSoundDef>Psycast_Skip_Entry</startSoundDef>
+		<endSoundDef>Psycast_Skip_Exit</endSoundDef>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_PsycastSkipDark]========== -->
+	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef MayRequire="ludeon.rimworld.royalty">
+		<defName>Mashed_Bloodmoon_PsycastSkipDark</defName>
+		<label>psycast skip (dark)</label>
+		<startEffecterDef>Skip_ExitNoDelay</startEffecterDef>
+		<endEffecterDef>Skip_ExitNoDelay</endEffecterDef>
+		<startSoundDef>Psycast_Skip_Entry</startSoundDef>
+		<endSoundDef>Psycast_Skip_Exit</endSoundDef>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
+</Defs>

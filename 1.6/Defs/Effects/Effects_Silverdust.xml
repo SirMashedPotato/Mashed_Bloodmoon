@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Silverdust]==========-->
+	<EffecterDef>
+		<defName>Mashed_Bloodmoon_Silverdust</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<scale>0.06~0.1</scale>
+				<chancePerTick>0.01</chancePerTick>
+				<positionRadius>0.5</positionRadius>
+				<fleckDef>Mashed_Bloodmoon_SilverdustFleck</fleckDef>
+				<speed>0</speed>
+			</li>
+		</children>
+	</EffecterDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverdustFleck]==========-->
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Mashed_Bloodmoon_SilverdustFleck</defName>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Mashed_Bloodmoon_SilverdustEffect</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.5</fadeInTime>
+		<fadeOutTime>0.5</fadeOutTime>
+	</FleckDef>
+</Defs>

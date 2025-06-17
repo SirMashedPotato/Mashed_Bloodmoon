@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_PotionWolfsbane]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_PotionBase">
+		<defName>Mashed_Bloodmoon_PotionWolfsbane</defName>
+		<label>wolfsbane elixir</label>
+		<description>An elixir made from wolfsbane petals, the effect it has on the ingestors body depends on the advancement, or lack, of lycanthropy.\n\nWhen ingested by those without any traces of lycanthropy, it provides short-term resistance, helping to prevent them against being infected with Sanies Lupinus.\n\nWhen ingested by those that are currently infected by Sanies Lupinus, it temporarily weakens the infection, reducing the severity of it. It is not able to cure Sanies Lupinus outright.\n\nWhen ingested by those with dormant lycanthropy, it is able to prevent a forced transformation, as long as it is still active in the blood.\n\nWhen ingested by a lycanthrope, it causes immense nausea.\n\nWhen ingested by a transformed lycanthrope, it causes immense nausea, and toxic buildup.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_WolfsbaneResistance</HediffDef>
+			<HediffDef>Mashed_Bloodmoon_WolfsbanePrevention</HediffDef>
+			<HediffDef>Mashed_Bloodmoon_WolfsbaneNausea</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Mashed_Bloodmoon_PotionWolfsbane</texPath>
+		</graphicData>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="Mashed_Bloodmoon.IngestionOutcomeDoer_PotionWolfsbane"/>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Wolfsbane</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_WolfsbaneFlower>6</Mashed_Bloodmoon_WolfsbaneFlower>
+		</costList>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbaneResistance]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_PotionHighBase">
+		<defName>Mashed_Bloodmoon_WolfsbaneResistance</defName>
+		<label>wolfsbane resistance</label>
+		<description>A wolfsbane elixir active in ones bloodstream. Helps to provide resistance against infection by Sanies Lupinus.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.6</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropyResistance>0.6</Mashed_Bloodmoon_LycanthropyResistance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbanePrevention]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_PotionHighBase">
+		<defName>Mashed_Bloodmoon_WolfsbanePrevention</defName>
+		<label>wolfsbane prevention</label>
+		<description>A wolfsbane elixir active in ones bloodstream. Prevents forced transformation when a Hunstman's Moon rises.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.3</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbaneNausea]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_PotionHighBase">
+		<defName>Mashed_Bloodmoon_WolfsbaneNausea</defName>
+		<label>wolfsbane nausea</label>
+		<description>A wolfsbane elixir active in ones bloodstream. Causes severe nausea.</description>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1.5</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<vomitMtbDays>0.3</vomitMtbDays>
+				<painFactor>1.1</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

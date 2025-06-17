@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterBase]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_SlaughterBase" Abstract="true">
+		<beastHuntType>Kill</beastHuntType>
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Hunger by 1.</extraTooltip>
+		<completionWorker Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
+			<useCount>1</useCount>
+		</completionWorker>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterI]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
+		<defName>Mashed_Bloodmoon_SlaughterI</defName>
+		<label>beast hunt: Slaughter I</label>
+		<description>Kill 25 pawns while in beast form.</description>
+		<targetCount>25</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
+		<defName>Mashed_Bloodmoon_SlaughterII</defName>
+		<label>beast hunt: Slaughter II</label>
+		<description>Kill 50 pawns while in beast form.</description>
+		<targetCount>50</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterIII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
+		<defName>Mashed_Bloodmoon_SlaughterIII</defName>
+		<label>beast hunt: Slaughter III</label>
+		<description>Kill 100 pawns while in beast form.</description>
+		<targetCount>100</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterIV]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
+		<defName>Mashed_Bloodmoon_SlaughterIV</defName>
+		<label>beast hunt: Slaughter IV</label>
+		<description>Kill 200 pawns while in beast form.</description>
+		<targetCount>200</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterV]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
+		<defName>Mashed_Bloodmoon_SlaughterV</defName>
+		<label>beast hunt: Slaughter V</label>
+		<description>Kill 500 pawns while in beast form.</description>
+		<targetCount>500</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_SlaughterVI]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_SlaughterBase">
+		<defName>Mashed_Bloodmoon_SlaughterVI</defName>
+		<label>beast hunt: Slaughter VI</label>
+		<description>Kill 1,000 pawns while in beast form.</description>
+		<targetCount>1000</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_MODaer]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MODaer</defName>
+		<label>beast hunt: Daer</label>
+		<description>Consume the heart of a daer.</description>
+		<targetThingDef>DankPyon_Daer</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOGriffon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOGriffon</defName>
+		<label>beast hunt: Griffon</label>
+		<description>Consume the heart of a griffon.</description>
+		<targetThingDef>DankPyon_Griffon</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOLindwurm]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOLindwurm</defName>
+		<label>beast hunt: Forest Lindwurm</label>
+		<description>Consume the heart of a forest lindwurm.</description>
+		<targetThingDef>DankPyon_LindwurmForest</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOLindwurmCave]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOLindwurmCave</defName>
+		<label>beast hunt: Cave Lindwurm</label>
+		<description>Consume the heart of a cave lindwurm.</description>
+		<targetThingDef>DankPyon_LindwurmCave</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOAncientTroll]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOAncientTroll</defName>
+		<label>beast hunt: Ancient Troll</label>
+		<description>Consume the heart of an ancient troll.</description>
+		<targetThingDef>DankPyon_AncientTroll</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOUnholdPlain]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOUnholdPlain</defName>
+		<label>beast hunt: Plain Unhold</label>
+		<description>Consume the heart of a plain unhold.</description>
+		<targetKindDef>DankPyon_UnholdPlain</targetKindDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOUnholdSnow]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOUnholdSnow</defName>
+		<label>beast hunt: Snow Unhold</label>
+		<description>Consume the heart of a snow unhold.</description>
+		<targetKindDef>DankPyon_UnholdSnow</targetKindDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MOUnholdSwamp]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="dankpyon.medieval.overhaul">
+		<defName>Mashed_Bloodmoon_MOUnholdSwamp</defName>
+		<label>beast hunt: Swamp Unhold</label>
+		<description>Consume the heart of a swamp unhold.</description>
+		<targetKindDef>DankPyon_UnholdSwamp</targetKindDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

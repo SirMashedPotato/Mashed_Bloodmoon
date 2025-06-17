@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Diabolus]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_Diabolus</defName>
+		<label>beast hunt: Diabolus</label>
+		<description>Kill a mechanoid diabolus while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>Mech_Diabolus</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Mechanoid</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_WarQueen]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_WarQueen</defName>
+		<label>beast hunt: War Queen</label>
+		<description>Kill a war mechanoid queen while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>Mech_Warqueen</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Mechanoid</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Apocitron]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_Apocitron</defName>
+		<label>beast hunt: Apocitron</label>
+		<description>Kill a mechanoid apocitron while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>Mech_Apocriton</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Mechanoid</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6ECE4D4A-71DE-432D-B46B-C560AFF0148A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mashed_Bloodmoon</RootNamespace>
+    <AssemblyName>Mashed_Bloodmoon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.3.6\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_AbilityProficiency.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_AddLinkedHediff.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_EffecterOnTargetExt.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_FleckOnTargetExt.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_GiveHediffLinked.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_HeartCost.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_LunarRequirement.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_SummonBeast.cs" />
+    <Compile Include="CompAbilityEffect\LycanthropeAbilityEffectComp.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_StressCost.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityDoDamage.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityEffecterOnTargetExt.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityFleckOnTargetExt.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityHeartCost.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityLunarRequirement.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityProficiency.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityStressCost.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_ConsumeHeart.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityConsumeHeart.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilitySummonBeast.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltar.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarDrinkBlood.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFillBlood.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFeralWerewolfRaid.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarTendWounds.cs" />
+    <Compile Include="CompUseEffect\CompUseEffect_Totem.cs" />
+    <Compile Include="CompUseEffect\CompUseEffect_UnlockAbility.cs" />
+    <Compile Include="CompUsable\Properties\CompProperties_UsableAltar.cs" />
+    <Compile Include="CompUseEffect\CompUseEffect_UnlockClaw.cs" />
+    <Compile Include="CompUseEffect\Properties\CompProperties_UseEffectTotem.cs" />
+    <Compile Include="CompUseEffect\Properties\CompProperties_UseEffectUnlockAbility.cs" />
+    <Compile Include="CompUseEffect\Properties\CompProperties_UseEffectUnlockClaw.cs" />
+    <Compile Include="DamageWorker\DamageWorker_AddInjurySilver.cs" />
+    <Compile Include="DamageWorker\DamageWorker_SilverScratch.cs" />
+    <Compile Include="DamageWorker\DamageWorker_SilverCut.cs" />
+    <Compile Include="DamageWorker\DamageWorker_LycanthropeBite.cs" />
+    <Compile Include="DamageWorker\DamageWorker_LycanthropeScratch.cs" />
+    <Compile Include="DamageWorker\DamageWorker_SilverStab.cs" />
+    <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
+    <Compile Include="DefOf\AbilityDefOf.cs" />
+    <Compile Include="DefOf\BodyPartDefOf.cs" />
+    <Compile Include="DefOf\EffecterDefOf.cs" />
+    <Compile Include="DefOf\FactionDefOf.cs" />
+    <Compile Include="DefOf\HistoryEventDefOf.cs" />
+    <Compile Include="DefOf\IncidentDefOf.cs" />
+    <Compile Include="DefOf\LycanthropeAbilityDefOf.cs" />
+    <Compile Include="DefOf\LycanthropeClawTypeDefOf.cs" />
+    <Compile Include="DefOf\LycanthropeTransformationDefOf.cs" />
+    <Compile Include="DefOf\LycanthropeTypeDefOf.cs" />
+    <Compile Include="DefOf\HediffDefOf.cs" />
+    <Compile Include="DefOf\MentalStateDefOf.cs" />
+    <Compile Include="DefOf\QuestScriptDefOf.cs" />
+    <Compile Include="DefOf\RecordDefOf.cs" />
+    <Compile Include="DefOf\SoundDefOf.cs" />
+    <Compile Include="DefOf\StatDefOf.cs" />
+    <Compile Include="DefOf\ThingDefOf.cs" />
+    <Compile Include="DefOf\ThoughtDefof.cs" />
+    <Compile Include="DefOf\LycanthropeTotemDefOf.cs" />
+    <Compile Include="DefOf\TraitDefOf.cs" />
+    <Compile Include="Def\BeastHuntType.cs" />
+    <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
+    <Compile Include="Def\LycanthropeAbilityDef.cs" />
+    <Compile Include="Def\LycanthropeClawTypeDef.cs" />
+    <Compile Include="Def\LycanthropeTraitDef.cs" />
+    <Compile Include="Def\LycanthropeTransformationTypeDef.cs" />
+    <Compile Include="Def\LycanthropeTypeDef.cs" />
+    <Compile Include="DefOf\PawnCapacityDefOf.cs" />
+    <Compile Include="Def\LycanthropeTotemDef.cs" />
+    <Compile Include="DefOf\PawnKindDefOf.cs" />
+    <Compile Include="GameCondition\GameCondition_HuntsmansMoon.cs" />
+    <Compile Include="Gene\ConditionalStatAffecter\ConditionalStatAffecter_LycanthropeTransformed.cs" />
+    <Compile Include="Gene\Gene_Lycanthrope.cs" />
+    <Compile Include="Gizmo\Gizmo_LycanthropeStress.cs" />
+    <Compile Include="Harmony\Compat_SimpleSidearms.cs" />
+    <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\Patch_GenerateInitialHediffs.cs" />
+    <Compile Include="Harmony\Patch_SetupDynamicNodes.cs" />
+    <Compile Include="Harmony\Patch_ApplyBedThoughts.cs" />
+    <Compile Include="Harmony\Patch_Verb_MeleeAttackDamage.cs" />
+    <Compile Include="HediffComp\HediffComp_ForcedTransformOnRemoved.cs" />
+    <Compile Include="HediffComp\HediffComp_HuntsmansBounty.cs" />
+    <Compile Include="HediffComp\HediffComp_LycanthropeTransformationEnd.cs" />
+    <Compile Include="HediffComp\HediffComp_IncreaseDurationOnKill.cs" />
+    <Compile Include="HediffComp\HediffComp_ResetCooldownOnKilled.cs" />
+    <Compile Include="HediffComp\HediffComp_SummonedBeast.cs" />
+    <Compile Include="HediffComp\HediffComp_Lycanthrope.cs" />
+    <Compile Include="HediffComp\HediffComp_LycanthropeTransformed.cs" />
+    <Compile Include="HediffComp\HediffComp_SaniesLupinus.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_HuntsmansBounty.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_IncreaseDurationOnKill.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_ForcedTransformOnRemoved.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_ResetCooldownOnKilled.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_SummonedBeast.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_Lycanthrope.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_LycanthropeTransformed.cs" />
+    <Compile Include="HediffComp\Properties\HediffCompProperties_SaniesLupinus.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_Ambush_FeralWerewolves.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_LunaticWandersIn.cs" />
+    <Compile Include="IncidentWorker\IncidentWorker_MakeGameCondition_HuntsmanMoon.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropePotion.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfscure.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
+    <Compile Include="JobDriver\JobDriver_CustomiseBeastForm.cs" />
+    <Compile Include="JobDriver\JobDriver_SacrificeFeralWerewolfRaid.cs" />
+    <Compile Include="JobDriver\JobDriver_UpgradeBeastForm.cs" />
+    <Compile Include="JobDriver\JobDriver_ViewBeastHuntProgress.cs" />
+    <Compile Include="JobDriver\JobDriver_WolfsbloodAltar.cs" />
+    <Compile Include="JobDriver\JobDriver_WolfsbloodAltarDrinkBlood.cs" />
+    <Compile Include="JobDriver\JobDriver_WolfsbloodAltarFillBlood.cs" />
+    <Compile Include="JobDriver\JobDriver_SacrificeTending.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_ClawType.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_ClawTypeEquipped.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeAbility.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeClaw.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeTotem.cs" />
+    <Compile Include="Page\UpgradeTab\Tab_UpgradeTrait.cs" />
+    <Compile Include="ThingClass\Building_WolfsbloodAltar.cs" />
+    <Compile Include="ThingClass\SpectralWerewolfSpawner.cs" />
+    <Compile Include="ThinkNode\JobGiver_AttackMarkedTarget.cs" />
+    <Compile Include="JobGiver\JobGiver_SpectralBeastDefendParent.cs" />
+    <Compile Include="ThinkNode\JobGiver_LycanthropeFury.cs" />
+    <Compile Include="JobGiver\JobGiver_SpectralBeastFollowParent.cs" />
+    <Compile Include="JobGiver\JobGiver_SpectralBeastWanderNearParent.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UnlockAbility.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UpgradeTotem.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\LycanthropeBeastHuntCompletionWorker.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LTWorker_AddLinkedHediff.cs" />
+    <Compile Include="LycanthropeTransformationWorker\TransformationEffectWorker\LTEWorker_Explosion.cs" />
+    <Compile Include="LycanthropeTransformationWorker\TransformationEffectWorker\LTEWorker_LightningStrike.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHunt.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_BeastHuntCount.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Record.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Totem.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LTWorker_AddAbility.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LTWorker_AddHediff.cs" />
+    <Compile Include="LycanthropeTransformationWorker\LycanthropeTransformationWorker.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Gene.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Hediff.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Meme.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Precept.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Psylink.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Skill.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Trait.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LycanthropeTypeRequirementWorker.cs" />
+    <Compile Include="LycanthropeTypeRequirementWorker\LTRWorker_Race.cs" />
+    <Compile Include="MentalState\MentalState_LycanthropeFury.cs" />
+    <Compile Include="MentalState\MentalState_SpectralBeast.cs" />
+    <Compile Include="Page\LycanthropePage.cs" />
+    <Compile Include="Page\Page_CustomiseBeastForm.cs" />
+    <Compile Include="Page\Page_BeastHuntProgress.cs" />
+    <Compile Include="Page\Page_UpgradeBeastForm.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_Lycanthrope.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropePrimaryColor.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeSecondaryColor.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTertiaryColor.cs" />
+    <Compile Include="PawnRenderTree\NodeClass\PawnRenderNode_LycanthropeTransformed.cs" />
+    <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeScaled.cs" />
+    <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeTransformedBody.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quests\QuestNode_Root_LostWandererJoin_WalkIn.cs" />
+    <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
+    <Compile Include="Rituals\RitualAttachableOutcomeEffectWorker\RitualAttachableOutcomeEffectWorker_DiscoverFeralWerewolfPack.cs" />
+    <Compile Include="Rituals\RitualAttachableOutcomeEffectWorker\RitualAttachableOutcomeEffectWorker_GrantTotem.cs" />
+    <Compile Include="RoleRequirement\RoleRequirement_Lycanthrope.cs" />
+    <Compile Include="Settings\Mashed_Bloodmoon_Mod.cs" />
+    <Compile Include="Settings\Mashed_Bloodmoon_ModSettings.cs" />
+    <Compile Include="Sites\SitePartWorker\SitePartWorker_FeralWerewolfPack.cs" />
+    <Compile Include="Sites\GenStep\GenStep_FeralWerewolfPack.cs" />
+    <Compile Include="StatPart\StatPart_LycanthropeTotems.cs" />
+    <Compile Include="ThingClass\Gas_Silverdust.cs" />
+    <Compile Include="ThingClass\Gas_Wolfsbane.cs" />
+    <Compile Include="ThingClass\Gas_Wolfsblood.cs" />
+    <Compile Include="ThinkNode\ThinkNode_Lycanthrope.cs" />
+    <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptIsLycanthrope.cs" />
+    <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />
+    <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
+    <Compile Include="Def\LycanthropeGraphicData.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_BeastHuntCompleted.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_SilverApparel.cs" />
+    <Compile Include="Utility\Assets.cs" />
+    <Compile Include="Utility\LycanthropeUtility.cs" />
+    <Compile Include="DefModExtension\PawnTotemRecord.cs" />
+    <Compile Include="Utility\SilverDamageUtility.cs" />
+    <Compile Include="Utility\WerewolfUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- ==========[Silver]========== -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Silver"]/stuffProps/statOffsets</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Silver"]/stuffProps</xpath>
+			<value>
+				<statOffsets/>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Silver"]/stuffProps/statOffsets</xpath>
+		<value>
+			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
+		</value>
+	</Operation>
+</Patch>

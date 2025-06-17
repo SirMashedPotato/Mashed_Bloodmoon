@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_CategoryMTB">
+				<category>Mashed_Bloodmoon_HuntsmansMoon</category>
+				<mtbDays>15</mtbDays>
+			</li>
+		</value>
+	</Operation>
+</Patch>

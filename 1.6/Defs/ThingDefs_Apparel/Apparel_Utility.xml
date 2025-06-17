@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_BeltBase]==========-->
+	<ThingDef Name="Mashed_Bloodmoon_BeltBase" ParentName="ApparelNoQualityBase" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<Flammability>0.4</Flammability>
+			<EquipDelay>2</EquipDelay>
+			<WorkToMake>300</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>DrugLab</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench_Electric</li>
+			</recipeUsers>
+		</recipeMaker>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<generateAllowChance>0</generateAllowChance>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+				<li>Mashed_Bloodmoon_Belt</li>
+			</tags>
+		</apparel>
+		<tradeTags>
+			<li>Mashed_Bloodmoon_Belt</li>
+		</tradeTags>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltWolfsbaneVessel]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltWolfsbaneVessel</defName>
+		<label>wolfsbane vessel belt</label>
+		<description>A belt with several glass vessels attached to it, each one filled with a wolfsbane mixture. The vessels can be thrown, releasing a cloud of wolfsbane mist upon impact. Any transformed lycanthropes caught within will be forced to breathe in the wolfsbane mist, causing toxic buildup.</description>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>Mashed_Bloodmoon_PotionWolfsbane</ammoDef>
+				<ammoCountToRefill>3</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_MolotovCocktail</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>vessel</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw vessel</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Mashed_Bloodmoon_WolfsbaneVesselThrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Wolfsbane</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_PotionWolfsbane>3</Mashed_Bloodmoon_PotionWolfsbane>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltWolfsbaneVessel</texPath>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbaneVesselThrown]==========-->
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Mashed_Bloodmoon_WolfsbaneVesselThrown</defName>
+		<label>wolfsbane vessel</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_WolfsbaneVesselThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Smoke</damageDef>
+			<!-- Use default damage from explosion def -->
+			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasWolfsbane</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltWolfsbloodVessel]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltWolfsbloodVessel</defName>
+		<label>wolfsblood vessel belt</label>
+		<description>A belt with several glass vessels attached to it, each one filled with a wolfsblood mixture. The vessels can be thrown, releasing a cloud of wolfsblood mist upon impact. Any transformed lycanthropes caught within will breathe in the wolfsblood mist, reducing bloodloss.</description>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>Mashed_Bloodmoon_PotionWolfsblood</ammoDef>
+				<ammoCountToRefill>3</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_MolotovCocktail</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>vessel</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw vessel</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Mashed_Bloodmoon_WolfsbloodVesselThrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Wolfsblood</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_PotionWolfsblood>3</Mashed_Bloodmoon_PotionWolfsblood>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltWolfsbloodVessel</texPath>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_WolfsbloodVesselThrown]==========-->
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Mashed_Bloodmoon_WolfsbloodVesselThrown</defName>
+		<label>wolfsblood vessel</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_WolfsbloodVesselThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Smoke</damageDef>
+			<!-- Use default damage from explosion def -->
+			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasWolfsblood</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltSilverdustVessel]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltSilverdustVessel</defName>
+		<label>silverdust vessel belt</label>
+		<description>A belt with several glass vessels attached to it, each one filled with a silverdust mixture. The vessels can be thrown, releasing a cloud of silverdust upon impact. Any lycanthropes caught within will suffer constant burns.</description>
+		<statBases>
+			<MarketValue>90</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>Silver</ammoDef>
+				<ammoCountToRefill>60</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_MolotovCocktail</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>vessel</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw vessel</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Mashed_Bloodmoon_SilverdustVesselThrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Silver>6</Silver>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltSilverdustVessel</texPath>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverdustVesselThrown]==========-->
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Mashed_Bloodmoon_SilverdustVesselThrown</defName>
+		<label>silverdust vessel</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Mashed_Bloodmoon_SilverdustVesselThrown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Smoke</damageDef>
+			<!-- Use default damage from explosion def -->
+			<preExplosionSpawnThingDef>Mashed_Bloodmoon_GasSilverdust</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltHoundslayerThrowingAxe]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltHoundslayerThrowingAxe</defName>
+		<label>houndslayer throwing axe belt</label>
+		<description>A belt with several silver axes attached to it, each one specially designed for hunting lycanthropes.</description>
+		<statBases>
+			<MarketValue>110</MarketValue>
+			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>10</maxCharges>
+				<ammoDef>Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingAxe</ammoDef>
+				<ammoCountToRefill>1</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_BeatFire</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>throwing axe</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw axe</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>10.9</range>
+				<warmupTime>1.5</warmupTime>
+				<soundCast>Interact_BeatFire</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<defaultProjectile>Mashed_Bloodmoon_HoundslayerThrowingAxe_Thrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingAxe>1</Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingAxe>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltSilverThrowingAxe</texPath>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_BeltHoundslayerThrowingKnife]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_BeltBase">
+		<defName>Mashed_Bloodmoon_BeltHoundslayerThrowingKnife</defName>
+		<label>houndslayer throwing knife belt</label>
+		<description>A belt with several silver knives attached to it, each one specially designed for hunting lycanthropes.</description>
+		<statBases>
+			<MarketValue>110</MarketValue>
+			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>10</maxCharges>
+				<ammoDef>Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife</ammoDef>
+				<ammoCountToRefill>1</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Interact_BeatFire</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>throwing knife</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<label>throw knife</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>10.9</range>
+				<warmupTime>1</warmupTime>
+				<soundCast>Interact_BeatFire</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<defaultProjectile>Mashed_Bloodmoon_HoundslayerThrowingKnife_Thrown</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<costList>
+			<Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife>1</Mashed_Bloodmoon_ThrownWeapon_HoundslayerThrowingKnife>
+		</costList>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltSilverThrowingKnife</texPath>
+		</graphicData>
+	</ThingDef>
+</Defs>

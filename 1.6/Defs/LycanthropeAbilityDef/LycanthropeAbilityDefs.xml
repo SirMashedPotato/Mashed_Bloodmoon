@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_ConsumeHeart]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
+		<label>consume heart</label>
+		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one.</description>
+		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
+		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<label>adrenaline rush</label>
+		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
+		<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_BeastHowl</defName>
+		<label>beast howl</label>
+		<description>Unleash a terrifying howl that momentarily stuns all nearby hostiles.</description>
+		<abilityDef>Mashed_Bloodmoon_BeastHowl</abilityDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastLeap]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_BeastLeap</defName>
+		<label>beast leap</label>
+		<description>Leap to a nearby location using strong beastial legs.</description>
+		<abilityDef>Mashed_Bloodmoon_BeastLeap</abilityDef>
+		<purchaseHeartCost>25</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>huntsman's bounty</label>
+		<description>Place a bounty on a target. Successfully killing the target in time will grant a gold reward based on the targets combat power.</description>
+		<abilityDef>Mashed_Bloodmoon_HuntsmansBounty</abilityDef>
+		<purchaseHeartCost>15</purchaseHeartCost>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<requiredCount>10</requiredCount>
+		</requirementWorker>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
+		<label>huntsman's mark</label>
+		<description>Mark a target, increasing all damage the target takes by 50% for a short period of time.</description>
+		<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_MetabolicSurge]========== -->
+	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>moon veil</label>
+		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar conditions.</description>
+		<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
+		<label>summon spectral werewolf</label>
+		<description>Summon a spectral werewolf to temporarily fight alongside you. It will prioritise targets marked by the Huntsman's mark ability.</description>
+		<abilityDef>Mashed_Bloodmoon_SummonSpectralWerewolf</abilityDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+</Defs>

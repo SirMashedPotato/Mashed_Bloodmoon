@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Lycanthropy]==========-->
+	<MemeDef>
+		<defName>Mashed_Bloodmoon_Lycanthropy</defName>
+		<label>lycanthropy</label>
+		<description>Lycanthropy is a gift from The Huntsman. Lycanthropes should be worshipped.\n\n&lt;color=#E5E54C&gt;Unlocked ritual attachable outcomes:&lt;/color&gt;\n - Huntsman's Gift</description>
+		<iconPath>UI/Memes/Mashed_Bloodmoon_Lycanthropy</iconPath>
+		<groupDef>Misc</groupDef>
+		<exclusionTags>
+			<li>Mashed_Bloodmoon_Lycanthropy</li>
+		  </exclusionTags>
+		<impact>2</impact>
+		<renderOrder>999</renderOrder>
+		<requireOne>
+			<li>
+				<li>Mashed_Bloodmoon_LycanthropeRevered</li>
+			</li>
+			<li>
+				<li>Corpses_DontCare</li>
+			</li>
+			<li>
+				<li>Cannibalism_Preferred</li>
+				<li>Cannibalism_Acceptable</li>
+			</li>
+			<li>
+				<li>Execution_DontCare</li>
+				<li>Execution_RespectedIfGuilty</li>
+				<li>Execution_Required</li>
+			</li>
+		</requireOne>
+		<generalRules>
+			<rulesStrings>
+				<li>memeAdjective->beastial</li>
+				<li>memeAdjective->primal</li>
+				<li>memeCreed->cave</li>
+				<li>memeCreed->warren</li>
+				<li>memeCreed->den</li>
+				<li>memeHyphenPrefix->lycan</li>
+				<li>memeConcept->transformation</li>
+				<li>memeLeaderNoun->elder</li>
+				<li>memeLeaderNoun->ancient</li>
+				<li>memeLeaderNoun->huntsman</li>
+				<li>memeMoralist->witch</li>
+				<li>memeMoralist->druid</li>
+				<li>memeMoralist->avatar</li>
+			</rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+			<rules>
+				<rulesStrings>
+					<!-- theist myth -->
+					<li>creation(tag=Mashed_Bloodmoon_Lycanthropy)        ->[deity0_name] consumed the hearts of the great beasts, bathing the huntings grounds in their blood.</li>
+					<li>episode(uses=1,tag=Mashed_Bloodmoon_Lycanthropy)  ->The [deity0_type] [deity0_name] gave to [deity0_possessive] chosen followers the blood of the great beasts, so that they might know true strength.</li>
+					<!-- theist founder -->
+					<li>intro(tag=Mashed_Bloodmoon_Lycanthropy)           ->On the [place_summary] [place_name], there was a human named [deity0_name]. As punishment for [deity0_possessive] sins, [deity0_possessive] father punished [deity0_name] by merging [deity0_possessive] soul with that of a [totemAnimal].</li>
+					<li>intro(tag=Mashed_Bloodmoon_Lycanthropy)           ->On the [place_summary] [place_name], during the [ritualName], [deity0_name] came down into the [altarRoomLabel] and took the form of a giant [totemAnimal]. [deity0_name] consumed the hearts of [deity0_possessive] [memberNamePlural].</li>
+					<li>conflict(tag=Mashed_Bloodmoon_Lycanthropy)        ->A [foeLeader] declared that all who consumed the hearts of beasts were abominations, and sent [foeSoldiers] to persecute the [memberNamePlural].</li>
+					<li>founderJoin(tag=Mashed_Bloodmoon_Lycanthropy)     ->A [place_job] named [founderName] was attacked by one of the [foeLeader]'s [foeSoldiers]. [founderName] killed [foeLeader_objective] with a [place_personalWeapon] and ate [foeLeader_possessive] heart, gaining [deity0_name]'s strength.</li>
+					<li>victory(tag=Mashed_Bloodmoon_Lycanthropy)         ->[founderName] led a group of [memberNamePlural] into the [place_powerCenter], and ate the heart of [foeLeader] and devoured [foeLeader_possessive] flesh. [deity0_name] made [founderName] into the new [foeLeader], for [founderName] had proved his strength.</li>
+					<!-- ideological founder -->
+					<li>setup(tag=Mashed_Bloodmoon_Lycanthropy)           ->[founderName] sought control of a hyperintelligent archotech. But the archotech's power was too great, and [founder_pronoun] was transformed instead.</li>
+					<li>story(uses=1,tag=Mashed_Bloodmoon_Lycanthropy)    ->[founderName] gave to [founder_possessive] followers the gift of beastial hunger, so that they may grow strong.</li>
+					<!-- ideological lesson -->
+					<li>lessonIntro(tag=Mashed_Bloodmoon_Lycanthropy)     ->When I first ate a heart, it became clear. I saw that</li>
+					<li>lesson(tag=Mashed_Bloodmoon_Lycanthropy)          ->there are only two types of people - the weak and the strong</li>
+					<li>lessonReinforcement(tag=Mashed_Bloodmoon_Lycanthropy) ->To consume hearts is to be strong, and to know this clearly.</li>
+					<!-- archist -->
+					<li>archistBasis(tag=Mashed_Bloodmoon_Lycanthropy)    ->The archotech god-machines gifted man with the Hunger, so that man may know them better.</li>
+					<li>archistFact(tag=Mashed_Bloodmoon_Lycanthropy)     ->As the consciousness of an archotech expands, it must grow its substrate by consuming the hearts of other machines.</li>
+					<li>archistProphecy(tag=Mashed_Bloodmoon_Lycanthropy) ->[inTheEnd], man shall grow closer to the archotechs by consuming hearts, and knowing true strength.</li>
+					<!-- animist -->
+					<li>animistBasis(tag=Mashed_Bloodmoon_Lycanthropy)    ->The [totemAnimal] knows the strength that comes from consuming hearts. There is no greater strength than that which comes from this.</li>
+					<li>animistFact(tag=Mashed_Bloodmoon_Lycanthropy)     ->We can master the strength of man by consuming his heart.</li>
+					<!-- misc -->
+					<li>totemAnimal->wolf</li>
+					<li>totemAnimal->bear</li>
+					<li>totemAnimal->deer</li>
+					<li>totemAnimal->raven</li>
+					<li>totemAnimal->owl</li>
+					<li>totemAnimal->boar</li>
+					<li>totemAnimal->elk</li>
+					<li>totemAnimal->stag</li>
+				</rulesStrings>
+			</rules>
+		</descriptionMaker>
+		<thingStyleCategories/>
+		<startingResearchProjects>
+			<li>Mashed_Bloodmoon_Wolfsblood</li>
+		</startingResearchProjects>
+	</MemeDef>
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Overhaul</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- ==========[Switching to alchemy research]==========-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="Mashed_Bloodmoon_Wolfsbane" or defName="Mashed_Bloodmoon_Wolfsblood"]/prerequisites/li[text()="DrugProduction"]</xpath>
+					<value>
+						<li>DankPyon_Alchemy</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

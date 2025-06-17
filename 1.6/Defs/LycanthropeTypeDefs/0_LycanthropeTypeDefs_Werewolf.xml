@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfBase]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef Name="Mashed_Bloodmoon_WerewolfBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_Werewolf]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+		<defName>Mashed_Bloodmoon_Werewolf</defName>
+		<label>werewolf</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<color>(53,54,50)</color>
+			<colorTwo>(123,112,93)</colorTwo>
+			<colorThree>(233,208,138)</colorThree>
+		</graphicData>
+		<renderNodeProperties/>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfAmrita]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+		<defName>Mashed_Bloodmoon_WerewolfAmrita</defName>
+		<label>werewolf (Amrita)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<color>(48,51,60)</color>
+			<colorTwo>(163,159,150)</colorTwo>
+			<colorThree>(215,173,97)</colorThree>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>werewolf horns</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfHorn</texPath>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<beastHuntDef>Mashed_Bloodmoon_FeralWerewolvesII</beastHuntDef>
+		</requirementWorker>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+		<defName>Mashed_Bloodmoon_WerewolfAnima</defName>
+		<label>werewolf (Anima)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<color>(167,199,175)</color>
+			<colorTwo>(98,87,72)</colorTwo>
+			<colorThree>(210,193,232)</colorThree>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>werewolf antlers</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfAntler</texPath>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfGlowing]========== -->
+	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+		<defName>Mashed_Bloodmoon_WerewolfGlowing</defName>
+		<label>werewolf (Glowing)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<color>(81,87,75)</color>
+			<colorTwo>(129,121,111)</colorTwo>
+			<colorThree>(186,221,107)</colorThree>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>werewolf glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfFullGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_ClawType">
+			<clawTypeDef>Mashed_Bloodmoon_ToxicClaws</clawTypeDef>
+		</requirementWorker>
+	</Mashed_Bloodmoon.LycanthropeTypeDef>
+</Defs>

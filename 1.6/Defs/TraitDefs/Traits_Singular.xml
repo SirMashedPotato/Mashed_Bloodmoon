@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_UncontrollableLycanthropy]==========-->
+	<TraitDef>
+		<defName>Mashed_Bloodmoon_UncontrollableLycanthropy</defName>
+		<commonality>0</commonality>
+		<disableHostilityFromAnimalType>Canine</disableHostilityFromAnimalType>
+		<degreeDatas>
+			<li>
+				<label>uncontrollable lycanthropy</label>
+				<description>{PAWN_nameDef} has almost no control over {PAWN_possessive} lycanthropy. {PAWN_pronoun} will easily succumb to {PAWN_possessive} inner beast when stressed or threatened... or even at a moments notice.</description>
+				<statOffsets>
+					<Mashed_Bloodmoon_LycanthropicStressMax>-10</Mashed_Bloodmoon_LycanthropicStressMax>
+					<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.25</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+				</statOffsets>
+				<theOnlyAllowedMentalBreaks>
+					<li>Mashed_Bloodmoon_LycanthropeFury</li>
+				</theOnlyAllowedMentalBreaks>
+				<randomMentalState>Mashed_Bloodmoon_LycanthropeFury</randomMentalState>
+				<randomMentalStateMtbDaysMoodCurve>
+					<points>
+						<li>(0, 50)</li>
+					</points>
+				</randomMentalStateMtbDaysMoodCurve>
+				<marketValueFactorOffset>-0.3</marketValueFactorOffset>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+				</allowedMeditationFocusTypes>
+				<possessions>
+					<Meat_Human>10~30</Meat_Human>
+				</possessions>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+</Defs>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_ConsumedHearts]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_ConsumedHearts</defName>
+		<label>Consumed hearts</label>
+		<labelShort>Consumed hearts</labelShort>
+		<statDef>Mashed_Bloodmoon_LycanthropicStressMax</statDef>
+		<maxLevel>999</maxLevel>
+		<statIncreasePerLevel>1</statIncreasePerLevel>
+		<onlyTransformed>false</onlyTransformed>
+		<displayAsTotem>false</displayAsTotem>
+		<canBeTransferred>false</canBeTransferred>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+</Defs>

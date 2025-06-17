@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- All sounds used here are otained from https://mixkit.co/ -->
+	<!-- ==========[Mashed_Bloodmoon_ConsumeHeart]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_ConsumeHeart</defName>
+		<label>consume heart</label>
+		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one, as well as reducing hunger and fatigue, and increasing psyfocus, based on the size of the heart.\n\nConsuming the heart of a pawn under the effect of a wolfsbane elixir will cause toxic buildup. Consuming the heart of another lycanthrope will also consume their lycanthropy, transferring some of their totems in the process.</description>
+		<descriptionHyperlinks>
+			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
+		</descriptionHyperlinks>
+		<level>1</level>
+		<cooldownTicksRange>300</cooldownTicksRange>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_ConsumeHeart</iconPath>
+		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<showPsycastEffects>false</showPsycastEffects>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<warmupEffecter>EatMeat</warmupEffecter>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityConsumeHeart">
+				<goodwillImpact>-70</goodwillImpact>
+			</li>
+			<li Class="CompProperties_AbilityRequiresCapacity">
+				<capacity>Eating</capacity>
+			</li>
+		</comps>
+		<verbProperties>
+			<drawAimPie>False</drawAimPie>
+			<range>-1</range>
+			<warmupTime>3</warmupTime>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<targetParams>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetCorpses>true</canTargetCorpses>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<label>adrenaline rush</label>
+		<description>Cause adrenaline to surge throughout the body, completely nullifying pain and staunching bleeding for a short duration.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_AdrenalineRush</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_AdrenalineRush</warmupStartSound>
+		<cooldownTicksRange>1200</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>20</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRush</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nIncrease the duration of adrenaline rush by 5 seconds upon landing a killing blow.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>15</stressCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_AddLinkedHediff</compClass>
+				<hediffDef>Mashed_Bloodmoon_AdrenalineRush</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<label>adrenaline rush</label>
+		<description>Adrenaline surging throughout the body, completely nullifying pain and staunching bleeding.</description>
+		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_IncreaseDurationOnKill">
+				<abilityDef>Mashed_Bloodmoon_AdrenalineRush</abilityDef>
+				<beastHuntDef>Mashed_Bloodmoon_AdrenalineRush</beastHuntDef>
+				<secondsPerKill>5</secondsPerKill>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_AdrenalineRush</stateEffecter>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<totalBleedFactor>0</totalBleedFactor>
+				<painFactor>0</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastHowl]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_BeastHowl</defName>
+		<label>beast howl</label>
+		<description>Unleash a terrifying howl that momentarily stuns all nearby hostiles.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_BeastHowl</warmupStartSound>
+		<cooldownTicksRange>1080</cooldownTicksRange>
+		<statBases>
+			<Ability_EffectRadius>4.9</Ability_EffectRadius>
+			<Ability_Duration>6</Ability_Duration>
+		</statBases>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0.5</warmupTime>
+			<range>4.9</range>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_BeastHowl</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nTemporarily slows all stunned targets.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>10</stressCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityDoDamage">
+				<damageDef>Stun</damageDef>
+				<beastHuntDef>Mashed_Bloodmoon_BeastHowl</beastHuntDef>
+				<extraHediffDef>Mashed_Bloodmoon_BeastHowlSlow</extraHediffDef>
+				<extraHediffDuration>12</extraHediffDuration>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityFleckOnTargetExt">
+				<fleckDef>Mashed_Bloodmoon_BeastHowlFleck</fleckDef>
+				<scale>4.9</scale>
+				<preCastTicks>0</preCastTicks>
+				<onlySelf>true</onlySelf>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityEffecterOnTargetExt">
+				<effecterDef>Mashed_Bloodmoon_BeastHowl</effecterDef>
+				<maintainForTicks>30</maintainForTicks>
+				<onlyHostile>true</onlyHostile>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_BeastHowlSlow</defName>
+		<label>beast howl terror</label>
+		<description>A pawn momentarily terrified by witnessing a lycanthrope howl.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>0.8</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_BeastHowl</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_BeastLeap]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_BeastLeap</defName>
+		<label>beast leap</label>
+		<description>Leap to a nearby location using strong beastial legs.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_BeastLeap</iconPath>
+		<cooldownTicksRange>60</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityJump</verbClass>
+			<label>leap</label>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.5</warmupTime>
+			<range>6.9</range>
+			<requireLineOfSight>true</requireLineOfSight>
+			<soundCast>Longjump_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>5</stressCost>
+			</li>
+		</comps>
+	</AbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>Huntsman's bounty</label>
+		<description>Place a bounty on a wild animal, or hostile target. Successfully killing the target in time will grant a gold reward based on the targets combat power.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansBounty</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_HuntsmansMark</warmupStartSound>
+		<cooldownTicksRange>7200</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>90</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<drawAimPie>false</drawAimPie>
+			<range>14.9</range>
+			<warmupTime>0.25</warmupTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<targetParams>
+				<canTargetBuildings>false</canTargetBuildings>
+				<mustBeSelectable>true</mustBeSelectable>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBounty</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\n.Increase the gold reward to 25% of the targets combat power.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityHeartCost">
+				<heartCost>1</heartCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_GiveHediffLinked</compClass>
+				<hediffDef>Mashed_Bloodmoon_HuntsmansBounty</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>true</applicableToMechs>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
+		<defName>Mashed_Bloodmoon_HuntsmansBounty</defName>
+		<label>Huntsman's bounty</label>
+		<description>This pawn has had a bounty placed on them by a lycanthrope. They will leave a gold reward if they are killed before the bounty expires.</description>
+		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_HuntsmansBounty">
+				<rewardThingDef>Gold</rewardThingDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansBounty</beastHuntDef>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>999</maxDistance>
+				<customMote>Mashed_Bloodmoon_HuntsmansBountyLinkLine</customMote>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_HuntsmansBounty</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
+		<label>Huntsman's mark</label>
+		<description>Set your sights on a specific target, increasing all damage the target takes by 50% for a short period of time.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansMark</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_HuntsmansMark</warmupStartSound>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<drawAimPie>false</drawAimPie>
+			<range>14.9</range>
+			<warmupTime>0.25</warmupTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<targetParams>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<mustBeSelectable>true</mustBeSelectable>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMark</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nKilling the marked target resets the cooldown of huntsman's mark.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>10</stressCost>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_GiveHediffLinked</compClass>
+				<hediffDef>Mashed_Bloodmoon_HuntsmansMark</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>true</applicableToMechs>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
+		<defName>Mashed_Bloodmoon_HuntsmansMark</defName>
+		<label>Huntsman's mark</label>
+		<description>This pawn has been marked by a lycanthrope, increasing all damage they take by 50% for a short period of time.</description>
+		<comps>
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_ResetCooldownOnKilled">
+				<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
+				<beastHuntDef>Mashed_Bloodmoon_HuntsmansMark</beastHuntDef>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>999</maxDistance>
+				<customMote>Mashed_Bloodmoon_HuntsmansMarkLinkLine</customMote>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_HuntsmansMark</stateEffecter>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_MetabolicSurge]==========-->
+	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
+	<AbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>moon veil</label>
+		<description>Blend into the moonlight, effectively becoming invisible to others. This ability can only be used at night, or during specific lunar conditions.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_MoonVeil</warmupStartSound>
+		<cooldownTicksRange>1800</cooldownTicksRange>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>20</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupTime>1</warmupTime>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_MoonVeil</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nMoon veil can be used regardless of the current lunar conditions.</completedTooltip>
+				<incrementBeastHunt>true</incrementBeastHunt>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>10</stressCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityLunarRequirement">
+				<gameConditions>
+					<li>Eclipse</li>
+					<li>Mashed_Bloodmoon_HuntsmansMoon</li>
+				</gameConditions>
+				<beastHuntDef>Mashed_Bloodmoon_MoonVeil</beastHuntDef>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_AddLinkedHediff</compClass>
+				<hediffDef>Mashed_Bloodmoon_MoonVeil</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly" ParentName="Mashed_Bloodmoon_LycanthropeLinkedHediffBase">
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<label>moon veil</label>
+		<description>A lycanthrope blended into the moonlight, rendering it effectively invisible to others.</description>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_MoonVeil</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
+		<label>summon spectral werewolf</label>
+		<description>Summon a spectral werewolf to temporarily fight alongside you. It will follow the summoner and attack any nearby threats autonomously. Marking a target with the Huntsman's mark ability will cause the spectral werewolf to prioritise it over any other threats.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_BeastHowl</warmupStartSound>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<statBases>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<drawAimPie>false</drawAimPie>
+			<range>3.9</range>
+			<warmupTime>0.25</warmupTime>
+			<verbClass>Verb_CastAbility</verbClass>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nSummon an additional spectral werewolf.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>20</stressCost>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilitySummonBeast">
+				<pawnKindDef>Mashed_Bloodmoon_SpectralWerewolf</pawnKindDef>
+				<linkedHediff>Mashed_Bloodmoon_SpectralBeast</linkedHediff>
+				<stateDef>Mashed_Bloodmoon_SpectralBeast</stateDef>
+				<beastHuntDef>Mashed_Bloodmoon_SummonSpectralWerewolf</beastHuntDef>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

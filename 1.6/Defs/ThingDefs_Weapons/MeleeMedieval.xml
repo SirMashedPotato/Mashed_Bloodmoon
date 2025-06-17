@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HoundslayerMeleeBase]==========-->
+	<ThingDef Name="Mashed_Bloodmoon_HoundslayerMeleeBase" ParentName="BaseMeleeWeapon_Sharp_Quality" Abstract="true">
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Medieval</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
+		</statBases>
+		<relicChance>2</relicChance>
+		<tradeTags>
+			<li>Mashed_Bloodmoon_HoundslayerWeapon</li>
+		</tradeTags>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+			<unfinishedThingDef>Mashed_Bloodmoon_UnfinishedHoundslayerWeapon</unfinishedThingDef>
+			<defaultIngredientFilter Inherit="False"/>
+		</recipeMaker>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_MeleeWeapon_HoundslayerShortsword]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerMeleeBase">
+		<defName>Mashed_Bloodmoon_MeleeWeapon_HoundslayerShortsword</defName>
+		<label>houndslayer shortsword</label>
+		<description>A specially designed shortsword. A steel core, with a silver coating, results in a a weapon tailor made for hunting lycanthropes.</description>
+		<modExtensions>
+			<li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<usableWithShields>true</usableWithShields>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Mashed_Bloodmoon_SilverShortsword</texPath>
+		</graphicData>
+		<costList>
+			<Steel>40</Steel>
+			<Silver>2</Silver>
+		</costList>
+		<statBases>
+			<MarketValue>150</MarketValue>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>0.85</Mass>
+		</statBases>
+		<weaponTags>
+			<li>Mashed_Bloodmoon_HoundslayerMeleeDecent</li>
+		</weaponTags>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_MeleeWeapon_HoundslayerLongsword]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerMeleeBase">
+		<defName>Mashed_Bloodmoon_MeleeWeapon_HoundslayerLongsword</defName>
+		<label>houndslayer longsword</label>
+		<description>A specially designed longsword. A steel core, with a silver coating, results in a a weapon tailor made for hunting lycanthropes.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Mashed_Bloodmoon_SilverLongsword</texPath>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>85</Steel>
+			<Silver>3</Silver>
+		</costList>
+		<statBases>
+			<MarketValue>280</MarketValue>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+		<weaponTags>
+			<li>Mashed_Bloodmoon_HoundslayerMeleeAdvanced</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>LongBlades</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+</Defs>
