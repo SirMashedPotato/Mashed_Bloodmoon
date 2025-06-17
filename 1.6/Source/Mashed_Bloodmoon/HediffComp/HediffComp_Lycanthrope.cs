@@ -16,13 +16,7 @@ namespace Mashed_Bloodmoon
         public Color secondaryColour = Color.white;
         public Color tertiaryColour = Color.white;
 
-        /// <summary>
-        /// TODO swap to hashset, wait until 1.0 because it will break lycanthropes
-        /// </summary>
-        public Dictionary<LycanthropeAbilityDef, int> unlockedAbilityTracker = new Dictionary<LycanthropeAbilityDef, int>();
-        /// <summary>
-        /// 
-        /// </summary>
+        public HashSet<LycanthropeAbilityDef> unlockedAbilityTracker = new HashSet<LycanthropeAbilityDef>();
         public LycanthropeClawTypeDef equippedClawType;
         public HashSet<LycanthropeClawTypeDef> unlockedClawTracker = new HashSet<LycanthropeClawTypeDef>();
         /// <summary>
@@ -130,7 +124,7 @@ namespace Mashed_Bloodmoon
             transformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
             ResetColours();
             usedTotemTracker.Add(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
-            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart, 1);
+            unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart);
             equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
             unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
         }

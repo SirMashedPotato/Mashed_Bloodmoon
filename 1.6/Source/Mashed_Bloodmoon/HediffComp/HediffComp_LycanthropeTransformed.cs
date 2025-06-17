@@ -131,9 +131,9 @@ namespace Mashed_Bloodmoon
             CompLycanthrope.TransformationTypeDef.PlayTransformationStartEffects(parent.pawn);
 
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
-            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
+            foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
-                parent.pawn.abilities.GainAbility(unlockedAbility.Key.abilityDef);
+                parent.pawn.abilities.GainAbility(unlockedAbility.abilityDef);
             }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
@@ -199,9 +199,9 @@ namespace Mashed_Bloodmoon
 
             RemoveLinkedHediffs();
             CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
-            foreach (KeyValuePair<LycanthropeAbilityDef, int> unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
+            foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
-                parent.pawn.abilities.RemoveAbility(unlockedAbility.Key.abilityDef);
+                parent.pawn.abilities.RemoveAbility(unlockedAbility.abilityDef);
             }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
