@@ -5,7 +5,6 @@
 	<author>SirMashedPotato</author>
 	<modVersion>0.2.0</modVersion>
 	<supportedVersions>
-		<li>1.5</li>
 		<li>1.6</li>
 	</supportedVersions>
 	<description>A completely remade version of the original Bloodmoon mod, made to a much higher standard, and with significantly more experience under my belt.\n\n- Very much inspired by the Elder Scrolls series by Bethesda Studios, with a heavy focus on the Bloodmoon expansion for Morrowind\n- Lycanthrope ability sounds otained from https://mixkit.co/\n- Seed bag texture used for SeedsPlease Lite support by CitizenKanye\n- Thanks to those that provided feedback: BongBong, Theo, Aludis, Aquiles, charybdis6404\n- And to Ranger Rick for being neat</description>

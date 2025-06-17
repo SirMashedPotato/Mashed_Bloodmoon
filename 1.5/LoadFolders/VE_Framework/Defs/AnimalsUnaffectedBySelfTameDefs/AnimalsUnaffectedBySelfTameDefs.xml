@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-	<AnimalBehaviours.AnimalsUnaffectedBySelfTameDef>
-		<defName>Mashed_Bloodmoon_DisabledQuestAnimals</defName>
-		<unaffectedBySelfTamePawns>
-			<li>Mashed_Bloodmoon_FeralWerewolf</li>
-		</unaffectedBySelfTamePawns>
-	</AnimalBehaviours.AnimalsUnaffectedBySelfTameDef>
-</Defs>

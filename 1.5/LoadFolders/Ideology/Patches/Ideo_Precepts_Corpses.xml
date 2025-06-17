@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Patch>
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PreceptDef[defName="Corpses_DontCare"]/requiredMemes</xpath>
-		<value>
-			<li>Mashed_Bloodmoon_Lycanthropy</li>
-		</value>
-	</Operation>
-</Patch>

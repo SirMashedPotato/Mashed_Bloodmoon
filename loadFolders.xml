@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <loadFolders>
-	<v1.5>
-		<li>Common</li>
-		<li>1.5</li>
-		<!-- Royalty -->
-		<li IfModActive="Ludeon.RimWorld.Royalty">1.5/LoadFolders/Royalty</li>
-		<!-- Ideology -->
-		<li IfModActive="Ludeon.RimWorld.Ideology">LoadFolders/IdeologyTextures</li>
-		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/LoadFolders/Ideology</li>
-		<!-- Biotech -->
-		<li IfModActive="Ludeon.RimWorld.Biotech">LoadFolders/BiotechTextures</li>
-		<li IfModActive="Ludeon.RimWorld.Biotech">1.5/LoadFolders/Biotech</li>
-		<!-- Anomaly -->
-		<li IfModActive="Ludeon.RimWorld.Anomaly">1.5/LoadFolders/Anomaly</li>
-		<!-- VE_Framework -->
-		<li IfModActive="oskarpotocki.vanillafactionsexpanded.core">1.5/LoadFolders/VE_Framework</li>
-	</v1.5>
 	<v1.6>
 		<li>Common</li>
 		<li>1.6</li>

@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-	<!-- ==========[Additional]==========-->
-	<ThingCategoryDef>
-		<defName>Mashed_Bloodmoon_LycanthropeTotems</defName>
-		<label>lycanthrope totems</label>
-		<parent>Items</parent>
-	</ThingCategoryDef>
-</Defs>
