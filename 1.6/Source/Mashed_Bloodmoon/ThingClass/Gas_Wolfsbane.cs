@@ -14,7 +14,7 @@ namespace Mashed_Bloodmoon
             base.TickInterval(delta);
             try
             {
-                if (this.IsHashIntervalTick(tickInterval))
+                if (this.IsHashIntervalTick(tickInterval, delta))
                 {
                     HashSet<Thing> hashSet = new HashSet<Thing>(Position.GetThingList(Map));
                     if (hashSet != null)

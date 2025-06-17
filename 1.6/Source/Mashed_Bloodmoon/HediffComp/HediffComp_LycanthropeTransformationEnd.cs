@@ -4,9 +4,9 @@ namespace Mashed_Bloodmoon
 {
     public class HediffComp_LycanthropeTransformationEnd : HediffComp
     {
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
-            base.CompPostTick(ref severityAdjustment);
+            base.CompPostTickInterval(ref severityAdjustment, delta);
             parent.pawn.health.RemoveHediff(parent);
         }
 

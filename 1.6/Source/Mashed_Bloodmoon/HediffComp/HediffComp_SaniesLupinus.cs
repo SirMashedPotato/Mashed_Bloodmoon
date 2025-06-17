@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
     {
         public HediffCompProperties_SaniesLupinus Props => (HediffCompProperties_SaniesLupinus)props;
 
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
             if (parent.Severity + severityAdjustment >= 1.0f && !parent.FullyImmune())
             {
@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
                 parent.pawn.health.RemoveHediff(parent);
                 return;
             }
-            base.CompPostTick(ref severityAdjustment);
+            base.CompPostTickInterval(ref severityAdjustment, delta);
         }
     }
 }

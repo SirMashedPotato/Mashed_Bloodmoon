@@ -51,12 +51,13 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Ticking stress
         /// </summary>
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
+            base.CompPostTickInterval(ref severityAdjustment, delta);
             try
             {
                 base.CompPostTick(ref severityAdjustment);
-                if (parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate))
+                if (parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate, delta))
                 {
                     if (currentStress >= StressMax)
                     {
