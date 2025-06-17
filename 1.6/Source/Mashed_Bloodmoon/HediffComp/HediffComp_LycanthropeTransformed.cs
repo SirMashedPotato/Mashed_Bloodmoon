@@ -103,12 +103,6 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompPostMake()
         {
-            //TODO remove at some point
-            if (CompLycanthrope.unlockedClawTracker.NullOrEmpty())
-            {
-                CompLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
-                CompLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
-            }
             base.CompPostMake();
             currentStress = 0;
 
@@ -184,13 +178,6 @@ namespace Mashed_Bloodmoon
         /// </summary>
         public override void CompPostPostRemoved()
         {
-            //TODO remove at some point
-            if (CompLycanthrope.equippedClawType == null)
-            {
-                CompLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
-                CompLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
-            }
-
             base.CompPostPostRemoved();
 
             parent.pawn.jobs.StopAll();

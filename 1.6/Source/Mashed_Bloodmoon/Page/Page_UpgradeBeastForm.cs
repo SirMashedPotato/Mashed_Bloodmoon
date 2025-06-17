@@ -35,13 +35,6 @@ namespace Mashed_Bloodmoon
 
         public Page_UpgradeBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
-            //TODO remove at some point
-            if (compLycanthrope.equippedClawType == null)
-            {
-                compLycanthrope.equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
-                compLycanthrope.unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
-            }
-
             AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading;
             ClawList = DefDatabase<LycanthropeClawTypeDef>.AllDefsListForReading;
             TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.Where(x => x.displayAsTotem).ToList();
