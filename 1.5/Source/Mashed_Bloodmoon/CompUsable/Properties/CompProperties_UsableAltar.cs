@@ -11,7 +11,9 @@ namespace Mashed_Bloodmoon
         public string gizmoTexPath;
         public bool compUseEffects = false;
         public bool onlyLycanthrope = true;
+        public bool onlyHuman = false;
         public bool allowTransformed = true;
         public int heartCost = 0;
+        public float bloodCost;
     }
 }

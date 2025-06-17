@@ -73,30 +73,13 @@ namespace Mashed_Bloodmoon
 
         private void TriggerWerewolfAmbush()
         {
-            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, Find.WorldObjects.Caravans.RandomElement());
-            incidentParms.forced = true;
-            incidentParms.faction = WerewolfUtility.GetFeralWerewolfFaction();
-            IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;
-            if (incidentParms.points < 200)
-            {
-                incidentParms.points = 200;
-            }
-            incidentDef.Worker.TryExecute(incidentParms);
+            WerewolfUtility.TriggerWerewolfAmbush();
+
         }
 
         private void TriggerWerewolfRaid(List<Map> possibleMaps)
         {
-            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(RimWorld.IncidentDefOf.RaidEnemy.category, possibleMaps.RandomElement());
-            incidentParms.forced = true;
-            incidentParms.faction = WerewolfUtility.GetFeralWerewolfFaction();
-            incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
-            incidentParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
-            if (incidentParms.points < 200)
-            {
-                incidentParms.points = 200;
-            }
-            IncidentDef incidentDef = RimWorld.IncidentDefOf.RaidEnemy;
-            incidentDef.Worker.TryExecute(incidentParms);
+            WerewolfUtility.TriggerWerewolfRaid(possibleMaps.RandomElement());
         }
 
         public override void End()

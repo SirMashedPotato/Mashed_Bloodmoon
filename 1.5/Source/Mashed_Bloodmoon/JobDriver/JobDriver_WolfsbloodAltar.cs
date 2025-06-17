@@ -27,5 +27,16 @@ namespace Mashed_Bloodmoon
             toilWait.WithProgressBarToilDelay(TargetIndex.A);
             yield return toilWait;
         }
+
+        protected void SacrificeHearts(Pawn pawn, int heartCost)
+        {
+            HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
+            compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= heartCost;
+        }
+
+        protected void SacrificeBlood(Building_WolfsbloodAltar altar, float bloodCost)
+        {
+            altar.ConsumeBlood(bloodCost);
+        }
     }
 }

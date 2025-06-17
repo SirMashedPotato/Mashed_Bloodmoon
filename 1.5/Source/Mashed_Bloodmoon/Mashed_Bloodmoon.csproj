@@ -89,6 +89,7 @@
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltar.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFillBlood.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFeralWerewolfRaid.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarTendWounds.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_Totem.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_UnlockAbility.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfscure.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
     <Compile Include="JobDriver\JobDriver_CustomiseBeastForm.cs" />
+    <Compile Include="JobDriver\JobDriver_SacrificeFeralWerewolfRaid.cs" />
     <Compile Include="JobDriver\JobDriver_UpgradeBeastForm.cs" />
     <Compile Include="JobDriver\JobDriver_ViewBeastHuntProgress.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltar.cs" />

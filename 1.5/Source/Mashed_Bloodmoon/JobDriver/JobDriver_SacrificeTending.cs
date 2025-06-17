@@ -12,10 +12,24 @@ namespace Mashed_Bloodmoon
         private const int tendCount = 5;
         private static FloatRange tendQualityRange = new FloatRange(0.4f, 0.6f);
 
+        private CompUsable_WolfsbloodAltarTendWounds compUsable;
+
+        private CompUsable_WolfsbloodAltarTendWounds CompUsable
+        {
+            get
+            {
+                if(compUsable == null)
+                {
+                    compUsable = job.GetTarget(TargetIndex.A).Thing.TryGetComp<CompUsable_WolfsbloodAltarTendWounds>();
+                }
+                return compUsable;
+            }
+        }
+
         public override void Notify_Starting()
         {
             base.Notify_Starting();
-            useDuration = job.GetTarget(TargetIndex.A).Thing.TryGetComp<CompUsable_WolfsbloodAltarTendWounds>().Props.useDuration;
+            useDuration = CompUsable.Props.useDuration;
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -52,6 +66,8 @@ namespace Mashed_Bloodmoon
             {
                 hediffs[i].Tended(tendQualityRange.RandomInRange, tendQualityRange.TrueMax, 1);
             }
+
+            SacrificeHearts(pawn, CompUsable.Props.heartCost);
 
             MoteMaker.ThrowText(pawn.DrawPos, pawn.Map, "NumWoundsTended".Translate(finalTendCount), 3.65f);
         }

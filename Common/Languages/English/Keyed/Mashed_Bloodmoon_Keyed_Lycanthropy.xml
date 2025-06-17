@@ -71,7 +71,7 @@
 	<Mashed_Bloodmoon_AbilityStressCost>Ability use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
 	<Mashed_Bloodmoon_AbilityStressTooHigh>using {0_label} would exceed stress limit</Mashed_Bloodmoon_AbilityStressTooHigh>
 	<Mashed_Bloodmoon_AbilityHeartCost>Ability use heart cost: {0}</Mashed_Bloodmoon_AbilityHeartCost>
-	<Mashed_Bloodmoon_AbilityNotEnoughHearts>not enough consumed hearts to use {0_label} </Mashed_Bloodmoon_AbilityNotEnoughHearts>
+	<Mashed_Bloodmoon_AbilityNotEnoughHearts>not enough consumed hearts to use {0_label}</Mashed_Bloodmoon_AbilityNotEnoughHearts>
 	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
 	<!-- ==========[totems]==========-->
 	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
@@ -82,6 +82,7 @@
 	<Mashed_Bloodmoon_ClawAlreadyUnlocked>{0_labelShort} has already unlocked the {1_label} beast form claws</Mashed_Bloodmoon_ClawAlreadyUnlocked>
 	<!-- ==========[messages]==========-->
 	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
+	<Mashed_Bloodmoon_IsLycanthrope>{0_labelShort} is a lycanthrope</Mashed_Bloodmoon_IsLycanthrope>
 	<Mashed_Bloodmoon_NotTransformedLycanthrope>{0_labelShort} is not a transformed lycanthrope</Mashed_Bloodmoon_NotTransformedLycanthrope>
 	<Mashed_Bloodmoon_SaniesLupinusTransitioned>{0_labelShort}'s Sanies Lupinus has transitioned into dormant lycanthropy</Mashed_Bloodmoon_SaniesLupinusTransitioned>
 	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
@@ -92,6 +93,7 @@
 	<Mashed_Bloodmoon_ClawsUnlocked>{0_labelShort} has unlocked the {1_label} beat form claws for use in beast form</Mashed_Bloodmoon_ClawsUnlocked>
 	<Mashed_Bloodmoon_GainedTrait>{0_labelShort} has gained the {1} trait</Mashed_Bloodmoon_GainedTrait>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
+	<Mashed_Bloodmoon_FeralWerewolfFactionMissing>The feral werewolf faction is missing.</Mashed_Bloodmoon_FeralWerewolfFactionMissing>
 	<!-- ==========[wolfsblood altar]==========-->
 	 <Mashed_Bloodmoon_AltarFillAmount>lycanthrope blood amount: {0}</Mashed_Bloodmoon_AltarFillAmount>
 	 <Mashed_Bloodmoon_WolfsbloodAltarFull>{0} is full</Mashed_Bloodmoon_WolfsbloodAltarFull>

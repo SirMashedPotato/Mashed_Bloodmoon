@@ -39,9 +39,15 @@ namespace Mashed_Bloodmoon
         public override AcceptanceReport CanBeUsedBy(Pawn p, bool forced = false, bool ignoreReserveAndReachable = false)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(p);
+            Building_WolfsbloodAltar altar = parent as Building_WolfsbloodAltar;
             if (Props.onlyLycanthrope && compLycanthrope == null)
             {
                 return "Mashed_Bloodmoon_NotLycanthrope".Translate(p);
+            }
+
+            if (Props.onlyHuman && compLycanthrope != null)
+            {
+                return "Mashed_Bloodmoon_IsLycanthrope".Translate(p);
             }
 
             if (!Props.allowTransformed && LycanthropeUtility.PawnIsTransformedLycanthrope(p))
@@ -52,6 +58,11 @@ namespace Mashed_Bloodmoon
             if (Props.heartCost > 0 && compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] - Props.heartCost < 0)
             {
                 return "Mashed_Bloodmoon_AbilityNotEnoughHearts".Translate(parent);
+            }
+
+            if (Props.bloodCost > 0 && !altar.CanConsumeBlood(Props.bloodCost))
+            {
+                return "Mashed_Bloodmoon_WolfsbloodAltarEmpty".Translate(altar);
             }
 
             return base.CanBeUsedBy(p, forced, ignoreReserveAndReachable);

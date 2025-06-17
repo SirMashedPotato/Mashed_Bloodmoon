@@ -16,7 +16,13 @@
 	 <JobDef>
 		<defName>Mashed_Bloodmoon_SacrificeTending</defName>
 		<driverClass>Mashed_Bloodmoon.JobDriver_SacrificeTending</driverClass>
-		<reportString>sacrificng at TargetA.</reportString>
+		<reportString>sacrificing at TargetA.</reportString>
+	</JobDef>
+	<!-- ==========[Mashed_Bloodmoon_SacrificeFeralWerewolfRaid]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_SacrificeFeralWerewolfRaid</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_SacrificeFeralWerewolfRaid</driverClass>
+		<reportString>sacrificing at TargetA.</reportString>
 	</JobDef>
 	<!-- ==========[Mashed_Bloodmoon_CustomiseBeastForm]========== -->
 	<JobDef>
@@ -36,10 +42,4 @@
 		<driverClass>Mashed_Bloodmoon.JobDriver_ViewBeastHuntProgress</driverClass>
 		<reportString>viewing beast hunt progress at TargetA.</reportString>
 	</JobDef>
-	<!-- ==========[Mashed_Bloodmoon_SummonHuntsmansMoon]========== -->
-	<!--<JobDef>
-		<defName>Mashed_Bloodmoon_SummonHuntsmansMoon</defName>
-		<driverClass>Mashed_Bloodmoon.JobDriver_CustomiseBeastForm</driverClass>
-		<reportString>summoning Huntsman's Moon at TargetA.</reportString>
-	</JobDef>-->
 </Defs>

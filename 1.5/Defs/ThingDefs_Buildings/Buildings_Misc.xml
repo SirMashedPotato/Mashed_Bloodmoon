@@ -4,18 +4,17 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Mashed_Bloodmoon_WolfsbloodAltar</defName>
 		<label>wolfsblood altar</label>
-		<description>A ritualistic altar used to commune with The Huntsman. The large stone bowl at its centre can be filled with lycanthrope blood. The blood can then be consumed, or sacrificed as an offering to The Huntsman.\n\nThe effects for drinking from the altar are the same as consuming a wolfsblood elixir.</description>
+		<description>A ritualistic altar used to commune with The Huntsman. The large stone bowl at its centre can be filled with lycanthrope blood. The blood can then be consumed by non-lycanthropes, or sacrificed as an offering to The Huntsman.\n\nThe effects for drinking from the altar are the same as consuming a wolfsblood elixir.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Mashed_Bloodmoon_PotionWolfsblood</ThingDef>
 		</descriptionHyperlinks>
 		<thingClass>Mashed_Bloodmoon.Building_WolfsbloodAltar</thingClass>
 		<graphicData>
-			<texPath>Things/Building/Art/Mashed_Bloodmoon_WerewolfTrophySmall</texPath>
+			<texPath>Things/Building/Misc/Mashed_Bloodmoon_WolfsbloodAltar/Mashed_Bloodmoon_WolfsbloodAltar</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2,2)</drawSize>
-			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<designationCategory>Misc</designationCategory>
 		<techLevel>Medieval</techLevel>
 		<rotatable>false</rotatable>
@@ -27,36 +26,34 @@
 			<MaxHitPoints>100</MaxHitPoints>
 			<WorkToBuild>800</WorkToBuild>
 		</statBases>
-
 		<stuffCategories>
 			<li>Stony</li>
 		</stuffCategories>
 		<defaultStuff>BlocksGranite</defaultStuff>
-		<costStuffCount>100</costStuffCount>
-
+		<costStuffCount>180</costStuffCount>
 		<researchPrerequisites>
 			<li>Stonecutting</li>
 			<li>Mashed_Bloodmoon_Wolfsblood</li>
 		</researchPrerequisites>
-
 		<comps>
 			<!-- Filling/Drinking -->
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
 				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarDrinkBlood</compClass>
 				<useJob>Mashed_Bloodmoon_DrinkFromWolfsbloodAltar</useJob>
-				<useLabel>Drink from wolfsblood altar</useLabel>
+				<useLabel>Drink</useLabel>
 				<showUseGizmo>true</showUseGizmo>
 				<onlyLycanthrope>false</onlyLycanthrope>
-				<gizmoDescription>Drink from the wolfsblood altar, consuming 10% of the lycanthrope blood it contains.</gizmoDescription>
-				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
+				<onlyHuman>true</onlyHuman>
+				<gizmoDescription>Have a non-lycanthrope drink from the wolfsblood altar, consuming 10% of the lycanthrope blood it contains.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_AltarDrinkBlood</gizmoTexPath>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
 				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarFillBlood</compClass>
 				<useJob>Mashed_Bloodmoon_FillWolfsbloodAltar</useJob>
-				<useLabel>Fill wolfsblood altar</useLabel>
+				<useLabel>Fill</useLabel>
 				<showUseGizmo>true</showUseGizmo>
 				<gizmoDescription>Have a lycanthrope bleed into the altar. Increases the amount of lycanthrope blood in the altar by 10%, and increases the lycanthropes bloodloss by 10%.</gizmoDescription>
-				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_AltarFillBlood</gizmoTexPath>
 			</li>
 			<!-- Sacrificing -->
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
@@ -65,17 +62,21 @@
 				<useLabel>Tending sacrifice</useLabel>
 				<heartCost>1</heartCost>
 				<showUseGizmo>true</showUseGizmo>
-				<gizmoDescription>Sacrifice a consumed heart to tend up to five wounds.</gizmoDescription>
+				<gizmoDescription>Have a lycanthrope sacrifice a consumed heart to tend up to five wounds.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_SacrificeTending</gizmoTexPath>
 			</li>
-			<!--<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
-				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
-				<useJob>Mashed_Bloodmoon_SummonHuntsmansMoon</useJob>
-				<useLabel>Summon Huntsman's Moon</useLabel>
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarFeralWerewolfRaid</compClass>
+				<useJob>Mashed_Bloodmoon_SacrificeFeralWerewolfRaid</useJob>
+				<useLabel>Summon Feral Werewolves</useLabel>
+				<useDuration>600</useDuration>
+				<heartCost>10</heartCost>
+				<bloodCost>1</bloodCost>
 				<showUseGizmo>true</showUseGizmo>
-				<gizmoDescription>Sacrifice a large quantity of lycanthrope blood to summon a Huntsman's Moon.</gizmoDescription>
+				<allowTransformed>false</allowTransformed>
+				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 10 consumed hearts, to summon a feral werewolf raid.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
-			</li>-->
+			</li>
 			<!-- Lycanthrope options -->
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
 				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltar</compClass>
@@ -84,7 +85,7 @@
 				<useDuration>0</useDuration>
 				<showUseGizmo>true</showUseGizmo>
 				<allowTransformed>false</allowTransformed>
-				<gizmoDescription>Customise the beast form of a lycanthrope. The lycanthrope must not be transformed.</gizmoDescription>
+				<gizmoDescription>Have a lycanthrope customise their beast form. The lycanthrope must not be transformed.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions</gizmoTexPath>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
@@ -94,7 +95,7 @@
 				<useDuration>0</useDuration>
 				<showUseGizmo>true</showUseGizmo>
 				<allowTransformed>false</allowTransformed>
-				<gizmoDescription>Upgrade the beast form of a lycanthrope. The lycanthrope must not be transformed.</gizmoDescription>
+				<gizmoDescription>Have a lycanthrope upgrade their beast form. The lycanthrope must not be transformed.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions</gizmoTexPath>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
@@ -103,7 +104,7 @@
 				<useLabel>Beast hunt progress</useLabel>
 				<useDuration>0</useDuration>
 				<showUseGizmo>true</showUseGizmo>
-				<gizmoDescription>View the beast hunt progress of a lycanthrope.</gizmoDescription>
+				<gizmoDescription>Have a lycanthrope view their beast hunt progress.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions</gizmoTexPath>
 			</li>
 		</comps>

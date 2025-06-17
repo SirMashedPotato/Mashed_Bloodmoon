@@ -12,7 +12,8 @@ namespace Mashed_Bloodmoon
         {
             for(int i = requests.Count - 1; i >= 0; i--)
             {
-                if (!(requests[i].node is PawnRenderNode_Lycanthrope || requests[i].node.Worker is PawnRenderNodeWorker_Overlay) 
+                if (!(requests[i].node is PawnRenderNode_Lycanthrope 
+                    || requests[i].node.Worker is PawnRenderNodeWorker_Overlay) 
                     || requests[i].node.Worker is PawnRenderNodeWorker_Carried)
                 {
                     requests.RemoveAt(i);

@@ -18,5 +18,33 @@ namespace Mashed_Bloodmoon
             quest = QuestUtility.GenerateQuestAndMakeAvailable(QuestScriptDefOf.Mashed_Bloodmoon_OpportunitySite_FeralWerewolfPack, slate);
             QuestUtility.SendLetterQuestAvailable(quest);
         }
+
+        internal static void TriggerWerewolfAmbush()
+        {
+            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, Find.WorldObjects.Caravans.RandomElement());
+            incidentParms.forced = true;
+            incidentParms.faction = GetFeralWerewolfFaction();
+            IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;
+            if (incidentParms.points < 200)
+            {
+                incidentParms.points = 200;
+            }
+            incidentDef.Worker.TryExecute(incidentParms);
+        }
+
+        internal static void TriggerWerewolfRaid(Map map)
+        {
+            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(RimWorld.IncidentDefOf.RaidEnemy.category, map);
+            incidentParms.forced = true;
+            incidentParms.faction = GetFeralWerewolfFaction();
+            incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
+            incidentParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
+            if (incidentParms.points < 200)
+            {
+                incidentParms.points = 200;
+            }
+            IncidentDef incidentDef = RimWorld.IncidentDefOf.RaidEnemy;
+            incidentDef.Worker.TryExecute(incidentParms);
+        }
     }
 }
