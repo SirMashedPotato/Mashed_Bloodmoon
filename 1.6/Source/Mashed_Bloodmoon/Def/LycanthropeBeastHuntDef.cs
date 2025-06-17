@@ -124,7 +124,6 @@ namespace Mashed_Bloodmoon
             if (Completed(compLycanthrope.beastHuntTracker[this]))
             {
                 compLycanthrope.completedBeastHunts++;
-                pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_BeastHuntsCompleted);
                 completionWorker?.PostBeastHuntCompleted(compLycanthrope, pawn);
                 Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
             }

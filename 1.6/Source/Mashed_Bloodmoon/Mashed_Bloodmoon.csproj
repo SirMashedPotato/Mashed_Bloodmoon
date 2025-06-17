@@ -118,7 +118,6 @@
     <Compile Include="DefOf\HediffDefOf.cs" />
     <Compile Include="DefOf\MentalStateDefOf.cs" />
     <Compile Include="DefOf\QuestScriptDefOf.cs" />
-    <Compile Include="DefOf\RecordDefOf.cs" />
     <Compile Include="DefOf\SoundDefOf.cs" />
     <Compile Include="DefOf\StatDefOf.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
@@ -227,7 +226,6 @@
     <Compile Include="PawnRenderTree\WorkerClass\PawnRenderNodeWorker_LycanthropeTransformedBody.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quests\QuestNode_Root_LostWandererJoin_WalkIn.cs" />
-    <Compile Include="RecordWorker\RecordWorker_TimeInLycanthropeForm.cs" />
     <Compile Include="Rituals\RitualAttachableOutcomeEffectWorker\RitualAttachableOutcomeEffectWorker_DiscoverFeralWerewolfPack.cs" />
     <Compile Include="Rituals\RitualAttachableOutcomeEffectWorker\RitualAttachableOutcomeEffectWorker_GrantTotem.cs" />
     <Compile Include="RoleRequirement\RoleRequirement_Lycanthrope.cs" />

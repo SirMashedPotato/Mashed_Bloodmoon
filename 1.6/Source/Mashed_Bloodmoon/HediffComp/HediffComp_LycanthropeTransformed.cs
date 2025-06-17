@@ -111,7 +111,6 @@ namespace Mashed_Bloodmoon
             }
             base.CompPostMake();
             currentStress = 0;
-            parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_TransformationCount);
 
             linkedHediffs = new List<Hediff> { };
             AddLinkedHediff(CompLycanthrope.equippedClawType.clawHediffDef, RimWorld.BodyPartDefOf.Hand);
@@ -252,7 +251,6 @@ namespace Mashed_Bloodmoon
         {
             if (victim != null)
             {
-                parent.pawn.records.Increment(RecordDefOf.Mashed_Bloodmoon_PawnsKilledTransformed);
                 LycanthropeUtility.ProgressBeastHunts(parent.pawn, victim, BeastHuntType.Kill);
                 if (Rand.Chance(parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeKillStressReductionChance)))
                 {
