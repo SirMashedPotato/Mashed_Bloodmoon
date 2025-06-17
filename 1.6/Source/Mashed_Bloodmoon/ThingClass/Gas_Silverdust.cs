@@ -10,9 +10,9 @@ namespace Mashed_Bloodmoon
         private readonly int tickInterval = 120;
         private readonly float baseDamage = 6;
 
-        public override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
+            base.TickInterval(delta);
             TickEffecter();
             try
             {
@@ -26,7 +26,7 @@ namespace Mashed_Bloodmoon
                             if (thing != null && thing is Pawn p)
                             {
                                 float silverWeakness = p.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeSilverWeakness);
-                                if(silverWeakness > 0)
+                                if (silverWeakness > 0)
                                 {
                                     DamageInfo dinfo = new DamageInfo(DamageDefOf.Burn, baseDamage * silverWeakness, 0, -1, null);
                                     p.TakeDamage(dinfo);

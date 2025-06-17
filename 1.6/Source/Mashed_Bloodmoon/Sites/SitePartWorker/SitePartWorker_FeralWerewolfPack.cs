@@ -46,7 +46,7 @@ namespace Mashed_Bloodmoon
             return base.GetPostProcessedThreatLabel(site, sitePart) + ": " + "KnownSiteThreatEnemyCountAppend".Translate(GetWerewolfCount(site, sitePart.parms), "Enemies".Translate());
         }
 
-        public override SitePartParams GenerateDefaultParams(float myThreatPoints, int tile, Faction faction)
+        public override SitePartParams GenerateDefaultParams(float myThreatPoints, PlanetTile tile, Faction faction)
         {
             SitePartParams sitePartParams = base.GenerateDefaultParams(myThreatPoints, tile, faction);
             sitePartParams.threatPoints = Mathf.Max(sitePartParams.threatPoints * 2f, FactionDefOf.Mashed_Bloodmoon_FeralWerewolves.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Combat));

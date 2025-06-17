@@ -24,7 +24,7 @@ namespace Mashed_Bloodmoon
             CreateFX();
         }
 
-        public override void Tick()
+        protected override void TickInterval(int delta)
         {
             if (!Spawned)
             {
@@ -41,7 +41,7 @@ namespace Mashed_Bloodmoon
                 allowDestroyNonDestroyable = false;
                 Spawn(map, position);
             }
-            base.Tick();
+            base.TickInterval(delta);
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)

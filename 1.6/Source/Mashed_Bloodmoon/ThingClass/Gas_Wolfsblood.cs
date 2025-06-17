@@ -9,9 +9,8 @@ namespace Mashed_Bloodmoon
     {
         private readonly int tickInterval = 60;
 
-        public override void Tick()
+        protected override void TickInterval(int delta)
         {
-            base.Tick();
             try
             {
                 if (this.IsHashIntervalTick(tickInterval))
