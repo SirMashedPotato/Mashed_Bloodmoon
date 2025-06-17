@@ -4,7 +4,7 @@
 	<StatCategoryDef>
 		<defName>Mashed_Bloodmoon_Lycanthrope</defName>
 		<label>Lycanthropy</label>
-		<displayOrder>111</displayOrder>
+		<displayOrder>13</displayOrder>
 		<displayAllByDefault>true</displayAllByDefault>
 	</StatCategoryDef>
 </Defs>
