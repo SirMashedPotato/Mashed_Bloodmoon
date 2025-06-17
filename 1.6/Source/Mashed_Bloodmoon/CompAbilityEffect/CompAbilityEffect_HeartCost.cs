@@ -8,7 +8,10 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            CompLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= Props.heartCost;
+            if (target.Pawn == parent.pawn)
+            {
+                CompLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= Props.heartCost;
+            }
             base.Apply(target, dest);
         }
 

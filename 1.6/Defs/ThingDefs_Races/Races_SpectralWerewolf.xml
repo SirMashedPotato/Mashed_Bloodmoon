@@ -6,6 +6,10 @@
 		<label>spectral werewolf</label>
 		<description>A spectral werewolf summoned by a lycanthrope. It will only remain in this form for a short time before dissipating.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
 		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
+		</statBases>
 		<tools>
 			<li>
 				<label>left hand</label>
@@ -64,6 +68,7 @@
 			<alwaysAwake>true</alwaysAwake>
 			<hasMeat>false</hasMeat>
 			<hasCorpse>false</hasCorpse>
+			<canBeVacuumBurnt>false</canBeVacuumBurnt>
 		</race>
 	</ThingDef>
 	<PawnKindDef>

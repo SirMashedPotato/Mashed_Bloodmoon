@@ -9,7 +9,10 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            CompLycanthropeTransformed.currentStress += Props.stressCost;
+            if (target.Pawn == parent.pawn)
+            {
+                CompLycanthropeTransformed.currentStress += Props.stressCost;
+            }
             base.Apply(target, dest);
         }
 
