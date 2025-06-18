@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
+	<ThingDef ParentName="ResourceBase" Name="Mashed_Bloodmoon_TotemBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Neolithic</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemCrystalSkull</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Mashed_Bloodmoon_LycanthropeTotems</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Mashed_Bloodmoon_LycanthropeTotems</li>
+		</tradeTags>
+		<statBases>
+			<MarketValue>150</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.5</Mass>
+		</statBases>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>All</tradeability>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use {0}</useLabel>
+				<showUseGizmo>true</showUseGizmo>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase" Name="Mashed_Bloodmoon_TotemUsableBase" Abstract="True">
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use {0}</useLabel>
+				<showUseGizmo>true</showUseGizmo>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+	</ThingDef>
+	
+</Defs>

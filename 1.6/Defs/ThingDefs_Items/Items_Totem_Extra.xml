@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemGold]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase">
+		<defName>Mashed_Bloodmoon_TotemGold</defName>
+		<label>gold Huntsman's totem</label>
+		<description>A totem of the hunt, a skull seemingly made entirely out of solid gold. Totems such as are nothing more than peculiar collectibles.</description>
+		<graphicData>
+			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemCrystalSkullGold</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>50</MarketValue>
+		</statBases>
+	</ThingDef>
+</Defs>

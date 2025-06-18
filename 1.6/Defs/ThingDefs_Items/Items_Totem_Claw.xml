@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
-	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase" Name="Mashed_Bloodmoon_TotemClawBase" Abstract="True">
+	<!-- ==========[Mashed_Bloodmoon_TotemUsableBase]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemUsableBase" Name="Mashed_Bloodmoon_TotemClawBase" Abstract="True">
 		<graphicData>
 			<texPath>Things/Item/Special/Mashed_Bloodmoon_Totem/Mashed_Bloodmoon_TotemCrystalSkullClaw</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
 			<MarketValue>900</MarketValue>
@@ -14,7 +13,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemClawBase">
 		<defName>Mashed_Bloodmoon_TotemFlameClaws</defName>
 		<label>Huntsman's totem (Infernal Claws)</label>
-		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Infernal Claws for use in beast form.</description>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of crystal. While totems such as are may seem to be nothing more than peculiar collectibles, their true value can be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Infernal Claws for use in beast form.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClawsFlame</HediffDef>
 		</descriptionHyperlinks>
@@ -28,7 +27,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemClawBase">
 		<defName>Mashed_Bloodmoon_TotemEMPClaws</defName>
 		<label>Huntsman's totem (Magnetic Claws)</label>
-		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Magnetic Claws for use in beast form.</description>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of crystal. While totems such as are may seem to be nothing more than peculiar collectibles, their true value can be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Magnetic Claws for use in beast form.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClawsEMP</HediffDef>
 		</descriptionHyperlinks>
@@ -42,7 +41,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemClawBase">
 		<defName>Mashed_Bloodmoon_TotemToxicClaws</defName>
 		<label>Huntsman's totem (Noxious Claws)</label>
-		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Noxious Claws for use in beast form.</description>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of crystal. While totems such as are may seem to be nothing more than peculiar collectibles, their true value can be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Noxious Claws for use in beast form.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClawsToxic</HediffDef>
 		</descriptionHyperlinks>
@@ -56,7 +55,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemClawBase">
 		<defName>Mashed_Bloodmoon_TotemSilverClaws</defName>
 		<label>Huntsman's totem (Silver Claws)</label>
-		<description>A rare totem of the hunt, a skull seemingly made entirely out of a strange crystal. Totems such as are nothing more than peculiar collectibles. Their true value can only be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Silver Claws for use in beast form.</description>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of crystal. While totems such as are may seem to be nothing more than peculiar collectibles, their true value can be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Silver Claws for use in beast form.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClawsSilver</HediffDef>
 		</descriptionHyperlinks>
