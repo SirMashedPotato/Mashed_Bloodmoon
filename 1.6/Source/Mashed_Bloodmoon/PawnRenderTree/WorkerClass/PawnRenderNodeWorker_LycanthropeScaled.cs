@@ -11,7 +11,7 @@ namespace Mashed_Bloodmoon
         public override Vector3 ScaleFor(PawnRenderNode node, PawnDrawParms parms)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parms.pawn);
-            Vector2 drawSize = compLycanthrope.LycanthropeTypeDef.graphicData.drawSize;
+            Vector2 drawSize = compLycanthrope.BeastFormDef.graphicData.drawSize;
             return new Vector3(drawSize.x * parms.pawn.DrawSize.x, 0, drawSize.y * parms.pawn.DrawSize.y);
         }
     }

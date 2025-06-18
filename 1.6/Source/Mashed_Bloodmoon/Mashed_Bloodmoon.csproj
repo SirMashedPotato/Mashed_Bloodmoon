@@ -131,7 +131,7 @@
     <Compile Include="Def\AbstractLycanthropeDef.cs" />
     <Compile Include="Def\LycanthropeTraitDef.cs" />
     <Compile Include="Def\LycanthropeTransformationTypeDef.cs" />
-    <Compile Include="Def\LycanthropeTypeDef.cs" />
+    <Compile Include="Def\LycanthropeBeastFormDef.cs" />
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
     <Compile Include="Def\LycanthropeTotemDef.cs" />
     <Compile Include="DefOf\PawnKindDefOf.cs" />

@@ -12,8 +12,8 @@ namespace Mashed_Bloodmoon
         Rot4 pawnRotation = new Rot4(2);
 
         ///Cached values
-        readonly LycanthropeTypeDef originalLycanthropeTypeDef;
-        readonly LycanthropeTransformationTypeDef originalLycanthropeTransformationTypeDef;
+        readonly LycanthropeBeastFormDef originalBeastFormDef;
+        readonly LycanthropeTransformationTypeDef originalTransformationTypeDef;
         readonly Color originalPrimaryColour;
         readonly Color originalSecondaryColour;
         readonly Color originalTertiaryColour;
@@ -25,8 +25,8 @@ namespace Mashed_Bloodmoon
 
         public Page_CustomiseBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
-            originalLycanthropeTypeDef = compLycanthrope.LycanthropeTypeDef;
-            originalLycanthropeTransformationTypeDef = compLycanthrope.TransformationTypeDef;
+            originalBeastFormDef = compLycanthrope.BeastFormDef;
+            originalTransformationTypeDef = compLycanthrope.TransformationTypeDef;
             originalPrimaryColour = compLycanthrope.primaryColour;
             originalSecondaryColour = compLycanthrope.secondaryColour;
             originalTertiaryColour = compLycanthrope.tertiaryColour;
@@ -57,17 +57,17 @@ namespace Mashed_Bloodmoon
             Rect primaryRect = inRect;
             primaryRect.height = (inRect.height / 3) - ((Assets.RectPadding / 3) * 2);
             Widgets.DrawMenuSection(primaryRect);
-            DoColourSection(primaryRect, ref compLycanthrope.primaryColour, originalPrimaryColour, compLycanthrope.LycanthropeTypeDef.PrimaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
+            DoColourSection(primaryRect, ref compLycanthrope.primaryColour, originalPrimaryColour, compLycanthrope.BeastFormDef.PrimaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel");
 
             Rect secondaryRect = primaryRect;
             secondaryRect.y += primaryRect.height + Assets.RectPadding;
             Widgets.DrawMenuSection(secondaryRect);
-            DoColourSection(secondaryRect, ref compLycanthrope.secondaryColour, originalSecondaryColour, compLycanthrope.LycanthropeTypeDef.SecondaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
+            DoColourSection(secondaryRect, ref compLycanthrope.secondaryColour, originalSecondaryColour, compLycanthrope.BeastFormDef.SecondaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel");
 
             Rect tertiaryRect = secondaryRect;
             tertiaryRect.y += secondaryRect.height + Assets.RectPadding;
             Widgets.DrawMenuSection(tertiaryRect);
-            DoColourSection(tertiaryRect, ref compLycanthrope.tertiaryColour, originalTertiaryColour, compLycanthrope.LycanthropeTypeDef.TertiaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
+            DoColourSection(tertiaryRect, ref compLycanthrope.tertiaryColour, originalTertiaryColour, compLycanthrope.BeastFormDef.TertiaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
         private void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
@@ -240,17 +240,17 @@ namespace Mashed_Bloodmoon
             RectDivider rectDivider = new RectDivider(inRect, inRect.GetHashCode(), null);
 
             RectDivider rect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            TaggedString label1 = "Mashed_Bloodmoon_Type".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.LabelCap;
+            TaggedString label1 = "Mashed_Bloodmoon_Type".Translate() + ": " + compLycanthrope.BeastFormDef.LabelCap;
             Widgets.Label(rect1.NewCol(label1.GetWidthCached(), HorizontalJustification.Left), label1);
 
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            TaggedString label2 = "Mashed_Bloodmoon_Artist".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.artist;
+            TaggedString label2 = "Mashed_Bloodmoon_Artist".Translate() + ": " + compLycanthrope.BeastFormDef.artist;
             Widgets.Label(rect2.NewCol(label2.GetWidthCached(), HorizontalJustification.Left), label2);
 
             TaggedString label3 = "Mashed_Bloodmoon_Effect".Translate() + ": " + compLycanthrope.TransformationTypeDef.LabelCap;
             Widgets.Label(rect1.NewCol(label3.GetWidthCached(), HorizontalJustification.Right), label3);
 
-            TaggedString label4 = "Source".Translate() + ": " + compLycanthrope.LycanthropeTypeDef.modContentPack.Name;
+            TaggedString label4 = "Source".Translate() + ": " + compLycanthrope.BeastFormDef.modContentPack.Name;
             Widgets.Label(rect2.NewCol(label4.GetWidthCached(), HorizontalJustification.Right), label4);
         }
 
@@ -260,8 +260,8 @@ namespace Mashed_Bloodmoon
         protected override void DoBack()
         {
             base.DoBack();
-            compLycanthrope.LycanthropeTypeDef = originalLycanthropeTypeDef;
-            compLycanthrope.TransformationTypeDef = originalLycanthropeTransformationTypeDef;
+            compLycanthrope.BeastFormDef = originalBeastFormDef;
+            compLycanthrope.TransformationTypeDef = originalTransformationTypeDef;
             compLycanthrope.primaryColour = originalPrimaryColour;
             compLycanthrope.secondaryColour = originalSecondaryColour;
             compLycanthrope.tertiaryColour = originalTertiaryColour;
@@ -292,13 +292,13 @@ namespace Mashed_Bloodmoon
         {
             lycanthropeTypeOptions = new List<FloatMenuOption>();
 
-            foreach (LycanthropeTypeDef def in DefDatabase<LycanthropeTypeDef>.AllDefs)
+            foreach (LycanthropeBeastFormDef def in DefDatabase<LycanthropeBeastFormDef>.AllDefs)
             {
                 FloatMenuOption item;
                 AcceptanceReport acceptanceReport = def.PawnRequirementsMet(pawn);
                 item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
                 {
-                    compLycanthrope.LycanthropeTypeDef = def;
+                    compLycanthrope.BeastFormDef = def;
                 });
 
                 if (!acceptanceReport.Accepted)
@@ -341,8 +341,8 @@ namespace Mashed_Bloodmoon
 
         private void Reset()
         {
-            compLycanthrope.LycanthropeTypeDef = originalLycanthropeTypeDef;
-            compLycanthrope.TransformationTypeDef = originalLycanthropeTransformationTypeDef;
+            compLycanthrope.BeastFormDef = originalBeastFormDef;
+            compLycanthrope.TransformationTypeDef = originalTransformationTypeDef;
             compLycanthrope.primaryColour = originalPrimaryColour;
             compLycanthrope.secondaryColour = originalSecondaryColour;
             compLycanthrope.tertiaryColour = originalTertiaryColour;

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_Werethrumbo]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef>
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef>
 		<defName>Mashed_Bloodmoon_Werethrumbo</defName>
 		<label>werethrumbo</label>
 		<artist>SirMashedPotato</artist>
@@ -45,5 +45,5 @@
 				<partDef>Head</partDef>
 			</li>
 		</transformationWorkers>
-	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
 </Defs>

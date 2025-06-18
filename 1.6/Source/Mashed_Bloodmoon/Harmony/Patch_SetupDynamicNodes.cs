@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
         {
             if (LycanthropeUtility.PawnIsTransformedLycanthrope(__instance.pawn, true))
             {
-                LycanthropeTypeDef typeDef = LycanthropeUtility.GetCompLycanthrope(__instance.pawn).LycanthropeTypeDef;
+                LycanthropeBeastFormDef typeDef = LycanthropeUtility.GetCompLycanthrope(__instance.pawn).BeastFormDef;
                 if (typeDef.RenderNodeProperties.NullOrEmpty())
                 {
                     return;

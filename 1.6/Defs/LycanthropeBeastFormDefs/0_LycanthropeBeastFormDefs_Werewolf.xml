@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfBase]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef Name="Mashed_Bloodmoon_WerewolfBase" Abstract="True">
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef Name="Mashed_Bloodmoon_WerewolfBase" Abstract="True">
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
 			<drawSize>1.4</drawSize>
@@ -18,9 +18,9 @@
 				<rotDrawMode>Fresh</rotDrawMode>
 			</li>
 		</renderNodeProperties>
-	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
 	<!-- ==========[Mashed_Bloodmoon_Werewolf]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef ParentName="Mashed_Bloodmoon_WerewolfBase">
 		<defName>Mashed_Bloodmoon_Werewolf</defName>
 		<label>werewolf</label>
 		<artist>SirMashedPotato</artist>
@@ -30,9 +30,9 @@
 			<colorThree>(233,208,138)</colorThree>
 		</graphicData>
 		<renderNodeProperties/>
-	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAmrita]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef ParentName="Mashed_Bloodmoon_WerewolfBase">
 		<defName>Mashed_Bloodmoon_WerewolfAmrita</defName>
 		<label>werewolf (Amrita)</label>
 		<artist>SirMashedPotato</artist>
@@ -57,9 +57,9 @@
 				<beastHuntDef>Mashed_Bloodmoon_FeralWerewolvesII</beastHuntDef>
 			</li>
 		</requirementWorkers>
-	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef ParentName="Mashed_Bloodmoon_WerewolfBase">
 		<defName>Mashed_Bloodmoon_WerewolfAnima</defName>
 		<label>werewolf (Anima)</label>
 		<artist>SirMashedPotato</artist>
@@ -82,9 +82,9 @@
 		<requirementWorkers>
 			<li Class="Mashed_Bloodmoon.RequirementWorker_Psylink"/>
 		</requirementWorkers>
-	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfGlowing]========== -->
-	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef ParentName="Mashed_Bloodmoon_WerewolfBase">
 		<defName>Mashed_Bloodmoon_WerewolfGlowing</defName>
 		<label>werewolf (Glowing)</label>
 		<artist>SirMashedPotato</artist>
@@ -110,5 +110,5 @@
 				<clawTypeDef>Mashed_Bloodmoon_ToxicClaws</clawTypeDef>
 			</li>
 		</requirementWorkers>
-	</Mashed_Bloodmoon.LycanthropeTypeDef>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
 </Defs>

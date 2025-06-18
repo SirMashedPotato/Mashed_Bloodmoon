@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
     {
         public float chance = 1f;
         public float transformOnDamageChanceOverride = 0.1f;
-        public LycanthropeTypeDef forcedTypeDef = null;
+        public LycanthropeBeastFormDef forcedTypeDef = null;
         public LycanthropeTransformationTypeDef forcedTransformationTypeDef = null;
         public LycanthropeClawTypeDef forcedClawTypeDef = null;
         public Color? primaryColourOverride = null;
@@ -61,7 +61,7 @@ namespace Mashed_Bloodmoon
 
             if (forcedTypeDef != null)
             {
-                compLycanthrope.LycanthropeTypeDef = forcedTypeDef;
+                compLycanthrope.BeastFormDef = forcedTypeDef;
                 compLycanthrope.ResetColours();
             }
 

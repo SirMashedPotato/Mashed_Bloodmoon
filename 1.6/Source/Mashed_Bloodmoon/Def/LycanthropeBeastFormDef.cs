@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LycanthropeTypeDef : LycanthropeDef
+    public class LycanthropeBeastFormDef : LycanthropeDef
     {
         public string artist = "???";
         public LycanthropeGraphicData graphicData;

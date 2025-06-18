@@ -112,7 +112,7 @@ namespace Mashed_Bloodmoon
             parent.pawn.jobs.StopAll();
             CompLycanthrope.TransformationTypeDef.PostTransformationBegin(parent.pawn);
 
-            CompLycanthrope.LycanthropeTypeDef.PostTransformationBegin(parent.pawn);
+            CompLycanthrope.BeastFormDef.PostTransformationBegin(parent.pawn);
             foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
                 parent.pawn.abilities.GainAbility(unlockedAbility.abilityDef);
@@ -161,7 +161,7 @@ namespace Mashed_Bloodmoon
             CompLycanthrope.TransformationTypeDef.PostTransformationEnd(parent.pawn);
 
             RemoveLinkedHediffs();
-            CompLycanthrope.LycanthropeTypeDef.PostTransformationEnd(parent.pawn);
+            CompLycanthrope.BeastFormDef.PostTransformationEnd(parent.pawn);
             foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
                 parent.pawn.abilities.RemoveAbility(unlockedAbility.abilityDef);

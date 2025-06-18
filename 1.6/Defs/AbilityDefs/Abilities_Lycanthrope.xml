@@ -9,7 +9,6 @@
 		<descriptionHyperlinks>
 			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
 		</descriptionHyperlinks>
-		<level>1</level>
 		<cooldownTicksRange>300</cooldownTicksRange>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_ConsumeHeart</iconPath>
 		<jobDef>CastAbilityOnThingMelee</jobDef>
@@ -343,7 +342,6 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- ==========[Mashed_Bloodmoon_MetabolicSurge]==========-->
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
 	<AbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>

@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
     {
         public HediffCompProperties_Lycanthrope Props => (HediffCompProperties_Lycanthrope)props;
 
-        private LycanthropeTypeDef lycanthropeTypeDef;
+        private LycanthropeBeastFormDef beastFormDef;
         private LycanthropeTransformationTypeDef transformationTypeDef;
         public DefMap<WorkTypeDef, int> cachedWorkPriorities;
         public Color primaryColour = Color.white;
@@ -27,15 +27,15 @@ namespace Mashed_Bloodmoon
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
 
-        public LycanthropeTypeDef LycanthropeTypeDef
+        public LycanthropeBeastFormDef BeastFormDef
         {
             get
             {
-                return lycanthropeTypeDef;
+                return beastFormDef;
             }
             set
             {
-                lycanthropeTypeDef = value;
+                beastFormDef = value;
             }
         }
 
@@ -56,7 +56,7 @@ namespace Mashed_Bloodmoon
             base.CopyFrom(other);
             if (other is HediffComp_Lycanthrope otherLycanthrope)
             {
-                lycanthropeTypeDef = otherLycanthrope.LycanthropeTypeDef;
+                beastFormDef = otherLycanthrope.BeastFormDef;
                 transformationTypeDef = otherLycanthrope.TransformationTypeDef;
                 cachedWorkPriorities = otherLycanthrope.cachedWorkPriorities;
                 primaryColour = otherLycanthrope.primaryColour;
@@ -73,9 +73,9 @@ namespace Mashed_Bloodmoon
 
         public void ResetColours()
         {
-            primaryColour = lycanthropeTypeDef.PrimaryColorDefault;
-            secondaryColour = lycanthropeTypeDef.SecondaryColorDefault;
-            tertiaryColour = lycanthropeTypeDef.TertiaryColorDefault;
+            primaryColour = beastFormDef.PrimaryColorDefault;
+            secondaryColour = beastFormDef.SecondaryColorDefault;
+            tertiaryColour = beastFormDef.TertiaryColorDefault;
         }
 
         public void TransformPawn(bool startInFury = false)
@@ -107,7 +107,7 @@ namespace Mashed_Bloodmoon
         public override void CompPostMake()
         {
             base.CompPostMake();
-            lycanthropeTypeDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
+            beastFormDef = LycanthropeTypeDefOf.Mashed_Bloodmoon_Werewolf;
             transformationTypeDef = LycanthropeTransformationTypeDefOf.Mashed_Bloodmoon_Bloodmoon;
             ResetColours();
             usedTotemTracker.Add(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
@@ -243,7 +243,7 @@ namespace Mashed_Bloodmoon
         {
             Scribe_Deep.Look(ref cachedWorkPriorities, "cachedWorkPriorities");
             Scribe_Defs.Look(ref equippedClawType, "equippedClawType");
-            Scribe_Defs.Look(ref lycanthropeTypeDef, "lycanthropeTypeDef");
+            Scribe_Defs.Look(ref beastFormDef, "beastFormDef");
             Scribe_Defs.Look(ref transformationTypeDef, "transformationTypeDef");
             Scribe_Values.Look(ref primaryColour, "primaryColour", Color.white);
             Scribe_Values.Look(ref secondaryColour, "secondaryColour", Color.white);

@@ -53,7 +53,6 @@
 		<abilityDef>Mashed_Bloodmoon_HuntsmansMark</abilityDef>
 		<purchaseHeartCost>50</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
-	<!-- ==========[Mashed_Bloodmoon_MetabolicSurge]========== -->
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_MoonVeil</defName>
