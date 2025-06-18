@@ -5,7 +5,7 @@
 		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Hunger by 1.</extraTooltip>
 		<targetThingDef>Mashed_Bloodmoon_FeralWerewolf</targetThingDef>
 		<completionWorkers>
-			<li Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<li Class="Mashed_Bloodmoon.CompletionWorker_UpgradeTotem">
 				<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>
 				<useCount>1</useCount>
 			</li>

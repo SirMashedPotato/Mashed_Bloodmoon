@@ -190,8 +190,8 @@
     <Compile Include="ThinkNode\JobGiver_LycanthropeFury.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastFollowParent.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastWanderNearParent.cs" />
-    <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UnlockAbility.cs" />
-    <Compile Include="LycanthropeBeastHuntCompletionWorker\LBHCWorker_UpgradeTotem.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\CompletionWorker_UnlockAbility.cs" />
+    <Compile Include="LycanthropeBeastHuntCompletionWorker\CompletionWorker_UpgradeTotem.cs" />
     <Compile Include="LycanthropeBeastHuntCompletionWorker\LycanthropeBeastHuntCompletionWorker.cs" />
     <Compile Include="LycanthropeTransformationWorker\TransformationWorker_AddLinkedHediff.cs" />
     <Compile Include="LycanthropeTransformationWorker\TransformationEffectWorker\TransformationWorker_Explosion.cs" />

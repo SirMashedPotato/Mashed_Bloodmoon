@@ -3,22 +3,22 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LBHCWorker_UnlockAbility : LycanthropeBeastHuntCompletionWorker
+    public class CompletionWorker_UpgradeTotem : LycanthropeBeastHuntCompletionWorker
     {
         public override void PostBeastHuntCompleted(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
-            abilityDef.Unlock(compLycanthrope);
+            totemTypeDef.Upgrade(compLycanthrope, useCount);
         }
 
         public override IEnumerable<string> ConfigErrors()
         {
-            if (abilityDef == null)
+            if (totemTypeDef == null)
             {
-                yield return "abilityDef is null";
+                yield return "totemTypeDef is null";
             }
         }
 
-        public LycanthropeAbilityDef abilityDef;
-        public int level = 1;
+        public LycanthropeTotemDef totemTypeDef;
+        public int useCount = 1;
     }
 }

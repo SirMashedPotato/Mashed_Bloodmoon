@@ -5,7 +5,7 @@
 		<beastHuntType>Kill</beastHuntType>
 		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Hunger by 1.</extraTooltip>
 		<completionWorkers>
-			<li Class="Mashed_Bloodmoon.LBHCWorker_UpgradeTotem">
+			<li Class="Mashed_Bloodmoon.CompletionWorker_UpgradeTotem">
 				<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
 				<useCount>1</useCount>
 			</li>
