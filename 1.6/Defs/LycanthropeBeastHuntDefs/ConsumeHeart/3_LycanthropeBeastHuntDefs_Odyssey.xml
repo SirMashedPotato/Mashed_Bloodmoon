@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_AlphaThrumbo]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.odyssey">
+		<defName>Mashed_Bloodmoon_AlphaThrumbo</defName>
+		<label>beast hunt: Alpha Thrumbo</label>
+		<description>Consume the heart of an alpha thrumbo.</description>
+		<targetThingDef>AlphaThrumbo</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>
