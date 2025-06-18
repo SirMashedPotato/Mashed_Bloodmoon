@@ -32,7 +32,7 @@ namespace Mashed_Bloodmoon
             incidentDef.Worker.TryExecute(incidentParms);
         }
 
-        internal static void TriggerWerewolfRaid(Map map)
+        internal static IncidentParms WerewolfRaidParms(Map map)
         {
             IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(RimWorld.IncidentDefOf.RaidEnemy.category, map);
             incidentParms.forced = true;
@@ -43,6 +43,12 @@ namespace Mashed_Bloodmoon
             {
                 incidentParms.points = 200;
             }
+            return incidentParms;
+        }
+
+        internal static void TriggerWerewolfRaid(Map map)
+        {
+            IncidentParms incidentParms = WerewolfRaidParms(map);
             IncidentDef incidentDef = RimWorld.IncidentDefOf.RaidEnemy;
             incidentDef.Worker.TryExecute(incidentParms);
         }

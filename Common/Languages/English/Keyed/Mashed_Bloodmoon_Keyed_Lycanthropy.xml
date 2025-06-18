@@ -94,6 +94,7 @@
 	<Mashed_Bloodmoon_GainedTrait>{0_labelShort} has gained the {1} trait</Mashed_Bloodmoon_GainedTrait>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
 	<Mashed_Bloodmoon_FeralWerewolfFactionMissing>The feral werewolf faction is missing.</Mashed_Bloodmoon_FeralWerewolfFactionMissing>
+	<Mashed_Bloodmoon_FeralWerewolfFactionCantRaid>The feral werewolf faction can't raid here.</Mashed_Bloodmoon_FeralWerewolfFactionCantRaid>
 	<!-- ==========[wolfsblood altar]==========-->
 	 <Mashed_Bloodmoon_AltarFillAmount>lycanthrope blood amount: {0}</Mashed_Bloodmoon_AltarFillAmount>
 	 <Mashed_Bloodmoon_WolfsbloodAltarFull>{0} is full</Mashed_Bloodmoon_WolfsbloodAltarFull>
