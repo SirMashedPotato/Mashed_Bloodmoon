@@ -3,7 +3,6 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-
 namespace Mashed_Bloodmoon
 {
     public class LycanthropeTransformationTypeDef : LycanthropeDef
@@ -15,9 +14,8 @@ namespace Mashed_Bloodmoon
         public SoundDef startSoundDef;
         public SoundDef endSoundDef;
 
-        public void PlayTransformationStartEffects(Pawn pawn)
+        public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {
-
             if (startEffecterDef != null)
             {
                 startEffecterDef.Spawn(pawn.Position, pawn.Map).Cleanup();
@@ -31,12 +29,11 @@ namespace Mashed_Bloodmoon
                 startSoundDef.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
             }
 
-            transformationWorker?.PostTransformationBegin(pawn);
+            base.PostTransformationBegin(pawn, value);
         }
 
-        public void PlayTransformationEndEffects(Pawn pawn)
+        public override void PostTransformationEnd(Pawn pawn, int value = 0)
         {
-
             if (endEffecterDef != null)
             {
                 endEffecterDef.Spawn(pawn.Position, pawn.Map).Cleanup();
@@ -50,7 +47,7 @@ namespace Mashed_Bloodmoon
                 endSoundDef.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
             }
 
-            transformationWorker?.PostTransformationEnd(pawn);
+            base.PostTransformationEnd(pawn, value);
         }
     }
 }

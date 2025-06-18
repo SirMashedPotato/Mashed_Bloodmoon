@@ -52,9 +52,11 @@
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 			</li>
 		</renderNodeProperties>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
-			<beastHuntDef>Mashed_Bloodmoon_FeralWerewolvesII</beastHuntDef>
-		</requirementWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+				<beastHuntDef>Mashed_Bloodmoon_FeralWerewolvesII</beastHuntDef>
+			</li>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfAnima]========== -->
 	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
@@ -77,7 +79,9 @@
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 			</li>
 		</renderNodeProperties>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfGlowing]========== -->
 	<Mashed_Bloodmoon.LycanthropeTypeDef ParentName="Mashed_Bloodmoon_WerewolfBase">
@@ -101,8 +105,10 @@
 				<rotDrawMode>Fresh</rotDrawMode>
 			</li>
 		</renderNodeProperties>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_ClawType">
-			<clawTypeDef>Mashed_Bloodmoon_ToxicClaws</clawTypeDef>
-		</requirementWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_ClawType">
+				<clawTypeDef>Mashed_Bloodmoon_ToxicClaws</clawTypeDef>
+			</li>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 </Defs>

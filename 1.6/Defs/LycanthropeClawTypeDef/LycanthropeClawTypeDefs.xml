@@ -6,7 +6,7 @@
 		<label>lycanthrope claws</label>
 		<description>The standard claws of a lycanthrope. Attacks with these may infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClaws</clawHediffDef>
-		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
+		<purchaseHeartCost>1</purchaseHeartCost>		<!-- in case it somehow gets removed from a pawn -->
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_SharpClaws]========== -->
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
@@ -15,9 +15,11 @@
 		<description>Strong lycanthrope claws sharpened through many hunts. Attacks from these deal increased damage, and do not infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsSharp</clawHediffDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
-			<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
-		</requirementWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+				<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
+			</li>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_BluntClaws]========== -->
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
@@ -26,9 +28,11 @@
 		<description>Strong lycanthrope claws blunted through many hunts. Attacks from these deal high blunt damage, and do not infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsBlunt</clawHediffDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
-			<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
-		</requirementWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+				<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
+			</li>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_FlameClaws]========== -->
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>

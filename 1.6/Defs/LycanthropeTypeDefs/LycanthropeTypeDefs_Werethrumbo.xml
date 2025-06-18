@@ -34,12 +34,16 @@
 				<rotDrawMode>Fresh</rotDrawMode>
 			</li>
 		</renderNodeProperties>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
-			<beastHuntDef>Mashed_Bloodmoon_Thrumbo</beastHuntDef>
-		</requirementWorker>
-		<transformationWorker Class="Mashed_Bloodmoon.LTWorker_AddLinkedHediff">
-			<hediffDef>Mashed_Bloodmoon_LycanthropeHorn</hediffDef>
-			<partDef>Head</partDef>
-		</transformationWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+				<beastHuntDef>Mashed_Bloodmoon_Thrumbo</beastHuntDef>
+			</li>
+		</requirementWorkers>
+		<transformationWorkers>
+			<li Class="Mashed_Bloodmoon.LTWorker_AddLinkedHediff">
+				<hediffDef>Mashed_Bloodmoon_LycanthropeHorn</hediffDef>
+				<partDef>Head</partDef>
+			</li>
+		</transformationWorkers>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 </Defs>

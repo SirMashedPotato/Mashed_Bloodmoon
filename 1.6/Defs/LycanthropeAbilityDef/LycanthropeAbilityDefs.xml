@@ -6,7 +6,7 @@
 		<label>consume heart</label>
 		<description>Consume a healthy and fresh heart, either from a corpse or a downed pawn. Each heart consumed will increase lycanthropic stress limit by one.</description>
 		<abilityDef>Mashed_Bloodmoon_ConsumeHeart</abilityDef>
-		<purchaseHeartCost>1</purchaseHeartCost> <!-- in case it somehow gets removed from a pawn -->
+		<purchaseHeartCost>1</purchaseHeartCost>		<!-- in case it somehow gets removed from a pawn -->
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
@@ -39,9 +39,11 @@
 		<description>Place a bounty on a target. Successfully killing the target in time will grant a gold reward based on the targets combat power.</description>
 		<abilityDef>Mashed_Bloodmoon_HuntsmansBounty</abilityDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
-			<requiredCount>10</requiredCount>
-		</requirementWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+				<requiredCount>10</requiredCount>
+			</li>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>

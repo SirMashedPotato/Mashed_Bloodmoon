@@ -121,22 +121,22 @@ namespace Mashed_Bloodmoon
             base.CompPostPostAdd(dinfo);
 
             parent.pawn.jobs.StopAll();
-            CompLycanthrope.TransformationTypeDef.PlayTransformationStartEffects(parent.pawn);
+            CompLycanthrope.TransformationTypeDef.PostTransformationBegin(parent.pawn);
 
-            CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationBegin(parent.pawn);
+            CompLycanthrope.LycanthropeTypeDef.PostTransformationBegin(parent.pawn);
             foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
                 parent.pawn.abilities.GainAbility(unlockedAbility.abilityDef);
             }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
-                usedTotem.Key.transformationWorker?.PostTransformationBegin(parent.pawn, usedTotem.Value);
+                usedTotem.Key.PostTransformationBegin(parent.pawn, usedTotem.Value);
             }
-            foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
+            foreach (KeyValuePair<LycanthropeBeastHuntDef, int> beastHuntDef in CompLycanthrope.beastHuntTracker)
             {
-                if (greatBeastDef.Key.Completed(greatBeastDef.Value))
+                if (beastHuntDef.Key.Completed(beastHuntDef.Value))
                 {
-                    greatBeastDef.Key.transformationWorker?.PostTransformationBegin(parent.pawn);
+                    beastHuntDef.Key.PostTransformationBegin(parent.pawn);
                 }
             }
         }
@@ -181,23 +181,23 @@ namespace Mashed_Bloodmoon
             base.CompPostPostRemoved();
 
             parent.pawn.jobs.StopAll();
-            CompLycanthrope.TransformationTypeDef.PlayTransformationEndEffects(parent.pawn);
+            CompLycanthrope.TransformationTypeDef.PostTransformationEnd(parent.pawn);
 
             RemoveLinkedHediffs();
-            CompLycanthrope.LycanthropeTypeDef.transformationWorker?.PostTransformationEnd(parent.pawn);
+            CompLycanthrope.LycanthropeTypeDef.PostTransformationEnd(parent.pawn);
             foreach (LycanthropeAbilityDef unlockedAbility in CompLycanthrope.unlockedAbilityTracker)
             {
                 parent.pawn.abilities.RemoveAbility(unlockedAbility.abilityDef);
             }
             foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in CompLycanthrope.usedTotemTracker)
             {
-                usedTotem.Key.transformationWorker?.PostTransformationEnd(parent.pawn, usedTotem.Value);
+                usedTotem.Key.PostTransformationEnd(parent.pawn, usedTotem.Value);
             }
             foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
             {
                 if (greatBeastDef.Key.Completed(greatBeastDef.Value))
                 {
-                    greatBeastDef.Key.transformationWorker?.PostTransformationEnd(parent.pawn);
+                    greatBeastDef.Key.PostTransformationEnd(parent.pawn);
                 }
             }
 

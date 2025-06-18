@@ -20,12 +20,16 @@
 	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
 		<defName>Mashed_Bloodmoon_LightningStrike</defName>
 		<label>lightning strike</label>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
-			<requiredCount>9</requiredCount>
-		</requirementWorker>
-		<transformationWorker Class="Mashed_Bloodmoon.LTEWorker_LightningStrike">
-			<explosionDamageDef>Flame</explosionDamageDef>
-		</transformationWorker>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+				<requiredCount>9</requiredCount>
+			</li>
+		</requirementWorkers>
+		<transformationWorkers>
+			<li Class="Mashed_Bloodmoon.LTEWorker_LightningStrike">
+				<explosionDamageDef>Flame</explosionDamageDef>
+			</li>
+		</transformationWorkers>
 	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_PsycastSkip]========== -->
 	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef MayRequire="ludeon.rimworld.royalty">
@@ -35,7 +39,9 @@
 		<endEffecterDef>Skip_EntryNoDelay</endEffecterDef>
 		<startSoundDef>Psycast_Skip_Entry</startSoundDef>
 		<endSoundDef>Psycast_Skip_Exit</endSoundDef>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_PsycastSkipDark]========== -->
 	<Mashed_Bloodmoon.LycanthropeTransformationTypeDef MayRequire="ludeon.rimworld.royalty">
@@ -45,6 +51,8 @@
 		<endEffecterDef>Skip_ExitNoDelay</endEffecterDef>
 		<startSoundDef>Psycast_Skip_Entry</startSoundDef>
 		<endSoundDef>Psycast_Skip_Exit</endSoundDef>
-		<requirementWorker Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
 </Defs>

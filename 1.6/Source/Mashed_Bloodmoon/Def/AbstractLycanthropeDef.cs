@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -13,8 +12,8 @@ namespace Mashed_Bloodmoon
 
         public int purchaseHeartCost = 0;
 
-        public LycanthropeTypeRequirementWorker requirementWorker;
-        public LycanthropeTransformationWorker transformationWorker;
+        public List<LycanthropeTypeRequirementWorker> requirementWorkers;
+        public List<LycanthropeTransformationWorker> transformationWorkers;
 
         public virtual bool AlreadyUnlocked(HediffComp_Lycanthrope compLycanthrope)
         {
@@ -48,12 +47,50 @@ namespace Mashed_Bloodmoon
 
         public virtual AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
-            if (requirementWorker != null)
+            if (!requirementWorkers.NullOrEmpty())
             {
-                return requirementWorker.PawnRequirementsMet(pawn);
+                string requirementsMet = "";
+                foreach (LycanthropeTypeRequirementWorker requirementWorker in requirementWorkers)
+                {
+                    AcceptanceReport acceptanceReport = requirementWorker.PawnRequirementsMet(pawn);
+                    if (!acceptanceReport)
+                    {
+                        if (requirementsMet != "")
+                        {
+                            requirementsMet += ", ";
+                        }
+                        requirementsMet += acceptanceReport.Reason;
+                    }
+                }
+                if (requirementsMet != "")
+                {
+                    return requirementsMet;
+                }
             }
 
             return true;
+        }
+
+        public virtual void PostTransformationBegin(Pawn pawn, int value = 0)
+        {
+            if (!transformationWorkers.NullOrEmpty())
+            {
+                foreach(LycanthropeTransformationWorker transformationWorker in transformationWorkers)
+                {
+                    transformationWorker.PostTransformationBegin(pawn, value);
+                }
+            }
+        }
+
+        public virtual void PostTransformationEnd(Pawn pawn, int value = 0)
+        {
+            if (!transformationWorkers.NullOrEmpty())
+            {
+                foreach (LycanthropeTransformationWorker transformationWorker in transformationWorkers)
+                {
+                    transformationWorker.PostTransformationEnd(pawn, value);
+                }
+            }
         }
 
         public override IEnumerable<string> ConfigErrors()
@@ -63,11 +100,25 @@ namespace Mashed_Bloodmoon
                 yield return item;
             }
 
-            if (transformationWorker != null)
+            if (!requirementWorkers.NullOrEmpty())
             {
-                foreach (string item in transformationWorker.ConfigErrors())
+                foreach (LycanthropeTypeRequirementWorker requirementWorker in requirementWorkers)
                 {
-                    yield return item;
+                    foreach (string item in requirementWorker.ConfigErrors())
+                    {
+                        yield return item;
+                    }
+                }
+            }
+
+            if (!transformationWorkers.NullOrEmpty())
+            {
+                foreach(LycanthropeTransformationWorker transformationWorker in transformationWorkers)
+                {
+                    foreach (string item in transformationWorker.ConfigErrors())
+                    {
+                        yield return item;
+                    }
                 }
             }
         }

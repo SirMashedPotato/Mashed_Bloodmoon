@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
         public int targetCount = 1;
         public bool startHidden = false;
         public int anomalyLevelToReveal = 0;
-        public LycanthropeBeastHuntCompletionWorker completionWorker;
+        public List<LycanthropeBeastHuntCompletionWorker> completionWorkers;
         [NoTranslate]
         public string backgroundTexPath = "UI/Widgets/DesButBG";
         [NoTranslate]
@@ -85,8 +85,19 @@ namespace Mashed_Bloodmoon
             if (Completed(compLycanthrope.beastHuntTracker[this]))
             {
                 compLycanthrope.completedBeastHunts++;
-                completionWorker?.PostBeastHuntCompleted(compLycanthrope, pawn);
+                BeastHuntComplete(compLycanthrope, pawn);
                 Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
+            }
+        }
+
+        private void BeastHuntComplete(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
+        {
+            if (!completionWorkers.NullOrEmpty())
+            {
+                foreach (LycanthropeBeastHuntCompletionWorker completionWorker in completionWorkers)
+                {
+                    completionWorker.PostBeastHuntCompleted(compLycanthrope, pawn);
+                }
             }
         }
 
@@ -97,11 +108,14 @@ namespace Mashed_Bloodmoon
                 yield return item;
             }
 
-            if (completionWorker != null)
+            if (!completionWorkers.NullOrEmpty())
             {
-                foreach (string item in completionWorker.ConfigErrors())
+                foreach (LycanthropeBeastHuntCompletionWorker completionWorker in completionWorkers)
                 {
-                    yield return item;
+                    foreach (string item in completionWorker.ConfigErrors())
+                    {
+                        yield return item;
+                    }
                 }
             }
 
