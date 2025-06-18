@@ -27,18 +27,6 @@
 		<onlyTransformed>true</onlyTransformed>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
-	<Mashed_Bloodmoon.LycanthropeTotemDef>
-		<defName>Mashed_Bloodmoon_TotemGuile</defName>
-		<label>Huntsman's totem (Guile)</label>
-		<labelShort>totem (Guile)</labelShort>
-		<description>Proof of a skilled hunter. It gives a bonus to psychic sensitivity while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
-		<totemThingDef>Mashed_Bloodmoon_TotemGuile</totemThingDef>
-		<statDef>PsychicSensitivity</statDef>
-		<maxLevel>50</maxLevel>
-		<purchaseHeartCost>5</purchaseHeartCost>
-		<statIncreasePerLevel>0.02</statIncreasePerLevel>
-		<onlyTransformed>true</onlyTransformed>
-	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemSight</defName>

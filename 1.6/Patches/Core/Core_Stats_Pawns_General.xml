@@ -18,24 +18,6 @@
 			</li>
 		</value>
 	</Operation>
-	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="PsychicSensitivity"]</xpath>
-			<value>
-				<parts/>
-			</value>
-		</nomatch>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
-		<value>
-			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
-				<totemTypeDef>Mashed_Bloodmoon_TotemGuile</totemTypeDef>
-			</li>
-		</value>
-	</Operation>
 	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/StatDef[defName="MoveSpeed"]/parts</xpath>
