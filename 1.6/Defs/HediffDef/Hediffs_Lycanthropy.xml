@@ -128,7 +128,7 @@
 		<descriptionHyperlinks>
 			<AbilityDef>Mashed_Bloodmoon_ConsumeHeart</AbilityDef>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeClaws</HediffDef>
-			<HediffDef>Mashed_Bloodmoon_LycanthropeTeeth</HediffDef>
+			<HediffDef>Mashed_Bloodmoon_LycanthropeFangs</HediffDef>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeFatigue</HediffDef>
 			<StatDef>Mashed_Bloodmoon_LycanthropicStressMax</StatDef>
 			<MentalStateDef>Mashed_Bloodmoon_LycanthropeFury</MentalStateDef>
@@ -203,10 +203,10 @@
 			</li>
 		</stages>
 	</HediffDef>
-	<!-- ==========[Mashed_Bloodmoon_LycanthropeTeeth]==========-->
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeFangs]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeAddedPartBase">
-		<defName>Mashed_Bloodmoon_LycanthropeTeeth</defName>
-		<label>lycanthrope teeth</label>
+		<defName>Mashed_Bloodmoon_LycanthropeFangs</defName>
+		<label>lycanthrope fangs</label>
 		<description>The snarling maw of a transformed lycanthrope. Attacks from these may infect victims with Sanies Lupinus.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
@@ -215,7 +215,7 @@
 			<li Class="HediffCompProperties_VerbGiver">
 				<tools>
 					<li>
-						<label>lycanthrope teeth</label>
+						<label>lycanthrope fangs</label>
 						<capacities>
 							<li>Mashed_Bloodmoon_LycanthropeBite</li>
 						</capacities>

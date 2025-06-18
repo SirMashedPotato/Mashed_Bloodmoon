@@ -99,7 +99,7 @@ namespace Mashed_Bloodmoon
 
             linkedHediffs = new List<Hediff> { };
             AddLinkedHediff(CompLycanthrope.equippedClawType.clawHediffDef, RimWorld.BodyPartDefOf.Hand);
-            AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTeeth, BodyPartDefOf.Jaw);
+            AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFangs, BodyPartDefOf.Jaw);
 
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
         }
