@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTRWorker_Skill : LycanthropeTypeRequirementWorker
+    public class RequirementWorker_Skill : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidSkill".Translate(skillDef, skillLevel);
+            return "Mashed_Bloodmoon_RequirementWorker_InvalidSkill".Translate(skillDef, skillLevel);
         }
 
         public override IEnumerable<string> ConfigErrors()

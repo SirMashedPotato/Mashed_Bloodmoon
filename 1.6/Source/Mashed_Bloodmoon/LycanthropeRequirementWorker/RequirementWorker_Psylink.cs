@@ -3,7 +3,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTRWorker_Psylink : LycanthropeTypeRequirementWorker
+    public class RequirementWorker_Psylink : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -15,7 +15,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_MissingPsylink".Translate(level);
+            return "Mashed_Bloodmoon_RequirementWorker_MissingPsylink".Translate(level);
         }
 
         public int level = 1;

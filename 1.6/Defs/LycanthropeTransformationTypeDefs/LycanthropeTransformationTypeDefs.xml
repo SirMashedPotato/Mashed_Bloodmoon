@@ -21,7 +21,7 @@
 		<defName>Mashed_Bloodmoon_LightningStrike</defName>
 		<label>lightning strike</label>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHuntCount">
 				<requiredCount>9</requiredCount>
 			</li>
 		</requirementWorkers>
@@ -40,7 +40,7 @@
 		<startSoundDef>Psycast_Skip_Entry</startSoundDef>
 		<endSoundDef>Psycast_Skip_Exit</endSoundDef>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+			<li Class="Mashed_Bloodmoon.RequirementWorker_Psylink"/>
 		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_PsycastSkipDark]========== -->
@@ -52,7 +52,7 @@
 		<startSoundDef>Psycast_Skip_Entry</startSoundDef>
 		<endSoundDef>Psycast_Skip_Exit</endSoundDef>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+			<li Class="Mashed_Bloodmoon.RequirementWorker_Psylink"/>
 		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTransformationTypeDef>
 </Defs>

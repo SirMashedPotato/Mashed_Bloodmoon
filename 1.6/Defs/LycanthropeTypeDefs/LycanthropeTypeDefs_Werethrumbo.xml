@@ -35,7 +35,7 @@
 			</li>
 		</renderNodeProperties>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHunt">
 				<beastHuntDef>Mashed_Bloodmoon_Thrumbo</beastHuntDef>
 			</li>
 		</requirementWorkers>

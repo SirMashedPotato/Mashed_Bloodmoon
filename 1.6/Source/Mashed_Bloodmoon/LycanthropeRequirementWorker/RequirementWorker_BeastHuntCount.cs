@@ -3,7 +3,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    internal class LTRWorker_BeastHuntCount : LycanthropeTypeRequirementWorker
+    internal class RequirementWorker_BeastHuntCount : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidBeastHuntCount".Translate(requiredCount);
+            return "Mashed_Bloodmoon_RequirementWorker_InvalidBeastHuntCount".Translate(requiredCount);
         }
 
         public int requiredCount;

@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    internal class LTRWorker_Record : LycanthropeTypeRequirementWorker
+    internal class RequirementWorker_Record : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -17,7 +17,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidRecord".Translate(recordDef.label, minCount);
+            return "Mashed_Bloodmoon_RequirementWorker_InvalidRecord".Translate(recordDef.label, minCount);
         }
 
         public override IEnumerable<string> ConfigErrors()

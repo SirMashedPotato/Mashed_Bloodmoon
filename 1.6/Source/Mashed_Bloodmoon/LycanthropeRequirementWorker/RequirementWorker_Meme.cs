@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTRWorker_Meme : LycanthropeTypeRequirementWorker
+    public class RequirementWorker_Meme : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -24,9 +24,9 @@ namespace Mashed_Bloodmoon
                         }
                     }
                 }
-                return "Mashed_Bloodmoon_LTR_MissingIdeoOneOf".Translate() + DoMissingList(memeDefs);
+                return "Mashed_Bloodmoon_RequirementWorker_MissingIdeoOneOf".Translate() + DoMissingList(memeDefs);
             }
-            return "Mashed_Bloodmoon_LTR_MissingIdeo".Translate(memeDef);
+            return "Mashed_Bloodmoon_RequirementWorker_MissingIdeo".Translate(memeDef);
         }
 
         public override IEnumerable<string> ConfigErrors()

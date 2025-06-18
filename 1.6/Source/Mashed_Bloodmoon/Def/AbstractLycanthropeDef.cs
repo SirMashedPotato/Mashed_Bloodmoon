@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
 
         public int purchaseHeartCost = 0;
 
-        public List<LycanthropeTypeRequirementWorker> requirementWorkers;
+        public List<LycanthropeRequirementWorker> requirementWorkers;
         public List<LycanthropeTransformationWorker> transformationWorkers;
 
         public virtual bool AlreadyUnlocked(HediffComp_Lycanthrope compLycanthrope)
@@ -50,7 +50,7 @@ namespace Mashed_Bloodmoon
             if (!requirementWorkers.NullOrEmpty())
             {
                 string requirementsMet = "";
-                foreach (LycanthropeTypeRequirementWorker requirementWorker in requirementWorkers)
+                foreach (LycanthropeRequirementWorker requirementWorker in requirementWorkers)
                 {
                     AcceptanceReport acceptanceReport = requirementWorker.PawnRequirementsMet(pawn);
                     if (!acceptanceReport)
@@ -102,7 +102,7 @@ namespace Mashed_Bloodmoon
 
             if (!requirementWorkers.NullOrEmpty())
             {
-                foreach (LycanthropeTypeRequirementWorker requirementWorker in requirementWorkers)
+                foreach (LycanthropeRequirementWorker requirementWorker in requirementWorkers)
                 {
                     foreach (string item in requirementWorker.ConfigErrors())
                     {

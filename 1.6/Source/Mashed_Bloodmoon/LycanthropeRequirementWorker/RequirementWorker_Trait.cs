@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTRWorker_Trait : LycanthropeTypeRequirementWorker
+    public class RequirementWorker_Trait : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -22,9 +22,9 @@ namespace Mashed_Bloodmoon
                         return true;
                     }
                 }
-                return "Mashed_Bloodmoon_LTR_MissingOneOf".Translate() + DoMissingList(traitDefs);
+                return "Mashed_Bloodmoon_RequirementWorker_MissingOneOf".Translate() + DoMissingList(traitDefs);
             }
-            return "Mashed_Bloodmoon_LTR_Missing".Translate(traitDef);
+            return "Mashed_Bloodmoon_RequirementWorker_Missing".Translate(traitDef);
         }
 
         public override IEnumerable<string> ConfigErrors()

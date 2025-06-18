@@ -40,7 +40,7 @@
 		<abilityDef>Mashed_Bloodmoon_HuntsmansBounty</abilityDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHuntCount">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHuntCount">
 				<requiredCount>10</requiredCount>
 			</li>
 		</requirementWorkers>

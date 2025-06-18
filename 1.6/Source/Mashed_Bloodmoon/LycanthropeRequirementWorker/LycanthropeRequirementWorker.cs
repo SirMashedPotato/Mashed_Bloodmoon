@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public abstract class LycanthropeTypeRequirementWorker
+    public abstract class LycanthropeRequirementWorker
     {
         public abstract AcceptanceReport PawnRequirementsMet(Pawn pawn);
 
@@ -15,7 +15,7 @@ namespace Mashed_Bloodmoon
 
         public string DoMissingList<T>(List<T> list) 
         {
-            string output = "Mashed_Bloodmoon_LTR_OneOf".Translate();
+            string output = "Mashed_Bloodmoon_RequirementWorker_OneOf".Translate();
             foreach (T t in list) 
             {
                 Def def = t as Def;

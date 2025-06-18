@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    internal class LTRWorker_Totem : LycanthropeTypeRequirementWorker
+    internal class RequirementWorker_Totem : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidTotemCount".Translate(totemTypeDef, usedCount);
+            return "Mashed_Bloodmoon_RequirementWorker_InvalidTotemCount".Translate(totemTypeDef, usedCount);
         }
 
         public override IEnumerable<string> ConfigErrors()

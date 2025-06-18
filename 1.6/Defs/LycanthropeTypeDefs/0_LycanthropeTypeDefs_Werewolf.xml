@@ -53,7 +53,7 @@
 			</li>
 		</renderNodeProperties>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHunt">
 				<beastHuntDef>Mashed_Bloodmoon_FeralWerewolvesII</beastHuntDef>
 			</li>
 		</requirementWorkers>
@@ -80,7 +80,7 @@
 			</li>
 		</renderNodeProperties>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_Psylink"/>
+			<li Class="Mashed_Bloodmoon.RequirementWorker_Psylink"/>
 		</requirementWorkers>
 	</Mashed_Bloodmoon.LycanthropeTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_WerewolfGlowing]========== -->
@@ -106,7 +106,7 @@
 			</li>
 		</renderNodeProperties>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_ClawType">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_ClawType">
 				<clawTypeDef>Mashed_Bloodmoon_ToxicClaws</clawTypeDef>
 			</li>
 		</requirementWorkers>

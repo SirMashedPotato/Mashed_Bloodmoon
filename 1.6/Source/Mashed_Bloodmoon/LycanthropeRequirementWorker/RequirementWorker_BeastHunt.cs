@@ -4,26 +4,26 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    internal class LTRWorker_ClawType : LycanthropeTypeRequirementWorker
+    internal class RequirementWorker_BeastHunt : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            if (compLycanthrope.unlockedClawTracker.Contains(clawTypeDef))
+            if (beastHuntDef.Completed(compLycanthrope))
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidClawType".Translate(clawTypeDef.LabelCap);
+            return "Mashed_Bloodmoon_RequirementWorker_InvalidBeastHunt".Translate(beastHuntDef.LabelCap);
         }
 
         public override IEnumerable<string> ConfigErrors()
         {
-            if (clawTypeDef == null)
+            if (beastHuntDef == null)
             {
-                yield return "clawTypeDef is null";
+                yield return "beastHuntDef is null";
             }
         }
 
-        public LycanthropeClawTypeDef clawTypeDef;
+        public LycanthropeBeastHuntDef beastHuntDef;
     }
 }

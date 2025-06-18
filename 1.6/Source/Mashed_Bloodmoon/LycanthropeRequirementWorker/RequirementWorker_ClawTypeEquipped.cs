@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    internal class LTRWorker_ClawTypeEquipped : LycanthropeTypeRequirementWorker
+    internal class RequirementWorker_ClawTypeEquipped : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -13,7 +13,7 @@ namespace Mashed_Bloodmoon
             {
                 return true;
             }
-            return "Mashed_Bloodmoon_LTR_InvalidClawTypeEquipped".Translate(clawTypeDef.LabelCap);
+            return "Mashed_Bloodmoon_RequirementWorker_InvalidClawTypeEquipped".Translate(clawTypeDef.LabelCap);
         }
 
         public override IEnumerable<string> ConfigErrors()

@@ -4,7 +4,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTRWorker_Hediff : LycanthropeTypeRequirementWorker
+    public class RequirementWorker_Hediff : LycanthropeRequirementWorker
     {
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
@@ -22,9 +22,9 @@ namespace Mashed_Bloodmoon
                         return minSeverity == -1f || pawn.health.hediffSet.GetFirstHediffOfDef(def).Severity >= minSeverity;
                     }
                 }
-                return "Mashed_Bloodmoon_LTR_MissingOneOf".Translate() + DoMissingList(hediffDefs) + " " + "Mashed_Bloodmoon_LTR_HediffSeverity".Translate(minSeverity.ToStringPercent());
+                return "Mashed_Bloodmoon_RequirementWorker_MissingOneOf".Translate() + DoMissingList(hediffDefs) + " " + "Mashed_Bloodmoon_RequirementWorker_HediffSeverity".Translate(minSeverity.ToStringPercent());
             }
-            return "Mashed_Bloodmoon_LTR_Missing".Translate(hediffDef) + " " + "Mashed_Bloodmoon_LTR_HediffSeverity".Translate(minSeverity.ToStringPercent());
+            return "Mashed_Bloodmoon_RequirementWorker_Missing".Translate(hediffDef) + " " + "Mashed_Bloodmoon_RequirementWorker_HediffSeverity".Translate(minSeverity.ToStringPercent());
         }
 
         public override IEnumerable<string> ConfigErrors()

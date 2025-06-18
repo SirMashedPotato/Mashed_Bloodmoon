@@ -16,7 +16,7 @@
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsSharp</clawHediffDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHunt">
 				<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
 			</li>
 		</requirementWorkers>
@@ -29,7 +29,7 @@
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsBlunt</clawHediffDef>
 		<purchaseHeartCost>15</purchaseHeartCost>
 		<requirementWorkers>
-			<li Class="Mashed_Bloodmoon.LTRWorker_BeastHunt">
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHunt">
 				<beastHuntDef>Mashed_Bloodmoon_SlaughterIII</beastHuntDef>
 			</li>
 		</requirementWorkers>
