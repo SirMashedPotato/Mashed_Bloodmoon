@@ -26,7 +26,7 @@
 			</li>
 		</requirementWorkers>
 		<transformationWorkers>
-			<li Class="Mashed_Bloodmoon.LTEWorker_LightningStrike">
+			<li Class="Mashed_Bloodmoon.TransformationWorker_LightningStrike">
 				<explosionDamageDef>Flame</explosionDamageDef>
 			</li>
 		</transformationWorkers>

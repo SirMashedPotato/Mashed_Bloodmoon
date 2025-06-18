@@ -6,7 +6,7 @@ using Verse.Sound;
 namespace Mashed_Bloodmoon
 {
     [StaticConstructorOnStartup]
-    public class LTEWorker_LightningStrike : LTEWorker_Explosion
+    public class TransformationWorker_LightningStrike : TransformationWorker_Explosion
     {
         private static readonly Material LightningMat = MatLoader.LoadMat("Weather/LightningBolt");
 

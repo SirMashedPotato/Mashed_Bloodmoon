@@ -40,7 +40,7 @@
 			</li>
 		</requirementWorkers>
 		<transformationWorkers>
-			<li Class="Mashed_Bloodmoon.LTWorker_AddLinkedHediff">
+			<li Class="Mashed_Bloodmoon.TransformationWorker_AddLinkedHediff">
 				<hediffDef>Mashed_Bloodmoon_LycanthropeHorn</hediffDef>
 				<partDef>Head</partDef>
 			</li>

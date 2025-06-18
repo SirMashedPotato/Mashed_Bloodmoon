@@ -3,7 +3,7 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
-    public class LTEWorker_Explosion : LycanthropeTransformationWorker
+    public class TransformationWorker_Explosion : LycanthropeTransformationWorker
     {
         public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {

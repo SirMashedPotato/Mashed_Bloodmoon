@@ -5,7 +5,7 @@ using Verse;
 namespace Mashed_Bloodmoon
 {
     [Obsolete]
-    public class LTWorker_AddHediff : LycanthropeTransformationWorker
+    public class TransformationWorker_AddHediff : LycanthropeTransformationWorker
     {
         public override void PostTransformationBegin(Pawn pawn, int value = 0)
         {
