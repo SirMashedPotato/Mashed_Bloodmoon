@@ -33,19 +33,8 @@ namespace Mashed_Bloodmoon
             {
                 return;
             }
-            /*
-            bool @bool = Rand.Bool;
-            foreach (Pawn item2 in list)
-            {
-                CompWakeUpDormant comp = item2.GetComp<CompWakeUpDormant>();
-                if (comp != null)
-                {
-                    comp.wakeUpIfTargetClose = @bool;
-                }
-            }
-            */
+
             LordMaker.MakeNewLord(WerewolfUtility.GetFeralWerewolfFaction(), new LordJob_AssaultColony(WerewolfUtility.GetFeralWerewolfFaction()), map, list);
-            //SendMechanoidsToSleepImmediately(list);
         }
 
         private IEnumerable<Pawn> GeneratePawns(GenStepParams parms, Map map)

@@ -48,9 +48,6 @@ namespace Mashed_Bloodmoon
 
         public float CurrentTransformedDuration() => currentStress * LycanthropeUtility.lycanthropeStressRate;
 
-        /// <summary>
-        /// Ticking stress
-        /// </summary>
         public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
             base.CompPostTickInterval(ref severityAdjustment, delta);
@@ -88,9 +85,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public void StartFury()
         {
             parent.pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Mashed_Bloodmoon_LycanthropeFury, null, true, true);
@@ -98,9 +92,6 @@ namespace Mashed_Bloodmoon
             inFury = true;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void CompPostMake()
         {
             base.CompPostMake();
@@ -113,9 +104,7 @@ namespace Mashed_Bloodmoon
             LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
         }
 
-        /// <summary>
-        /// Transformation workers are called here instead of in CompPostMake due to potential null references when trying to fetch this comp
-        /// </summary>
+        // Transformation workers are called here instead of in CompPostMake due to potential null references when trying to fetch this comp
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             base.CompPostPostAdd(dinfo);
@@ -141,17 +130,11 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// Adds a linked hediff
-        /// </summary>
         public void AddLinkedHediff(Hediff hediff)
         {
             linkedHediffs.Add(hediff);
         }
 
-        /// <summary>
-        /// Adds a linked hediff
-        /// </summary>
         public void AddLinkedHediff(HediffDef hediffDef, BodyPartRecord bodyPartRecord = null)
         {
             Hediff hediff = HediffMaker.MakeHediff(hediffDef, parent.pawn, bodyPartRecord);
@@ -159,9 +142,6 @@ namespace Mashed_Bloodmoon
             AddLinkedHediff(hediff);
         }
 
-        /// <summary>
-        /// Adds a linked hediff to all body parts of a specific def
-        /// </summary>
         public void AddLinkedHediff(HediffDef hediffDef, BodyPartDef partDef)
         {
             foreach (BodyPartRecord bodyPartRecord in parent.pawn.health.hediffSet.GetNotMissingParts())
@@ -173,9 +153,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
@@ -193,11 +170,11 @@ namespace Mashed_Bloodmoon
             {
                 usedTotem.Key.PostTransformationEnd(parent.pawn, usedTotem.Value);
             }
-            foreach (KeyValuePair<LycanthropeBeastHuntDef, int> greatBeastDef in CompLycanthrope.beastHuntTracker)
+            foreach (KeyValuePair<LycanthropeBeastHuntDef, int> beastHuntDef in CompLycanthrope.beastHuntTracker)
             {
-                if (greatBeastDef.Key.Completed(greatBeastDef.Value))
+                if (beastHuntDef.Key.Completed(beastHuntDef.Value))
                 {
-                    greatBeastDef.Key.PostTransformationEnd(parent.pawn);
+                    beastHuntDef.Key.PostTransformationEnd(parent.pawn);
                 }
             }
 
@@ -210,9 +187,6 @@ namespace Mashed_Bloodmoon
             parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformationEnd);
         }
 
-        /// <summary>
-        /// Removes all linked hediffs
-        /// </summary>
         public void RemoveLinkedHediffs()
         {
             foreach (Hediff hediff in linkedHediffs)
@@ -222,18 +196,13 @@ namespace Mashed_Bloodmoon
             linkedHediffs.Clear();
         }
 
-        /// <summary>
-        /// Doing this here instead of using HediffCompProperties_DisappearsOnDeath avoids an out of bounds error if the pawn dies while transformed
-        /// </summary>
+        // Doing this here instead of using HediffCompProperties_DisappearsOnDeath avoids an out of bounds error if the pawn dies while transformed
         public override void Notify_PawnKilled()
         {
             base.Notify_PawnKilled();
             parent.pawn.health.RemoveHediff(parent);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void Notify_KilledPawn(Pawn victim, DamageInfo? dinfo)
         {
             if (victim != null)
@@ -249,9 +218,6 @@ namespace Mashed_Bloodmoon
             base.Notify_KilledPawn(victim, dinfo);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
             yield return new Command_Action
@@ -273,9 +239,6 @@ namespace Mashed_Bloodmoon
             yield return lycanthropeStressGizmo;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override string CompDescriptionExtra
         {
             get
@@ -291,9 +254,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void CompExposeData()
         {
             Scribe_Values.Look(ref currentStress, "currentStress", 0);

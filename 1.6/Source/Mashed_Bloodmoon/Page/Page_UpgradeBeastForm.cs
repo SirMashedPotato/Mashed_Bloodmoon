@@ -15,7 +15,7 @@ namespace Mashed_Bloodmoon
         private readonly List<LycanthropeTotemDef> TotemList; 
         private readonly List<LycanthropeTraitDef> TraitList;
         private static Vector2 scrollPosition = Vector2.zero;
-        private static LycanthropeUpgradeType curTab = LycanthropeUpgradeType.Ability;
+        private static UpgradeType curTab = UpgradeType.Ability;
         private readonly List<TabRecord> tabs = new List<TabRecord>();
         private List<UpgradeAmount> upgradeAmountList = new List<UpgradeAmount>();
 
@@ -25,7 +25,7 @@ namespace Mashed_Bloodmoon
 
         public override string PageTitle => "Mashed_Bloodmoon_UpgradeBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
-        public enum LycanthropeUpgradeType
+        public enum UpgradeType
         {
             Ability,
             Claw,
@@ -54,23 +54,23 @@ namespace Mashed_Bloodmoon
         {
             tabs.Add(new TabRecord("Mashed_Bloodmoon_UpgradeTab_Abilities".Translate(), delegate
             {
-                curTab = LycanthropeUpgradeType.Ability;
-            }, () => curTab == LycanthropeUpgradeType.Ability));
+                curTab = UpgradeType.Ability;
+            }, () => curTab == UpgradeType.Ability));
 
             tabs.Add(new TabRecord("Mashed_Bloodmoon_UpgradeTab_Claws".Translate(), delegate
             {
-                curTab = LycanthropeUpgradeType.Claw;
-            }, () => curTab == LycanthropeUpgradeType.Claw));
+                curTab = UpgradeType.Claw;
+            }, () => curTab == UpgradeType.Claw));
 
             tabs.Add(new TabRecord("Mashed_Bloodmoon_UpgradeTab_Totems".Translate(), delegate
             {
-                curTab = LycanthropeUpgradeType.Totem;
-            }, () => curTab == LycanthropeUpgradeType.Totem));
+                curTab = UpgradeType.Totem;
+            }, () => curTab == UpgradeType.Totem));
 
             tabs.Add(new TabRecord("Traits".Translate(), delegate
             {
-                curTab = LycanthropeUpgradeType.Trait;
-            }, () => curTab == LycanthropeUpgradeType.Trait));
+                curTab = UpgradeType.Trait;
+            }, () => curTab == UpgradeType.Trait));
         }
 
         public class UpgradeAmount
@@ -107,19 +107,19 @@ namespace Mashed_Bloodmoon
 
             switch (curTab)
             {
-                case LycanthropeUpgradeType.Ability:
+                case UpgradeType.Ability:
                     DoUpgradeGrid(mainRect, AbilityList.Count());
                     break;
 
-                case LycanthropeUpgradeType.Claw:
+                case UpgradeType.Claw:
                     DoUpgradeGrid(mainRect, ClawList.Count());
                     break;
 
-                case LycanthropeUpgradeType.Totem:
+                case UpgradeType.Totem:
                     DoUpgradeGrid(mainRect, TotemList.Count());
                     break;
 
-                case LycanthropeUpgradeType.Trait:
+                case UpgradeType.Trait:
                     DoUpgradeGrid(mainRect, TraitList.Count());
                     break;
             }
@@ -216,7 +216,7 @@ namespace Mashed_Bloodmoon
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
-            int finalColumnCount = curTab == LycanthropeUpgradeType .Claw || curTab == LycanthropeUpgradeType.Trait ? altColumnCount : columnCount;
+            int finalColumnCount = curTab == UpgradeType .Claw || curTab == UpgradeType.Trait ? altColumnCount : columnCount;
 
             float cellWidth = (innerRect.width / finalColumnCount) - (Assets.RectPadding / 3f);
             float cellHeight = rowHeight;
@@ -258,19 +258,19 @@ namespace Mashed_Bloodmoon
             rightRect.x += leftRect.width + (Assets.RectPadding / 2f);
             switch (curTab)
             {
-                case LycanthropeUpgradeType.Ability:
+                case UpgradeType.Ability:
                     Tab_UpgradeAbility.DoCell(leftRect, rightRect, AbilityList[index], compLycanthrope);
                     break;
 
-                case LycanthropeUpgradeType.Claw:
+                case UpgradeType.Claw:
                     Tab_UpgradeClaw.DoCell(inRect, ClawList[index], compLycanthrope);
                     break;
 
-                case LycanthropeUpgradeType.Totem:
+                case UpgradeType.Totem:
                     Tab_UpgradeTotem.DoCell(leftRect, rightRect, TotemList[index], compLycanthrope, ref upgradeAmountList);
                     break;
 
-                case LycanthropeUpgradeType.Trait:
+                case UpgradeType.Trait:
                     Tab_UpgradeTrait.DoCell(inRect, TraitList[index], compLycanthrope);
                     break;
             }

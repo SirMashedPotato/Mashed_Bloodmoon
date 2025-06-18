@@ -19,13 +19,9 @@ namespace Mashed_Bloodmoon
         public HashSet<LycanthropeAbilityDef> unlockedAbilityTracker = new HashSet<LycanthropeAbilityDef>();
         public LycanthropeClawTypeDef equippedClawType;
         public HashSet<LycanthropeClawTypeDef> unlockedClawTracker = new HashSet<LycanthropeClawTypeDef>();
-        /// <summary>
-        /// The int is the level of the totem
-        /// </summary>
+        // The int is the level of the totem
         public Dictionary<LycanthropeTotemDef, int> usedTotemTracker = new Dictionary<LycanthropeTotemDef, int>();
-        /// <summary>
-        /// The int is the progress towards the beast hunt
-        /// </summary>
+        // The int is the progress towards the beast hunt
         public Dictionary<LycanthropeBeastHuntDef, int> beastHuntTracker = new Dictionary<LycanthropeBeastHuntDef, int>();
         public int completedBeastHunts = 0;
 
@@ -82,10 +78,6 @@ namespace Mashed_Bloodmoon
             tertiaryColour = lycanthropeTypeDef.TertiaryColorDefault;
         }
 
-        /// <summary>
-        /// Used to activate a pawns beast form
-        /// Caches work priorities before hand, because beast form (disabled work) resets them
-        /// </summary>
         public void TransformPawn(bool startInFury = false)
         {
             CacheWorkPriorities();
@@ -101,10 +93,8 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// Caches the pawns work priorities before the transformed hediff is added
-        /// The transformed hediff disables all work types, and resets work priorities when the transformation ends
-        /// </summary>
+        // Caches the pawns work priorities before the transformed hediff is added
+        // The transformed hediff disables all work types, and resets work priorities when the transformation ends
         private void CacheWorkPriorities()
         {
             cachedWorkPriorities = new DefMap<WorkTypeDef, int>();
@@ -114,9 +104,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void CompPostMake()
         {
             base.CompPostMake();
@@ -129,9 +116,6 @@ namespace Mashed_Bloodmoon
             unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
             base.Notify_PawnDied(dinfo, culprit);
@@ -141,9 +125,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void Notify_PawnPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
             if (Pawn.story.traits.HasTrait(TraitDefOf.Mashed_Bloodmoon_UncontrollableLycanthropy) && LycanthropeUtility.PawnCanTransform(Pawn, true) && Rand.Chance(0.6f))
@@ -172,9 +153,6 @@ namespace Mashed_Bloodmoon
             base.Notify_PawnPostApplyDamage(dinfo, totalDamageDealt);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         private List<FloatMenuOption> LycanthropeGizmoOptions
         {
             get
@@ -211,9 +189,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
             if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
@@ -248,9 +223,6 @@ namespace Mashed_Bloodmoon
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override string CompDescriptionExtra
         {
             get
@@ -267,9 +239,6 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public override void CompExposeData()
         {
             Scribe_Deep.Look(ref cachedWorkPriorities, "cachedWorkPriorities");

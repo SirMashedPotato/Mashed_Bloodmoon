@@ -133,9 +133,9 @@ namespace Mashed_Bloodmoon
             {
                 return;
             }
-            foreach (LycanthropeBeastHuntDef greatBeastDef in beastHuntList)
+            foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
-                greatBeastDef.ProgressBeastHunt(parent);
+                beastHuntDef.ProgressBeastHunt(parent);
             }
         }
 

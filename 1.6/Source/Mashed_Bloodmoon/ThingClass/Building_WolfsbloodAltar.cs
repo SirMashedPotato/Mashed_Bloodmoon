@@ -75,7 +75,7 @@ namespace Mashed_Bloodmoon
         public float AddBlood(float addAmount = defaultAddAmount)
         {
             lycanthropeBloodAmount += addAmount;
-            //otherwise we end up with an altar that contains 0.8000001
+            //otherwise we end up with an altar that contains 0.8000001 instead of 0.8
             lycanthropeBloodAmount = (float)Math.Round(lycanthropeBloodAmount, 2);
             return addAmount;
         }

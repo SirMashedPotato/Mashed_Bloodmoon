@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
 
         /// <summary>
         /// Used to reset a lycanthropes work priorities, which are reset due to the transformed hediff disabling all work types
-        /// Because this is trigger by CompPostTick it does not immediately take effect while the game is paused
+        /// Because this is triggered by CompPostTick it does not immediately take effect while the game is paused
         /// </summary>
         public override void CompPostPostRemoved()
         {

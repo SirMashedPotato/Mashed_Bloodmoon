@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
     {
         public string artist = "???";
         public LycanthropeGraphicData graphicData;
-        private List<PawnRenderNodeProperties> renderNodeProperties;
+        private readonly List<PawnRenderNodeProperties> renderNodeProperties;
 
         public List<PawnRenderNodeProperties> RenderNodeProperties => renderNodeProperties ?? PawnRenderUtility.EmptyRenderNodeProperties;
 
