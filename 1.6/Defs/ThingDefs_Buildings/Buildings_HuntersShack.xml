@@ -17,7 +17,7 @@
 			<destroyShakeAmount>0</destroyShakeAmount>
 			<claimable>false</claimable>
 		</building>
-		<designationCategory>Misc</designationCategory>
+		<!--<designationCategory>Misc</designationCategory>-->
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntersCache]========== -->
 	<ThingDef ParentName="Mashed_Bloodmoon_ShackBuildingBase">
