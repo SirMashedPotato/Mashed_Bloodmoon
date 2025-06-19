@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_ShackBuildingBase]========== -->
+	<ThingDef ParentName="BuildingNaturalBase" Name="Mashed_Bloodmoon_ShackBuildingBase" Abstract="true">
+		<thingClass>Building</thingClass>
+		<rotatable>true</rotatable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<alwaysDeconstructible>true</alwaysDeconstructible>
+			<destroyShakeAmount>0</destroyShakeAmount>
+			<claimable>false</claimable>
+		</building>
+		<designationCategory>Misc</designationCategory>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntersCache]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_ShackBuildingBase">
+		<defName>Mashed_Bloodmoon_HuntersCache</defName>
+		<label>hunters cache</label>
+		<description>A weathered cache left behind by a hunter. It might contain something valuable, or just whatever remains of their last hunt.</description>
+		<graphicData>
+			<texPath>Things/Building/Shack/Mashed_Bloodmoon_HuntersCache/Mashed_Bloodmoon_HuntersCache</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2.4, 2.4)</drawSize>
+			<shadowData>
+				<volume>(2, 0.45, 1)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2, 1)</size>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_DropOnDestroy">
+				<guaranteedDrops>
+					<li>
+						<thingDef>WoodLog</thingDef>
+						<amountRange>10~20</amountRange>
+					</li>
+				</guaranteedDrops>
+				<thingSetMakerDef>Mashed_Bloodmoon_HuntersCache</thingSetMakerDef>
+				<setMakerDrops>2</setMakerDrops>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntersCrate]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_ShackBuildingBase">
+		<defName>Mashed_Bloodmoon_HuntersCrate</defName>
+		<label>hunters crate</label>
+		<description>A crate left behind by a hunter. It might contain something valuable, or just whatever remains of their last hunt.</description>
+		<graphicData>
+			<texPath>Things/Building/Shack/Mashed_Bloodmoon_ShackCrate/Mashed_Bloodmoon_ShackCrate</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.2, 1.2)</drawSize>
+			<shadowData>
+				<volume>(1, 0.45, 1)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(1, 1)</size>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_DropOnDestroy">
+				<guaranteedDrops>
+					<li>
+						<thingDef>WoodLog</thingDef>
+						<amountRange>5~10</amountRange>
+					</li>
+				</guaranteedDrops>
+				<thingSetMakerDef>Mashed_Bloodmoon_HuntersCache</thingSetMakerDef>
+				<setMakerDrops>1</setMakerDrops>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_HunterSkeleton]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_ShackBuildingBase">
+		<defName>Mashed_Bloodmoon_HunterSkeleton</defName>
+		<label>hunter skeleton</label>
+		<description>The desiccated skeleton of a hunter. They likely have quite the story to tell... too bad they're a little to dead for that now.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Shack/Mashed_Bloodmoon_HunterSkeleton</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1.3, 1.3)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<size>(1,1)</size>
+	</ThingDef>
+</Defs>

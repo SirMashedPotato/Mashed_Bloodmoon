@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HuntersShackPrefab_D]========== -->
+	<PrefabDef>
+		<defName>Mashed_Bloodmoon_HuntersShackPrefab_D</defName>
+		<size>(9,12)</size>
+		<things>
+			<Table1x2c>
+				<position>(5, 0, 4)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Table1x2c>
+			<Mashed_Bloodmoon_HuntersCache>
+				<positions>
+					<li>(5, 0, 2)</li>
+					<li>(3, 0, 8)</li>
+				</positions>
+			</Mashed_Bloodmoon_HuntersCache>
+			<TableButcher>
+				<position>(4, 0, 10)</position>
+				<stuff>WoodLog</stuff>
+			</TableButcher>
+			<Door>
+				<position>(4, 0, 1)</position>
+				<stuff>WoodLog</stuff>
+			</Door>
+			<Stool>
+				<rects>
+					<li>(5,3,6,3)</li>
+					<li>(5,5,6,5)</li>
+				</rects>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Stool>
+			<Mashed_Bloodmoon_HuntersCrate>
+				<rects>
+					<li>(1,3,1,3)</li>
+					<li>(7,5,7,5)</li>
+				</rects>
+			</Mashed_Bloodmoon_HuntersCrate>
+			<Mashed_Bloodmoon_HuntersCrate>
+				<position>(5, 0, 7)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCrate>
+			<AnimalFlap>
+				<position>(4, 0, 6)</position>
+				<stuff>Cloth</stuff>
+			</AnimalFlap>
+			<ShelfSmall>
+				<rects>
+					<li>(2,10,2,10)</li>
+					<li>(6,10,6,10)</li>
+				</rects>
+				<relativeRotation>Opposite</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</ShelfSmall>
+			<Wall>
+				<rects>
+					<li>(3,0,3,1)</li>
+					<li>(5,0,5,1)</li>
+					<li>(1,1,2,1)</li>
+					<li>(6,1,7,1)</li>
+					<li>(0,2,1,2)</li>
+					<li>(7,2,8,2)</li>
+					<li>(0,3,0,9)</li>
+					<li>(8,3,8,9)</li>
+					<li>(1,6,3,6)</li>
+					<li>(5,6,7,6)</li>
+					<li>(1,9,1,11)</li>
+					<li>(7,9,7,11)</li>
+					<li>(2,11,6,11)</li>
+				</rects>
+				<stuff>WoodLog</stuff>
+			</Wall>
+			<Bedroll>
+				<position>(2, 0, 2)</position>
+				<stuff>Leather_Light</stuff>
+				<quality>Normal</quality>
+			</Bedroll>
+			<Bedroll>
+				<position>(1, 0, 5)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>Leather_Light</stuff>
+				<quality>Normal</quality>
+			</Bedroll>
+			<Mashed_Bloodmoon_HunterSkeleton>
+				<position>(6, 0, 9)</position>
+			</Mashed_Bloodmoon_HunterSkeleton>
+			<Shelf>
+				<position>(1, 0, 8)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Shelf>
+			<Shelf>
+				<position>(7, 0, 7)</position>
+				<relativeRotation>Counterclockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Shelf>
+			<Leather_Human>
+				<position>(1, 0, 7)</position>
+				<stackCountRange>4~8</stackCountRange>
+			</Leather_Human>
+			<Leather_Human>
+				<position>(2, 0, 10)</position>
+				<stackCountRange>10~20</stackCountRange>
+			</Leather_Human>
+			<Filth_Blood>
+				<rects>
+					<li>(2,7,2,9)</li>
+					<li>(4,7,4,7)</li>
+					<li>(6,7,6,8)</li>
+					<li>(5,8,5,9)</li>
+					<li>(4,9,4,9)</li>
+				</rects>
+				<hp>-1</hp>
+			</Filth_Blood>
+			<Meat_Human>
+				<position>(7, 0, 7)</position>
+				<stackCountRange>3~6</stackCountRange>
+			</Meat_Human>
+			<Meat_Human>
+				<position>(1, 0, 8)</position>
+				<stackCountRange>9~18</stackCountRange>
+			</Meat_Human>
+			<Meat_Human>
+				<position>(7, 0, 8)</position>
+				<stackCountRange>13~26</stackCountRange>
+			</Meat_Human>
+			<Meat_Human>
+				<position>(6, 0, 10)</position>
+				<stackCountRange>4~8</stackCountRange>
+			</Meat_Human>
+		</things>
+		<terrain>
+			<WoodPlankFloor>
+				<rects>
+					<li>(0,0,2,0)</li>
+					<li>(4,0,4,10)</li>
+					<li>(6,0,8,0)</li>
+					<li>(0,1,0,1)</li>
+					<li>(8,1,8,1)</li>
+					<li>(2,2,3,5)</li>
+					<li>(5,2,6,5)</li>
+					<li>(1,3,1,5)</li>
+					<li>(7,3,7,5)</li>
+					<li>(1,7,3,8)</li>
+					<li>(5,7,7,8)</li>
+					<li>(2,9,3,10)</li>
+					<li>(5,9,6,10)</li>
+					<li>(0,10,0,11)</li>
+					<li>(8,10,8,11)</li>
+				</rects>
+			</WoodPlankFloor>
+			<Soil>
+				<rects>
+					<li>(3,0,3,1)</li>
+					<li>(5,0,5,1)</li>
+					<li>(1,1,2,1)</li>
+					<li>(6,1,7,1)</li>
+					<li>(0,2,1,2)</li>
+					<li>(7,2,8,2)</li>
+					<li>(0,3,0,9)</li>
+					<li>(8,3,8,9)</li>
+					<li>(1,6,3,6)</li>
+					<li>(5,6,7,6)</li>
+					<li>(1,9,1,11)</li>
+					<li>(7,9,7,11)</li>
+					<li>(2,11,6,11)</li>
+				</rects>
+			</Soil>
+		</terrain>
+	</PrefabDef>
+</Defs>

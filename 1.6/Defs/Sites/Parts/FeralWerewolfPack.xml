@@ -16,13 +16,32 @@
 			<li>Mashed_Bloodmoon_FeralWerewolfPack</li>
 		</tags>
 	</SitePartDef>
-	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfShack]========== -->
+	<!-- ==========[Mashed_Bloodmoon_HuntersShack]========== -->
 	<GenStepDef>
-		<defName>Mashed_Bloodmoon_FeralWerewolfShack</defName>
+		<defName>Mashed_Bloodmoon_HuntersShack</defName>
 		<linkWithSite>Mashed_Bloodmoon_FeralWerewolfPack</linkWithSite>
-		<order>460</order>
-		<genStep Class="GenStep_ItemStash">
-			<thingSetMakerDef>Mashed_Bloodmoon_MapGen_FeralWerewolfShack</thingSetMakerDef>
+		<order>400</order>
+		<genStep Class="GenStep_ScatterGroupPrefabs">
+			<groups>
+				<li>
+					<prefab>Mashed_Bloodmoon_HuntersShackPrefab_A</prefab>
+				</li>
+				<li>
+					<prefab>Mashed_Bloodmoon_HuntersShackPrefab_B</prefab>
+				</li>
+				<li>
+					<prefab>Mashed_Bloodmoon_HuntersShackPrefab_C</prefab>
+				</li>
+				<li>
+					<prefab>Mashed_Bloodmoon_HuntersShackPrefab_D</prefab>
+				</li>
+				<li>
+					<prefab>Mashed_Bloodmoon_HuntersShackPrefab_E</prefab>
+				</li>
+				<li>
+					<prefab>Mashed_Bloodmoon_HuntersShackPrefab_F</prefab>
+				</li>
+			</groups>
 			<count>1</count>
 			<nearMapCenter>true</nearMapCenter>
 		</genStep>

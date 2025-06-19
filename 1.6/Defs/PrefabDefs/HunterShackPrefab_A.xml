@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HuntersShackPrefab_A]========== -->
+	<PrefabDef>
+		<defName>Mashed_Bloodmoon_HuntersShackPrefab_A</defName>
+		<size>(14,9)</size>
+		<things>
+			<Table1x2c>
+				<position>(5, 0, 5)</position>
+				<relativeRotation>Opposite</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Table1x2c>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(8, 0, 3)</position>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(1, 0, 7)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(12, 0, 6)</position>
+				<relativeRotation>Counterclockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Mashed_Bloodmoon_HuntersCache>
+				<positions>
+					<li>(4, 0, 7)</li>
+					<li>(11, 0, 7)</li>
+				</positions>
+				<relativeRotation>Opposite</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCache>
+			<TableButcher>
+				<position>(3, 0, 1)</position>
+				<stuff>WoodLog</stuff>
+			</TableButcher>
+			<Door>
+				<position>(11, 0, 4)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Door>
+			<Stool>
+				<rects>
+					<li>(6,4,6,5)</li>
+				</rects>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Stool>
+			<DiningChair>
+				<rects>
+					<li>(7,1,7,1)</li>
+					<li>(9,1,9,1)</li>
+				</rects>
+				<relativeRotation>Opposite</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</DiningChair>
+			<Wall>
+				<rects>
+					<li>(0,2,11,2)</li>
+					<li>(0,3,0,8)</li>
+					<li>(4,3,4,5)</li>
+					<li>(11,3,11,3)</li>
+					<li>(13,3,13,8)</li>
+					<li>(11,5,12,5)</li>
+					<li>(1,8,12,8)</li>
+				</rects>
+				<stuff>WoodLog</stuff>
+			</Wall>
+			<Bedroll>
+				<position>(3, 0, 4)</position>
+				<relativeRotation>Opposite</relativeRotation>
+				<stuff>Leather_Light</stuff>
+				<quality>Normal</quality>
+			</Bedroll>
+			<FueledStove>
+				<position>(7, 0, 7)</position>
+			</FueledStove>
+			<Shelf>
+				<position>(1, 0, 4)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Shelf>
+			<Filth_Blood>
+				<position>(4, 0, 0)</position>
+				<hp>-1</hp>
+			</Filth_Blood>
+			<MedicineHerbal>
+				<position>(1, 0, 3)</position>
+				<stackCountRange>3~6</stackCountRange>
+			</MedicineHerbal>
+			<Gun_BoltActionRifle>
+				<position>(1, 0, 4)</position>
+				<quality>Good</quality>
+			</Gun_BoltActionRifle>
+			<Filth_Dirt>
+				<rects>
+					<li>(12,1,12,1)</li>
+					<li>(5,3,5,3)</li>
+					<li>(9,4,9,4)</li>
+					<li>(1,5,1,5)</li>
+					<li>(3,6,3,6)</li>
+					<li>(7,6,8,6)</li>
+					<li>(11,6,11,6)</li>
+				</rects>
+				<hp>-1</hp>
+			</Filth_Dirt>
+		</things>
+		<terrain>
+			<WoodPlankFloor>
+				<rects>
+					<li>(0,0,13,1)</li>
+					<li>(12,2,13,2)</li>
+					<li>(1,3,12,7)</li>
+				</rects>
+			</WoodPlankFloor>
+			<Soil>
+				<rects>
+					<li>(0,2,11,2)</li>
+					<li>(0,3,0,8)</li>
+					<li>(13,3,13,8)</li>
+					<li>(1,8,12,8)</li>
+				</rects>
+			</Soil>
+		</terrain>
+	</PrefabDef>
+</Defs>

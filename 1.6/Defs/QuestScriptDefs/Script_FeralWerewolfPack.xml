@@ -25,9 +25,9 @@
 		<questDescriptionRules>
 			<rulesStrings>
 				<!-- No asker -->
-				<li>questDescription(askerIsNull==true)->We have learnt of a feral werewolf pack, not far from [map_definite]. There is supposed to be a hunters cabin there, that may contain something valueable.</li>
+				<li>questDescription(askerIsNull==true)->We have learnt of a feral werewolf pack, not far from [map_definite]. There is supposed to be an abandoned hunters cabin there, that may contain something valuable.</li>
 				<!-- Faction leader asker -->
-				<li>questDescription(asker_factionLeader==True)->[asker_nameFull] has sent us a message. Apparently, a pack of feral werewolves have been attacking nearby settlements, and need to be dealt with while their location is known.\n\n[asker_nameDef] is asking us to deal with the pack, which means eliminating all of the feral werewolves at the site. There is an old hunters cabin there, that we have permission to loot as a reward.</li>
+				<li>questDescription(asker_factionLeader==True)->[asker_nameFull] has sent us a message. Apparently, a pack of feral werewolves have been attacking nearby settlements, and need to be dealt with while their location is known.\n\n[asker_nameDef] is asking us to deal with the pack, which means eliminating all of the feral werewolves at the site. There is an abandoned hunters cabin there, that we have permission to loot as a reward.</li>
 			</rulesStrings>
 		</questDescriptionRules>
 		<root Class="QuestNode_Sequence">
