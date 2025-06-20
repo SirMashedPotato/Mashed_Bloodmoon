@@ -12,7 +12,7 @@ namespace Mashed_Bloodmoon
             if (__result && LycanthropeUtility.PawnIsTransformedLycanthrope(pawn))
             {
                 __result = false;
-                errString = "Mashed_Bloodmoon_LycanthropeCantDo".Translate(pawn);
+                errString = "Mashed_Bloodmoon_InBeastForm".Translate(pawn);
             }
         }
 

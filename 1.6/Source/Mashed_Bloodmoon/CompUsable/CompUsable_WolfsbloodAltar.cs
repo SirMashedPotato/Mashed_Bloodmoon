@@ -52,7 +52,7 @@ namespace Mashed_Bloodmoon
 
             if (!Props.allowTransformed && LycanthropeUtility.PawnIsTransformedLycanthrope(p))
             {
-                return "Mashed_Bloodmoon_LycanthropeCantDo".Translate(p);
+                return "Mashed_Bloodmoon_InBeastForm".Translate(p);
             }
 
             if (Props.heartCost > 0 && compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] - Props.heartCost < 0)

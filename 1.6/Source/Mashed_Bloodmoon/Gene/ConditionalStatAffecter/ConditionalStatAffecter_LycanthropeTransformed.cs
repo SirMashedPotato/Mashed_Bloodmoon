@@ -5,7 +5,7 @@ namespace Mashed_Bloodmoon
 {
     public class ConditionalStatAffecter_LycanthropeTransformed : ConditionalStatAffecter
     {
-        public override string Label => "Mashed_Bloodmoon_InBeastForm".Translate();
+        public override string Label => "Mashed_Bloodmoon_StatAffecter_LycanthropeTransformed".Translate();
 
         public override bool Applies(StatRequest req)
         {
