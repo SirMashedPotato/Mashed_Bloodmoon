@@ -183,6 +183,9 @@
     <Compile Include="Page\UpgradeTab\Tab_UpgradeClaw.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeTotem.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeTrait.cs" />
+    <Compile Include="Quests\QuestNode_SetFaction.cs" />
+    <Compile Include="Sites\GenStep\GenStep_FeralWerewolfAmbush_Edge.cs" />
+    <Compile Include="Sites\SitePartWorker\SitePartWorker_FeralWerewolfAmbush.cs" />
     <Compile Include="ThingClass\Building_WolfsbloodAltar.cs" />
     <Compile Include="ThingClass\SpectralWerewolfSpawner.cs" />
     <Compile Include="ThingComp\Comp_DropOnDestroy.cs" />

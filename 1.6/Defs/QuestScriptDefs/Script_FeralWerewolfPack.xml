@@ -66,6 +66,16 @@
 					<storeAs>siteTile</storeAs>
 					<preferCloserTiles>true</preferCloserTiles>
 				</li>
+				<li Class="QuestNode_ViolentQuestsAllowed">
+					<node Class="QuestNode_Set">
+						<name>siteAmbushChance</name>
+						<value>0.85</value>
+					</node>
+					<elseNode Class="QuestNode_Set">
+						<name>siteAmbushChance</name>
+						<value>0</value>
+					</elseNode>
+				</li>
 				<li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
 					<storeAs>sitePartDefs</storeAs>
 					<storeFactionAs>siteFaction</storeFactionAs>
@@ -73,7 +83,15 @@
 						<li>
 							<tag>Mashed_Bloodmoon_FeralWerewolfPack</tag>
 						</li>
+						<li>
+							<tag>Mashed_Bloodmoon_FeralWerewolfAmbush</tag>
+							<chance>$siteAmbushChance</chance>
+						</li>
 					</sitePartsTags>
+				</li>
+				<li Class="Mashed_Bloodmoon.QuestNode_SetFaction">
+					<storeFactionAs>siteFaction</storeFactionAs>
+					<factionDef>Mashed_Bloodmoon_FeralWerewolves</factionDef>
 				</li>
 				<li Class="QuestNode_GetDefaultSitePartsParams">
 					<tile>$siteTile</tile>
