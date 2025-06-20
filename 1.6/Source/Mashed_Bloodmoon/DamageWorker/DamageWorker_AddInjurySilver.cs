@@ -6,7 +6,7 @@ namespace Mashed_Bloodmoon
     {
         public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {
-            return base.Apply(SilverDamageUtility.ApplySilverDamageFactor(dinfo, thing), thing);
+            return base.Apply(DamageUtility.ApplySilverDamageFactor(dinfo, thing), thing);
         }
     }
 }

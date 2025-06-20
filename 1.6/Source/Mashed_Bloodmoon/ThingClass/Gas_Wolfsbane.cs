@@ -23,7 +23,7 @@ namespace Mashed_Bloodmoon
                         {
                             if (thing != null && thing is Pawn p && LycanthropeUtility.PawnIsTransformedLycanthrope(p))
                             {
-                                LycanthropeUtility.LycanthropeIngestedWolfsbane(p, 0.01f);
+                                DamageUtility.LycanthropeIngestedWolfsbane(p, 0.01f);
                             }
                         }
                     }

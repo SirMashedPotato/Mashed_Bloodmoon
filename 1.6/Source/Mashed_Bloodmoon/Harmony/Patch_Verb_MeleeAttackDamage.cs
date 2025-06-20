@@ -39,7 +39,7 @@ namespace Mashed_Bloodmoon
             List<DamageInfo> newResult = new List<DamageInfo>();
             foreach (DamageInfo dinfo in __result) 
             {
-                dinfo.SetAmount(SilverDamageUtility.LycanthropeSilverDamageFactor(dinfo.Amount, pawnSilverWeakness, silverDamageFactor));
+                dinfo.SetAmount(DamageUtility.LycanthropeSilverDamageFactor(dinfo.Amount, pawnSilverWeakness, silverDamageFactor));
                 newResult.Add(dinfo);
             }
 

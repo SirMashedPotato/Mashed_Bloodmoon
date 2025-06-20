@@ -11,7 +11,7 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
-            if (onlyIfCanTransform && !LycanthropeUtility.PawnCanTransform(pawn))
+            if (onlyIfCanTransform && !TransformationUtility.PawnCanTransform(pawn))
             {
                 return false;
             }

@@ -28,7 +28,7 @@ namespace Mashed_Bloodmoon
         public override void IngestionOutcome_Transformed(Pawn pawn, Hediff hediff)
         {
             pawn.health.GetOrAddHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbaneNausea);
-            LycanthropeUtility.LycanthropeIngestedWolfsbane(pawn);
+            DamageUtility.LycanthropeIngestedWolfsbane(pawn);
         }
     }
 }

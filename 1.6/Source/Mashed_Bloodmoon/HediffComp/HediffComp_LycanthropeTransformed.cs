@@ -101,7 +101,7 @@ namespace Mashed_Bloodmoon
             AddLinkedHediff(CompLycanthrope.equippedClawType.clawHediffDef, RimWorld.BodyPartDefOf.Hand);
             AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFangs, BodyPartDefOf.Jaw);
 
-            LycanthropeUtility.MoveEquippedToInventory(parent.pawn);
+            TransformationUtility.MoveEquippedToInventory(parent.pawn);
         }
 
         // Transformation workers are called here instead of in CompPostMake due to potential null references when trying to fetch this comp
@@ -183,7 +183,7 @@ namespace Mashed_Bloodmoon
             {
                 fatigueDuration *= 2;
             }
-            LycanthropeUtility.AddFatigueHediff(parent.pawn, fatigueDuration);
+            TransformationUtility.AddFatigueHediff(parent.pawn, fatigueDuration);
             parent.pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformationEnd);
         }
 

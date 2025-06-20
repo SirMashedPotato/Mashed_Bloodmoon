@@ -17,9 +17,9 @@ namespace Mashed_Bloodmoon
                 ThoughtUtility.GiveThoughtsForPawnExecuted(targetPawn, parent.pawn, PawnExecutionKind.GenericBrutal);
             }
             
-            if (LycanthropeUtility.PawnHasWolfsbaneHediff(targetPawn))
+            if (DamageUtility.PawnHasWolfsbaneHediff(targetPawn))
             {
-                LycanthropeUtility.LycanthropeIngestedWolfsbane(parent.pawn);
+                DamageUtility.LycanthropeIngestedWolfsbane(parent.pawn);
             }
 
             if (LycanthropeUtility.PawnIsLycanthrope(targetPawn))

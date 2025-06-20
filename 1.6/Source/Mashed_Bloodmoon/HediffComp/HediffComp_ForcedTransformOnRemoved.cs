@@ -11,7 +11,7 @@ namespace Mashed_Bloodmoon
             base.CompPostPostRemoved();
             if (!parent.pawn.Dead && parent.pawn.Spawned)
             {
-                LycanthropeUtility.ForceTransformation(parent.pawn);
+                TransformationUtility.ForceTransformation(parent.pawn);
             }
         }
     }

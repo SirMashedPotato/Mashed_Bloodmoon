@@ -127,13 +127,13 @@ namespace Mashed_Bloodmoon
 
         public override void Notify_PawnPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
-            if (Pawn.story.traits.HasTrait(TraitDefOf.Mashed_Bloodmoon_UncontrollableLycanthropy) && LycanthropeUtility.PawnCanTransform(Pawn, true) && Rand.Chance(0.6f))
+            if (Pawn.story.traits.HasTrait(TraitDefOf.Mashed_Bloodmoon_UncontrollableLycanthropy) && TransformationUtility.PawnCanTransform(Pawn, true) && Rand.Chance(0.6f))
             {
                 TransformPawn(true);
             }
             else
             {
-                if (LycanthropeUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
+                if (TransformationUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
                 {
                     float chance = 0.1f;
 

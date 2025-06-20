@@ -253,7 +253,8 @@
     <Compile Include="Utility\Assets.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
     <Compile Include="DefModExtension\PawnTotemRecord.cs" />
-    <Compile Include="Utility\SilverDamageUtility.cs" />
+    <Compile Include="Utility\DamageUtility.cs" />
+    <Compile Include="Utility\TransformationUtility.cs" />
     <Compile Include="Utility\WerewolfUtility.cs" />
   </ItemGroup>
   <ItemGroup>

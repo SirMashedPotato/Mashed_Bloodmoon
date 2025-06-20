@@ -48,7 +48,7 @@ namespace Mashed_Bloodmoon
                     {
                         if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention))
                         {
-                            LycanthropeUtility.ApplyImminentTransformation(pawn, TransitionTicks);
+                            TransformationUtility.ApplyImminentTransformation(pawn, TransitionTicks);
                         }
                     }
                 }
