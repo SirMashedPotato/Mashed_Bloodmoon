@@ -40,6 +40,7 @@
 		<hidden>true</hidden>
 		<autoFlee>false</autoFlee>
 		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<animalsFleeDanger>false</animalsFleeDanger>
 		<techLevel>Animal</techLevel>
 		<permanentEnemyToEveryoneExcept>
 			<li MayRequire="Ludeon.RimWorld.Anomaly">Entities</li>
