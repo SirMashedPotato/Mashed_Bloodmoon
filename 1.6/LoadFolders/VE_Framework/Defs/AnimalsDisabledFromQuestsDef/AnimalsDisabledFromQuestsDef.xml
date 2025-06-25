@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+	<VEF.AnimalBehaviours.AnimalsDisabledFromQuestsDef>
 		<defName>Mashed_Bloodmoon_DisabledQuestAnimals</defName>
 		<disabledFromQuestsPawns>
 			<li>Mashed_Bloodmoon_FeralWerewolf</li>
+			<li>Mashed_Bloodmoon_SpectralWerewolf</li>
 		</disabledFromQuestsPawns>
-	</AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+	</VEF.AnimalBehaviours.AnimalsDisabledFromQuestsDef>
 </Defs>

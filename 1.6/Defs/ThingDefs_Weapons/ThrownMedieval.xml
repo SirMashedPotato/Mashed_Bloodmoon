@@ -25,7 +25,7 @@
 		<label>houndslayer throwing axes</label>
 		<description>Throwing axes designed for taking down lycanthropes from a safe distance, though they can still be used in melee if needed.</description>
 		<modExtensions>
-			<li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li Class="VEF.Things.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<usableWithShields>true</usableWithShields>
 			</li>
 		</modExtensions>
@@ -99,7 +99,7 @@
 		<label>houndslayer throwing knives</label>
 		<description>Throwing knives designed for taking down lycanthropes from a safe distance, though they can still be used in melee if needed.</description>
 		<modExtensions>
-			<li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li Class="VEF.Things.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<usableWithShields>true</usableWithShields>
 			</li>
 		</modExtensions>

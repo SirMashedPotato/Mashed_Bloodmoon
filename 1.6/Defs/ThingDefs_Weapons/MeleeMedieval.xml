@@ -32,7 +32,7 @@
 		<label>houndslayer shortsword</label>
 		<description>A specially designed shortsword. A steel core, with a silver coating, results in a a weapon tailor made for hunting lycanthropes.</description>
 		<modExtensions>
-			<li Class="VFECore.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li Class="VEF.Things.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<usableWithShields>true</usableWithShields>
 			</li>
 		</modExtensions>
