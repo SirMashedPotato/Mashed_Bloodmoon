@@ -1,4 +1,6 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -106,7 +108,12 @@ namespace Mashed_Bloodmoon
 
         private BodyPartRecord GetBodyPartRecord(Pawn pawn) 
         {
-            return pawn.health.hediffSet.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).RandomElement();
+            List<BodyPartRecord> parts = pawn.health.hediffSet.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).ToList();
+            if (parts.NullOrEmpty())
+            {
+                return null;
+            }
+            return parts.RandomElement();
         }
     }
 }
