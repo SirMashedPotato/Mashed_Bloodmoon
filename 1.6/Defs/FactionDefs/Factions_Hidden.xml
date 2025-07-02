@@ -4,7 +4,7 @@
 	<FactionDef ParentName="FactionBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolves</defName>
 		<label>feral werewolves</label>
-		<description>TODO.</description>
+		<description>Once lycanthropes, these werewolves have slowly lost whatever humanity they had, and are now nothing more than mindless beasts. Generally only found in small packs deep in the wilderness, during a Huntsman's Moon they will often attack the closest settlement.</description>
 		<pawnSingular>feral werewolf</pawnSingular>
 		<pawnsPlural>feral werewolves</pawnsPlural>
 		<fixedName>Feral werewolves</fixedName>
