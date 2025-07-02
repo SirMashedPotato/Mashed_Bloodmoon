@@ -5,6 +5,9 @@
 	<!-- ==========[Huntsman Moon]==========-->
 	<Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>Enable the Huntsman's Moon incidents</Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>
 	<Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>The number of hours between feral werewolf attacks during a Huntsman's Moon: ({0} hours ~ {1} hours)</Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>
+	<Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>Multiplier for the strength (points) of feral werewolf raids: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>
+	<Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>Multiplier for the strength (points) of feral werewolf ambushes: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>
+	<Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>Multiplier for the strength (points) of feral werewolf pack sites: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>
 	<!-- ==========[Lycanthropy]==========-->
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>

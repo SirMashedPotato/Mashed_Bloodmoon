@@ -25,6 +25,7 @@ namespace Mashed_Bloodmoon
             incidentParms.forced = true;
             incidentParms.faction = GetFeralWerewolfFaction();
             IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;
+            incidentParms.points *= Mashed_Bloodmoon_ModSettings.HuntsmanMoon_AmbushPointsMultiplier;
             if (incidentParms.points < 200)
             {
                 incidentParms.points = 200;
@@ -39,6 +40,7 @@ namespace Mashed_Bloodmoon
             incidentParms.faction = GetFeralWerewolfFaction();
             incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
             incidentParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
+            incidentParms.points *= Mashed_Bloodmoon_ModSettings.HuntsmanMoon_RaidPointsMultiplier;
             if (incidentParms.points < 200)
             {
                 incidentParms.points = 200;

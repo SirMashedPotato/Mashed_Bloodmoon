@@ -23,6 +23,7 @@ namespace Mashed_Bloodmoon
         public override void Init(Site site, SitePart sitePart)
         {
             base.Init(site, sitePart);
+            sitePart.parms.threatPoints *= Mashed_Bloodmoon_ModSettings.HuntsmanMoon_PackPointsMultiplier;
             sitePart.expectedEnemyCount = GetWerewolfCount(site, sitePart.parms);
         }
 

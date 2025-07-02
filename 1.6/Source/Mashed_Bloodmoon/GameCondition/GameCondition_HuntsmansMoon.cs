@@ -59,6 +59,7 @@ namespace Mashed_Bloodmoon
         {
             int caravanCount = Find.WorldObjects.CaravansCount;
             List<Map> playerMaps = Find.Maps.Where(x => x.IncidentTargetTags().Contains(IncidentTargetTagDefOf.Map_PlayerHome)).ToList();
+            float pointsMult = Mashed_Bloodmoon_ModSettings.HuntsmanMoon_RaidPointsMultiplier;
             if (caravanCount > 0 && Rand.RangeInclusive(0, caravanCount + playerMaps.Count()) < caravanCount - 1)
             {
                 TriggerWerewolfAmbush();
@@ -74,7 +75,6 @@ namespace Mashed_Bloodmoon
         private void TriggerWerewolfAmbush()
         {
             WerewolfUtility.TriggerWerewolfAmbush();
-
         }
 
         private void TriggerWerewolfRaid(List<Map> possibleMaps)
