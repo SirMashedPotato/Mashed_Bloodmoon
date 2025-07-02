@@ -135,26 +135,29 @@ namespace Mashed_Bloodmoon
             {
                 if (TransformationUtility.PawnCanTransform(parent.pawn))
                 {
-                    bool continueFlag = true;
+                    bool continueFlag = false;
+                    bool breakFlag = false;
                     if (parent.pawn.Faction != null)
                     {
                         if (parent.pawn.Faction.IsPlayer)
                         {
                             if (parent.pawn.IsPrisonerOfColony)
                             {
-                                if (!Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersTransformOnDamage)
+                                if (Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersTransformOnDamage)
                                 {
-                                    continueFlag = false;
+                                    continueFlag = true;
+                                    breakFlag = true;
                                 }
                             }
-                            else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && !Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesTransformOnDamage)
+                            else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesTransformOnDamage)
                             {
-                                continueFlag = false;
+                                continueFlag = true;
+                                breakFlag = true;
                             }
                         }
-                        else if (!parent.pawn.Faction.HostileTo(Faction.OfPlayer))
+                        else if (parent.pawn.Faction.HostileTo(Faction.OfPlayer))
                         {
-                            continueFlag = false;
+                            continueFlag = true;
                         }
                     }
 
@@ -170,7 +173,7 @@ namespace Mashed_Bloodmoon
 
                         if (Rand.Chance(chance))
                         {
-                            TransformPawn();
+                            TransformPawn(breakFlag);
                         }
                     }
                 }

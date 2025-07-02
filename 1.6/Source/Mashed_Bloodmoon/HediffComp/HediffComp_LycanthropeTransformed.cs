@@ -220,23 +220,41 @@ namespace Mashed_Bloodmoon
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            yield return new Command_Action
-            {
-                defaultLabel = "Mashed_Bloodmoon_TransformHuman_Label".Translate(),
-                defaultDesc = "Mashed_Bloodmoon_TransformHuman_Desc".Translate(parent.pawn, CurrentFatigueDuration().ToStringTicksToPeriod()),
-                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformHuman", true),
-                action = delegate ()
-                {
-                    parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed));
-                },
-                Disabled = false,
-            };
+            bool continueFlag = true;
 
-            if (lycanthropeStressGizmo == null)
+            if (parent.pawn.IsPrisonerOfColony)
             {
-                lycanthropeStressGizmo = new Gizmo_LycanthropeStress(this);
+                if (Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersHideGizmo)
+                {
+                    continueFlag = false;
+                }
             }
-            yield return lycanthropeStressGizmo;
+            else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesHideGizmo)
+            {
+                continueFlag = false;
+            }
+
+            if (continueFlag)
+            {
+
+                yield return new Command_Action
+                {
+                    defaultLabel = "Mashed_Bloodmoon_TransformHuman_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_TransformHuman_Desc".Translate(parent.pawn, CurrentFatigueDuration().ToStringTicksToPeriod()),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformHuman", true),
+                    action = delegate ()
+                    {
+                        parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformed));
+                    },
+                    Disabled = false,
+                };
+
+                if (lycanthropeStressGizmo == null)
+                {
+                    lycanthropeStressGizmo = new Gizmo_LycanthropeStress(this);
+                }
+                yield return lycanthropeStressGizmo;
+            }
         }
 
         public override string CompDescriptionExtra
