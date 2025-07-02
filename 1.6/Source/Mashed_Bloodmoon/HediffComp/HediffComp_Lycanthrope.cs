@@ -133,19 +133,45 @@ namespace Mashed_Bloodmoon
             }
             else
             {
-                if (TransformationUtility.PawnCanTransform(parent.pawn) && (parent.pawn.Faction == null || parent.pawn.Faction.HostileTo(Faction.OfPlayer)))
+                if (TransformationUtility.PawnCanTransform(parent.pawn))
                 {
-                    float chance = 0.1f;
-
-                    PawnLycanthropeProperties props = PawnLycanthropeProperties.GetProps(parent.pawn);
-                    if (props != null)
+                    bool continueFlag = true;
+                    if (parent.pawn.Faction != null)
                     {
-                        chance = props.chance;
+                        if (parent.pawn.Faction.IsPlayer)
+                        {
+                            if (parent.pawn.IsPrisonerOfColony)
+                            {
+                                if (!Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersTransformOnDamage)
+                                {
+                                    continueFlag = false;
+                                }
+                            }
+                            else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && !Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesTransformOnDamage)
+                            {
+                                continueFlag = false;
+                            }
+                        }
+                        else if (!parent.pawn.Faction.HostileTo(Faction.OfPlayer))
+                        {
+                            continueFlag = false;
+                        }
                     }
 
-                    if (Rand.Chance(chance))
+                    if (continueFlag)
                     {
-                        TransformPawn();
+                        float chance = 0.1f;
+
+                        PawnLycanthropeProperties props = PawnLycanthropeProperties.GetProps(parent.pawn);
+                        if (props != null)
+                        {
+                            chance = props.chance;
+                        }
+
+                        if (Rand.Chance(chance))
+                        {
+                            TransformPawn();
+                        }
                     }
                 }
             }
@@ -206,21 +232,37 @@ namespace Mashed_Bloodmoon
                         },
                     };
                 }
-                
-                yield return new Command_Action
-                {
-                    defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
-                    defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn,
-                    ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
-                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
-                    action = delegate ()
-                    {
-                        TransformPawn();
-                    },
-                    Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue),
-                };
-            }
 
+                bool continueFlag = true;
+
+                if (parent.pawn.IsPrisonerOfColony)
+                {
+                    if (Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersHideGizmo)
+                    {
+                        continueFlag = false;
+                    }
+                }
+                else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesHideGizmo)
+                {
+                    continueFlag = false;
+                }
+
+                if (continueFlag)
+                {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
+                        defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn,
+                    ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
+                        icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
+                        action = delegate ()
+                        {
+                            TransformPawn();
+                        },
+                        Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue),
+                    };
+                }
+            }
         }
 
         public override string CompDescriptionExtra

@@ -18,15 +18,41 @@ namespace Mashed_Bloodmoon
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
+            Widgets.DrawMenuSection(inRect);
+            Rect mainRect = inRect.ContractedBy(15f);
             Listing_Standard listing_Standard = new Listing_Standard();
-            listing_Standard.Begin(inRect);
+            listing_Standard.Begin(mainRect);
 
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_HuntsmanMoon_EnableCondition".Translate(), ref settings.Mashed_Bloodmoon_HuntsmanMoon_EnableCondition);
 
+            listing_Standard.Label("Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks".Translate(settings.Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks.min, settings.Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks.max));
+            listing_Standard.IntRange(ref settings.Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks, 1, 24);
+
+            listing_Standard.Gap();
+            listing_Standard.GapLine();
+
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo, "Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc".Translate());
 
+            listing_Standard.Gap();
+            listing_Standard.GapLine();
+
+            listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo);
+
+            listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage);
+
+            if (ModsConfig.IdeologyActive)
+            {
+                listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo);
+
+                listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage);
+            }
 
             listing_Standard.End();
+
+            if (Widgets.ButtonText(new Rect(inRect.x + inRect.width - Window.CloseButSize.x, inRect.y + inRect.height + 2f, Window.CloseButSize.x, Window.CloseButSize.y), "ResetAll".Translate()))
+            {
+                Mashed_Bloodmoon_ModSettings.ResetSettings();
+            }
 
             base.DoSettingsWindowContents(inRect);
         }

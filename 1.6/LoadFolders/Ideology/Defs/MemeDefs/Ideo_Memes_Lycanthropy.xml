@@ -36,7 +36,9 @@
 				<li>memeCreed->cave</li>
 				<li>memeCreed->warren</li>
 				<li>memeCreed->den</li>
+				<li>memeCreed->pack</li>
 				<li>memeHyphenPrefix->lycan</li>
+				<li>memeConcept->moonlight</li>
 				<li>memeConcept->transformation</li>
 				<li>memeLeaderNoun->elder</li>
 				<li>memeLeaderNoun->ancient</li>

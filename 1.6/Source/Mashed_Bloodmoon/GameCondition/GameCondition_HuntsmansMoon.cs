@@ -34,7 +34,7 @@ namespace Mashed_Bloodmoon
 
         private void RandomizeTicksToNextRaid()
         {
-            ticksToNextRaid += Rand.RangeInclusive(GenDate.TicksPerHour * 4, GenDate.TicksPerHour * 7); //TODO get values from setting
+            ticksToNextRaid += (Mashed_Bloodmoon_ModSettings.HuntsmanMoon_HoursBetweenAttacks.RandomInRange * GenDate.TicksPerHour);
         }
 
         private void ApplyHuntsmanMoonTransformation()

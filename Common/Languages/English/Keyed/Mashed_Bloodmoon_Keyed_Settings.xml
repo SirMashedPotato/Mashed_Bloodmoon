@@ -4,7 +4,12 @@
 	<Mashed_Bloodmoon_ModName>Mashed's Bloodmoon</Mashed_Bloodmoon_ModName>
 	<!-- ==========[Huntsman Moon]==========-->
 	<Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>Enable the Huntsman's Moon incidents</Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>
+	<Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>The number of hours between feral werewolf attacks during a Huntsman's Moon: ({0} hours ~ {1} hours)</Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>
 	<!-- ==========[Lycanthropy]==========-->
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>
+	<Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>Hide the transform gizmo for colony prisoners</Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>
+	<Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>Hide the transform gizmo for colony slaves</Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>
+	<Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>Prisoners can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>
+	<Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>Slaves can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>
 </LanguageData>
