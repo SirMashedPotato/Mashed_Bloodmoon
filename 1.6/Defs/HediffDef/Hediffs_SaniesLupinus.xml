@@ -10,7 +10,8 @@
 		</descriptionHyperlinks>
 		<makesSickThought>true</makesSickThought>
 		<minSeverity>0.01</minSeverity>
-		<maxSeverity>1.0</maxSeverity>
+		<maxSeverity>1</maxSeverity>
+		<lethalSeverity>1.0001</lethalSeverity>
 		<initialSeverity>0.01</initialSeverity>
 		<tendable>true</tendable>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -25,6 +26,9 @@
 				<immunityPerDaySick>0.22</immunityPerDaySick>
 				<severityPerDayImmune>-0.4947</severityPerDayImmune>
 				<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+			</li>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
 			</li>
 		</comps>
 		<stages>
