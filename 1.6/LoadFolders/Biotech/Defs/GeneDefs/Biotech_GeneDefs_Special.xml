@@ -4,7 +4,7 @@
 	<GeneDef>
 		<defName>Mashed_Bloodmoon_LycanthropeBlood</defName>
 		<label>lycanthrope blood</label>
-		<description>Carriers of this gene are said to have strong lycanthrope blood flowing in their veins. They have the natural ability to enter a lycanthrope form. Removing this gene will not cure lycanthropy.</description>
+		<description>Carriers of this gene are said to have strong lycanthrope blood flowing in their veins. They have the natural ability to enter a lycanthrope form. Removing this gene will not cure their lycanthropy.</description>
 		<iconPath>UI/Icons/Genes/Mashed_Bloodmoon_LycanthropeBlood</iconPath>
 		<geneClass>Mashed_Bloodmoon.Gene_Lycanthrope</geneClass>
 		<displayCategory>Archite</displayCategory>
