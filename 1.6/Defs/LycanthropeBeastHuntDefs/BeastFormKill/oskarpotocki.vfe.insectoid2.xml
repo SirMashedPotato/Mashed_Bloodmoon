@@ -2,7 +2,7 @@
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidEmpress]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
-		<defName>Mashed_Bloodmoon_InsectoidEmpress</defName>
+		<defName>Mashed_Bloodmoon_VEIInsectoidEmpress</defName>
 		<label>beast hunt: Empress</label>
 		<description>Kill an insectoid empress while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
@@ -11,7 +11,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidPatriarch]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
-		<defName>Mashed_Bloodmoon_InsectoidPatriarch</defName>
+		<defName>Mashed_Bloodmoon_VEIInsectoidPatriarch</defName>
 		<label>beast hunt: Patriarch</label>
 		<description>Kill an insectoid patriarch while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
@@ -20,7 +20,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidTitantick]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
-		<defName>Mashed_Bloodmoon_InsectoidTitantick</defName>
+		<defName>Mashed_Bloodmoon_VEIInsectoidTitantick</defName>
 		<label>beast hunt: Titantick</label>
 		<description>Kill an insectoid titantick while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
@@ -29,7 +29,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidTeramantis]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
-		<defName>Mashed_Bloodmoon_InsectoidTeramantis</defName>
+		<defName>Mashed_Bloodmoon_VEIInsectoidTeramantis</defName>
 		<label>beast hunt: Teramantis</label>
 		<description>Kill an insectoid teramantis while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
@@ -38,7 +38,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidGigamite]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
-		<defName>Mashed_Bloodmoon_InsectoidGigamite</defName>
+		<defName>Mashed_Bloodmoon_VEIInsectoidGigamite</defName>
 		<label>beast hunt: Gigamite</label>
 		<description>Kill an insectoid gigamite while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
@@ -47,7 +47,7 @@
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_InsectoidSilverfish]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="oskarpotocki.vfe.insectoid2">
-		<defName>Mashed_Bloodmoon_InsectoidSilverfish</defName>
+		<defName>Mashed_Bloodmoon_VEIInsectoidSilverfish</defName>
 		<label>beast hunt: Silverfish</label>
 		<description>Kill an insectoid silverfish while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
