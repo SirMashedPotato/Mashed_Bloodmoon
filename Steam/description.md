@@ -67,6 +67,7 @@ How much stress a lycanthrope can withstand can be increased through eating the 
         [td][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Image_Ability.png[/img][/td]
     [/tr]
 [/table]
+[img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Showcase_Upgrade.png[/img]
 
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_BeastHunt.png[/img]
@@ -74,20 +75,22 @@ How much stress a lycanthrope can withstand can be increased through eating the 
     [tr]
         [td]Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.
         
-        Each completed beast hunt will reward the lycanthrope with a permanent stacking mood bonus, and potentially other gifts[/td]
+        Each completed beast hunt will reward the lycanthrope with a permanent stacking mood bonus, and potentially other gifts.
+        
+        Completing lycanthrope proficiency beast hunts will unlock an upgrade for the corresponding ability.[/td]
         [td][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Image_BeastHunt.png[/img][/td]
     [/tr]
 [/table]
 
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_AdditionalContent.png[/img]
-Blergh
+[img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Showcase_Extra.png[/img]
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Discord_Bits/main/Mashed_GenericBanner_Ideology.png[/img]
-Blergh
+[img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Showcase_Ideology.png[/img]
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Discord_Bits/main/Mashed_GenericBanner_Biotech.png[/img]
-Blergh
+[img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Showcase_Biotech.png[/img]
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Questions.png[/img]
 Q: CE?
