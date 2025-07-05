@@ -11,7 +11,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.odyssey">
 		<defName>Mashed_Bloodmoon_HiveQueen</defName>
 		<label>beast hunt: Hive Queen</label>
-		<description>Consume the heart of an hive queen.</description>
+		<description>Consume the heart of a hive queen.</description>
 		<targetThingDef>HiveQueen</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Insect</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
