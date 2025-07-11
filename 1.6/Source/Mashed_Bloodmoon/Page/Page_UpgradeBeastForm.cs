@@ -19,8 +19,6 @@ namespace Mashed_Bloodmoon
         private readonly List<TabRecord> tabs = new List<TabRecord>();
         private List<UpgradeAmount> upgradeAmountList = new List<UpgradeAmount>();
 
-        public float innerRectHeightTotem;
-        public float innerRectHeightAbility;
         public static float rowHeight = Text.LineHeight * 6f;
 
         public override string PageTitle => "Mashed_Bloodmoon_UpgradeBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
@@ -39,7 +37,7 @@ namespace Mashed_Bloodmoon
             ClawList = DefDatabase<LycanthropeClawTypeDef>.AllDefsListForReading;
             TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.Where(x => x.displayAsTotem).ToList();
             TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading.OrderBy(x=>x.traitDef.DataAtDegree(x.traitDegree).GetLabelCapFor(pawn)).ToList();
-            ReadySettingsTabs();
+            ReadyTabs();
 
             foreach (LycanthropeTotemDef def in TotemList)
             {
@@ -50,7 +48,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        private void ReadySettingsTabs()
+        private void ReadyTabs()
         {
             tabs.Add(new TabRecord("Mashed_Bloodmoon_UpgradeTab_Abilities".Translate(), delegate
             {
