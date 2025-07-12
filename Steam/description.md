@@ -94,7 +94,7 @@ How much stress a lycanthrope can withstand can be increased through eating the 
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Questions.png[/img]
 Q: CE?
-A: I don't patch for CE.
+A: I don't patch for CE, maybe it works, maybe it doesn't.
 
 Q: 1.5?
 A: There is a 1.5 release available on my GitHub. It is an older build, and is provided as is.
@@ -108,6 +108,7 @@ A: There is a 1.5 release available on my GitHub. It is an older build, and is p
 [list]
 BongBong, Theo, Aludis, Aquiles, charybdis6404, Fabricator General, Roque the Rogue
 [/list]
+[*]To OttersHoldHands for reminding me of something I didn't test.
 [*]And to Ranger Rick for being neat
 [/list]
 
