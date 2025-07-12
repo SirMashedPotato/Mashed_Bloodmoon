@@ -103,6 +103,7 @@ A: There is a 1.5 release available on my GitHub. It is an older build, and is p
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Credits.png[/img]
 [list]
 [*]Mostly inspired by the Elder Scrolls series by Bethesda Studios, with a heavy focus on Morrowind
+[*]Lycanthrope ability sounds otained from https://mixkit.co/
 [*]Thanks to everyone that provided feedback during the far too long beta period:
 [list]
 BongBong, Theo, Aludis, Aquiles, charybdis6404, Fabricator General, Roque the Rogue
