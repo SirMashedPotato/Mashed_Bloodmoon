@@ -45,6 +45,9 @@
 		<permanentEnemyToEveryoneExcept>
 			<li MayRequire="Ludeon.RimWorld.Anomaly">Entities</li>
 		</permanentEnemyToEveryoneExcept>
+		<layerWhitelist>
+			<li>Surface</li>
+		</layerWhitelist>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<allowedArrivalTemperatureRange>-100~60</allowedArrivalTemperatureRange>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>

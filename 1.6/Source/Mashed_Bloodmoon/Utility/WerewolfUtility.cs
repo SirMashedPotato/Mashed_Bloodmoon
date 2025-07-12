@@ -1,5 +1,8 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using RimWorld.QuestGen;
+using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -19,9 +22,10 @@ namespace Mashed_Bloodmoon
             QuestUtility.SendLetterQuestAvailable(quest);
         }
 
-        internal static void TriggerWerewolfAmbush()
+        internal static void TriggerWerewolfAmbush(List<Caravan> possibleCaravans)
         {
-            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, Find.WorldObjects.Caravans.RandomElement());
+            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush.category, possibleCaravans.RandomElement());
+
             incidentParms.forced = true;
             incidentParms.faction = GetFeralWerewolfFaction();
             IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;

@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -57,12 +58,13 @@ namespace Mashed_Bloodmoon
 
         private void TriggerWerewolfAttack()
         {
-            int caravanCount = Find.WorldObjects.CaravansCount;
-            List<Map> playerMaps = Find.Maps.Where(x => x.IncidentTargetTags().Contains(IncidentTargetTagDefOf.Map_PlayerHome)).ToList();
+            List<Caravan> playerCaravans = Find.WorldObjects.Caravans.Where(x => FactionDefOf.Mashed_Bloodmoon_FeralWerewolves.layerWhitelist.Contains(x.Tile.LayerDef)).ToList();
+            List<Map> playerMaps = Find.Maps.Where(x => x.IncidentTargetTags().Contains(IncidentTargetTagDefOf.Map_PlayerHome) && 
+            FactionDefOf.Mashed_Bloodmoon_FeralWerewolves.layerWhitelist.Contains(x.Tile.LayerDef)).ToList();
             float pointsMult = Mashed_Bloodmoon_ModSettings.HuntsmanMoon_RaidPointsMultiplier;
-            if (caravanCount > 0 && Rand.RangeInclusive(0, caravanCount + playerMaps.Count()) < caravanCount - 1)
+            if (!playerCaravans.NullOrEmpty() && Rand.RangeInclusive(0, playerCaravans.Count + playerMaps.Count()) < playerCaravans.Count - 1)
             {
-                TriggerWerewolfAmbush();
+                TriggerWerewolfAmbush(playerCaravans);
                 return;
             }
             if (!playerMaps.NullOrEmpty())
@@ -72,9 +74,9 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        private void TriggerWerewolfAmbush()
+        private void TriggerWerewolfAmbush(List<Caravan> possibleCaravans)
         {
-            WerewolfUtility.TriggerWerewolfAmbush();
+            WerewolfUtility.TriggerWerewolfAmbush(possibleCaravans);
         }
 
         private void TriggerWerewolfRaid(List<Map> possibleMaps)
