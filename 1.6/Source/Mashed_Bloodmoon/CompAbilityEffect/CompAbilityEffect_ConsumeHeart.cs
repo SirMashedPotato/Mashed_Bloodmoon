@@ -32,8 +32,9 @@ namespace Mashed_Bloodmoon
 
             LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
 
-            LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, 1);
-            CompLycanthropeTransformed.StressMax += 1;
+            int consumedHeartCount = 1 * Mashed_Bloodmoon_ModSettings.Lycanthropy_ConsumedHearMultiplier;
+            LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, consumedHeartCount);
+            CompLycanthropeTransformed.StressMax += consumedHeartCount;
             
             float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
             DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);

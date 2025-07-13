@@ -45,6 +45,9 @@ namespace Mashed_Bloodmoon
             listing_Standard.GapLine();
             listing_Standard.Gap(24);
 
+            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
+            settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = (int)listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, 1, 10);
+
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo, "Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc".Translate());
             listing_Standard.Gap();
 

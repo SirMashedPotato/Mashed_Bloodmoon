@@ -283,6 +283,10 @@
 			</li>
 		</verbs>
 		<recipeMaker>
+			<recipeUsers Inherit="False">
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
 			<researchPrerequisites>
 				<li>Mashed_Bloodmoon_Houndslayer</li>
 			</researchPrerequisites>
@@ -330,6 +334,10 @@
 			</li>
 		</verbs>
 		<recipeMaker>
+			<recipeUsers Inherit="False">
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
 			<researchPrerequisites>
 				<li>Mashed_Bloodmoon_Houndslayer</li>
 			</researchPrerequisites>
