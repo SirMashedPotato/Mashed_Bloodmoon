@@ -11,6 +11,7 @@ namespace Mashed_Bloodmoon
         public bool inFury = false;
         public int currentStress;
         private int stressMax = -1;
+        private int? stressGain;
         private Gizmo_LycanthropeStress lycanthropeStressGizmo;
         private HediffComp_Lycanthrope compLycanthrope;
         public List<Hediff> linkedHediffs;
@@ -39,8 +40,25 @@ namespace Mashed_Bloodmoon
                 }
                 return stressMax;
             }
-            set { 
+            set 
+            { 
                 stressMax = value;
+            }
+        }
+
+        public int StressGain
+        {
+            get
+            {
+                if (stressGain == null)
+                {
+                    stressGain = (int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressGain);
+                }
+                return stressGain.Value;
+            }
+            set
+            {
+                stressGain = value;
             }
         }
 
@@ -70,11 +88,11 @@ namespace Mashed_Bloodmoon
                     {
                         if (inFury)
                         {
-                            currentStress += 2;
+                            currentStress += StressGain <= 0 ? 2 : StressGain * 2;
                         }
                         else
                         {
-                            currentStress++;
+                            currentStress = Mathf.Clamp(currentStress + StressGain, 0, StressMax);
                         }
                     }
                 }

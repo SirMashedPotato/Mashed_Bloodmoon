@@ -10,7 +10,7 @@
 				<label>uncontrollable lycanthropy</label>
 				<description>{PAWN_nameDef} has almost no control over {PAWN_possessive} lycanthropy. {PAWN_pronoun} will easily succumb to {PAWN_possessive} inner beast when stressed or threatened... or even at a moments notice.</description>
 				<statOffsets>
-					<Mashed_Bloodmoon_LycanthropicStressMax>-10</Mashed_Bloodmoon_LycanthropicStressMax>
+					<Mashed_Bloodmoon_LycanthropicStressGain>1</Mashed_Bloodmoon_LycanthropicStressGain>
 					<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.25</Mashed_Bloodmoon_LycanthropeSilverWeakness>
 				</statOffsets>
 				<theOnlyAllowedMentalBreaks>

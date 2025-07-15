@@ -16,5 +16,6 @@ namespace Mashed_Bloodmoon
         public static StatDef Mashed_Bloodmoon_LycanthropeKillStressReductionChance;
         public static StatDef Mashed_Bloodmoon_LycanthropeHeartSatiationFactor;
         public static StatDef Mashed_Bloodmoon_SilverDamageFactor;
+        public static StatDef Mashed_Bloodmoon_LycanthropicStressGain;
     }
 }

@@ -25,14 +25,6 @@
 		<useHitPoints>true</useHitPoints>
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<tradeability>All</tradeability>
-		<comps>
-			<li Class="CompProperties_Usable">
-				<useJob>UseItem</useJob>
-				<useLabel>Use {0}</useLabel>
-				<showUseGizmo>true</showUseGizmo>
-			</li>
-			<li Class="CompProperties_UseEffectDestroySelf"/>
-		</comps>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemBase" Name="Mashed_Bloodmoon_TotemUsableBase" Abstract="True">

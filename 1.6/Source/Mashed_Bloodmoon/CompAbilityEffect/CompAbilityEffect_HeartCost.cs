@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (target.Pawn == parent.pawn)
+            if (!Props.multiTarget || target.Pawn == parent.pawn)
             {
                 CompLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] -= Props.heartCost;
             }
@@ -23,11 +23,6 @@ namespace Mashed_Bloodmoon
                 return true;
             }
             return base.GizmoDisabled(out reason);
-        }
-
-        public override string ExtraTooltipPart()
-        {
-            return "Mashed_Bloodmoon_AbilityHeartCost".Translate(Props.heartCost);
         }
     }
 }

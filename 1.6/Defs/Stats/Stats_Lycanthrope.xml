@@ -50,13 +50,23 @@
 			</li>
 		</parts>
 	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropicStressGain]==========-->
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
+		<defName>Mashed_Bloodmoon_LycanthropicStressGain</defName>
+		<label>lycanthropic stress gain</label>
+		<description>The amount of stress a lycanthrope periodically gains while transformed.</description>
+		<defaultBaseValue>1</defaultBaseValue>
+		<minValue>-10</minValue>
+		<hideAtValue>1</hideAtValue>
+		<displayPriorityInCategory>5</displayPriorityInCategory>
+	</StatDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeKillStressReductionChance]==========-->
 	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
 		<defName>Mashed_Bloodmoon_LycanthropeKillStressReductionChance</defName>
 		<label>kill stress reduction chance</label>
 		<description>The chance a pawns lycanthropic stress will be reduced upon landing a killing blow while in beast form.</description>
 		<toStringStyle>PercentZero</toStringStyle>
-		<displayPriorityInCategory>5</displayPriorityInCategory>
+		<displayPriorityInCategory>6</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemSlaughter</totemTypeDef>
@@ -69,7 +79,7 @@
 		<label>heart satiation factor</label>
 		<description>How much consuming a heart satiates the hunger and rest needs of a lycanthrope.</description>
 		<toStringStyle>PercentZero</toStringStyle>
-		<displayPriorityInCategory>6</displayPriorityInCategory>
+		<displayPriorityInCategory>7</displayPriorityInCategory>
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>

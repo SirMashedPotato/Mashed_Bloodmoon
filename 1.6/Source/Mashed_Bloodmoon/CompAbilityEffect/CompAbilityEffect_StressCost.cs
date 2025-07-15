@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (target.Pawn == parent.pawn)
+            if (!Props.multiTarget || target.Pawn == parent.pawn)
             {
                 CompLycanthropeTransformed.currentStress += Props.stressCost;
             }
@@ -24,11 +24,6 @@ namespace Mashed_Bloodmoon
                 return true;
             }
             return base.GizmoDisabled(out reason);
-        }
-
-        public override string ExtraTooltipPart()
-        {
-            return "Mashed_Bloodmoon_AbilityStressCost".Translate(Props.stressCost);
         }
     }
 }

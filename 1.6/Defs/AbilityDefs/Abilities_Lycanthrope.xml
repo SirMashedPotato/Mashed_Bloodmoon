@@ -135,6 +135,7 @@
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
 				<stressCost>10</stressCost>
+				<multiTarget>true</multiTarget>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityDoDamage">
 				<damageDef>Stun</damageDef>
