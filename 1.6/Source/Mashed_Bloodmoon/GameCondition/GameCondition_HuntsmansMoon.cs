@@ -45,13 +45,19 @@ namespace Mashed_Bloodmoon
                 List<Pawn> pawns = map.mapPawns.AllHumanlikeSpawned;
                 foreach(Pawn pawn in pawns)
                 {
-                    if (pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant))
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeDormant))
                     {
-                        if (!pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention))
-                        {
-                            TransformationUtility.ApplyImminentTransformation(pawn, TransitionTicks);
-                        }
+                        continue;
                     }
+                    if (pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_WolfsbanePrevention))
+                    {
+                        continue;
+                    }
+                    if (pawn.Downed || pawn.Deathresting)
+                    {
+                        continue;
+                    }
+                    TransformationUtility.ApplyImminentTransformation(pawn, TransitionTicks);
                 }
             }
         }

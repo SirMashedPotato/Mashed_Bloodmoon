@@ -16,6 +16,13 @@ namespace Mashed_Bloodmoon
                 parent.pawn.health.RemoveHediff(parent);
                 return;
             }
+
+            if (parent.FullyImmune())
+            {
+                parent.pawn.health.RemoveHediff(parent);
+                return;
+            }
+
             base.CompPostTickInterval(ref severityAdjustment, delta);
         }
     }

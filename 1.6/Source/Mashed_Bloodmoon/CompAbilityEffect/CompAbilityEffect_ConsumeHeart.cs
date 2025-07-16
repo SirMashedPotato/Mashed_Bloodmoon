@@ -13,49 +13,61 @@ namespace Mashed_Bloodmoon
         {
             Pawn targetPawn = GetTargetPawn(target.Thing);
             BodyPartRecord partRecord = GetBodyPartRecord(targetPawn);
-            
-            if (targetPawn.Corpse == null)
+
+            if (partRecord == null)
             {
-                ThoughtUtility.GiveThoughtsForPawnExecuted(targetPawn, parent.pawn, PawnExecutionKind.GenericBrutal);
+                return;
+            }
+
+            try
+            {
+                if (targetPawn.Corpse == null)
+                {
+                    ThoughtUtility.GiveThoughtsForPawnExecuted(targetPawn, parent.pawn, PawnExecutionKind.GenericBrutal);
+                }
+
+                if (DamageUtility.PawnHasWolfsbaneHediff(targetPawn))
+                {
+                    DamageUtility.LycanthropeIngestedWolfsbane(parent.pawn);
+                }
+
+                if (LycanthropeUtility.PawnIsLycanthrope(targetPawn))
+                {
+                    LycanthropeUtility.TransferTotems(parent.pawn, targetPawn);
+                    targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
+                }
+
+                LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
+
+                int consumedHeartCount = 1 * Mashed_Bloodmoon_ModSettings.Lycanthropy_ConsumedHearMultiplier;
+                LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, consumedHeartCount);
+                CompLycanthropeTransformed.StressMax += consumedHeartCount;
+
+                float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
+                DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
+                targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
+
+
+                float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
+
+                if (parent.pawn.needs?.food != null)
+                {
+                    parent.pawn.needs.food.CurLevel += (nutritionFactor * maxHealth);
+                }
+                if (parent.pawn.needs?.rest != null)
+                {
+                    parent.pawn.needs.rest.CurLevel += ((nutritionFactor / 2f) * maxHealth);
+                }
+                if (ModsConfig.RoyaltyActive && parent.pawn.psychicEntropy != null)
+                {
+                    parent.pawn.psychicEntropy.OffsetPsyfocusDirectly(nutritionFactor / 3f * maxHealth);
+                }
+            }
+            catch
+            {
+
             }
             
-            if (DamageUtility.PawnHasWolfsbaneHediff(targetPawn))
-            {
-                DamageUtility.LycanthropeIngestedWolfsbane(parent.pawn);
-            }
-
-            if (LycanthropeUtility.PawnIsLycanthrope(targetPawn))
-            {
-                LycanthropeUtility.TransferTotems(parent.pawn, targetPawn);
-                targetPawn.health.RemoveHediff(targetPawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_Lycanthrope));
-            }
-
-            LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
-
-            int consumedHeartCount = 1 * Mashed_Bloodmoon_ModSettings.Lycanthropy_ConsumedHearMultiplier;
-            LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, consumedHeartCount);
-            CompLycanthropeTransformed.StressMax += consumedHeartCount;
-            
-            float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
-            targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
-
-
-            float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
-
-            if (parent.pawn.needs?.food != null)
-            {
-                parent.pawn.needs.food.CurLevel += (nutritionFactor * maxHealth);
-            }
-            if (parent.pawn.needs?.rest != null)
-            {
-                parent.pawn.needs.rest.CurLevel += ((nutritionFactor / 2f) * maxHealth);
-            }
-            if (ModsConfig.RoyaltyActive && parent.pawn.psychicEntropy != null)
-            {
-                parent.pawn.psychicEntropy.OffsetPsyfocusDirectly(nutritionFactor / 3f * maxHealth);
-            }
-
             base.Apply(target, dest);
         }
 
