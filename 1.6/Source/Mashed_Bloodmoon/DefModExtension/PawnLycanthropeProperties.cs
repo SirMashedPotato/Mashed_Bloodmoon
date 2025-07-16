@@ -22,12 +22,18 @@ namespace Mashed_Bloodmoon
 
         /// <summary>
         /// Returns PawnLycanthropeProperties, checked from all valid source defs, in order of priority.
+        /// - Adulthood Story
+        /// - Childhood story
+        /// - PawnKindDef
+        /// - ThingDef
+        /// - FactionDef
         /// </summary>
         public static PawnLycanthropeProperties GetProps(Pawn pawn)
         {
+            PawnLycanthropeProperties props;
             if (pawn.story?.Adulthood != null)
             {
-                PawnLycanthropeProperties props = Get(pawn.story.Adulthood);
+                props = Get(pawn.story.Adulthood);
                 if (props != null)
                 {
                     return props;
@@ -36,14 +42,35 @@ namespace Mashed_Bloodmoon
 
             if (pawn.story?.Childhood != null)
             {
-                PawnLycanthropeProperties props = Get(pawn.story.Childhood);
+                props = Get(pawn.story.Childhood);
                 if (props != null)
                 {
                     return props;
                 }
             }
 
-            return Get(pawn.kindDef) ?? Get(pawn.def) ?? null;
+            props = Get(pawn.kindDef);
+            if (props != null)
+            {
+                return props;
+            }
+
+            props = Get(pawn.def);
+            if (props != null)
+            {
+                return props;
+            }
+
+            if (pawn.Faction != null)
+            {
+                props = Get(pawn.Faction.def);
+                if (props != null)
+                {
+                    return props;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>
