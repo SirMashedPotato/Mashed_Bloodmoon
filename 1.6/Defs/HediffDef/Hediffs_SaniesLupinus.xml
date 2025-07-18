@@ -4,7 +4,7 @@
 	<HediffDef ParentName="InfectionBase">
 		<defName>Mashed_Bloodmoon_SaniesLupinus</defName>
 		<label>sanies lupinus</label>
-		<description>An infectious disease solely contracted from a lycanthrope. The disease causes nearly imperceptible changes in behaviour as it takes hold. If left untreated it will eventually transition into dormant lycanthropy... at least until the next Huntsman's Moon rises.</description>
+		<description>An infectious disease solely contracted from a lycanthrope. The disease causes nearly imperceptible changes in behaviour as it takes hold. If left untreated it will eventually transition into dormant lycanthropy... at least until the next Huntsman's Moon rises.\n\nThose already infected with lycanthropy will temporarily lose control of their inner beast if Sanies Lupinus is allowed to run its course. Though such instances are extremely rare.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_LycanthropeDormant</HediffDef>
 		</descriptionHyperlinks>

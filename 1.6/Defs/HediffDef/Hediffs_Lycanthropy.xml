@@ -34,14 +34,14 @@
 				<becomeVisible>false</becomeVisible>
 				<hungerRateFactor>1.1</hungerRateFactor>
 				<statOffsets>
-					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+					<Mashed_Bloodmoon_LycanthropyResistance>0.9</Mashed_Bloodmoon_LycanthropyResistance>
 				</statOffsets>
 			</li>
 			<li>
 				<minSeverity>0.5</minSeverity>
 				<hungerRateFactor>1.1</hungerRateFactor>
 				<statOffsets>
-					<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+					<Mashed_Bloodmoon_LycanthropyResistance>0.9</Mashed_Bloodmoon_LycanthropyResistance>
 				</statOffsets>
 			</li>
 		</stages>
