@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_AAGoldDragon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="onyxae.dragonsdescent">
+		<defName>Mashed_Bloodmoon_AAGoldDragon</defName>
+		<label>beast hunt: Gold Dragon</label>
+		<description>Consume the heart or fundamentum of a gold dragon.</description>
+		<targetThingDef>Gold_Dragon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Gold</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_AAJadeDragon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="onyxae.dragonsdescent">
+		<defName>Mashed_Bloodmoon_AAJadeDragon</defName>
+		<label>beast hunt: Jade Dragon</label>
+		<description>Consume the heart or fundamentum of a jade dragon.</description>
+		<targetThingDef>Jade_Dragon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Jade</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_AASilverDragon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="onyxae.dragonsdescent">
+		<defName>Mashed_Bloodmoon_AASilverDragon</defName>
+		<label>beast hunt: Silver Dragon</label>
+		<description>Consume the heart or fundamentum of a silver dragon.</description>
+		<targetThingDef>Silver_Dragon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Silver</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_AATrueDragon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="onyxae.dragonsdescent">
+		<defName>Mashed_Bloodmoon_AATrueDragon</defName>
+		<label>beast hunt: True Dragon</label>
+		<description>Consume the heart or fundamentum of a true dragon.</description>
+		<targetThingDef>True_Dragon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

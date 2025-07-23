@@ -30,6 +30,13 @@
 		<description>Consume the heart of a redhorn larpah.</description>
 		<targetThingDef>DA_RedhornedLarpah</targetThingDef>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_DARockTroll]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
+		<defName>Mashed_Bloodmoon_DARockTroll</defName>
+		<label>beast hunt: Rock Troll</label>
+		<description>Consume the heart of a rock troll.</description>
+		<targetThingDef>DA_RockTroll</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_DATaraal]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
 		<defName>Mashed_Bloodmoon_DATaraal</defName>
