@@ -41,6 +41,9 @@ namespace Mashed_Bloodmoon
             listing_Standard.Label("Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier".Translate(settings.Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier * 100));
             settings.Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier = (float)Math.Round(listing_Standard.Slider(settings.Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier, 0.1f, 5f) * 10) / 10;
 
+            listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints".Translate(), ref settings.Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints);
+            listing_Standard.Gap();
+
             listing_Standard.Gap();
             listing_Standard.GapLine();
             listing_Standard.Gap(24);

@@ -2,7 +2,6 @@
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -30,10 +29,7 @@ namespace Mashed_Bloodmoon
             incidentParms.faction = GetFeralWerewolfFaction();
             IncidentDef incidentDef = IncidentDefOf.Mashed_Bloodmoon_WerewolfAmbush;
             incidentParms.points *= Mashed_Bloodmoon_ModSettings.HuntsmanMoon_AmbushPointsMultiplier;
-            if (incidentParms.points < 200)
-            {
-                incidentParms.points = 200;
-            }
+            incidentParms.points = GetIncidentPoints(incidentParms.points);
             incidentDef.Worker.TryExecute(incidentParms);
         }
 
@@ -45,10 +41,7 @@ namespace Mashed_Bloodmoon
             incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
             incidentParms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkInGroups;
             incidentParms.points *= Mashed_Bloodmoon_ModSettings.HuntsmanMoon_RaidPointsMultiplier;
-            if (incidentParms.points < 200)
-            {
-                incidentParms.points = 200;
-            }
+            incidentParms.points = GetIncidentPoints(incidentParms.points);
             return incidentParms;
         }
 
@@ -57,6 +50,23 @@ namespace Mashed_Bloodmoon
             IncidentParms incidentParms = WerewolfRaidParms(map);
             IncidentDef incidentDef = RimWorld.IncidentDefOf.RaidEnemy;
             incidentDef.Worker.TryExecute(incidentParms);
+        }
+
+        internal static float GetIncidentPoints(float initialPoints)
+        {
+            float finalPoints = initialPoints;
+
+            if (initialPoints < 200)
+            {
+                finalPoints = 200;
+            }
+
+            if (initialPoints > 10000 && !Mashed_Bloodmoon_ModSettings.HuntsmanMoon_UncapRaidPoints)
+            {
+                finalPoints = 10000;
+            }
+
+            return finalPoints;
         }
     }
 }

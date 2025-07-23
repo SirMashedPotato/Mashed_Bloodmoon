@@ -8,6 +8,7 @@
 	<Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>Multiplier for the strength (points) of feral werewolf raids: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>
 	<Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>Multiplier for the strength (points) of feral werewolf ambushes: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>
 	<Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>Multiplier for the strength (points) of feral werewolf pack sites: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>
+	<Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>Uncap the strength (points) of feral werewolf raids and ambushes</Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>
 	<!-- ==========[Lycanthropy]==========-->
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>

@@ -76,12 +76,18 @@ namespace Mashed_Bloodmoon
                 {
                     if (currentStress >= StressMax)
                     {
-                        if (inFury || parent.pawn.Downed)
+                        if (inFury)
                         {
                             parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
+                            return;
+                        }
+
+                        if (parent.pawn.Downed || parent.pawn.Deathresting)
+                        {
                             parent.pawn.health.RemoveHediff(parent);
                             return;
                         }
+
                         StartFury();
                     }
                     else

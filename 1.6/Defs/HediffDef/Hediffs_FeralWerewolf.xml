@@ -3,7 +3,7 @@
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolf]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
-		<label>feral werewolf</label>
+		<label>feral lycanthrope</label>
 		<description>A lycanthrope that has fully succumbed to its beast form.</description>
 		<descriptionHyperlinks>
 			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
@@ -26,6 +26,25 @@
 				<damageFactors>
 					<Flame>2</Flame>
 				</damageFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_ApexWerewolf]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_ApexWerewolf</defName>
+		<label>apex lycanthrope</label>
+		<description>A lycanthrope tempered through many successful hunts.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.5</IncomingDamageFactor>
+					<MeleeDamageFactor>0.5</MeleeDamageFactor>
+					<MeleeCooldownFactor>0.25</MeleeCooldownFactor>
+					<MoveSpeed>-0.3</MoveSpeed>
+					<InjuryHealingFactor>1</InjuryHealingFactor>
+					<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.5</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+					<Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>0.5</Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>

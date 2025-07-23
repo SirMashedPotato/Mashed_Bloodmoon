@@ -4,6 +4,7 @@
 		<defName>Mashed_Bloodmoon_DisabledQuestAnimals</defName>
 		<unaffectedBySelfTamePawns>
 			<li>Mashed_Bloodmoon_FeralWerewolf</li>
+			<li>Mashed_Bloodmoon_ApexFeralWerewolf</li>
 			<li>Mashed_Bloodmoon_SpectralWerewolf</li>
 		</unaffectedBySelfTamePawns>
 	</VEF.AnimalBehaviours.AnimalsUnaffectedBySelfTameDef>

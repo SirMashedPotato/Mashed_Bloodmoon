@@ -17,7 +17,7 @@
 			<ToxicResistance>-0.3</ToxicResistance>
 			<Wildness>1</Wildness>
 			<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
-			<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.5</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+			<Mashed_Bloodmoon_LycanthropeSilverWeakness>1</Mashed_Bloodmoon_LycanthropeSilverWeakness>
 			<Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>1</Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>
 			<FilthRate>5</FilthRate>
 			<MarketValue>600</MarketValue>
@@ -86,7 +86,7 @@
 				</capacities>
 				<power>15</power>
 				<armorPenetration>0.25</armorPenetration>
-				<cooldownTime>1.0</cooldownTime>
+				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -104,7 +104,7 @@
 				</capacities>
 				<power>15</power>
 				<armorPenetration>0.25</armorPenetration>
-				<cooldownTime>1.0</cooldownTime>
+				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<surpriseAttack>
 					<extraMeleeDamages>
@@ -121,7 +121,7 @@
 				</capacities>
 				<power>20</power>
 				<armorPenetration>0.25</armorPenetration>
-				<cooldownTime>2</cooldownTime>
+				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 				<chanceFactor>0.5</chanceFactor>
 			</li>
@@ -180,6 +180,69 @@
 					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
 					<color>(53,54,50)</color>
 					<colorTwo>(123,112,93)</colorTwo>
+					<drawSize>2.1</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Dessicated_Werewolf</texPath>
+					<drawSize>2.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	<!-- ==========[Mashed_Bloodmoon_ApexFeralWerewolf]========== -->
+	<PawnKindDef ParentName="Mashed_Bloodmoon_FeralWerewolfKindBase">
+		<defName>Mashed_Bloodmoon_ApexFeralWerewolf</defName>
+		<label>apex feral werewolf</label>
+		<race>Mashed_Bloodmoon_FeralWerewolf</race>
+		<combatPower>250</combatPower>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<startingHediffs>
+			<li>
+				<def>Mashed_Bloodmoon_ApexWerewolf</def>
+			</li>
+		</startingHediffs>
+		<alternateGraphics>
+			<li>
+				<!-- default -->
+				<color>(153,154,150)</color>
+				<colorTwo>(223,212,193)</colorTwo>
+			</li>
+			<li>
+				<color>(162,164,159)</color>
+				<colorTwo>(235,222,202)</colorTwo>
+			</li>
+			<li>
+				<color>(145,146,143)</color>
+				<colorTwo>(210,200,183)</colorTwo>
+			</li>
+			<li>
+				<color>(154,154,154)</color>
+				<colorTwo>(223,216,203)</colorTwo>
+			</li>
+			<li>
+				<color>(154,150,150)</color>
+				<colorTwo>(225,219,211)</colorTwo>
+			</li>
+			<li>
+				<color>(156,152,147)</color>
+				<colorTwo>(230,217,204)</colorTwo>
+			</li>
+			<li>
+				<color>(156,150,143)</color>
+				<colorTwo>(230,221,198)</colorTwo>
+			</li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf</texPath>
+					<color>(153,154,150)</color>
+					<colorTwo>(223,212,193)</colorTwo>
 					<drawSize>2.1</drawSize>
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>

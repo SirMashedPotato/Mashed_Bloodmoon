@@ -21,6 +21,7 @@ namespace Mashed_Bloodmoon
         public static float HuntsmanMoon_RaidPointsMultiplier => _instance.Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier;
         public static float HuntsmanMoon_AmbushPointsMultiplier => _instance.Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier;
         public static float HuntsmanMoon_PackPointsMultiplier => _instance.Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier;
+        public static bool HuntsmanMoon_UncapRaidPoints => _instance.Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints;
 
         // Lycanthropy
         public static bool Lycanthropy_EnableOptionsGizmo => _instance.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo;
@@ -39,6 +40,7 @@ namespace Mashed_Bloodmoon
         public float Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier = Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier_def;
         public float Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier = Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier_def;
         public float Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier = Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier_def;
+        public bool Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints = Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints_def;
 
         // Lycanthropy
         public bool Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo = Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def;
@@ -56,6 +58,7 @@ namespace Mashed_Bloodmoon
         private static readonly float Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier_def = 1f;
         private static readonly float Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier_def = 1f;
         private static readonly float Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier_def = 1f;
+        private static readonly bool Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints_def = false;
 
         // Lycanthropy
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def = true;
@@ -75,6 +78,7 @@ namespace Mashed_Bloodmoon
             Scribe_Values.Look(ref Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier, "Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier", Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier, "Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier", Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier, "Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier", Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier_def);
+            Scribe_Values.Look(ref Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints, "Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints", Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints_def);
 
             /* Lycanthropy */
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo, "Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo", Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def);
@@ -97,6 +101,7 @@ namespace Mashed_Bloodmoon
             _instance.Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier = Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier_def;
             _instance.Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier = Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier_def;
             _instance.Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier = Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier_def;
+            _instance.Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints = Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints_def;
 
             // Lycanthropy
             _instance.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo = Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def;

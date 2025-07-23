@@ -23,34 +23,34 @@
 		<defName>Mashed_Bloodmoon_FeralWerewolvesII</defName>
 		<label>beast hunt: Hounds II</label>
 		<description>Consume the hearts of 25 feral werewolves.</description>
-		<targetCount>25</targetCount> 
+		<targetCount>25</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesIII]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolvesIII</defName>
 		<label>beast hunt: Hounds III</label>
 		<description>Consume the hearts of 50 feral werewolves.</description>
-		<targetCount>50</targetCount> 
+		<targetCount>50</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesIV]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolvesIV</defName>
 		<label>beast hunt: Hounds IV</label>
 		<description>Consume the hearts of 100 feral werewolves.</description>
-		<targetCount>100</targetCount> 
+		<targetCount>100</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesV]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolvesV</defName>
 		<label>beast hunt: Hounds V</label>
 		<description>Consume the hearts of 200 feral werewolves.</description>
-		<targetCount>200</targetCount> 
+		<targetCount>200</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesVI]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolvesVI</defName>
 		<label>beast hunt: Hounds VI</label>
 		<description>Consume the hearts of 500 feral werewolves.</description>
-		<targetCount>500</targetCount> 
+		<targetCount>500</targetCount>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
