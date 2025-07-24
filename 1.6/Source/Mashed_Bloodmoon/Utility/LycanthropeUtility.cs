@@ -33,7 +33,7 @@ namespace Mashed_Bloodmoon
 
         internal static HediffComp_Lycanthrope GetCompLycanthrope(Pawn pawn)
         {
-            return GetLycanthropeHediff(pawn).TryGetComp<HediffComp_Lycanthrope>();
+            return GetLycanthropeHediff(pawn)?.TryGetComp<HediffComp_Lycanthrope>();
         }
 
         internal static Hediff GetLycanthropeHediff(Pawn pawn)
@@ -43,7 +43,7 @@ namespace Mashed_Bloodmoon
 
         internal static HediffComp_LycanthropeTransformed GetCompLycanthropeTransformed(Pawn pawn)
         {
-            return GetTransformedHediff(pawn).TryGetComp<HediffComp_LycanthropeTransformed>();
+            return GetTransformedHediff(pawn)?.TryGetComp<HediffComp_LycanthropeTransformed>();
         }
 
         internal static Hediff GetTransformedHediff(Pawn pawn)
