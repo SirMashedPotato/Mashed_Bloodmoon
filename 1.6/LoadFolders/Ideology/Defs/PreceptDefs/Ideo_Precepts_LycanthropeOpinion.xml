@@ -185,7 +185,7 @@
 		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
 		<stages>
 			<li>
-				<label>lyvanthrope among us</label>
+				<label>lycanthrope among us</label>
 				<description>I can barely sleep at night knowing that abomination lives amongst us.</description>
 				<baseMoodEffect>-8</baseMoodEffect>
 			</li>
