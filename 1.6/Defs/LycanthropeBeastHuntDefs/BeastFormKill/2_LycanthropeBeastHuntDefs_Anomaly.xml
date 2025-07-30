@@ -54,4 +54,14 @@
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Fleshbeast</heartTexPath>
 		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Revenant]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Revenant</defName>
+		<label>beast hunt: Revenant</label>
+		<description>Kill a revenant while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>Revenant</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<anomalyLevelToReveal>2</anomalyLevelToReveal>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
