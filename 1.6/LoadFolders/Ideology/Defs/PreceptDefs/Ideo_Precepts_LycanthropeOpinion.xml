@@ -136,6 +136,9 @@
 		<statFactors>
 			<Mashed_Bloodmoon_LycanthropicStressMax>0.6</Mashed_Bloodmoon_LycanthropicStressMax>
 		</statFactors>
+		<statOffsets>
+			<Mashed_Bloodmoon_LycanthropyResistance>0.3</Mashed_Bloodmoon_LycanthropyResistance>
+		</statOffsets>
 	</PreceptDef>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeReviled_OpinionLycanthrope]==========-->
 	<ThoughtDef>
