@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_MADeermoss]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MADeermoss</defName>
+		<label>beast hunt: Deermoss</label>
+		<description>Consume the heart of a deermoss.</description>
+		<targetThingDef>MA_Deermoss</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MADuskhorn]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MADuskhorn</defName>
+		<label>beast hunt: Duskhorn</label>
+		<description>Consume the heart of a duskhorn.</description>
+		<targetThingDef>MA_Duskhorn</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MAFurpotamus]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MAFurpotamus</defName>
+		<label>beast hunt: Furpotamus</label>
+		<description>Consume the heart of a furpotamus.</description>
+		<targetThingDef>MA_Furpotamus</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MAPlastemmoth]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MAPlastemmoth</defName>
+		<label>beast hunt: Plastemmoth</label>
+		<description>Consume the heart of a plastemmoth.</description>
+		<targetThingDef>MA_Plastemmoth</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Plasteel</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MARaptorkhan]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MARaptorkhan</defName>
+		<label>beast hunt: Raptorkhan</label>
+		<description>Consume the heart of a raptorkhan.</description>
+		<targetThingDef>MA_Raptorkhan</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MAScarodon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MAScarodon</defName>
+		<label>beast hunt: Scarodon</label>
+		<description>Consume the heart of a scarodon.</description>
+		<targetThingDef>MA_Scarodon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>
