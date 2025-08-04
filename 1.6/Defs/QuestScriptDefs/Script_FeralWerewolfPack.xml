@@ -43,9 +43,9 @@
 				<li Class="QuestNode_GetPawn">
 					<storeAs>asker</storeAs>
 					<mustBeFactionLeader>true</mustBeFactionLeader>
-					<mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+					<mustBeNonHostileToPlayer>false</mustBeNonHostileToPlayer>
+					<allowPermanentEnemyFaction>false</allowPermanentEnemyFaction>
 					<hostileWeight>0.15</hostileWeight>
-					<selectionWeight>0.6</selectionWeight>
 				</li>
 				<li Class="QuestNode_GetSiteTile">
 					<storeAs>siteTile</storeAs>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WildWolfsbane]==========-->
+	<TileMutatorDef>
+		<defName>Mashed_Bloodmoon_WildWolfsbane</defName>
+		<label>wild wolfsbane</label>
+		<workerClass>TileMutatorWorker_Patches</workerClass>
+		<description>Wolfsbane flowers can be found growing in this region.</description>
+		<priority>1</priority>
+		<minHilliness>Mountainous</minHilliness>
+		<maxHilliness>Mountainous</maxHilliness>
+		<chanceOnNonLandmarkTile>0.1</chanceOnNonLandmarkTile>
+		<additionalWildPlants>
+			<Mashed_Bloodmoon_WolfsbanePlant>0.06</Mashed_Bloodmoon_WolfsbanePlant>
+		</additionalWildPlants>
+		<biomeWhitelist>
+			<li>BorealForest</li>
+			<li>Tundra</li>
+			<li>GlacialPlain</li>
+			<li MayRequire="sirmashedpotato.ashlands">Mashed_Ashlands_HighlandAshlands</li>
+		</biomeWhitelist>
+	</TileMutatorDef>
+</Defs>

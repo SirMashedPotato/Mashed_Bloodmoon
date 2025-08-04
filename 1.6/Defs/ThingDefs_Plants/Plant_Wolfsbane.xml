@@ -20,6 +20,7 @@
 		<ingestible/>
 		<plant>
 			<growDays>6</growDays>
+			<minOptimalGrowthTemperature>-16</minOptimalGrowthTemperature>
 			<dieIfLeafless>true</dieIfLeafless>
 			<sowTags>
 				<li>Ground</li>
@@ -40,6 +41,7 @@
 		<label>wolfsbane plant</label>
 		<description>A small flowering plant, only found growing in the highest mountains. Lycanthropes have a rather strong reaction to the petals of these flowers, which can be greatly intensified through certain means.</description>
 		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
 		<plant>
 			<harvestTag>Standard</harvestTag>
 			<harvestedThingDef>Mashed_Bloodmoon_WolfsbaneFlower</harvestedThingDef>
@@ -48,6 +50,9 @@
 			<maxMeshCount>4</maxMeshCount>
 			<visualSizeRange>0.8~1.2</visualSizeRange>
 			<topWindExposure>0.3</topWindExposure>
+			<wildClusterRadius>4</wildClusterRadius>
+			<wildClusterWeight>8</wildClusterWeight>
+			<wildOrder>1</wildOrder>
 		</plant>
 	</ThingDef>
 </Defs>
