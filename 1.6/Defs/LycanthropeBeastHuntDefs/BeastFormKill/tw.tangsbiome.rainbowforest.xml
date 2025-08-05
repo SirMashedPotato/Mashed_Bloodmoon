@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TWRLFairyBug]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="tw.tangsbiome.rainbowforest">
+		<defName>Mashed_Bloodmoon_TWRLFairyBug</defName>
+		<label>beast hunt: Fairy Bugs</label>
+		<description>Kill 231 fairy bugs while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>TWRL_Animal_FairyBug</targetThingDef>
+		<targetCount>231</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Hallow</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>
