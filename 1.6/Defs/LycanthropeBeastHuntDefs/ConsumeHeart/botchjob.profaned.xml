@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_BJUndeadColossus]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="botchjob.profaned">
+		<defName>Mashed_Bloodmoon_BJUndeadColossus</defName>
+		<label>beast hunt: Undead Colossus</label>
+		<description>Consume the heart of 3 undead colossus.</description>
+		<targetThingDef>BotchJob_UndeadColossus</targetThingDef>
+		<targetCount>3</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Spectral</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_BJUndeadDragon]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="botchjob.profaned">
+		<defName>Mashed_Bloodmoon_BJUndeadDragon</defName>
+		<label>beast hunt: Undead Dragon</label>
+		<description>Consume the heart or fundamentum of an undead dragon.</description>
+		<targetThingDef>BotchJob_UndeadDragon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Spectral</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>
