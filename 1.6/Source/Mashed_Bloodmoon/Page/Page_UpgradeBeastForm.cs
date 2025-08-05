@@ -215,6 +215,10 @@ namespace Mashed_Bloodmoon
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
             int finalColumnCount = curTab == UpgradeType .Claw || curTab == UpgradeType.Trait ? altColumnCount : columnCount;
+            if (!Text.TinyFontSupported && finalColumnCount > 1)
+            {
+                finalColumnCount -= 1;
+            }
 
             float cellWidth = (innerRect.width / finalColumnCount) - (Assets.RectPadding / 3f);
             float cellHeight = rowHeight;

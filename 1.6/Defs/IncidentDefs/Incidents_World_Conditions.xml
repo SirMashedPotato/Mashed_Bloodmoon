@@ -4,6 +4,23 @@
 	<IncidentCategoryDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMoon</defName>
 	</IncidentCategoryDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoonPrecursor]==========-->
+	<IncidentDef>
+		<defName>Mashed_Bloodmoon_HuntsmansMoonPrecursor</defName>
+		<label>blood on the wind</label>
+		<category>Special</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>Mashed_Bloodmoon.IncidentWorker_MakeGameCondition_HuntsmansMoonPrecursor</workerClass>
+		<gameCondition>Mashed_Bloodmoon_HuntsmansMoonPrecursor</gameCondition>
+		<letterLabel>reddening moon</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1</baseChance>
+		<minRefireDays>30</minRefireDays>
+		<earliestDay>30</earliestDay>
+		<durationDays>0.75~1</durationDays>
+	</IncidentDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoon]==========-->
 	<IncidentDef>
 		<defName>Mashed_Bloodmoon_HuntsmansMoon</defName>

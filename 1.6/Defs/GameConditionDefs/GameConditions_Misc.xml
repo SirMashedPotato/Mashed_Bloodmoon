@@ -1,15 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoon]==========-->
-	<GameConditionDef>
-		<defName>Mashed_Bloodmoon_HuntsmansMoon</defName>
-		<conditionClass>Mashed_Bloodmoon.GameCondition_HuntsmansMoon</conditionClass>
-		<label>Huntsman's moon</label>
-		<description>The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominous howling can be heard in the distance, growing ever closer.\n\nFeral werewolf packs will occasionally attack settlements, or ambush caravans.</description>
-		<endMessage>The Huntsman's moon is ending. The Huntsman's Hounds retreat.</endMessage>
-		<letterText>One of the moons of this planet has begun to glow blood red. Feral werewolves will periodically attack your colony, and ambush caravans. Those infected with dormant lycanthropy will be unable to control the beast slumbering within.</letterText>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoonBase]==========-->
+	<GameConditionDef Name="Mashed_Bloodmoon_HuntsmansMoonBase" Abstract="true">
 		<letterDef>NegativeEvent</letterDef>
-		<canBePermanent>true</canBePermanent>
 		<allowUnderground>false</allowUnderground>
 		<preventNeutralVisitors>true</preventNeutralVisitors>
 		<exclusiveConditions>
@@ -17,5 +10,22 @@
 			<li MayRequire="Ludeon.RimWorld.Anomaly">UnnaturalDarkness</li>
 			<!--<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlpEclipse</li>-->
 		</exclusiveConditions>
+	</GameConditionDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoonPrecursor]==========-->
+	<GameConditionDef ParentName="Mashed_Bloodmoon_HuntsmansMoonBase">
+		<defName>Mashed_Bloodmoon_HuntsmansMoonPrecursor</defName>
+		<conditionClass>Mashed_Bloodmoon.GameCondition_HuntsmansMoonPrecursor</conditionClass>
+		<label>blood on the wind</label>
+		<description>The wind carries with it the faint scent of blood, slowly growing stronger as time passes. Wild animals are growing restless, and the occasional howl can be heard in the distance.\n\nWithin the next day the moon will bathe this world in blood red light, and the Huntsman's hounds will awaken, eager to sate their appetite.</description>
+		<letterText>The wind carries with it the faint scent of blood, slowly growing stronger as time passes. Within the next day a Huntsman's moon will begin, and feral werewolves will begin their hunt.</letterText>
+	</GameConditionDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoon]==========-->
+	<GameConditionDef ParentName="Mashed_Bloodmoon_HuntsmansMoonBase">
+		<defName>Mashed_Bloodmoon_HuntsmansMoon</defName>
+		<conditionClass>Mashed_Bloodmoon.GameCondition_HuntsmansMoon</conditionClass>
+		<label>Huntsman's moon</label>
+		<description>The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominous howling can be heard in the distance, growing ever closer.\n\nFeral werewolf packs will occasionally attack settlements, or ambush caravans.</description>
+		<endMessage>The Huntsman's moon is ending. The Huntsman's Hounds retreat.</endMessage>
+		<letterText>One of the moons of this planet has begun to glow blood red. Feral werewolves will periodically attack your colony, and ambush caravans. Those infected with dormant lycanthropy will be unable to control the beast slumbering within.</letterText>
 	</GameConditionDef>
 </Defs>

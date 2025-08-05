@@ -93,9 +93,16 @@ namespace Mashed_Bloodmoon
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
 
-            float cellWidth = (innerRect.width / columnCount) - (Assets.RectPadding / 3f);
+            int finalColumnCount = columnCount;
+
+            if (!Text.TinyFontSupported && finalColumnCount > 1)
+            {
+                finalColumnCount -= 1;
+            }
+
+            float cellWidth = (innerRect.width / finalColumnCount) - (Assets.RectPadding / 3f);
             float cellHeight = cellWidth * 1.6f;
-            float rowCount = ((float)beastHuntList.Count / columnCount);
+            float rowCount = ((float)beastHuntList.Count / finalColumnCount);
             if (rowCount % 1 != 0)
             {
                 rowCount += 0.5f;
@@ -110,7 +117,7 @@ namespace Mashed_Bloodmoon
             foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
                 DoBeastHuntCell(beastHuntRect, beastHuntDef);
-                if (++column >= columnCount)
+                if (++column >= finalColumnCount)
                 {
                     beastHuntRect.y += ((Assets.RectPadding / 2f) + cellHeight);
                     beastHuntRect.x = innerRect.x;

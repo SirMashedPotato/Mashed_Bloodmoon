@@ -38,19 +38,23 @@ namespace Mashed_Bloodmoon
             RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
             Widgets.Label(descRect, abilityDef.description);
 
+            Rect lowerRect = mainRect;
+            lowerRect.height = Text.LineHeight * 1.5f;
+            lowerRect.y = inRect.y + inRect.height - lowerRect.height - Assets.RectPadding;
+
+            lowerRect.SplitVerticallyWithMargin(out Rect lowerInfoRect, out Rect lowerButtonRect, Assets.RectPadding);
+
             CompProperties_AbilityStressCost compStressCost = (CompProperties_AbilityStressCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_AbilityStressCost);
             if (compStressCost != null)
             {
-                Rect stressCostRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                Widgets.Label(stressCostRect, "Mashed_Bloodmoon_AbilityStressCost".Translate(compStressCost.stressCost));
+                Widgets.Label(lowerInfoRect, "Mashed_Bloodmoon_AbilityStressCost".Translate(compStressCost.stressCost));
             }
             else
             {
                 CompProperties_AbilityHeartCost compHeartCost = (CompProperties_AbilityHeartCost)abilityDef.abilityDef.comps.Find(x => x is CompProperties_AbilityHeartCost);
                 if (compHeartCost != null)
                 {
-                    Rect heartCostRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-                    Widgets.Label(heartCostRect, "Mashed_Bloodmoon_AbilityHeartCost".Translate(compHeartCost.heartCost));
+                    Widgets.Label(lowerInfoRect, "Mashed_Bloodmoon_AbilityHeartCost".Translate(compHeartCost.heartCost));
                 }
             }
 
@@ -71,14 +75,12 @@ namespace Mashed_Bloodmoon
 
                 if (abilityDef.purchaseHeartCost > 0)
                 {
-                    Rect upgradeRect = mainRect;
-                    upgradeRect.height = Text.LineHeight * 1.5f;
-                    upgradeRect.width = 130f;
-                    upgradeRect.y = inRect.y + inRect.height - upgradeRect.height - Assets.RectPadding;
-                    upgradeRect.x = inRect.x + inRect.width - upgradeRect.width - Assets.RectPadding;
+                    lowerButtonRect.width = 130f;
+                    lowerButtonRect.x = inRect.x + inRect.width - lowerButtonRect.width - Assets.RectPadding;
+
                     bool canPurchase = abilityDef.CanPurchase(compLycanthrope);
                     string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.purchaseHeartCost); ;
-                    if (Widgets.ButtonText(upgradeRect, unlockLabel, true, canPurchase, active: canPurchase))
+                    if (Widgets.ButtonText(lowerButtonRect, unlockLabel, true, canPurchase, active: canPurchase))
                     {
                         abilityDef.Purchase(compLycanthrope);
                     }
