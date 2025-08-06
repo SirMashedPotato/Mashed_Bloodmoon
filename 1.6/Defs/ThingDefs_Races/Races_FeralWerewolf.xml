@@ -60,6 +60,9 @@
 			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		</race>
+		<tradeTags>
+			<li>Mashed_Bloodmoon_FeralLycanthrope</li>
+		</tradeTags>
 		<thingCategories Inherit="false"/>
 	</ThingDef>
 	<PawnKindDef ParentName="AnimalKindBase" Name="Mashed_Bloodmoon_FeralWerewolfKindBase" Abstract="True">
