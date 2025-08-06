@@ -97,6 +97,10 @@ namespace Mashed_Bloodmoon
         // The transformed hediff disables all work types, and resets work priorities when the transformation ends
         private void CacheWorkPriorities()
         {
+            if (!parent.pawn.workSettings.Initialized)
+            {
+                return;
+            }
             cachedWorkPriorities = new DefMap<WorkTypeDef, int>();
             foreach (WorkTypeDef workTypeDef in DefDatabase<WorkTypeDef>.AllDefs)
             {
