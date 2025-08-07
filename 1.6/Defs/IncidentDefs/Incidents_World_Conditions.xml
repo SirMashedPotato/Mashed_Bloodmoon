@@ -14,7 +14,7 @@
 		</targetTags>
 		<workerClass>Mashed_Bloodmoon.IncidentWorker_MakeGameCondition_HuntsmansMoonPrecursor</workerClass>
 		<gameCondition>Mashed_Bloodmoon_HuntsmansMoonPrecursor</gameCondition>
-		<letterLabel>reddening moon</letterLabel>
+		<letterLabel>blood on the wind</letterLabel>
 		<letterDef>ThreatBig</letterDef>
 		<baseChance>1</baseChance>
 		<minRefireDays>30</minRefireDays>
