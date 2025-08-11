@@ -79,7 +79,7 @@ namespace Mashed_Bloodmoon
                     lowerButtonRect.x = inRect.x + inRect.width - lowerButtonRect.width - Assets.RectPadding;
 
                     bool canPurchase = abilityDef.CanPurchase(compLycanthrope);
-                    string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.purchaseHeartCost); ;
+                    string unlockLabel = "Mashed_Bloodmoon_UnlockLabel".Translate(compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0), abilityDef.purchaseHeartCost);
                     if (Widgets.ButtonText(lowerButtonRect, unlockLabel, true, canPurchase, active: canPurchase))
                     {
                         abilityDef.Purchase(compLycanthrope);
