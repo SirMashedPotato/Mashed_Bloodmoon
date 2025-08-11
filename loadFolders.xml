@@ -3,17 +3,10 @@
 	<v1.6>
 		<li>Common</li>
 		<li>1.6</li>
-		<!-- Ideology -->
-		<li IfModActive="Ludeon.RimWorld.Ideology">LoadFolders/IdeologyTextures</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/LoadFolders/Ideology</li>
-		<!-- Biotech -->
-		<li IfModActive="Ludeon.RimWorld.Biotech">LoadFolders/BiotechTextures</li>
 		<li IfModActive="Ludeon.RimWorld.Biotech">1.6/LoadFolders/Biotech</li>
-		<!-- Anomaly -->
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/LoadFolders/Anomaly</li>
-		<!-- Odyssey -->
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/LoadFolders/Odyssey</li>
-		<!-- VE_Framework -->
 		<li IfModActive="oskarpotocki.vanillafactionsexpanded.core">1.6/LoadFolders/VE_Framework</li>
 	</v1.6>
 </loadFolders>
