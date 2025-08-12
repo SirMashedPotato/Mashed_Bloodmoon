@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -16,14 +17,31 @@ namespace Mashed_Bloodmoon
 
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
-            if (!traitDef.conflictingTraits.NullOrEmpty())
+            foreach (Trait trait in pawn.story.traits.allTraits)
             {
-                foreach(Trait trait in pawn.story.traits.allTraits)
+                bool conflictsFlag = false;
+
+                if (trait.def == traitDef)
                 {
-                    if (traitDef.ConflictsWith(trait))
+                    conflictsFlag = true;
+                }
+
+                if (!traitDef.conflictingTraits.NullOrEmpty() && traitDef.ConflictsWith(trait))
+                {
+                    conflictsFlag = true;
+                }
+
+                if(!trait.def.exclusionTags.NullOrEmpty() && !traitDef.exclusionTags.NullOrEmpty())
+                {
+                    if (trait.def.exclusionTags.Intersect(traitDef.exclusionTags).Any())
                     {
-                        return "Mashed_Bloodmoon_ConflictingTrait".Translate(trait.LabelCap);
+                        conflictsFlag = true;
                     }
+                }
+
+                if (conflictsFlag)
+                {
+                    return "Mashed_Bloodmoon_ConflictingTrait".Translate(trait.LabelCap);
                 }
             }
 
