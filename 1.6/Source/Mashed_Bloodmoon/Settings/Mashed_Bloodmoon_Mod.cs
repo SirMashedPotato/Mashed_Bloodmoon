@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -16,14 +17,66 @@ namespace Mashed_Bloodmoon
 
         public override string SettingsCategory() => "Mashed_Bloodmoon_ModName".Translate();
 
+        private enum SettingsTab : byte
+        {
+            HuntsmansMoon,
+            Lycanthropy
+        }
+
+        private void ReadySettingsTabs()
+        {
+            tabs.Add(new TabRecord("Mashed_Bloodmoon_HuntsmanMoon_Tab".Translate(), delegate
+            {
+                curTab = SettingsTab.HuntsmansMoon;
+            }, () => curTab == SettingsTab.HuntsmansMoon));
+
+            tabs.Add(new TabRecord("Mashed_Bloodmoon_Lycanthropy_Tab".Translate(), delegate
+            {
+                curTab = SettingsTab.Lycanthropy;
+            }, () => curTab == SettingsTab.Lycanthropy));
+        }
+
+        private readonly List<TabRecord> tabs = new List<TabRecord>();
+        private static SettingsTab curTab = SettingsTab.HuntsmansMoon;
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            Widgets.DrawMenuSection(inRect);
-            Rect mainRect = inRect.ContractedBy(15f);
-            Listing_Standard listing_Standard = new Listing_Standard();
-            listing_Standard.Begin(mainRect);
+            if (tabs.NullOrEmpty())
+            {
+                ReadySettingsTabs();
+            }
 
+            Rect mainRect = inRect;
+            mainRect.yMin += 45f;
+            Widgets.DrawMenuSection(mainRect);
+            TabDrawer.DrawTabs(mainRect, tabs);
+
+            Listing_Standard listing_Standard = new Listing_Standard();
+            listing_Standard.Begin(mainRect.ContractedBy(GenUI.Gap));
+
+            switch (curTab)
+            {
+                case SettingsTab.HuntsmansMoon:
+                    DoSettingsTabContents_HuntsmansMoon(listing_Standard);
+                    break;
+
+                case SettingsTab.Lycanthropy:
+                    DoSettingsTabContents_Lycanthropy(listing_Standard);
+                    break;
+            }
+
+            listing_Standard.End();
+
+            if (Widgets.ButtonText(new Rect(inRect.x + inRect.width - Window.CloseButSize.x, inRect.y + inRect.height + 2f, Window.CloseButSize.x, Window.CloseButSize.y), "ResetAll".Translate()))
+            {
+                Mashed_Bloodmoon_ModSettings.ResetSettings();
+            }
+
+            base.DoSettingsWindowContents(inRect);
+        }
+    
+        public void DoSettingsTabContents_HuntsmansMoon(Listing_Standard listing_Standard)
+        {
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_HuntsmanMoon_EnableCondition".Translate(), ref settings.Mashed_Bloodmoon_HuntsmanMoon_EnableCondition);
             listing_Standard.Gap();
 
@@ -46,13 +99,34 @@ namespace Mashed_Bloodmoon
 
             listing_Standard.Gap();
             listing_Standard.GapLine();
-            listing_Standard.Gap(24);
+        }
 
+        public void DoSettingsTabContents_Lycanthropy(Listing_Standard listing_Standard)
+        {
             listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
             settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = (int)listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, 1, 10);
 
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo, "Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc".Translate());
             listing_Standard.Gap();
+
+            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_TextureScalingMode".Translate());
+
+            if (listing_Standard.RadioButton("Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize".Translate(), 
+                settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode == BeastFormScalingMode.BodySize, tooltip: "Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc".Translate()))
+            {
+                settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = BeastFormScalingMode.BodySize;
+            }
+
+            if (listing_Standard.RadioButton("Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize".Translate(),
+                settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode == BeastFormScalingMode.DrawSize, tooltip: "Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc".Translate()))
+            {
+                settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = BeastFormScalingMode.DrawSize;
+            }
+            listing_Standard.Gap();
+
+            listing_Standard.Gap();
+            listing_Standard.GapLine();
+            listing_Standard.Gap(24);
 
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo);
             listing_Standard.Gap();
@@ -69,14 +143,8 @@ namespace Mashed_Bloodmoon
                 listing_Standard.Gap();
             }
 
-            listing_Standard.End();
-
-            if (Widgets.ButtonText(new Rect(inRect.x + inRect.width - Window.CloseButSize.x, inRect.y + inRect.height + 2f, Window.CloseButSize.x, Window.CloseButSize.y), "ResetAll".Translate()))
-            {
-                Mashed_Bloodmoon_ModSettings.ResetSettings();
-            }
-
-            base.DoSettingsWindowContents(inRect);
+            listing_Standard.Gap();
+            listing_Standard.GapLine();
         }
     }
 }

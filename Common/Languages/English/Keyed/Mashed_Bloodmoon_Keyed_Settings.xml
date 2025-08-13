@@ -3,6 +3,7 @@
 	<!-- ==========[General]==========-->
 	<Mashed_Bloodmoon_ModName>Mashed's Bloodmoon</Mashed_Bloodmoon_ModName>
 	<!-- ==========[Huntsman Moon]==========-->
+	<Mashed_Bloodmoon_HuntsmanMoon_Tab>Huntsman's Moon</Mashed_Bloodmoon_HuntsmanMoon_Tab>
 	<Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>Enable the Huntsman's Moon incidents</Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>
 	<Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>The number of hours between feral werewolf attacks during a Huntsman's Moon: ({0} hours ~ {1} hours)</Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>
 	<Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>Multiplier for the strength (points) of feral werewolf raids: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>
@@ -10,6 +11,7 @@
 	<Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>Multiplier for the strength (points) of feral werewolf pack sites: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>
 	<Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>Uncap the strength (points) of feral werewolf raids and ambushes</Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>
 	<!-- ==========[Lycanthropy]==========-->
+	<Mashed_Bloodmoon_Lycanthropy_Tab>Lycanthropy</Mashed_Bloodmoon_Lycanthropy_Tab>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>
 	<Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>Hide the transform gizmo for colony prisoners</Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>
@@ -17,4 +19,9 @@
 	<Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>Prisoners can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>
 	<Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>Slaves can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>
 	<Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>Multiplier for the number of consumed hearts gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>
+	<Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>Beast form texture scaling mode:</Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize> • Pawn body size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize> • Pawn draw size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>Scale the beast form textures based on the pawns body size. This will scale the size correctly for body size genes, but may result in incorrect scaling for HAR races.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>Scale the beast form textures based on the pawns draw size. This will scale the size correctly for HAR races, but will not scale it at all for genes.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>
 </LanguageData>

@@ -12,6 +12,11 @@ namespace Mashed_Bloodmoon
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(parms.pawn);
             Vector2 drawSize = compLycanthrope.BeastFormDef.graphicData.drawSize;
+
+            if (Mashed_Bloodmoon_ModSettings.Lycanthropy_TextureScalingMode == BeastFormScalingMode.BodySize)
+            {
+                return new Vector3(drawSize.x * parms.pawn.BodySize, 0, drawSize.y * parms.pawn.BodySize);
+            }
             return new Vector3(drawSize.x * parms.pawn.DrawSize.x, 0, drawSize.y * parms.pawn.DrawSize.y);
         }
     }
