@@ -21,6 +21,20 @@
 		<description>Consume the heart of a furpotamus.</description>
 		<targetThingDef>MA_Furpotamus</targetThingDef>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MAHarpeagle]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MAHarpeagle</defName>
+		<label>beast hunt: Harpeagle</label>
+		<description>Consume the heart of a harpeagle.</description>
+		<targetThingDef>MA_Harpeagle</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MAHellboar]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MAHellboar</defName>
+		<label>beast hunt: Hellboar</label>
+		<description>Consume the heart of a hellboar.</description>
+		<targetThingDef>MA_Hellboar</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_MAPlastemmoth]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
 		<defName>Mashed_Bloodmoon_MAPlastemmoth</defName>
