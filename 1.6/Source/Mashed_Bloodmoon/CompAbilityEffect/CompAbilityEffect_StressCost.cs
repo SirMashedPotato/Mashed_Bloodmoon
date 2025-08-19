@@ -49,7 +49,6 @@ namespace Mashed_Bloodmoon
                     num += StressCostOfAbility(parent.pawn.jobs.jobQueue[i].job.verbToUse);
                 }
             }
-            Log.Message("queued stress cost: " + num);
             return num;
         }
 
