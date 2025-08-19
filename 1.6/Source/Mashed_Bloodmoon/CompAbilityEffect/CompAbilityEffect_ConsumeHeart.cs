@@ -121,7 +121,7 @@ namespace Mashed_Bloodmoon
 
         private BodyPartRecord GetBodyPartRecord(Pawn pawn) 
         {
-            List<BodyPartRecord> parts = pawn.health.hediffSet.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).ToList();
+            List<BodyPartRecord> parts = pawn?.health?.hediffSet?.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).ToList();
             if (parts.NullOrEmpty())
             {
                 return null;
