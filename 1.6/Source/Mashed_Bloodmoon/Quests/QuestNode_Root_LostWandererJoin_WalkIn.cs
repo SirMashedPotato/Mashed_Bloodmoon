@@ -54,7 +54,7 @@ namespace Mashed_Bloodmoon
         /// <summary>
         /// Copy pasted with slight edits :/
         /// </summary>
-        public override void SendLetter(Quest quest, Pawn pawn)
+        public override void SendLetter_NewTemp(Quest quest, Pawn pawn, Map map)
         {
             TaggedString title = "Mashed_Bloodmoon_LostWanderer_Label".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
             TaggedString letterText = "Mashed_Bloodmoon_LostWanderer_Desc".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
@@ -65,6 +65,7 @@ namespace Mashed_Bloodmoon
             choiceLetter_AcceptJoiner.signalAccept = signalAccept;
             choiceLetter_AcceptJoiner.signalReject = signalReject;
             choiceLetter_AcceptJoiner.quest = quest;
+            choiceLetter_AcceptJoiner.overrideMap = map;
             choiceLetter_AcceptJoiner.StartTimeout(TimeoutTicks);
             Find.LetterStack.ReceiveLetter(choiceLetter_AcceptJoiner);
         }
