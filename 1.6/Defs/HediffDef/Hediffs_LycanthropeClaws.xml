@@ -24,7 +24,7 @@
 			</li>
 		</comps>
 	</HediffDef>
-		<!-- ==========[Mashed_Bloodmoon_LycanthropeClawsSharp]==========-->
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeClawsSharp]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeAddedPartBase">
 		<defName>Mashed_Bloodmoon_LycanthropeClawsSharp</defName>
 		<label>lycanthrope claws (galvanized)</label>
@@ -136,6 +136,27 @@
 						<label>noxious claws</label>
 						<capacities>
 							<li>ScratchToxic</li>
+						</capacities>
+						<power>15</power>
+						<armorPenetration>0.25</armorPenetration>
+						<cooldownTime>1</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_RegularClaws]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeAddedPartBase">
+		<defName>Mashed_Bloodmoon_RegularClaws</defName>
+		<label>refrained claws</label>
+		<description>Regular claws that do not have any additional effects.</description>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>refrained claws</label>
+						<capacities>
+							<li>Scratch</li>
 						</capacities>
 						<power>15</power>
 						<armorPenetration>0.25</armorPenetration>

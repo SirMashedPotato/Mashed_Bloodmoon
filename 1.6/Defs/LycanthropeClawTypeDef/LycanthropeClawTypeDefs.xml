@@ -58,6 +58,14 @@
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClawsToxic</clawHediffDef>
 		<purchaseHeartCost>25</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
+	<!-- ==========[Mashed_Bloodmoon_RegularClaws]========== -->
+	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
+		<defName>Mashed_Bloodmoon_RegularClaws</defName>
+		<label>refrained claws</label>
+		<description>Regular claws that do not have any additional effects.</description>
+		<clawHediffDef>Mashed_Bloodmoon_RegularClaws</clawHediffDef>
+		<purchaseHeartCost>1</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_SilverClaws]========== -->
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>
 		<defName>Mashed_Bloodmoon_SilverClaws</defName>
