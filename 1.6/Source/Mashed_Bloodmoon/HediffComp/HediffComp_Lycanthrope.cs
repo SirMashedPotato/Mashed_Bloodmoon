@@ -256,6 +256,17 @@ namespace Mashed_Bloodmoon
 
                 if (continueFlag)
                 {
+                    bool disabledFlag = false;
+
+                    if (parent.pawn.Downed)
+                    {
+                        disabledFlag = true;
+                    }
+                    else if (parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue))
+                    {
+                        disabledFlag = true;
+                    }
+
                     yield return new Command_Action
                     {
                         defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
@@ -266,7 +277,7 @@ namespace Mashed_Bloodmoon
                         {
                             TransformPawn();
                         },
-                        Disabled = parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue),
+                        Disabled = disabledFlag,
                     };
                 }
             }

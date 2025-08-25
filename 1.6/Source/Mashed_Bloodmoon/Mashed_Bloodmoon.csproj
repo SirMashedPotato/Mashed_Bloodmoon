@@ -146,6 +146,7 @@
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Patch_CompHoldingPlatformTarget.cs" />
     <Compile Include="Harmony\Patch_GenerateInitialHediffs.cs" />
+    <Compile Include="Harmony\Patch_PregnancyUtility.cs" />
     <Compile Include="Harmony\Patch_SetupDynamicNodes.cs" />
     <Compile Include="Harmony\Patch_ApplyBedThoughts.cs" />
     <Compile Include="Harmony\Patch_Verb_MeleeAttackDamage.cs" />
