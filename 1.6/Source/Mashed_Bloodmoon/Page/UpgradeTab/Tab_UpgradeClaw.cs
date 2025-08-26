@@ -28,6 +28,8 @@ namespace Mashed_Bloodmoon
             RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(labelRect.NewCol(clawDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), clawDef.LabelCap);
 
+            PageUtility.ModSourceIcon(ref labelRect, clawDef);
+
             if (compLycanthrope.equippedClawType == clawDef)
             {
                 TaggedString levelLabel = "Equipped".Translate();

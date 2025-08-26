@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using UnityEngine;
 using Verse;
 
@@ -151,30 +152,30 @@ namespace Mashed_Bloodmoon
             Rect heartRect = mainRect.ContractedBy(Assets.RectPadding/2f);
             Texture2D heartTex = ContentFinder<Texture2D>.Get(beastHuntDef.heartTexPath);
             GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit);
+
+            RectDivider rectDivider = new RectDivider(mainRect.ContractedBy(Assets.RectPadding / 2f), mainRect.GetHashCode(), null);
+            RectDivider infoRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Bottom);
+
             if (beastHuntDef.Completed(compLycanthrope))
             {
                 GUI.DrawTexture(heartRect, ContentFinder<Texture2D>.Get(beastHuntDef.completedTexPath));
             }
-            else
+
+            PageUtility.ModSourceIcon(ref infoRect, beastHuntDef, HorizontalJustification.Left);
+
+            if (!beastHuntDef.Completed(compLycanthrope))
             {
                 GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit, true, 0f, color: new Color(0,0,0,0.8f), 0f, 0f);
                 if (beastHuntDef.targetCount > 1)
                 {
                     TaggedString label = beastHuntDef.Progress(compLycanthrope) + "/" + beastHuntDef.targetCount;
-                    Rect progressRect = mainRect.ContractedBy(Assets.RectPadding);
-                    progressRect.height = Text.LineHeight;
-                    progressRect.y += mainRect.height - (progressRect.height + (Assets.RectPadding * 1.5f));
-                    Widgets.Label(progressRect, label);
+                    Widgets.Label(infoRect.NewCol(label.GetWidthCached(), HorizontalJustification.Left), label);
                 }
             }
+
             if (beastHuntDef.extraTooltip !=  null)
             {
-                Rect extraTooltipRect = mainRect.ContractedBy(Assets.RectPadding);
-                extraTooltipRect.height = Text.LineHeight;
-                extraTooltipRect.width = extraTooltipRect.height;
-                extraTooltipRect.y += mainRect.height - (extraTooltipRect.height + (Assets.RectPadding * 1.5f));
-                extraTooltipRect.x += mainRect.width - extraTooltipRect.height - (Assets.RectPadding * 1.5f);
-                Widgets.ButtonImage(extraTooltipRect, TexButton.Info, false, beastHuntDef.extraTooltip);
+                Widgets.ButtonImage(infoRect.NewCol(infoRect.Rect.height, HorizontalJustification.Right), TexButton.Info, false, beastHuntDef.extraTooltip);
             }
         }
 

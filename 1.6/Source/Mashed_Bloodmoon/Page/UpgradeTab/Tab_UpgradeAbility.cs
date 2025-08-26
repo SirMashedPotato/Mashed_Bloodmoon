@@ -22,6 +22,9 @@ namespace Mashed_Bloodmoon
 
             RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(labelRect.NewCol(abilityDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), abilityDef.LabelCap);
+
+            PageUtility.ModSourceIcon(ref labelRect, abilityDef);
+
             if (abilityDef.AlreadyUnlocked(compLycanthrope))
             {
                 TaggedString levelLabel = "Mashed_Bloodmoon_Unlocked".Translate();

@@ -24,6 +24,8 @@ namespace Mashed_Bloodmoon
             string label = traitDef.traitDef.DataAtDegree(traitDef.traitDegree).GetLabelCapFor(pawn);
             Widgets.Label(labelRect.NewCol(label.GetWidthCached(), HorizontalJustification.Left), label);
 
+            PageUtility.ModSourceIcon(ref labelRect, traitDef);
+
             if (traitDef.AlreadyUnlocked(pawn))
             {
                 TaggedString levelLabel = "Mashed_Bloodmoon_Unlocked".Translate();

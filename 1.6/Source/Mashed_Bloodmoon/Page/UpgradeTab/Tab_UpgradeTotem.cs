@@ -22,6 +22,9 @@ namespace Mashed_Bloodmoon
 
             RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             Widgets.Label(labelRect.NewCol(totemDef.label.GetWidthCached(), HorizontalJustification.Left), totemDef.label);
+
+            PageUtility.ModSourceIcon(ref labelRect, totemDef);
+
             TaggedString levelLabel = "(" + compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) + " / " + totemDef.maxLevel + ")";
             Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
 
