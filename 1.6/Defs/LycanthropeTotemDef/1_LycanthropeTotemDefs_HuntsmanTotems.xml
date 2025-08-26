@@ -3,8 +3,8 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemEndurance]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
-		<label>Huntsman's totem (Endurance)</label>
-		<labelShort>totem (Endurance)</labelShort>
+		<label>Totem of Endurance</label>
+		<labelShort>endurance totem</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to the rate wounds heal while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemEndurance</totemThingDef>
 		<statDef>InjuryHealingFactor</statDef>
@@ -16,8 +16,8 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemFortitude]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemFortitude</defName>
-		<label>Huntsman's totem (Fortitude)</label>
-		<labelShort>totem (Fortitude)</labelShort>
+		<label>Totem of Fortitude</label>
+		<labelShort>fortitude totem</labelShort>
 		<description>Proof of a skilled hunter. It reduces incoming damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemFortitude</totemThingDef>
 		<statDef>IncomingDamageFactor</statDef>
@@ -30,8 +30,8 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemSight</defName>
-		<label>Huntsman's totem (Sight)</label>
-		<labelShort>totem (Sight)</labelShort>
+		<label>Totem of Sight</label>
+		<labelShort>sight totem</labelShort>
 		<description>Proof of a skilled hunter. It gives a reduction to stagger duration while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemSight</totemThingDef>
 		<statDef>StaggerDurationFactor</statDef>
@@ -43,8 +43,8 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemSpeed</defName>
-		<label>Huntsman's totem (Speed)</label>
-		<labelShort>totem (Speed)</labelShort>
+		<label>Totem of Speed</label>
+		<labelShort>speed totem</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to movement speed while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemSpeed</totemThingDef>
 		<statDef>MoveSpeed</statDef>
@@ -56,8 +56,8 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemStrength]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemStrength</defName>
-		<label>Huntsman's totem (Strength)</label>
-		<labelShort>totem (Strength)</labelShort>
+		<label>Totem of Strength</label>
+		<labelShort>strength totem</labelShort>
 		<description>Proof of a skilled hunter. It gives a bonus to melee damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemStrength</totemThingDef>
 		<statDef>MeleeDamageFactor</statDef>
@@ -69,8 +69,8 @@
 	<!-- ==========[Mashed_Bloodmoon_TotemTenacity]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
 		<defName>Mashed_Bloodmoon_TotemTenacity</defName>
-		<label>Huntsman's totem (Tenacity)</label>
-		<labelShort>totem (Tenacity)</labelShort>
+		<label>Totem of Tenacity</label>
+		<labelShort>tenacity totem</labelShort>
 		<description>Proof of a skilled hunter. It reduces melee cooldown while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
 		<totemThingDef>Mashed_Bloodmoon_TotemTenacity</totemThingDef>
 		<statDef>MeleeCooldownFactor</statDef>
