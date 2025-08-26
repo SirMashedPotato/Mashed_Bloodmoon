@@ -4,7 +4,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="botchjob.profaned">
 		<defName>Mashed_Bloodmoon_BJUndeadColossus</defName>
 		<label>beast hunt: Undead Colossus</label>
-		<description>Consume the heart of 3 undead colossus.</description>
+		<description>Consume the hearts of 3 undead colossus.</description>
 		<targetThingDef>BotchJob_UndeadColossus</targetThingDef>
 		<targetCount>3</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Spectral</heartTexPath>
@@ -15,6 +15,16 @@
 		<label>beast hunt: Undead Dragon</label>
 		<description>Consume the heart or fundamentum of an undead dragon.</description>
 		<targetThingDef>BotchJob_UndeadDragon</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Spectral</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_BJUndeadWarg]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="botchjob.profaned">
+		<defName>Mashed_Bloodmoon_BJUndeadWarg</defName>
+		<label>beast hunt: Undead Warg</label>
+		<description>Consume the hearts of 6 undead warg.</description>
+		<extraTooltip>Completing this Beast Hunt unlocks the Werewolf (Profaned) beast form.</extraTooltip>
+		<targetThingDef>BotchJob_UndeadWarg</targetThingDef>
+		<targetCount>6</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Spectral</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
