@@ -65,7 +65,6 @@
 			</li>
 		</comps>
 	</ThingDef>
-	<!-- ==========[Mashed_Bloodmoon_TotemMetabolicSurge]==========-->
 	<!-- ==========[Mashed_Bloodmoon_TotemMoonVeil]==========-->
 	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase" MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
 		<defName>Mashed_Bloodmoon_TotemMoonVeil</defName>
@@ -77,6 +76,20 @@
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
 				<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemPackCommand]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_TotemAbilityBase">
+		<defName>Mashed_Bloodmoon_TotemPackCommand</defName>
+		<label>Huntsman's totem (Pack Command)</label>
+		<description>A rare totem of the hunt, a skull seemingly made entirely out of crystal. While totems such as are may seem to be nothing more than peculiar collectibles, their true value can be uncovered by those blessed with The Huntsman's blood.\n\nA lycanthrope can use this totem to instantly unlock the Pack Command lycanthrope ability for use in beast form.</description>
+		<descriptionHyperlinks>
+			<AbilityDef>Mashed_Bloodmoon_PackCommand</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_UseEffectUnlockAbility">
+				<abilityDef>Mashed_Bloodmoon_PackCommand</abilityDef>
 			</li>
 		</comps>
 	</ThingDef>

@@ -55,6 +55,17 @@
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_PackCommand]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+		<defName>Mashed_Bloodmoon_PackCommandProficiency</defName>
+		<label>proficiency: Pack Command</label>
+		<description>Empower tame animals or spectral beasts 60 times with pack command.</description>
+		<extraTooltip>Completing this Beast Hunt unlocks the proficiency upgrade for this ability: Affected animals gain a stronger buff.</extraTooltip>
+		<beastHuntType>Proficiency</beastHuntType>
+		<targetCount>60</targetCount>
+		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_PackCommand</heartTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolfProficiency</defName>

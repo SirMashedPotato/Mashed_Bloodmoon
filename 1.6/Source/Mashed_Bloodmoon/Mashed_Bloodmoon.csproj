@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="CompAbilityEffect\CompAbilityEffect_AbilityProficiency.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_AddLinkedHediff.cs" />
+    <Compile Include="CompAbilityEffect\CompAbilityEffect_AnimalBuff.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_DoDamage.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_EffecterOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_FleckOnTargetExt.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="CompAbilityEffect\CompAbilityEffect_SummonBeast.cs" />
     <Compile Include="CompAbilityEffect\LycanthropeAbilityEffectComp.cs" />
     <Compile Include="CompAbilityEffect\CompAbilityEffect_StressCost.cs" />
+    <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityAnimalBuff.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityDoDamage.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityEffecterOnTargetExt.cs" />
     <Compile Include="CompAbilityEffect\Properties\CompProperties_AbilityFleckOnTargetExt.cs" />

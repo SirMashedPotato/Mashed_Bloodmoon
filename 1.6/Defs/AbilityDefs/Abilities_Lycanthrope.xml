@@ -121,10 +121,7 @@
 			<requireLineOfSight>false</requireLineOfSight>
 			<targetParams>
 				<canTargetSelf>true</canTargetSelf>
-				<canTargetPawns>true</canTargetPawns>
 				<canTargetBuildings>false</canTargetBuildings>
-				<canTargetAnimals>true</canTargetAnimals>
-				<canTargetHumans>true</canTargetHumans>
 				<canTargetMechs>false</canTargetMechs>
 			</targetParams>
 		</verbProperties>
@@ -403,6 +400,90 @@
 			</li>
 			<li Class="HediffCompProperties_Effecter">
 				<stateEffecter>Mashed_Bloodmoon_MoonVeil</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_PackCommand]==========-->
+	<AbilityDef>
+		<defName>Mashed_Bloodmoon_PackCommand</defName>
+		<label>pack command</label>
+		<description>Empower nearby tame animals and spectral beasts, temporarily improving their combat capabilities.</description>
+		<iconPath>UI/Abilities/Mashed_Bloodmoon_PackCommand</iconPath>
+		<warmupStartSound>Mashed_Bloodmoon_BeastHowl</warmupStartSound>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<statBases>
+			<Ability_EffectRadius>4.9</Ability_EffectRadius>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0.5</warmupTime>
+			<range>6.9</range>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetSubhumans>false</canTargetSubhumans>
+				<canTargetEntities>false</canTargetEntities>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityProficiency">
+				<beastHuntDef>Mashed_Bloodmoon_PackCommandProficiency</beastHuntDef>
+				<completedTooltip>Proficiency Upgrade:\nAffected animals gain a stronger buff.</completedTooltip>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityStressCost">
+				<stressCost>15</stressCost>
+				<multiTarget>true</multiTarget>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityAnimalBuff">
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_AnimalBuff</compClass>
+				<hediffDef>Mashed_Bloodmoon_PackCommandBuff</hediffDef>
+				<onlyBrain>true</onlyBrain>
+				<replaceExisting>true</replaceExisting>
+				<beastHuntDef>Mashed_Bloodmoon_PackCommandProficiency</beastHuntDef>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityFleckOnTargetExt">
+				<fleckDef>Mashed_Bloodmoon_PackCommandFleck</fleckDef>
+				<scale>4.9</scale>
+				<preCastTicks>0</preCastTicks>
+				<onlySelf>true</onlySelf>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_PackCommandBuff</defName>
+		<label>pack command</label>
+		<description>A tame animal temporarily empowered by a lycanthrope.</description>
+		<stages>
+			<li>
+				<statFactors>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+					<MoveSpeed>1.2</MoveSpeed>
+					<MeleeCooldownFactor>0.8</MeleeCooldownFactor>
+				</statFactors>
+			</li>
+			<li>
+				<label>proficient</label>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+					<MoveSpeed>1.6</MoveSpeed>
+					<MeleeCooldownFactor>0.6</MeleeCooldownFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_PackCommand</stateEffecter>
 			</li>
 		</comps>
 	</HediffDef>

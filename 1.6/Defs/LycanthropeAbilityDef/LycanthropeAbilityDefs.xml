@@ -61,6 +61,14 @@
 		<abilityDef>Mashed_Bloodmoon_MoonVeil</abilityDef>
 		<purchaseHeartCost>50</purchaseHeartCost>
 	</Mashed_Bloodmoon.LycanthropeAbilityDef>
+	<!-- ==========[Mashed_Bloodmoon_PackCommand]========== -->
+	<Mashed_Bloodmoon.LycanthropeAbilityDef>
+		<defName>Mashed_Bloodmoon_PackCommand</defName>
+		<label>pack command</label>
+		<description>Empower nearby tame animals and spectral beasts, temporarily improving their combat capabilities.</description>
+		<abilityDef>Mashed_Bloodmoon_PackCommand</abilityDef>
+		<purchaseHeartCost>50</purchaseHeartCost>
+	</Mashed_Bloodmoon.LycanthropeAbilityDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
 	<Mashed_Bloodmoon.LycanthropeAbilityDef>
 		<defName>Mashed_Bloodmoon_SummonSpectralWerewolf</defName>
