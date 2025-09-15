@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
     public class LycanthropeAbilityDef : LycanthropeDef
     {
         [NoTranslate]
-        public string backgroundTexPath = "UI/Widgets/DesButBG";
+        public string backgroundTexPath = "UI/Widgets/AbilityButBG";
         public AbilityDef abilityDef;
 
         public override bool AlreadyUnlocked(HediffComp_Lycanthrope compLycanthrope)
