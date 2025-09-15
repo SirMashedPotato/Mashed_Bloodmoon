@@ -10,6 +10,7 @@
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_AdrenalineRush</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -21,6 +22,7 @@
 		<targetCount>60</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -32,6 +34,7 @@
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansBounty</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -43,6 +46,7 @@
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansMark</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequireAnyOf="ludeon.rimworld.royalty,ludeon.rimworld.anomaly">
@@ -54,6 +58,7 @@
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_PackCommand]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -65,6 +70,7 @@
 		<targetCount>60</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_PackCommand</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -76,5 +82,6 @@
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</heartTexPath>
 		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
