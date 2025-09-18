@@ -25,6 +25,7 @@ namespace Mashed_Bloodmoon
 
         // Lycanthropy
         public static bool Lycanthropy_EnableOptionsGizmo => _instance.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo;
+        public static bool EnableConsumeHeartOrder => _instance.Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder;
         public static bool Lycanthropy_PrisonersTransformOnDamage => _instance.Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage;
         public static bool Lycanthropy_SlavesTransformOnDamage => _instance.Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage;
         public static bool Lycanthropy_PrisonersHideGizmo => _instance.Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo;
@@ -45,6 +46,7 @@ namespace Mashed_Bloodmoon
 
         // Lycanthropy
         public bool Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo = Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def;
+        public bool Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder = Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_def;
         public bool Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage = Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage_def;
         public bool Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage = Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def;
         public bool Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo = Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def;
@@ -64,6 +66,7 @@ namespace Mashed_Bloodmoon
 
         // Lycanthropy
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def = true;
+        private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def = true;
@@ -85,6 +88,7 @@ namespace Mashed_Bloodmoon
 
             /* Lycanthropy */
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo, "Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo", Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def);
+            Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder, "Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder", Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage, "Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage", Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage, "Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage", Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo, "Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo", Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def);
@@ -109,6 +113,7 @@ namespace Mashed_Bloodmoon
 
             // Lycanthropy
             _instance.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo = Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_def;
+            _instance.Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder = Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage = Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage = Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo = Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def;

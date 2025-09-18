@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeConsumeHearts]==========-->
+	<ThinkTreeDef>
+		<defName>Mashed_Bloodmoon_LycanthropeConsumeHearts</defName>
+		<insertTag>Humanlike_PostDuty</insertTag>
+		<insertPriority>1</insertPriority>
+		<thinkRoot Class="ThinkNode_ConditionalColonist">
+			<subNodes>
+				<li Class="ThinkNode_ConditionalHasHediff">
+					<hediff>Mashed_Bloodmoon_LycanthropeTransformed</hediff>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalCapableOfWorkTag">
+							<workTags>Violent</workTags>
+							<subNodes>
+								<li Class="ThinkNode_ConditionalHashIntervalTick">
+									<interval>3</interval>
+									<subNodes>
+										<li Class="Mashed_Bloodmoon.JobGiver_AICastConsumeHeart">
+											<ability>Mashed_Bloodmoon_ConsumeHeart</ability>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+</Defs>

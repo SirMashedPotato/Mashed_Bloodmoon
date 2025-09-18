@@ -3,7 +3,7 @@ using Verse.AI;
 
 namespace Mashed_Bloodmoon
 {
-    public class ThinkNode_Lycanthrope : ThinkNode_Conditional
+    public class ThinkNode_ConditionalLycanthrope : ThinkNode_Conditional
     {
         protected override bool Satisfied(Pawn pawn)
         {
@@ -19,7 +19,7 @@ namespace Mashed_Bloodmoon
             {
                 return false;
             }
-            if (onlyNight && !LycanthropeUtility.IsNight(pawn))
+            if (onlyIfNight && !LycanthropeUtility.IsNight(pawn))
             {
                 return false;
             }
@@ -28,6 +28,6 @@ namespace Mashed_Bloodmoon
 
         public bool onlyIfCanTransform = false;
         public bool onlyIfTransformed = false;
-        public bool onlyNight = false;
+        public bool onlyIfNight = false;
     }
 }

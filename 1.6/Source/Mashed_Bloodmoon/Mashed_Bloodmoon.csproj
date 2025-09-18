@@ -109,6 +109,7 @@
     <Compile Include="DefModExtension\PawnLycanthropeProperties.cs" />
     <Compile Include="DefOf\AbilityDefOf.cs" />
     <Compile Include="DefOf\BodyPartDefOf.cs" />
+    <Compile Include="DefOf\DesignationDefOf.cs" />
     <Compile Include="DefOf\EffecterDefOf.cs" />
     <Compile Include="DefOf\FactionDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="DefOf\ThoughtDefof.cs" />
     <Compile Include="DefOf\LycanthropeTotemDefOf.cs" />
     <Compile Include="DefOf\TraitDefOf.cs" />
+    <Compile Include="Designator\Designator_ConsumeHeart.cs" />
     <Compile Include="Enum\BeastHuntType.cs" />
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
@@ -185,6 +187,7 @@
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltarFillBlood.cs" />
     <Compile Include="JobDriver\JobDriver_SacrificeTending.cs" />
+    <Compile Include="JobGiver\JobGiver_AICastConsumeHeart.cs" />
     <Compile Include="LycanthropeRequirementWorker\RequirementWorker_ClawType.cs" />
     <Compile Include="LycanthropeRequirementWorker\RequirementWorker_ClawTypeEquipped.cs" />
     <Compile Include="Page\UpgradeTab\Tab_UpgradeAbility.cs" />
@@ -199,9 +202,9 @@
     <Compile Include="ThingClass\SpectralWerewolfSpawner.cs" />
     <Compile Include="ThingComp\Comp_DropOnDestroy.cs" />
     <Compile Include="ThingComp\Properties\CompProperties_DropOnDestroy.cs" />
-    <Compile Include="ThinkNode\JobGiver_AttackMarkedTarget.cs" />
+    <Compile Include="JobGiver\JobGiver_AttackMarkedTarget.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastDefendParent.cs" />
-    <Compile Include="ThinkNode\JobGiver_LycanthropeFury.cs" />
+    <Compile Include="JobGiver\JobGiver_LycanthropeFury.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastFollowParent.cs" />
     <Compile Include="JobGiver\JobGiver_SpectralBeastWanderNearParent.cs" />
     <Compile Include="LycanthropeBeastHuntCompletionWorker\CompletionWorker_UnlockAbility.cs" />
@@ -252,7 +255,7 @@
     <Compile Include="ThingClass\Gas_Silverdust.cs" />
     <Compile Include="ThingClass\Gas_Wolfsbane.cs" />
     <Compile Include="ThingClass\Gas_Wolfsblood.cs" />
-    <Compile Include="ThinkNode\ThinkNode_Lycanthrope.cs" />
+    <Compile Include="ThinkNode\ThinkNode_ConditionalLycanthrope.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptIsLycanthrope.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_PreceptLycanthropePresent.cs" />
     <Compile Include="ThoughtWorker\Precept\ThoughtWorker_Precept_LycanthropeSocial.cs" />
@@ -260,6 +263,7 @@
     <Compile Include="ThoughtWorker\ThoughtWorker_BeastHuntCompleted.cs" />
     <Compile Include="ThoughtWorker\ThoughtWorker_SilverApparel.cs" />
     <Compile Include="Utility\Assets.cs" />
+    <Compile Include="Utility\ConsumeHeartUtility.cs" />
     <Compile Include="Utility\HuntsmansMoonUtility.cs" />
     <Compile Include="Utility\LycanthropeUtility.cs" />
     <Compile Include="DefModExtension\PawnTotemRecord.cs" />

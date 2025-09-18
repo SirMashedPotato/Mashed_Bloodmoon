@@ -14,6 +14,8 @@
 	<Mashed_Bloodmoon_Lycanthropy_Tab>Lycanthropy</Mashed_Bloodmoon_Lycanthropy_Tab>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>
+	<Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder>Enable the consume heart order</Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder>
+	<Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_desc>This enables the consume heart order, allowing you to mark corpses. Transformed lycanthropes will automatically consume the hearts of consumed corpses while they are not drafted.</Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_desc>
 	<Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>Hide the transform gizmo for colony prisoners</Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>Hide the transform gizmo for colony slaves</Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>Prisoners can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>

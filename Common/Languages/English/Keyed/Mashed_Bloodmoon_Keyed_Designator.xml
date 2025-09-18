@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- ==========[Designator_ConsumeHeart]==========-->
+	<Mashed_Bloodmoon_DesignatorConsumeHeart_Label>consume heart</Mashed_Bloodmoon_DesignatorConsumeHeart_Label>
+	<Mashed_Bloodmoon_DesignatorConsumeHeart_Desc>Mark corpses to have transformed lycanthropes consume their hearts.\n\nOnly un-drafted lycanthropes will autonomously consume hearts.</Mashed_Bloodmoon_DesignatorConsumeHeart_Desc>
+	<Mashed_Bloodmoon_DesignatorConsumeHeart_InvalidTarget>Must designate a corpse with an intact heart</Mashed_Bloodmoon_DesignatorConsumeHeart_InvalidTarget>
+	<!--<Mashed_Bloodmoon_DesignatorConsumeHeart_DownedWarning>Consuming {0_label}'s heart will kill {0_pronoun}</Mashed_Bloodmoon_DesignatorConsumeHeart_DownedWarning>-->
+</LanguageData>
