@@ -17,6 +17,11 @@ namespace Mashed_Bloodmoon
 
         protected override LocalTargetInfo GetTarget(Pawn caster, Ability ability)
         {
+            if (Mashed_Bloodmoon_ModSettings.EnableConsumeHeartOrder)
+            {
+                return LocalTargetInfo.Invalid;
+            }
+
             IEnumerable<Thing> potentionalTargets = PotentialWorkThingsGlobal(caster);
             if (potentionalTargets.EnumerableNullOrEmpty())
             {
