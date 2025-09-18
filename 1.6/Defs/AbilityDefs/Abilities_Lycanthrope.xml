@@ -11,7 +11,7 @@
 		</descriptionHyperlinks>
 		<cooldownTicksRange>300</cooldownTicksRange>
 		<iconPath>UI/Abilities/Mashed_Bloodmoon_ConsumeHeart</iconPath>
-		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<jobDef>Mashed_Bloodmoon_CastAbilityOnThingMeleeReserveTarget</jobDef>
 		<stunTargetWhileCasting>true</stunTargetWhileCasting>
 		<showPsycastEffects>false</showPsycastEffects>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>

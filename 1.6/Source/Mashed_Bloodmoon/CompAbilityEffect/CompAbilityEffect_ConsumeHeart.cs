@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace Mashed_Bloodmoon
 {
@@ -75,6 +76,15 @@ namespace Mashed_Bloodmoon
         {
             if (target.Thing == null)
             {
+                return false;
+            }
+
+            if (!parent.pawn.CanReserve(target.Thing))
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("CannotUseReserved".Translate(), target.Thing, MessageTypeDefOf.RejectInput, historical: false);
+                }
                 return false;
             }
 

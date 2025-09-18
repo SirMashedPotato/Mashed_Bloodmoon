@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_CastAbilityOnThingMeleeReserveTarget]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_CastAbilityOnThingMeleeReserveTarget</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_CastAbilityMeleeReserveTarget</driverClass>
+		<casualInterruptible>false</casualInterruptible>
+		<collideWithPawns>true</collideWithPawns>
+		<neverShowWeapon>true</neverShowWeapon>
+		<tryStartFlying>true</tryStartFlying>
+		<overrideFlyChance>1</overrideFlyChance>
+	</JobDef>
 	<!-- ==========[Mashed_Bloodmoon_DrinkFromWolfsbloodAltar]========== -->
-	 <JobDef>
+	<JobDef>
 		<defName>Mashed_Bloodmoon_DrinkFromWolfsbloodAltar</defName>
 		<driverClass>Mashed_Bloodmoon.JobDriver_WolfsbloodAltarDrinkBlood</driverClass>
 		<reportString>drinking from TargetA.</reportString>
 	</JobDef>
 	<!-- ==========[Mashed_Bloodmoon_FillWolfsbloodAltar]========== -->
-	 <JobDef>
+	<JobDef>
 		<defName>Mashed_Bloodmoon_FillWolfsbloodAltar</defName>
 		<driverClass>Mashed_Bloodmoon.JobDriver_WolfsbloodAltarFillBlood</driverClass>
 		<reportString>filling TargetA.</reportString>
 	</JobDef>
 	<!-- ==========[Mashed_Bloodmoon_SacrificeTending]========== -->
-	 <JobDef>
+	<JobDef>
 		<defName>Mashed_Bloodmoon_SacrificeTending</defName>
 		<driverClass>Mashed_Bloodmoon.JobDriver_SacrificeTending</driverClass>
 		<reportString>sacrificing at TargetA.</reportString>

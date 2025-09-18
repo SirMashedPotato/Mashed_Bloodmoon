@@ -179,6 +179,7 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsbane.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfscure.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_PotionWolfsblood.cs" />
+    <Compile Include="JobDriver\JobDriver_CastAbilityMeleeReserveTarget.cs" />
     <Compile Include="JobDriver\JobDriver_CustomiseBeastForm.cs" />
     <Compile Include="JobDriver\JobDriver_SacrificeFeralWerewolfRaid.cs" />
     <Compile Include="JobDriver\JobDriver_UpgradeBeastForm.cs" />
