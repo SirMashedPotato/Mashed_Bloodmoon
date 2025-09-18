@@ -4,7 +4,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastFormDef MayRequire="botchjob.profaned">
 		<defName>Mashed_Bloodmoon_WerewolfProfaned</defName>
 		<label>werewolf (Profaned)</label>
-		<artist>SirMashedPotato</artist>
+		<artist>SirMashedPotato, based on BotchJob</artist>
 		<graphicData>
 			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfProfaned/Mashed_Bloodmoon_WerewolfProfaned</texPath>
 			<color>(105,110,108)</color>

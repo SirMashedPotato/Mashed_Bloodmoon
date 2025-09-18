@@ -242,16 +242,17 @@ namespace Mashed_Bloodmoon
             RectDivider rect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             TaggedString label1 = "Mashed_Bloodmoon_Type".Translate() + ": " + compLycanthrope.BeastFormDef.LabelCap;
             Widgets.Label(rect1.NewCol(label1.GetWidthCached(), HorizontalJustification.Left), label1);
+            PageUtility.ModSourceIcon(ref rect1, compLycanthrope.BeastFormDef, HorizontalJustification.Left);
+
 
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             TaggedString label2 = "Mashed_Bloodmoon_Artist".Translate() + ": " + compLycanthrope.BeastFormDef.artist;
             Widgets.Label(rect2.NewCol(label2.GetWidthCached(), HorizontalJustification.Left), label2);
 
+            PageUtility.ModSourceIcon(ref rect1, compLycanthrope.TransformationTypeDef);
             TaggedString label3 = "Mashed_Bloodmoon_Effect".Translate() + ": " + compLycanthrope.TransformationTypeDef.LabelCap;
             Widgets.Label(rect1.NewCol(label3.GetWidthCached(), HorizontalJustification.Right), label3);
 
-            TaggedString label4 = "Source".Translate() + ": " + compLycanthrope.BeastFormDef.modContentPack.Name;
-            Widgets.Label(rect2.NewCol(label4.GetWidthCached(), HorizontalJustification.Right), label4);
         }
 
         /// <summary>
