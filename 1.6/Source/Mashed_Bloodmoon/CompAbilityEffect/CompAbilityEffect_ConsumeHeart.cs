@@ -66,7 +66,7 @@ namespace Mashed_Bloodmoon
             }
             catch
             {
-
+                Log.Warning(parent.pawn + " tried to consume heart of " + target.Thing + " but it was already missing");
             }
             
             base.Apply(target, dest);
