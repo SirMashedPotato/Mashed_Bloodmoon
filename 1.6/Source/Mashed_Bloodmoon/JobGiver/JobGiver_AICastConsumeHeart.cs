@@ -11,7 +11,7 @@ namespace Mashed_Bloodmoon
         {
             foreach (Designation item in pawn.Map.designationManager.SpawnedDesignationsOfDef(DesignationDefOf.Mashed_Bloodmoon_ConsumeHeart))
             {
-                if (pawn.CanReserve(item.target))
+                if (pawn.CanReserve(item.target) && !item.target.Thing.IsForbidden(pawn))
                 {
                     yield return item.target.Thing;
                 }
