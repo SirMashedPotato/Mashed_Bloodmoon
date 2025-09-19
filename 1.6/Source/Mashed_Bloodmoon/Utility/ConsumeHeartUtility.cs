@@ -16,6 +16,11 @@ namespace Mashed_Bloodmoon
                 return false;
             }
 
+            if (pawn.RaceProps.IsMechanoid)
+            {
+                return false;
+            }
+
             BodyPartRecord part = GetBodyPartRecord(pawn);
             if (part == null)
             {
