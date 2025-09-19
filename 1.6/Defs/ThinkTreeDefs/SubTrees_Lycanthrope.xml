@@ -13,8 +13,8 @@
 						<li Class="ThinkNode_ConditionalCapableOfWorkTag">
 							<workTags>Violent</workTags>
 							<subNodes>
-								<li Class="ThinkNode_ConditionalHashIntervalTick">
-									<interval>3</interval>
+								<li Class="ThinkNode_Tagger">
+									<tagToGive>Fieldwork</tagToGive>
 									<subNodes>
 										<li Class="Mashed_Bloodmoon.JobGiver_AICastConsumeHeart">
 											<ability>Mashed_Bloodmoon_ConsumeHeart</ability>
