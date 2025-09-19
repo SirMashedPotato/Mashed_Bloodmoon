@@ -24,9 +24,9 @@ namespace Mashed_Bloodmoon
         public string IconTexPath => totemThingDef != null ? totemThingDef.graphic.path : iconPath;
         public Color IconColor => totemThingDef != null ? totemThingDef.graphic.color : Color.white;
 
-        public void UseTotem(Pawn pawn, int usedCount)
+        public void UseTotem(Pawn pawn, int usedCount, bool message = true)
         {
-            Upgrade(LycanthropeUtility.GetCompLycanthrope(pawn), usedCount);
+            Upgrade(LycanthropeUtility.GetCompLycanthrope(pawn), usedCount, message);
         }
 
         public bool CanUpgrade(HediffComp_Lycanthrope compLycanthrope)

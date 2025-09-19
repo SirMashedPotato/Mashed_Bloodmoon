@@ -112,6 +112,9 @@ namespace Mashed_Bloodmoon
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder, "Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_desc".Translate());
             listing_Standard.Gap();
 
+            listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartMessage".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartMessage);
+            listing_Standard.Gap();
+
             listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_TextureScalingMode".Translate());
 
             if (listing_Standard.RadioButton("Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize".Translate(), 
