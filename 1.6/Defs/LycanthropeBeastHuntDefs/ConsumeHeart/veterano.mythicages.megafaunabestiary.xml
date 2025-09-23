@@ -58,4 +58,11 @@
 		<targetThingDef>MA_Scarodon</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_MAWorhin]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="veterano.mythicages.megafaunabestiary">
+		<defName>Mashed_Bloodmoon_MAWorhin</defName>
+		<label>beast hunt: Worhin</label>
+		<description>Consume the heart of a worhin.</description>
+		<targetThingDef>MA_Worhin</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
