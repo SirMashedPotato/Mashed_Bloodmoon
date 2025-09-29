@@ -9,7 +9,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_AdrenalineRush</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_BeastHowl]========== -->
@@ -21,7 +21,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>60</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_BeastHowl</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansBounty]========== -->
@@ -33,7 +33,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansBounty</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMark]========== -->
@@ -45,7 +45,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_HuntsmansMark</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_MoonVeil]========== -->
@@ -57,7 +57,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_MoonVeil</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_PackCommand]========== -->
@@ -69,7 +69,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>60</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_PackCommand</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_SummonSpectralWerewolf]========== -->
@@ -81,7 +81,7 @@
 		<beastHuntType>Proficiency</beastHuntType>
 		<targetCount>30</targetCount>
 		<heartTexPath>UI/Abilities/Mashed_Bloodmoon_SummonSpectralWerewolf</heartTexPath>
-		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedAbility</completedTexPath>
+		<completedTexPath>UI/Icons/Mashed_Bloodmoon_BeastHuntCompletedProficiency</completedTexPath>
 		<backgroundTexPath>UI/Widgets/AbilityButBG</backgroundTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
