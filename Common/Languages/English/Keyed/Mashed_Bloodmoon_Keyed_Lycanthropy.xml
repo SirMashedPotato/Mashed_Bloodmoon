@@ -94,8 +94,6 @@
 	<Mashed_Bloodmoon_SaniesLupinusTransitioned>{0_labelShort}'s Sanies Lupinus has transitioned into dormant lycanthropy</Mashed_Bloodmoon_SaniesLupinusTransitioned>
 	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
 	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
-	<Mashed_Bloodmoon_FeralWerewolfFactionMissing>The feral werewolf faction is missing.</Mashed_Bloodmoon_FeralWerewolfFactionMissing>
-	<Mashed_Bloodmoon_FeralWerewolfFactionCantRaid>The feral werewolf faction can't raid here.</Mashed_Bloodmoon_FeralWerewolfFactionCantRaid>
 	<!-- ==========[wolfsblood altar]==========-->
 	<Mashed_Bloodmoon_AltarFillAmount>lycanthrope blood amount: {0}</Mashed_Bloodmoon_AltarFillAmount>
 	<Mashed_Bloodmoon_WolfsbloodAltarFull>{0} is full</Mashed_Bloodmoon_WolfsbloodAltarFull>

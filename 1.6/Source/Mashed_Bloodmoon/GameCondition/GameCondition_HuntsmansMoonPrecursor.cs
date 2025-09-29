@@ -12,6 +12,10 @@ namespace Mashed_Bloodmoon
             {
                 incidentDef.Worker.TryExecute(parms);
             }
+            else
+            {
+                Messages.Message("Mashed_Bloodmoon_HuntsmansMoonPrecursorPasses".Translate(), MessageTypeDefOf.NeutralEvent, false);
+            }
             base.End();
         }
 

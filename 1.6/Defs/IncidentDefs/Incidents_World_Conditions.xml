@@ -15,7 +15,7 @@
 		<workerClass>Mashed_Bloodmoon.IncidentWorker_MakeGameCondition_HuntsmansMoonPrecursor</workerClass>
 		<gameCondition>Mashed_Bloodmoon_HuntsmansMoonPrecursor</gameCondition>
 		<letterLabel>blood on the wind</letterLabel>
-		<letterDef>ThreatBig</letterDef>
+		<letterDef>ThreatSmall</letterDef>
 		<baseChance>1</baseChance>
 		<minRefireDays>30</minRefireDays>
 		<earliestDay>30</earliestDay>

@@ -93,6 +93,7 @@
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarDrinkBlood.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFillBlood.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarFeralWerewolfRaid.cs" />
+    <Compile Include="CompUsable\CompUsable_WolfsbloodAltarHuntsmansMoon.cs" />
     <Compile Include="CompUsable\CompUsable_WolfsbloodAltarTendWounds.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_Totem.cs" />
     <Compile Include="CompUseEffect\CompUseEffect_UnlockAbility.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="DefOf\DesignationDefOf.cs" />
     <Compile Include="DefOf\EffecterDefOf.cs" />
     <Compile Include="DefOf\FactionDefOf.cs" />
+    <Compile Include="DefOf\GameConditionDefOf.cs" />
     <Compile Include="DefOf\HistoryEventDefOf.cs" />
     <Compile Include="DefOf\IncidentCategoryDefOf.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />
@@ -183,6 +185,7 @@
     <Compile Include="JobDriver\JobDriver_CastAbilityMeleeReserveTarget.cs" />
     <Compile Include="JobDriver\JobDriver_CustomiseBeastForm.cs" />
     <Compile Include="JobDriver\JobDriver_SacrificeFeralWerewolfRaid.cs" />
+    <Compile Include="JobDriver\JobDriver_SacrificeHuntsmansMoon.cs" />
     <Compile Include="JobDriver\JobDriver_UpgradeBeastForm.cs" />
     <Compile Include="JobDriver\JobDriver_ViewBeastHuntProgress.cs" />
     <Compile Include="JobDriver\JobDriver_WolfsbloodAltar.cs" />

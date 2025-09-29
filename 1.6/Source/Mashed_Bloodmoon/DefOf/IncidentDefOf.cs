@@ -10,6 +10,7 @@ namespace Mashed_Bloodmoon
             DefOfHelper.EnsureInitializedInCtor(typeof(IncidentDefOf));
         }
 
+        public static IncidentDef Mashed_Bloodmoon_HuntsmansMoon;
         public static IncidentDef Mashed_Bloodmoon_WerewolfAmbush;
     }
 }

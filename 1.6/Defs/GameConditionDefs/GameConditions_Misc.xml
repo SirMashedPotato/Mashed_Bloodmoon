@@ -18,6 +18,7 @@
 		<label>blood on the wind</label>
 		<description>The wind carries with it the faint scent of blood, slowly growing stronger as time passes. Wild animals are growing restless, and the occasional howl can be heard in the distance.\n\nWithin the next day the moon will bathe this world in blood red light, and the Huntsman's hounds will awaken, eager to sate their appetite.</description>
 		<letterText>The wind carries with it the faint scent of blood, slowly growing stronger as time passes. Within the next day a Huntsman's moon will begin, and feral werewolves will begin their hunt.</letterText>
+		<letterDef>ThreatSmall</letterDef>
 	</GameConditionDef>
 	<!-- ==========[Mashed_Bloodmoon_HuntsmansMoon]==========-->
 	<GameConditionDef ParentName="Mashed_Bloodmoon_HuntsmansMoonBase">

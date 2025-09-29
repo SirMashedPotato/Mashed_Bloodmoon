@@ -34,6 +34,12 @@
 		<driverClass>Mashed_Bloodmoon.JobDriver_SacrificeFeralWerewolfRaid</driverClass>
 		<reportString>sacrificing at TargetA.</reportString>
 	</JobDef>
+	<!-- ==========[Mashed_Bloodmoon_SacrificeHuntsmansMoon]========== -->
+	<JobDef>
+		<defName>Mashed_Bloodmoon_SacrificeHuntsmansMoon</defName>
+		<driverClass>Mashed_Bloodmoon.JobDriver_SacrificeHuntsmansMoon</driverClass>
+		<reportString>sacrificing at TargetA.</reportString>
+	</JobDef>
 	<!-- ==========[Mashed_Bloodmoon_CustomiseBeastForm]========== -->
 	<JobDef>
 		<defName>Mashed_Bloodmoon_CustomiseBeastForm</defName>

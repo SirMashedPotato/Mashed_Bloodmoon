@@ -75,6 +75,18 @@
 				<showUseGizmo>true</showUseGizmo>
 				<allowTransformed>false</allowTransformed>
 				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 10 consumed hearts, to summon a feral werewolf raid.</gizmoDescription>
+				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_SummonFeralPack</gizmoTexPath>
+			</li>
+			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
+				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarHuntsmansMoon</compClass>
+				<useJob>Mashed_Bloodmoon_SacrificeHuntsmansMoon</useJob>
+				<useLabel>Summon Huntsman's Moon</useLabel>
+				<useDuration>1200</useDuration>
+				<heartCost>30</heartCost>
+				<bloodCost>1</bloodCost>
+				<showUseGizmo>true</showUseGizmo>
+				<allowTransformed>false</allowTransformed>
+				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 30 consumed hearts, to call forth a Huntsman's Moon.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
 			</li>
 			<!-- Lycanthrope options -->
