@@ -86,7 +86,7 @@
 				<bloodCost>1</bloodCost>
 				<showUseGizmo>true</showUseGizmo>
 				<allowTransformed>false</allowTransformed>
-				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 30 consumed hearts, to call forth a Huntsman's Moon.</gizmoDescription>
+				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 30 consumed hearts, to call forth the Huntsman's Moon.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
 			</li>
 			<!-- Lycanthrope options -->
