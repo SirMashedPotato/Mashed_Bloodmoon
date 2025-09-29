@@ -89,6 +89,20 @@ namespace Mashed_Bloodmoon
                     }
                 }
             }
+            else
+            {
+                if (DebugSettings.ShowDevGizmos)
+                {
+                    lowerButtonRect.width = 130f;
+                    lowerButtonRect.x = inRect.x + inRect.width - lowerButtonRect.width - Assets.RectPadding;
+
+                    string unlockLabel = "Dev: remove";
+                    if (Widgets.ButtonText(lowerButtonRect, unlockLabel, true))
+                    {
+                        compLycanthrope.unlockedAbilityTracker.Remove(abilityDef);
+                    }
+                }
+            }
         }
 
         public static void DoRightRect(Rect inRect, LycanthropeAbilityDef abilityDef)

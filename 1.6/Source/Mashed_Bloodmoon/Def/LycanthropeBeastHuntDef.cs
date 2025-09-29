@@ -84,14 +84,37 @@ namespace Mashed_Bloodmoon
 
             if (Completed(compLycanthrope.beastHuntTracker[this]))
             {
-                compLycanthrope.completedBeastHunts++;
                 BeastHuntComplete(compLycanthrope, pawn);
-                Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
+            }
+        }
+
+        /// <summary>
+        /// Utility method for instantly completing a beast hunt
+        /// </summary>
+        public void CompleteBeastHunt(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
+        {
+            if (!compLycanthrope.beastHuntTracker.ContainsKey(this))
+            {
+                compLycanthrope.beastHuntTracker.Add(this, 0);
+            }
+
+            if (Completed(compLycanthrope.beastHuntTracker[this]))
+            {
+                return;
+            }
+
+            compLycanthrope.beastHuntTracker[this] = targetCount;
+
+            if (Completed(compLycanthrope.beastHuntTracker[this]))
+            {
+                BeastHuntComplete(compLycanthrope, pawn);
             }
         }
 
         private void BeastHuntComplete(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
+            compLycanthrope.completedBeastHunts++;
+
             if (!completionWorkers.NullOrEmpty())
             {
                 foreach (LycanthropeBeastHuntCompletionWorker completionWorker in completionWorkers)
@@ -99,6 +122,9 @@ namespace Mashed_Bloodmoon
                     completionWorker.PostBeastHuntCompleted(compLycanthrope, pawn);
                 }
             }
+
+            Messages.Message("Mashed_Bloodmoon_BeastHuntComplete".Translate(pawn, this), pawn, MessageTypeDefOf.PositiveEvent);
+
         }
 
         public override IEnumerable<string> ConfigErrors()

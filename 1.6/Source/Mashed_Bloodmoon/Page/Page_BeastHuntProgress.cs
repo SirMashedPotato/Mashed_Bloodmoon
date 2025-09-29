@@ -173,6 +173,27 @@ namespace Mashed_Bloodmoon
                 }
             }
 
+            if (DebugSettings.ShowDevGizmos)
+            {
+                RectDivider devRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+                if (!beastHuntDef.Completed(compLycanthrope))
+                {
+                    if (Widgets.ButtonImage(devRect.NewCol(devRect.Rect.height, HorizontalJustification.Right), TexButton.Plus, false, "Dev: instantly complete beast hunt"))
+                    {
+                        beastHuntDef.CompleteBeastHunt(compLycanthrope, pawn);
+                    }
+                }
+                else
+                {
+                    if (Widgets.ButtonImage(devRect.NewCol(devRect.Rect.height, HorizontalJustification.Right), TexButton.Minus, false, "Dev: reset beast hunt"))
+                    {
+                        compLycanthrope.beastHuntTracker.SetOrAdd(beastHuntDef, 0);
+                        compLycanthrope.completedBeastHunts--;
+                    }
+                }
+                
+            }
+
             if (beastHuntDef.extraTooltip !=  null)
             {
                 Widgets.ButtonImage(infoRect.NewCol(infoRect.Rect.height, HorizontalJustification.Right), TexButton.Info, false, beastHuntDef.extraTooltip);
