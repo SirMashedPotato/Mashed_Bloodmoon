@@ -7,7 +7,7 @@ A completely remade version of the original MorrowRim - Bloodmoon mod, made to a
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_HuntsmansMoon.png[/img]
 [quote] The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominous howling can be heard in the distance, growing ever closer. [/quote]
 
-Roughly every 30 days the Huntsman's Moon will rise, covering the world in an eerie red glow. During this time packs of feral werewolves will attack settlements, and ambush caravans. These feral werewolves can spread a disease called Sanies Lupinus, which if left untreated will eventually transition into dormant lycanthropy. Upon the next Huntsman's Moon the infected will experience their first transformation.
+[b]Roughly, and by roughly I mean at minimum,[/b] every 30 days the Huntsman's Moon will rise, covering the world in an eerie red glow. During this time packs of feral werewolves will attack settlements, and ambush caravans. These feral werewolves can spread a disease called Sanies Lupinus, which if left untreated will eventually transition into dormant lycanthropy. Upon the next Huntsman's Moon the infected will experience their first transformation.
 
 The time between attacks, and the strength of attacks, can be modified in the mod settings menu.
 [hr][/hr]
@@ -94,7 +94,7 @@ How much stress a lycanthrope can withstand can be increased through eating the 
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Questions.png[/img]
 Q: CE?
-A: I don't patch for CE, maybe it works, maybe it doesn't.
+A: I don't patch for CE, and parts of the mod may not function properly until it is patched.
 
 Q: 1.5?
 A: There is a 1.5 release available on my GitHub. It is an older build, and is provided as is.
