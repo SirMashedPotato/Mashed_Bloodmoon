@@ -375,6 +375,7 @@
 				<gameConditions>
 					<li>Eclipse</li>
 					<li>Mashed_Bloodmoon_HuntsmansMoon</li>
+					<li MayRequire="vanillaracesexpanded.sanguophage">VRE_BloodMoonCondition</li>
 				</gameConditions>
 				<beastHuntDef>Mashed_Bloodmoon_MoonVeilProficiency</beastHuntDef>
 			</li>
