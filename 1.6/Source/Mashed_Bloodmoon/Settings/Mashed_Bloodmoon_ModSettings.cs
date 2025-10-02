@@ -31,8 +31,11 @@ namespace Mashed_Bloodmoon
         public static bool Lycanthropy_SlavesTransformOnDamage => _instance.Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage;
         public static bool Lycanthropy_PrisonersHideGizmo => _instance.Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo;
         public static bool Lycanthropy_SlavesHideGizmo => _instance.Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo;
-        public static int Lycanthropy_ConsumedHearMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
         public static BeastFormScalingMode Lycanthropy_TextureScalingMode => _instance.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode;
+
+        //Cheats
+        public static bool Lycanthropy_EnableRestlessSleep => _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep;
+        public static int Lycanthropy_ConsumedHearMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
 
 
         /* ==========[VARIABLES]========== */
@@ -53,14 +56,17 @@ namespace Mashed_Bloodmoon
         public bool Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage = Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def;
         public bool Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo = Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def;
         public bool Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo = Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo_def;
-        public int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
         public BeastFormScalingMode Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def;
+
+        //Cheats
+        public bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep = Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def;
+        public int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
 
         /* ==========[DEFAULTS]========== */
 
         // Huntsman's Moon
         private static readonly bool Mashed_Bloodmoon_HuntsmanMoon_EnableCondition_def = true;
-        private static readonly IntRange Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks_def = new IntRange(4, 7);
+        private static readonly IntRange Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks_def = new IntRange(6, 9);
         private static readonly float Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier_def = 1f;
         private static readonly float Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier_def = 1f;
         private static readonly float Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier_def = 1f;
@@ -74,8 +80,11 @@ namespace Mashed_Bloodmoon
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo_def = true;
-        private static readonly int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def = 1;
         private static readonly BeastFormScalingMode Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def = BeastFormScalingMode.DrawSize;
+
+        //Cheats
+        private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def = false;
+        private static readonly int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def = 1;
 
         /* ==========[SAVING]========== */
 
@@ -97,8 +106,11 @@ namespace Mashed_Bloodmoon
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage, "Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage", Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo, "Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo", Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo, "Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo", Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo_def);
-            Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, "Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier", Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_TextureScalingMode, "Mashed_Bloodmoon_Lycanthropy_TextureScalingMode", Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def);
+
+            /* Cheats */
+            Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep, "Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep", Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def);
+            Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, "Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier", Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def);
 
             base.ExposeData();
         }
@@ -123,8 +135,11 @@ namespace Mashed_Bloodmoon
             _instance.Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage = Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo = Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo = Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo_def;
-            _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def;
+
+            // Cheats
+            _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep = Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def;
+            _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
         }
     }
 }

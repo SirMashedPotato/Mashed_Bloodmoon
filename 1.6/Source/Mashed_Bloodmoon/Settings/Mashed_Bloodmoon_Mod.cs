@@ -20,7 +20,8 @@ namespace Mashed_Bloodmoon
         private enum SettingsTab : byte
         {
             HuntsmansMoon,
-            Lycanthropy
+            Lycanthropy,
+            Cheats
         }
 
         private void ReadySettingsTabs()
@@ -34,6 +35,11 @@ namespace Mashed_Bloodmoon
             {
                 curTab = SettingsTab.Lycanthropy;
             }, () => curTab == SettingsTab.Lycanthropy));
+
+            tabs.Add(new TabRecord("Mashed_Bloodmoon_Cheats_Tab".Translate(), delegate
+            {
+                curTab = SettingsTab.Cheats;
+            }, () => curTab == SettingsTab.Cheats));
         }
 
         private readonly List<TabRecord> tabs = new List<TabRecord>();
@@ -63,6 +69,10 @@ namespace Mashed_Bloodmoon
                 case SettingsTab.Lycanthropy:
                     DoSettingsTabContents_Lycanthropy(listing_Standard);
                     break;
+
+                case SettingsTab.Cheats:
+                    DoSettingsTabContents_Cheats(listing_Standard);
+                    break;
             }
 
             listing_Standard.End();
@@ -74,7 +84,7 @@ namespace Mashed_Bloodmoon
 
             base.DoSettingsWindowContents(inRect);
         }
-    
+
         public void DoSettingsTabContents_HuntsmansMoon(Listing_Standard listing_Standard)
         {
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_HuntsmanMoon_EnableCondition".Translate(), ref settings.Mashed_Bloodmoon_HuntsmanMoon_EnableCondition);
@@ -103,9 +113,6 @@ namespace Mashed_Bloodmoon
 
         public void DoSettingsTabContents_Lycanthropy(Listing_Standard listing_Standard)
         {
-            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
-            settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = (int)listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, 1, 10);
-
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo, "Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc".Translate());
             listing_Standard.Gap();
 
@@ -117,7 +124,7 @@ namespace Mashed_Bloodmoon
 
             listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_TextureScalingMode".Translate());
 
-            if (listing_Standard.RadioButton("Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize".Translate(), 
+            if (listing_Standard.RadioButton("Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize".Translate(),
                 settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode == BeastFormScalingMode.BodySize, tooltip: "Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc".Translate()))
             {
                 settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = BeastFormScalingMode.BodySize;
@@ -148,6 +155,18 @@ namespace Mashed_Bloodmoon
                 listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage);
                 listing_Standard.Gap();
             }
+
+            listing_Standard.Gap();
+            listing_Standard.GapLine();
+        }
+
+        public void DoSettingsTabContents_Cheats(Listing_Standard listing_Standard)
+        {
+            listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep);
+            listing_Standard.Gap();
+
+            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
+            settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = (int)listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, 1, 10);
 
             listing_Standard.Gap();
             listing_Standard.GapLine();

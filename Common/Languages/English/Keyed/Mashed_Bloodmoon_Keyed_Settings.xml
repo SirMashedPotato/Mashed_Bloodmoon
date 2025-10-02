@@ -21,10 +21,13 @@
 	<Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>Hide the transform gizmo for colony slaves</Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>
 	<Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>Prisoners can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>
 	<Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>Slaves can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>
-	<Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>Multiplier for the number of consumed hearts gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>
 	<Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>Beast form texture scaling mode:</Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize> • Pawn body size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize> • Pawn draw size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>Scale the beast form textures based on the pawns body size. This will scale the size correctly for body size genes, but may result in incorrect scaling for HAR races.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>Scale the beast form textures based on the pawns draw size. This will scale the size correctly for HAR races, but will not scale it at all for genes.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>
+	<!-- ==========[Cheats]==========-->
+	<Mashed_Bloodmoon_Cheats_Tab>Cheats</Mashed_Bloodmoon_Cheats_Tab>
+	<Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>Disable the restless sleep thought replacer</Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>
+	<Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>Multiplier for the number of consumed hearts gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>
 </LanguageData>

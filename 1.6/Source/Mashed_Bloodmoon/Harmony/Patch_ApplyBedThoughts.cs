@@ -15,6 +15,11 @@ namespace Mashed_Bloodmoon
         {
             if (LycanthropeUtility.PawnIsLycanthrope(actor))
             {
+                if (!Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableRestlessSleep)
+                {
+                    return;
+                }
+
                 if (actor.needs.mood == null)
                 {
                     return;

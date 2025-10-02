@@ -8,6 +8,8 @@ namespace Mashed_Bloodmoon
 {
     internal static class WerewolfUtility
     {
+        private const int RaidPointsCap = 10000;
+
         internal static Faction GetFeralWerewolfFaction()
         {
             return FactionUtility.DefaultFactionFrom(FactionDefOf.Mashed_Bloodmoon_FeralWerewolves);
@@ -61,9 +63,9 @@ namespace Mashed_Bloodmoon
                 finalPoints = 200;
             }
 
-            if (initialPoints > 10000 && !Mashed_Bloodmoon_ModSettings.HuntsmanMoon_UncapRaidPoints)
+            if (initialPoints > RaidPointsCap && !Mashed_Bloodmoon_ModSettings.HuntsmanMoon_UncapRaidPoints)
             {
-                finalPoints = 10000;
+                finalPoints = RaidPointsCap;
             }
 
             return finalPoints;
