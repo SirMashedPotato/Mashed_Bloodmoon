@@ -20,10 +20,8 @@
 			<Mass>0.5</Mass>
 		</statBases>
 		<resourceReadoutPriority>Middle</resourceReadoutPriority>
-		<stackLimit>1</stackLimit>
-		<tradeNeverStack>true</tradeNeverStack>
+		<stackLimit>10</stackLimit>
 		<useHitPoints>true</useHitPoints>
-		<drawGUIOverlay>false</drawGUIOverlay>
 		<tradeability>All</tradeability>
 	</ThingDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemBase]==========-->
