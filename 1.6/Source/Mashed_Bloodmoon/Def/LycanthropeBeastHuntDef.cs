@@ -114,7 +114,7 @@ namespace Mashed_Bloodmoon
 
         private void BeastHuntComplete(HediffComp_Lycanthrope compLycanthrope, Pawn pawn)
         {
-            compLycanthrope.completedBeastHunts++;
+            compLycanthrope.completedBeastHuntsCount++;
 
             if (!completionWorkers.NullOrEmpty())
             {

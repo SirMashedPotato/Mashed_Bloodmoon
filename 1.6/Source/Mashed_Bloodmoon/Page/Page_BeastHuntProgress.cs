@@ -1,8 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 
@@ -59,7 +57,7 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHunts));
+            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHuntsCount));
 
             if (DebugSettings.ShowDevGizmos)
             {
@@ -86,7 +84,7 @@ namespace Mashed_Bloodmoon
 
         private void RecalculateBeastHuntTHought()
         {
-            compLycanthrope.completedBeastHunts = compLycanthrope.beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
+            compLycanthrope.completedBeastHuntsCount = compLycanthrope.beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
         }
 
         public void DoBeastHuntGrid(Rect inRect, List<LycanthropeBeastHuntDef> beastHuntList)
@@ -189,7 +187,7 @@ namespace Mashed_Bloodmoon
                     if (Widgets.ButtonImage(devRect.NewCol(devRect.Rect.height, HorizontalJustification.Right), TexButton.Minus, false, "Dev: reset beast hunt"))
                     {
                         compLycanthrope.beastHuntTracker.SetOrAdd(beastHuntDef, 0);
-                        compLycanthrope.completedBeastHunts--;
+                        compLycanthrope.completedBeastHuntsCount--;
                     }
                 }
                 

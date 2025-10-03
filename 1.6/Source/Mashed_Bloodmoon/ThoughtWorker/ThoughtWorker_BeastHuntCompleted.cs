@@ -23,7 +23,7 @@ namespace Mashed_Bloodmoon
 
         public int CompletedCount(Pawn p)
         {
-            return LycanthropeUtility.GetCompLycanthrope(p).completedBeastHunts;
+            return LycanthropeUtility.GetCompLycanthrope(p).completedBeastHuntsCount;
         }
     }
 }

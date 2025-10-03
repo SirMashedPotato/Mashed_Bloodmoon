@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
         public override AcceptanceReport PawnRequirementsMet(Pawn pawn)
         {
             HediffComp_Lycanthrope compLycanthrope = LycanthropeUtility.GetCompLycanthrope(pawn);
-            if (compLycanthrope.completedBeastHunts >= requiredCount)
+            if (compLycanthrope.completedBeastHuntsCount >= requiredCount)
             {
                 return true;
             }

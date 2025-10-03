@@ -23,7 +23,7 @@ namespace Mashed_Bloodmoon
         public Dictionary<LycanthropeTotemDef, int> usedTotemTracker = new Dictionary<LycanthropeTotemDef, int>();
         // The int is the progress towards the beast hunt
         public Dictionary<LycanthropeBeastHuntDef, int> beastHuntTracker = new Dictionary<LycanthropeBeastHuntDef, int>();
-        public int completedBeastHunts = 0;
+        public int completedBeastHuntsCount = 0;
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
 
@@ -67,7 +67,7 @@ namespace Mashed_Bloodmoon
                 unlockedClawTracker = otherLycanthrope.unlockedClawTracker;
                 usedTotemTracker = otherLycanthrope.usedTotemTracker;
                 beastHuntTracker = otherLycanthrope.beastHuntTracker;
-                completedBeastHunts = otherLycanthrope.completedBeastHunts;
+                completedBeastHuntsCount = otherLycanthrope.completedBeastHuntsCount;
             }
         }
 
@@ -312,7 +312,7 @@ namespace Mashed_Bloodmoon
             Scribe_Collections.Look(ref unlockedClawTracker, "unlockedClawTracker", LookMode.Def);
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref beastHuntTracker, "beastHuntTracker", LookMode.Def);
-            Scribe_Values.Look(ref completedBeastHunts, "completedBeastHunts", 0);
+            Scribe_Values.Look(ref completedBeastHuntsCount, "completedBeastHunts", 0);
         }
     }
 }
