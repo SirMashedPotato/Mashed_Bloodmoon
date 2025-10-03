@@ -154,11 +154,6 @@ namespace Mashed_Bloodmoon
             Texture2D heartTex = ContentFinder<Texture2D>.Get(beastHuntDef.heartTexPath);
             GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit);
 
-            if (Widgets.ButtonInvisible(heartRect, false))
-            {
-                DoHeartClickAction(beastHuntDef);
-            }
-
             RectDivider rectDivider = new RectDivider(mainRect.ContractedBy(Assets.RectPadding / 2f), mainRect.GetHashCode(), null);
             RectDivider infoRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Bottom);
 
@@ -204,9 +199,15 @@ namespace Mashed_Bloodmoon
             {
                 Widgets.ButtonImage(infoRect.NewCol(infoRect.Rect.height, HorizontalJustification.Right), TexButton.Info, false, beastHuntDef.extraTooltip);
             }
+
+            //Last to ensure other stuff can be clicked if needed
+            if (Widgets.ButtonInvisible(heartRect, false))
+            {
+                DoHeartClickAction(beastHuntDef);
+            }
         }
 
-        public void DoHeartClickAction(LycanthropeBeastHuntDef beastHuntDef)
+        private void DoHeartClickAction(LycanthropeBeastHuntDef beastHuntDef)
         {
             if (beastHuntDef.IsHidden(compLycanthrope) || beastHuntDef.AnomalyIsHidden())
             {
