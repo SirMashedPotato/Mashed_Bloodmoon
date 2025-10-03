@@ -9,6 +9,7 @@ namespace Mashed_Bloodmoon
         public BeastHuntType beastHuntType = BeastHuntType.Heart;
         public ThingDef targetThingDef;
         public PawnKindDef targetKindDef;
+        public XenotypeDef targetXenotypeDef;
         public int targetCount = 1;
         public bool startHidden = false;
         public int anomalyLevelToReveal = 0;

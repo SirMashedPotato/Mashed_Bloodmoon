@@ -76,9 +76,10 @@ namespace Mashed_Bloodmoon
         internal static void ProgressBeastHunts(Pawn parent, Pawn victim, BeastHuntType beastHuntType)
         {
             List<LycanthropeBeastHuntDef> beastHuntList = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == beastHuntType
-                && ((x.targetThingDef == null && x.targetKindDef == null) 
+                && ((x.targetThingDef == null && x.targetKindDef == null && x.targetXenotypeDef == null) 
                 || x.targetThingDef == victim.def 
-                || x.targetKindDef == victim.kindDef)).ToList();
+                || x.targetKindDef == victim.kindDef
+                || (victim.genes != null && x.targetXenotypeDef == victim.genes.Xenotype))).ToList();
             if (beastHuntList.NullOrEmpty())
             {
                 return;
