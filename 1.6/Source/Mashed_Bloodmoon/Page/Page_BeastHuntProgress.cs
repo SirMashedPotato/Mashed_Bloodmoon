@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
 
@@ -153,6 +154,11 @@ namespace Mashed_Bloodmoon
             Texture2D heartTex = ContentFinder<Texture2D>.Get(beastHuntDef.heartTexPath);
             GUI.DrawTexture(heartRect, heartTex, ScaleMode.ScaleToFit);
 
+            if (Widgets.ButtonInvisible(heartRect, false))
+            {
+                DoHeartClickAction(beastHuntDef);
+            }
+
             RectDivider rectDivider = new RectDivider(mainRect.ContractedBy(Assets.RectPadding / 2f), mainRect.GetHashCode(), null);
             RectDivider infoRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Bottom);
 
@@ -198,6 +204,24 @@ namespace Mashed_Bloodmoon
             {
                 Widgets.ButtonImage(infoRect.NewCol(infoRect.Rect.height, HorizontalJustification.Right), TexButton.Info, false, beastHuntDef.extraTooltip);
             }
+        }
+
+        public void DoHeartClickAction(LycanthropeBeastHuntDef beastHuntDef)
+        {
+            if (beastHuntDef.IsHidden(compLycanthrope) || beastHuntDef.AnomalyIsHidden())
+            {
+                return;
+            }
+
+            Def targetDef = beastHuntDef.targetKindDef ?? (Def)beastHuntDef.targetThingDef ?? beastHuntDef.targetXenotypeDef;
+
+            if (targetDef == null)
+            {
+                return;
+            }
+
+            Dialog_InfoCard dialog_InfoCard = new Dialog_InfoCard(targetDef);
+            Find.WindowStack.Add(dialog_InfoCard);
         }
 
         public void DoCellGridLowerRect(Rect inRect, LycanthropeBeastHuntDef beastHuntDef)

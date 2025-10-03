@@ -43,7 +43,7 @@
 	<Mashed_Bloodmoon_UpgradeTab_Claws>Beast Form Claws</Mashed_Bloodmoon_UpgradeTab_Claws>
 	<Mashed_Bloodmoon_UpgradeTab_Totems>Totems</Mashed_Bloodmoon_UpgradeTab_Totems>
 	<!-- ==========[Beast hunt page]==========-->
-	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.\n\nCompleted beast hunts: {1}</Mashed_Bloodmoon_BeastHuntDesc>
+	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.\n\nHint: You can click on the hearts to view information about the target.\n\nCompleted beast hunts: {1}</Mashed_Bloodmoon_BeastHuntDesc>
 	<Mashed_Bloodmoon_BeastHuntHidden>Hidden</Mashed_Bloodmoon_BeastHuntHidden>
 	<Mashed_Bloodmoon_BeastHuntHiddenDesc>Progress this beast hunt to reveal it.</Mashed_Bloodmoon_BeastHuntHiddenDesc>
 	<Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>Reach monolith level {0} to reveal it.</Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>
