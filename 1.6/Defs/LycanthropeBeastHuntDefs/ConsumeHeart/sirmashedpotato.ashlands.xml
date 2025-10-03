@@ -4,7 +4,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Daedroth</defName>
 		<label>beast hunt: Daedroth</label>
-		<description>Consume the heart of a daedroth.</description>
+		<description>Consume the heart of a vagrant daedroth.</description>
 		<targetThingDef>Mashed_Ashlands_Daedroth</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
@@ -12,7 +12,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sirmashedpotato.ashlands">
 		<defName>Mashed_Bloodmoon_Ogrim</defName>
 		<label>beast hunt: Ogrim</label>
-		<description>Consume the heart of an ogrim.</description>
+		<description>Consume the heart of an vagrant ogrim.</description>
 		<targetThingDef>Mashed_Ashlands_Ogrim</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
