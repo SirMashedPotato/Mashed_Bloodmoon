@@ -80,7 +80,7 @@ namespace Mashed_Bloodmoon
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo_def = true;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo_def = true;
-        private static readonly BeastFormScalingMode Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def = BeastFormScalingMode.DrawSize;
+        private static readonly BeastFormScalingMode Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def = BeastFormScalingMode.BodySize;
 
         //Cheats
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def = false;
