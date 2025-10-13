@@ -202,7 +202,7 @@ namespace Mashed_Bloodmoon
                 }
             }
 
-            int fatigueDuration = CurrentFatigueDuration();
+            int fatigueDuration = (int)(CurrentFatigueDuration() * Mashed_Bloodmoon_ModSettings.Lycanthropy_FatigueDurationMultiplier);
             if (inFury)
             {
                 fatigueDuration *= 2;

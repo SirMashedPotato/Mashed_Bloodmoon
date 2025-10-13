@@ -30,4 +30,5 @@
 	<Mashed_Bloodmoon_Cheats_Tab>Cheats</Mashed_Bloodmoon_Cheats_Tab>
 	<Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>Disable the restless sleep thought replacer</Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>
 	<Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>Multiplier for the number of consumed hearts gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>
+	<Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier>Multiplier for the duration a lycanthrope is fatigued for after ending a transformation ({0}%)</Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier>
 </LanguageData>

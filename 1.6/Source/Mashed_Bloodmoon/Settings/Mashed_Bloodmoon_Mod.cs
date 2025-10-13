@@ -168,6 +168,9 @@ namespace Mashed_Bloodmoon
             listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
             settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = (int)listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, 1, 10);
 
+            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier * 100));
+            settings.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier = (float)Math.Round(listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier, 0.1f, 1f) * 10) / 10;
+
             listing_Standard.Gap();
             listing_Standard.GapLine();
         }

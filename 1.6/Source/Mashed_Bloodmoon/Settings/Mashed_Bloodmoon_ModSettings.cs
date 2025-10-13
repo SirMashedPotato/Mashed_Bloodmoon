@@ -36,6 +36,7 @@ namespace Mashed_Bloodmoon
         //Cheats
         public static bool Lycanthropy_EnableRestlessSleep => _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep;
         public static int Lycanthropy_ConsumedHearMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
+        public static float Lycanthropy_FatigueDurationMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier;
 
 
         /* ==========[VARIABLES]========== */
@@ -61,6 +62,7 @@ namespace Mashed_Bloodmoon
         //Cheats
         public bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep = Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def;
         public int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
+        public float Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier = Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def;
 
         /* ==========[DEFAULTS]========== */
 
@@ -85,6 +87,7 @@ namespace Mashed_Bloodmoon
         //Cheats
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def = false;
         private static readonly int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def = 1;
+        private static readonly float Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def = 1f;
 
         /* ==========[SAVING]========== */
 
@@ -111,6 +114,7 @@ namespace Mashed_Bloodmoon
             /* Cheats */
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep, "Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep", Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, "Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier", Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def);
+            Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier, "Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier", Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def);
 
             base.ExposeData();
         }
@@ -140,6 +144,7 @@ namespace Mashed_Bloodmoon
             // Cheats
             _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep = Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
+            _instance.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier = Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def;
         }
     }
 }
