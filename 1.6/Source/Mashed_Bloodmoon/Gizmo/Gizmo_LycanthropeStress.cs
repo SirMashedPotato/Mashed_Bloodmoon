@@ -6,41 +6,54 @@ namespace Mashed_Bloodmoon
 {
     [StaticConstructorOnStartup]
 
-    public class Gizmo_LycanthropeStress : Gizmo
+    public class Gizmo_LycanthropeStress : Gizmo_Slider
     {
-        public override float GetWidth(float maxWidth)
-        {
-            return 140f;
-        }
+        public HediffComp_LycanthropeTransformed transformedComp;
+        private static bool draggingBar;
+        private static float targetStress;
 
         public Gizmo_LycanthropeStress(HediffComp_LycanthropeTransformed comp)
         {
             transformedComp = comp;
+            targetStress = transformedComp.StressMax;
         }
 
-        public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
+        protected override Color BarColor => new Color(0.7f, 0.3f, 0.3f);
+
+        protected override Color BarHighlightColor => new Color(0.8f, 0.4f, 0.4f);
+
+        protected override string BarLabel => transformedComp.currentStress + "/" + transformedComp.StressMax;
+
+        protected override bool IsDraggable => false;
+
+        protected override float Target
         {
-            Rect rect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
-            Rect rect2 = rect.ContractedBy(6f);
-            Widgets.DrawWindowBackground(rect);
-            Rect rect3 = rect2;
-            rect3.height = rect.height / 2f;
-            Text.Font = GameFont.Tiny;
-            Widgets.Label(rect3, "Mashed_Bloodmoon_LycanthropeStressGizmo_Label".Translate());
-            Rect rect4 = rect2;
-            rect4.yMin = rect2.y + rect2.height / 2f;
-            float fillPercent = transformedComp.currentStress / Mathf.Max(1f, transformedComp.StressMax);
-            Widgets.FillableBar(rect4, fillPercent, FullBarTex, EmptyBarTex, false);
-            Text.Font = GameFont.Small;
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(rect4, transformedComp.currentStress + "/" + transformedComp.StressMax);
-            Text.Anchor = TextAnchor.UpperLeft;
-            TooltipHandler.TipRegion(rect2, "Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip".Translate(transformedComp.parent.pawn));
-            return new GizmoResult(GizmoState.Clear);
+            get
+            {
+                return targetStress;
+            }
+            set
+            {
+                targetStress = value;
+            }
         }
 
-        public HediffComp_LycanthropeTransformed transformedComp;
-        private static readonly Texture2D FullBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.7f, 0.3f, 0.3f));
-        private static readonly Texture2D EmptyBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
+        protected override float ValuePercent => transformedComp.currentStress / Mathf.Max(1f, transformedComp.StressMax);
+
+        protected override string Title => "Mashed_Bloodmoon_LycanthropeStressGizmo_Label".Translate();
+
+        protected override bool DraggingBar
+        {
+            get
+            {
+                return draggingBar;
+            }
+            set
+            {
+                draggingBar = value;
+            }
+        }
+
+        protected override string GetTooltip() => "Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip".Translate(transformedComp.parent.pawn);
     }
 }

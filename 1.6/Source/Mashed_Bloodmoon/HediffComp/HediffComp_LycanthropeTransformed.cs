@@ -95,6 +95,7 @@ namespace Mashed_Bloodmoon
                         if (inFury)
                         {
                             currentStress += StressGain <= 0 ? 2 : StressGain * 2;
+                            return;
                         }
                         else
                         {
