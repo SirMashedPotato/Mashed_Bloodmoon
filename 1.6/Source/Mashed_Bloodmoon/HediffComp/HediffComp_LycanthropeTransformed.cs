@@ -62,7 +62,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks);
+        public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks * Mashed_Bloodmoon_ModSettings.Lycanthropy_FatigueDurationMultiplier);
 
         public float CurrentTransformedDuration() => currentStress * LycanthropeUtility.lycanthropeStressRate;
 
@@ -203,7 +203,7 @@ namespace Mashed_Bloodmoon
                 }
             }
 
-            int fatigueDuration = (int)(CurrentFatigueDuration() * Mashed_Bloodmoon_ModSettings.Lycanthropy_FatigueDurationMultiplier);
+            int fatigueDuration = (int)(CurrentFatigueDuration());
             if (inFury)
             {
                 fatigueDuration *= 2;

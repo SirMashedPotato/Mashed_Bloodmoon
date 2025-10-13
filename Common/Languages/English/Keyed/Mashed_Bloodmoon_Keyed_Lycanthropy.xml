@@ -8,7 +8,7 @@
 	<Mashed_Bloodmoon_TransformBeast_Desc>Transform {0_labelShort} into their beast form. Lycanthrope stress will accumulate during this transformation, which will be converted into lycanthrope fatigue once the transformation ends. If lycanthrope stress reaches 100%, {0_labelShort} will enter a rage state.\n\nMaximum transformation duration: {1}</Mashed_Bloodmoon_TransformBeast_Desc>
 	<!-- ==========[lycanthrope stress gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
-	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: 10 per hour</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
+	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: {1} per hour\nMaximum transformed duration: {2}\nCurrent exhuastion duration: {3}</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
 	<!-- ==========[lycanthrope options gizmo]==========-->
 	<Mashed_Bloodmoon_LycanthropeOptions_Label>lycanthrope options</Mashed_Bloodmoon_LycanthropeOptions_Label>
 	<Mashed_Bloodmoon_LycanthropeOptions_Desc>Access several options, such as customising and upgrading {0_labelShort}'s' beast form.</Mashed_Bloodmoon_LycanthropeOptions_Desc>

@@ -54,6 +54,9 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        protected override string GetTooltip() => "Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip".Translate(transformedComp.parent.pawn);
+        protected override string GetTooltip() => "Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip".Translate(transformedComp.parent.pawn, 
+            transformedComp.StressGain * LycanthropeUtility.stressTicksPerHour,
+            ((transformedComp.StressMax * transformedComp.StressGain) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod(),
+            transformedComp.CurrentFatigueDuration().ToStringTicksToPeriod());
     }
 }

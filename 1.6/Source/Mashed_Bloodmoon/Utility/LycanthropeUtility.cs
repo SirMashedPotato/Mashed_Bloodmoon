@@ -7,8 +7,9 @@ namespace Mashed_Bloodmoon
 {
     internal static class LycanthropeUtility
     {
+        internal const int stressTicksPerHour = 10;
         internal const float lycanthropeStressToTicks = GenDate.TicksPerHour * 0.3f;
-        internal const int lycanthropeStressRate = GenDate.TicksPerHour / 10;
+        internal const int lycanthropeStressRate = GenDate.TicksPerHour / stressTicksPerHour;
         internal const float totemTransferPercent = 0.3f;
 
         internal static bool IsNight(Pawn pawn)
