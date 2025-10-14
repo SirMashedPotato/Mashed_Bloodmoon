@@ -24,8 +24,10 @@
 	<Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>Beast form texture scaling mode:</Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize> • Pawn body size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize> • Pawn draw size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmall> • Adaptive Big and Small</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmall>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>Scale the beast form textures based on the pawns body size. This will scale the size correctly for body size genes, but may result in incorrect scaling for HAR races.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>Scale the beast form textures based on the pawns draw size. This will scale the size correctly for HAR races, but will not scale it at all for genes.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc>Scale the beast form textures based on the pawns draw size if they have a Big and Small body size gene, otherwise scale based on the pawns draw size. This will scale the size correctly for HAR races, as well as Big and Small body size genes.\n\nObviously this would require Big and Small - Genes &amp; More to be enabled to actually work properly.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc>
 	<!-- ==========[Cheats]==========-->
 	<Mashed_Bloodmoon_Cheats_Tab>Cheats</Mashed_Bloodmoon_Cheats_Tab>
 	<Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>Disable the restless sleep thought replacer</Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>

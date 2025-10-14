@@ -3,6 +3,7 @@
     public enum BeastFormScalingMode
     {
         BodySize,
-        DrawSize
+        DrawSize,
+        BigAndSmall
     }
 }

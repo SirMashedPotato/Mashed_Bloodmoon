@@ -135,6 +135,13 @@ namespace Mashed_Bloodmoon
             {
                 settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = BeastFormScalingMode.DrawSize;
             }
+
+            if (listing_Standard.RadioButton("Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmall".Translate(),
+                settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode == BeastFormScalingMode.BigAndSmall, tooltip: "Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc".Translate()))
+            {
+                settings.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = BeastFormScalingMode.BigAndSmall;
+            }
+            
             listing_Standard.Gap();
 
             listing_Standard.Gap();
