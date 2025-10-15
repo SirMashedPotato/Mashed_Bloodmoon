@@ -63,7 +63,7 @@ namespace Mashed_Bloodmoon
                 descriptionRect.width = descriptionRect.height;
                 descriptionRect.y += mainRect.height - descriptionRect.height;
                 descriptionRect.x += mainRect.width - descriptionRect.width;
-                Widgets.ButtonImage(descriptionRect, TexButton.Info, true, acceptanceReport.Reason.CapitalizeFirst());
+                PageUtility.InfoButton(descriptionRect, acceptanceReport.Reason.CapitalizeFirst());
                 return;
             }
             else

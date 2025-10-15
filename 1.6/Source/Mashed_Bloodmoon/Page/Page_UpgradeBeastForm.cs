@@ -86,8 +86,8 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate().Resolve());
-            Widgets.ButtonImage(new Rect(inRect.width - (60f + Assets.RectPadding), 0f, 30f, 30f), TexButton.CategorizedResourceReadout, false, EffectsTooltip());
+            PageUtility.InfoButton(new Rect(inRect.width - 30f, 0f, 30f, 30f), "Mashed_Bloodmoon_UpgradeBeastFormDesc".Translate().Resolve());
+            PageUtility.InfoButton(new Rect(inRect.width - (60f + Assets.RectPadding), 0f, 30f, 30f), TexButton.CategorizedResourceReadout, EffectsTooltip());
 
             inRect.yMin += rectLimitY;
             Rect consumedHeartsRect = inRect;

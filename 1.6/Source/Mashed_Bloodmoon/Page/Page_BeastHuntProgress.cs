@@ -57,7 +57,7 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Info, false, "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHuntsCount));
+            PageUtility.InfoButton(new Rect(inRect.width - 30f, 0f, 30f, 30f), "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHuntsCount));
 
             if (DebugSettings.ShowDevGizmos)
             {
@@ -195,7 +195,7 @@ namespace Mashed_Bloodmoon
 
             if (beastHuntDef.extraTooltip !=  null)
             {
-                Widgets.ButtonImage(infoRect.NewCol(infoRect.Rect.height, HorizontalJustification.Right), TexButton.Info, false, beastHuntDef.extraTooltip);
+                PageUtility.InfoButton(ref infoRect, beastHuntDef.extraTooltip);
             }
 
             //Last to ensure other stuff can be clicked if needed

@@ -132,6 +132,7 @@
     <Compile Include="DefOf\LycanthropeTotemDefOf.cs" />
     <Compile Include="DefOf\TraitDefOf.cs" />
     <Compile Include="Designator\Designator_ConsumeHeart.cs" />
+    <Compile Include="Dialog\Dialog_InfoButtonPopup.cs" />
     <Compile Include="Enum\BeastHuntType.cs" />
     <Compile Include="Def\LycanthropeBeastHuntDef.cs" />
     <Compile Include="Def\LycanthropeAbilityDef.cs" />
