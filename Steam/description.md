@@ -93,6 +93,9 @@ How much stress a lycanthrope can withstand can be increased through eating the 
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Showcase_Biotech.png[/img]
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Questions.png[/img]
+Q: I don't like-
+A: Mod settings menu.
+
 Q: CE?
 A: I don't patch for CE, and parts of the mod may not function properly until it is patched.
 
