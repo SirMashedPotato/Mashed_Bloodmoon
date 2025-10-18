@@ -16,6 +16,14 @@
 		<targetCount>3</targetCount>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Gulden</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_DALeviathanCrab]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
+		<defName>Mashed_Bloodmoon_DALeviathanCrab</defName>
+		<label>beast hunt: Leviathan Crab</label>
+		<description>Consume the heart of a leviathan crab.</description>
+		<targetThingDef>DA_LeviathanCrab</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Pale</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_DANorthernDrog]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
 		<defName>Mashed_Bloodmoon_DANorthernDrog</defName>
