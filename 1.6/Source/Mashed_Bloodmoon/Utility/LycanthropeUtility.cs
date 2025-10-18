@@ -58,17 +58,23 @@ namespace Mashed_Bloodmoon
             if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
             {
                 int transferredTotemCount = 0;
+                Dictionary<LycanthropeTotemDef, int> gainedTotems = new Dictionary<LycanthropeTotemDef, int>();
                 foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
                 {
                     if (usedTotem.Key.canBeTransferred)
                     {
                         int count = (int)(usedTotem.Value * totemTransferPercent);
                         transferredTotemCount += count;
-                        usedTotem.Key.UseTotem(pawn, count);
+                        gainedTotems.Add(usedTotem.Key, count);
                     }
                 }
+
                 if (transferredTotemCount > 0)
                 {
+                    foreach (KeyValuePair<LycanthropeTotemDef, int> gainedTotem in gainedTotems)
+                    {
+                        gainedTotem.Key.UseTotem(pawn, gainedTotem.Value, false);
+                    }
                     Messages.Message("Mashed_Bloodmoon_ConsumedTotemsTransferred".Translate(pawn, transferredTotemCount, victim), pawn, MessageTypeDefOf.PositiveEvent);
                 }
             }
