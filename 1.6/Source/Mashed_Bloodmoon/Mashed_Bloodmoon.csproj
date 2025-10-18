@@ -144,6 +144,7 @@
     <Compile Include="DefOf\PawnCapacityDefOf.cs" />
     <Compile Include="Def\LycanthropeTotemDef.cs" />
     <Compile Include="DefOf\PawnKindDefOf.cs" />
+    <Compile Include="FocusStrengthOffset\FocusStrengthOffset_WolfsbloodAltar.cs" />
     <Compile Include="GameCondition\GameCondition_Bloodmoon.cs" />
     <Compile Include="GameCondition\GameCondition_HuntsmansMoon.cs" />
     <Compile Include="GameCondition\GameCondition_HuntsmansMoonPrecursor.cs" />

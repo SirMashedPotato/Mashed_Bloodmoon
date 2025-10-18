@@ -25,6 +25,7 @@
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
 			<WorkToBuild>800</WorkToBuild>
+			<MeditationFocusStrength>0.06</MeditationFocusStrength>
 		</statBases>
 		<stuffCategories>
 			<li>Stony</li>
@@ -36,6 +37,18 @@
 			<li>Mashed_Bloodmoon_Wolfsblood</li>
 		</researchPrerequisites>
 		<comps>
+			<!-- Meditation -->
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Mashed_Bloodmoon_Lycanthropic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="Mashed_Bloodmoon.FocusStrengthOffset_WolfsbloodAltar">
+						<offsetPerFillLevel>0.03</offsetPerFillLevel>
+					</li>
+				</offsets>
+			</li>
 			<!-- Filling/Drinking -->
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
 				<compClass>Mashed_Bloodmoon.CompUsable_WolfsbloodAltarDrinkBlood</compClass>

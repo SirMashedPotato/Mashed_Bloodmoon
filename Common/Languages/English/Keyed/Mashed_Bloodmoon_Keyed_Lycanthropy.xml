@@ -98,6 +98,8 @@
 	<Mashed_Bloodmoon_AltarFillAmount>lycanthrope blood amount: {0}</Mashed_Bloodmoon_AltarFillAmount>
 	<Mashed_Bloodmoon_WolfsbloodAltarFull>{0} is full</Mashed_Bloodmoon_WolfsbloodAltarFull>
 	<Mashed_Bloodmoon_WolfsbloodAltarEmpty>{0} is empty</Mashed_Bloodmoon_WolfsbloodAltarEmpty>
+	<Mashed_Bloodmoon_StatsReport_WolfsbloodAltar>Lycanthrope blood amount ({0})</Mashed_Bloodmoon_StatsReport_WolfsbloodAltar>
+	<Mashed_Bloodmoon_StatsReport_WolfsbloodAltarAbstract>Per lycanthrope blood amount {0}: 0-{1}</Mashed_Bloodmoon_StatsReport_WolfsbloodAltarAbstract>
 	<!-- ==========[misc]==========-->
 	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>
 	<Mashed_Bloodmoon_RoleRequirement_Lycanthrope>must be a lycanthrope</Mashed_Bloodmoon_RoleRequirement_Lycanthrope>
