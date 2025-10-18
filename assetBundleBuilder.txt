@@ -1,1 +1,0 @@
-assetbundlebuilder "E:\Program Files (x86)\2022.3.35f1\Editor\Unity.exe" "J:\Modding\Github\Mashed_Bloodmoon\Resources" "sirmashedpotato.bloodmoon" "J:\Modding\Github\Mashed_Bloodmoon\Common\AssetBundles"

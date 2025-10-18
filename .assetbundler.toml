@@ -1,0 +1,10 @@
+[global]
+unity_version = "2022.3.35f1"
+unity_editor_path = "E:/Program Files (x86)/2022.3.35f1/Editor/Unity.exe"
+bundle_name = "sirmashedpotato.bloodmoon"
+asset_directory = "Resources/"
+output_directory = "Common/AssetBundles/"
+link_method = "junction"  # or "copy", "symlink", "hardlink"
+
+[bundles.core]
+bundle_name = "sirmashedpotato.bloodmoon"
