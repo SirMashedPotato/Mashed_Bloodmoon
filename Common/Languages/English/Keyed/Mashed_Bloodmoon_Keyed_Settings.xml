@@ -30,6 +30,7 @@
 	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc>Scale the beast form textures based on the pawns draw size if they have a Big and Small body size gene, otherwise scale based on the pawns draw size. This will scale the size correctly for HAR races, as well as Big and Small body size genes.\n\nObviously this would require Big and Small - Genes &amp; More to be enabled to actually work properly.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc>
 	<!-- ==========[Cheats]==========-->
 	<Mashed_Bloodmoon_Cheats_Tab>Cheats</Mashed_Bloodmoon_Cheats_Tab>
+	<Mashed_Bloodmoon_Lycanthropy_EnableInfection>Disable Sanies Lupinus infection from lycanthropes and feral werewolves</Mashed_Bloodmoon_Lycanthropy_EnableInfection>
 	<Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>Disable the restless sleep thought replacer</Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>
 	<Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>Multiplier for the number of consumed hearts gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>
 	<Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier>Multiplier for the duration a lycanthrope is fatigued for after ending a transformation ({0}%)</Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier>

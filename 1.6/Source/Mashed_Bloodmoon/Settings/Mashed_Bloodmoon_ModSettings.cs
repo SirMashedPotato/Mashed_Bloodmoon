@@ -34,9 +34,10 @@ namespace Mashed_Bloodmoon
         public static BeastFormScalingMode Lycanthropy_TextureScalingMode => _instance.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode;
 
         //Cheats
-        public static bool Lycanthropy_EnableRestlessSleep => _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep;
-        public static int Lycanthropy_ConsumedHearMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
-        public static float Lycanthropy_FatigueDurationMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier;
+        public static bool Cheat_DisableInfection => _instance.Mashed_Bloodmoon_Lycanthropy_EnableInfection;
+        public static bool Cheat_DisableRestlessSleep => _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep;
+        public static int Cheat_ConsumedHearMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
+        public static float Cheat_FatigueDurationMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier;
 
 
         /* ==========[VARIABLES]========== */
@@ -60,6 +61,7 @@ namespace Mashed_Bloodmoon
         public BeastFormScalingMode Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def;
 
         //Cheats
+        public bool Mashed_Bloodmoon_Lycanthropy_EnableInfection = Mashed_Bloodmoon_Lycanthropy_EnableInfection_def;
         public bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep = Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def;
         public int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
         public float Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier = Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def;
@@ -85,6 +87,7 @@ namespace Mashed_Bloodmoon
         private static readonly BeastFormScalingMode Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def = BeastFormScalingMode.BodySize;
 
         //Cheats
+        private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableInfection_def = false;
         private static readonly bool Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def = false;
         private static readonly int Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def = 1;
         private static readonly float Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def = 1f;
@@ -112,6 +115,7 @@ namespace Mashed_Bloodmoon
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_TextureScalingMode, "Mashed_Bloodmoon_Lycanthropy_TextureScalingMode", Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def);
 
             /* Cheats */
+            Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableInfection, "Mashed_Bloodmoon_Lycanthropy_EnableInfection", Mashed_Bloodmoon_Lycanthropy_EnableInfection_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep, "Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep", Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, "Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier", Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def);
             Scribe_Values.Look(ref Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier, "Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier", Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def);
@@ -142,6 +146,7 @@ namespace Mashed_Bloodmoon
             _instance.Mashed_Bloodmoon_Lycanthropy_TextureScalingMode = Mashed_Bloodmoon_Lycanthropy_TextureScalingMode_def;
 
             // Cheats
+            _instance.Mashed_Bloodmoon_Lycanthropy_EnableInfection = Mashed_Bloodmoon_Lycanthropy_EnableInfection_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep = Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier_def;
             _instance.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier = Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier_def;

@@ -8,6 +8,10 @@ namespace Mashed_Bloodmoon
     {
         internal static void ApplyLycanthropeDamage(Pawn pawn, float factor = 1f)
         {
+            if (Mashed_Bloodmoon_ModSettings.Cheat_DisableInfection)
+            {
+                return;
+            }
             if (pawn.RaceProps.Humanlike)
             {
                 float resistance = pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropyResistance);

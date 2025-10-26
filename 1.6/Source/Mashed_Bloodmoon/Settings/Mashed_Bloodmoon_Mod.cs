@@ -169,6 +169,9 @@ namespace Mashed_Bloodmoon
 
         public void DoSettingsTabContents_Cheats(Listing_Standard listing_Standard)
         {
+            listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableInfection".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableInfection);
+            listing_Standard.Gap();
+
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep);
             listing_Standard.Gap();
 

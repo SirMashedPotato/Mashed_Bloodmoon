@@ -62,7 +62,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks * Mashed_Bloodmoon_ModSettings.Lycanthropy_FatigueDurationMultiplier);
+        public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks * Mashed_Bloodmoon_ModSettings.Cheat_FatigueDurationMultiplier);
 
         public float CurrentTransformedDuration() => currentStress * LycanthropeUtility.lycanthropeStressRate;
 

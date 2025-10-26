@@ -10,7 +10,7 @@
 		<naturalGoodwillOffset>10</naturalGoodwillOffset>
 	</GoodwillSituationDef>
 	<!-- ==========[Mashed_Bloodmoon_Lycanthropy_Bloodfeeding]==========-->
-	<GoodwillSituationDef>
+	<GoodwillSituationDef MayRequire="ludeon.rimworld.biotech">
 		<defName>Mashed_Bloodmoon_Lycanthropy_Bloodfeeding</defName>
 		<label>lycanthropy vs bloodfeeding</label>
 		<workerClass>GoodwillSituationWorker_MemeCompatibility</workerClass>
