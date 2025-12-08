@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1148646759
+CRC: 120020211
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8ad7783cfff155e43c448e72d416c40c
+    Hash: a7af5a7017cb610a8833f9f77343665d
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 8ad7783cfff155e43c448e72d416c40c
+    Hash: a7af5a7017cb610a8833f9f77343665d
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -111,6 +111,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Mechanoid.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Plant/Mashed_Bloodmoon_WolfsbanePlant/Mashed_Bloodmoon_WolfsbanePlant_d.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Building/Misc/Mashed_Bloodmoon_WolfsbloodAltar/Mashed_Bloodmoon_WolfsbloodAltar_50.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Brass.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacyEyeGlow_east.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Abilities/Mashed_Bloodmoon_HuntsmansBounty.png
