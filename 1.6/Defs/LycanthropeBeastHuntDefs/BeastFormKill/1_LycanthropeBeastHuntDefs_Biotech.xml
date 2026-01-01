@@ -13,7 +13,7 @@
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
 		<defName>Mashed_Bloodmoon_WarQueen</defName>
 		<label>beast hunt: War Queen</label>
-		<description>Kill a war mechanoid queen while in beast form.</description>
+		<description>Kill a mechanoid war queen while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>Mech_Warqueen</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Mechanoid</heartTexPath>
@@ -21,8 +21,8 @@
 	<!-- ==========[Mashed_Bloodmoon_Apocitron]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
 		<defName>Mashed_Bloodmoon_Apocitron</defName>
-		<label>beast hunt: Apocitron</label>
-		<description>Kill a mechanoid apocitron while in beast form.</description>
+		<label>beast hunt: Apocriton</label>
+		<description>Kill a mechanoid apocriton while in beast form.</description>
 		<beastHuntType>Kill</beastHuntType>
 		<targetThingDef>Mech_Apocriton</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Mechanoid</heartTexPath>
