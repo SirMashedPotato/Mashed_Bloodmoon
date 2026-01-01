@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Colossus]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="vr.fantasy.biotech">
+		<defName>Mashed_Bloodmoon_FBColossus</defName>
+		<label>beast hunt: Colossus</label>
+		<description>Kill a construct colossus while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>VR_Construct_Colossus</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Brass</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FBScarabQueen]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="vr.fantasy.biotech">
+		<defName>Mashed_Bloodmoon_FBScarabQueen</defName>
+		<label>beast hunt: Scarab Queen</label>
+		<description>Kill a construct scarab queen while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>VR_Construct_ScarabQueen</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Brass</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FBApocriton]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="vr.fantasy.biotech">
+		<defName>Mashed_Bloodmoon_FBApocriton</defName>
+		<label>beast hunt: Apocriton</label>
+		<description>Kill a construct apocriton while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>VR_Construct_Apocriton</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Brass</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>
