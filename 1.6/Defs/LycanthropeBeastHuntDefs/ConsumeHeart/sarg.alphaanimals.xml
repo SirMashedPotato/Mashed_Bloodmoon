@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_AAAnimaColossus]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sarg.alphaanimals">
+		<defName>Mashed_Bloodmoon_AAAnimaColossus</defName>
+		<label>beast hunt: Anima Colossus</label>
+		<description>Consume the heart of an anima colossus.</description>
+		<targetThingDef>AA_AnimaColossus</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Anima</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_AABehemoth]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sarg.alphaanimals">
 		<defName>Mashed_Bloodmoon_AABehemoth</defName>
@@ -7,5 +15,20 @@
 		<description>Consume the heart of a forsaken behemoth.</description>
 		<targetThingDef>AA_Behemoth</targetThingDef>
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Night</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_AAGallatross]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sarg.alphaanimals">
+		<defName>Mashed_Bloodmoon_AAGallatross</defName>
+		<label>beast hunt: Gallatross</label>
+		<description>Consume the heart of a gallatross.</description>
+		<targetThingDef>AA_Gallatross</targetThingDef>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_AASummitCrab]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="sarg.alphaanimals">
+		<defName>Mashed_Bloodmoon_AASummitCrab</defName>
+		<label>beast hunt: Summit Crab</label>
+		<description>Consume the heart of a summit crab.</description>
+		<targetThingDef>AA_SummitCrab</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Pale</heartTexPath>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>
