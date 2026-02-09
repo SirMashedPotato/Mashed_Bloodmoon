@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfStygian]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef ParentName="Mashed_Bloodmoon_WerewolfBase">
+		<defName>Mashed_Bloodmoon_WerewolfStygian</defName>
+		<label>werewolf (Stygian)</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian</texPath>
+			<color>(130,22,22)</color>
+			<colorTwo>(81,8,9)</colorTwo>
+			<colorThree>(224,251,234)</colorThree>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygianEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+		<requirementWorkers>
+			<li Class="Mashed_Bloodmoon.RequirementWorker_BeastHuntCount">
+				<requiredCount>12</requiredCount>
+			</li>
+		</requirementWorkers>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
+</Defs>

@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3613468703
+CRC: 188585132
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c28e3618f15c7eb05057cbbb9e01f760
+    Hash: ae6b6241b052558fc9acb9ce9c9d42ff
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c28e3618f15c7eb05057cbbb9e01f760
+    Hash: ae6b6241b052558fc9acb9ce9c9d42ff
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -36,6 +36,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Building/Misc/Mashed_Bloodmoon_WolfsbloodAltar/Mashed_Bloodmoon_WolfsbloodAltar_75.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Projectile/Mashed_Bloodmoon_WolfsbloodVesselThrown.png
 - Assets/Data/sirmashedpotato.bloodmoon/Sounds/Mashed_Bloodmoon_Lycanthrope/mixkit-aggressive-beast-roar-13.wav
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Gulden.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfProfaned/Mashed_Bloodmoon_WerewolfProfaned_northm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacy_east.png
@@ -54,6 +55,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf_eastm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo_eastm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Genes/Mashed_Bloodmoon_LycanthropeBlood.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian_eastm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfLegacy/Mashed_Bloodmoon_WerewolfLegacyEyeGlow_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Genes/Mashed_Bloodmoon_Gene_TotalLycanthropyResistance.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Drug/Mashed_Bloodmoon_PotionWolfsbane/Mashed_Bloodmoon_PotionWolfsbane_a.png
@@ -64,6 +66,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Silver.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Drug/Mashed_Bloodmoon_PotionWolfscure/Mashed_Bloodmoon_PotionWolfscure_a.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygianEyeGlow_east.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Equipment/WeaponMelee/Mashed_Bloodmoon_SilverLongsword.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfProfaned/Mashed_Bloodmoon_WerewolfProfanedEyeGlow_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHuntCompleted.png
@@ -83,8 +86,10 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfProfaned/Mashed_Bloodmoon_WerewolfProfanedEyeGlow_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfAntler_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygianEyeGlow_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf_east.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Building/Art/Mashed_Bloodmoon_WerewolfTrophySmall_m.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Spectral.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Anima.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Genes/Mashed_Bloodmoon_Gene_FragileLycanthropyResistance.png
@@ -140,13 +145,16 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Mote/Mashed_Bloodmoon_SilverdustEffect.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Resource/Mashed_Bloodmoon_WerewolfBlood/Mashed_Bloodmoon_WerewolfBlood_c.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Mote/Mashed_Bloodmoon_BeastHowlTarget.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian_east.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Glowing.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Gizmos/Mashed_Bloodmoon_TransformBeast.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygianEyeGlow_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Gold.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Humanlike/Apparel/Belts/Mashed_Bloodmoon_BeltSilverdustVessel.png
 - Assets/Data/sirmashedpotato.bloodmoon/Sounds/Mashed_Bloodmoon_Lycanthrope/mixkit-human-single-heart-beat-490.wav
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Equipment/WeaponRanged/Mashed_Bloodmoon_SilverThrowingKnife.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfProfaned/Mashed_Bloodmoon_WerewolfProfanedEyeGlow_east.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian_southm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Infernal.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Projectile/Mashed_Bloodmoon_WolfsbaneVesselThrown.png
 - Assets/Data/sirmashedpotato.bloodmoon/Sounds/Mashed_Bloodmoon_Lycanthrope/mixkit-werewolf-roar-1730.mp3
@@ -181,6 +189,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_WerethrumboEyeGlow_east.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Building/Shack/Mashed_Bloodmoon_HuntersCache/Mashed_Bloodmoon_HuntersCache_east.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Wood.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygian_northm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Abilities/Mashed_Bloodmoon_MoonVeil.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfHorn_east.png
