@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using System.Linq;
 using Verse;
 
 namespace Mashed_Bloodmoon
@@ -11,6 +12,7 @@ namespace Mashed_Bloodmoon
     [HarmonyPatch("ApplyBirthOutcome")]
     public static class PregnancyUtility_ApplyBirthOutcome_Patch
     {
+        private const float BloodmoonChance = 0.25f;
         private const float FatherChance = 0.25f;
         private const float MotherChance = 0.5f;
 
@@ -38,6 +40,14 @@ namespace Mashed_Bloodmoon
                 if (father != null && LycanthropeUtility.PawnIsLycanthrope(father))
                 {
                     chance += FatherChance;
+                }
+
+                if (Mashed_Bloodmoon_ModSettings.HuntsmanMoon_ChildbirthLycanthropy)
+                {
+                    if (child.Map != null && child.Map.gameConditionManager.ActiveConditions.Where(x => x is GameCondition_HuntsmansMoon).Any())
+                    {
+                        chance += BloodmoonChance;
+                    }
                 }
 
                 if (Rand.Chance(chance))

@@ -10,6 +10,7 @@
 	<Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>Multiplier for the strength (points) of feral werewolf ambushes: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>
 	<Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>Multiplier for the strength (points) of feral werewolf pack sites: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>
 	<Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>Uncap the strength (points) of feral werewolf raids and ambushes</Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>
+	<Mashed_Bloodmoon_HuntsmanMoon_ChildbirthLycanthropy>Babies born during a Huntsman's Moon may be born with lycanthropy</Mashed_Bloodmoon_HuntsmanMoon_ChildbirthLycanthropy>
 	<!-- ==========[Lycanthropy]==========-->
 	<Mashed_Bloodmoon_Lycanthropy_Tab>Lycanthropy</Mashed_Bloodmoon_Lycanthropy_Tab>
 	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>

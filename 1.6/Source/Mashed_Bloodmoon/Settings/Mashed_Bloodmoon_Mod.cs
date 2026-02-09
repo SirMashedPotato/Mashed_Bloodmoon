@@ -109,6 +109,17 @@ namespace Mashed_Bloodmoon
 
             listing_Standard.Gap();
             listing_Standard.GapLine();
+
+            if (ModsConfig.BiotechActive)
+            {
+                listing_Standard.Gap(24);
+
+                listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_HuntsmanMoon_ChildbirthLycanthropy".Translate(), ref settings.Mashed_Bloodmoon_HuntsmanMoon_ChildbirthLycanthropy);
+                listing_Standard.Gap();
+
+                listing_Standard.Gap();
+                listing_Standard.GapLine();
+            }
         }
 
         public void DoSettingsTabContents_Lycanthropy(Listing_Standard listing_Standard)
