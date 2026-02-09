@@ -55,6 +55,7 @@ namespace Mashed_Bloodmoon
                     if (!LycanthropeUtility.PawnIsLycanthrope(child))
                     {
                         child.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope);
+                        Messages.Message("Mashed_Bloodmoon_BornWithLycanthropy".Translate(child), child, MessageTypeDefOf.NeutralEvent, true);
                     }
                 }
             }
