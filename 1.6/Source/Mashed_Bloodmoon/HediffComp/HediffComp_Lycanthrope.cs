@@ -237,6 +237,7 @@ namespace Mashed_Bloodmoon
                         {
                             Find.WindowStack.Add(new FloatMenu(LycanthropeGizmoOptions));
                         },
+                        Disabled = parent.pawn.ageTracker.CurLifeStage.alwaysDowned
                     };
                 }
 
