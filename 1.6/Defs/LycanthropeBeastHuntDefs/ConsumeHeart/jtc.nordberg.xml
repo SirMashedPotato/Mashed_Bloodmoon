@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_NordbergAlphaWolf]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="jtc.nordberg">
+		<defName>Mashed_Bloodmoon_NordbergAlphaWolf</defName>
+		<label>beast hunt: Alpha Wolf</label>
+		<description>Consume the heart of a Nordbergian alpha wolf.</description>
+		<targetThingDef>Wolf_ROE_NordbergAlpha</targetThingDef>
+		<targetCount>1</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_NordbergYeti]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="jtc.nordberg">
+		<defName>Mashed_Bloodmoon_NordbergYeti</defName>
+		<label>beast hunt: Yeti</label>
+		<description>Consume the heart of a yeti.</description>
+		<targetThingDef>Nordberg_ROE_Yeti</targetThingDef>
+		<targetCount>1</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Crystal</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

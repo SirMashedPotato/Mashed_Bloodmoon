@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 188585132
+CRC: 3963274841
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ae6b6241b052558fc9acb9ce9c9d42ff
+    Hash: 26388e2e1dd869132f99aec6e8c45104
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: ae6b6241b052558fc9acb9ce9c9d42ff
+    Hash: 26388e2e1dd869132f99aec6e8c45104
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -52,6 +52,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Drug/Mashed_Bloodmoon_PotionWolfsblood/Mashed_Bloodmoon_PotionWolfsblood_b.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Amrita.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo_east.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Dessicated_Werewolf_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Werewolf_eastm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo_eastm.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Genes/Mashed_Bloodmoon_LycanthropeBlood.png
@@ -67,6 +68,7 @@ Assets:
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHeart_Silver.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Drug/Mashed_Bloodmoon_PotionWolfscure/Mashed_Bloodmoon_PotionWolfscure_a.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfStygian/Mashed_Bloodmoon_WerewolfStygianEyeGlow_east.png
+- Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Dessicated_Werewolf_north.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Item/Equipment/WeaponMelee/Mashed_Bloodmoon_SilverLongsword.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_WerewolfProfaned/Mashed_Bloodmoon_WerewolfProfanedEyeGlow_south.png
 - Assets/Data/sirmashedpotato.bloodmoon/Textures/UI/Icons/Mashed_Bloodmoon_BeastHuntCompleted.png
