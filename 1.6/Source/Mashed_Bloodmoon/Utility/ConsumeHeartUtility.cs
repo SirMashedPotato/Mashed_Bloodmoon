@@ -16,7 +16,7 @@ namespace Mashed_Bloodmoon
                 return false;
             }
 
-            if (pawn.RaceProps.IsMechanoid)
+            if (!pawn.RaceProps.IsFlesh)
             {
                 return false;
             }
