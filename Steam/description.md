@@ -1,8 +1,8 @@
-[url=https://discord.gg/cRWRAgnKP9][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Discord_Bits/main/Mashed_DiscordBanner.png[/img][/url]
-[url=https://github.com/SirMashedPotato/Mashed_Bloodmoon][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Discord_Bits/main/Mashed_GithubBanner.png[/img][/url]
-[hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Bloodmoon.png[/img]
 A completely remade version of the original MorrowRim - Bloodmoon mod, made to a much higher standard, and with significantly more experience under my belt. There is now a fully featured, customisable, and upgradeable, lycanthropy system included.
+[hr][/hr]
+[url=https://discord.gg/cRWRAgnKP9][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Discord_Bits/main/Mashed_DiscordBanner.png[/img][/url]
+[url=https://github.com/SirMashedPotato/Mashed_Bloodmoon][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Discord_Bits/main/Mashed_GithubBanner.png[/img][/url]
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_HuntsmansMoon.png[/img]
 [quote] The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominous howling can be heard in the distance, growing ever closer. [/quote]
