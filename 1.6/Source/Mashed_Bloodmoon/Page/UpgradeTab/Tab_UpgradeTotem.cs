@@ -85,14 +85,25 @@ namespace Mashed_Bloodmoon
                 descriptionRect.width = descriptionRect.height;
                 descriptionRect.y += iconRect.height - descriptionRect.height;
                 descriptionRect.x += iconRect.width - descriptionRect.width;
-                if (Widgets.ButtonImage(descriptionRect, TexButton.Info, true, totemDef.description))
+                PageUtility.InfoButton(descriptionRect, totemDef.description);
+
+                //Last to ensure other stuff can be clicked if needed
+                if (Widgets.ButtonInvisible(iconRect, false))
                 {
-                    if (totemDef.totemThingDef != null)
-                    {
-                        Find.WindowStack.Add(new Dialog_InfoCard(totemDef.totemThingDef));
-                    }
+                    DoTotemClickAction(totemDef);
                 }
             }
+        }
+
+        private static void DoTotemClickAction(LycanthropeTotemDef totemDef)
+        {
+            if (totemDef.totemThingDef == null)
+            {
+                return;
+            }
+
+            Dialog_InfoCard dialog_InfoCard = new Dialog_InfoCard(totemDef.totemThingDef);
+            Find.WindowStack.Add(dialog_InfoCard);
         }
     }
 }
