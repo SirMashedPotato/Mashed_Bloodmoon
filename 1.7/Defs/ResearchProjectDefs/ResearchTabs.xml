@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchTabDef>
+		<defName>Mashed_ResearchTab_ElderScrolls</defName>
+		<label>Mashed (Elder Scrolls)</label>
+		<generalTitle>Mashed (Elder Scrolls) research projects</generalTitle>
+		<generalDescription>Unlock new technologies by researching at a research bench. You can only have one active project at a time.</generalDescription>
+	</ResearchTabDef>
+</Defs>

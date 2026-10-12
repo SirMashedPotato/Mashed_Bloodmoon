@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_MoonVeil]==========-->
+	<EffecterDef>
+		<defName>Mashed_Bloodmoon_MoonVeil</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<scale>0.06~0.1</scale>
+				<chancePerTick>0.1</chancePerTick>
+				<positionRadius>1</positionRadius>
+				<fleckDef>Mashed_Bloodmoon_MoonVeilFleck</fleckDef>
+				<speed>0.01~0.05</speed>
+				<angle>10~80</angle>
+			</li>
+		</children>
+	</EffecterDef>
+	<!-- ==========[Mashed_Bloodmoon_MoonVeilFleck]==========-->
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Mashed_Bloodmoon_MoonVeilFleck</defName>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Mashed_Bloodmoon_MoonVeilEffect</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+	</FleckDef>
+</Defs>

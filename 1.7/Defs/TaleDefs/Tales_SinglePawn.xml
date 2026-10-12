@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_MentalStateLycanthropeFury]==========-->
+	<TaleDef>
+		<defName>Mashed_Bloodmoon_MentalStateLycanthropeFury</defName>
+		<label>lycanthrope fury</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>4</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef] entering a lycanthrope fury</li>
+				<li>image->[PAWN_nameFull] losing control of [PAWN_possessive] inner beast [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] succumbing to a ravenous hunger [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] stumbling forward with a predatory look on [PAWN_possessive] face [circumstance_group]</li>
+				<li>circumstance_phrase->while clawing at [PAWN_possessive] face</li>
+				<li>circumstance_phrase->as others cower in fear</li>
+				<li>circumstance_phrase->as a friend flees</li>
+				<li>circumstance_phrase->because of the stress</li>
+				<li>desc_sentence->[PAWN_pronoun] is tearing apart nearby furniture.</li>
+				<li>desc_sentence->[PAWN_possessive] teeth are bared in a deadly snarl.</li>
+				<li>desc_sentence->[PAWN_possessive] eyes glow red with an insatiable hunger.</li>
+				<li>desc_sentence->Spittle is flying from [PAWN_possessive] mouth as [PAWN_possessive] howls with beastial fury.</li>
+				<li>desc_sentence->[PAWN_pronoun] is depicted with the snarling face of a [AnimalBadass].</li>
+				<li>desc_sentence->[PAWN_pronoun] is covered in [Gore].</li>
+				<li>desc_sentence->[PAWN_pronoun] ravenously devours the corpse of a [AnimalBadass].</li>
+				<li>desc_sentence->[PAWN_pronoun] howls at the moon.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+</Defs>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TWRLUnicorn]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="tw.tangsbiome.rainbowforest">
+		<defName>Mashed_Bloodmoon_TWRLUnicorn</defName>
+		<label>beast hunt: Unicorn</label>
+		<description>Consume the hearts of 17 unicorns.</description>
+		<targetThingDef>TWRL_Animal_Unicorn</targetThingDef>
+		<targetCount>17</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Hallow</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

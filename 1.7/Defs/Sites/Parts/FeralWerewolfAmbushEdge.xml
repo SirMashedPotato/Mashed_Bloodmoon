@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfAmbushEdge]========== -->
+	<SitePartDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolfAmbushEdge</defName>
+		<label>feral werewolf ambush</label>
+		<description>Another pack of feral werewolves.</description>
+		<workerClass>Mashed_Bloodmoon.SitePartWorker_FeralWerewolfAmbush</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/Mashed_Bloodmoon_FeralWerewolfPackSite</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<defaultHidden>true</defaultHidden>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<tags>
+			<li>Mashed_Bloodmoon_FeralWerewolfAmbush</li>
+		</tags>
+	</SitePartDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolfAmbushEdge]========== -->
+	<GenStepDef>
+		<defName>Mashed_Bloodmoon_FeralWerewolfAmbushEdge</defName>
+		<linkWithSite>Mashed_Bloodmoon_FeralWerewolfAmbushEdge</linkWithSite>
+		<order>1600</order>
+		<genStep Class="Mashed_Bloodmoon.GenStep_FeralWerewolfAmbush_Edge"/>
+	</GenStepDef>
+</Defs>

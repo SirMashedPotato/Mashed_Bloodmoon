@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HuntersShackPrefab_B]========== -->
+	<PrefabDef>
+		<defName>Mashed_Bloodmoon_HuntersShackPrefab_B</defName>
+		<size>(10,12)</size>
+		<things>
+			<Table1x2c>
+				<position>(4, 0, 3)</position>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Table1x2c>
+			<Mashed_Bloodmoon_HuntersCache>
+				<positions>
+					<li>(1, 0, 3)</li>
+					<li>(8, 0, 9)</li>
+				</positions>
+				<relativeRotation>Clockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(7, 0, 10)</position>
+			</Mashed_Bloodmoon_HuntersCache>
+			<TableButcher>
+				<position>(1, 0, 9)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</TableButcher>
+			<Door>
+				<position>(6, 0, 1)</position>
+				<stuff>WoodLog</stuff>
+			</Door>
+			<Door>
+				<position>(6, 0, 8)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Door>
+			<Mashed_Bloodmoon_HuntersCrate>
+				<rects>
+					<li>(8,2,8,2)</li>
+					<li>(5,10,5,10)</li>
+				</rects>
+			</Mashed_Bloodmoon_HuntersCrate>
+			<Mashed_Bloodmoon_HuntersCrate>
+				<position>(3, 0, 6)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCrate>
+			<DiningChair>
+				<rects>
+					<li>(5,3,5,4)</li>
+				</rects>
+				<relativeRotation>Counterclockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</DiningChair>
+			<Bed>
+				<position>(3, 0, 10)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Bed>
+			<ShelfSmall>
+				<position>(8, 0, 6)</position>
+				<relativeRotation>Counterclockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</ShelfSmall>
+			<ShelfSmall>
+				<position>(3, 0, 8)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</ShelfSmall>
+			<Bookcase>
+				<position>(5, 0, 6)</position>
+				<relativeRotation>Opposite</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Bookcase>
+			<Wall>
+				<rects>
+					<li>(2,1,5,1)</li>
+					<li>(7,1,9,1)</li>
+					<li>(2,2,2,11)</li>
+					<li>(9,2,9,11)</li>
+					<li>(3,7,6,7)</li>
+					<li>(6,9,6,11)</li>
+					<li>(3,11,5,11)</li>
+					<li>(7,11,8,11)</li>
+				</rects>
+				<stuff>WoodLog</stuff>
+			</Wall>
+			<FueledStove>
+				<position>(8, 0, 4)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+			</FueledStove>
+			<RawPotatoes>
+				<position>(8, 0, 6)</position>
+				<stackCountRange>10~15</stackCountRange>
+			</RawPotatoes>
+			<Gun_Revolver>
+				<position>(3, 0, 8)</position>
+				<quality>Normal</quality>
+			</Gun_Revolver>
+			<Novel>
+				<position>(4, 0, 4)</position>
+				<quality>Normal</quality>
+			</Novel>
+			<Filth_Dirt>
+				<rects>
+					<li>(3,2,3,2)</li>
+					<li>(6,3,6,3)</li>
+					<li>(5,5,5,5)</li>
+					<li>(7,5,7,5)</li>
+					<li>(7,7,7,7)</li>
+				</rects>
+				<hp>-1</hp>
+			</Filth_Dirt>
+		</things>
+		<terrain>
+			<WoodPlankFloor>
+				<rects>
+					<li>(0,0,9,11)</li>
+				</rects>
+			</WoodPlankFloor>
+		</terrain>
+	</PrefabDef>
+</Defs>

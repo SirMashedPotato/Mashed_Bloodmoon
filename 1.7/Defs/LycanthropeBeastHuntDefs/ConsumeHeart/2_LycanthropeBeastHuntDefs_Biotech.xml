@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Sanguophage]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_Sanguophage</defName>
+		<label>beast hunt: Sanguophage</label>
+		<description>Consume the heart of a sanguophage.</description>
+		<targetXenotypeDef>Sanguophage</targetXenotypeDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Sanguo</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_WasteRat]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.biotech">
+		<defName>Mashed_Bloodmoon_WasteRat</defName>
+		<label>beast hunt: Waste Rats</label>
+		<description>Consume the hearts of 13 waste rats.</description>
+		<targetThingDef>WasteRat</targetThingDef>
+		<targetCount>13</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Glowing</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

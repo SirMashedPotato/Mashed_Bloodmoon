@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_DABeardedTroll]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
+		<defName>Mashed_Bloodmoon_DABeardedTroll</defName>
+		<label>beast hunt: Bearded Troll</label>
+		<description>Kill 30 bearded trolls while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetThingDef>DA_BeardedTroll</targetThingDef>
+		<targetCount>30</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Pale</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

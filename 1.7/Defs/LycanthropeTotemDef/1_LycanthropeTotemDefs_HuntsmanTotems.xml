@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TotemEndurance]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemEndurance</defName>
+		<label>Totem of Endurance</label>
+		<labelShort>endurance totem</labelShort>
+		<description>Proof of a skilled hunter. It gives a bonus to the rate wounds heal while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemEndurance</totemThingDef>
+		<statDef>InjuryHealingFactor</statDef>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.03</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemFortitude]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemFortitude</defName>
+		<label>Totem of Fortitude</label>
+		<labelShort>fortitude totem</labelShort>
+		<description>Proof of a skilled hunter. It reduces incoming damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemFortitude</totemThingDef>
+		<statDef>IncomingDamageFactor</statDef>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
+	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemSight</defName>
+		<label>Totem of Sight</label>
+		<labelShort>sight totem</labelShort>
+		<description>Proof of a skilled hunter. It gives a reduction to stagger duration while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemSight</totemThingDef>
+		<statDef>StaggerDurationFactor</statDef>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemSpeed</defName>
+		<label>Totem of Speed</label>
+		<labelShort>speed totem</labelShort>
+		<description>Proof of a skilled hunter. It gives a bonus to movement speed while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemSpeed</totemThingDef>
+		<statDef>MoveSpeed</statDef>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.04</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemStrength]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemStrength</defName>
+		<label>Totem of Strength</label>
+		<labelShort>strength totem</labelShort>
+		<description>Proof of a skilled hunter. It gives a bonus to melee damage while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemStrength</totemThingDef>
+		<statDef>MeleeDamageFactor</statDef>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>0.02</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+	<!-- ==========[Mashed_Bloodmoon_TotemTenacity]========== -->
+	<Mashed_Bloodmoon.LycanthropeTotemDef>
+		<defName>Mashed_Bloodmoon_TotemTenacity</defName>
+		<label>Totem of Tenacity</label>
+		<labelShort>tenacity totem</labelShort>
+		<description>Proof of a skilled hunter. It reduces melee cooldown while in beast form.\n\nThis totem may also be upgraded through the use of rare crystaline skulls, which can be obtained as a reward from Hound Hunt quests, or during The Huntsman's Moon.</description>
+		<totemThingDef>Mashed_Bloodmoon_TotemTenacity</totemThingDef>
+		<statDef>MeleeCooldownFactor</statDef>
+		<maxLevel>50</maxLevel>
+		<purchaseHeartCost>5</purchaseHeartCost>
+		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
+		<onlyTransformed>true</onlyTransformed>
+	</Mashed_Bloodmoon.LycanthropeTotemDef>
+</Defs>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Lycanthropic]==========-->
+	<MeditationFocusDef>
+		<defName>Mashed_Bloodmoon_Lycanthropic</defName>
+		<label>lycanthropic</label>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.MeditationFocusExtension" MayRequire="VanillaExpanded.VPsycastsE">
+				<icon>World/WorldObjects/Expanding/Mashed_Bloodmoon_FeralWerewolves</icon>
+			</li>
+		</modExtensions>
+	</MeditationFocusDef>
+</Defs>
