@@ -56,7 +56,7 @@ namespace Mashed_Bloodmoon
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
-            PageUtility.InfoButton(new Rect(inRect.width - 30f, 0f, 30f, 30f), "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHuntsCount));
+            PageUtility.InfoButton(new Rect(inRect.width - 30f, 0f, 30f, 30f), "Mashed_Bloodmoon_BeastHuntDesc".Translate(pawn, compLycanthrope.completedBeastHuntsCount, LycanthropeUtility.levelCapIncreasePerBeastHunt));
 
             if (DebugSettings.ShowDevGizmos)
             {

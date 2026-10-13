@@ -40,15 +40,41 @@ namespace Mashed_Bloodmoon
             set => transformationTypeDef = value;
         }
 
-        public void GainExperience(Pawn targetPawn)
+        public int CurrentMaxLevel() => LycanthropeUtility.GetCurrentLevelCap(completedBeastHuntsCount);
+        
+        public int GainExperience(Pawn targetPawn)
         {
-            if (targetPawn.kindDef == null || targetPawn.kindDef.combatPower <= 0) return;
-            experience += (int)targetPawn.kindDef.combatPower * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier;
-            if (experience < LycanthropeUtility.experiencePerLevel) return;
-            int levelGain = experience /  LycanthropeUtility.experiencePerLevel;
-            experience %= LycanthropeUtility.experiencePerLevel;
-            LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, levelGain, Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableConsumeHeartMessage);
-            //CompLycanthropeTransformed.StressMax += levelGain; TODO, uncache stress while transformed?
+            if (targetPawn.kindDef == null || targetPawn.kindDef.combatPower <= 0)
+            {
+                return 0;
+            }
+            experience += (int)targetPawn.kindDef.combatPower * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier; //TODO add exp gain stat?
+            
+            int levelsGained = 0;
+            while (experience >= LycanthropeUtility.experiencePerLevel)
+            {
+                if (experience < LycanthropeUtility.experiencePerLevel)
+                {
+                    break;
+                }
+
+                if (usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts) + levelsGained >= CurrentMaxLevel())
+                {
+                    experience = LycanthropeUtility.experiencePerLevel - 1;
+                    break;
+                }
+
+                levelsGained++;
+                experience -= LycanthropeUtility.experiencePerLevel;
+            }
+
+            if (levelsGained <= 0)
+            {
+                return 0;
+            }
+            
+            LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, levelsGained, Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableConsumeHeartMessage);
+            return levelsGained;
         }
 
         public override void CopyFrom(HediffComp other)
@@ -279,12 +305,14 @@ namespace Mashed_Bloodmoon
             {
                 string description = "\n";
 
-                ///Consumed hearts
-                description += "\n" + LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.LabelCap + ": "
-                    + usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts];
+                description += "\n" + "Experience".CapitalizeFirst() + ": "
+                    + experience + "/" + LycanthropeUtility.experiencePerLevel;
+                
+                description += "\n" + "Mashed_Bloodmoon_LycanthropeLevel".Translate() + ": "
+                               + usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts];
 
                 description += "\n - " + LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.StatBonusLine(this);
-
+                
                 return description;
             }
         }

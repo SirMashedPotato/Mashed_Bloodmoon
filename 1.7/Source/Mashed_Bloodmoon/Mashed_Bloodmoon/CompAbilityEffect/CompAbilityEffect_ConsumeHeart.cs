@@ -38,7 +38,11 @@ namespace Mashed_Bloodmoon
 
                 LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
 
-                CompLycanthrope.GainExperience(targetPawn);
+                int levelsGained = CompLycanthrope.GainExperience(targetPawn);
+                if (levelsGained > 0)
+                {
+                    CompLycanthropeTransformed.StressMax += levelsGained;
+                }
 
                 float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
                 DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);

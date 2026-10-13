@@ -7,22 +7,22 @@ namespace Mashed_Bloodmoon
 {
     public class Page_UpgradeBeastForm : LycanthropePage
     {
-        public const int columnCount = 2;
-        public const int altColumnCount = 3;
+        private const int columnCount = 2;
+        private const int altColumnCount = 3;
         private readonly List<LycanthropeAbilityDef> AbilityList;
         private readonly List<LycanthropeClawTypeDef> ClawList;
         private readonly List<LycanthropeTotemDef> TotemList; 
         private readonly List<LycanthropeTraitDef> TraitList;
         private static Vector2 scrollPosition = Vector2.zero;
         private static UpgradeType curTab = UpgradeType.Ability;
-        private readonly List<TabRecord> tabs = new List<TabRecord>();
-        private List<UpgradeAmount> upgradeAmountList = new List<UpgradeAmount>();
+        private readonly List<TabRecord> tabs = [];
+        private List<UpgradeAmount> upgradeAmountList = [];
 
-        public static float rowHeight = Text.LineHeight * 6f;
+        private static float rowHeight = Text.LineHeight * 6f;
 
         public override string PageTitle => "Mashed_Bloodmoon_UpgradeBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
-        public enum UpgradeType
+        private enum UpgradeType
         {
             Ability,
             Claw,
@@ -88,6 +88,7 @@ namespace Mashed_Bloodmoon
             barsRect.SplitHorizontally(Text.LineHeight * 1.5f,  out Rect levelBarRect, out Rect experienceBarRect);
             DoConsumedHeartsBar(levelBarRect);
             DoExperienceBar(experienceBarRect);
+            DoBarDevCheatButtons(barsRect);
             
             TabDrawer.DrawTabs(new Rect(mainRect.x, mainRect.yMin + 45f, mainRect.width, mainRect.height - 45f), tabs);
 
@@ -125,57 +126,12 @@ namespace Mashed_Bloodmoon
         {
             int consumedCount = compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
             int maxLevel = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
-            float levelFillPercent = (float)consumedCount / maxLevel;
+            float levelFillPercent = (float)consumedCount / compLycanthrope.CurrentMaxLevel();
             Widgets.FillableBar(inRect, levelFillPercent, Assets.ConsumedHeartsFillTex, Texture2D.grayTexture, true);
             TextAnchor anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(inRect, "Mashed_Bloodmoon_LycanthropeLevelBar".Translate() + " (" + consumedCount + " / " + maxLevel + ")");
+            Widgets.Label(inRect, "Mashed_Bloodmoon_LycanthropeLevelBar".Translate(consumedCount, compLycanthrope.CurrentMaxLevel()));
             Text.Anchor = anchor;
-            
-            if(DebugSettings.ShowDevGizmos)
-            {
-                //Left
-                Rect devCheatRectLeft = inRect;
-                devCheatRectLeft.width = 320f;
-
-                devCheatRectLeft.SplitVertically(devCheatRectLeft.width / 2f, out Rect cheatRectLeft1, out Rect cheatRectLeft2);
-
-                cheatRectLeft1 = cheatRectLeft1.ContractedBy(Assets.RectPadding);
-                if (Widgets.ButtonText(cheatRectLeft1, "Dev: min hearts", true))
-                {
-                    compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = 0;
-                }
-
-                cheatRectLeft2 = cheatRectLeft2.ContractedBy(Assets.RectPadding);
-                if (Widgets.ButtonText(cheatRectLeft2, "Dev: -1 heart", true))
-                {
-                    if (consumedCount > 0)
-                    {
-                        compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts]--;
-                    }
-                }
-
-                //Right
-                Rect devCheatRectRight = devCheatRectLeft;
-                devCheatRectRight.x = inRect.width - devCheatRectRight.width;
-
-                devCheatRectRight.SplitVertically(devCheatRectRight.width / 2f, out Rect cheatRectRight1, out Rect cheatRectRight2);
-
-                cheatRectRight1 = cheatRectRight1.ContractedBy(Assets.RectPadding);
-                if (Widgets.ButtonText(cheatRectRight1, "Dev: +1 heart", true))
-                {
-                    if (consumedCount < LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel)
-                    {
-                        compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
-                    }
-                }
-
-                cheatRectRight2 = cheatRectRight2.ContractedBy(Assets.RectPadding);
-                if (Widgets.ButtonText(cheatRectRight2, "Dev: max hearts", true))
-                {
-                    compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
-                }
-            }
         }
 
         public void DoExperienceBar(Rect inRect)
@@ -187,6 +143,54 @@ namespace Mashed_Bloodmoon
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(inRect, "Mashed_Bloodmoon_LycanthropeExperienceBar".Translate(LycanthropeUtility.experiencePerLevel - compLycanthrope.experience));
             Text.Anchor = anchor;
+        }
+
+        public void DoBarDevCheatButtons(Rect inRect)
+        {
+            if (!DebugSettings.ShowDevGizmos) return;
+            int consumedCount = compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
+
+            //Left
+            Rect devCheatRectLeft = inRect;
+            devCheatRectLeft.width = 320f;
+
+            devCheatRectLeft.SplitVertically(devCheatRectLeft.width / 2f, out Rect cheatRectLeft1, out Rect cheatRectLeft2);
+
+            cheatRectLeft1 = cheatRectLeft1.ContractedBy(Assets.RectPadding);
+            if (Widgets.ButtonText(cheatRectLeft1, "Dev: min hearts", true))
+            {
+                compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = 0;
+            }
+
+            cheatRectLeft2 = cheatRectLeft2.ContractedBy(Assets.RectPadding);
+            if (Widgets.ButtonText(cheatRectLeft2, "Dev: -1 heart", true))
+            {
+                if (consumedCount > 0)
+                {
+                    compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts]--;
+                }
+            }
+
+            //Right
+            Rect devCheatRectRight = devCheatRectLeft;
+            devCheatRectRight.x = inRect.width - devCheatRectRight.width;
+
+            devCheatRectRight.SplitVertically(devCheatRectRight.width / 2f, out Rect cheatRectRight1, out Rect cheatRectRight2);
+
+            cheatRectRight1 = cheatRectRight1.ContractedBy(Assets.RectPadding);
+            if (Widgets.ButtonText(cheatRectRight1, "Dev: +1 heart", true))
+            {
+                if (consumedCount < LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel)
+                {
+                    compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts]++;
+                }
+            }
+
+            cheatRectRight2 = cheatRectRight2.ContractedBy(Assets.RectPadding);
+            if (Widgets.ButtonText(cheatRectRight2, "Dev: max hearts", true))
+            {
+                compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
+            }
         }
 
         public string EffectsTooltip()

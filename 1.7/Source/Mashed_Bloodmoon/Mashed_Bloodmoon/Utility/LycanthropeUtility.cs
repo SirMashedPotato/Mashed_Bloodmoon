@@ -5,14 +5,26 @@ using Verse;
 
 namespace Mashed_Bloodmoon
 {
+    [StaticConstructorOnStartup]
     internal static class LycanthropeUtility
     {
         internal const int experiencePerLevel = 100;
         internal const int stressTicksPerHour = 10;
         internal const float lycanthropeStressToTicks = GenDate.TicksPerHour * 0.3f;
         internal const int lycanthropeStressRate = GenDate.TicksPerHour / stressTicksPerHour;
-        internal const float totemTransferPercent = 0.3f;
-
+        private const float totemTransferPercent = 0.3f;
+        private const int baseLevelCap = 99;
+        public static int levelCapIncreasePerBeastHunt;
+        
+        static LycanthropeUtility()
+        {
+            int beastHuntCount = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Count;
+            int maxLevelCap = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
+            levelCapIncreasePerBeastHunt = (maxLevelCap - baseLevelCap) / beastHuntCount;
+        }
+        
+        internal static int GetCurrentLevelCap(int beastHuntsCompleted = 0) => levelCapIncreasePerBeastHunt * beastHuntsCompleted + baseLevelCap;
+        
         internal static bool IsNight(Pawn pawn)
         {
             return (GenLocalDate.HourInteger(pawn) >= 23 || GenLocalDate.HourInteger(pawn) <= 5);
