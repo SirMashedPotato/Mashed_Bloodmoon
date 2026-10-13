@@ -42,14 +42,14 @@ namespace Mashed_Bloodmoon
 
         public int CurrentMaxLevel() => LycanthropeUtility.GetCurrentLevelCap(completedBeastHuntsCount);
         
-        public int GainExperience(Pawn targetPawn)
+        public int GainExperience(Pawn targetPawn, int experienceGain)
         {
-            if (targetPawn.kindDef == null || targetPawn.kindDef.combatPower <= 0)
+            if (experience <= 0)
             {
                 return 0;
             }
-            experience += (int)targetPawn.kindDef.combatPower * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier; //TODO add exp gain stat?
-            
+
+            experience += experienceGain;
             int levelsGained = 0;
             while (experience >= LycanthropeUtility.experiencePerLevel)
             {

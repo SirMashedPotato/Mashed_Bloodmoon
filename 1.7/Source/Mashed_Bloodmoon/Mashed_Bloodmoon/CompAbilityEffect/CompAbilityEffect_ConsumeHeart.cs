@@ -38,7 +38,7 @@ namespace Mashed_Bloodmoon
 
                 LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
 
-                int levelsGained = CompLycanthrope.GainExperience(targetPawn);
+                int levelsGained = CompLycanthrope.GainExperience(targetPawn, GetExperienceGain(targetPawn));
                 if (levelsGained > 0)
                 {
                     CompLycanthropeTransformed.StressMax += levelsGained;
@@ -47,15 +47,13 @@ namespace Mashed_Bloodmoon
                 float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
                 DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
                 targetPawn.health.AddHediff(RimWorld.HediffDefOf.MissingBodyPart, partRecord, dinfo);
-
-
-                float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
-
-                parent.pawn.needs?.food?.CurLevel += (nutritionFactor * maxHealth);
-                parent.pawn.needs?.rest?.CurLevel += ((nutritionFactor / 2f) * maxHealth);
+                
+                GetSatiationGain(maxHealth, out float foodGain, out float restGain, out float psyfocusGain);
+                parent.pawn.needs?.food?.CurLevel += foodGain;
+                parent.pawn.needs?.rest?.CurLevel += restGain;
                 if (ModsConfig.RoyaltyActive && parent.pawn.psychicEntropy != null)
                 {
-                    parent.pawn.psychicEntropy.OffsetPsyfocusDirectly(nutritionFactor / 3f * maxHealth);
+                    parent.pawn.psychicEntropy.OffsetPsyfocusDirectly(psyfocusGain);
                 }
 
                 parent.pawn.Map.designationManager.TryRemoveDesignationOn(target.Thing, DesignationDefOf.Mashed_Bloodmoon_ConsumeHeart);
@@ -66,6 +64,36 @@ namespace Mashed_Bloodmoon
             }
             
             base.Apply(target, dest);
+        }
+
+        public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
+        {
+            if (!ConsumeHeartUtility.IsvalidThing(target.Thing))
+            {
+                return base.ExtraLabelMouseAttachment(target);
+            }
+            
+            Pawn targetPawn = ConsumeHeartUtility.GetTargetPawn(target.Thing);
+
+            return "Mashed_Bloodmoon_ConsumeHeartExtraAttachment".Translate(GetExperienceGain(targetPawn));
+        }
+
+        private void GetSatiationGain(float maxHealth, out float foodGain, out float restGain, out float psyfocusGain)
+        {
+            float satiationFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
+
+            foodGain = satiationFactor * maxHealth;
+            restGain = satiationFactor / 2f * maxHealth;
+            psyfocusGain = satiationFactor / 3f * maxHealth;
+        }
+
+        private int GetExperienceGain(Pawn targetPawn)
+        {
+            if (targetPawn.kindDef == null || targetPawn.kindDef.combatPower <= 0)
+            {
+                return 0;
+            }
+            return (int)targetPawn.kindDef.combatPower * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier; //TODO add exp gain stat?
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
