@@ -185,7 +185,7 @@ namespace Mashed_Bloodmoon
             
             TextAnchor anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(inRect, "Experience".Translate() + " (" + compLycanthrope.experience + " / " + LycanthropeUtility.experiencePerLevel + ")"); //TODO string
+            Widgets.Label(inRect, "Mashed_Bloodmoon_LycanthropeExperienceBar".Translate(LycanthropeUtility.experiencePerLevel - compLycanthrope.experience));
             Text.Anchor = anchor;
         }
 
