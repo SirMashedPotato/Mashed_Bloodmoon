@@ -75,7 +75,7 @@
 				<useLabel>Tending sacrifice</useLabel>
 				<heartCost>1</heartCost>
 				<showUseGizmo>true</showUseGizmo>
-				<gizmoDescription>Have a lycanthrope sacrifice a consumed heart to tend up to five wounds.</gizmoDescription>
+				<gizmoDescription>Have a lycanthrope sacrifice a lycanthrope level to tend up to five wounds.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_SacrificeTending</gizmoTexPath>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
@@ -87,7 +87,7 @@
 				<bloodCost>1</bloodCost>
 				<showUseGizmo>true</showUseGizmo>
 				<allowTransformed>false</allowTransformed>
-				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 10 consumed hearts, to summon a feral werewolf raid.</gizmoDescription>
+				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 10 lycanthrope levels, to summon a feral werewolf raid.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_SummonFeralPack</gizmoTexPath>
 			</li>
 			<li Class="Mashed_Bloodmoon.CompProperties_UsableAltar">
@@ -99,7 +99,7 @@
 				<bloodCost>1</bloodCost>
 				<showUseGizmo>true</showUseGizmo>
 				<allowTransformed>false</allowTransformed>
-				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 30 consumed hearts, to call forth the Huntsman's Moon.</gizmoDescription>
+				<gizmoDescription>Sacrifice a full altar of lycanthrope blood, and 30 lycanthrope levels, to call forth the Huntsman's Moon.</gizmoDescription>
 				<gizmoTexPath>UI/Gizmos/Mashed_Bloodmoon_HuntsmansMoon</gizmoTexPath>
 			</li>
 			<!-- Lycanthrope options -->

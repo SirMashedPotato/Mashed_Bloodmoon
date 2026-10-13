@@ -129,7 +129,7 @@ namespace Mashed_Bloodmoon
             Widgets.FillableBar(inRect, levelFillPercent, Assets.ConsumedHeartsFillTex, Texture2D.grayTexture, true);
             TextAnchor anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(inRect, "Level".Translate() + " (" + consumedCount + " / " + maxLevel + ")");
+            Widgets.Label(inRect, "Mashed_Bloodmoon_LycanthropeLevelBar".Translate() + " (" + consumedCount + " / " + maxLevel + ")");
             Text.Anchor = anchor;
             
             if(DebugSettings.ShowDevGizmos)
@@ -221,7 +221,7 @@ namespace Mashed_Bloodmoon
             Rect scrollRect = inRect;
             Rect innerRect = scrollRect;
             innerRect.width -= 30f;
-            int finalColumnCount = curTab == UpgradeType .Claw || curTab == UpgradeType.Trait ? altColumnCount : columnCount;
+            int finalColumnCount = curTab is UpgradeType .Claw or UpgradeType.Trait ? altColumnCount : columnCount;
             if (!Text.TinyFontSupported && finalColumnCount > 1)
             {
                 finalColumnCount -= 1;

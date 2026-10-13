@@ -27,8 +27,9 @@
 	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
 	<Mashed_Bloodmoon_SelectTransformationType>select transformation effect</Mashed_Bloodmoon_SelectTransformationType>
 	<!-- ==========[Upgrade beast form page]==========-->
-	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Various upgrades can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\n&lt;color=#4CE5E5&gt;Note that consumed hearts also increase lycanthropic stress limit. Therefore you may wish to avoid spending consumed hearts to retain an increased stress limit.&lt;/color&gt;\n\n&lt;color=#E5E54C&gt;Beast Form Abilities&lt;/color&gt;\nSpend consumed hearts to unlock special abilities for use while in beast form. Many abilities cost lycanthropic stress to use.\n\n&lt;color=#E5E54C&gt;Beast Form Claws&lt;/color&gt;\nSpend consumed hearts to unlock alternative lycanthrope claws for use while in beast form. Only one beast form claw can be equipped at a time. The currently equipped claws are marked with (E)\n\n&lt;color=#E5E54C&gt;Totems&lt;/color&gt;\nSpend consumed hearts to upgrade lycanthrope totems. All totem stat bonuses are only active while in Beast Form, unless marked with an (H).\n\n&lt;color=#E5E54C&gt;Traits&lt;/color&gt;\nSpend consumed hearts to unlock additional traits. Traits are retained if the pawn is cured of lycanthropy.
+	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Various upgrades can be purchased here by spending lycanthrope levels. Gain experience and Lycanthrope levels with the Consume Heart ability while in Beast Form.\n\n&lt;color=#4CE5E5&gt;Note that lycanthrope levels also increase lycanthropic stress limit. Therefore you may wish to avoid spending lycanthrope levels to retain an increased stress limit.&lt;/color&gt;\n\n&lt;color=#E5E54C&gt;Beast Form Abilities&lt;/color&gt;\nSpend lycanthrope levels to unlock special abilities for use while in beast form. Many abilities cost lycanthropic stress to use.\n\n&lt;color=#E5E54C&gt;Beast Form Claws&lt;/color&gt;\nSpend lycanthrope levels to unlock alternative lycanthrope claws for use while in beast form. Only one beast form claw can be equipped at a time. The currently equipped claws are marked with (E)\n\n&lt;color=#E5E54C&gt;Totems&lt;/color&gt;\nSpend lycanthrope levels to upgrade lycanthrope totems. All totem stat bonuses are only active while in Beast Form, unless marked with an (H).\n\n&lt;color=#E5E54C&gt;Traits&lt;/color&gt;\nSpend lycanthrope levels to unlock additional traits. Traits are retained if the pawn is cured of lycanthropy.
 	</Mashed_Bloodmoon_UpgradeBeastFormDesc>
+	<Mashed_Bloodmoon_LycanthropeLevelBar>Lycanthrope level</Mashed_Bloodmoon_LycanthropeLevelBar>
 	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
 	<Mashed_Bloodmoon_UnlockedClaws>\n\nUnlocked claws:</Mashed_Bloodmoon_UnlockedClaws>
 	<Mashed_Bloodmoon_EquippedClaw>(E)</Mashed_Bloodmoon_EquippedClaw>
@@ -69,10 +70,10 @@
 	<Mashed_Bloodmoon_RequirementWorker_InvalidClawType>must unlock the {0} beast form claws</Mashed_Bloodmoon_RequirementWorker_InvalidClawType>
 	<Mashed_Bloodmoon_RequirementWorker_InvalidClawTypeEquipped>must equip the {0} beast form claws</Mashed_Bloodmoon_RequirementWorker_InvalidClawTypeEquipped>
 	<!-- ==========[abilities]==========-->
-	<Mashed_Bloodmoon_AbilityStressCost>Ability use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
+	<Mashed_Bloodmoon_AbilityStressCost>Use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
 	<Mashed_Bloodmoon_AbilityStressTooHigh>using {0_label} would exceed stress limit</Mashed_Bloodmoon_AbilityStressTooHigh>
-	<Mashed_Bloodmoon_AbilityHeartCost>Ability use heart cost: {0}</Mashed_Bloodmoon_AbilityHeartCost>
-	<Mashed_Bloodmoon_AbilityNotEnoughHearts>not enough consumed hearts to use {0_label}</Mashed_Bloodmoon_AbilityNotEnoughHearts>
+	<Mashed_Bloodmoon_AbilityHeartCost>Use lycanthrope level cost: {0}</Mashed_Bloodmoon_AbilityHeartCost>
+	<Mashed_Bloodmoon_AbilityNotEnoughHearts>not enough lycanthrope levels to use {0_label}</Mashed_Bloodmoon_AbilityNotEnoughHearts>
 	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
 	<Mashed_Bloodmoon_SpectralBeastName>{0}'s {1}</Mashed_Bloodmoon_SpectralBeastName>
 	<!-- ==========[upgrades]==========-->

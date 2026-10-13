@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
 {
     public class Mashed_Bloodmoon_Mod : Mod
     {
-        readonly Mashed_Bloodmoon_ModSettings settings;
+        private readonly Mashed_Bloodmoon_ModSettings settings;
 
         public Mashed_Bloodmoon_Mod(ModContentPack contentPack) : base(contentPack)
         {
@@ -72,6 +72,8 @@ namespace Mashed_Bloodmoon
 
                 case SettingsTab.Cheats:
                     DoSettingsTabContents_Cheats(listing_Standard);
+                    break;
+                default:
                     break;
             }
 
@@ -186,7 +188,7 @@ namespace Mashed_Bloodmoon
             listing_Standard.CheckboxLabeled("Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep".Translate(), ref settings.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep);
             listing_Standard.Gap();
 
-            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
+            listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_ExperienceGainMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier));
             settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier = (int)listing_Standard.Slider(settings.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier, 1, 10);
 
             listing_Standard.Label("Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier".Translate(settings.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier * 100));
