@@ -36,7 +36,7 @@ namespace Mashed_Bloodmoon
                 Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
             }
 
-            var font = Text.Font;
+            GameFont font = Text.Font;
             Text.Font = GameFont.Tiny;
             RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
             Widgets.Label(descRect, abilityDef.description);

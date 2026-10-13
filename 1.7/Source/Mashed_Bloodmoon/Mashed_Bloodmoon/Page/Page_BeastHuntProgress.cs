@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
@@ -228,8 +227,8 @@ namespace Mashed_Bloodmoon
             Rect detailsRect = inRect.ContractedBy(Assets.RectPadding);
             TaggedString label = beastHuntDef.LabelCap;
             detailsRect.SplitHorizontally(detailsRect.height / 3f, out Rect upperRect, out Rect lowerRect);
-            var anchor = Text.Anchor;
-            var font = Text.Font;
+            TextAnchor anchor = Text.Anchor;
+            GameFont font = Text.Font;
             Text.Anchor = TextAnchor.MiddleCenter;
             if (beastHuntDef.IsHidden(compLycanthrope))
             {

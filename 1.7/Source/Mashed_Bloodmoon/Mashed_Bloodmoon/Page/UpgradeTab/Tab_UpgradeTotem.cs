@@ -28,7 +28,7 @@ namespace Mashed_Bloodmoon
             TaggedString levelLabel = "(" + compLycanthrope.usedTotemTracker.TryGetValue(totemDef, 0) + " / " + totemDef.maxLevel + ")";
             Widgets.Label(labelRect.NewCol(levelLabel.GetWidthCached(), HorizontalJustification.Right), levelLabel);
 
-            var font = Text.Font;
+            GameFont font = Text.Font;
             Text.Font = GameFont.Tiny;
 
             //stat summary

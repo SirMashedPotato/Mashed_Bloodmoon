@@ -37,7 +37,7 @@ namespace Mashed_Bloodmoon
         //Cheats
         public static bool Cheat_DisableInfection => _instance.Mashed_Bloodmoon_Lycanthropy_EnableInfection;
         public static bool Cheat_DisableRestlessSleep => _instance.Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep;
-        public static int Cheat_ConsumedHearMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
+        public static int Cheat_ConsumedHeartMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier;
         public static float Cheat_FatigueDurationMultiplier => _instance.Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier;
 
 

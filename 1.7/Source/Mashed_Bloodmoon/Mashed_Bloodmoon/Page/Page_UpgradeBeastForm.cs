@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
@@ -71,16 +70,10 @@ namespace Mashed_Bloodmoon
             }, () => curTab == UpgradeType.Trait));
         }
 
-        public class UpgradeAmount
+        public class UpgradeAmount(LycanthropeTotemDef def)
         {
-            public LycanthropeTotemDef totemTypeDef;
-            public float amount;
-
-            public UpgradeAmount(LycanthropeTotemDef def)
-            {
-                totemTypeDef = def;
-                amount = 1f;
-            }
+            public readonly LycanthropeTotemDef totemTypeDef = def;
+            public float amount = 1f;
         }
 
         public override void DoWindowContents(Rect inRect)
@@ -90,11 +83,12 @@ namespace Mashed_Bloodmoon
             PageUtility.InfoButton(new Rect(inRect.width - (60f + Assets.RectPadding), 0f, 30f, 30f), TexButton.CategorizedResourceReadout, EffectsTooltip());
 
             inRect.yMin += rectLimitY;
-            Rect consumedHeartsRect = inRect;
-            consumedHeartsRect.height = Text.LineHeight * 2f;
-            DoConsumedHeartsBar(consumedHeartsRect);
-
-            Rect mainRect = new Rect(inRect.x, inRect.yMin + 45f, inRect.width, inRect.height - 45f);
+            inRect.SplitHorizontally(Text.LineHeight * 2.5f, out Rect barsRect, out Rect mainRect);
+            
+            barsRect.SplitHorizontally(Text.LineHeight * 1.5f,  out Rect levelBarRect, out Rect experienceBarRect);
+            DoConsumedHeartsBar(levelBarRect);
+            DoExperienceBar(experienceBarRect);
+            
             TabDrawer.DrawTabs(new Rect(mainRect.x, mainRect.yMin + 45f, mainRect.width, mainRect.height - 45f), tabs);
 
             mainRect.yMin += rectLimitY;
@@ -120,6 +114,8 @@ namespace Mashed_Bloodmoon
                 case UpgradeType.Trait:
                     DoUpgradeGrid(mainRect, TraitList.Count());
                     break;
+                default:
+                    break;
             }
 
             Widgets.EndScrollView();
@@ -129,14 +125,14 @@ namespace Mashed_Bloodmoon
         {
             int consumedCount = compLycanthrope.usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts, 0);
             int maxLevel = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
-            float fillPercent = (float)consumedCount / maxLevel;
-            Widgets.FillableBar(inRect, fillPercent, Assets.ConsumedHeartsFillTex, Texture2D.grayTexture, true);
-            var anchor = Text.Anchor;
+            float levelFillPercent = (float)consumedCount / maxLevel;
+            Widgets.FillableBar(inRect, levelFillPercent, Assets.ConsumedHeartsFillTex, Texture2D.grayTexture, true);
+            TextAnchor anchor = Text.Anchor;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(inRect, LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.label + " (" + consumedCount + " / " + maxLevel + ")");
+            Widgets.Label(inRect, "Level".Translate() + " (" + consumedCount + " / " + maxLevel + ")");
             Text.Anchor = anchor;
-
-            if (DebugSettings.ShowDevGizmos)
+            
+            if(DebugSettings.ShowDevGizmos)
             {
                 //Left
                 Rect devCheatRectLeft = inRect;
@@ -180,6 +176,17 @@ namespace Mashed_Bloodmoon
                     compLycanthrope.usedTotemTracker[LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts] = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
                 }
             }
+        }
+
+        public void DoExperienceBar(Rect inRect)
+        {
+            float expFillPercent = (float)compLycanthrope.experience / LycanthropeUtility.experiencePerLevel;
+            Widgets.FillableBar(inRect, expFillPercent, Assets.ExperienceFillTex, Texture2D.grayTexture, true);
+            
+            TextAnchor anchor = Text.Anchor;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(inRect, "Experience".Translate() + " (" + compLycanthrope.experience + " / " + LycanthropeUtility.experiencePerLevel + ")"); //TODO string
+            Text.Anchor = anchor;
         }
 
         public string EffectsTooltip()

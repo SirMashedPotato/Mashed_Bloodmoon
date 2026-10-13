@@ -38,9 +38,7 @@ namespace Mashed_Bloodmoon
 
                 LycanthropeUtility.ProgressBeastHunts(parent.pawn, targetPawn, BeastHuntType.Heart);
 
-                int consumedHeartCount = 1 * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHearMultiplier;
-                LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, consumedHeartCount, Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableConsumeHeartMessage);
-                CompLycanthropeTransformed.StressMax += consumedHeartCount;
+                CompLycanthrope.GainExperience(targetPawn);
 
                 float maxHealth = partRecord.def.GetMaxHealth(targetPawn);
                 DamageInfo dinfo = new DamageInfo(DamageDefOf.Bite, maxHealth, 1, -1, parent.pawn, partRecord);
@@ -49,14 +47,8 @@ namespace Mashed_Bloodmoon
 
                 float nutritionFactor = parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeHeartSatiationFactor);
 
-                if (parent.pawn.needs?.food != null)
-                {
-                    parent.pawn.needs.food.CurLevel += (nutritionFactor * maxHealth);
-                }
-                if (parent.pawn.needs?.rest != null)
-                {
-                    parent.pawn.needs.rest.CurLevel += ((nutritionFactor / 2f) * maxHealth);
-                }
+                parent.pawn.needs?.food?.CurLevel += (nutritionFactor * maxHealth);
+                parent.pawn.needs?.rest?.CurLevel += ((nutritionFactor / 2f) * maxHealth);
                 if (ModsConfig.RoyaltyActive && parent.pawn.psychicEntropy != null)
                 {
                     parent.pawn.psychicEntropy.OffsetPsyfocusDirectly(nutritionFactor / 3f * maxHealth);

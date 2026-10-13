@@ -9,11 +9,11 @@ namespace Mashed_Bloodmoon
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
-            if (!TryFindEntryCell(map, out var cell))
+            if (!TryFindEntryCell(map, out IntVec3 cell))
             {
                 return false;
             }
-            if (!TryFindFormerFaction(out var formerFaction))
+            if (!TryFindFormerFaction(out Faction formerFaction))
             {
                 return false;
             }

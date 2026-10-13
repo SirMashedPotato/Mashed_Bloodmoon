@@ -14,14 +14,14 @@ namespace Mashed_Bloodmoon
 
         public override void Generate(Map map, GenStepParams parms)
         {
-            if (!SiteGenStepUtility.TryFindRootToSpawnAroundRectOfInterest(out var rectToDefend, out var singleCellToSpawnNear, map))
+            if (!SiteGenStepUtility.TryFindRootToSpawnAroundRectOfInterest(out CellRect rectToDefend, out IntVec3 singleCellToSpawnNear, map))
             {
                 return;
             }
             List<Pawn> list = new List<Pawn>();
             foreach (Pawn item in GeneratePawns(parms, map))
             {
-                if (!SiteGenStepUtility.TryFindSpawnCellAroundOrNear(rectToDefend, singleCellToSpawnNear, map, out var spawnCell))
+                if (!SiteGenStepUtility.TryFindSpawnCellAroundOrNear(rectToDefend, singleCellToSpawnNear, map, out IntVec3 spawnCell))
                 {
                     Find.WorldPawns.PassToWorld(item);
                     break;

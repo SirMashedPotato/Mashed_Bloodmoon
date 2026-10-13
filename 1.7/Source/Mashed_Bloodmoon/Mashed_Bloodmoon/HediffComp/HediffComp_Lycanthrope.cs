@@ -24,51 +24,50 @@ namespace Mashed_Bloodmoon
         // The int is the progress towards the beast hunt
         public Dictionary<LycanthropeBeastHuntDef, int> beastHuntTracker = new Dictionary<LycanthropeBeastHuntDef, int>();
         public int completedBeastHuntsCount = 0;
+        public int experience = 0;
 
         List<FloatMenuOption> lycanthropeGizmoOptions;
-
+        
         public LycanthropeBeastFormDef BeastFormDef
         {
-            get
-            {
-                return beastFormDef;
-            }
-            set
-            {
-                beastFormDef = value;
-            }
+            get => beastFormDef;
+            set => beastFormDef = value;
         }
 
         public LycanthropeTransformationTypeDef TransformationTypeDef
         {
-            get
-            {
-                return transformationTypeDef;
-            }
-            set
-            {
-                transformationTypeDef = value;
-            }
+            get => transformationTypeDef;
+            set => transformationTypeDef = value;
+        }
+
+        public void GainExperience(Pawn targetPawn)
+        {
+            if (targetPawn.kindDef == null || targetPawn.kindDef.combatPower <= 0) return;
+            experience += (int)targetPawn.kindDef.combatPower * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier;
+            if (experience < LycanthropeUtility.experiencePerLevel) return;
+            int levelGain = experience /  LycanthropeUtility.experiencePerLevel;
+            experience %= LycanthropeUtility.experiencePerLevel;
+            LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.UseTotem(parent.pawn, levelGain, Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableConsumeHeartMessage);
+            //CompLycanthropeTransformed.StressMax += levelGain; TODO, uncache stress while transformed?
         }
 
         public override void CopyFrom(HediffComp other)
         {
             base.CopyFrom(other);
-            if (other is HediffComp_Lycanthrope otherLycanthrope)
-            {
-                beastFormDef = otherLycanthrope.BeastFormDef;
-                transformationTypeDef = otherLycanthrope.TransformationTypeDef;
-                cachedWorkPriorities = otherLycanthrope.cachedWorkPriorities;
-                primaryColour = otherLycanthrope.primaryColour;
-                secondaryColour = otherLycanthrope.secondaryColour;
-                tertiaryColour = otherLycanthrope.tertiaryColour;
-                unlockedAbilityTracker = otherLycanthrope.unlockedAbilityTracker;
-                equippedClawType = otherLycanthrope.equippedClawType;
-                unlockedClawTracker = otherLycanthrope.unlockedClawTracker;
-                usedTotemTracker = otherLycanthrope.usedTotemTracker;
-                beastHuntTracker = otherLycanthrope.beastHuntTracker;
-                completedBeastHuntsCount = otherLycanthrope.completedBeastHuntsCount;
-            }
+            if (other is not HediffComp_Lycanthrope otherLycanthrope) return;
+            beastFormDef = otherLycanthrope.BeastFormDef;
+            transformationTypeDef = otherLycanthrope.TransformationTypeDef;
+            cachedWorkPriorities = otherLycanthrope.cachedWorkPriorities;
+            primaryColour = otherLycanthrope.primaryColour;
+            secondaryColour = otherLycanthrope.secondaryColour;
+            tertiaryColour = otherLycanthrope.tertiaryColour;
+            unlockedAbilityTracker = otherLycanthrope.unlockedAbilityTracker;
+            equippedClawType = otherLycanthrope.equippedClawType;
+            unlockedClawTracker = otherLycanthrope.unlockedClawTracker;
+            usedTotemTracker = otherLycanthrope.usedTotemTracker;
+            beastHuntTracker = otherLycanthrope.beastHuntTracker;
+            completedBeastHuntsCount = otherLycanthrope.completedBeastHuntsCount;
+            experience = otherLycanthrope.experience;
         }
 
         public void ResetColours()
@@ -190,98 +189,88 @@ namespace Mashed_Bloodmoon
         {
             get
             {
-                if (lycanthropeGizmoOptions.NullOrEmpty())
+                if (!lycanthropeGizmoOptions.NullOrEmpty()) return lycanthropeGizmoOptions;
+                lycanthropeGizmoOptions = new List<FloatMenuOption>();
+
+                //Customise beast form
+                FloatMenuOption item = new FloatMenuOption("Mashed_Bloodmoon_CustomiseBeastForm".Translate(), delegate
                 {
-                    lycanthropeGizmoOptions = new List<FloatMenuOption>();
+                    Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
+                    Find.WindowStack.Add(page);
+                });
+                lycanthropeGizmoOptions.Add(item);
 
-                    //Customise beast form
-                    FloatMenuOption item = new FloatMenuOption("Mashed_Bloodmoon_CustomiseBeastForm".Translate(), delegate
-                    {
-                        Page_CustomiseBeastForm page = new Page_CustomiseBeastForm(this);
-                        Find.WindowStack.Add(page);
-                    });
-                    lycanthropeGizmoOptions.Add(item);
+                //Upgrade beast form
+                item = new FloatMenuOption("Mashed_Bloodmoon_UpgradeBeastForm".Translate(), delegate
+                {
+                    Page_UpgradeBeastForm page = new Page_UpgradeBeastForm(this);
+                    Find.WindowStack.Add(page);
+                });
+                lycanthropeGizmoOptions.Add(item);
 
-                    //Upgrade beast form
-                    item = new FloatMenuOption("Mashed_Bloodmoon_UpgradeBeastForm".Translate(), delegate
-                    {
-                        Page_UpgradeBeastForm page = new Page_UpgradeBeastForm(this);
-                        Find.WindowStack.Add(page);
-                    });
-                    lycanthropeGizmoOptions.Add(item);
-
-                    //Beast hunt progress
-                    item = new FloatMenuOption("Mashed_Bloodmoon_BeastHuntProgress".Translate(), delegate
-                    {
-                        Page_BeastHuntProgress page = new Page_BeastHuntProgress(this);
-                        Find.WindowStack.Add(page);
-                    });
-                    lycanthropeGizmoOptions.Add(item);
-                }
+                //Beast hunt progress
+                item = new FloatMenuOption("Mashed_Bloodmoon_BeastHuntProgress".Translate(), delegate
+                {
+                    Page_BeastHuntProgress page = new Page_BeastHuntProgress(this);
+                    Find.WindowStack.Add(page);
+                });
+                lycanthropeGizmoOptions.Add(item);
                 return lycanthropeGizmoOptions;
             }
         }
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            if (!LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
+            if (LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn)) yield break;
+            if (Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableOptionsGizmo)
             {
-                if (Mashed_Bloodmoon_ModSettings.Lycanthropy_EnableOptionsGizmo)
+                yield return new Command_Action
                 {
-                    yield return new Command_Action
+                    defaultLabel = "Mashed_Bloodmoon_LycanthropeOptions_Label".Translate(),
+                    defaultDesc = "Mashed_Bloodmoon_LycanthropeOptions_Desc".Translate(parent.pawn),
+                    icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions", true),
+                    action = delegate ()
                     {
-                        defaultLabel = "Mashed_Bloodmoon_LycanthropeOptions_Label".Translate(),
-                        defaultDesc = "Mashed_Bloodmoon_LycanthropeOptions_Desc".Translate(parent.pawn),
-                        icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_LycanthropeOptions", true),
-                        action = delegate ()
-                        {
-                            Find.WindowStack.Add(new FloatMenu(LycanthropeGizmoOptions));
-                        },
-                        Disabled = parent.pawn.ageTracker.CurLifeStage.alwaysDowned
-                    };
-                }
+                        Find.WindowStack.Add(new FloatMenu(LycanthropeGizmoOptions));
+                    },
+                    Disabled = parent.pawn.ageTracker.CurLifeStage.alwaysDowned
+                };
+            }
 
-                bool continueFlag = true;
+            bool continueFlag = true;
 
-                if (parent.pawn.IsPrisonerOfColony)
-                {
-                    if (Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersHideGizmo)
-                    {
-                        continueFlag = false;
-                    }
-                }
-                else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesHideGizmo)
+            if (parent.pawn.IsPrisonerOfColony)
+            {
+                if (Mashed_Bloodmoon_ModSettings.Lycanthropy_PrisonersHideGizmo)
                 {
                     continueFlag = false;
                 }
-
-                if (continueFlag)
-                {
-                    bool disabledFlag = false;
-
-                    if (parent.pawn.Downed)
-                    {
-                        disabledFlag = true;
-                    }
-                    else if (parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue))
-                    {
-                        disabledFlag = true;
-                    }
-
-                    yield return new Command_Action
-                    {
-                        defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
-                        defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn,
-                    ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
-                        icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
-                        action = delegate ()
-                        {
-                            TransformPawn();
-                        },
-                        Disabled = disabledFlag,
-                    };
-                }
             }
+            else if (ModsConfig.IdeologyActive && parent.pawn.IsSlaveOfColony && Mashed_Bloodmoon_ModSettings.Lycanthropy_SlavesHideGizmo)
+            {
+                continueFlag = false;
+            }
+
+            if (!continueFlag) yield break;
+            bool disabledFlag = false;
+
+            if (parent.pawn.Downed || parent.pawn.health.hediffSet.HasHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue))
+            {
+                disabledFlag = true;
+            }
+
+            yield return new Command_Action
+            {
+                defaultLabel = "Mashed_Bloodmoon_TransformBeast_Label".Translate(),
+                defaultDesc = "Mashed_Bloodmoon_TransformBeast_Desc".Translate(parent.pawn,
+                    ((int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressMax) * LycanthropeUtility.lycanthropeStressRate).ToStringTicksToPeriod()),
+                icon = ContentFinder<Texture2D>.Get("UI/Gizmos/Mashed_Bloodmoon_TransformBeast", true),
+                action = delegate ()
+                {
+                    TransformPawn();
+                },
+                Disabled = disabledFlag,
+            };
         }
 
         public override string CompDescriptionExtra
@@ -314,6 +303,7 @@ namespace Mashed_Bloodmoon
             Scribe_Collections.Look(ref usedTotemTracker, "usedTotemTracker", LookMode.Def);
             Scribe_Collections.Look(ref beastHuntTracker, "beastHuntTracker", LookMode.Def);
             Scribe_Values.Look(ref completedBeastHuntsCount, "completedBeastHunts", 0);
+            Scribe_Values.Look(ref experience, "experience", 0);
         }
     }
 }
