@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- ==========[transform gizmo (Human)]==========-->
+	<Mashed_Bloodmoon_TransformHuman_Label>standard form</Mashed_Bloodmoon_TransformHuman_Label>
+	<Mashed_Bloodmoon_TransformHuman_Desc>End {0_labelShort}'s transformation, reverting them back to their standard form. All lycanthrope stress will be converted into lycanthrope fatigue, preventing them from transforming again until they have recovered.\n\nCurrent exhuastion duration: {1}</Mashed_Bloodmoon_TransformHuman_Desc>
+	<!-- ==========[transform gizmo (Beast)]==========-->
+	<Mashed_Bloodmoon_TransformBeast_Label>beast form</Mashed_Bloodmoon_TransformBeast_Label>
+	<Mashed_Bloodmoon_TransformBeast_Desc>Transform {0_labelShort} into their beast form. Lycanthrope stress will accumulate during this transformation, which will be converted into lycanthrope fatigue once the transformation ends. If lycanthrope stress reaches 100%, {0_labelShort} will enter a rage state.\n\nMaximum transformation duration: {1}</Mashed_Bloodmoon_TransformBeast_Desc>
+	<!-- ==========[lycanthrope stress gizmo]==========-->
+	<Mashed_Bloodmoon_LycanthropeStressGizmo_Label>Lycanthrope stress</Mashed_Bloodmoon_LycanthropeStressGizmo_Label>
+	<Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>The current level of lycanthrope stress {0_label} is experiencing. Lycanthrope stress gradually builds up during a transformation. If it reaches 100%, the lycanthrope will enter a rage state, putting anyone nearby in danger.\n\nStress gain rate: {1} per hour\nMaximum transformed duration: {2}\nCurrent exhuastion duration: {3}</Mashed_Bloodmoon_LycanthropeStressGizmo_Tooltip>
+	<!-- ==========[lycanthrope options gizmo]==========-->
+	<Mashed_Bloodmoon_LycanthropeOptions_Label>lycanthrope options</Mashed_Bloodmoon_LycanthropeOptions_Label>
+	<Mashed_Bloodmoon_LycanthropeOptions_Desc>Access several options, such as customising and upgrading {0_labelShort}'s' beast form.</Mashed_Bloodmoon_LycanthropeOptions_Desc>
+	<Mashed_Bloodmoon_CustomiseBeastForm>Customise beast form</Mashed_Bloodmoon_CustomiseBeastForm>
+	<Mashed_Bloodmoon_UpgradeBeastForm>Upgrade beast form</Mashed_Bloodmoon_UpgradeBeastForm>
+	<Mashed_Bloodmoon_BeastHuntProgress>Beast hunt progress</Mashed_Bloodmoon_BeastHuntProgress>
+	<!-- ==========[Customise beast form page]==========-->
+	<Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel>Primary colour:</Mashed_Bloodmoon_CustomiseBeastForm_PrimaryLabel>
+	<Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel>Secondary colour:</Mashed_Bloodmoon_CustomiseBeastForm_SecondaryLabel>
+	<Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel>Tertiary colour:</Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel>
+	<Mashed_Bloodmoon_DefaultColor>default color</Mashed_Bloodmoon_DefaultColor>
+	<Mashed_Bloodmoon_UndoChanges>Undo changes</Mashed_Bloodmoon_UndoChanges>
+	<Mashed_Bloodmoon_Artist>Artist</Mashed_Bloodmoon_Artist>
+	<Mashed_Bloodmoon_Type>Type</Mashed_Bloodmoon_Type>
+	<Mashed_Bloodmoon_Effect>Effect</Mashed_Bloodmoon_Effect>
+	<Mashed_Bloodmoon_SelectLycanthropeType>select beast form</Mashed_Bloodmoon_SelectLycanthropeType>
+	<Mashed_Bloodmoon_SelectTransformationType>select transformation effect</Mashed_Bloodmoon_SelectTransformationType>
+	<!-- ==========[Upgrade beast form page]==========-->
+	<Mashed_Bloodmoon_UpgradeBeastFormDesc>Various upgrades can be purchased here by spending Consumed Hearts. Gain Consumed Hearts with the Consume Heart ability while in Beast Form.\n\n&lt;color=#4CE5E5&gt;Note that consumed hearts also increase lycanthropic stress limit. Therefore you may wish to avoid spending consumed hearts to retain an increased stress limit.&lt;/color&gt;\n\n&lt;color=#E5E54C&gt;Beast Form Abilities&lt;/color&gt;\nSpend consumed hearts to unlock special abilities for use while in beast form. Many abilities cost lycanthropic stress to use.\n\n&lt;color=#E5E54C&gt;Beast Form Claws&lt;/color&gt;\nSpend consumed hearts to unlock alternative lycanthrope claws for use while in beast form. Only one beast form claw can be equipped at a time. The currently equipped claws are marked with (E)\n\n&lt;color=#E5E54C&gt;Totems&lt;/color&gt;\nSpend consumed hearts to upgrade lycanthrope totems. All totem stat bonuses are only active while in Beast Form, unless marked with an (H).\n\n&lt;color=#E5E54C&gt;Traits&lt;/color&gt;\nSpend consumed hearts to unlock additional traits. Traits are retained if the pawn is cured of lycanthropy.
+	</Mashed_Bloodmoon_UpgradeBeastFormDesc>
+	<Mashed_Bloodmoon_CurrentBonuses>Current bonuses:</Mashed_Bloodmoon_CurrentBonuses>
+	<Mashed_Bloodmoon_UnlockedClaws>\n\nUnlocked claws:</Mashed_Bloodmoon_UnlockedClaws>
+	<Mashed_Bloodmoon_EquippedClaw>(E)</Mashed_Bloodmoon_EquippedClaw>
+	<Mashed_Bloodmoon_UnlockedAbilities>\n\nUnlocked abilities:</Mashed_Bloodmoon_UnlockedAbilities>
+	<Mashed_Bloodmoon_TotemActiveWhileHuman>(H)</Mashed_Bloodmoon_TotemActiveWhileHuman>
+	<Mashed_Bloodmoon_UnlockLabel>Unlock ({0}/{1})</Mashed_Bloodmoon_UnlockLabel>
+	<Mashed_Bloodmoon_Unlocked>Unlocked</Mashed_Bloodmoon_Unlocked>
+	<Mashed_Bloodmoon_Equip>Equip</Mashed_Bloodmoon_Equip>
+	<Mashed_Bloodmoon_ConflictingTrait>Conflicts with: {0}</Mashed_Bloodmoon_ConflictingTrait>
+	<Mashed_Bloodmoon_UpgradeLabel>Upgrade ({0}/{1})</Mashed_Bloodmoon_UpgradeLabel>
+	<Mashed_Bloodmoon_UpgradeTab_Abilities>Beast Form Abilities</Mashed_Bloodmoon_UpgradeTab_Abilities>
+	<Mashed_Bloodmoon_UpgradeTab_Claws>Beast Form Claws</Mashed_Bloodmoon_UpgradeTab_Claws>
+	<Mashed_Bloodmoon_UpgradeTab_Totems>Totems</Mashed_Bloodmoon_UpgradeTab_Totems>
+	<!-- ==========[Beast hunt page]==========-->
+	<Mashed_Bloodmoon_BeastHuntDesc>Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.\n\nEach completed beast hunt will reward {0_labelShort} with a permanent stacking mood bonus, and potentially other gifts.\n\nHint: You can click on the hearts to view information about the target.\n\nCompleted beast hunts: {1}</Mashed_Bloodmoon_BeastHuntDesc>
+	<Mashed_Bloodmoon_BeastHuntHidden>Hidden</Mashed_Bloodmoon_BeastHuntHidden>
+	<Mashed_Bloodmoon_BeastHuntHiddenDesc>Progress this beast hunt to reveal it.</Mashed_Bloodmoon_BeastHuntHiddenDesc>
+	<Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>Reach monolith level {0} to reveal it.</Mashed_Bloodmoon_BeastHuntHiddenAnomalyDesc>
+	<Mashed_Bloodmoon_BeastHuntTab_Hearts>Consume Hearts</Mashed_Bloodmoon_BeastHuntTab_Hearts>
+	<Mashed_Bloodmoon_BeastHuntTab_Kills>Beast Form Kills</Mashed_Bloodmoon_BeastHuntTab_Kills>
+	<Mashed_Bloodmoon_BeastHuntTab_Proficiency>Lycanthrope Proficiency</Mashed_Bloodmoon_BeastHuntTab_Proficiency>
+	<Mashed_Bloodmoon_BeastHuntTab_Other>Other</Mashed_Bloodmoon_BeastHuntTab_Other>
+	<Mashed_Bloodmoon_BeastHuntComplete>{0_labelShort} has completed {1_label}</Mashed_Bloodmoon_BeastHuntComplete>
+	<!-- ==========[Lycanthrope Requirement Worker acceptance reason]==========-->
+	<Mashed_Bloodmoon_RequirementWorker_MissingOneOf>requires one of:</Mashed_Bloodmoon_RequirementWorker_MissingOneOf>
+	<Mashed_Bloodmoon_RequirementWorker_Missing>requires {0_label}</Mashed_Bloodmoon_RequirementWorker_Missing>
+	<Mashed_Bloodmoon_RequirementWorker_MissingIdeo>ideoligion requires {0_label}</Mashed_Bloodmoon_RequirementWorker_MissingIdeo>
+	<Mashed_Bloodmoon_RequirementWorker_MissingIdeoOneOf>ideoligion requires one of:</Mashed_Bloodmoon_RequirementWorker_MissingIdeoOneOf>
+	<Mashed_Bloodmoon_RequirementWorker_MissingPsylink>requires a psylink of at least level {0}</Mashed_Bloodmoon_RequirementWorker_MissingPsylink>
+	<Mashed_Bloodmoon_RequirementWorker_HediffSeverity>of at least a severity of {0}</Mashed_Bloodmoon_RequirementWorker_HediffSeverity>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidRace>is not a {0_label}</Mashed_Bloodmoon_RequirementWorker_InvalidRace>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidRaceOneOf>is not of any race:</Mashed_Bloodmoon_RequirementWorker_InvalidRaceOneOf>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidRecord>{0_label} record must be at least {1}</Mashed_Bloodmoon_RequirementWorker_InvalidRecord>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidSkill>{0_label} skill must be at least {1}</Mashed_Bloodmoon_RequirementWorker_InvalidSkill>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidTotemCount>{0_label} totem level must be at least {1}</Mashed_Bloodmoon_RequirementWorker_InvalidTotemCount>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidBeastHunt>must complete the {0} beast hunt</Mashed_Bloodmoon_RequirementWorker_InvalidBeastHunt>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidBeastHuntCount>must complete at least {0} beast hunts</Mashed_Bloodmoon_RequirementWorker_InvalidBeastHuntCount>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidClawType>must unlock the {0} beast form claws</Mashed_Bloodmoon_RequirementWorker_InvalidClawType>
+	<Mashed_Bloodmoon_RequirementWorker_InvalidClawTypeEquipped>must equip the {0} beast form claws</Mashed_Bloodmoon_RequirementWorker_InvalidClawTypeEquipped>
+	<!-- ==========[abilities]==========-->
+	<Mashed_Bloodmoon_AbilityStressCost>Ability use stress cost: {0}</Mashed_Bloodmoon_AbilityStressCost>
+	<Mashed_Bloodmoon_AbilityStressTooHigh>using {0_label} would exceed stress limit</Mashed_Bloodmoon_AbilityStressTooHigh>
+	<Mashed_Bloodmoon_AbilityHeartCost>Ability use heart cost: {0}</Mashed_Bloodmoon_AbilityHeartCost>
+	<Mashed_Bloodmoon_AbilityNotEnoughHearts>not enough consumed hearts to use {0_label}</Mashed_Bloodmoon_AbilityNotEnoughHearts>
+	<Mashed_Bloodmoon_AbilityLunarRequirementNotMet>There is not enough moonlight</Mashed_Bloodmoon_AbilityLunarRequirementNotMet>
+	<Mashed_Bloodmoon_SpectralBeastName>{0}'s {1}</Mashed_Bloodmoon_SpectralBeastName>
+	<!-- ==========[upgrades]==========-->
+	<Mashed_Bloodmoon_TotemStatOffset>From {0}: +</Mashed_Bloodmoon_TotemStatOffset>
+	<Mashed_Bloodmoon_TotemStatPerLevel>Each level gives {0} ({1} max)</Mashed_Bloodmoon_TotemStatPerLevel>
+	<Mashed_Bloodmoon_TotemLevelUp>{0_labelShort} has increased their {1_label} level by {2}</Mashed_Bloodmoon_TotemLevelUp>
+	<Mashed_Bloodmoon_ConsumedTotemsTransferred>{0_labelShort} has gained {1} totems by consuming {2_labelShort}'s heart</Mashed_Bloodmoon_ConsumedTotemsTransferred>
+	<Mashed_Bloodmoon_TotemLimitReached>{0_labelShort} has already reached the limit for {1_label}</Mashed_Bloodmoon_TotemLimitReached>
+	<Mashed_Bloodmoon_AbilityUnlocked>{0_labelShort} has unlocked the {1_label} ability for use in beast form</Mashed_Bloodmoon_AbilityUnlocked>
+	<Mashed_Bloodmoon_AbilityAlreadyUnlocked>{0_labelShort} has already unlocked the {1_label} ability</Mashed_Bloodmoon_AbilityAlreadyUnlocked>
+	<Mashed_Bloodmoon_ClawsUnlocked>{0_labelShort} has unlocked the {1_label} beat form claws for use in beast form</Mashed_Bloodmoon_ClawsUnlocked>
+	<Mashed_Bloodmoon_ClawAlreadyUnlocked>{0_labelShort} has already unlocked the {1_label} beast form claws</Mashed_Bloodmoon_ClawAlreadyUnlocked>
+	<Mashed_Bloodmoon_GainedTrait>{0_labelShort} has gained the {1} trait</Mashed_Bloodmoon_GainedTrait>
+	<!-- ==========[messages]==========-->
+	<Mashed_Bloodmoon_NotLycanthrope>{0_labelShort} is not a lycanthrope</Mashed_Bloodmoon_NotLycanthrope>
+	<Mashed_Bloodmoon_IsLycanthrope>{0_labelShort} is a lycanthrope</Mashed_Bloodmoon_IsLycanthrope>
+	<Mashed_Bloodmoon_InBeastForm>{0_labelShort} is in their beast form</Mashed_Bloodmoon_InBeastForm>
+	<Mashed_Bloodmoon_NotInBeastForm>{0_labelShort} is not in their beast form</Mashed_Bloodmoon_NotInBeastForm>
+	<Mashed_Bloodmoon_SaniesLupinusTransitioned>{0_labelShort}'s Sanies Lupinus has transitioned into dormant lycanthropy</Mashed_Bloodmoon_SaniesLupinusTransitioned>
+	<Mashed_Bloodmoon_LycanthropeCured>{0_labelShort} has been cured of their lycanthropy</Mashed_Bloodmoon_LycanthropeCured>
+	<Mashed_Bloodmoon_StressReduced>{0_labelShort}'s slaughter has temporarily sated {0_possessive} inner beast</Mashed_Bloodmoon_StressReduced>
+	<Mashed_Bloodmoon_BornWithLycanthropy>{0_labelShort} was born with lycanthropy</Mashed_Bloodmoon_BornWithLycanthropy>
+	<!-- ==========[wolfsblood altar]==========-->
+	<Mashed_Bloodmoon_AltarFillAmount>lycanthrope blood amount: {0}</Mashed_Bloodmoon_AltarFillAmount>
+	<Mashed_Bloodmoon_WolfsbloodAltarFull>{0} is full</Mashed_Bloodmoon_WolfsbloodAltarFull>
+	<Mashed_Bloodmoon_WolfsbloodAltarEmpty>{0} is empty</Mashed_Bloodmoon_WolfsbloodAltarEmpty>
+	<Mashed_Bloodmoon_StatsReport_WolfsbloodAltar>Lycanthrope blood amount ({0})</Mashed_Bloodmoon_StatsReport_WolfsbloodAltar>
+	<Mashed_Bloodmoon_StatsReport_WolfsbloodAltarAbstract>Per lycanthrope blood amount {0}: 0-{1}</Mashed_Bloodmoon_StatsReport_WolfsbloodAltarAbstract>
+	<!-- ==========[misc]==========-->
+	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>
+	<Mashed_Bloodmoon_RoleRequirement_Lycanthrope>must be a lycanthrope</Mashed_Bloodmoon_RoleRequirement_Lycanthrope>
+	<Mashed_Bloodmoon_StatAffecter_LycanthropeTransformed>in beast form</Mashed_Bloodmoon_StatAffecter_LycanthropeTransformed>
+</LanguageData>

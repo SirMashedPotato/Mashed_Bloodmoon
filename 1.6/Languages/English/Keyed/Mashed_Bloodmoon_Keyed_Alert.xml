@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- ==========[Alert_IdleTransformedLycanthrope]==========-->
+	<Mashed_Bloodmoon_IdleTransformedLycanthrope_Label>1 transformed lycanthrope idle</Mashed_Bloodmoon_IdleTransformedLycanthrope_Label>
+	<Mashed_Bloodmoon_IdleTransformedLycanthropes_Label>{0} transformed lycanthropes idle</Mashed_Bloodmoon_IdleTransformedLycanthropes_Label>
+	<Mashed_Bloodmoon_IdleTransformedLycanthrope_Desc>These transformed lycanthropes are wandering idly:\n{0}\n\nThe longer they remain transformed, the longer they will take to recover from transformation fatigue. If they remain transformed too long they will enter a lycanthrope fury. Consider ending their transformation so they can do normal things, like play chess.</Mashed_Bloodmoon_IdleTransformedLycanthrope_Desc>
+</LanguageData>
