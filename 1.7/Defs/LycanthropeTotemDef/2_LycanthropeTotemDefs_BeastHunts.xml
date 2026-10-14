@@ -32,7 +32,7 @@
 		<description>Proof of a wise hunter. Each level grants a 3% increase to the amount of lycanthropic experience gained.\n\nThis totem can only by upgraded by completing the Werethrumbo beast hunts.</description>
 		<statDef>Mashed_Bloodmoon_LycanthropeExperienceGainFactor</statDef>
 		<maxLevel>3</maxLevel>
-		<statIncreasePerLevel>0.03</statIncreasePerLevel>
+		<statIncreasePerLevel>0.1</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
 		<canBeTransferred>false</canBeTransferred>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>

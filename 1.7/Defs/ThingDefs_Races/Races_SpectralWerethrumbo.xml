@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_SpectralWerethrumbo]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerethrumboThingBase">
+		<defName>Mashed_Bloodmoon_SpectralWerethrumbo</defName>
+		<label>spectral werethrumbo</label>
+		<description>A spectral werethrumbo summoned by a lycanthrope. It will only remain in this form for a short time before dissipating.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver.\n\n&lt;color=#E5E54C&gt;Thrumbosbane Weakness&lt;/color&gt;\nStanding in thrumbosbane gas will cause constant toxic buildup.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>horn</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>28</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>23</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<baseBodySize>2.2</baseBodySize>
+			<baseHealthScale>9</baseHealthScale>
+			<baseHungerRate>0</baseHungerRate>
+			<bloodDef IsNull="true"/>
+			<bloodSmearDef IsNull="true"/>
+			<foodType Inherit="false">None</foodType>
+			<alwaysAwake>true</alwaysAwake>
+			<hasMeat>false</hasMeat>
+			<hasCorpse>false</hasCorpse>
+			<canBeVacuumBurnt>false</canBeVacuumBurnt>
+		</race>
+	</ThingDef>
+	<PawnKindDef>
+		<defName>Mashed_Bloodmoon_SpectralWerethrumbo</defName>
+		<label>spectral werethrumbo</label>
+		<race>Mashed_Bloodmoon_SpectralWerethrumbo</race>
+		<combatPower>600</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_SpectralWerethrumbo/Mashed_Bloodmoon_SpectralWerethrumbo</texPath>
+					<drawSize>2.5</drawSize>
+					<shaderType>TransparentPostLight</shaderType>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
