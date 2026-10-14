@@ -93,7 +93,7 @@ namespace Mashed_Bloodmoon
             {
                 return 0;
             }
-            return (int)targetPawn.kindDef.combatPower * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier; //TODO add exp gain stat?
+            return LycanthropeUtility.GetExperienceGain(parent.pawn, targetPawn.kindDef.combatPower);
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)

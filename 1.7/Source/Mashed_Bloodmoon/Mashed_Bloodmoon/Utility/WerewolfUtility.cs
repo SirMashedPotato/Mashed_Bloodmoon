@@ -54,7 +54,7 @@ namespace Mashed_Bloodmoon
             incidentDef.Worker.TryExecute(incidentParms);
         }
 
-        internal static float GetIncidentPoints(float initialPoints)
+        private static float GetIncidentPoints(float initialPoints)
         {
             float finalPoints = initialPoints;
 

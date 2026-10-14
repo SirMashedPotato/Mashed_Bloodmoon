@@ -10,7 +10,7 @@
 		</descriptionHyperlinks>
 		<renderNodeProperties>
 			<li>
-				<debugLabel>eye glow</debugLabel>
+				<debugLabel>eye glow</debugLabel> <!-- rework to pull texture in c#-->
 				<color>(233,208,138)</color>
 				<drawSize>1.4</drawSize>
 				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>

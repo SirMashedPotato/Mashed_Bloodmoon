@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumboBase]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef Name="Mashed_Bloodmoon_FeralWerethrumboBase" Abstract="true">
+		<extraTooltip>Completing this Beast Hunt increases the level of the Totem of Wisdom by 1.</extraTooltip>
+		<targetThingDef>Mashed_Bloodmoon_FeralWerethrumbo</targetThingDef>
+		<completionWorkers>
+			<li Class="Mashed_Bloodmoon.CompletionWorker_UpgradeTotem">
+				<totemTypeDef>Mashed_Bloodmoon_TotemWisdom</totemTypeDef>
+				<useCount>1</useCount>
+			</li>
+		</completionWorkers>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumboI]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerethrumboBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumboI</defName>
+		<label>beast hunt: Werethrumbo I</label>
+		<description>Consume the heart of a feral werethrumbo.</description>
+		<targetCount>1</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumboII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerethrumboBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumboII</defName>
+		<label>beast hunt: Werethrumbo II</label>
+		<description>Consume the hearts of 3 feral werethrumbo.</description>
+		<targetCount>3</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumboIII]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerethrumboBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumboIII</defName>
+		<label>beast hunt: Werethrumbo III</label>
+		<description>Consume the hearts of 6 feral werethrumbo.</description>
+		<targetCount>6</targetCount>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+</Defs>

@@ -109,5 +109,11 @@ namespace Mashed_Bloodmoon
                 beastHuntDef.ProgressBeastHunt(parent);
             }
         }
+        
+        internal static int GetExperienceGain(Pawn parent, float baseAmount)
+        {
+
+            return (int)(baseAmount * parent.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeExperienceGainFactor) * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier);
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_LycanthropeStat]==========-->
-	<StatDef Name="Mashed_Bloodmoon_LycanthropeStat" Abstract="True"> 
+	<StatDef Name="Mashed_Bloodmoon_LycanthropeStat" Abstract="True">
 		<category>Mashed_Bloodmoon_Lycanthrope</category>
 		<defaultBaseValue>0</defaultBaseValue>
 		<minValue>0</minValue>
@@ -83,6 +83,21 @@
 		<parts>
 			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
 				<totemTypeDef>Mashed_Bloodmoon_TotemHunger</totemTypeDef>
+			</li>
+		</parts>
+	</StatDef>
+	<!-- ==========[Mashed_Bloodmoon_LycanthropeExperienceGainFactor]==========-->
+	<StatDef ParentName="Mashed_Bloodmoon_LycanthropeStat">
+		<defName>Mashed_Bloodmoon_LycanthropeExperienceGainFactor</defName>
+		<label>lycanthrope experience factor</label>
+		<description>A multiplier on the amount of lycanthrope experience gained.</description>
+		<toStringStyle>PercentZero</toStringStyle>
+		<defaultBaseValue>1</defaultBaseValue>
+		<hideAtValue>1</hideAtValue>
+		<displayPriorityInCategory>8</displayPriorityInCategory>
+		<parts>
+			<li Class="Mashed_Bloodmoon.StatPart_LycanthropeTotems">
+				<totemTypeDef>Mashed_Bloodmoon_TotemWisdom</totemTypeDef>
 			</li>
 		</parts>
 	</StatDef>

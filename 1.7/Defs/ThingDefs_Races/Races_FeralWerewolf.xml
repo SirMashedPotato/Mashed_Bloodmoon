@@ -26,7 +26,7 @@
 			<disableIgniteVerb>true</disableIgniteVerb>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
 			<foodType>CarnivoreAnimal</foodType>
-			<body>Mashed_Ashlands_FeralWerewolf</body>
+			<body>Mashed_Ashlands_WerebeastWithPaws</body>
 			<leatherDef>Mashed_Bloodmoon_WerewolfPelt</leatherDef>
 			<useMeatFrom>Human</useMeatFrom>
 			<needsRest>false</needsRest>
