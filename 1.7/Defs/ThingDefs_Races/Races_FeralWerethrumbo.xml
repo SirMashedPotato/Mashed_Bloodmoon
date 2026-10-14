@@ -107,6 +107,11 @@
 		<race>Mashed_Bloodmoon_FeralWerethrumbo</race>
 		<combatPower>600</combatPower>
 		<maxPerGroup>1</maxPerGroup>
+		<startingHediffs Inherit="false">
+			<li>
+				<def>Mashed_Bloodmoon_FeralWerethrumbo</def>
+			</li>
+		</startingHediffs>
 		<abilities>
 
 		</abilities>

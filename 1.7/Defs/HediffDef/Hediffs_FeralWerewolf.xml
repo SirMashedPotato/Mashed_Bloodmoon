@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolf]==========-->
-	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase" Name="Mashed_Bloodmoon_FeralWerewolfBase">
 		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
 		<label>feral lycanthrope</label>
 		<description>A lycanthrope that has fully succumbed to its beast form.</description>
@@ -10,7 +10,7 @@
 		</descriptionHyperlinks>
 		<renderNodeProperties>
 			<li>
-				<debugLabel>eye glow</debugLabel> <!-- rework to pull texture in c#-->
+				<debugLabel>eye glow</debugLabel>
 				<color>(233,208,138)</color>
 				<drawSize>1.4</drawSize>
 				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
@@ -28,6 +28,23 @@
 				</damageFactors>
 			</li>
 		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumbo]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_FeralWerewolfBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumbo</defName>
+		<renderNodeProperties Inherit="false">
+			<li>
+				<debugLabel>eye glow</debugLabel>
+				<color>(215,231,244)</color>
+				<drawSize>1.66</drawSize>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_WerethrumboEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>1</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+				<pawnType>NonHumanlikeOnly</pawnType>
+			</li>
+		</renderNodeProperties>
 	</HediffDef>
 	<!-- ==========[Mashed_Bloodmoon_ApexWerewolf]==========-->
 	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
