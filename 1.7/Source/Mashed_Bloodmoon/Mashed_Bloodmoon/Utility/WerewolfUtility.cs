@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
 {
     internal static class WerewolfUtility
     {
-        private const int RaidPointsCap = 10000;
+        private const int RaidPointsCap = 3330;
 
         internal static Faction GetFeralWerewolfFaction()
         {
