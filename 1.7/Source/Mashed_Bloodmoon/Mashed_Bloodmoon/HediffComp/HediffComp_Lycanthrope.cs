@@ -143,6 +143,7 @@ namespace Mashed_Bloodmoon
             unlockedAbilityTracker.Add(LycanthropeAbilityDefOf.Mashed_Bloodmoon_ConsumeHeart);
             equippedClawType = LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws;
             unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_LycanthropeClaws);
+            unlockedClawTracker.Add(LycanthropeClawTypeDefOf.Mashed_Bloodmoon_RegularClaws);
         }
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)

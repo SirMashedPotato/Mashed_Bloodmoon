@@ -10,5 +10,6 @@ namespace Mashed_Bloodmoon
             DefOfHelper.EnsureInitializedInCtor(typeof(LycanthropeClawTypeDefOf));
         }
         public static LycanthropeClawTypeDef Mashed_Bloodmoon_LycanthropeClaws;
+        public static LycanthropeClawTypeDef Mashed_Bloodmoon_RegularClaws;
     }
 }
