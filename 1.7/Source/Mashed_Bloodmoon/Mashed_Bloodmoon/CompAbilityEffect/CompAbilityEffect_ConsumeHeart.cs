@@ -68,13 +68,17 @@ namespace Mashed_Bloodmoon
 
         public override string ExtraLabelMouseAttachment(LocalTargetInfo target)
         {
-            if (!ConsumeHeartUtility.IsvalidThing(target.Thing))
+            if (!ConsumeHeartUtility.IsValidThing(target.Thing))
             {
                 return base.ExtraLabelMouseAttachment(target);
             }
             
-            Pawn targetPawn = ConsumeHeartUtility.GetTargetPawn(target.Thing);
+            if (target.Thing is not Corpse && parent.pawn.WorkTagIsDisabled(WorkTags.Violent))
+            {
+                return "IsIncapableOfViolence".Translate(parent.pawn.LabelShort, parent.pawn);
+            }
 
+            Pawn targetPawn = ConsumeHeartUtility.GetTargetPawn(target.Thing);
             return "Mashed_Bloodmoon_ConsumeHeartExtraAttachment".Translate(GetExperienceGain(targetPawn));
         }
 
@@ -96,6 +100,17 @@ namespace Mashed_Bloodmoon
             return LycanthropeUtility.GetExperienceGain(parent.pawn, targetPawn.kindDef.combatPower);
         }
 
+        public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            if (target.Thing is not Corpse && parent.pawn.WorkTagIsDisabled(WorkTags.Violent))
+            {
+                Messages.Message("IsIncapableOfViolence".Translate(parent.pawn.LabelShort, parent.pawn), MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
+            
+            return base.CanApplyOn(target, dest);
+        }
+
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
             if (target.Thing == null)
@@ -112,7 +127,7 @@ namespace Mashed_Bloodmoon
                 return false;
             }
 
-            return ConsumeHeartUtility.IsvalidThing(target.Thing) && base.Valid(target, throwMessages);
+            return ConsumeHeartUtility.IsValidThing(target.Thing) && base.Valid(target, throwMessages);
         }
     }
 }

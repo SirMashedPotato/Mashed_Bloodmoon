@@ -16,6 +16,7 @@
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<warmupEffecter>EatMeat</warmupEffecter>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<comps>
 			<li Class="Mashed_Bloodmoon.CompProperties_AbilityConsumeHeart">
 				<goodwillImpact>-70</goodwillImpact>

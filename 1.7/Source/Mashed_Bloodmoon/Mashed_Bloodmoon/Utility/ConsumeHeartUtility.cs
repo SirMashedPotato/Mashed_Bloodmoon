@@ -7,7 +7,7 @@ namespace Mashed_Bloodmoon
 {
     internal static class ConsumeHeartUtility
     {
-        internal static bool IsvalidThing(Thing target, bool onlyCorpse = false)
+        internal static bool IsValidThing(Thing target, bool onlyCorpse = false)
         {
             Pawn pawn = GetTargetPawn(target, onlyCorpse);
 
@@ -22,12 +22,7 @@ namespace Mashed_Bloodmoon
             }
 
             BodyPartRecord part = GetBodyPartRecord(pawn);
-            if (part == null)
-            {
-                return false;
-            }
-
-            return true;
+            return part != null;
         }
 
         internal static Pawn GetTargetPawn(Thing target, bool onlyCorpse = false)
@@ -43,14 +38,12 @@ namespace Mashed_Bloodmoon
             }
             else
             {
-                if (target is Corpse c)
+                if (target is not Corpse c) return null;
+                if (c.GetRotStage() != RotStage.Fresh)
                 {
-                    if (c.GetRotStage() != RotStage.Fresh)
-                    {
-                        return null;
-                    }
-                    pawn = c.InnerPawn;
+                    return null;
                 }
+                pawn = c.InnerPawn;
             }
 
             return pawn;
@@ -58,11 +51,7 @@ namespace Mashed_Bloodmoon
         internal static BodyPartRecord GetBodyPartRecord(Pawn pawn)
         {
             List<BodyPartRecord> parts = pawn?.health?.hediffSet?.GetNotMissingParts(tag: BodyPartTagDefOf.BloodPumpingSource).ToList();
-            if (parts.NullOrEmpty())
-            {
-                return null;
-            }
-            return parts.RandomElement();
+            return parts.NullOrEmpty() ? null : parts.RandomElement();
         }
     }
 }

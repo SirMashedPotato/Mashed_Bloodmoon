@@ -49,7 +49,7 @@ namespace Mashed_Bloodmoon
 
         public override AcceptanceReport CanDesignateThing(Thing t)
         {
-            return ConsumeHeartUtility.IsvalidThing(t, true);
+            return ConsumeHeartUtility.IsValidThing(t, onlyCorpse: true);
         }
 
         public override void DesignateThing(Thing t)
