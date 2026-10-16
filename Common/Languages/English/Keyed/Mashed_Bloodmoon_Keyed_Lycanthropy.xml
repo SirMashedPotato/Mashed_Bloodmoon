@@ -107,6 +107,7 @@
 	<!-- ==========[misc]==========-->
 	<Mashed_Bloodmoon_Lycanthrope>Lycanthrope</Mashed_Bloodmoon_Lycanthrope>
 	<Mashed_Bloodmoon_LycanthropeLevel>Lycanthrope level</Mashed_Bloodmoon_LycanthropeLevel>
+	<Mashed_Bloodmoon_LycanthropeExperienceGained>+{0} experience</Mashed_Bloodmoon_LycanthropeExperienceGained>
 	<Mashed_Bloodmoon_RoleRequirement_Lycanthrope>must be a lycanthrope</Mashed_Bloodmoon_RoleRequirement_Lycanthrope>
 	<Mashed_Bloodmoon_StatAffecter_LycanthropeTransformed>in beast form</Mashed_Bloodmoon_StatAffecter_LycanthropeTransformed>
 </LanguageData>
