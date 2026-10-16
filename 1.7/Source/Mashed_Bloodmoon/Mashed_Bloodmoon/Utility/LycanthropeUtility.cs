@@ -71,7 +71,7 @@ namespace Mashed_Bloodmoon
             if (!victimCompLycanthrope.usedTotemTracker.NullOrEmpty())
             {
                 int transferredTotemCount = 0;
-                Dictionary<LycanthropeTotemDef, int> gainedTotems = new Dictionary<LycanthropeTotemDef, int>();
+                Dictionary<LycanthropeTotemDef, int> gainedTotems = new();
                 foreach (KeyValuePair<LycanthropeTotemDef, int> usedTotem in victimCompLycanthrope.usedTotemTracker)
                 {
                     if (usedTotem.Key.canBeTransferred)
@@ -112,7 +112,6 @@ namespace Mashed_Bloodmoon
         
         internal static int GetExperienceGain(Pawn parent, float baseAmount)
         {
-
             return (int)(baseAmount * parent.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropeExperienceGainFactor) * Mashed_Bloodmoon_ModSettings.Cheat_ConsumedHeartMultiplier);
         }
     }

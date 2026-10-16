@@ -42,9 +42,9 @@ namespace Mashed_Bloodmoon
 
         public int CurrentMaxLevel() => LycanthropeUtility.GetCurrentLevelCap(completedBeastHuntsCount);
         
-        public int GainExperience(Pawn targetPawn, int experienceGain)
-        {
-            if (experience <= 0)
+        public int GainExperience(int experienceGain)
+        {                
+            if (experienceGain <= 0)
             {
                 return 0;
             }
@@ -53,11 +53,6 @@ namespace Mashed_Bloodmoon
             int levelsGained = 0;
             while (experience >= LycanthropeUtility.experiencePerLevel)
             {
-                if (experience < LycanthropeUtility.experiencePerLevel)
-                {
-                    break;
-                }
-
                 if (usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts) + levelsGained >= CurrentMaxLevel())
                 {
                     experience = LycanthropeUtility.experiencePerLevel - 1;
