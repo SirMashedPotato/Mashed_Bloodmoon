@@ -50,14 +50,15 @@ namespace Mashed_Bloodmoon
             }
 
             experience += experienceGain;
-            if (parent.pawn.Map != null)
+            int currentLevel = usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts);
+            if (parent.pawn.Map != null && currentLevel < CurrentMaxLevel())
             {
                 MoteMaker.ThrowText(parent.pawn.PositionHeld.ToVector3(), parent.pawn.Map, "Mashed_Bloodmoon_LycanthropeExperienceGained".Translate(experienceGain), Color.white, 3.65f);
             }
             int levelsGained = 0;
             while (experience >= LycanthropeUtility.experiencePerLevel)
             {
-                if (usedTotemTracker.TryGetValue(LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts) + levelsGained >= CurrentMaxLevel())
+                if (currentLevel + levelsGained >= CurrentMaxLevel())
                 {
                     experience = LycanthropeUtility.experiencePerLevel - 1;
                     break;
