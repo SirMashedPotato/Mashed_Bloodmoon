@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
     public class Page_CustomiseBeastForm : LycanthropePage
     {
         private const float PawnZoom = 0.9f;
-        private Rot4 pawnRotation = new Rot4(2);
+        private Rot4 pawnRotation = new(2);
 
         ///Cached values
         private readonly LycanthropeBeastFormDef originalBeastFormDef;
@@ -20,7 +20,7 @@ namespace Mashed_Bloodmoon
 
         private List<FloatMenuOption> lycanthropeTypeOptions;
         private List<FloatMenuOption> transformationTypeOptions;
-        private List<FloatMenuOption> otherPlayerLycanthropes;
+        private List<FloatMenuOption> copyFromOptions;
 
         public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
@@ -34,13 +34,19 @@ namespace Mashed_Bloodmoon
             Reset();
             CacheLycanthropeTypeOptions();
             CacheTransformationTypeOptions();
-            CacheOtherPlayerLycanthropes();
-
+            CacheCopyFromOptions();
         }
 
         public override void DoWindowContents(Rect inRect)
         {
             DrawPageTitle(inRect);
+            
+            if (Widgets.ButtonImage(new Rect(inRect.width - 30f, 0f, 30f, 30f), TexButton.Copy, false, "Mashed_Bloodmoon_CopyBeastForm".Translate()))
+            {
+                FloatMenu typeOptions = new(copyFromOptions);
+                Find.WindowStack.Add(typeOptions);
+            }
+            
             inRect.yMin += rectLimitY;
             DoBottomButtons(inRect, "Accept".Translate(), "Mashed_Bloodmoon_UndoChanges".Translate(), midAct: Reset, showNext: true, doNextOnKeypress: false);
 
@@ -72,7 +78,7 @@ namespace Mashed_Bloodmoon
             DoColourSection(tertiaryRect, ref compLycanthrope.tertiaryColour, originalTertiaryColour, compLycanthrope.BeastFormDef.TertiaryColorDefault, "Mashed_Bloodmoon_CustomiseBeastForm_TertiaryLabel");
         }
 
-        private void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
+        private static void DoColourSection(Rect mainRect, ref Color compColor, Color oldColor, Color defaultColor, string label)
         {
             Rect inRect = mainRect;
             inRect.x += Assets.RectPadding;
@@ -130,12 +136,7 @@ namespace Mashed_Bloodmoon
             RectDivider rectDivider = new(parent, 195906069, null);
             TaggedString label = "Mashed_Bloodmoon_DefaultColor".Translate().CapitalizeFirst();
             TaggedString label2 = "OldColor".Translate().CapitalizeFirst();
-            float width = Mathf.Max(new float[]
-            {
-                100f,
-                label.GetWidthCached(),
-                label2.GetWidthCached()
-            });
+            float width = Mathf.Max(100f, label.GetWidthCached(), label2.GetWidthCached());
             RectDivider rect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             if (Widgets.ButtonText(rect2.NewCol(width, HorizontalJustification.Left), label))
             {
@@ -199,7 +200,7 @@ namespace Mashed_Bloodmoon
 
             if (Widgets.ButtonText(lycanthropeTypeRect, "Mashed_Bloodmoon_SelectLycanthropeType".Translate().CapitalizeFirst()))
             {
-                FloatMenu typeOptions = new FloatMenu(lycanthropeTypeOptions);
+                FloatMenu typeOptions = new(lycanthropeTypeOptions);
                 Find.WindowStack.Add(typeOptions);
             }
 
@@ -229,7 +230,7 @@ namespace Mashed_Bloodmoon
 
             if (Widgets.ButtonText(transformationTypeRect, "Mashed_Bloodmoon_SelectTransformationType".Translate().CapitalizeFirst()))
             {
-                FloatMenu typeOptions = new FloatMenu(transformationTypeOptions);
+                FloatMenu typeOptions = new(transformationTypeOptions);
                 Find.WindowStack.Add(typeOptions);
             }
         }
@@ -326,10 +327,43 @@ namespace Mashed_Bloodmoon
             }
         }
         
-        private void CacheOtherPlayerLycanthropes()
+        private void CacheCopyFromOptions()
         {
-            otherPlayerLycanthropes = [];
+            copyFromOptions = [];
+            IEnumerable<Pawn> otherLycanthropes = LycanthropeUtility.GetPlayerLycanthropes(pawn.Map);
+            foreach (Pawn other in otherLycanthropes)
+            {
+                if (other == pawn) continue;
+                FloatMenuOption item = new(other.NameFullColored, delegate
+                {
+                    HediffComp_Lycanthrope compLycanthropeOther = LycanthropeUtility.GetCompLycanthrope(other);
+                    
+                    if (compLycanthropeOther.BeastFormDef.PawnRequirementsMet(pawn))
+                    {
+                        compLycanthrope.BeastFormDef = compLycanthropeOther.BeastFormDef;
+                    }
+                    
+                    if (compLycanthropeOther.TransformationTypeDef.PawnRequirementsMet(pawn))
+                    {
+                        compLycanthrope.TransformationTypeDef = compLycanthropeOther.TransformationTypeDef;
+                    }
+                    
+                    compLycanthrope.primaryColour = compLycanthropeOther.primaryColour;
+                    compLycanthrope.secondaryColour = compLycanthropeOther.secondaryColour;
+                    compLycanthrope.tertiaryColour = compLycanthropeOther.tertiaryColour;
+                });
+                
+                copyFromOptions.Add(item);
+            }
 
+            if (copyFromOptions.NullOrEmpty())
+            {
+                FloatMenuOption item = new("None".Translate(), null)
+                {
+                    Disabled = true
+                };
+                copyFromOptions.Add(item);
+            }
         }
 
         private void Reset()

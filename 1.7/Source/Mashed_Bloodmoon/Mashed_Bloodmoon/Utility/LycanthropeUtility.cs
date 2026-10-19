@@ -22,6 +22,17 @@ namespace Mashed_Bloodmoon
             int maxLevelCap = LycanthropeTotemDefOf.Mashed_Bloodmoon_ConsumedHearts.maxLevel;
             levelCapIncreasePerBeastHunt = (maxLevelCap - baseLevelCap) / beastHuntCount;
         }
+
+        internal static IEnumerable<Pawn> GetPlayerLycanthropes(Map map)
+        {
+            foreach (Pawn pawn in map.mapPawns.FreeHumanlikesOfFaction(Faction.OfPlayer))
+            {
+                if (PawnIsLycanthrope(pawn))
+                {
+                    yield return pawn;
+                }
+            }
+        }
         
         internal static int GetCurrentLevelCap(int beastHuntsCompleted = 0) => levelCapIncreasePerBeastHunt * beastHuntsCompleted + baseLevelCap;
         

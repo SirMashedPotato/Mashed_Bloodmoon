@@ -31,10 +31,7 @@ namespace Mashed_Bloodmoon
         {
             Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeImminentTransformation, pawn);
             HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
-            if (hediffComp_Disappears != null)
-            {
-                hediffComp_Disappears.ticksToDisappear = (int)(baseTicks * Rand.Range(1f, 1.5f));
-            }
+            hediffComp_Disappears?.ticksToDisappear = (int)(baseTicks * Rand.Range(1f, 1.5f));
             pawn.health.AddHediff(hediff);
         }
 
@@ -53,10 +50,7 @@ namespace Mashed_Bloodmoon
         {
             Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue, pawn);
             HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
-            if (hediffComp_Disappears != null)
-            {
-                hediffComp_Disappears.ticksToDisappear = duration;
-            }
+            hediffComp_Disappears?.ticksToDisappear = duration;
             pawn.health.AddHediff(hediff);
         }
     }
