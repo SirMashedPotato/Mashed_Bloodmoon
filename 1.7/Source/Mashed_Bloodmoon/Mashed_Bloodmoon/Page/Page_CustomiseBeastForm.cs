@@ -8,18 +8,19 @@ namespace Mashed_Bloodmoon
 {
     public class Page_CustomiseBeastForm : LycanthropePage
     {
-        const float pawnZoom = 0.9f;
-        Rot4 pawnRotation = new Rot4(2);
+        private const float PawnZoom = 0.9f;
+        private Rot4 pawnRotation = new Rot4(2);
 
         ///Cached values
-        readonly LycanthropeBeastFormDef originalBeastFormDef;
-        readonly LycanthropeTransformationTypeDef originalTransformationTypeDef;
-        readonly Color originalPrimaryColour;
-        readonly Color originalSecondaryColour;
-        readonly Color originalTertiaryColour;
+        private readonly LycanthropeBeastFormDef originalBeastFormDef;
+        private readonly LycanthropeTransformationTypeDef originalTransformationTypeDef;
+        private readonly Color originalPrimaryColour;
+        private readonly Color originalSecondaryColour;
+        private readonly Color originalTertiaryColour;
 
-        List<FloatMenuOption> lycanthropeTypeOptions;
-        List<FloatMenuOption> transformationTypeOptions;
+        private List<FloatMenuOption> lycanthropeTypeOptions;
+        private List<FloatMenuOption> transformationTypeOptions;
+        private List<FloatMenuOption> otherPlayerLycanthropes;
 
         public override string PageTitle => "Mashed_Bloodmoon_CustomiseBeastForm".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
@@ -31,8 +32,9 @@ namespace Mashed_Bloodmoon
             originalSecondaryColour = compLycanthrope.secondaryColour;
             originalTertiaryColour = compLycanthrope.tertiaryColour;
             Reset();
-            lycanthropeTypeOptions = CacheLycanthropeTypeOptions();
-            transformationTypeOptions = CacheTransformationTypeOptions();
+            CacheLycanthropeTypeOptions();
+            CacheTransformationTypeOptions();
+            CacheOtherPlayerLycanthropes();
 
         }
 
@@ -78,7 +80,7 @@ namespace Mashed_Bloodmoon
             inRect.width -= Assets.RectPadding;
             inRect.height -= Assets.RectPadding;
 
-            Listing_Standard listing_Standard = new Listing_Standard
+            Listing_Standard listing_Standard = new()
             {
                 ColumnWidth = inRect.width / 2
             };
@@ -114,7 +116,7 @@ namespace Mashed_Bloodmoon
             }
         }
 
-        private void DoColourLine(ref float compColor, ref Listing_Standard listing_Standard, string label)
+        private static void DoColourLine(ref float compColor, ref Listing_Standard listing_Standard, string label)
         {
             compColor = (float)Math.Round(listing_Standard.SliderLabeled(label.Translate().CapitalizeFirst() + " (" + compColor.ToStringPercent() + ")", compColor, 0, 1) * 100) / 100;
         }
@@ -125,7 +127,7 @@ namespace Mashed_Bloodmoon
         private static void ColorReadback(Rect rect, Color defaultColor, Color oldColor, ref Color compColor)
         {
             rect.SplitVertically(rect.width / 2f, out Rect parent, out Rect parent2);
-            RectDivider rectDivider = new RectDivider(parent, 195906069, null);
+            RectDivider rectDivider = new(parent, 195906069, null);
             TaggedString label = "Mashed_Bloodmoon_DefaultColor".Translate().CapitalizeFirst();
             TaggedString label2 = "OldColor".Translate().CapitalizeFirst();
             float width = Mathf.Max(new float[]
@@ -148,7 +150,7 @@ namespace Mashed_Bloodmoon
             }
             Widgets.DrawBoxSolid(rect3, oldColor);
 
-            RectDivider rect4 = new RectDivider(parent2, 195906069, null);
+            RectDivider rect4 = new(parent2, 195906069, null);
             rect4.NewCol(26f, HorizontalJustification.Left);
         }
 
@@ -183,7 +185,7 @@ namespace Mashed_Bloodmoon
             ///Thank god the ui pauses the game
             pawn.Drawer.renderer.SetAllGraphicsDirty();
             RenderTexture pawnImage = PortraitsCache.Get(pawn, new Vector2(pawnRect.width, pawnRect.height), pawnRotation, 
-                cameraZoom: pawnZoom, supersample: true, compensateForUIScale: true, stylingStation: true);
+                cameraZoom: PawnZoom, supersample: true, compensateForUIScale: true, stylingStation: true);
             GUI.DrawTexture(pawnRect, pawnImage);
         }
 
@@ -237,7 +239,7 @@ namespace Mashed_Bloodmoon
             Widgets.DrawMenuSection(mainRect);
             Rect inRect = mainRect.ContractedBy(Assets.RectPadding);
 
-            RectDivider rectDivider = new RectDivider(inRect, inRect.GetHashCode(), null);
+            RectDivider rectDivider = new(inRect, inRect.GetHashCode(), null);
 
             RectDivider rect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
             TaggedString label1 = "Mashed_Bloodmoon_Type".Translate() + ": " + compLycanthrope.BeastFormDef.LabelCap;
@@ -267,37 +269,27 @@ namespace Mashed_Bloodmoon
             compLycanthrope.secondaryColour = originalSecondaryColour;
             compLycanthrope.tertiaryColour = originalTertiaryColour;
         }
-
-        /// <summary>
-        /// Adds the dummy transformation hediff
-        /// </summary>
+        
         public override void PreOpen()
         {
             pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformedDummy);
             base.PreOpen();
         }
-
-        /// <summary>
-        /// Removes the dummy transformation hediff
-        /// </summary>
+        
         public override void PreClose()
         {
             pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeTransformedDummy));
             base.PreClose();
         }
-
-        /// <summary>
-        /// Get list of all lycanthrope types that have been unlocked
-        /// </summary>
-        private List<FloatMenuOption> CacheLycanthropeTypeOptions()
+        
+        private void CacheLycanthropeTypeOptions()
         {
-            lycanthropeTypeOptions = new List<FloatMenuOption>();
+            lycanthropeTypeOptions = [];
 
             foreach (LycanthropeBeastFormDef def in DefDatabase<LycanthropeBeastFormDef>.AllDefs)
             {
-                FloatMenuOption item;
                 AcceptanceReport acceptanceReport = def.PawnRequirementsMet(pawn);
-                item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
+                FloatMenuOption item = new(def.label.CapitalizeFirst(), delegate
                 {
                     compLycanthrope.BeastFormDef = def;
                 });
@@ -310,21 +302,16 @@ namespace Mashed_Bloodmoon
 
                 lycanthropeTypeOptions.Add(item);
             }
-            return lycanthropeTypeOptions;
         }
-
-        /// <summary>
-        /// Get list of all transformation types that have been unlocked
-        /// </summary>
-        private List<FloatMenuOption> CacheTransformationTypeOptions()
+        
+        private void CacheTransformationTypeOptions()
         {
-            transformationTypeOptions = new List<FloatMenuOption>();
+            transformationTypeOptions = [];
 
             foreach (LycanthropeTransformationTypeDef def in DefDatabase<LycanthropeTransformationTypeDef>.AllDefs)
             {
-                FloatMenuOption item;
                 AcceptanceReport acceptanceReport = def.PawnRequirementsMet(pawn);
-                item = new FloatMenuOption(def.label.CapitalizeFirst(), delegate
+                FloatMenuOption item = new(def.label.CapitalizeFirst(), delegate
                 {
                     compLycanthrope.TransformationTypeDef = def;
                 });
@@ -337,7 +324,12 @@ namespace Mashed_Bloodmoon
 
                 transformationTypeOptions.Add(item);
             }
-            return transformationTypeOptions;
+        }
+        
+        private void CacheOtherPlayerLycanthropes()
+        {
+            otherPlayerLycanthropes = [];
+
         }
 
         private void Reset()
