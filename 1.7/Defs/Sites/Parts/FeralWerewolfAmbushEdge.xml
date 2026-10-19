@@ -11,6 +11,7 @@
 		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
 		<defaultHidden>true</defaultHidden>
 		<wantsThreatPoints>true</wantsThreatPoints>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
 		<tags>
 			<li>Mashed_Bloodmoon_FeralWerewolfAmbush</li>
 		</tags>

@@ -12,6 +12,7 @@
 		<arrivedLetter>There is a pack of feral werewolves in this area.</arrivedLetter>
 		<arrivedLetterDef>NegativeEvent</arrivedLetterDef>
 		<wantsThreatPoints>true</wantsThreatPoints>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
 		<tags>
 			<li>Mashed_Bloodmoon_FeralWerewolfPack</li>
 		</tags>
