@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRush]==========-->
+	<EffecterDef>
+		<defName>Mashed_Bloodmoon_AdrenalineRush</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<scale>0.08~0.12</scale>
+				<chancePerTick>0.12</chancePerTick>
+				<positionRadius>1</positionRadius>
+				<fleckDef>Mashed_Bloodmoon_AdrenalineRushFleck</fleckDef>
+				<speed>0.6~0.6</speed>
+				<angle>10~80</angle>
+			</li>
+		</children>
+	</EffecterDef>
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRushFleck]==========-->
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Mashed_Bloodmoon_AdrenalineRushFleck</defName>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Mashed_Bloodmoon_HuntsmansMarkTarget</texPath>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.25</fadeInTime>
+		<solidTime>0.5</solidTime>
+		<fadeOutTime>0.25</fadeOutTime>
+	</FleckDef>
+</Defs>

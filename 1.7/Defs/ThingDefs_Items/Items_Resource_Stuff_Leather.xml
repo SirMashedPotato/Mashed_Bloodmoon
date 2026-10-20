@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_WerewolfPelt]==========-->
+	<ThingDef ParentName="LeatherBase">
+		<defName>Mashed_Bloodmoon_WerewolfPelt</defName>
+		<label>werewolf pelt</label>
+		<description>Thick pelt harvested from a feral werewolf. Insulates and protects very well.</description>
+		<graphicData>
+			<color>(115,110,100)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>3.6</MarketValue>
+			<StuffPower_Armor_Sharp>1.24</StuffPower_Armor_Sharp>
+			<StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>14</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(115,110,100)</color>
+			<commonality>0.01</commonality>
+			<statFactors>
+				<MaxHitPoints>1.5</MaxHitPoints>
+				<Beauty>1.85</Beauty>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+</Defs>

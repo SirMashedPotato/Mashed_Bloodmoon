@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffDef[defName="Shambler" or defName="Ghoul"]/stages/li/statOffsets</xpath>
+		<value>
+			<Mashed_Bloodmoon_LycanthropyResistance>1</Mashed_Bloodmoon_LycanthropyResistance>
+		</value>
+	</Operation>
+</Patch>

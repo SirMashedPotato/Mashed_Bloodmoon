@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HuntersCache]========== -->
+	<ThingSetMakerDef>
+		<defName>Mashed_Bloodmoon_HuntersCache</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+				<li>
+					<weight>0.5</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<categories>
+									<li>Mashed_Bloodmoon_LycanthropeTotems</li>
+								</categories>
+							</filter>
+							<countRange>1</countRange>
+							<maxThingMarketValue>150</maxThingMarketValue>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<!-- expensive ones -->
+					<weight>0.05</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<categories>
+									<li>Mashed_Bloodmoon_LycanthropeTotems</li>
+								</categories>
+							</filter>
+							<countRange>1</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.3</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Mashed_Bloodmoon_PotionWolfsblood</li>
+									<li>Mashed_Bloodmoon_PotionWolfsbane</li>
+								</thingDefs>
+							</filter>
+							<countRange>3~6</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Mashed_Bloodmoon_PotionWolfscure</li>
+								</thingDefs>
+							</filter>
+							<countRange>1~3</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>1</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<maxThingMarketValue>10</maxThingMarketValue>
+							<filter>
+								<categories>
+									<li>Leathers</li>
+								</categories>
+							</filter>
+							<countRange>15~30</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.5</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<maxThingMarketValue>10</maxThingMarketValue>
+							<filter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+							</filter>
+							<countRange>15~30</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+				<li>
+					<weight>0.5</weight>
+					<thingSetMaker Class="ThingSetMaker_StackCount">
+						<fixedParams>
+							<filter>
+								<categories>
+									<li>Silver</li>
+								</categories>
+							</filter>
+							<countRange>10~30</countRange>
+						</fixedParams>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+</Defs>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- ==========[General]==========-->
+	<Mashed_Bloodmoon_ModName>Mashed's Bloodmoon</Mashed_Bloodmoon_ModName>
+	<!-- ==========[Huntsman Moon]==========-->
+	<Mashed_Bloodmoon_HuntsmanMoon_Tab>Huntsman's Moon</Mashed_Bloodmoon_HuntsmanMoon_Tab>
+	<Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>Enable the Huntsman's Moon incidents</Mashed_Bloodmoon_HuntsmanMoon_EnableCondition>
+	<Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>The number of hours between feral werewolf attacks during a Huntsman's Moon: ({0} hours ~ {1} hours)</Mashed_Bloodmoon_HuntsmanMoon_HoursBetweenAttacks>
+	<Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>Multiplier for the strength (points) of feral werewolf raids: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_RaidPointsMultiplier>
+	<Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>Multiplier for the strength (points) of feral werewolf ambushes: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_AmbushPointsMultiplier>
+	<Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>Multiplier for the strength (points) of feral werewolf pack sites: ({0}%)</Mashed_Bloodmoon_HuntsmanMoon_PackPointsMultiplier>
+	<Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>Uncap the strength (points) of feral werewolf raids and ambushes</Mashed_Bloodmoon_HuntsmanMoon_UncapRaidPoints>
+	<Mashed_Bloodmoon_HuntsmanMoon_ChildbirthLycanthropy>Babies born during a Huntsman's Moon may be born with lycanthropy</Mashed_Bloodmoon_HuntsmanMoon_ChildbirthLycanthropy>
+	<!-- ==========[Lycanthropy]==========-->
+	<Mashed_Bloodmoon_Lycanthropy_Tab>Lycanthropy</Mashed_Bloodmoon_Lycanthropy_Tab>
+	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>Enable the lycanthrope options gizmo</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo>
+	<Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>If this is disabled customising and upgrading beast form, as well as viewing beast hunt progress, will instead need to be accessed through a wolfsblood altar.</Mashed_Bloodmoon_Lycanthropy_EnableOptionsGizmo_desc>
+	<Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder>Enable the consume heart order</Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder>
+	<Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_desc>This enables the consume heart order, allowing you to mark corpses. Transformed lycanthropes will automatically consume the hearts of consumed corpses while they are not drafted.</Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartOrder_desc>
+	<Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartMessage>Enable the consumed heart message</Mashed_Bloodmoon_Lycanthropy_EnableConsumeHeartMessage>
+	<Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>Hide the transform gizmo for colony prisoners</Mashed_Bloodmoon_Lycanthropy_PrisonersHideGizmo>
+	<Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>Hide the transform gizmo for colony slaves</Mashed_Bloodmoon_Lycanthropy_SlavesHideGizmo>
+	<Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>Prisoners can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_PrisonersTransformOnDamage>
+	<Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>Slaves can transform and enter a lycanthrope fury when damaged</Mashed_Bloodmoon_Lycanthropy_SlavesTransformOnDamage>
+	<Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>Beast form texture scaling mode:</Mashed_Bloodmoon_Lycanthropy_TextureScalingMode>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize> • Pawn body size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySize>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize> • Pawn draw size</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSize>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmall> • Adaptive Big and Small</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmall>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>Scale the beast form textures based on the pawns body size. This will scale the size correctly for body size genes, but may result in incorrect scaling for HAR races.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BodySizeDesc>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>Scale the beast form textures based on the pawns draw size. This will scale the size correctly for HAR races, but will not scale it at all for genes.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_DrawSizeDesc>
+	<Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc>Scale the beast form textures based on the pawns body size if they have a Big and Small body size gene, otherwise scale based on the pawns draw size. This will scale the size correctly for HAR races, as well as Big and Small body size genes.\n\nObviously this would require Big and Small - Genes &amp; More to be enabled to actually work properly.</Mashed_Bloodmoon_Lycanthropy_ScalingMode_BigAndSmallDesc>
+	<!-- ==========[Cheats]==========-->
+	<Mashed_Bloodmoon_Cheats_Tab>Cheats</Mashed_Bloodmoon_Cheats_Tab>
+	<Mashed_Bloodmoon_Lycanthropy_EnableInfection>Disable Sanies Lupinus infection from lycanthropes and feral werewolves</Mashed_Bloodmoon_Lycanthropy_EnableInfection>
+	<Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>Disable the restless sleep thought replacer</Mashed_Bloodmoon_Lycanthropy_EnableRestlessSleep>
+	<Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier>Multiplier for the number of consumed hearts gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ConsumedHearMultiplier> <!-- Deprecated as of 1.7 -->
+	<Mashed_Bloodmoon_Lycanthropy_ExperienceGainMultiplier>Multiplier for the amount of experience gained when consuming a heart ({0}x)</Mashed_Bloodmoon_Lycanthropy_ExperienceGainMultiplier>
+	<Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier>Multiplier for the duration a lycanthrope is fatigued for after ending a transformation ({0}%)</Mashed_Bloodmoon_Lycanthropy_FatigueDurationMultiplier>
+</LanguageData>

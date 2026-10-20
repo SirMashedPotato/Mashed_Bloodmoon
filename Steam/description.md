@@ -61,9 +61,11 @@ How much stress a lycanthrope can withstand can be increased through eating the 
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Upgrades.png[/img]
 [table]
     [tr]
-        [td]Various upgrades can be purchased by spending Consumed Hearts, some can alternatively be gained through the use of special crystal skulls.
+        [td]Various upgrades can be purchased by spending Lycanthrope Levels, some can alternatively be gained through the use of special crystal skulls.
 
-        Unlock beast form abilities, equip new claw types, upgrade totems, and gain additional traits.[/td]
+        Unlock beast form abilities, equip new claw types, upgrade totems, and gain additional traits.
+        
+        Gain lycanthrope levels by using the Consume Heart ability.[/td]
         [td][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Image_Ability.png[/img][/td]
     [/tr]
 [/table]
@@ -75,7 +77,7 @@ How much stress a lycanthrope can withstand can be increased through eating the 
     [tr]
         [td]Prove yourself to The Huntsman by completing Beast Hunt decrees. Each decree will either require the pawn to consume the hearts of specific targets, or kill specific targets while in beast form.
         
-        Each completed beast hunt will reward the lycanthrope with a permanent stacking mood bonus, and potentially other gifts.
+        Each completed beast hunt will reward the lycanthrope with a permanent stacking mood bonus, increase the lycanthrope level cap, and potentially other gifts.
         
         Completing lycanthrope proficiency beast hunts will unlock an upgrade for the corresponding ability.[/td]
         [td][img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Image_BeastHunt.png[/img][/td]
@@ -98,9 +100,6 @@ A: Mod settings menu.
 
 Q: CE?
 A: I don't patch for CE, and parts of the mod may not function properly until it is patched.
-
-Q: 1.5?
-A: There is a 1.5 release available on my GitHub. It is an older build, and is provided as is.
 
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Credits.png[/img]

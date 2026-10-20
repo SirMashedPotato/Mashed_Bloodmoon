@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_PotionBase]==========-->
+	<ThingDef ParentName="MakeableDrugBase" Name="Mashed_Bloodmoon_PotionBase" Abstract="True">
+		<possessionCount>3</possessionCount>
+		<graphicData>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<MarketValue>30</MarketValue>
+		</statBases>
+		<techLevel>Medieval</techLevel>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>999</listOrder>
+			</li>
+		</comps>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+			<recipeUsers>
+				<li>DrugLab</li>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_AlchemyBench</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench</li>
+				<li MayRequire="oskarpotocki.vfe.medieval2">VFEM2_AlchemicalWorkbench_Electric</li>
+			</recipeUsers>
+			<productCount>1</productCount>
+			<workAmount>1000</workAmount>
+		</recipeMaker>
+		<tradeTags>
+			<li>Mashed_Bloodmoon_Potion</li>
+		</tradeTags>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_PotionHighBase]==========-->
+	<HediffDef Name="Mashed_Bloodmoon_PotionHighBase" Abstract="True">
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+	</HediffDef>
+</Defs>

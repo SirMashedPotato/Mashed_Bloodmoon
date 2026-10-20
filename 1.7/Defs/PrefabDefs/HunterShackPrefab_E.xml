@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HuntersShackPrefab_E]========== -->
+	<PrefabDef>
+		<defName>Mashed_Bloodmoon_HuntersShackPrefab_E</defName>
+		<size>(11,10)</size>
+		<things>
+			<Table1x2c>
+				<position>(4, 0, 4)</position>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Table1x2c>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(3, 0, 1)</position>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(4, 0, 2)</position>
+				<relativeRotation>Counterclockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Mashed_Bloodmoon_HuntersCache>
+				<position>(1, 0, 8)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+			</Mashed_Bloodmoon_HuntersCache>
+			<Door>
+				<position>(2, 0, 0)</position>
+				<stuff>WoodLog</stuff>
+			</Door>
+			<Door>
+				<position>(5, 0, 7)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Door>
+			<Fence>
+				<rects>
+					<li>(6,0,7,0)</li>
+					<li>(9,0,10,0)</li>
+					<li>(10,1,10,4)</li>
+				</rects>
+				<stuff>WoodLog</stuff>
+			</Fence>
+			<Mashed_Bloodmoon_WerewolfTrophySmall>
+				<rects>
+					<li>(2,8,3,8)</li>
+				</rects>
+				<stuff>BlocksSlate</stuff>
+				<quality>Normal</quality>
+			</Mashed_Bloodmoon_WerewolfTrophySmall>
+			<Mashed_Bloodmoon_HuntersCrate>
+				<rects>
+					<li>(6,6,6,6)</li>
+					<li>(4,8,4,8)</li>
+				</rects>
+			</Mashed_Bloodmoon_HuntersCrate>
+			<DiningChair>
+				<position>(3, 0, 4)</position>
+				<relativeRotation>Clockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</DiningChair>
+			<Bed>
+				<position>(9, 0, 6)</position>
+				<relativeRotation>Counterclockwise</relativeRotation>
+				<stuff>WoodLog</stuff>
+				<quality>Normal</quality>
+			</Bed>
+			<Grave>
+				<positions>
+					<li>(7, 0, 4)</li>
+					<li>(8, 0, 4)</li>
+				</positions>
+				<relativeRotation>Opposite</relativeRotation>
+				<hp>-1</hp>
+			</Grave>
+			<FenceGate>
+				<position>(8, 0, 0)</position>
+				<stuff>WoodLog</stuff>
+			</FenceGate>
+			<ShelfSmall>
+				<position>(1, 0, 1)</position>
+				<stuff>WoodLog</stuff>
+			</ShelfSmall>
+			<FueledSmithy>
+				<position>(1, 0, 4)</position>
+				<relativeRotation>Counterclockwise</relativeRotation>
+			</FueledSmithy>
+			<Wall>
+				<rects>
+					<li>(0,0,1,0)</li>
+					<li>(3,0,5,0)</li>
+					<li>(0,1,0,9)</li>
+					<li>(5,1,5,6)</li>
+					<li>(6,5,10,5)</li>
+					<li>(10,6,10,9)</li>
+					<li>(5,8,5,9)</li>
+					<li>(1,9,4,9)</li>
+					<li>(6,9,9,9)</li>
+				</rects>
+				<stuff>WoodLog</stuff>
+			</Wall>
+			<Mashed_Bloodmoon_HunterSkeleton>
+				<position>(8, 0, 2)</position>
+			</Mashed_Bloodmoon_HunterSkeleton>
+			<Shelf>
+				<positions>
+					<li>(7, 0, 8)</li>
+					<li>(9, 0, 8)</li>
+				</positions>
+				<relativeRotation>Opposite</relativeRotation>
+				<stuff>WoodLog</stuff>
+			</Shelf>
+			<WoodLog>
+				<position>(1, 0, 1)</position>
+				<stackCountRange>6~12</stackCountRange>
+			</WoodLog>
+			<Filth_Blood>
+				<position>(7, 0, 6)</position>
+				<hp>-1</hp>
+			</Filth_Blood>
+			<Mashed_Bloodmoon_MeleeWeapon_HoundslayerLongsword>
+				<position>(8, 0, 8)</position>
+				<quality>Normal</quality>
+			</Mashed_Bloodmoon_MeleeWeapon_HoundslayerLongsword>
+			<MedicineHerbal>
+				<position>(6, 0, 8)</position>
+				<stackCountRange>5~10</stackCountRange>
+			</MedicineHerbal>
+			<Mashed_Bloodmoon_PotionWolfsbane>
+				<position>(7, 0, 8)</position>
+				<stackCountRange>3~6</stackCountRange>
+			</Mashed_Bloodmoon_PotionWolfsbane>
+			<Mashed_Bloodmoon_WolfsbanePlantDecorative>
+				<rects>
+					<li>(6,1,6,4)</li>
+					<li>(9,1,9,4)</li>
+				</rects>
+			</Mashed_Bloodmoon_WolfsbanePlantDecorative>
+			<Filth_Dirt>
+				<rects>
+					<li>(2,1,2,1)</li>
+					<li>(2,3,2,3)</li>
+				</rects>
+				<hp>-1</hp>
+			</Filth_Dirt>
+			<Mashed_Bloodmoon_BeltSilverdustVessel>
+				<position>(9, 0, 8)</position>
+				<color>RGBA(1.000, 1.000, 1.000, 1.000)</color>
+			</Mashed_Bloodmoon_BeltSilverdustVessel>
+		</things>
+		<terrain>
+			<Soil>
+				<rects>
+					<li>(0,0,1,0)</li>
+					<li>(3,0,10,0)</li>
+					<li>(0,1,0,5)</li>
+					<li>(5,1,10,5)</li>
+					<li>(5,6,5,6)</li>
+					<li>(10,6,10,9)</li>
+					<li>(0,7,0,9)</li>
+					<li>(5,8,5,9)</li>
+					<li>(1,9,4,9)</li>
+					<li>(6,9,9,9)</li>
+				</rects>
+			</Soil>
+			<FlagstoneSlate>
+				<rects>
+					<li>(2,0,2,8)</li>
+					<li>(1,1,1,8)</li>
+					<li>(3,1,4,8)</li>
+				</rects>
+			</FlagstoneSlate>
+			<SoilRich>
+				<rects>
+					<li>(0,6,0,6)</li>
+				</rects>
+			</SoilRich>
+			<WoodPlankFloor>
+				<rects>
+					<li>(6,6,9,8)</li>
+					<li>(5,7,5,7)</li>
+				</rects>
+			</WoodPlankFloor>
+		</terrain>
+	</PrefabDef>
+</Defs>

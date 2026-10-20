@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="SleptInBedroom"]/nullifyingHediffs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="SleptInBedroom"]</xpath>
+			<value>
+				<nullifyingHediffs/>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThoughtDef[defName="SleptInBarracks"]/nullifyingHediffs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThoughtDef[defName="SleptInBarracks"]</xpath>
+			<value>
+				<nullifyingHediffs/>
+			</value>
+		</nomatch>
+	</Operation>
+	<!-- Main patch -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThoughtDef[defName="SleptInBedroom" or defName="SleptInBarracks"]/nullifyingHediffs</xpath>
+		<value>
+			<li>Mashed_Bloodmoon_Lycanthrope</li>
+		</value>
+	</Operation>
+</Patch>

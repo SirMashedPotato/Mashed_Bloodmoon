@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- ==========[Caves]==========-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/LandmarkDef[defName="Valley"
+			or defName="Chasm"
+			or defName="Plateau"
+			or defName="Cliffs"
+			or defName="Hollow"
+			or defName="Basin"]/mutatorChances</xpath>
+		<value>
+			<Mashed_Bloodmoon_WildWolfsbane>0.06</Mashed_Bloodmoon_WildWolfsbane>
+		</value>
+	</Operation>
+</Patch>

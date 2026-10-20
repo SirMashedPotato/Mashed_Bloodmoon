@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumboThingBase]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerewolfThingBase" Name="Mashed_Bloodmoon_FeralWerethrumboThingBase" Abstract="True">
+		<statBases>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<MoveSpeed>5</MoveSpeed>
+			<InjuryHealingFactor>3</InjuryHealingFactor>
+			<Mashed_Bloodmoon_LycanthropeSilverWeakness>2</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+			<MarketValue>6000</MarketValue>
+		</statBases>
+		<race>
+			<body>Mashed_Ashlands_WerebeastWithHooves</body>
+			<leatherDef>Leather_Thrumbo</leatherDef>
+			<lifeExpectancy>90</lifeExpectancy>
+			<lifeStageAges Inherit="false">
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundCall>Pawn_Thrumbo_Call</soundCall>
+					<soundAngry>Pawn_Thrumbo_Angry</soundAngry>
+					<soundWounded>Pawn_Thrumbo_Pain</soundWounded>
+					<soundDeath>Pawn_Thrumbo_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumbo]========== -->
+	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerethrumboThingBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumbo</defName>
+		<label>feral werethrumbo</label>
+		<description>A lycanthrope that has fully succumbed to the terrifying might of the werethrumbo beast form, and has only grown more fearsome since then.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<tools>
+			<li>
+				<label>horn</label>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+				</capacities>
+				<power>28</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left hand</label>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right hand</label>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeScratch</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<capacities>
+					<li>Mashed_Bloodmoon_LycanthropeBite</li>
+				</capacities>
+				<power>23</power>
+				<armorPenetration>0.25</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<predator>true</predator>
+			<maxPreyBodySize>4</maxPreyBodySize>
+			<baseBodySize>2.2</baseBodySize>
+			<baseHealthScale>9</baseHealthScale>
+			<baseHungerRate>0.3</baseHungerRate>
+		</race>
+		<butcherProducts>
+			<Mashed_Bloodmoon_WerewolfBlood>6</Mashed_Bloodmoon_WerewolfBlood>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="Mashed_Bloodmoon_FeralWerewolfKindBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumbo</defName>
+		<label>feral werethrumbo</label>
+		<race>Mashed_Bloodmoon_FeralWerethrumbo</race>
+		<combatPower>600</combatPower>
+		<maxPerGroup>1</maxPerGroup>
+		<startingHediffs Inherit="false">
+			<li>
+				<def>Mashed_Bloodmoon_FeralWerethrumbo</def>
+			</li>
+		</startingHediffs>
+		<abilities>
+
+		</abilities>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_Werethrumbo</texPath>
+					<color>(239,239,239)</color>
+					<colorTwo>(199,207,215)</colorTwo>
+					<drawSize>2.5</drawSize>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.4, 0.4, 0.4)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_Dessicated_Werewolf</texPath>
+					<drawSize>2.4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+					<thing>ThrumboHorn</thing>
+				</butcherBodyPart>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

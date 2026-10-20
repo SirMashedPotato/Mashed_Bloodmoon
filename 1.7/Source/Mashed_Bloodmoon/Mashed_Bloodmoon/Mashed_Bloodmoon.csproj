@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <OutputType>Library</OutputType>
+        <DebugType>embedded</DebugType>
+        <AssemblyTitle>Mashed_Bloodmoon</AssemblyTitle>
+        <Product>Mashed_Bloodmoon</Product>
+        <LangVersion>latest</LangVersion>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <OutputPath>..\..\..\Assemblies\</OutputPath>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <OutputPath>..\..\..\Assemblies\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\Assembly-CSharp.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityStubs">
+            <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Waylith">
+          <HintPath>I:\SteamLibrary\steamapps\common\RimWorld\Waylith.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.2" />
+    </ItemGroup>
+
+</Project>

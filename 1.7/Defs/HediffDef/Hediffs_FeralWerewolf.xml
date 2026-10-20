@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerewolf]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase" Name="Mashed_Bloodmoon_FeralWerewolfBase">
+		<defName>Mashed_Bloodmoon_FeralWerewolf</defName>
+		<label>feral lycanthrope</label>
+		<description>A lycanthrope that has fully succumbed to its beast form.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mashed_Bloodmoon_SaniesLupinus</HediffDef>
+		</descriptionHyperlinks>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>eye glow</debugLabel>
+				<color>(233,208,138)</color>
+				<drawSize>1.4</drawSize>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewolf/Mashed_Bloodmoon_WerewolfEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>1</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+				<pawnType>NonHumanlikeOnly</pawnType>
+			</li>
+		</renderNodeProperties>
+		<stages>
+			<li>
+				<damageFactors>
+					<Flame>2</Flame>
+				</damageFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_FeralWerethrumbo]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_FeralWerewolfBase">
+		<defName>Mashed_Bloodmoon_FeralWerethrumbo</defName>
+		<renderNodeProperties Inherit="false">
+			<li>
+				<debugLabel>eye glow</debugLabel>
+				<color>(215,231,244)</color>
+				<drawSize>1.66</drawSize>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werethrumbo/Mashed_Bloodmoon_WerethrumboEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>1</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+				<pawnType>NonHumanlikeOnly</pawnType>
+			</li>
+		</renderNodeProperties>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_ApexWerewolf]==========-->
+	<HediffDef ParentName="Mashed_Bloodmoon_LycanthropeBase">
+		<defName>Mashed_Bloodmoon_ApexWerewolf</defName>
+		<label>apex lycanthrope</label>
+		<description>A lycanthrope tempered through many successful hunts.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.5</IncomingDamageFactor>
+					<MeleeDamageFactor>0.5</MeleeDamageFactor>
+					<MeleeCooldownFactor>0.25</MeleeCooldownFactor>
+					<MoveSpeed>-0.3</MoveSpeed>
+					<InjuryHealingFactor>1</InjuryHealingFactor>
+					<Mashed_Bloodmoon_LycanthropeSilverWeakness>0.5</Mashed_Bloodmoon_LycanthropeSilverWeakness>
+					<Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>0.5</Mashed_Bloodmoon_LycanthropeWolfsbaneWeakness>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

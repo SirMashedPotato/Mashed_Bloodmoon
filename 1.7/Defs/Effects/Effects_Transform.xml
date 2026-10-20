@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TransformEffect]==========-->
+	<ThingDef ParentName="MoteBase">
+		<defName>Mashed_Bloodmoon_TransformEffect</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.6</fadeInTime>
+			<fadeOutTime>0.6</fadeOutTime>
+			<solidTime>0.3</solidTime>
+			<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+		</mote>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Mashed_Bloodmoon_TransformEffect</texPath>
+			<drawSize>(3.5, 3.5)</drawSize>
+		</graphicData>
+	</ThingDef>
+</Defs>
