@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
             return !LycanthropeUtility.PawnIsTransformedLycanthrope(pawn) && (ignoreFatigue || !PawnIsFatigued(pawn));
         }
 
-        internal static bool PawnIsFatigued(Pawn pawn)
+        private static bool PawnIsFatigued(Pawn pawn)
         {
             return pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Mashed_Bloodmoon_LycanthropeFatigue) != null;
         }
@@ -20,7 +20,7 @@ namespace Mashed_Bloodmoon
             ForceTransformation(pawn, dormantHediff);
         }
 
-        internal static void ForceTransformation(Pawn pawn, Hediff dormantHediff)
+        private static void ForceTransformation(Pawn pawn, Hediff dormantHediff)
         {
             pawn.health.RemoveHediff(dormantHediff);
             HediffComp_Lycanthrope compLycanthrope = pawn.health.AddHediff(HediffDefOf.Mashed_Bloodmoon_Lycanthrope).TryGetComp<HediffComp_Lycanthrope>();
@@ -39,9 +39,10 @@ namespace Mashed_Bloodmoon
         {
             if (pawn.equipment.HasAnything())
             {
-                foreach (Thing thing in pawn.equipment.GetDirectlyHeldThings())
+                for (int i = pawn.equipment.GetDirectlyHeldThings().Count - 1; i >= 0; i--)
                 {
-                    pawn.equipment.TryTransferEquipmentToContainer(thing as ThingWithComps, pawn.inventory.innerContainer);
+                    pawn.equipment.TryTransferEquipmentToContainer(pawn.equipment.GetDirectlyHeldThings()[i] as ThingWithComps, pawn.inventory.innerContainer);
+
                 }
             }
         }

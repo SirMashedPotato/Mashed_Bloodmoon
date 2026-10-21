@@ -8,7 +8,7 @@ namespace Mashed_Bloodmoon
 {
     public class HediffComp_LycanthropeTransformed : HediffComp
     {
-        public bool inFury = false;
+        private bool inFury = false;
         public int currentStress;
         private int stressMax = -1;
         private int? stressGain;
@@ -18,7 +18,7 @@ namespace Mashed_Bloodmoon
 
         public HediffCompProperties_LycanthropeTransformed Props => (HediffCompProperties_LycanthropeTransformed)props;
 
-        public HediffComp_Lycanthrope CompLycanthrope
+        private HediffComp_Lycanthrope CompLycanthrope
         {
             get
             {
@@ -40,26 +40,17 @@ namespace Mashed_Bloodmoon
                 }
                 return stressMax;
             }
-            set 
-            { 
-                stressMax = value;
-            }
+            set => stressMax = value;
         }
 
         public int StressGain
         {
             get
             {
-                if (stressGain == null)
-                {
-                    stressGain = (int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressGain);
-                }
+                stressGain ??= (int)parent.pawn.GetStatValue(StatDefOf.Mashed_Bloodmoon_LycanthropicStressGain);
                 return stressGain.Value;
             }
-            set
-            {
-                stressGain = value;
-            }
+            set => stressGain = value;
         }
 
         public int CurrentFatigueDuration() => (int)(currentStress * LycanthropeUtility.lycanthropeStressToTicks * Mashed_Bloodmoon_ModSettings.Cheat_FatigueDurationMultiplier);
@@ -72,35 +63,33 @@ namespace Mashed_Bloodmoon
             try
             {
                 base.CompPostTick(ref severityAdjustment);
-                if (parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate, delta))
+                if (!parent.pawn.IsHashIntervalTick(LycanthropeUtility.lycanthropeStressRate, delta)) return;
+                if (currentStress >= StressMax)
                 {
-                    if (currentStress >= StressMax)
+                    if (inFury)
                     {
-                        if (inFury)
-                        {
-                            parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
-                            return;
-                        }
+                        parent.pawn.mindState.mentalStateHandler.CurState.RecoverFromState();
+                        return;
+                    }
 
-                        if (parent.pawn.Downed || parent.pawn.Deathresting)
-                        {
-                            parent.pawn.health.RemoveHediff(parent);
-                            return;
-                        }
+                    if (parent.pawn.Downed || parent.pawn.Deathresting)
+                    {
+                        parent.pawn.health.RemoveHediff(parent);
+                        return;
+                    }
 
-                        StartFury();
+                    StartFury();
+                }
+                else
+                {
+                    if (inFury)
+                    {
+                        currentStress += StressGain <= 0 ? 2 : StressGain * 2;
+                        return;
                     }
                     else
                     {
-                        if (inFury)
-                        {
-                            currentStress += StressGain <= 0 ? 2 : StressGain * 2;
-                            return;
-                        }
-                        else
-                        {
-                            currentStress = Mathf.Clamp(currentStress + StressGain, 0, StressMax);
-                        }
+                        currentStress = Mathf.Clamp(currentStress + StressGain, 0, StressMax);
                     }
                 }
             }
@@ -122,7 +111,7 @@ namespace Mashed_Bloodmoon
             base.CompPostMake();
             currentStress = 0;
 
-            linkedHediffs = new List<Hediff> { };
+            linkedHediffs = [];
             AddLinkedHediff(CompLycanthrope.equippedClawType.clawHediffDef, RimWorld.BodyPartDefOf.Hand);
             AddLinkedHediff(HediffDefOf.Mashed_Bloodmoon_LycanthropeFangs, BodyPartDefOf.Jaw);
 
