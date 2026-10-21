@@ -12,7 +12,6 @@ namespace Mashed_Bloodmoon
         public Mashed_Bloodmoon_Mod(ModContentPack contentPack) : base(contentPack)
         {
             settings = GetSettings<Mashed_Bloodmoon_ModSettings>();
-            Log.Message("[Mashed's Bloodmoon] version " + Content.ModMetaData.ModVersion);
         }
 
         public override string SettingsCategory() => "Mashed_Bloodmoon_ModName".Translate();
