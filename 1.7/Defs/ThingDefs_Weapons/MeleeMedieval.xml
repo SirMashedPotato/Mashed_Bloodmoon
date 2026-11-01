@@ -30,7 +30,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerMeleeBase">
 		<defName>Mashed_Bloodmoon_MeleeWeapon_HoundslayerShortsword</defName>
 		<label>houndslayer shortsword</label>
-		<description>A specially designed shortsword. A steel core, with a silver coating, results in a a weapon tailor made for hunting lycanthropes.</description>
+		<description>A specially designed shortsword. A steel core, with a silver coating, results in a weapon tailor made for hunting lycanthropes.</description>
 		<modExtensions>
 			<li Class="VEF.Things.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<usableWithShields>true</usableWithShields>
@@ -88,7 +88,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerMeleeBase">
 		<defName>Mashed_Bloodmoon_MeleeWeapon_HoundslayerLongsword</defName>
 		<label>houndslayer longsword</label>
-		<description>A specially designed longsword. A steel core, with a silver coating, results in a a weapon tailor made for hunting lycanthropes.</description>
+		<description>A specially designed longsword. A steel core, with a silver coating, results in a weapon tailor made for hunting lycanthropes.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponMelee/Mashed_Bloodmoon_SilverLongsword</texPath>
 			<drawSize>1.2</drawSize>
