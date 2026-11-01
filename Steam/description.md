@@ -7,14 +7,14 @@ A completely remade version of the original MorrowRim - Bloodmoon mod, made to a
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_HuntsmansMoon.png[/img]
 [quote] The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominous howling can be heard in the distance, growing ever closer. [/quote]
 
-[b]Roughly, and by roughly I mean at minimum,[/b] every 30 days the Huntsman's Moon will rise, covering the world in an eerie red glow. During this time packs of feral werewolves will attack settlements, and ambush caravans. These feral werewolves can spread a disease called Sanies Lupinus, which if left untreated will eventually transition into dormant lycanthropy. Upon the next Huntsman's Moon the infected will experience their first transformation.
+[b]Every few quadrums the Huntsman's Moon will rise, covering the world in an eerie red glow. During this time packs of feral werewolves will attack settlements, and ambush caravans. Attacks from a feral werewolf can spread a disease called Sanies Lupinus, which if left untreated will eventually transition into dormant lycanthropy. Upon the next Huntsman's Moon the infected will experience their first transformation.
 
 The time between attacks, and the strength of attacks, can be modified in the mod settings menu.
 [hr][/hr]
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_Lycanthropy.png[/img]
 [quote] A fully fledged lycanthrope, now able to transform into their beast form at will. While the Huntsman's blood offers little benefit outside of beast form, it does provide immunity to certain infections. [/quote]
 
-Once a lycanthrope has recovered from their first transformation, they gain the ability to transform at will, as well as upgrade and customise their beast form. While most of the bonuses, and downsides, are only active in beast form, some are active in human form as well:
+Once a lycanthrope has recovered from their first transformation, they gain the ability to transform at will, as well as upgrade and customise their beast form. While most of the bonuses and downsides are only active in beast form, some are active in human form as well:
 
 [list]
 [*]They are immune to several diseases, and have a lesser risk of getting food poisoning.
@@ -28,7 +28,7 @@ Once a lycanthrope has recovered from their first transformation, they gain the 
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_BeastForm.png[/img]
 [quote] A lycanthrope transformed into their beastial form, greatly empowering them, though at a cost. Transformed lycanthropes are unable to do any form of work, and their vocal cords have become too malformed for speech. [/quote]
 
-The true nature of lycanthropes comes out when they are in their beast form. Amplifying their downsides, but granting full access to their bonuses.
+The true nature of lycanthropes comes out when they are in their beast form. Amplifying their weaknesses, but granting full access to their bonuses.
 
 [list]
 [*]They are completely incapable of work and speech.
@@ -106,11 +106,10 @@ A: I don't patch for CE, and parts of the mod may not function properly until it
 [list]
 [*]Mostly inspired by the Elder Scrolls series by Bethesda Studios, with a heavy focus on Morrowind
 [*]Lycanthrope ability sounds otained from https://mixkit.co/
-[*]Thanks to everyone that provided feedback during the far too long beta period:
+[*]Thanks to everyone that provided feedback:
 [list]
-BongBong, Theo, Aludis, Aquiles, charybdis6404, Fabricator General, Roque the Rogue
+BongBong, Theo, Aludis, Aquiles, charybdis6404, Fabricator General, Roque the Rogue, OttersHoldHands, ViralReaction
 [/list]
-[*]To OttersHoldHands for reminding me of something I didn't test.
 [*]And to Ranger Rick for being neat
 [/list]
 
