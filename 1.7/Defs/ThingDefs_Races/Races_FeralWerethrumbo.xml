@@ -5,6 +5,7 @@
 		<statBases>
 			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<IncomingDamageFactor>0.5</IncomingDamageFactor>
 			<MoveSpeed>5</MoveSpeed>
 			<InjuryHealingFactor>3</InjuryHealingFactor>
 			<Mashed_Bloodmoon_LycanthropeSilverWeakness>2</Mashed_Bloodmoon_LycanthropeSilverWeakness>
