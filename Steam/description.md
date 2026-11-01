@@ -7,7 +7,7 @@ A completely remade version of the original MorrowRim - Bloodmoon mod, made to a
 [img]https://raw.githubusercontent.com/SirMashedPotato/Mashed_Bloodmoon/main/Steam/Banner_HuntsmansMoon.png[/img]
 [quote] The glow of a blood red moon has awoken something ancient from a deep slumber. The call of The Huntsman can be heard echoing through the eerie silence. The air itself carries the unmistakable scent of blood. Ominous howling can be heard in the distance, growing ever closer. [/quote]
 
-[b]Every few quadrums the Huntsman's Moon will rise, covering the world in an eerie red glow. During this time packs of feral werewolves will attack settlements, and ambush caravans. Attacks from a feral werewolf can spread a disease called Sanies Lupinus, which if left untreated will eventually transition into dormant lycanthropy. Upon the next Huntsman's Moon the infected will experience their first transformation.
+Every few quadrums the Huntsman's Moon will rise, covering the world in an eerie red glow. During this time packs of feral werewolves will attack settlements, and ambush caravans. Attacks from a feral werewolf can spread a disease called Sanies Lupinus, which if left untreated will eventually transition into dormant lycanthropy. Upon the next Huntsman's Moon the infected will experience their first transformation.
 
 The time between attacks, and the strength of attacks, can be modified in the mod settings menu.
 [hr][/hr]
