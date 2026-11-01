@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_HoundslayerGunBase]==========-->
+	<ThingDef Name="Mashed_Bloodmoon_HoundslayerGunBase" ParentName="BaseHumanMakeableGun" Abstract="true">
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Industrial</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mashed_Bloodmoon_SilverDamageFactor>0.5</Mashed_Bloodmoon_SilverDamageFactor>
+		</statBases>
+		<relicChance>2</relicChance>
+		<tradeTags>
+			<li>Gunsmithing</li>
+			<li>Mashed_Bloodmoon_HoundslayerWeapon</li>
+		</tradeTags>
+		<recipeMaker>
+			<researchPrerequisite IsNull="true"/>
+			<researchPrerequisites>
+				<li>Gunsmithing</li>
+				<li>Mashed_Bloodmoon_Houndslayer</li>
+			</researchPrerequisites>
+			<unfinishedThingDef>Mashed_Bloodmoon_UnfinishedHoundslayerWeapon</unfinishedThingDef>
+			<defaultIngredientFilter Inherit="False"/>
+		</recipeMaker>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_Bullet_HoundslayerRifle]==========-->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Mashed_Bloodmoon_Bullet_HoundslayerRifle</defName>
+		<label>houndslayer rifle bullet</label>
+		<projectile>
+			<damageDef>Mashed_Bloodmoon_SilverBullet</damageDef>
+			<damageAmountBase>18</damageAmountBase>
+			<stoppingPower>2.5</stoppingPower>
+			<speed>70</speed>
+		</projectile>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_Gun_HoundslayerHandRifle]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerGunBase">
+		<defName>Mashed_Bloodmoon_Gun_HoundslayerHandRifle</defName>
+		<label>houndslayer hand rifle</label>
+		<description>A specially designed bolt-action rifle, meant for close quarters. Increased stopping power, and equipped with silver bullets, results in a a weapon tailor made for hunting lycanthropes.</description>
+		<modExtensions>
+			<li Class="VEF.Things.ThingDefExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<usableWithShields>true</usableWithShields>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mashed_Bloodmoon_SilverHandRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponClasses>
+			<li>RangedLight</li>
+		</weaponClasses>
+		<statBases>
+			<WorkToMake>13000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.55</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<Silver>2</Silver>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Mashed_Bloodmoon_Bullet_HoundslayerRifle</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>25.9</range>
+				<soundCast>Shot_BoltActionRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<!-- ==========[Mashed_Bloodmoon_Gun_HoundslayerHeavyRifle]==========-->
+	<ThingDef ParentName="Mashed_Bloodmoon_HoundslayerGunBase">
+		<defName>Mashed_Bloodmoon_Gun_HoundslayerHeavyRifle</defName>
+		<label>houndslayer heavy rifle</label>
+		<description>A specially designed bolt-action rifle, meant for long-distances. Increased stopping power, and equipped with silver bullets, results in a a weapon tailor made for hunting lycanthropes.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Mashed_Bloodmoon_SilverHeavyRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponClasses>
+			<li>LongShots</li>
+		</weaponClasses>
+		<statBases>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.80</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<Silver>3</Silver>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Mashed_Bloodmoon_Bullet_HoundslayerRifle</defaultProjectile>
+				<warmupTime>1.7</warmupTime>
+				<range>36.9</range>
+				<soundCast>Shot_BoltActionRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+</Defs>
