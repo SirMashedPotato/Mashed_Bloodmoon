@@ -56,7 +56,7 @@
 				<canTargetAnimals>false</canTargetAnimals>
 			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<compClass>Mashed_Bloodmoon.CompAbilityEffect_GiveHediffLinked</compClass>
 				<hediffDef>Mashed_Bloodmoon_HuntsmansMarkFeral</hediffDef>
 				<onlyBrain>false</onlyBrain>
 				<applicableToMechs>true</applicableToMechs>

@@ -14,7 +14,11 @@ namespace Mashed_Bloodmoon
             if (hediff == null) return;
             HediffComp_Link hediffComp_Link = hediff.TryGetComp<HediffComp_Link>();
             hediffComp_Link?.drawConnection = true;
-            LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn).AddLinkedHediff(hediff);
+            hediffComp_Link?.other = parent.pawn;
+            if (LycanthropeUtility.PawnIsTransformedLycanthrope(parent.pawn))
+            {
+                LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn).AddLinkedHediff(hediff);
+            }
         }
     }
 }
