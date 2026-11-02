@@ -10,6 +10,7 @@ namespace Mashed_Bloodmoon
         public ThingDef targetThingDef;
         public PawnKindDef targetKindDef;
         public XenotypeDef targetXenotypeDef;
+        public MutantDef targetMutantDef;
         public int targetCount = 1;
         public bool startHidden = false;
         public int anomalyLevelToReveal = 0;
@@ -146,9 +147,13 @@ namespace Mashed_Bloodmoon
                 }
             }
 
-            if (targetThingDef != null && targetKindDef != null)
+            int targetDefs = (targetThingDef != null ? 1 : 0) +
+                             (targetKindDef != null ? 1 : 0) +
+                             (targetXenotypeDef != null ? 1 : 0) +
+                             (targetMutantDef != null ? 1 : 0);
+            if (targetDefs >= 2)
             {
-                yield return "Only use one of targetThingDef and targetKindDef";
+                yield return "Only use one of targetThingDef, targetKindDef, targetXenotypeDef or targetMutantDef";
             }
 
             if (startHidden && anomalyLevelToReveal > 0)

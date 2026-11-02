@@ -64,4 +64,15 @@
 		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
 		<anomalyLevelToReveal>2</anomalyLevelToReveal>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
+	<!-- ==========[Mashed_Bloodmoon_Revenant]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="ludeon.rimworld.anomaly">
+		<defName>Mashed_Bloodmoon_Shambler</defName>
+		<label>beast hunt: Shambler</label>
+		<description>Kill 50 shambler while in beast form.</description>
+		<beastHuntType>Kill</beastHuntType>
+		<targetMutantDef>Shambler</targetMutantDef>
+		<targetCount>50</targetCount>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Bioferrite</heartTexPath>
+		<anomalyLevelToReveal>1</anomalyLevelToReveal>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 </Defs>

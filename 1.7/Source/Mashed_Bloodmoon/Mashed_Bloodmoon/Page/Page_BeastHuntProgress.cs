@@ -60,14 +60,14 @@ namespace Mashed_Bloodmoon
 
             if (DebugSettings.ShowDevGizmos)
             {
-                Rect devRecalculate = new Rect(inRect.width - 220f, 0f, 180f, 30f);
+                Rect devRecalculate = new(inRect.width - 220f, 0f, 180f, 30f);
                 if (Widgets.ButtonText(devRecalculate, "Dev: recalculate thought", true))
                 {
                     RecalculateBeastHuntTHought();
                 }
             }
 
-            Rect mainRect = new Rect(inRect.x, inRect.yMin + 45f, inRect.width, inRect.height - 45f);
+            Rect mainRect = new(inRect.x, inRect.yMin + 45f, inRect.width, inRect.height - 45f);
             TabDrawer.DrawTabs(new Rect(mainRect.x, mainRect.yMin + 45f, mainRect.width, mainRect.height - 45f), tabs);
 
             mainRect.yMin += rectLimitY;
@@ -211,14 +211,14 @@ namespace Mashed_Bloodmoon
                 return;
             }
 
-            Def targetDef = beastHuntDef.targetKindDef ?? (Def)beastHuntDef.targetThingDef ?? beastHuntDef.targetXenotypeDef;
+            Def targetDef = beastHuntDef.targetKindDef ?? (Def)beastHuntDef.targetThingDef ?? (Def)beastHuntDef.targetXenotypeDef ?? beastHuntDef.targetMutantDef;
 
             if (targetDef == null)
             {
                 return;
             }
 
-            Dialog_InfoCard dialog_InfoCard = new Dialog_InfoCard(targetDef);
+            Dialog_InfoCard dialog_InfoCard = new(targetDef);
             Find.WindowStack.Add(dialog_InfoCard);
         }
 
