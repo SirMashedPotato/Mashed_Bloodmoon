@@ -14,8 +14,8 @@ namespace Mashed_Bloodmoon
                 return;
             }
 
-            if ((target.Pawn.Faction != null && target.Pawn.Faction == Faction.OfPlayerSilentFail)
-                || (target.Pawn.InMentalState && target.Pawn.MentalState.def == MentalStateDefOf.Mashed_Bloodmoon_SpectralBeast))
+            if (parent.pawn.Faction != null && ((target.Pawn.Faction != null && target.Pawn.Faction == parent.pawn.Faction)
+                || (target.Pawn.InMentalState && target.Pawn.MentalState.def == MentalStateDefOf.Mashed_Bloodmoon_SpectralBeast)))
             {
                 base.Apply(target, dest);
 
@@ -24,10 +24,7 @@ namespace Mashed_Bloodmoon
                     if (Props.beastHuntDef.Completed(parent.pawn))
                     {
                         Hediff hediff = target.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
-                        if (hediff != null)
-                        {
-                            hediff.Severity = Props.proficientSeverity;
-                        }
+                        hediff?.Severity = Props.proficientSeverity;
                     }
                     else
                     {

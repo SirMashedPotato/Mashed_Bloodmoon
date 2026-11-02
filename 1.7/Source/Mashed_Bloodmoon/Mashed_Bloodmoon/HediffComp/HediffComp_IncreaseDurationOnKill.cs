@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
 
         public override void Notify_KilledPawn(Pawn victim, DamageInfo? dinfo)
         {
-            if (Props.beastHuntDef.Completed(parent.pawn))
+            if (Props.beastHuntDef == null || Props.beastHuntDef.Completed(parent.pawn))
             {
                 CompDisappears.ticksToDisappear += Props.TicksPerKill;
                 Ability ability = parent.pawn.abilities.GetAbility(Props.abilityDef);
@@ -28,10 +28,7 @@ namespace Mashed_Bloodmoon
         {
             get
             {
-                if (compDisappears == null)
-                {
-                    compDisappears = parent.TryGetComp<HediffComp_Disappears>();
-                }
+                compDisappears ??= parent.TryGetComp<HediffComp_Disappears>();
                 return compDisappears;
             }
         }

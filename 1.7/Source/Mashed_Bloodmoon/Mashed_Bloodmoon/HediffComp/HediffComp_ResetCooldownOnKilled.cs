@@ -11,7 +11,7 @@ namespace Mashed_Bloodmoon
             HediffComp_Link compLink = parent.TryGetComp<HediffComp_Link>();
             if (compLink != null)
             {
-                if (Props.beastHuntDef.Completed(compLink.OtherPawn))
+                if (Props.beastHuntDef == null || Props.beastHuntDef.Completed(compLink.OtherPawn))
                 {
                     compLink.OtherPawn.abilities.GetAbility(Props.abilityDef).ResetCooldown();
                 }

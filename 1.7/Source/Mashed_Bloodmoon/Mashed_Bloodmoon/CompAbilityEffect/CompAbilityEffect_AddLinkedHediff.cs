@@ -10,13 +10,10 @@ namespace Mashed_Bloodmoon
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            if (target.Pawn != null)
+            Hediff hediff = target.Pawn?.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
+            if (hediff != null)
             {
-                Hediff hediff = target.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
-                if (hediff != null)
-                {
-                    LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn).AddLinkedHediff(hediff);
-                }
+                LycanthropeUtility.GetCompLycanthropeTransformed(parent.pawn).AddLinkedHediff(hediff);
             }
         }
     }

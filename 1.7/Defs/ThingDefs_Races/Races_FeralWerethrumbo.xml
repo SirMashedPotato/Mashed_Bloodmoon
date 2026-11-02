@@ -5,7 +5,7 @@
 		<statBases>
 			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-			<IncomingDamageFactor>0.5</IncomingDamageFactor>
+			<IncomingDamageFactor>0.6</IncomingDamageFactor>
 			<MoveSpeed>5</MoveSpeed>
 			<InjuryHealingFactor>3</InjuryHealingFactor>
 			<Mashed_Bloodmoon_LycanthropeSilverWeakness>2</Mashed_Bloodmoon_LycanthropeSilverWeakness>
@@ -31,7 +31,7 @@
 	<ThingDef ParentName="Mashed_Bloodmoon_FeralWerethrumboThingBase">
 		<defName>Mashed_Bloodmoon_FeralWerethrumbo</defName>
 		<label>feral werethrumbo</label>
-		<description>A lycanthrope that has fully succumbed to the terrifying might of the werethrumbo beast form, and has only grown more fearsome since then.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.</description>
+		<description>A lycanthrope that has fully succumbed to the terrifying might of the werethrumbo beast form, and has only grown more fearsome since then.\n\n&lt;color=#E5E54C&gt;Silver Weakness&lt;/color&gt;\nTakes additional damage from weapons made out of silver.\n\n&lt;color=#E5E54C&gt;Wolfsbane Weakness&lt;/color&gt;\nStanding in wolfsbane gas will cause constant toxic buildup.\n\n&lt;color=#E5E54C&gt;Feral Adrenaline Rush&lt;/color&gt;\nFeral werethrumbo may enter an adrenaline rush state during combat, completely nullifying pain and staunching bleeding. Kills during this period will prolong the effect.\n\n&lt;color=#E5E54C&gt;Feral Huntsman's Mark&lt;/color&gt;\nFeral werethrumbo may mark targets during combat, increasing the damage the target takes for the duration of the effect. The cooldown will reset if the target is killed while marked.</description>
 		<uiIconScale>1.35</uiIconScale>
 		<tools>
 			<li>
@@ -106,7 +106,7 @@
 		<defName>Mashed_Bloodmoon_FeralWerethrumbo</defName>
 		<label>feral werethrumbo</label>
 		<race>Mashed_Bloodmoon_FeralWerethrumbo</race>
-		<combatPower>600</combatPower>
+		<combatPower>660</combatPower>
 		<maxPerGroup>1</maxPerGroup>
 		<startingHediffs Inherit="false">
 			<li>
@@ -114,7 +114,8 @@
 			</li>
 		</startingHediffs>
 		<abilities>
-
+			<li>Mashed_Bloodmoon_AdrenalineRushFeral</li>
+			<li>Mashed_Bloodmoon_HuntsmansMarkFeral</li>
 		</abilities>
 		<lifeStages>
 			<li>

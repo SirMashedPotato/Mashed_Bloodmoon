@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- All sounds used here are otained from https://mixkit.co/ -->
+	<!-- ==========[Mashed_Bloodmoon_AdrenalineRushFeral]==========-->
+	<AbilityDef ParentName="Mashed_Bloodmoon_AdrenalineRushBase">
+		<defName>Mashed_Bloodmoon_AdrenalineRushFeral</defName>
+		<label>feral adrenaline rush</label>
+		<cooldownTicksRange>3600</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<statBases>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<comps Inherit="false">
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityFeralAutoUse">
+				<onlyInCombat>true</onlyInCombat>
+				<minPain>0.5</minPain>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>Mashed_Bloodmoon_AdrenalineRushFeral</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_AdrenalineRushHediffBase" >
+		<defName>Mashed_Bloodmoon_AdrenalineRushFeral</defName>
+		<label>feral adrenaline rush</label>
+		<comps Inherit="false">
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_IncreaseDurationOnKill">
+				<abilityDef>Mashed_Bloodmoon_AdrenalineRushFeral</abilityDef>
+				<secondsPerKill>5</secondsPerKill>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_AdrenalineRush</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- ==========[Mashed_Bloodmoon_HuntsmansMarkFeral]==========-->
+	<AbilityDef ParentName="Mashed_Bloodmoon_HuntsmansMark">
+		<defName>Mashed_Bloodmoon_HuntsmansMarkFeral</defName>
+		<label>feral Huntsman's mark</label>
+		<cooldownTicksRange>6000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<targetParams>
+				<canTargetAnimals>false</canTargetAnimals>
+			</targetParams>
+		</verbProperties>
+		<comps Inherit="false">
+			<li Class="Mashed_Bloodmoon.CompProperties_AbilityFeralAutoUse">
+				<onlyInCombat>false</onlyInCombat>
+				<mustBeHostile>true</mustBeHostile>
+				<canTargetAnimals>false</canTargetAnimals>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>Mashed_Bloodmoon_HuntsmansMarkFeral</hediffDef>
+				<onlyBrain>false</onlyBrain>
+				<applicableToMechs>true</applicableToMechs>
+				<replaceExisting>true</replaceExisting>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef ParentName="Mashed_Bloodmoon_HuntsmansMarkHediffBase">
+		<defName>Mashed_Bloodmoon_HuntsmansMarkFeral</defName>
+		<label>feral Huntsman's mark</label>
+		<comps Inherit="false">
+			<li Class="Mashed_Bloodmoon.HediffCompProperties_ResetCooldownOnKilled">
+				<abilityDef>Mashed_Bloodmoon_HuntsmansMarkFeral</abilityDef>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>999</maxDistance>
+				<customMote>Mashed_Bloodmoon_HuntsmansMarkLinkLine</customMote>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Mashed_Bloodmoon_HuntsmansMark</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

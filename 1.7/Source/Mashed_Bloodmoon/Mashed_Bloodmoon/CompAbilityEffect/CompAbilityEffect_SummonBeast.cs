@@ -35,10 +35,7 @@ namespace Mashed_Bloodmoon
         {
             Hediff hediff = HediffMaker.MakeHediff(Props.linkedHediff, pawn);
             HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
-            if (hediffComp_Disappears != null)
-            {
-                hediffComp_Disappears.ticksToDisappear = parent.def.GetStatValueAbstract(RimWorld.StatDefOf.Ability_Duration).SecondsToTicks();
-            }
+            hediffComp_Disappears?.ticksToDisappear = parent.def.GetStatValueAbstract(RimWorld.StatDefOf.Ability_Duration).SecondsToTicks();
             HediffComp_SummonedBeast hediffComp_SummonedBeast = hediff.TryGetComp<HediffComp_SummonedBeast>();
             if (hediffComp_SummonedBeast != null)
             {
@@ -61,13 +58,11 @@ namespace Mashed_Bloodmoon
 
         private void StartMentalState(Pawn pawn)
         {
-            if (Props.stateDef != null)
+            if (Props.stateDef == null) return;
+            if (pawn.mindState.mentalStateHandler.TryStartMentalState(Props.stateDef))
             {
-                if (pawn.mindState.mentalStateHandler.TryStartMentalState(Props.stateDef))
-                {
-                    pawn.mindState.mentalStateHandler.CurState.forceRecoverAfterTicks = parent.def.GetStatValueAbstract(RimWorld.StatDefOf.Ability_Duration).SecondsToTicks();
-                    pawn.mindState.mentalStateHandler.CurState.sourceFaction = parent.pawn.Faction;
-                }
+                pawn.mindState.mentalStateHandler.CurState.forceRecoverAfterTicks = parent.def.GetStatValueAbstract(RimWorld.StatDefOf.Ability_Duration).SecondsToTicks();
+                pawn.mindState.mentalStateHandler.CurState.sourceFaction = parent.pawn.Faction;
             }
         }
     }
