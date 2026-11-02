@@ -123,6 +123,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<equippedAngleOffset>45</equippedAngleOffset>
+		<equippedDistanceOffset>-0.14</equippedDistanceOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponClasses>
 			<li>LongShots</li>
