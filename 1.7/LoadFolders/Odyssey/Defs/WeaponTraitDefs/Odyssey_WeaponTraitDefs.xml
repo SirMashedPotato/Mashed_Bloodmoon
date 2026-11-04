@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_TraitHoundslayerBase]==========-->
+	<WeaponTraitDef Name="Mashed_Bloodmoon_TraitHoundslayerBase" Abstract="true">
+		<commonality>0.6</commonality>
+		<exclusionTags>
+			<li>AmmoType</li>
+			<li>Color</li>
+		</exclusionTags>
+		<forcedColor>Mashed_Bloodmoon_UniqueWeapon_Houndslayer</forcedColor>
+		<damageDefOverride>Mashed_Bloodmoon_SilverBullet</damageDefOverride>
+		<statOffsets>
+			<MarketValue>100</MarketValue>
+		</statOffsets>
+		<traitAdjectives>
+			<li>silver</li>
+			<li>houndslayer</li>
+		</traitAdjectives>
+	</WeaponTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverRounds]==========-->
+	<WeaponTraitDef ParentName="Mashed_Bloodmoon_TraitHoundslayerBase">
+		<defName>Mashed_Bloodmoon_SilverRounds</defName>
+		<label>houndslayer rounds</label>
+		<description>This weapon fires rounds coated in silver, which deal additional damage to lycanthropes.</description>
+		<weaponCategory>BulletFiring</weaponCategory>
+	</WeaponTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverPellets]==========-->
+	<WeaponTraitDef ParentName="Mashed_Bloodmoon_TraitHoundslayerBase">
+		<defName>Mashed_Bloodmoon_SilverPellets</defName>
+		<label>houndslayer pellets</label>
+		<description>This weapon fires silver pellets, which deal additional damage to lycanthropes.</description>
+		<weaponCategory>PelletFiring</weaponCategory>
+	</WeaponTraitDef>
+	<!-- ==========[Mashed_Bloodmoon_SilverArrows]==========-->
+	<WeaponTraitDef ParentName="Mashed_Bloodmoon_TraitHoundslayerBase">
+		<defName>Mashed_Bloodmoon_SilverArrows</defName>
+		<label>houndslayer arrows</label>
+		<description>This bow shoots silver-tipped arrows, which deal additional damage to lycanthropes.</description>
+		<weaponCategory>Bow</weaponCategory>
+		<exclusionTags Inherit="false">
+			<li>AmmoType</li>
+		</exclusionTags>
+	</WeaponTraitDef>
+</Defs>

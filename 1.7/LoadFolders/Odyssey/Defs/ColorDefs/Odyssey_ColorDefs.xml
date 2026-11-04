@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_UniqueWeapon_Houndslayer]==========-->
+	<ColorDef ParentName="UniqueWeaponColorBase">
+		<defName>Mashed_Bloodmoon_UniqueWeapon_Houndslayer</defName>
+		<label>houndslayer silver</label>
+		<color>(204,208,193)</color>
+		<randomlyPickable>false</randomlyPickable>
+	</ColorDef>
+</Defs>
