@@ -12,7 +12,7 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<statBases>
-			<Mashed_Bloodmoon_SilverDamageFactor>0.5</Mashed_Bloodmoon_SilverDamageFactor>
+			<Mashed_Bloodmoon_SilverDamageFactor>1</Mashed_Bloodmoon_SilverDamageFactor>
 		</statBases>
 		<relicChance>2</relicChance>
 		<tradeTags>
@@ -73,7 +73,7 @@
 		</statBases>
 		<costList>
 			<Steel>40</Steel>
-			<Silver>2</Silver>
+			<Silver>3</Silver>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
@@ -139,7 +139,7 @@
 		</statBases>
 		<costList>
 			<Steel>60</Steel>
-			<Silver>3</Silver>
+			<Silver>4</Silver>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<recipeMaker>

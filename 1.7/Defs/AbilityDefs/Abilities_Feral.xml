@@ -5,7 +5,7 @@
 	<AbilityDef ParentName="Mashed_Bloodmoon_AdrenalineRushBase">
 		<defName>Mashed_Bloodmoon_AdrenalineRushFeral</defName>
 		<label>feral adrenaline rush</label>
-		<cooldownTicksRange>3600</cooldownTicksRange>
+		<cooldownTicksRange>12500</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<statBases>
 			<Ability_Duration>30</Ability_Duration>
@@ -42,8 +42,11 @@
 	<AbilityDef ParentName="Mashed_Bloodmoon_HuntsmansMark">
 		<defName>Mashed_Bloodmoon_HuntsmansMarkFeral</defName>
 		<label>feral Huntsman's mark</label>
-		<cooldownTicksRange>6000</cooldownTicksRange>
+		<cooldownTicksRange>12500</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
+		<statBases>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
 		<verbProperties>
 			<targetParams>
 				<canTargetAnimals>false</canTargetAnimals>
