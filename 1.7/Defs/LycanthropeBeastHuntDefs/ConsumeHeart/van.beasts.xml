@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!-- ==========[Mashed_Bloodmoon_DA_BlackscaledBaskar]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
+		<defName>Mashed_Bloodmoon_DA_BlackscaledBaskar</defName>
+		<label>beast hunt: Baskar</label>
+		<description>Consume the heart of a blackscaled baskar.</description>
+		<targetThingDef>DA_BlackscaledBaskar</targetThingDef>
+		<heartTexPath>UI/Icons/Mashed_Bloodmoon_BeastHeart_Obsidian</heartTexPath>
+	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_DACrestel]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef MayRequire="van.beasts">
 		<defName>Mashed_Bloodmoon_DACrestel</defName>
