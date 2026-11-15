@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Biomes</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/AlphaBiomes.MutatorIconDef[defName="AB_MutatorIconDefs"]/mutatorIcons</xpath>
+					<value>
+						<li>
+							<mutator>Mashed_Bloodmoon_WildWolfsbane</mutator>
+							<icon>UI/Icons/MutatorIcons/Mashed_Bloodmoon_MutatorIcon_WildWolfsbane</icon>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
