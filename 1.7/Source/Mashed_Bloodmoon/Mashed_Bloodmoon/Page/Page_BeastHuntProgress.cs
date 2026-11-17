@@ -14,16 +14,28 @@ namespace Mashed_Bloodmoon
         private readonly List<LycanthropeBeastHuntDef> BeastHuntListOther;
         private static Vector2 scrollPosition = Vector2.zero;
         private static BeastHuntType curTab = BeastHuntType.Heart;
-        private readonly List<TabRecord> tabs = new List<TabRecord>();
+        private readonly List<TabRecord> tabs = [];
 
         public override string PageTitle => "Mashed_Bloodmoon_BeastHuntProgress".Translate().CapitalizeFirst() + ": " + pawn.NameShortColored;
 
         public Page_BeastHuntProgress(HediffComp_Lycanthrope comp) : base(comp)
         {
-            BeastHuntListHeart = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Heart).ToList();
-            BeastHuntListKill = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Kill).ToList();
-            BeastHuntListProficiency = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Proficiency).ToList();
-            BeastHuntListOther = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Other).ToList();
+            BeastHuntListHeart = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Heart).
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
+            BeastHuntListKill = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Kill).
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
+            BeastHuntListProficiency = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Proficiency).
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
+            BeastHuntListOther = DefDatabase<LycanthropeBeastHuntDef>.AllDefsListForReading.Where(x => x.beastHuntType == BeastHuntType.Other).
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
             ReadySettingsTabs();
         }
 
@@ -63,7 +75,7 @@ namespace Mashed_Bloodmoon
                 Rect devRecalculate = new(inRect.width - 220f, 0f, 180f, 30f);
                 if (Widgets.ButtonText(devRecalculate, "Dev: recalculate thought", true))
                 {
-                    RecalculateBeastHuntTHought();
+                    RecalculateBeastHuntThought();
                 }
             }
 
@@ -81,9 +93,9 @@ namespace Mashed_Bloodmoon
             Widgets.EndScrollView();
         }
 
-        private void RecalculateBeastHuntTHought()
+        private void RecalculateBeastHuntThought()
         {
-            compLycanthrope.completedBeastHuntsCount = compLycanthrope.beastHuntTracker.Where(x => x.Key.Completed(x.Value)).Count();
+            compLycanthrope.completedBeastHuntsCount = compLycanthrope.beastHuntTracker.Count(x => x.Key.Completed(x.Value));
         }
 
         public void DoBeastHuntGrid(Rect inRect, List<LycanthropeBeastHuntDef> beastHuntList)
@@ -109,9 +121,8 @@ namespace Mashed_Bloodmoon
             innerRect.height = Mathf.Round(rowCount) * (cellHeight + Assets.RectPadding);
 
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, innerRect);
-            int row = 0;
             int column = 0;
-            Rect beastHuntRect = new Rect(innerRect.x, innerRect.y, cellWidth, cellHeight);
+            Rect beastHuntRect = new(innerRect.x, innerRect.y, cellWidth, cellHeight);
 
             foreach (LycanthropeBeastHuntDef beastHuntDef in beastHuntList)
             {
@@ -121,7 +132,6 @@ namespace Mashed_Bloodmoon
                     beastHuntRect.y += ((Assets.RectPadding / 2f) + cellHeight);
                     beastHuntRect.x = innerRect.x;
                     column = 0;
-                    row++;
                 }
                 else
                 {
@@ -167,13 +177,13 @@ namespace Mashed_Bloodmoon
                 if (beastHuntDef.targetCount > 1)
                 {
                     TaggedString label = beastHuntDef.Progress(compLycanthrope) + "/" + beastHuntDef.targetCount;
-                    Widgets.Label(infoRect.NewCol(label.GetWidthCached(), HorizontalJustification.Left), label);
+                    Widgets.Label(infoRect.NewCol(label.GetWidthCached()), label);
                 }
             }
 
             if (DebugSettings.ShowDevGizmos)
             {
-                RectDivider devRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+                RectDivider devRect = rectDivider.NewRow(Text.LineHeight);
                 if (!beastHuntDef.Completed(compLycanthrope))
                 {
                     if (Widgets.ButtonImage(devRect.NewCol(devRect.Rect.height, HorizontalJustification.Right), TexButton.Plus, false, "Dev: instantly complete beast hunt"))

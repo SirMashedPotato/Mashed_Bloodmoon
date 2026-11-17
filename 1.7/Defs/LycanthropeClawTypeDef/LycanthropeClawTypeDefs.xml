@@ -7,6 +7,7 @@
 		<description>The standard claws of a lycanthrope. Attacks with these may infect victims with Sanies Lupinus.</description>
 		<clawHediffDef>Mashed_Bloodmoon_LycanthropeClaws</clawHediffDef>
 		<purchaseHeartCost>1</purchaseHeartCost>		<!-- in case it somehow gets removed from a pawn -->
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeClawTypeDef>
 	<!-- ==========[Mashed_Bloodmoon_SharpClaws]========== -->
 	<Mashed_Bloodmoon.LycanthropeClawTypeDef>

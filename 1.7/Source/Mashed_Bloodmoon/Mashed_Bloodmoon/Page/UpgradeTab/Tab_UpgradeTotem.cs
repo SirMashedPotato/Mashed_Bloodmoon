@@ -18,10 +18,10 @@ namespace Mashed_Bloodmoon
         {
             Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
             Rect mainRect = inRect.ContractedBy(Assets.RectPadding);
-            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
+            RectDivider rectDivider = new(mainRect, mainRect.GetHashCode(), null);
 
-            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            Widgets.Label(labelRect.NewCol(totemDef.label.GetWidthCached(), HorizontalJustification.Left), totemDef.label);
+            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight);
+            Widgets.Label(labelRect.NewCol(totemDef.label.GetWidthCached()), totemDef.label);
 
             PageUtility.ModSourceIcon(ref labelRect, totemDef);
 
@@ -32,11 +32,11 @@ namespace Mashed_Bloodmoon
             Text.Font = GameFont.Tiny;
 
             //stat summary
-            RectDivider statRect1 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            RectDivider statRect1 = rectDivider.NewRow(Text.LineHeight);
             TaggedString statLabel1 = totemDef.StatBonusLine(compLycanthrope, true);
             Widgets.Label(statRect1, statLabel1);
 
-            RectDivider statRect2 = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            RectDivider statRect2 = rectDivider.NewRow(Text.LineHeight);
             TaggedString statLabel2 = totemDef.StatPerLevelLine();
             Widgets.Label(statRect2, statLabel2);
 
@@ -102,7 +102,7 @@ namespace Mashed_Bloodmoon
                 return;
             }
 
-            Dialog_InfoCard dialog_InfoCard = new Dialog_InfoCard(totemDef.totemThingDef);
+            Dialog_InfoCard dialog_InfoCard = new(totemDef.totemThingDef);
             Find.WindowStack.Add(dialog_InfoCard);
         }
     }

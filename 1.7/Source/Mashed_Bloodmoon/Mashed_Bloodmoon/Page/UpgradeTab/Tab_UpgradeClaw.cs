@@ -23,10 +23,10 @@ namespace Mashed_Bloodmoon
 
             Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
             Rect mainRect = inRect.ContractedBy(Assets.RectPadding);
-            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
+            RectDivider rectDivider = new(mainRect, mainRect.GetHashCode(), null);
 
-            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
-            Widgets.Label(labelRect.NewCol(clawDef.LabelCap.GetWidthCached(), HorizontalJustification.Left), clawDef.LabelCap);
+            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight);
+            Widgets.Label(labelRect.NewCol(clawDef.LabelCap.GetWidthCached()), clawDef.LabelCap);
 
             PageUtility.ModSourceIcon(ref labelRect, clawDef);
 
@@ -48,7 +48,7 @@ namespace Mashed_Bloodmoon
 
             GameFont font = Text.Font;
             Text.Font = GameFont.Tiny;
-            RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
+            RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f);
             Widgets.Label(descRect, clawDef.description);
             Text.Font = font;
 

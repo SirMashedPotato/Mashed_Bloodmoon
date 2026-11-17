@@ -10,6 +10,7 @@
 				<useCount>1</useCount>
 			</li>
 		</completionWorkers>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeBeastHuntDef>
 	<!-- ==========[Mashed_Bloodmoon_FeralWerewolvesI]========== -->
 	<Mashed_Bloodmoon.LycanthropeBeastHuntDef ParentName="Mashed_Bloodmoon_FeralWerewolvesBase">

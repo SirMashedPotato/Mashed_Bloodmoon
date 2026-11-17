@@ -18,11 +18,11 @@ namespace Mashed_Bloodmoon
 
             Widgets.DrawBoxSolidWithOutline(inRect, Widgets.WindowBGFillColor, Color.grey, 1);
             Rect mainRect = inRect.ContractedBy(Assets.RectPadding);
-            RectDivider rectDivider = new RectDivider(mainRect, mainRect.GetHashCode(), null);
+            RectDivider rectDivider = new(mainRect, mainRect.GetHashCode(), null);
 
-            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight, VerticalJustification.Top);
+            RectDivider labelRect = rectDivider.NewRow(Text.LineHeight);
             string label = traitDef.traitDef.DataAtDegree(traitDef.traitDegree).GetLabelCapFor(pawn);
-            Widgets.Label(labelRect.NewCol(label.GetWidthCached(), HorizontalJustification.Left), label);
+            Widgets.Label(labelRect.NewCol(label.GetWidthCached()), label);
 
             PageUtility.ModSourceIcon(ref labelRect, traitDef);
 
@@ -39,7 +39,7 @@ namespace Mashed_Bloodmoon
 
             GameFont font = Text.Font;
             Text.Font = GameFont.Tiny;
-            RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f, VerticalJustification.Top);
+            RectDivider descRect = rectDivider.NewRow(Text.LineHeight * 3f);
             string description = traitDef.description ?? traitDef.traitDef.DataAtDegree(traitDef.traitDegree).description;
 
             Widgets.Label(descRect, description.Formatted(pawn.Named("PAWN")).AdjustedFor(pawn).Resolve());

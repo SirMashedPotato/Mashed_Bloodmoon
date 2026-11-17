@@ -9,7 +9,7 @@ namespace Mashed_Bloodmoon
         public new string description;
         [MustTranslate]
         public string extraTooltip;
-
+        public int displayPriority = 99999;
         public int purchaseHeartCost = 0;
 
         public List<LycanthropeRequirementWorker> requirementWorkers;

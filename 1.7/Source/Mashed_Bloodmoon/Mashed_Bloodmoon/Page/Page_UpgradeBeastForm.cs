@@ -32,10 +32,23 @@ namespace Mashed_Bloodmoon
 
         public Page_UpgradeBeastForm(HediffComp_Lycanthrope comp) : base(comp)
         {
-            AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading;
-            ClawList = DefDatabase<LycanthropeClawTypeDef>.AllDefsListForReading;
-            TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.Where(x => x.displayAsTotem).ToList();
-            TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading.OrderBy(x=>x.traitDef.DataAtDegree(x.traitDegree).GetLabelCapFor(pawn)).ToList();
+            AbilityList = DefDatabase<LycanthropeAbilityDef>.AllDefsListForReading.
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
+            ClawList = DefDatabase<LycanthropeClawTypeDef>.AllDefsListForReading.
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
+            TotemList = DefDatabase<LycanthropeTotemDef>.AllDefsListForReading.
+                Where(x => x.displayAsTotem).
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.label).
+                ToList();
+            TraitList = DefDatabase<LycanthropeTraitDef>.AllDefsListForReading.
+                OrderBy(x=> x.displayPriority).
+                ThenBy(x=>x.traitDef.DataAtDegree(x.traitDegree).GetLabelCapFor(pawn)).
+                ToList();
             ReadyTabs();
 
             foreach (LycanthropeTotemDef def in TotemList)

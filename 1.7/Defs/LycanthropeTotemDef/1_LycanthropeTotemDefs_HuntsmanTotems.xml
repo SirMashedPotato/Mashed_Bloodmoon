@@ -12,6 +12,7 @@
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.03</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemFortitude]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
@@ -25,6 +26,7 @@
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemGuile]========== -->
 	<!-- ==========[Mashed_Bloodmoon_TotemSight]========== -->
@@ -39,6 +41,7 @@
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemSpeed]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
@@ -52,6 +55,7 @@
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.04</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemStrength]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
@@ -65,6 +69,7 @@
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>0.02</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 	<!-- ==========[Mashed_Bloodmoon_TotemTenacity]========== -->
 	<Mashed_Bloodmoon.LycanthropeTotemDef>
@@ -78,5 +83,6 @@
 		<purchaseHeartCost>5</purchaseHeartCost>
 		<statIncreasePerLevel>-0.01</statIncreasePerLevel>
 		<onlyTransformed>true</onlyTransformed>
+		<displayPriority>1</displayPriority>
 	</Mashed_Bloodmoon.LycanthropeTotemDef>
 </Defs>
