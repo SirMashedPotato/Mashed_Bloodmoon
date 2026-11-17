@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Mashed_Bloodmoon_Werewelwa]========== -->
+	<Mashed_Bloodmoon.LycanthropeBeastFormDef>
+		<defName>Mashed_Bloodmoon_Werewelwa</defName>
+		<label>werewelwa</label>
+		<artist>SirMashedPotato</artist>
+		<graphicData>
+			<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewelwa/Mashed_Bloodmoon_Werewelwa</texPath>
+			<color>(79,66,69)</color>
+			<colorTwo>(138,116,104)</colorTwo>
+			<colorThree>(232,179,125)</colorThree>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<renderNodeProperties>
+			<li>
+				<debugLabel>lycanthrope eye glow</debugLabel>
+				<nodeClass>Mashed_Bloodmoon.PawnRenderNode_LycanthropeTertiaryColor</nodeClass>
+				<workerClass>Mashed_Bloodmoon.PawnRenderNodeWorker_LycanthropeScaled</workerClass>
+				<texPath>Things/Pawn/Mashed_Lycanthrope/Mashed_Bloodmoon_Werewelwa/Mashed_Bloodmoon_WerewelwaEyeGlow</texPath>
+				<shaderTypeDef>TransparentPostLight</shaderTypeDef>
+				<overlayLayer>Body</overlayLayer>
+				<baseLayer>2</baseLayer>
+				<rotDrawMode>Fresh</rotDrawMode>
+			</li>
+		</renderNodeProperties>
+	</Mashed_Bloodmoon.LycanthropeBeastFormDef>
+</Defs>
