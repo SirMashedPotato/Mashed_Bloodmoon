@@ -56,25 +56,6 @@
 					<li Class="FocusStrengthOffset_BuildingDefsWithQuality">
 						<defs>
 							<li>Mashed_Bloodmoon_WerewolfTrophySmall</li>
-							<!-- ESCP Trolls -->
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Anima</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Barren</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Boom</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Cave</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Coastal</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Forest</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Frost</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Fungal</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Grahl</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Hill</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Pygmy</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_River</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Swamp</li>
-							<li MayRequire="escp.trolls">ESCP_TrollTophySmall_Udyrfrykte</li>
-							<li MayRequire="escp.trolls,Ludeon.RimWorld.Biotech">ESCP_TrollTophySmall_Glowing</li>
-							<li MayRequire="escp.trolls,Ludeon.RimWorld.Biotech">ESCP_TrollTophySmall_Toxi</li>
-							<li MayRequire="escp.trolls,Ludeon.RimWorld.Biotech">ESCP_TrollTophySmall_Haemo</li>
-							<li MayRequire="escp.trolls">ESCP_TrollDioramaGrand_Grahl</li>
 						</defs>
 						<radius>9.9</radius>
 						<maxBuildings>8</maxBuildings>
